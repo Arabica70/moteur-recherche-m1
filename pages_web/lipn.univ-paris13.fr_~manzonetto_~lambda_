@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Advanced Lambda Calculus</title>
+<meta name="description" content="Introduction &agrave; Java et &agrave; la programmation orient&eacute;e objet" />
+<link rel="stylesheet" href="../gmanzone.css">
+</head>
+
+<body>
+
+<h2>Advanced Lambda Calculus (2010-2011) IMC027</h2>
+<hr size="1">
+Teachers:<br>
+<a href="http://www.cs.ru.nl/~henk/" target="_blank">Henk Barendregt</a> <a href="mailto:henke(at)cs.ru.nl">(&lambda;<i>x</i>.henk<i>x</i>cs.ru.nl)@</a><br>
+<a href="http://www.dsi.unive.it/~gmanzone/" target="_blank">Giulio Manzonetto</a> <a href="mailto:gmanzone(at)dsi.unive.it">(&lambda;<i>x</i>.gmanzone<i>x</i>dsi.unive.it)@</a><br>
+
+<h3>Details</h3>
+<p>
+IMC027 Advanced Lambda Calculus<br>
+Lectures:     Monday 10:45 12:30<br>
+Weeks:         35-42, 45-50, 1-2<br>
+Room:          HG 01.029</p>
+
+<h3>Topics of the Course</h3>
+<table cellspacing="3" cellpadding="2" border="0">
+  <tr> 
+    <td><i>1) </i></td>
+    <td width="15%">13 Sept.<br><a href="./L1.pdf">SLIDES</a></td>
+    <td>
+               <b>Topics:</b> Untyped &lambda;-calculus, &beta;-reduction graph [Bar92, pag. 28], Church numerals,
+               encoding of Booleans, &lambda;-definition of if-then-else, encoding of tuples, Bohm-Piperno-Guerrini's encoding of data-structures [BarDS10, Ch 6],
+               self-interpreter and enumeration [BarDS10, Ch 6].<br>
+               <b>Homeworks:</b> Write the &beta;-reduction graphs of the examples in the slides.
+               Define lists of natural numbers, encode them, &lambda;-define the append.
+               Check that the self-interpreter actually works.
+    </td>
+  </tr>
+  <tr> 
+    <td><i>2) </i></td>
+    <td width="15%">20 Sept.<br>
+    <td>
+               <b>Topics:</b> Simple Types, notations on types, notions of order and rank. Simply Typed Lambda Calculus (&agrave; la Curry and &agrave; la Church), &beta; and &eta;-reductions. Properties: substitution lemma, subject reduction. Equivalence of the systems: forgetful map, preservation of typable terms, preservation of types under reduction. Definitions of normal forms and characterization of &beta;-normal forms. Everything is in [BarDS10, Ch 1]<br>
+   </td>
+  </tr>
+    <tr> 
+    <td><i>3) </i></td>
+    <td width="15%">27 Sept.<br>
+    <td>
+      <b>Topics:</b>. Long normal forms, inhabitation machines (both
+      for lnf and &beta;nf), definition of multiset, well-founded
+      order on finite multisets, Abstract Reduction System (ARS),
+      being and having a normal form, weak normalization, strong
+      normalization, confluence (Church-Rosser), Levy's lemma about
+      characterization of creation of redexes.
+      Everything is in [BarDS10, Ch 1, Ch 2]<br>
+   </td>
+  </tr>
+  <tr>
+   <td><i>4) </i></td>
+    <td width="15%">04 Oct.<br><a href="./L4.pdf">SLIDES</a><br>
+    <td>
+      <b>Topics:</b>Variants of simply typed lambda calculus,
+      semantics, observational equality, type strutures<br>
+   </td>
+  </tr>
+  <tr>
+    <td><i>5) </i></td>
+    <td width="15%">11 Oct.<br><a href="./L5.pdf">SLIDES</a><br>
+    <td>
+      <b>Topics:</b> Various Type Systems, (full) Type Structures,
+      semantics, partial semantics, typed lambda models, Five Easy
+      Pieces, observational equivalence, logical relation, extensional
+      equivalence.<br>
+   </td>
+  </tr>
+  <tr>
+    <td><i>7) </i></td>
+    <td width="15%"><a href="./L7.pdf">SLIDES</a><br>
+    <td>
+      <b>Topics:</b> Five Easy Pieces, Type Reducibility, Positive and
+      Negative subtype occurrences, type hierarchy, adding constants.<br>
+   </td>
+  </tr>
+  <tr>
+    <td><i>8) </i></td>
+    <td width="15%"><a href="./L8.pdf">SLIDES</a><br>
+    <td>
+      <b>Topics:</b> Type Reducibility<br>
+   </td>
+  </tr>
+  <tr>
+    <td><i>9) </i></td>
+    <td width="15%"><a href="./L9.pdf">SLIDES</a><br>
+    <td>
+      <b>Topics:</b> Term models, Non-reducibility, Hierarchy Theorem Revisited<br>
+   </td>
+  </tr>  
+</table>
+
+<h3>Useful Material</h3>
+<table cellspacing="3" cellpadding="2" border="0">
+  <tr> 
+    <td>
+	<ul>
+	<li>[BarDS10] <a href="http://www.cs.ru.nl/~henk/book.pdf" target="_blank">Henk Barendregt, Wil Dekkers and Richard Statman. <i>Lambda calculus with types.</i></a> (new Barendregt's book)</li>
+	<li>[Bar84] Henk Barendregt. <i>The lambda calculus. Its syntax and semantics. Studies in Logic and the Foundations of Mathematics</i>, Volume 103, North-Holland, 1984. (old Barendregt's book)</li>	
+	<li>[Bar92] <a
+	href="http://ttic.uchicago.edu/~dreyer/course/papers/barendregt.pdf"
+	target="_blank">Henk Barendregt. <i>Lambda calculi with types</i>, in Handbook of Logic in Computer Science, 1992.</a></li>
+	</ul>
+    </td>
+  </tr>
+</table>
+
+<p align="right">
+  <i>Last update: 25 November 2010</i>
+</p>
+   
+</body>
+</html>

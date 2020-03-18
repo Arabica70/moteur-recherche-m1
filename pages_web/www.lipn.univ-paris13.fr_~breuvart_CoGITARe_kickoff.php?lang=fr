@@ -1,0 +1,131 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CoGITARe ANRJCJC</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=indexCogitare.php?lang=fr>Index</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Membres et associés <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=membres.php?lang=fr>liste des membres</a></li>
+	         <li><a href=../?lang=fr>Flavien Breuvart</a></li>
+             <li><a href=http://www.jaime-arias.fr/pages/talks.html>Jaime Arias</a></li>
+             <li><a href=https://www.di.ens.fr/~feret/>Jérôme Feret</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~manzonetto>Giulio Manzonetto</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mazza>Damiano Mazza</a></li>
+             <li><a href=http://yann.regis-gianas.org>Yann Régis-Gianas</a></li>
+             <li><a href=https://www.seiller.org/>Thomas Seiller</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~loddo>Jean-Vincent Loddo</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mayero>Micaela Mayero</a></li>
+            </ul>
+	  <li><a href=stages.php?lang=fr>Positions</a></li>
+	  <li><a href=../articles/Cogitare.pdf?lang=fr>Proposition</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Évènements <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+    	     <li class="active"><a href="#">Kickoff</a></li>
+	         <li><a href=journee_inferencing_subtypes.php?lang=fr>journee1</a></li>
+           </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+<header>
+Kick Off Meeting of CoGITARe </br>
+</header>
+
+
+<div class="publications">
+   <h2> Venue informations  </h2>
+   <p><B>Location: 	LIPN, Université Paris 13 </B>  </br>
+      Room B107,</br>
+      Instiut Galilée</br>
+      99, Avenue Jean-Baptiste Clément, Villetaneuse
+   </p>
+   <p><B>Date: 28 March 2019 </B></p>
+   <p><B> Speakers :</B></br> Flavien Breuvart, Damiano Mazza, Jérôme Feret, Jakob Rehof, Exequiel Rivas, Thomas Ehrhard, Thomas Blanc</p>
+   <p><B>Access </B>  </br>
+     You should go the the station "Villetaneuse University" with the lines T8 (connection with lines D and M13) and T11 (connection with lines B, C and D). </br>
+     From there, just follow the crowd and you should arrive at the gates of the university. Passing the security should not be too complex (but it depends on who is in charge). In case of issue, do not hesitate to call me (+33.666.15.63.49)</br>
+     Once the security passed, you will have to find the room : take first stare at your right, then right on the platform, take first stairs on your right to a building, traverse the building to take the next platform, enter the next building get down the stars at your right on half a floor, you should then be in he first floor (in the French counting with a ground floor), then take the door at your left, the seminar room is the second door on your left.</br>
+      <a href="https://lipn.univ-paris13.fr/accueil/contact/"> Maps and more informations (in french)</a></br>
+      If you arrive early, come to the second floor to get a coffee, but you will have to call me to open the door. 
+   </p>
+</div>
+
+<div class="publications">
+	<h2> Program </h2>
+	<UL TYPE=square>
+    <LI> 09:30 - 10:00  : Flavien Breuvart (Project Coordinator) </br>
+         <em> Project Presentation </em>
+    <LI> 10:10 - 11:10  : Damiano Mazza (LIPN, Paris 13) </br>
+         <em> <a href="CoGITARe-Mazza-2019-03-28.pdf"> Tutorial: Type systems as functors: an introduction to Melliès and Zeilberger's perspective and some applications </a></em><br>
+    <LI> 11:30 - 12:30  : Jérôme Féret (Antique, ENS Paris) </br>
+         <em> Tutorial: TBA </em>
+    <LI> 12:30 - 14:00  : Lunch
+    <LI> 14:00 - 14:45  : Jakob Rehof (TU Dortmund University) </br>
+         <em> <a href="CoGITARe-Rehof-2019-03-28.pdf">Type systems and program (flow) analysis </a></em>
+         <p>   We give an overview of some selected developments in type-based analysis, focusing on
+               polymorphic flow analysis, intersection types, and their relation to abstract interpretation.
+               Historically, we will take as departure points some important developments from the 1990’s
+               and - in some selected cases - trace paths to recent work and some open questions in the field.
+         </p>
+    <LI> 14:55 - 15:40  : Exequiel Rivas (IRIF, Paris 7) </br>
+         <em> On monads with merging </em>
+    <LI> 15:50 - 16:35  : Thomas Ehrhard (IRIF, Paris 7) </br>
+         <em> <a href="https://www.irif.fr/~ehrhard/pub/ephase.pdf"> Indexed Linear Logic </a></em>
+    <LI> 16:45 - 17:00  : Thomas Blanc (OCamlPro) </br>
+         <em> Implementing a whole-program analysis on the OCaml language </em>
+    </UL>
+ </div>
+
+
+<div class="publications">
+	<h2> Inscription </h2>                              
+
+    <form method="post"  action="">
+    Name: <input type="text" name="nom" size="80" ></br>
+    Diet:  <input type="text" name="regime" size="81" ></br>
+    <input type="submit" value="inscription" name="SubmitInscription">
+    </form>    
+ </div>
+
+<div class="publications">
+<img src="../data/ANR_CoGITARe.svg" alt="funded by ANR" style="width:170px;height:150px;">
+<img src="../data/LIPN.png" alt="LIPN" style="width:210px;height:135px;">
+<img src="../data/P13.png" alt="P13" style="width:280px;height:130px;">
+<img src="../data/ANR.jpg" alt="ANR" style="width:260px;height:140px;">
+ </div>
+                                   
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 7</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .framed {
+      border: solid #000000;
+      border-spacing: 0;
+    }
+    pre { color: #116611 }
+    tt { color: #116611 }
+    .sep { width: 10px }
+    .bigsep { width: 50px }
+    .verticalline { width: 10px; border-left: solid #000000; }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 7 C++: allocation dynamique; construction/destruction.</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: <i>Références</i>: suite et fin</h3>
+<ol>
+  <li>
+    <b>Listez</b> dans un fichier <tt>1.1.txt</tt>, par ordre croissant, les <i>indices</i> <tt><b class="red">X</b></tt> des fonctions <tt>Return42_<b class="red">X</b></tt> valides (qui compilent!):
+    <br/><br/><img src="1.1.png" alt="Code C++ à interpréter">
+     <br/>
+    Le fichier <tt>1.1.txt</tt> devra ressembler contenir une seule ligne qui ressemblera à ça:
+    <pre>2, 4, 8, B, D</pre>
+    <b>Vérifiez</b> avec le script <a href="1.1.sh" download>1.1.sh</a>: <tt>bash 1.1.sh</tt>
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.1.txt</tt>
+
+    <!--
+    <br/><br/>Vous aurez l'<b>explication</b> au tableau!
+    -->
+    <br/>
+    <br/>
+  </li>
+  <li>
+    <b>Classez</b> les <tt>struct</tt> suivantes par ordre croissant de leur taille (en octets!). Ce qui correspond à <tt>sizeof(..)</tt>.
+  <br/>
+  <br/>
+  <table class="framed" summary="Quelques struct C++ dont il faut évaluer la taille"><tr>
+<td class="sep"/>
+<td><pre><code class="c++">struct A {
+  int x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct B {
+  int* x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct C {
+  static int x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct D {
+  int&amp; x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct E {
+  bool&amp; x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct F {
+  bool x;
+};</code></pre></td>
+<td class="sep"/><td class="verticalline"/>
+<td><pre><code class="c++">struct G {
+  int** x;
+};</code></pre></td>
+<td class="sep"/>
+</tr></table>
+<br/><br/>Si deux <tt>struct</tt> sont de tailles égales, vous les garderez dans l'ordre alphabetique.
+  <br/><br/><b class="orange">RENDU:</b> <tt>1.2.txt</tt> qui contiendra une ligne au format: <pre>A, B, C, D, E, F, G</pre>... avec le bon ordre bien sûr.
+  <br/>
+  <br/>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Construction/Destruction</h3>
+<ol>
+  <li>
+    <b>Examinez</b> le code ci-dessous, mis sur 2 colonnes (télécharger: <a href="2.1.cc" download>2.1.cc</a>):
+    <table summary="Code C++ à analyser, sur 2 colonnes"><tr><td valign="top">
+     <pre><code class="c++">#include &lt;iostream&gt;
+
+using namespace std;
+
+class A {
+ public:
+  A() : x_(0) {
+    cout &lt;&lt; "Constructing A() @" &lt;&lt; this &lt;&lt; endl;
+  }
+  A(int x) {
+    x_ = x;
+    cout &lt;&lt; "Constructing A(" &lt;&lt; x &lt;&lt; ") @" &lt;&lt; this &lt;&lt; endl;
+  }
+
+  ~A() {
+    cout &lt;&lt; "~A(): x = " &lt;&lt; x_ &lt;&lt; ", @" &lt;&lt; this &lt;&lt; endl;
+  }
+
+ private:
+  int x_;
+};</code></pre>
+</td>
+<td class="bigsep"/>
+<td><pre><code class="c++">int main() {
+  cout &lt;&lt; "Starting" &lt;&lt; endl;
+  A a = 123;
+  {
+    A a;
+    A* aa = new A(456);
+  }
+  for (int i = 0; i &lt; 2; i++) {
+    A a(i);
+  }
+  A* a_ptr[3] = {NULL, NULL, NULL};
+  for (int i = 0; i &lt; 3; i++) {
+    a_ptr[i] = new A(i);
+  }
+
+  for (int i = 0; i &lt; 3; i++) {
+    delete a_ptr[i];
+  }
+
+  A yop[2];
+
+  // Where is the memory leak ??
+}</code></pre>
+  </td></tr></table>
+    Essayez de <b>simuler</b> son execution vous-même, en notant sur une feuille de papier ce que
+    le programme va imprimer.
+    <!--
+    <br/><br/><b class="orange">Explication</b> au tableau!
+    -->
+    <br/>
+    <br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 3: Tableaux dynamiques</h3>
+<ol>
+  <li><b>Implémentez</b> dans un fichier <tt>3.1.cc</tt> la classe <tt>Array</tt> déclarée ci-dessous (telécharger <a href="3.1.h" download>3.1.h</a>):
+    <pre><code class="c++">// This class represents an array of doubles, with a fixed capacity
+// determined at construction.
+class Array {
+ public:
+  // The array will be empty at construction, but all the memory 
+  // necessary to store up to "capacity" doubles will already be allocated.
+  Array(int capacity);
+
+  // It is important to clean up the memory at destruction!
+  ~Array();
+
+  // Returns the current size (i.e. number of elements) of the array.
+  int size() const;
+
+  // Returns the *mutable* element at index #i.
+  double&amp; operator[](int i);
+
+  // Adds an element at the last position of the array.
+  void push_back(double x);
+
+  // Removes the last element of the array.
+  void pop_back();
+
+ private:
+  int size_;
+  double* data_;
+};</code></pre>
+  <b>Testez-la avec l'archive <a href="3.tar.gz" download>3.tar.gz</a></b>:
+  <pre>rm 3.tar.gz
+wget --no-cache http://fabien.viger.free.fr/cpp/td7/3.tar.gz
+tar xf 3.tar.gz
+make 3.1</pre>
+  <b class="orange">RENDU:</b> <tt>3.1.cc</tt>
+  <br/>
+  <br/>
+</li>
+<li>
+  À présent, on va <b>interdire</b> la construction par copie et l'affectation (<i>assignment</i> en anglais):
+  <br/>
+  <br/>
+  Copiez <tt>3.1.h</tt> dans <tt>3.2.h</tt>, de même pour <tt>3.2.cc</tt>, et modifiez-les au besoin.
+  <br/>Test: <tt>make 3.2</tt>
+  <br/><br/><b class="orange">RENDU:</b> <tt>3.2.h</tt>, <tt>3.2.cc</tt>
+   <br/><br/>
+</li>
+<li>
+  À présent, on va autoriser la construction par copie et l'affectation, et les implémenter correctement.
+  <br/><br/>Copiez <tt>3.2.h</tt> dans <tt>3.3.h</tt>, de même pour <tt>3.3.cc</tt>, et modifiez-les au besoin.
+   <br/><b>Attention</b>: La <i>capacité</i> du tableau copié doit également être copiée: si je crée un tableau vide de capacité 1000 et que je le copie (ou assigne), sa copie doit être vide, mais avoir une capacité de 1000!
+  <br/><br/>Test: <tt>make 3.3</tt>
+  <br/><br/><b class="orange">RENDU:</b> <tt>3.3.h</tt>, <tt>3.3.cc</tt>
+  <br/><br/>
+</li>
+<li>
+  (**) On va à présent faire une <b>véritable</b> allocation dynamique: on allouera la mémoire selon les besoins.
+  <br/><b class="red">Attention</b>: on veut garder une complexité <i>amortie</i> en O(1):
+    le coût <i>moyen</i> d'une opération doit être O(1),
+    et la place memoire utilisé devra être O(N), où N = nombre d'éléments.
+  <br/><br/>Copiez <tt>3.3.h</tt> dans <tt>3.4.h</tt>, enlever l'argument <tt>capacity</tt> du constructeur,
+  et <b>implémentez</b> <tt>3.4.cc</tt>
+  <br/>Test: <tt>make 3.4</tt>
+  <br/><br/><b class="orange">RENDU:</b> <tt>3.4.h</tt>, <tt>3.4.cc</tt>
+  <br/>
+  <br/>
+</li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

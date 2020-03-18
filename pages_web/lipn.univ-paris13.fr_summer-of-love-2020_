@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Paris Nord Summer of LoVe 2020</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<h1>Paris Nord Summer of LoVe</h1>
+					<p>Logic and Verification in Paris (2020)</p>
+				</header>
+			</section>
+
+		<!-- Introduction -->
+			<section id="first" class="main">
+				<header>
+					<div class="container">
+						<h2>A joint series of conferences in June and July 2020</h2>
+						<p>Paris Nord Summer of LoVe 2020 is a series of conferences taking place in Université Sorbonne Paris Nord in June and July 2020.<br/>
+							These conferences include <a href="https://lipn.univ-paris13.fr/petrinets2020/">Petri Nets 2020</a>, <a href="http://fscd2020.org/">FSCD 2020</a>, <a href="https://ijcar2020.org/">IJCAR 2020</a> and over 20 satellite events, including tutorials and workshops.<br/>
+							Organization is done jointly by the <a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/">LoVe team</a>
+							of <a href="https://www.univ-paris13.fr/">Université Sorbonne Paris Nord</a>,
+							the <a href="https://www.mefosyloma.fr/"><abbr title="Formal methods for software and hardware systems">MeFoSyLoMa</abbr></a> Paris region group,
+							and various other supporting institutions.
+						</p>
+					</div>
+				</header>
+				<div class="content dark style1 featured">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-graduation-cap"></span></span>
+									<header>
+										<h3><a href="https://lipn.univ-paris13.fr/petrinets2020/">Petri Nets 2020</a></h3>
+										<p>22-26 June 2020</p>
+									</header>
+									<p>The 41st International Conference on Application and Theory of Petri Nets and Concurrency aims at gathering key results in the theoretical and practical aspects of Petri nets and similar concurrent formalisms.</p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-graduation-cap"></span></span>
+									<header>
+										<h3><a href="http://fscd2020.org/">FSCD 2020</a></h3>
+										<p>29 June - 6 July 2020</p>
+									</header>
+									<p>The 5th International Conference Formal Structures for Computation and Deduction covers all aspects of formal structures for computation and deduction from theoretical foundations to applications.</p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-graduation-cap"></span></span>
+									<header>
+										<h3><a href="https://ijcar2020.org/">IJCAR 2020</a></h3>
+										<p>29 June - 6 July 2020</p>
+									</header>
+									<p>The International Joint Conference on Automated Reasoning (IJCAR) is the premier international joint conference on all topics in automated reasoning.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<footer>
+									<a href="#schedule" class="button scrolly">When?</a>
+								</footer>
+								<footer>
+									<a href="#map" class="button scrolly">Where?</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Schedule -->
+			<section class="main">
+				<header>
+					<div class="container">
+						<h2 id="schedule">Schedule</h2>
+						
+						<img src="images/schedule.jpg" class="image featured" alt="Time goes by… by Yaniv Knobel" />						
+						
+					</div>
+				</header>
+				<div class="content style2 dark">
+					<div class="container">
+						<section>
+							<header>
+							
+								<h3>Schedule day by day</h3>
+							</header>
+							<div class="table-wrapper">
+								<table class="default">
+									<thead>
+										<tr>
+											<th>Su 21</th>
+											<th>Mo 22</th>
+											<th>Tu 23</th>
+											<th>We 24</th>
+											<th>Th 25</th>
+											<th>Fr 26</th>
+											<th>Sa 27</th>
+											<th>Su 28</th>
+											<th>Mo 29</th>
+											<th>Tu 30</th>
+											<th>We 1</th>
+											<th>Th 2</th>
+											<th>Fr 3</th>
+											<th>Sa 4</th>
+											<th>Su 5</th>
+											<th>Mo&nbsp;6</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td style="background:#303030"><a href="http://www.informatik.uni-hamburg.de/TGI/events/pnse20/"><abbr title="International Workshop on Petri Nets and Software Engineering">PNSE</abbr></a></td>
+											<td style="background:#303030"><a href="https://mcc.lip6.fr/"><abbr title="Model checking contest">MCC</abbr></a></td>
+											<td rowspan="3" colspan="3" style="background:#202020"><a href="https://lipn.univ-paris13.fr/petrinets2020/">Petri Nets</a></td>
+											<td></td>
+											<td></td>
+											<td colspan="2" style="background:#404040"><abbr title="1st International Workshop on Semantic and formal approaches to COmplexiTy">Scott</abbr></td>
+											<td colspan="4" style="background:#202020"><a href="http://fscd2020.org/"><abbr title="5th International Conference on Formal Structures for Computation and Deduction">FSCD</abbr></a></td>
+											<td colspan="2" style="background:#404040"><abbr title="5th Workshop on Homotopy Type Theory/Univalent Foundations"><a href="https://hott-uf.github.io/2020/
+">HoTT/UF</a></abbr></td>
+										</tr>
+										<tr>
+											<td style="background:#505050">Basic tutorial</td>
+											<td colspan="2" style="background:#404040">Advanced tutorials</td>
+											<td></td>
+											<td></td>
+											<td colspan="2" style="background:#404040"><abbr title="2nd Joint Workshop on Linearity and Trends in Linear Logic and Applications">Lin &amp; TLLA</abbr></td>
+											<td colspan="4" style="background:#202020"><a href="https://ijcar2020.org/"><abbr title="10th International Joint Conference on Automated Reasoning">IJCAR</abbr></a></td>
+											<td colspan="2" style="background:#404040"><abbr title="11th Coq Workshop">Coq</abbr></td>
+										</tr>
+										<tr>
+											<td colspan="3" style="background:#404040">Petri Nets course</td>
+											<td></td>
+											<td></td>
+											<td colspan="2" style="background:#404040"><abbr title="17th International Workshop on Termination"><a href="http://costa.fdi.ucm.es/wst2020/
+">WST</a></abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td colspan="2" style="background:#404040"><abbr title="18th International Workshop on Satisfiability Modulo Theories"><a href="http://smt-workshop.cs.uiowa.edu/2020/index.shtml
+">SMT</a></abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><a href="https://www.fernuni-hagen.de/ataed2020/"><abbr title="Algorithms &amp; Theories for the Analysis of Event Data 2020">ATAED 2020</abbr></a></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="34th International Workshop on Unification"><a href="http://unif2020.org
+">UNIF</a></abbr></td>
+											<td style="background:#505050"><abbr title="Isabelle Workshop">Isabelle</abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td colspan="2" style="background:#404040"><abbr title="1st Workshop on Geometric and Categorical Structures for Computation and deduction">GeoCat</abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="Proof Ground"><a href="https://www21.in.tum.de/~wimmers/proofground/
+">PG</a></abbr></td>
+											<td style="background:#505050"><abbr title="23rd IFIP Working Group 1.6: Rewriting"><a href="http://cbr.uibk.ac.at/ifip-wg1.6/
+">IFIP WG 1.6</a></abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="11th International Workshop on Computing with Terms and Graphs"><a href="http://termgraph.org.uk/2020/
+">TERMGRAPH</a></abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="9th Workshop on Theorem Prover Components for Educational Software">ThEdu</abbr></td>
+											<td style="background:#505050"><abbr title="7th Workshop on Practical Aspects of Automated Reasoning"><a href="http://paar2020.gforge.inria.fr
+">PAAR</a></abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="5th Workshop on Satisfiability Checking and Symbolic Computation"><a href="http://www.sc-square.org/CSA/workshop5.html
+">SC²</a></abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="4th International Workshop on Automated Reasoning in Quantified Non-Classical Logics"><a href="http://iltp.de/ARQNL-2020/
+">ARQNL</a></abbr></td>
+											<td style="background:#505050"><abbr title="9th International Workshop on Confluence"><a href="http://iwc2020.cic.unb.br
+">IWC</a></abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="7th Workshop on Vampire"><a href="https://easychair.org/smart-program/Vampire20/
+">Vampire</a></abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="7th International Workshop on Rewriting Techniques for Program Transformations and Evaluation"><a href="http://maude.ucm.es/wpte20/
+">WPTE</a></abbr></td>
+											<td style="background:#505050"><abbr title="5th Workshop on Women in Logic"><a href="https://sites.google.com/g.uporto.pt/wil2020
+">Wil</a></abbr></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="1st Tutorial on Hacking Zipperposition">HZ</abbr></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="15th International Workshop on Logical Frameworks and Meta-Languages: Theory and Practice"><a href="https://lfmtp.org/workshops/2020/
+">LFMTP</a></abbr></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td style="background:#404040"><abbr title="Deduction Mentoring Workshop 2020">DMW</abbr></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+				
+
+		<!-- Map -->
+			<section class="main">
+				<header>
+					<div class="container">
+						<h2 id="map">Where?</h2>
+						
+						<a href="https://fr.wikipedia.org/wiki/Campus_Condorcet" class="image featured"><img src="images/Condorcet.jpg" alt="Campus Condorcet" /></a>
+						
+						
+					</div>
+				</header>
+				<div class="content style1 dark">
+					<div class="container">
+						<section>
+							<header>
+								<h3>Location</h3>
+								<p>Campus Condorcet, Aubervilliers</p>
+							</header>
+							<p>
+								Paris Nord Summer of LoVe 2020 is organized and hosted by <a href="https://www.univ-paris13.fr/">Université Sorbonne Paris Nord</a>, in the brand new <a href="https://www.campus-condorcet.fr/">Campus Condorcet</a> in <a href="https://en.wikipedia.org/wiki/Aubervilliers">Aubervilliers</a>.</p>
+								
+								<p>The venue is located right on the Paris Métro line 12 (station Front Populaire), about 15 minutes only by métro from <a href="https://en.wikipedia.org/wiki/Gare_Saint-Lazare">Paris Gare Saint-Lazare</a>, or 20 minutes by métro from the famous <a href="https://en.wikivoyage.org/wiki/Paris/8th_arrondissement">Champs-Élysées</a>.
+							</p>
+						</section>
+						<section>
+
+							<header>
+								<h3>Map</h3>
+							</header>
+							<iframe width="100%" height="500px" frameborder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/petri-nets-2020_333886?scaleControl=true&amp;miniMap=false&amp;scrollWheelZoom=false&amp;zoomControl=true&amp;allowEdit=false&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=caption&amp;captionBar=false"></iframe><p><a href="https://umap.openstreetmap.fr/fr/map/petri-nets-2020_333886">See full screen</a></p>
+						</section>
+
+					</div>
+				</div>
+			</section>
+				
+		<!-- Footer -->
+			<section id="footer">
+
+				<div class="copyright">
+				
+					<ul class="menu">
+						<li>&copy; <a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></li>
+						<li>Design: TXT by <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+					<ul class="menu">
+						<li>Unsplash Graphics:
+							<a href="https://unsplash.com/photos/v6Sy3kyBROE">Parisian gargoyle</a> by <a href="https://unsplash.com/@peterlaster">Pedro Lastra</a></li>
+							<li><a href="https://unsplash.com/photos/2YWS62tLATA">Time goes by…</a> by <a href="https://unsplash.com/@knobelman">Yaniv Knobel</a></li>
+					</ul>
+					
+					<ul class="menu">
+						<li>Campus Condorcet picture: <a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></li>
+					</ul>
+					<ul class="menu">
+						<li>Referenced by <a href="https://www.conferences-computer.science/">Conferences in computer science</a></li>
+					</ul>
+				</div>
+			</section>
+
+<!-- Begin Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

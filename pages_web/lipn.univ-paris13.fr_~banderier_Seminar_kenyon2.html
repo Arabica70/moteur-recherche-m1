@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Loop-Erased Random Walks</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea kenyon -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Loop-Erased Random Walks</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Richard Kenyon</FONT></I></FONT><BR>
+<BR>
+
+ Université de Paris-Sud<BR>
+<BR>
+<A HREF="../../seminars.html">Algorithms Seminar</A><BR>
+<BR>
+May 31, 1999<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="kenyon2.ps">postscript</A> and in <A HREF="kenyon2.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+The loop-erased random walk is
+the simple curve obtained by removing
+in the chronological order the loops of the original random walk. 
+A basic aspect of these walks in <B><I>Z</I></B><SUP><FONT SIZE=2>2</FONT></SUP> is studied:
+its average length (thus solving a conjecture of Guttmann).
+The techniques are combinatorial and use a
+bijection due to Temperley between maximal trees and perfect
+coupling. 
+</BLOCKQUOTE><BR><BR>
+<BR>
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+ <IMG SRC="kenyon001.gif"></DIV>
+<BR>
+<DIV ALIGN=center>Figure 1: A random walk and its associated LERW</DIV><BR>
+
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE><!--TOC section LERW=ST=DT-->
+
+<H2>1&nbsp;&nbsp; LERW=ST=DT</H2><!--SEC END -->
+This is not a new equality between new complexity classes
+but it simply emphasizes the fact that loop-erased random walk (LERW), 
+spanning tree (ST) and domino tiling (DT) are essentially the same object.<BR>
+<BR>
+Indeed, in&nbsp;[<A HREF="#Pe91"><CITE>12</CITE></A>] 
+shows that, for a uniformly chosen spanning tree on a region of
+<B><I>Z</I></B><SUP><FONT SIZE=2>2</FONT></SUP>, the unique arc (branch) between two points has the same
+distribution as the LERW between these two points.
+Moreover, Temperley&nbsp;[<A HREF="#Te74"><CITE>13</CITE></A>] gives a constructive 
+one-to-one correspondence
+ between spanning trees and domino tilings.<BR>
+<BR>
+From the other talk of Richard Kenyon, we know that
+domino tiling (the so-called two dimensional lattice dimer model,
+a model which has some ties with Ising model)
+is the only nontypical <EM>ad hoc</EM> statistical physical model 
+where conformal invariance 
+is proved, so representations of the Virasoro algebra&nbsp;[<A HREF="#Vi"><CITE>15</CITE></A>] 
+could help finding critical exponents.<BR>
+<BR>
+In order to solve this ``self-avoiding walk model''
+ (<EM>i.e.</EM>, to set the critical exponent),
+R. Kenyon does not use representation theory,
+but a ``discrete Laplacian'', from which he 
+gets the full asymptotics. Whereas a lot is known about properties
+of the continuous Laplacian&nbsp;[<A HREF="#Ka"><CITE>5</CITE></A>], works on the discrete
+ Laplacian are more recent&nbsp;[<A HREF="#Ke98"><CITE>10</CITE></A>].<BR>
+<BR>
+As conjectured by Bursill and Guttmann&nbsp;[<A HREF="#Gu"><CITE>4</CITE></A>], 
+the exponent for LERW is 5/4. Richard Kenyon proves this
+by applying the ``equality'' LEWR=ST on the following theorem
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<EM>
+On the uniform spanning tree process on </EM><EM><B><I>N</I></B></EM><EM>×</EM><EM><B><I>Z</I></B></EM><EM>, the expected
+number of vertices on the arc from </EM><EM>(0,0)</EM><EM> to </EM><EM><FONT FACE=symbol>¥</FONT></EM><EM> which lie 
+within distance </EM><EM><I>N</I></EM><EM> of the origin is </EM><EM><I>N</I></EM><SUP><EM><FONT SIZE=2>5/4+<I>o</I>(1)</FONT></EM></SUP><EM>.
+</EM></DIV>
+The next theorem is sometimes attributed to Kirschoff&nbsp;[<A HREF="#Ki"><CITE>11</CITE></A>] and
+proven in&nbsp;[<A HREF="#Tu"><CITE>1</CITE></A>].
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[Matrix-tree Theorem]&nbsp;&nbsp;</FONT><EM>
+For a graph </EM><EM><I>G</I></EM><EM> with set of vertices </EM><EM>{<I>v</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB><EM>}</EM><EM>, 
+let </EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><FONT FACE=symbol>D</FONT>:=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><EM>deg</EM><EM>(<I>v</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM>)	</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	0</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	0	</EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM>	
+0	</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	</EM><EM>·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</EM><EM>	</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	0	</EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM>0	</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	0	</EM></TD>
+<TD ALIGN=center NOWRAP><EM>	</EM><EM>deg</EM><EM>(<I>v</I></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>-</EM><EM>Adj</EM><EM>(<I>G</I>),</EM></TD>
+</TR></TABLE></DIV><EM>
+then the number of spanning trees of </EM><EM><I>G</I></EM><EM> is the product of 
+the nonzero eigenvalues of </EM><EM><FONT FACE=symbol>D</FONT></EM><EM> divided by the size of </EM><EM><I>G</I></EM><EM>.
+For an </EM><EM><I>m</I>× <I>n</I></EM><EM> rectangle, the number of spanning trees is thus
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><EM><FONT SIZE=2>(<I>j</I>,<I>k</I>)<FONT FACE=symbol>¹</FONT> 0</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM><FONT SIZE=2><I>j</I>=0,..., <I>m</I>-1</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM><FONT SIZE=2><I>k</I>=0,..., <I>n</I>-1</FONT></EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM>4-2</EM><EM>cos</EM><EM>(</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT> <I>k</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>n</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)-2</EM><EM>cos</EM><EM>(</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT> <I>j</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>m</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+It is possible to extend this kind of result to a class of polygons
+which are decomposable in rectangles, the so-called Temperleyan
+polyominoes. (Triangulations are also a way, as there is a
+determinant-like expression for triangles.)<BR>
+<BR>
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+ <IMG SRC="kenyon002.gif"></DIV>
+<BR>
+<DIV ALIGN=center>Figure 2: A graph and its associated Temperleyan polyomino</DIV><BR>
+
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>The number of spanning trees of the graph is the number of domino tilings
+of its Temperleyan polyomino.
+Taking the log in the previous formula gives a special case
+ of the following theorem:<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;3</B>&nbsp;&nbsp;<EM>
+Let </EM><EM><I>U</I><FONT FACE=symbol>Ì</FONT> </EM><EM><B><I>R</I></B></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM> be a rectilinear polygon with </EM><EM><I>V</I></EM><EM> vertices. For each
+</EM><EM><FONT FACE=symbol>e</FONT>&gt;0</EM><EM>, let </EM><EM><I>P</I></EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM> be a Temperleyan polyomino in </EM><EM><FONT FACE=symbol>e</FONT></EM><EM><B><I>Z</I></B></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM> approximating </EM><EM><I>U</I></EM><EM> in the natural sense (the corners of
+</EM><EM><I>p</I></EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM> are converging to the corners of </EM><EM><I>U</I></EM><EM>). Let </EM><EM><I>A</I></EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM>
+be the area and </EM><EM>Perim</EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM> be the perimeter of </EM><EM><I>P</I></EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM>.
+Then the log of the number of domino tilings of </EM><EM><I>P</I></EM><SUB><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></SUB><EM> is
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>c</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM> <I>A</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>e</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>c</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM>
+</EM><EM>Perim</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>e</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+<I>O</I>(</EM><EM>log</EM><EM>(<FONT FACE=symbol>e</FONT>))</EM></TD>
+</TR></TABLE></DIV><EM>
+where </EM><EM><I>c</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM>=</EM><EM><I>G</I>/<FONT FACE=symbol>p</FONT></EM><EM>, </EM><EM><I>G</I>=1-</EM><EM>1/3</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>+</EM><EM>1/5</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>-···</EM><EM> is
+Catalan's constant, </EM><EM><I>c</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM>=</EM><EM><I>G</I>/2<FONT FACE=symbol>p</FONT></EM><EM>+</EM><EM>log</EM><EM>((2)</EM><SUP><EM><FONT SIZE=2>1/2</FONT></EM></SUP><EM> -1)/4</EM><EM>.
+</EM></DIV><BR>
+According to the author, ``Part of the motivation for the above 
+theorem is to validate a certain
+heuristic, which attempts
+to explain how the presence of the boundary affects the long-range
+structure of a random tiling. In particular it attempts to explain
+how the boundary affects the densities of local configurations far
+from the boundary&nbsp;[<A HREF="#dmb"><CITE>3</CITE></A>]. This heuristic is called the `phason strain'
+principle.
+The heuristic is as follows: The boundary causes the <EM>average
+height function</EM> of a tiling to deviate slightly from its
+entropy-maximizing value of 0. At a point in the region
+where the average height function has nonzero slope, the ``local''
+entropy there is smaller than the maximal possible entropy, by an
+amount proportional to the square of the gradient of the average
+height function.
+The system behaves in such a way as to maximise the total entropy
+subject to the given boundary values of the height function, and the
+resulting average height function is the function which minimises the
+(integral of) the square gradient. That is, the average height function
+is harmonic.''<BR>
+<BR>
+Anyway an exact application of the phason strain principle gives in
+fact slightly different asymptotics (from the one given in the theorem 3), so 
+this principle is not totally valid
+here, but however it gives a good approximation.<BR>
+<BR>
+<!--TOC section Height Function-->
+
+<H2>2&nbsp;&nbsp; Height Function</H2><!--SEC END -->
+For a given tiling, the height function <I>h</I> 
+is easily defined&nbsp;[<A HREF="#Th"><CITE>14</CITE></A>] by bicolouring the Temperleyan polyomino 
+(there are no adjacent vertices of the same colour):<BR>
+<BR>
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+ <IMG SRC="kenyon003.gif"></DIV>
+<BR>
+<DIV ALIGN=center>Figure 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Temperleyan polyomino and the bicoloured associated graph</DIV><BR>
+
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>
+then, for each oriented edge <I>AB</I> on the border of a domino,
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>h</I>(<I>A</I>)-<I>h</I>(<I>B</I>):=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>+1</TD>
+<TD ALIGN=left NOWRAP>if the square on the left of <I>AB</I> is black,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>-1</TD>
+<TD ALIGN=left NOWRAP>otherwise.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><BR>
+Note that, up to an arbitrary additive constant, the height of the 
+boundary is independent of the tiling. <BR>
+<BR>
+For a smaller and smaller lattice (e.g., <FONT FACE=symbol>e</FONT> <B><I>Z</I></B><SUP><FONT SIZE=2>2</FONT></SUP>), one can 
+approximate any domain <I>U</I> of <B><I>C</I></B>.
+For a very fine lattice (in fact, taking the limit when
+<FONT FACE=symbol>e</FONT><FONT FACE=symbol>®</FONT> 0), one can study the probability of appearance in
+the tiling of some patterns, their repartition in the tiling and 
+also how the shape of the boundary influences the tiling. 
+It appears that there are links with conformal theory, as
+explained below. <BR>
+<BR>
+Let <I>P</I><SUB><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></SUB> be a Temperleyan polyomino associated
+ to a rectilinear polygon <I>U</I> of <B><I>C</I></B>.
+Now, let <I>h</I><SUB><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></SUB> be the average height function of <I>P</I><SUB><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></SUB>,
+that is the average height over all domino tilings of <I>P</I><SUB><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></SUB>
+and then define
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>h</I>(<I>x</I>):=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>e</FONT> <FONT FACE=symbol>®</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>h</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>e</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>).</TD>
+</TR></TABLE></DIV>
+For <I>x</I><FONT FACE=symbol>Î</FONT> <FONT FACE=symbol>¶</FONT> <I>U</I>, <I>h</I>(<I>x</I>) is defined by continuity from values of
+<I>h</I> in the interior.<BR>
+<BR>
+The remarkable fact is that this limiting average height function <I>h</I> 
+can be expressed as 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>h</I>(<I>v</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>4</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>Á</FONT> </TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>v</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>b</I></FONT><SUB><FONT SIZE=2>0</FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>z</I><FONT FACE=symbol>®</FONT>
+<I>v</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><I>F</I><SUB><FONT SIZE=2>+</FONT></SUB>(<I>v</I>,<I>z</I>)-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT>(<I>z</I>-<I>v</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><I>du</I>=-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>Á</FONT> log <FONT FACE=symbol>Ã</FONT>'(<I>z</I>),</TD>
+</TR></TABLE></DIV>
+ where <FONT FACE=symbol>Ã</FONT> is the
+Weiertrass elliptic function and where <I>F</I><SUB><FONT SIZE=2>+</FONT></SUB>(<I>u</I>,<I>z</I>)&nbsp;<I>du</I> is a meromorphic 1-form,
+ thus allowing some links with conformal mapping theory.
+We refer to ``Conformal invariance of domino
+tiling'' (1997) and to ``The asymptotic determinant of the 
+discrete Laplacian'' (1999) for further informations<A NAME="text1" HREF="#note1"><SUP><FONT SIZE=2>1</FONT></SUP></A>.<BR>
+<BR>
+
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Tu"><FONT COLOR=purple>[1]</FONT></A><DD>
+Brooks (R.&nbsp;L.), Smith (C. A.&nbsp;B.), Stone (A.&nbsp;H.), and Tutte (W.&nbsp;T.).&nbsp;--
+The dissection of rectangles into squares. <EM>Duke Mathematical
+ Journal</EM>, vol.&nbsp;7, 1940, pp.&nbsp;312--340.<BR>
+<BR>
+
+<DT><A NAME="Bu"><FONT COLOR=purple>[2]</FONT></A><DD>
+Burton (Robert) and Pemantle (Robin).&nbsp;--
+Local characteristics, entropy and limit theorems for spanning trees
+ and domino tilings via transfer-impedances. <EM>The Annals of Probability</EM>,
+ vol.&nbsp;21, n&deg;3, 1993, pp.&nbsp;1329--1371.<BR>
+<BR>
+
+<DT><A NAME="dmb"><FONT COLOR=purple>[3]</FONT></A><DD>
+Destainville (N.), Mosseri (R.), and Bailly (F.).&nbsp;--
+Configurational entropy of codimension-one tilings and directed
+ membranes. <EM>Journal of Statistical Physics</EM>, vol.&nbsp;87, n&deg;3-4,
+ 1997, pp.&nbsp;697--754.<BR>
+<BR>
+
+<DT><A NAME="Gu"><FONT COLOR=purple>[4]</FONT></A><DD>
+Guttmann (A.) and Bursill (R.).&nbsp;--
+Critical exponent for the loop-erased self-avoiding walk by
+ Monte-Carlo methods. <EM>Journal of Statistical Physics</EM>, vol.&nbsp;59,
+ 1990, pp.&nbsp;1--9.<BR>
+<BR>
+
+<DT><A NAME="Ka"><FONT COLOR=purple>[5]</FONT></A><DD>
+Kac (Mark).&nbsp;--
+Can one hear the shape of a drum? <EM>American Mathematical
+ Monthly</EM>, vol.&nbsp;73, n&deg;4, part II, 1966, pp.&nbsp;1--23.<BR>
+<BR>
+
+<DT><A NAME="MR92m:52049"><FONT COLOR=purple>[6]</FONT></A><DD>
+Kenyon (Richard).&nbsp;--
+Rigidity of planar tilings. <EM>Inventiones Mathematicae</EM>, vol.&nbsp;107,
+ n&deg;3, 1992, pp.&nbsp;637--651.<BR>
+<BR>
+
+<DT><A NAME="MR94a:52041"><FONT COLOR=purple>[7]</FONT></A><DD>
+Kenyon (Richard).&nbsp;--
+Tiling a polygon with parallelograms. <EM>Algorithmica</EM>, vol.&nbsp;9,
+ n&deg;4, 1993, pp.&nbsp;382--397.<BR>
+<BR>
+
+<DT><A NAME="Ke97"><FONT COLOR=purple>[8]</FONT></A><DD>
+Kenyon (Richard).&nbsp;--
+Local statistics of lattice dimers. <EM>Annales de l'Institut Henri
+ Poincaré. Probabilités et Statistiques</EM>, vol.&nbsp;33, n&deg;5,
+ 1997, pp.&nbsp;591--618.<BR>
+<BR>
+
+<DT><A NAME="MR98h:52037"><FONT COLOR=purple>[9]</FONT></A><DD>
+Kenyon (Richard).&nbsp;--
+Tilings of convex polygons. <EM>Annales de l'Institut Fourier</EM>,
+ vol.&nbsp;47, n&deg;3, 1997, pp.&nbsp;929--944.<BR>
+<BR>
+
+<DT><A NAME="Ke98"><FONT COLOR=purple>[10]</FONT></A><DD>
+Kenyon (Richard).&nbsp;--
+Tilings and discrete Dirichlet problems. <EM>Israel Journal of
+ Mathematics</EM>, vol.&nbsp;105, 1998, pp.&nbsp;61--84.<BR>
+<BR>
+
+<DT><A NAME="Ki"><FONT COLOR=purple>[11]</FONT></A><DD>
+Kirchhoff (G.).&nbsp;--
+Über die Auflösung der Gleichungen, auf welche man bei der
+ Untersuchung der linearen Verteilung galvanischer Ströme geführt
+ wird. <EM>Annalen für der Physik und der Chemie</EM>, vol.&nbsp;72,
+ 1847, pp.&nbsp;497--508.<BR>
+<BR>
+
+<DT><A NAME="Pe91"><FONT COLOR=purple>[12]</FONT></A><DD>
+Pemantle (Robin).&nbsp;--
+Choosing a spanning tree for the integer lattice uniformly. <EM>The
+ Annals of Probability</EM>, vol.&nbsp;19, n&deg;4, 1991,
+ pp.&nbsp;1559--1574.<BR>
+<BR>
+
+<DT><A NAME="Te74"><FONT COLOR=purple>[13]</FONT></A><DD>
+Temperley (H. N.&nbsp;V.).&nbsp;--
+Enumeration of graphs on a large periodic lattice. In <EM>Combinatorics</EM>. <EM>London Mathematical Society Lecture Note Series</EM>,
+ pp.&nbsp;155--159.&nbsp;--
+Cambridge University Press, 1974. Proceedings of the
+ British Combinatorial Conference, University College, Wales, Aberystwyth,
+ 1973.<BR>
+<BR>
+
+<DT><A NAME="Th"><FONT COLOR=purple>[14]</FONT></A><DD>
+Thurston (William&nbsp;P.).&nbsp;--
+Conway's tiling groups. <EM>The American Mathematical Monthly</EM>,
+ vol.&nbsp;97, n&deg;8, 1990, pp.&nbsp;757--773.<BR>
+<BR>
+
+<DT><A NAME="Vi"><FONT COLOR=purple>[15]</FONT></A><DD>
+Virasoro (M.&nbsp;A.).&nbsp;--
+<EM>Physical Review D. (3)</EM>, 1970, pp.&nbsp;2933--2936.</DL>
+
+
+<!--BEGIN NOTES document-->
+<HR WIDTH="50%" SIZE=1><DL>
+<DT><A NAME="note1" HREF="#text1"><FONT SIZE=5>1</FONT></A><DD> Like other recent preprints of the author, they 
+are available at his home page<BR><TT>http://topo.math.u-psud.fr/</TT><TT>~</TT><TT>kenyon/</TT>
+</DL>
+<!--END NOTES-->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+</HTML>
+

@@ -1,0 +1,15 @@
+<html> <head>
+<script type="text/javascript">
+<!--
+if (navigator.language.indexOf('fr') > -1) {
+document.location.href ='index-fr.php';
+}
+else {
+document.location.href ='index-en.php';
+}
+-->
+</script>
+</head>
+
+<body>
+</body> </html>

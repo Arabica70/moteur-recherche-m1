@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 15</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    .footnote { }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 15 C++</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: Lambda</h3>
+<ol>
+  <li>
+    <b>Implémentez</b> le programme déclaré dans
+    <a href="1.1.h" download>1.1.h</a> (copié ci-dessous) dans un fichier
+    <tt>1.1.cc</tt>. <b>Ne modifiez pas</b> <tt>1.1.h</tt> !
+    <pre><code class="c++">#include &lt;functional&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using std::string;
+using std::vector;
+
+struct Student {
+  string name;   // Eg. "John Smith"
+  int number;    // Identification number, eg. "12345678"
+  double grade;  // Global grade over 20.0, eg. 15.5.
+};
+
+// Sorts students by name, lexicographically: "Aab" before "Ac".
+void SortStudentsByName(vector&lt;Student&gt;* students);
+
+// Sorts students by their identification number modulo M: 0 before 1.
+void SortStudentsByNumberModulo(vector&lt;Student&gt;* students, int M);
+
+// Applies the given function to each student inside the vector.
+void ApplyFunctionToStudents(std::function&lt;void(Student*)&gt; fun,
+                             vector&lt;Student&gt;* students);</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 1.tar.gz; wget --no-cache <a href="1.tar.gz" download>http://fabien.viger.free.fr/cpp/td15/1.tar.gz</a>
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU</b>: <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Move</h3>
+<ol>
+  <li>
+    <b>Copiez</b> le corrigé du 3.4 du TD7 (<a href="../td7/corrige/3.4.h" download>3.4.h</a>, <a href="../td7/corrige/3.4.cc" download>3.4.cc</a>) dans des fichiers 2.1.h, 2.1.cc. N'<b>oubliez pas</b> d'ajuster le <tt>#include "3.4.h"</tt>.
+    <br/><br/><b>Ajoutez d'abord</b> une version <tt>const</tt> de l'<tt>operator[]</tt> (qui, du coup, renvoie une <tt>const&amp;</tt>)
+    <br/><b>Ajoutez ensuite</b> un <tt>operator&lt;</tt> qui fait la comparaison lexicographique:
+    <br/>[1, 2, 3, 4] &lt; [1, 2, 4]
+    <br/>[] &lt; [0, 0]
+    <br/><tt>operator&lt;</tt>([9, 9, 9], [9, 9, 9]) renvoie <tt>false</tt> car les arguments sont égaux.
+    <b>Faite tourner</b> le test:
+    <pre>rm 2.tar.gz; wget --no-cache <a href="2.tar.gz" download>http://fabien.viger.free.fr/cpp/td15/2.tar.gz</a>
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b class="orange">RENDU</b>: <tt>2.1.h</tt>, <tt>2.1.cc</tt>
+  <br/>
+  <br/>
+  </li>
+  <li> 
+    <b>Copiez</b> dans <tt>2.2.h</tt> et <tt>2.2.cc</tt> et <b>ajoutez</b> un "move" constructor et
+    <tt>operator=</tt> pour que ça tourne beaucoup plus vite.
+    <br/><b>Testez:</b> <tt>make 2.2</tt>
+    <br/><br/><b class="orange">RENDU</b>: <tt>2.2.h</tt>, <tt>2.2.cc</tt>
+  <br/>
+  <br/>
+  </li>
+  <li>Implémentez dans un fichier <tt>2.3.h</tt>
+     une <b>fonction générique</b> (<tt>template<></tt>) <tt>Select(...)</tt> qui prend en arguments
+    <ul>
+      <li>un pointeur vers un tableau <tt>vector<></tt> d'éléments de type quelconque.
+      </li>
+      <li>Le <i>prédicat</i>: une fonction (ou objet fonctionnel) qui, évalué sur un élément du tableau, renvoie <tt>true</tt> ou <tt>false</tt>
+      </li>
+    </ul>
+    cette fonction modifiera le tableau pour ne garder que les éléments vérifiant le prédicat.
+    <br/>Vous ne pourrez pas utiliser <tt>std::remove_if</tt> bien sûr, puisque l'idée est de l'implémenter vous-même.
+    <br/><br/><b>Indice <span class="red">important</span>:</b> au lieu de fixer le type du prédicat (vous pourriez par exemple penser à <tt>std::function<bool(T)></tt> ou <tt>std::function<bool(const T&)></tt>),
+    utilisez un <b>type générique</b> (qui sera donc un 2<sup>ème</sup> argument de votre <tt>template<...></tt> après le type des eléments).
+    <br/>Cela permettra à l'utilisateur
+    de <tt>Select(...)</tt> de l'utiliser avec des prédicats quelconques, et au passage, de passer mes tests.
+    <br/><br/><b>Testez:</b>
+    <pre>make 2.3</pre>
+    <b class="orange">RENDU</b>: <tt>2.3.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<!--
+<hr/>
+<h3>Exercice 3: Bit hacks</h3>
+<ol>
+  <li>
+    <b>Complétez</b> le fichier <a href="3.h" download>3.h</a> (également inclus ci-dessous). Pas la peine de faire un 3.cc: saisissez le code directement dans le .h.
+    <pre><code class="c++">typedef unsigned int uint32;
+
+typedef unsigned short uint16;
+typedef unsigned char uint8;
+
+// If you want to perform some precomputation when the program starts,
+// you can put it here: Init() will be called by 3.test.cc and by 3.bench.cc.
+void Init() {
+}
+
+// Returns 1 if the bit #bit of x is 1, 0 otherwise.
+// NOTE: bit #0 is the bit of lowest weight (i.e. x modulo 2).
+inline int GetBitOf(int bit, uint32 x) {
+    return -1;
+}
+
+// Set bit #bit of "x" to the given value (0 if value=false, 1 if value=true)
+inline void SetBitOf(int bit, bool value, uint32* x) {
+    return -1;
+}
+
+// Return x with all of its bits inversed: 1 becomes 0, 0 becomes 1.
+inline uint32 NegateBits(uint32 x) {
+    return -1;
+}
+
+// Return the number of bits of x that are set.
+inline int BitWeight(uint32 x) {
+    return -1;
+}
+
+// Return the bits of x, "flipped": bit #0 becomes bit #31,
+// bit #1 becomes bit #30, and so on.
+inline uint32 FlipBits(uint32 x) {
+    return -1;
+}</code></pre>
+    <b>Indications</b>
+    <ul>
+      <li>Avancer progressivement: faites les fonctions une par une, <b>dans l'ordre</b>, vérifiez les avec le test, et ainsi de suite.
+      </li>
+      <li>Vous pourrez utiliser les opérateurs de manipulations de bits:
+        <ul>
+          <li><tt>x &amp; y</tt>: <em>x</em> ET <em>y</em>, bit-à-bit</li>
+          <li><tt>x | y</tt>: <em>x</em> OU <em>y</em>, bit-à-bit</li>
+          <li><tt>x ^ y</tt>: <em>x</em> XOR <em>y</em>, bit-à-bit</li>
+          <li><tt>~x</tt>: NOT x, bit-à-bit</li>
+          <li><tt>x &lt;&lt; y</tt>: Décalage des bits de x vers la gauche, de <em>y</em> bits (le résultat vaut donc <em>x</em> * 2 <sup><em>y</em></sup></li>
+          <li><tt>x &gt;&gt; y</tt>: Décalage des bits de x vers la droite, de <em>y</em> bits (le résultat vaut donc <em>x</em> / 2 <sup><em>y</em></sup></li>
+        </ul>
+      </li>
+      <li>Rappelez-vous qu'un entier <tt>unsigned int</tt>, c'est 32 bits!</li>
+    </ul>
+    <br/><b>Testez</b> votre code avec <a download href="3.tar.gz">3.tar.gz</a>:
+    <pre>rm 3.tar.gz; wget --no-cache http://fabien.viger.free.fr/cpp/td10/3.tar.gz &amp;&amp; tar xf 3.tar.gz
+g++ -std=c++11 -O2 3.test.cc &amp;&amp; ./a.out</pre>
+    <b class="orange">RENDU:</b> <tt>3.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>(*) Améliorez</b> la performance de vos fonctions!
+    <br/>Vous pouvez obtenir le temps de calcul moyen de vos fonctions avec <a href="3.bench.cc" download>3.bench.cc</a>:
+    <pre>g++ -std=c++11 -O2 3.bench.cc &amp;&amp; ./a.out</pre>
+    <b class="red">ATTENTION!</b> Votre code devra toujours être valide (cf test ci-dessus).
+    <br/><br/><b class="orange">RENDU:</b> <tt>3.h</tt> (amelioré)
+    Note: sur ma machine (Core i7-5600U CPU @ 2.60GHz), j'arrive à descendre en dessous de 1ns pour chacune de ces opérations.
+    <br/><br/>
+  </li>
+</ol>
+Note: la recherche "bit hacks" sur Google permet d'arriver sur une page sympa avec plein de recettes ésoteriques.
+Ne pompez pas sans comprendre, sinon je me fâche!
+-->
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

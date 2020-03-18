@@ -1,0 +1,56 @@
+CFLAGS= -Wall --pedantic
+GTK_CFLAGS= `pkg-config gtk+-2.0 --cflags`
+GTK_LDFLAGS= `pkg-config gtk+-2.0 --libs`
+
+# _________________
+# jeu de morpion
+# _________________
+
+all: morpion_jeu.exe
+
+# __ modèle
+
+# module
+morpion.o: morpion.c morpion.h
+	gcc -c morpion.c -o morpion.o $(CFLAGS)
+
+# programme test
+modele_test.exe: morpion.o modele_test.o
+	gcc morpion.o modele_test.o -o modele_test.exe
+
+modele_test.o: modele_test.c morpion.h
+	gcc -c modele_test.c -o modele_test.o $(CFLAGS) 
+
+# __ interface
+
+# module
+morpion_ig.o: morpion_ig.c morpion_ig.h
+	gcc -c morpion_ig.c -o morpion_ig.o $(CFLAGS) $(GTK_CFLAGS) 
+
+# programme test
+vue_test.exe: morpion_ig.o vue_test.o
+	gcc morpion_ig.o vue_test.o -o vue_test.exe $(GTK_LDFLAGS)
+
+vue_test.o: vue_test.c morpion_ig.h
+	gcc -c vue_test.c -o vue_test.o $(CFLAGS) $(GTK_CFLAGS) 
+
+# __ contrôleur
+
+# module
+morpion_ctr.o: morpion_ctr.c morpion_ctr.h morpion_ig.h morpion.h
+	gcc -c morpion_ctr.c -o morpion_ctr.o  $(CFLAGS) $(GTK_CFLAGS)
+
+# jeu & executable
+morpion_jeu.o: morpion_jeu.c morpion_ctr.h
+	gcc -c morpion_jeu.c -o morpion_jeu.o  $(CFLAGS) $(GTK_CFLAGS) 
+
+morpion_jeu.exe: morpion_jeu.o morpion_ctr.o morpion_ig.o morpion.o
+	gcc morpion_jeu.o morpion_ctr.o morpion_ig.o morpion.o -o morpion_jeu.exe $(GTK_LDFLAGS) 
+
+# nettoyage
+clean:
+	rm -rf *.o
+
+mrproper: clean 
+	rm -rf *.exe
+

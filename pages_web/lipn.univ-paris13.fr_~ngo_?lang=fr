@@ -1,0 +1,287 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Ngô Quốc Hoàn</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Ngô Quốc Hoàn">
+<STYLE type="text/css">
+BODY {
+  color: black;
+  text-align: justify;
+  background: white url(/common/LIPNbg12.GIF);
+  margin: 1em;
+}
+
+FONT.redblink { 
+	color: red; 
+	text-decoration: blink;
+}
+
+TABLE.two-column {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+TD.title {
+  border: 0px;
+  text-align: center;
+}
+
+TD.buttonb{
+	  background-color: rgb(0,230,255); 
+	    color: black;
+	      border: solid 1px black;
+		  font-size: 85%;
+		    text-align: center;
+		      width: 8%;
+	      }
+	      
+TD.button {
+  background-color: rgb(0,230,255); 
+  color: black;
+  border: solid 1px black;
+  font-size: 85%;
+  text-align: center;
+  width: 8%;
+}
+TD.inactive {
+  background-color: rgb(245,245,245); /* white smoke */
+  border: solid 1px black;
+  color: black;
+}
+A.button {
+  color: black;
+  display : block;
+  text-decoration: none;
+}
+A.buttonb {
+	  color: black;
+	    display : block;
+	      text-decoration: none;
+      }
+
+
+TD.current {
+  background-color: rgb(255,204,51); 
+  border: solid 1px rgb(0,0,128); /* navy blue */
+}
+
+DIV.centered {
+  text-align: center;
+}
+DIV.footer {
+  font-size: small;
+  font-style: oblique;
+}
+HR.no-banner {
+  background-color: rgb(0,230,255); 
+  border: solid 1px black;
+  height: 8px;
+}
+HR.yellow {
+  background-color: rgb(255,204,51); 
+  border: none;
+  height: 1px;
+}
+
+.background-blue {
+  background-color: rgb(0,230,255); 
+}
+.background-smoke {
+  background-color: rgb(245,245,245); 
+}
+.background-yellow {
+  background-color: rgb(255,204,51); 
+}
+
+a:hover, a:active {
+        color: #cc33cc;
+        }
+div.header div.Paris13 {
+  position:static;
+  left:10px;
+  top:80px;
+  margin-left:10px;
+  width: 142px;
+  height: 37px;
+  background: transparent url(/common/logoP13Petit.GIF) no-repeat top left;
+}
+div.header div.Paris13 span {
+  display:none ;
+}
+div.header div.CNRS {
+  position:static;
+  right:0px;
+  top:50px;
+  margin-right:10px;
+  width: 207px;
+  height: 99px;
+  background: transparent url(/common/LogoCNRS.gif) no-repeat top right;
+}
+div.header div.CNRS span {
+  display:none ;
+}
+div.header {
+text-align:center;
+height:40px;
+margin-top:30px;
+margin-bottom:0px;
+}
+
+div.header2 {
+text-align:center;
+height:45px;
+margin-top:10px;
+margin-bottom:0px;
+}
+
+div.header span.HeaderWhere span{
+font-size: 200%;
+font-weight: bold;
+}
+
+h1 {
+  margin: 20px 20px 10px 10px;
+}
+div.container {
+  margin-left:20px;
+  margin-right:20px;
+}
+
+div.container div.summary {
+  background: #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 1pt;
+  font-size: 10pt;
+  font-family: sans;
+  margin:0px;
+  text-align:justify;
+}
+div.intro {
+  background: #ffc0c0;
+  padding: 10px;
+  margin:10px 50px;
+  text-align:justify;
+  border: solid;
+}
+
+h2 {
+font-size: 150%;
+background:transparent url(/common/degrade.png) repeat-y;
+padding-left: 30px;
+}
+
+
+h2 {
+font-size: 150%;
+background:transparent repeat-y;
+padding-left: 30px;
+}
+
+
+h3 {
+font-size: 105%;
+}
+
+h4 {
+font-size: 100%;
+}
+
+
+
+a.info span
+{
+margin-top: 1em;
+display:none;
+}
+
+a.info:hover
+{
+text-decoration:none;
+background:#ffffff;
+}
+
+a.info
+{
+}
+
+a.info:hover span
+{
+display:inline;
+position:relative;
+margin-top: 1em;
+left:0px;
+}
+
+div.abstract
+{
+padding:1em;
+color:#505560;
+margin-bottom: .7em;
+background:#f4f5f6;
+border: #aaaaaa 1px solid;
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/CALIN/?lang=fr">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Ngô Quốc Hoàn</H1>
+<P><br>
+
+
+<div style="margin-left: auto;  margin-right: auto;   width:590px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="Hoantt.jpg"  alt="Hoantt"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Ngô Quốc Hoàn<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   B210<br>
+Tél :    +33149403692 <br>
+Courriel :   hoan.ngo<i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<P>
+<H2>Ma formation</H2>
+<P> Je suis étudiant doctoral de Prof. Hoang Ngoc Minh et Prof. Gerard Duchamp de Septembre, 2013. J'etudie à l'interface entre théorie des nombres et physique.  
+<H2>Domaine</H2>
+<P> Théorie des nombres; Combinatoire; Geométrie arithmétique.
+<H2>Mes stages</H2>
+<P> 2011 : Stage de master 2 au sein l'équipe Geométrie Arithmétique de l'UFR mathématique et informatique de l'université de Strasbourg. 
+<P> J'ai travaillé sur la domaine geométrie arithmétique à la sujet "la forme en linaire logarithme et les points entiers sur les courbes algebriques" avec Prof. C. Gasbarris.
+<ul>
+</script>
+
+
+
+</BODY>
+</HTML>
+
+

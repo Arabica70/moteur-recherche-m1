@@ -1,0 +1,601 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the La Roche IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talks at the La Roche en Ardenne IFIP WG1.3 meeting (June 3-6, 2006)</H2>
+</CENTER>
+
+=== Saturday, June 3rd
+<LI><a name="Tarlecki">Andrzej Tarlecki</a> 
+(Institute of Informatics, Warsaw University and Institute of
+Computer Science, Polish Academy of Sciences, Warsaw, Poland)
+<BR>Towards (institutional) foundations for heterogeneous specifications
+<BR>
+<BR><BR><BR>
+The overall aim of this work is to develop semantic foundations for
+using multiple logical systems in a single specification and software
+development task.
+<BR><BR>
+In this talk, I recall the basic technical notions related to
+modelling logical systems as institution, and tempt the audience with
+exciting possibilities institutions offer for a whole range of
+applications and foundational developments. This provides a basis to
+recall the standard view of structured specifications in an arbitrary
+institution, where complex specifications may be built gradually from
+simpler ones by applying pre-defined, institution-independent
+specification-building operations, and of a systematic software
+development process, proceeding from an initial requirements
+specification to implementation by a number of gradual implementation
+steps. In particular, the latter allows for constructor
+implementations, where one specification is implemented by another one
+via a construction mapping models of the latter to the models of the
+former.  Now, the goal of this work is to lift these concepts and
+ideas to heterogeneous specifications and developments, which may
+involve various logical systems to deal with various system components
+and various development stages.
+<BR><BR>
+An obvious observation is that to make this meaningful, the
+institutions to be involved must be linked with each other. A number
+of notions of a mapping between institutions have been proposed, each
+with its own intuition and technically different formalisation.
+Fortunately, it turns out that in a certain way the basic notions are
+mutually definable (by replacing maps of one kind by spans of maps of
+another kind). Thus, even though technical consequences are different,
+in principle one may choose any kind of maps to related institutions,
+yielding a category of institutions with maps of interest as a basic
+framework in which the issues of heterogeneity may be discussed.  A
+heterogeneous logical environment in which one works is then simply
+captured as a diagram in this category.
+<BR><BR>
+Once such a heterogeneous logical environment is given, two basic ways
+to move specifications between institutions may be studied. One
+corresponds to translation of a specification along a signature
+morphism within an institution, and works best when used as a
+translation of a specification along an institution comorphism. The
+other corresponds to hiding within an institution "against" a
+signature morphism, and works best when used as a "hiding" along an
+institution morphism. Together with the standard intra-institutional
+specification building operations, these may be used to build
+heterogeneous specifications that use various institutions to build
+specification fragments, but overall are aimed at specifying a class
+of models in one particular institution. I call such heterogeneous
+specifications "focused". They may be used in the software
+specification and development process very much as the usual
+structured specifications built within a single institution.
+<BR><BR>
+An additional advantage a heterogeneous logical environment offers
+here is that the development process itself may migrate between
+various logical systems, using the model part of institution
+(co)morphisms as additional constructions on models. This applies both
+to the development of the system as a whole, as well as to
+developments of its individual modules, as arising from CASL-style
+architectural specifications.
+<BR><BR>
+In addition to these possibilities, I discuss distributed
+heterogeneous specifications, formally defined as diagrams of
+specifications built over various institutions, linked by morphisms
+that in essence consist of two parts: an institution (co)morphism,
+used to move from one institution to another, and a signature morphism
+within an institution, used to move from one signature to another.
+Such a distributed specification captures a multiple-view
+specification of a system: the individual specifications in the
+diagram capture individual views, and the morphisms provide the
+required links between the various views of the same system. A notion
+of a "distributed" model for such specifications is discussed, leading
+to the concepts of consistency and refinements for such distributed
+heterogeneous specifications.
+<BR><BR>
+This work is funded in part by the European IST FET programme under
+the IST-2005-016004 SENSORIA project.
+======================================================================
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Kreowski">Hans-Joerg Kreowski</a> (U. Bremen, Germany)
+<BR>Short introduction to the Collaborative Research Centre 637
+Autonomous cooperating logistic processes - A paradigm shift and its
+limitations 
+(<A HREF="http://www.informatik.uni-bremen.de/theorie/files/CRC637_WG1.3.ppt">slides</A>)
+<BR><BR><BR> 
+Collaborative Research Centres (CRC) are long-term university research
+centres for interdisciplinary research funded by the German Research
+Foundation (DFG).  A CRC can run up to 12 years and is funded by about
+1 Mill. Euro per year. The talk surveys the CRC 637 on Autonomous
+Cooperating Logistic Processes that started in 2004 at the University
+of Bremen and involves researchers from computer science, economics,
+information technology, mathematics, and production engineering. The
+objective of the CRC 637 is a systematic and broad investigation and
+application of autonomy as a new control paradigm for logistic
+processes. At the end of the talk, the particular role of the
+Theoretical Computer Science Group within the CRC is sketched.
+<BR><BR>
+Further information in my
+<A HREF="http://www.informatik.uni-bremen.de/theorie/files/WADT2006.PPT">WADT talk</A>
+
+<BR><BR> and in this 
+<A HREF="http://www.informatik.uni-bremen.de/~kuske/Papers/ICGT2006.pdf">paper</A> : 
+<BR>
+Karsten Hölscher, Hans-Jörg Kreowski, Sabine Kuske: Autonomous Units and Their Semantics - the Sequential Case. In Proc. Third Intl. Conference on Graph Transformation (ICGT 2006), Lecture Notes in Computer Science. Springer, 2006. To appear.
+
+</LI><BR>------------------------------------------------------
+<LI><a name="Duval">Dominique Duval</a> (U. Grenoble, France)
+<BR>The category of diagrammatic logics
+(<A HREF="http://www-lmc/lmc-cf/Dominique.Duval/Slides/ifip06.pdf">slides</A>)
+
+<BR>Dominique Duval, partly with Christian Lair
+<BR><BR>
+Diagrammatic Logic provides a new algebraic point of view about logic, that seems well suited for studying computational effects in programming languages.
+<BR><BR>
+Some aspects of theoretical computer science require the collaboration
+of several logics. For instance, the computational effects in a
+language can be described with the help of two distinct related
+logics, one for the denotational semantics (the models) and the other
+one for the inference system of the language: this is the case with
+the treatment of exceptions [Duval-Reynaud 2005]. The collaboration of
+several logics can be expressed thanks to morphisms in a relevant
+category of logics.
+<BR><BR>
+Diagrammatic logics generalize Ehresmann's sketches in a rather simple
+way, by abstracting one step higher [Duval-Lair 2002, Duval 2003]. A
+diagrammatic logic L is defined from a morphism of projective sketches
+p. The specifications in the logic L are the realizations of the
+source of p and the theories in the logic L are the realizations of
+the target of p. The notion of models is defined thanks to the
+adjunction associated to p. The adjunction associated to p also yields
+the deduction process of L, as soon as p satisfies some assumptions:
+such a p is called a propagator. There is a straightforward notion of
+morphism between propagators, that gives rise to the category of
+Diagrammatic Logics.
+<BR><BR>
+See also the WADT talk
+"About raising and handling exceptions"
+by Dominique Duval and Jean-Claude Reynaud 
+<BR>
+(<A HREF="http://www-lmc/lmc-cf/Dominique.Duval/Slides/wadt06.pdf">slides</A> 
+and 
+<A HREF="http://www-lmc/lmc-cf/Dominique.Duval/Publications/DuvalReynaudWadt06.pdf">paper</A>)
+
+</LI><BR>------------------------------------------------------
+<BR>=== Sunday, June 4th
+<LI><a name="Ryan">Mark Ryan</a> (U. Birmingham, UK)
+<BR>Modelling and verifying electronic voting protocols in the applied pi calculus
+(<A HREF="LAROCHE-DATA/Ryan-ifip.pdf">slides</A>)
+<BR><BR>
+We report on some recent work to formally specify and verify
+electronic voting protocols. In particular, we use the formalism of
+the applied pi calculus: the applied pi calculus is a formal language
+similar to the pi calculus but with useful extensions for modelling
+cryptographic protocols. We model several important properties, namely
+fairness, eligibility, privacy, receipt-freeness and coercion-
+resistance. Verification of these properties is illustrated on two
+cases studies and has been partially automated using the Blanchet's
+ProVerif tool. 
+<BR><BR>
+<A HREF="ftp://ftp.cs.bham.ac.uk/pub/authors/M.D.Ryan/06-csfw.pdf">one paper</A> and 
+<A HREF="ftp://ftp.cs.bham.ac.uk/pub/authors/M.D.Ryan/06-wote.pdf">another paper</A>
+
+</LI><BR>------------------------------------------------------
+<LI><a name="LeGall">Pascale Le Gall</a> (U. Evry, France)
+<BR>Conformance testing for input/output symbolic transition systems
+<BR><BR>We propose an approach to test whether a system conforms to its
+specification given in terms of an Input/Output Symbolic Transition System
+(IOSTS). IOSTSs use data types to enrich transitions with data-based
+messages and guards depending on state variables. We use symbolic
+execution techniques both to extract IOSTS behaviours to be tested in the
+role of test purposes and to ground an algorithm of test case generation.
+Thus, contrarily to some already existing approaches, our test purposes
+are directly expressed as symbolic execution paths of the specification.
+They are finite symbolic substrees of its symbolic execution. Finally, we
+give coverage criteria and demonstrate our approach on a running example.
+<BR><BR>
+Ref : Christophe Gaston, Pascale Le Gall, Nicolas Rapin, Assia Touil.
+Symbolic Execution Techniques for Test Purpose Definition. 18th IFIP
+TC6:WG6.1 International Conference, TestCom 2006, New York, NY, USA, May
+2006. pp 1-18, LNCS 3964
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Petrucci">Laure Petrucci</a> (U. Paris-Nord, France)
+<A HREF="http://www-lipn.univ-paris13.fr/~petrucci/">home page</A>
+<BR>Modular Analysis of Petri Nets
+(<A HREF="LAROCHE-DATA/Petrucci-IFIP06.pdf">slides</A>)
+<BR><BR>
+	The systems to model are nowadays very large. Their specification is
+	often decomposed into several steps. This leads to modularly or
+	incrementally designed models. Petri nets analysis is generally
+	achieved via state space analysis, which is often impossible to perform
+	due to the so-called state space explosion problem. Several
+	methods allow to reduce the occurrence graph size, e.g. using partial
+	orders, symmetries, ... Here, we focus on techniques which take
+	advantage of the modular design of the system, and hence builds the
+	state space in a modular or incremental way.
+
+</LI><BR>------------------------------------------------------
+<LI>
+<a name="Nazareno">Aguirre Nazareno</a> (U. Nacional de Rio Cuarto, Argentina)
+<BR>Analysing properties of execution in (Dyn)Alloy
+(Joint work with Marcelo Frias, Juan Pablo Galeotti and Carlos Lopez
+Pombo).
+<BR><BR>
+In this talk, we will present an extension of the Alloy specification
+language, called DynAlloy. This extension allows for the definition of
+actions and the specification of assertions regarding execution traces,
+in the style of dynamic logic specifications. We will argue about the 
+benefits of adopting this extended version of Alloy for validating
+dynamic properties of systems, and show that DynAlloy specifications are
+also subject to automatic analysability. We will also compare the
+analysis of Alloy specification of executions (via a coding of traces)
+and DynAlloy specifications for a number of case studies.
+<BR><BR>
+Some papers:
+<BR><BR>
+M. Frias, J. Galeotti, C. Lopez Pombo and N. Aguirre, "DynAlloy:
+Upgrading Alloy with Actions", in Proceedings of the 27th International
+Conference on Software Engineering ICSE 2005, St. Louis, Missouri, USA,
+May 2005.
+<BR><BR>
+M. Frias, C. Lopez Pombo, G. Baum, N. Aguirre y T. Maibaum, "Reasoning
+about Static and Dynamic Properties in Alloy: A Purely Relational
+Approach", in ACM Transactions on Software Engineering and Methodology
+(TOSEM), Vol. 14, Nro. 4, ACM Press, October 2005.
+<BR><BR>
+M. Frias, G. Baum, C. Lopez Pombo, N. Aguirre y T. Maibaum, "Taking
+Alloy to the Movies", in Proceedings de 12th International Symposium on
+Formal Methods FM 2003, Lecture Notes in Computer Science 2805,
+Springer-Verlag, Pisa, Italy, September de 2003.
+
+</LI><BR>------------------------------------------------------
+---
+<LI><a name="Ribeiro">Leila Ribeiro</a> 
+(U. Federal do Rio Grande do Sul, Porto Alegre, Brasil)
+<A HREF=http://www.inf.ufgs.br/~leila>Home page</a> 
+<BR>Assume guarantee with object-oriented graph grammars
+<BR><BR>
+ The development of concurrent and reactive systems is gaining
+importance since they are well-suited to modern computing platforms,
+such as the Internet. However, the development of correct concurrent and
+reactive systems is a non-trivial task. Object-based graph grammar
+(OBGG) is a visual formal language suitable for the specification of
+this class of systems. In previous work, a translation from OBGG to
+PROMELA (the input language of the SPIN model checker) was defined,
+enabling the verification of OBGG models using SPIN. In this paper we
+extend this approach in two different ways: *(1)* the approach for
+property specification is improved, enabling to prove properties not
+only about possible OBGG derivations, but also about the internal state
+of involved objects; *(2)* an approach is defined to interpret PROMELA
+races as OBGG derivations, generating graphical counter-examples for
+properties that are not true for a given OBGG model. Another
+contribution of this paper is *(3)* the definition of a method for model
+checking partial systems (isolated objects or a set of objects) using an
+/assume-guarantee/ approach. A gas station system modeled with OBGGs is
+used to illustrate the contributions.
+<BR>==========================================
+<BR>Paper reference:
+<BR>Verifying Object-based Graph Grammars: an Assume-Guarantee Approach.
+<BR>Fernando Luís Dotti, Leila Ribeiro, Osmar Marchi dos Santos, Fábio Pasini
+<BR>Accepted for *Software and Systems Modeling, Springer, 2006*
+DOI: 10.1007/s10270-006-0014-z
+<BR><BR>
+</LI><BR>------------------------------------------------------
+<LI>
+<LI><a name="Gadducci">Fabio Gadducci</a> (U. Pisa, Italy)
+<BR>Bisimulation from graphical encoding
+(DPOs, cospans, relative POs and all that)
+(<A HREF="LAROCHE-DATA/Gaducci-ifip06NoFX.pdf">slides</A>)
+<BR><BR>
+The talk presents a personal recollection of recent results on the
+synthesis of labelled transition systems (\textsc{lts}s) for process
+calculi.
+<BR><BR>
+The starting point are the graphical techniques introduced by the
+speaker and Ugo Montanari for modelling the reduction semantics of
+nominal calculi: processes are mapped into graphs equipped with
+suitable \emph{interfaces}, such that the denotation is fully abstract
+with respect to the usual structural congruence. Moreover, the use of
+non hierarchical graphs allows for the reuse of standard graph
+rewriting theory and tools for simulating the reduction semantics of
+the calculus, such as the \emph{double pushout} (\textsc{dpo})
+approach and the associated concurrent semantics (which allows for
+the simultaneous execution of independent reductions, thus implicitly
+defining a non-deterministic concurrent semantics).
+<BR><BR>
+Another relevant fact is the use of \emph{cospan categories} for
+simulating \textsc{dpo} rewriting, proposed by the speaker with Reiko
+Heckel and Merce Llabres Segura. A cospan over the category of graphs
+is just a pair of arrows with the same target. To each production in
+the \textsc{dpo} style a pair of cospans is associated; then,
+\textsc{dpo} rewrites are captured by an inductive closure of the set
+of pairs of cospans, mirroring the dichotomy between the operational
+and the algebraic description of term rewriting.
+<BR><BR>
+A third component is the fact that graph with interfaces are just an
+instance of a cospan category (over the category of graphs). Hence,
+graphs with interfaces are amenable to the synthesis mechanism based
+on \emph{borrowed contexts} (\textsc{bc}s), proposed by Ehrig and
+Koenig (which are in turn an instance of \emph{relative pushouts},
+originally introduced by Milner and Leifer). The \textsc{bc} mechanism
+allows the effective construction of an \textsc{lts} that has graphs
+with interfaces as both states and labels, and such that the
+associated bisimilarity is automatically a congruence.
+<BR><BR>
+So; since the category of cospans over graphs admits \textsc{rpo}s (as
+proved by Sassone and Sobocinski), its choice as the domain of the
+encoding for nominal calculi ensures that the synthesis of an
+\textsc{lts} can be performed, and that a \emph{compositional}
+observational equivalence is obtained. The talk discusses the analysis
+of the \textsc{lts} distilled by exploiting the encoding of
+\textsc{ccs} processes: besides offering some technical contributions
+towards the simplification of the \textsc{bc} mechanism, the key
+result of this joint work with Bonchi and Koenig is the proof that the
+bisimilarity on (encondings of) processes obtained via \textsc{bc}s
+coincides with the standard strong bisimilarity for \textsc{ccs}.
+
+</LI><BR>------------------------------------------------------
+<LI><a name="Roggenbach">Markus Roggenbach</a> (U. Swansea, UK)
+  CSP-CASL: Semantics, Application, Tools
+(<A HREF="LAROCHE-DATA/Roggenbach.pdf">slides</A>)
+<BR><BR>
+Links to papers mentioned in my talk:
+<BR><BR>
+M.Roggenbach: CSP-CASL - A New Integration of Process
+   Algebra and Algebraic Specification.  Theoretical Computer
+   Science, Volume 354, 42 - 71, Elsevier, 2006.
+<BR><BR>
+A.Gimblett, M.Roggenbach, H.Schlingloff: Towards a
+   Formal Specification of an Electronic Payment System in CSP-CASL.
+   In J.L.Fiadeiro, P.Mosses, F.Orejas (Eds): Recent Trends in
+   Algebraic Development Techniques. Proceedings of WADT
+   2004. LNCS 3423,  61-78, Springer, 2005.
+<BR><BR>
+Y.Isobe, M.Roggenbach: A generic theorem prover of CSP
+   refinement. In N.Halbwachs, L.D.Zuck (Eds): Tools and
+   Algorithms for the Construction and Analysis of
+   Systems. Proceedings of TACAS 2005. LNCS 3440,  108-123,
+   Springer, 2005. 
+</LI><BR>------------------------------------------------------
+
+=== Monday, June 5th
+<LI><a name="Sabadini">Nicoletta Sabadini</a> (U. Insubria, Varese-Como, Italy)
+<BR>An algebra for automata: introduction
+<A HREF="LAROCHE-DATA/Sabadini-AlgebraforAutomataIntro.pdf">abstract</A>
+</LI><BR>------------------------------------------------------
+<LI><a name="Walters">Robert Walters</a> (U. Insubria, Varese-Como, Italy)
+<BR>Algebra for automata
+<A HREF="LAROCHE-DATA/Walters-Algebra-for-AutomataII.pdf">abstract</A>
+</LI><BR>------------------------------------------------------
+<LI><a name="Diaconescu">Razvan Diaconescu</a> (IMAR, Bucarest, Roumanie)
+<BR>Institution-independent model theory
+<BR><BR><BR>
+The theory of institutions is a categorical abstract model
+theory which formalises the intuitive notion of logical system,
+including syntax, semantics, and the satisfaction between them.
+Institutions constitute a model-oriented meta-theory on logics
+similarly to how the theory of rings and modules constitute a
+meta-theory for classical linear algebra.
+Another analogy can be made with universal algebra versus groups,
+rings, modules, etc. 
+By abstracting away from the realities of the actual conventional
+logics, it can be noticed that institution theory comes in fact closer
+to the realities of non-conventional logics.   
+<BR><BR>
+The notion of institution arose within computing science in 1980's
+in response to the population explosion of logics in use
+there with the ambition of doing as much as possible at a level of
+abstraction independent of commitment to any particular logic. 
+This mathematical paradigm is called `institution-independent'
+computing science or model theory.  
+<BR><BR>
+Since their definition by Goguen and Burstall, institutions
+become a common tool in the study of algebraic specification theory
+and can be considered as its most fundamental mathematical structure.
+It is already an algebraic specification tradition to have an 
+institution underlying each language or system, in which all
+language/system constructs and features can be rigorously explained as
+mathematical entities.
+Most modern algebraic specification languages follow this tradition,
+including CASL  or CafeOBJ. 
+<BR><BR>
+While the goal of institution-independent formal specification has
+been greatly accomplished in the algebraic  specification literature,
+recently there has been significant progress towards model theory too.  
+This responds to the feeling shared by some researchers that deep
+concepts and results in model theory can be reached in a significant
+way via institution theory. 
+The significance of institution-independent model theory is manifold.
+<BR><BR>
+First, it fulfils the main abstract model theory ideal by providing
+an uniform generic approach to the model theory of various logics.
+This is especially relevant for areas of knowledge involving a big
+variety of formal logical systems, most of them unconventional. 
+An important example comes from computing science in general, and
+algebraic specification in particular.
+Related to this, institutions also provide an ideal platform for
+exporting the rich and powerful body of concepts and methods developed
+by conventional model theory to a multitude of unconventional logics.
+<BR><BR>
+While conventional `abstract' model theory of Barwise and Feferman
+extends first order logic explicitly by abstracting only sentences and
+satisfaction and leaving signatures and models concrete and
+conventional, institutions axiomatise the relationship between models
+and sentences by leaving them abstract. 
+Because of this lack of commitment to any particular logic,
+institutions can be therefore considered as *true* form of
+abstract model theory, some authors even calling this `abstract
+abstract model theory'... 
+<BR><BR>
+Then, institution-independent model theory has a special
+methodological significance.
+The institution-independent top-down way of obtaining a model
+theoretic result, or just viewing a concept, leads to a deeper
+understanding which is not suffocated by the (often irrelevant)
+details of the actual logic and guided by structurally clean
+causality. 
+A model theoretic phenomenon is thus decomposed into various
+layers of abstract conditions, the concepts being defined and results
+obtained at the *most appropriate level of abstraction*. 
+This contrasts with the traditional bottom-up approach in which the
+development is done at a *given* level of abstraction.
+Thus concepts come naturally as presumptive features that a ``logic''
+might exhibit or not.
+Hypotheses are kept as general as possible and introduced on a by-need
+basis.
+Results and proofs are modular and easy to track down, despite
+sometimes very deep content. 
+Another reason for the strength of institution-independent methodology is that 
+institutions provide the most complete framework for abstract model
+theory, emphasising the multi-signature aspect of logics by
+considering signature morphisms and model reducts as primary concepts.
+ <BR><BR>
+Finally, institution theory provide an efficient framework for
+doing logic and model theory 'by translation or borrowing' via a
+general theory of mappings (homomorphisms) between institutions.
+For example, a certain property P which holds in an institution
+I' can be also established in another institution I
+provided that we can define a mapping I -> I' which `respects' P.
+<BR><BR>
+Apart of re-structuring known model theoretic methods,
+institution-independent model theory has already produced two classes
+of new concrete results.
+The first class is represented by model theories for a multitude of
+less conventional logics which did not have one properly. 
+Out of institution-independent model theory, even a relatively well
+studied area like partial algebra gets with minimal effort (in fact
+almost for free!) a well developed and coherent body of advanced model
+theoretic concepts and results. 
+A second class of concrete applications is constituted by new results
+in classical model theory obtained by institutional methods.
+At the moment of writing this survey, we can report interpolation and
+definability for numerous Birkhoff-style axiomatizable fragments of
+classical logic and the elegant solution to the
+interpolation conjecture for many sorted logic.
+The former results reveal a strong causality relationship between
+axiomatizability, on the one hand, and interpolation and definability,
+on the other hand.
+They also demount, or revise, the causal relationship between
+interpolation and definability.
+Maybe in this second class of applications we can also mention the
+considerably facilitated access to highly non-trivial results in
+classical model theory, such as Keisler-Shelah Isomorphism Theorem. 
+<BR><BR>
+References:
+<BR><BR>
+Razvan Diaconescu, `Institution-independent Model Theory', Springer
+New York, to appear 2007. 
+<BR><BR>
+Razvan Diaconescu, Jewels of institution-independent model theory, in
+`Algebra, Meaning and Computation', (a Festschrift in honour of
+Professor Joseph Goguen), LNCS 4060, Springer Berlin Heidelberg, 2006.
+</LI>
+<BR>------------------------------------------------------
+<LI><a name="Schroeder">Lutz Schroeder</a> (U. Bremen, Germany)
+<A HREF="http://www.informatik.uni-bremen.de/~lschrode/">home page</A>
+<BR>PSPACE bounds for rank 1 modal logic (with Dirk Pattinson)
+<A HREF="LAROCHE-DATA/LutzSchroeder-abstract.pdf">abstract</A> and 
+<A HREF="http://www.informatik.uni-bremen.de/~lschrode/slides/cml-slides.pdf">slides</A>
+
+<BR><BR>
+The 
+<A HREF="http://www.informatik.uni-bremen.de/~lschrode/papers/CMLpspace.pdf">full paper</A> is also online
+<BR><BR>
+@InProceedings{SchroderPattinson06,
+<BR>  author = {Lutz Schr{\"o}der and Dirk Pattinson},
+<BR>  title = {PSPACE Bounds for Rank 1 Modal Logics},
+<BR>  year = {2006},
+<BR>  editor = {Rajeev Alur},
+<BR>  booktitle = {Logic in Computer Science (LICS 06)},
+<BR>  organization = {IEEE},
+<BR>  note = {To appear},
+<BR>}
+</LI><BR>------------------------------------------------------
+---
+<LI><a name="Choppy">Christine Choppy</a> (U. Paris-Nord, France)
+<BR>Problem frames and UML description develoment (with Gianna Reggio)
+(<A HREF="LAROCHE-DATA/Choppy-LaRoche.pdf">slides</A>)
+</LI><BR>------------------------------------------------------
+=== Tuesday, June 6th
+<LI><a name="Bidoit">Michel Bidoit</a> (LSV, ENS Cachan, France)
+<BR>Proving Behavioral Refinements of COL-Specifications.
+(joint work with Rolf Hennicker)
+<BR><BR>
+The COL institution (constructor-based observational logic) has been
+introduced as a formal framework to specify both generation- and
+observation-oriented properties of software systems. In this talk we
+consider behavioral refinement relations between COL-specifications
+taking into account implementation constructions. We propose a general
+strategy for proving the correctness of such refinements by reduction
+to (standard) first-order theorem proving with induction. Technically
+our strategy relies on appropriate proof rules and on a lifting
+construction to encode the reachability and observability notions of
+the COL institution.
+<BR><BR>
+<A HREF="http://www.lsv.ens-cachan.fr/~bidoit/bidoit-publis.php?onlykey=BH-Goguen06">paper</a>:
+<BR>
+Michel Bidoit and Rolf Hennicker.  Proving Behavioral Refinements of
+COL-Specifications.  In Kokichi Futatsugi, Jean-Pierre Jouannaud and
+José Meseguer (eds.), Algebra, Meaning and Computation - Essays
+dedicated to Joseph A. Goguen on the Occasion of His 65th Birthday,
+San Diego, California, USA, June 2006, LNCS 4060. Springer, 2006.
+
+</LI><BR>------------------------------------------------------ <LI><a
+name="Corradini">Andrea Corradini</a> (U. Pisa, Italy)
+<BR>Sesqui-pushout vs double-pushout rewriting (joint work with Tobias
+Heindel, Frank Hermann and Barbara Koenig) 
+(<A HREF="LAROCHE-DATA/Corradini-LaRoche.pdf">slides</A>)
+<BR><BR> 
+Sesqui pushout (SqPO) rewriting (``sesqui'' means ``one and a half''
+in Latin) is a new algebraic approach to abstract rewriting in any
+category.  It specializes to double pushout (DPO) rewriting and
+captures the most relevant part of single pushout (SPO) rewriting,
+namely the confict-free fragment.
+<BR><BR>
+A rewriting step in the SqPO approach is a double square diagram as in
+the DPO approach: instead of closing the left square by a pushout
+complement we require a ``most general'' pullback complement
+satisfying a certain universal property which characterizes it
+uniquely; as a novelty we can use non-left-linear rules to capture the
+notion of cloning.
+<BR><BR>
+After demonstrating the expressiveness of the proposed approach
+through a case study modeling an access control system, we analyze the
+precise relationship between SqPO rewriting and the classical DPO and
+SPO approaches.  Finally we study the parallelism theory of SqPO
+rewriting in adhesive categories, and prove the local Church-Rosser
+theorem for SqPO.
+
+</LI><BR>------------------------------------------------------
+<LI><a name="Mossakowski">Till Mossakowski</a> (U. Bremen, Germany)
+<BR>Heterogeneous proofs, with an example about relation algebras. 
+(<A HREF="LAROCHE-DATA/Mossakowski-ifip06.pdf">slides</A>)
+<BR><BR> There is also a
+<A HREF="http://www.informatik.uni-bremen.de/agbkb/forschung/formal_methods/CoFI/hets/hets.m2v">movie with the tool demo</A> as well as 
+<A HREF="http://www.tzi.de/cofi/hets">papers and the tool</A>
+<BR><BR>
+
+The framework of Grothendieck institutions, used as a technical
+foundation for heterogeneous specification, can be extended
+with proof theory. We here choose the simplest variant, namely
+just entailment systems.
+We discussion weak amalgamation and Craig interpolation as
+prerequisites for completeness of structured theorem proving,
+and discuss how to obtain these properties in Grothendieck
+institutions. It turns out that they are better obtainable
+in comorphism-based Grothendieck institutions, and hence
+this is an argument in favour of using institution comorphisms
+as the main technical device for heterogeneous specification,
+and expressing institution morphisms as spans of comorphisms.
+<BR><BR>
+This has all been implemented in the heterogeneous tool set
+Hets (http://www.tzi.de/cofi/hets).
+We give a sample heterogeneous proof of the correctness of
+the composition table for the qualitative spatial calculus
+RCC8, when interpreted in topological spaces. The specification
+mixes first- and higher-order logic, and the proof is
+carried out with the first-order prover SPASS (which is used
+to automatically prove many easy theorems) and the
+higher-order prover Isabelle (which is used to interactively
+prove a small number of more complex theorems).
+
+</LI><BR>------------------------------------------------------

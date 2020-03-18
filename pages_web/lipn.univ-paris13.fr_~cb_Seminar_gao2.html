@@ -1,0 +1,826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Some Sharp Concentration Results about Random Planar
+Triangulations</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea -v gao2.tex -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Some Sharp Concentration Results about Random Planar
+Triangulations</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Jason Zhicheng Gao</FONT></I></FONT><BR>
+<BR>
+
+ School of Mathematics and Statistics, Carleton University<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+June 8, 2000<BR>
+<BR>
+[summary by <A HREf="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="gao2.ps">postscript</A> and in <A HREF="gao2.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+The theory of random maps has a relatively short history when compared
+to the theory of random graphs. In this talk, we mention some recent
+results concerning sharp concentration properties of parameters in
+random planar triangulations. Examples include the maximum vertex
+degree, the largest component, the number of copies of a given submap,
+and the number of flippable edges. This is joint work by Jason
+Zhicheng Gao and Nicholas Wormald (Melbourne, Australia).
+</BLOCKQUOTE><BR><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+
+Draw a graph on a sphere and then mark (or ``root'') a face, an edge
+of this face and a vertex of this edge. Then project the graph on the
+plane (e.g., by a stereographic projection): you get a <EM>planar
+map</EM>. Without loss of generality, you can rotate the sphere so that
+the marked face contains the north pole; then the projection
+transforms the marked face into an unbounded face, which is called the
+<EM>external face</EM>.<BR>
+<BR>
+For background, we refer to the summary of Gao's other talk
+(pages&nbsp;<A HREF="#gao1:begin">??</A>--<A HREF="#gao1:end">??</A> in these proceedings)
+for several definitions and examples on maps and triangulations.<BR>
+<BR>
+For ten years, Jason Zhicheng Gao (often collaborating with other
+specialists of maps, namely Bender, Canfield, Richmond, McKay,
+Wormald,&nbsp;...) has studied several parameters of maps (strong
+connexity, pattern occurrences, vertex degree, symmetries, cycles,
+Eulerian properties), finding new functional equations, solving them,
+and also obtaining precise asymptotic estimations. We specialize here
+the discussion to two parameters that appear to be intimately related:
+vertex degree and submap occurrence. Concentration results are
+obtained by the second moment method.<BR>
+<BR>
+<!--TOC section Submap Density Result-->
+
+<H2>2&nbsp;&nbsp; Submap Density Result</H2><!--SEC END -->
+Many combinatorial structures satisfy <EM>Borges's
+Theorem</EM>,<A NAME="text1" HREF="#note1"><SUP><FONT SIZE=2>1</FONT></SUP></A> meaning that any
+pattern will appear with high probability in a large enough structure.
+Any word of length ln <I>n</I> appears with high probability in a random
+word of length <I>n</I> (for more details, see the study by Guibas and
+Odlyzko&nbsp;[<A HREF="#GuOd81b"><CITE>6</CITE></A>], and then by Nicodème et
+al.&nbsp;[<A HREF="#NiSaFl??"><CITE>7</CITE></A><CITE>, </CITE><A HREF="#NiSaFl99"><CITE>8</CITE></A>]). The occurrence of patterns in random
+graphs has also been studied&nbsp;[<A HREF="#Bollobas85"><CITE>2</CITE></A>]. However for maps, the
+situation is different as these objects live in quite a different
+probability space. Let's make a bet: choose a map of size&nbsp;6, while I
+generate a random map of size&nbsp;1000; would you bet that your map is a
+submap of mine? This talk makes explicit the conditions under which
+you can make good (or bad) bets.<BR>
+<BR>
+Let <FONT COLOR=red> <I>T</I></FONT> be any fixed triangulation and <FONT FACE=symbol>h</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<FONT COLOR=red> <I>T</I></FONT>)
+be the random variable counting the <EM>number of
+copies</EM> of&nbsp;<FONT COLOR=red> <I>T</I></FONT> in a random triangulation with <I>n</I>&nbsp;vertices.
+Richmond and Wormald&nbsp;[<A HREF="#RiWo88"><CITE>9</CITE></A>] showed that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><B><I>P</I></B></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP><FONT FACE=symbol>h</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<FONT COLOR=red> <I>T</I></FONT>)&gt;<I>cn</I></TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>&gt;1-exp</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-<FONT FACE=symbol>d</FONT> <I>n</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+for some positive constants <I>c</I> and&nbsp;<FONT FACE=symbol>d</FONT> depending on&nbsp;<FONT COLOR=red> <I>T</I></FONT>.
+Bender, Gao and Richmond&nbsp;[<A HREF="#BeGaRi92"><CITE>1</CITE></A>] showed that the above result
+holds for many families of maps, and recently Gao and
+Wormald&nbsp;[<A HREF="#GaWo00b"><CITE>4</CITE></A>] proved that <FONT FACE=symbol>h</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<FONT COLOR=red> <I>T</I></FONT>) is sharply
+concentrated around&nbsp;<I>cn</I> for some constant&nbsp;<I>c</I>. More precisely:<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<EM>
+Let </EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM> be a 3-connected triangulation with </EM><EM><I>j</I>+3</EM><EM> vertices such that
+there are </EM><EM><I>r</I></EM><EM> distinct ways to root </EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>. Let </EM><EM><I>c</I>=2<I>r</I>(27/256)</EM><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP><EM>.
+Then, provided that </EM><EM><I>cn</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></EM><EM>, 
+</EM><EM><B><I>P</I></B></EM><EM>(|<FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>)-<I>cn</I>|=<I>o</I>(<I>cn</I>))<FONT FACE=symbol>®</FONT>1</EM><EM>.
+</EM></DIV><BR>
+A <EM>near-triangulation</EM> is composed of triangulations except that it can
+have more than 3 vertices on its external face. Define
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>8(<I>k</I>-2)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>4<I>k</I><SUP><FONT SIZE=2>2</FONT></SUP>-1</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP>-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>3</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>4</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>k</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>-3/2</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>k</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<EM>
+Let </EM><EM><FONT COLOR=red> <I>M</I></FONT></EM><EM> be a 3-connected near-triangulation with external face of
+degree&nbsp;</EM><EM><I>k</I></EM><EM> and with </EM><EM><I>j</I></EM><EM>&nbsp;internal vertices such that
+there are </EM><EM><I>r</I></EM><EM>&nbsp;distinct ways to root the external face. Then, for fixed
+</EM><EM><I>j</I></EM><EM> and&nbsp;</EM><EM><I>k</I></EM><EM> with </EM><EM><I>k</I><FONT FACE=symbol>³</FONT>4</EM><EM>, one has
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><B><I>P</I></B></EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>|</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>M</I></FONT></EM><EM>)-<I>r</I> µ</EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><EM>(27/256)</EM><SUP><EM><FONT SIZE=2><I>j</I>-1</FONT></EM></SUP><EM>
+<I>n</I></EM></TD>
+<TD NOWRAP><EM>|</EM></TD>
+<TD NOWRAP><EM>=<I>o</I>(<I>n</I>)</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>®</FONT> 1.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<BR>
+<BR>
+<B>Proof.</B>
+The method used here relies on Chebyshev-like inequalities:
+<B><I>P</I></B>(<I>X</I>&gt;<I>t</I>µ)<FONT FACE=symbol>£</FONT>1/<I>t</I> and <B><I>P</I></B>(|<I>X</I>-µ|<FONT FACE=symbol>³</FONT> <I>t</I><FONT FACE=symbol>s</FONT>)<FONT FACE=symbol>£</FONT>1/<I>t</I><SUP><FONT SIZE=2>2</FONT></SUP>
+for a nonnegative random variable&nbsp;<I>X</I> with average&nbsp;µ and
+variance&nbsp;<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2>2</FONT></SUP>. A consequence is that if <FONT FACE=symbol>s</FONT>=<I>o</I>(µ), then
+one gets a concentration result.<BR>
+<BR>
+Let us first study the number <FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>) of vertices of degree&nbsp;<I>k</I>
+in a random triangulation with <I>n</I>+2&nbsp;vertices. The quantity&nbsp;<I>T</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>
+denotes the number of rooted triangulation with <I>n</I>+2 vertices; 
+<I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>&nbsp;denotes the number of rooted triangulation with
+<I>n</I>+2&nbsp;vertices and root vertex of degree <I>k</I>;  <I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I>,<I>l</I></FONT></SUB>&nbsp;denotes
+the number of rooted triangulation with <I>n</I>+2&nbsp;vertices, root vertex of
+degree&nbsp;<I>k</I> and another distinguished vertex of degree&nbsp;<I>l</I>. The scheme
+of the proof is as follows:<BR>
+<BR>
+<EM>Step 1:</EM> Use combinatorial arguments to show the relations
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><B><I>E</I></B></TD>
+<TD NOWRAP>[</TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)</TD>
+<TD NOWRAP>]</TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>6<I>n</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>k</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>T</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp; 
+<B><I>E</I></B></TD>
+<TD NOWRAP>[</TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)(<FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)-1)</TD>
+<TD NOWRAP>]</TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>6<I>n</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>k</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I>,<I>k</I></FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>T</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+<EM>Step 2:</EM> Obtain functional equations for the generating
+functions for <I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I>,<I>l</I></FONT></SUB>, <I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>, and <I>T</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, and perform
+singularity analysis.<BR>
+<BR>
+<EM>Step 3:</EM> Derive a suitable multivariate version of Flajolet
+and Odlyzko's transfer theorem (see Lemmas 2 and&nbsp;3 below), and obtain
+the following asymptotics, uniformly for <I>k</I>=<I>O</I>(ln <I>n</I>):
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>T</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=(6)<SUP><FONT SIZE=2>1/2</FONT></SUP>/(32(<FONT FACE=symbol>p</FONT>)<SUP><FONT SIZE=2>1/2</FONT></SUP>) <I>n</I><SUP><FONT SIZE=2>-5/2</FONT></SUP> (256/27)<SUP><FONT SIZE=2><I>n</I></FONT></SUP> </TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>1+<I>O</I>(1/<I>n</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></DIV>
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>k</I>(6)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>192 (<FONT FACE=symbol>p</FONT>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB> <I>n</I><SUP><FONT SIZE=2>-5/2</FONT></SUP> (256/27)<SUP><FONT SIZE=2><I>n</I></FONT></SUP>
+</TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>1+<I>O</I>(<I>k</I><SUP><FONT SIZE=2>20</FONT></SUP>/<I>n</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></DIV>
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>T</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I>,<I>k</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>k</I>(6)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>192 (<FONT FACE=symbol>p</FONT>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB><SUP><FONT SIZE=2>2</FONT></SUP> <I>n</I><SUP><FONT SIZE=2>-3/2</FONT></SUP> (256/27)<SUP><FONT SIZE=2><I>n</I></FONT></SUP>
+</TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>1+<I>O</I>(<I>k</I><SUP><FONT SIZE=2>20</FONT></SUP>/<I>n</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+<EM>Step 4:</EM> Derive asymptotics for the first two moments of
+<FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>);
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><B><I>E</I></B></TD>
+<TD NOWRAP>[</TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)</TD>
+<TD NOWRAP>]</TD>
+<TD NOWRAP>=<I>n</I>µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>1+<I>O</I>(<I>k</I><SUP><FONT SIZE=2>20</FONT></SUP>/<I>n</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Var</B></TD>
+<TD NOWRAP>[</TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)</TD>
+<TD NOWRAP>]</TD>
+<TD NOWRAP>=<I>n</I>µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB>+(<I>n</I>µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB>)<SUP><FONT SIZE=2>2</FONT></SUP><I>O</I>(<I>k</I><SUP><FONT SIZE=2>20</FONT></SUP>/<I>n</I>),</TD>
+</TR></TABLE></DIV>
+uniformly for&nbsp;<I>k</I>=<I>O</I>(ln <I>n</I>). It follows from Chebyshev's inequality that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><B><I>P</I></B></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>(<I>k</I>)-µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB><I>n</I></TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP>=<I>o</I>(µ<SUB><FONT SIZE=2><I>k</I></FONT></SUB><I>n</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP><FONT FACE=symbol>®</FONT>1</TD>
+</TR></TABLE></DIV> 
+uniformly for <I>k</I>&lt;(ln <I>n</I>-(lnln <I>n</I>)/2)/ln(4/3)-<FONT FACE=symbol>W</FONT>(<I>n</I>).<BR><BR>
+<BR>
+The proof is based on three lemmas.<BR>
+<BR>
+<DIV ALIGN=left><B>Lemma&nbsp;1</B>&nbsp;&nbsp;<EM>
+Let </EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM> be a 3-connected near-triangulation with </EM><EM><I>j</I>+3</EM><EM> vertices such
+that </EM><EM><I>j</I></EM><EM>&nbsp;is&nbsp;</EM><EM><I>o</I>(<I>n</I>)</EM><EM> and that there are </EM><EM><I>r</I></EM><EM> distinct ways to
+root&nbsp;</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>. Let </EM><EM><FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>)</EM><EM>&nbsp;be the number of copies of </EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM> in a
+random rooted triangulation with </EM><EM><I>n</I>+2</EM><EM>&nbsp;vertices. Then
+</EM><DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><B><I>E</I></B></EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM>=<I>r</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>27</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>256</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2><I>j</I>-1</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=left><EM><BR><BR><BR></EM></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><B><I>E</I></B></EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>z</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I>+1-<I>j</I></FONT></EM></SUB><EM>(3)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM>
+</EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>1+<I>o</I>(1)</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>,</EM></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><B><I>E</I></B></EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>) (<FONT FACE=symbol>h</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>(</EM><EM><FONT COLOR=red> <I>T</I></FONT></EM><EM>)-1)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM>=<I>r</I></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>27</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>256</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>2<I>j</I>-2</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=left><EM><BR><BR><BR></EM></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><B><I>E</I></B></EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>z</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I>+2-2<I>j</I></FONT></EM></SUB><EM>(3)(<FONT FACE=symbol>z</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I>+2-2<I>j</I></FONT></EM></SUB><EM>(3)-1)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM>
+</EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>1+<I>o</I>(1)</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+In order to state precise results, one needs the following notation:
+let <FONT FACE=symbol>e</FONT>&nbsp;be a small positive constant,  <FONT FACE=symbol>f</FONT>&nbsp;be a constant
+satisfying 0&lt;<FONT FACE=symbol>f</FONT>&lt;<FONT FACE=symbol>p</FONT>/2, and <I>y</I><SUP><FONT SIZE=2>_</FONT></SUP>&nbsp;be&nbsp;(<I>y</I><SUB><FONT SIZE=2>1</FONT></SUB>,<I>y</I><SUB><FONT SIZE=2>2</FONT></SUB>,...,<I>y</I><SUB><FONT SIZE=2><I>d</I></FONT></SUB>). Define:
+<DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>D</FONT>(<FONT FACE=symbol>e</FONT>,<FONT FACE=symbol>f</FONT>)=</TD>
+<TD NOWRAP>{</TD>
+<TD NOWRAP>&nbsp;<I>x</I> such that |<I>x</I>|<FONT FACE=symbol>£</FONT>1+<FONT FACE=symbol>e</FONT>, 
+<I>x</I><FONT FACE=symbol>¹</FONT>1,  |Arg(<I>x</I>-1)|<FONT FACE=symbol>³</FONT><FONT FACE=symbol>f</FONT>&nbsp;</TD>
+<TD NOWRAP>}</TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT COLOR=red> <I>R</I></FONT>(<FONT FACE=symbol>e</FONT>,<FONT FACE=symbol>f</FONT>)=</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP>&nbsp;(<I>x</I>,</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>_</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><I>y</I></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>) such that |<I>y</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB>|&lt;1,  1<FONT FACE=symbol>£</FONT>
+<I>j</I><FONT FACE=symbol>£</FONT> <I>d</I>,  <I>x</I><FONT FACE=symbol>Î</FONT><FONT FACE=symbol>D</FONT>(<FONT FACE=symbol>e</FONT>,<FONT FACE=symbol>f</FONT>)&nbsp;</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ü<BR>ý<BR>þ</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><BR>
+Let <FONT FACE=symbol>b</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>&gt;0 for 1<FONT FACE=symbol>£</FONT> <I>j</I><FONT FACE=symbol>£</FONT> <I>d</I>, and <FONT FACE=symbol>a</FONT> be any real number.
+The following two notations are also useful.
+<DIV ALIGN=left><B>Definition&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[</FONT><FONT COLOR=purple><I>O</I></FONT><SUP><FONT COLOR=purple><FONT SIZE=2>~</FONT></FONT></SUP><FONT COLOR=purple> notation]&nbsp;&nbsp;</FONT><EM>
+We write
+</EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>O</I></EM><SUP><EM><FONT SIZE=2>~</FONT></EM></SUP><EM>((1-<I>x</I>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></SUP><EM><FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM> (1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><EM>)</EM><EM>
+if there exist </EM><EM><FONT FACE=symbol>e</FONT> &gt;0</EM><EM> and </EM><EM>0&lt;<FONT FACE=symbol>f</FONT>&lt;<FONT FACE=symbol>p</FONT>/2</EM><EM> 
+such that, in </EM><EM><FONT COLOR=red> <I>R</I></FONT></EM><EM>(<FONT FACE=symbol>e</FONT>,<FONT FACE=symbol>f</FONT>)</EM><EM>,  </EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)</EM><EM> is analytic and
+</EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>O</I>(|1-<I>x</I>|</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></SUP><EM><FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>(1-|<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>|)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><EM>)</EM><EM>
+as </EM><EM>(1-<I>x</I>)(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<I>p</I></FONT></EM></SUP><EM><FONT FACE=symbol>®</FONT> 0</EM><EM>, for </EM><EM>1<FONT FACE=symbol>£</FONT> <I>j</I> <FONT FACE=symbol>£</FONT> <I>d</I></EM><EM>, and some
+</EM><EM><I>p</I><FONT FACE=symbol>³</FONT> 0</EM><EM>; for some </EM><EM><I>q</I><FONT FACE=symbol>³</FONT> 0</EM><EM> and some real number </EM><EM><FONT FACE=symbol>a</FONT>'</EM><EM>,
+one has
+</EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>O</I>(|1-<I>x</I>|</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT>'</FONT></EM></SUP><EM><FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>(1-|<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>|)</EM><SUP><EM><FONT SIZE=2>-<I>q</I></FONT></EM></SUP><EM>).</EM><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Definition&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[</FONT><FONT COLOR=purple><FONT FACE=symbol>»</FONT></FONT><FONT COLOR=purple> notation]&nbsp;&nbsp;</FONT><EM>
+We write </EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)<FONT FACE=symbol>»</FONT> <I>c</I> (1-<I>x</I>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></SUP><EM> <FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>
+(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><EM> if </EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)</EM><EM> can be expressed as </EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>c</I>(<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)(1-<I>x</I>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></SUP><EM> <FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>
+(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><EM>+<FONT FACE=symbol>å</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=0</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM><I>C</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)+<I>E</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)</EM><EM> where
+</EM><EM><I>C</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)</EM><EM> is a polynomial in </EM><EM><I>x</I></EM><EM>, and for </EM><EM>1<FONT FACE=symbol>£</FONT> <I>j</I> <FONT FACE=symbol>£</FONT> <I>d</I></EM><EM>, 
+</EM><EM><I>C</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)</EM><EM> is a polynomial in </EM><EM><I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM> and where </EM><EM><I>E</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>O</I></EM><SUP><EM><FONT SIZE=2>~</FONT></EM></SUP><EM>(|1-<I>x</I>|</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT>'</FONT></EM></SUP><EM><FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><SUP><EM><FONT SIZE=2>'</FONT></EM></SUP><EM>)</EM><EM>
+for some </EM><EM><FONT FACE=symbol>a</FONT>'&lt;<FONT FACE=symbol>a</FONT></EM><EM> and </EM><EM><FONT FACE=symbol>b</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>'<FONT FACE=symbol>³</FONT> 0</EM><EM>,  </EM><EM>1<FONT FACE=symbol>£</FONT> <I>j</I> <FONT FACE=symbol>£</FONT> <I>n</I></EM><EM> and
+finally where </EM><EM><I>c</I>(<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>c</I>+<I>O</I>(<FONT FACE=symbol>å</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM> |1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>|)</EM><EM> and is analytic
+when </EM><EM><I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM><FONT FACE=symbol>Î</FONT><FONT FACE=symbol>D</FONT>(<FONT FACE=symbol>e</FONT>,<FONT FACE=symbol>f</FONT>)</EM><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>, with </EM><EM><I>c</I>(1</EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)=<I>c</I><FONT FACE=symbol>¹</FONT> 0</EM><EM>.
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Lemma&nbsp;2</B>&nbsp;&nbsp;<EM>
+Suppose that
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>f</I>(<I>x</I>,</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>~</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>O</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM>(1-<I>x</I>)</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>;</EM></TD>
+</TR></TABLE></DIV><EM>
+then as </EM><EM><I>n</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></EM><EM> and </EM><EM>1<FONT FACE=symbol>³</FONT> <I>k</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>=<I>O</I>(</EM><EM>ln</EM><EM> <I>n</I>)</EM><EM>,
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>[<I>x</I></EM><SUP><EM><FONT SIZE=2><I>n</I></FONT></EM></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2><I>k</I></FONT></EM></SUP><EM>]<I>f</I>(<I>x</I>,</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)=<I>O</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM><I>n</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>a</FONT>-1</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+<I>k</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>b</FONT></FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR>
+<TR><TD NOWRAP><EM><FONT SIZE=2><I>j</I></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>;</EM></TD>
+</TR></TABLE></DIV><EM>
+and for any </EM><EM>0&lt;<FONT FACE=symbol>e</FONT>'&lt;1</EM><EM> and for all </EM><EM><I>n</I></EM><EM> and&nbsp;</EM><EM><I>k</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>,
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>[<I>x</I></EM><SUP><EM><FONT SIZE=2><I>n</I></FONT></EM></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2><I>k</I></FONT></EM></SUP><EM>]<I>f</I>(<I>x</I>,</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)=<I>O</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM><I>n</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>a</FONT>-1</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+(1-<FONT FACE=symbol>e</FONT>')</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>b</FONT></FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Lemma&nbsp;3</B>&nbsp;&nbsp;<EM>
+Let </EM><EM><I>d</I><FONT FACE=symbol>³</FONT> 1</EM><EM> and </EM><EM><I>f</I>(<I>x</I>,<I>y</I></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>)<FONT FACE=symbol>»</FONT> <I>c</I>(1-<I>x</I>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>a</FONT></FONT></EM></SUP><EM>
+<FONT FACE=symbol>Õ</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>(1-<I>y</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM><SUP><EM><FONT SIZE=2>-<FONT FACE=symbol>b</FONT></FONT></EM></SUP><SUB><SUP><EM><FONT SIZE=2><I>j</I></FONT></EM></SUP></SUB><EM>, where </EM><EM><FONT FACE=symbol>a</FONT></EM><EM> is neither a negative
+integer nor&nbsp;</EM><EM>0</EM><EM>, and&nbsp;</EM><EM><I>c</I><FONT FACE=symbol>¹</FONT>0</EM><EM>. Then as </EM><EM><I>n</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></EM><EM> and
+</EM><EM><I>k</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>=<I>O</I>(</EM><EM>ln</EM><EM> <I>n</I>)</EM><EM>,
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>[<I>x</I></EM><SUP><EM><FONT SIZE=2><I>n</I></FONT></EM></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2><I>k</I></FONT></EM></SUP><EM>]<I>f</I>(<I>x</I>,</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>c</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>G</FONT>(<FONT FACE=symbol>a</FONT>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM><I>k</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>b</FONT></FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM><FONT SIZE=2>-1</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR>
+<TR><TD NOWRAP><EM><FONT SIZE=2><I>j</I></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>/<FONT FACE=symbol>G</FONT>(<FONT FACE=symbol>b</FONT></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB><EM>)</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM>1+<I>O</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>j</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 1/<I>k</I></EM><SUB><EM><FONT SIZE=2><I>j</I></FONT></EM></SUB></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<!--TOC section Maximum Vertex Degree-->
+
+<H2>3&nbsp;&nbsp; Maximum Vertex Degree</H2><!--SEC END -->
+Let <I>d</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> be the maximum vertex degree of a random map in a family of
+maps of size&nbsp;<I>n</I>. Devroye, Flajolet, Hurtado, Noy, and
+Steiger&nbsp;[<A HREF="#DeFlHuNoSt99"><CITE>3</CITE></A>] showed that, for triangulations of an <I>n</I>-gon,
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><B><I>P</I></B></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP><I>d</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>-ln(<I>n</I>)/ln2</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP><FONT FACE=symbol>£</FONT>(1+<FONT FACE=symbol>e</FONT>)lnln <I>n</I>/ln2</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP><FONT FACE=symbol>®</FONT>1.</TD>
+</TR></TABLE></DIV>
+Gao and Wormald&nbsp;[<A HREF="#GaWo00a"><CITE>5</CITE></A>] improved this last result and extended
+it to general families of maps. They showed that, for any
+function&nbsp;<FONT FACE=symbol>W</FONT> going to infinity arbitrarily slowly, one has
+<UL>
+<LI>
+ for triangulations of an <I>n</I>-gon:
+<B><I>P</I></B>(|<I>d</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>-ln <I>n</I> +ln ln <I>n</I>/ln 2|<FONT FACE=symbol>£</FONT>
+<FONT FACE=symbol>W</FONT>(<I>n</I>))<FONT FACE=symbol>®</FONT> 1,
+
+<LI> for 3-connected triangulations of <I>n</I> vertices:
+<B><I>P</I></B>(|<I>d</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>-ln <I>n</I> +(ln ln <I>n</I>)/2/ln (4/3)|<FONT FACE=symbol>£</FONT>
+<FONT FACE=symbol>W</FONT>(<I>n</I>))<FONT FACE=symbol>®</FONT> 1,
+
+<LI> for all maps of <I>n</I> edges:
+<B><I>P</I></B>(|<I>d</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>-ln <I>n</I> +(ln ln <I>n</I>)/2/ln (6/5)|<FONT FACE=symbol>£</FONT>
+<FONT FACE=symbol>W</FONT>(<I>n</I>))<FONT FACE=symbol>®</FONT> 1.
+</UL><!--TOC section A Few Open Problems-->
+
+<H2>4&nbsp;&nbsp; A Few Open Problems</H2><!--SEC END -->
+
+At the end of the talk, a few questions were raised, and 
+the following conjectures appear plausible but might involve hard
+work.<BR>
+<BR>
+<DIV ALIGN=left><B>Conjecture&nbsp;1</B>&nbsp;&nbsp;<EM>
+The generating function of maps without a given submap is algebraic.
+</EM></DIV>
+There is no doubt that a functional equation could be obtained for
+each pattern (however, as the overlaps can be very intricate, the
+functional equation would be horrendous, and it is not clear that a
+generalization of the quadratic method would allow us to solve it, and
+prove algebraicity).<BR>
+<BR>
+<DIV ALIGN=left><B>Conjecture&nbsp;2</B>&nbsp;&nbsp;<EM>
+A Gaussian limit law should hold. 
+</EM></DIV>
+Once more, we expect the behavior to be qualitatively the same for
+words, trees and maps. Another interesting study (which is as of now
+out of reach) is the occurrence of a given pattern, not in a local
+sense but in a global one (such patterns are called ``minors'').<BR>
+<BR>
+Other concentration results about random planar triangulations such as
+the largest component and the number of flippable edges were finally
+not presented in the talk but can be found in Gao's articles at his
+homepage <CODE>http://mathstat.math.carleton.ca/~zgao/</CODE>.<BR>
+<BR>
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="BeGaRi92"><FONT COLOR=purple>[1]</FONT></A><DD>
+Bender (Edward&nbsp;A.), Gao (Zhi-Cheng), and Richmond (L.&nbsp;Bruce).&nbsp;--
+Submaps of maps. I. General 0--1 laws. <EM>Journal of
+ Combinatorial Theory. Series B</EM>, vol.&nbsp;55, n&deg;1, 1992,
+ pp.&nbsp;104--117.<BR>
+<BR>
+
+<DT><A NAME="Bollobas85"><FONT COLOR=purple>[2]</FONT></A><DD>
+Bollobás (Béla).&nbsp;--
+<EM>Random graphs</EM>.&nbsp;--
+Academic Press Inc., London, 1985, xvi+447p.<BR>
+<BR>
+
+<DT><A NAME="DeFlHuNoSt99"><FONT COLOR=purple>[3]</FONT></A><DD>
+Devroye (L.), Flajolet (P.), Hurtado (F.), Noy (M.), and Steiger (W.).&nbsp;--
+Properties of random triangulations and trees. <EM>Discrete &amp;
+ Computational Geometry</EM>, vol.&nbsp;22, n&deg;1, 1999, pp.&nbsp;105--117.<BR>
+<BR>
+
+<DT><A NAME="GaWo00b"><FONT COLOR=purple>[4]</FONT></A><DD>
+Gao (Zhicheng) and Wormald (Nicholas&nbsp;C.).&nbsp;--
+Sharp concentration of the number of submaps in random planar
+ triangulations.&nbsp;--
+Preprint.<BR>
+<BR>
+
+<DT><A NAME="GaWo00a"><FONT COLOR=purple>[5]</FONT></A><DD>
+Gao (Zhicheng) and Wormald (Nicholas&nbsp;C.).&nbsp;--
+The distribution of the maximum vertex degree in random planar maps.
+ <EM>Journal of Combinatorial Theory. Series A</EM>, vol.&nbsp;89, n&deg;2,
+ 2000, pp.&nbsp;201--230.<BR>
+<BR>
+
+<DT><A NAME="GuOd81b"><FONT COLOR=purple>[6]</FONT></A><DD>
+Guibas (L.&nbsp;J.) and Odlyzko (A.&nbsp;M.).&nbsp;--
+String overlaps, pattern matching, and nontransitive games. <EM>Journal of Combinatorial Theory. Series A</EM>, vol.&nbsp;30, n&deg;2,
+ 1981, pp.&nbsp;183--208.<BR>
+<BR>
+
+<DT><A NAME="NiSaFl??"><FONT COLOR=purple>[7]</FONT></A><DD>
+Nicodème (Pierre), Salvy (Bruno), and Flajolet (Philippe).&nbsp;--
+Motif statistics. <EM>Theoretical Computer Science</EM>.&nbsp;--
+To appear.<BR>
+<BR>
+
+<DT><A NAME="NiSaFl99"><FONT COLOR=purple>[8]</FONT></A><DD>
+Nicodème (Pierre), Salvy (Bruno), and Flajolet (Philippe).&nbsp;--
+Motif statistics. In Nesetril (Jaroslav) (editor), <EM>Algorithms, ESA'99</EM>. <EM>Lecture Notes in Computer Science</EM>, vol. 1643,
+ pp.&nbsp;194--211.&nbsp;--
+Springer, Berlin, 1999. Proceedings of the 7th Annual
+ European Symposium, Prague, Czech Republic, July 1999.<BR>
+<BR>
+
+<DT><A NAME="RiWo88"><FONT COLOR=purple>[9]</FONT></A><DD>
+Richmond (L.&nbsp;Bruce) and Wormald (Nicholas&nbsp;C.).&nbsp;--
+Random triangulations of the plane. <EM>European Journal of
+ Combinatorics</EM>, vol.&nbsp;9, n&deg;1, 1988, pp.&nbsp;61--71.</DL>
+
+<!--BEGIN NOTES document-->
+<HR WIDTH="50%" SIZE=1><DL>
+<DT><A NAME="note1" HREF="#text1"><FONT SIZE=5>1</FONT></A><DD> Philippe Flajolet coined this naming in reference
+to Borges's novel <EM>The Library of Babel</EM>.
+</DL>
+<!--END NOTES-->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+
+</HTML>
+

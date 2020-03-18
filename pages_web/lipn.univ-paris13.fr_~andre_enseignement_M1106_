@@ -1,0 +1,270 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<title>Étienne André – Cours de M1106 (programmation Web&nbsp;: HTML et CSS)</title>
+		
+		<meta charset="utf-8" />
+		
+		<meta name="author" content="Étienne André" />
+		<meta name="description" content="Étienne André – Cours de M1106 (programmation Web&nbsp;: HTML et CSS)" />
+		<meta name="keywords" content="M1106, IUT, développement Web, programmation Web, HTML, CSS, cours" />
+		<meta name="robots" content="index,follow" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="../../etienne.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index_fr.php" class="logo"><strong>Étienne André</strong> Université de Lorraine</a>
+									<ul class="icons">
+										<li><a href="http://dblp.uni-trier.de/pers/a/Andr=eacute=:=Eacute=tienne" class="icon fa-th-list" title="DBLP"><span class="label">DBLP</span></a></li>
+										<li><a href="https://github.com/etienneandre/" class="icon fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+										<li><a href="https://scholar.google.com.sg/citations?user=9eslfRkAAAAJ" class="icon fa-google" title="Google Scholar"><span class="label">Google Scholar</span></a></li>
+										<li><a href="https://orcid.org/0000-0001-8473-9555" class="icon fa-id-badge" title="Orcid"><span class="label">Orcid</span></a></li>
+										<li><a href="https://www.researchgate.net/profile/Etienne_Andre" class="icon fa-users" title="ResearchGate"><span class="label">ResearchGate</span></a></li>
+										<li><a href="https://twitter.com/etienne_andre" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+										<li></li>
+									</ul>
+								</header>
+
+
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Cours de M1106 (développement Web)</h1>
+											<p>DUT R&amp;T @ IUT de Villetaneuse, Université Paris 13</p>
+										</header>
+									</div>
+									<span class="image object">
+										<img src="ilya-pavlov-87438.jpg" alt="code informatique" />
+									</span>
+								</section>
+								
+<p>Cette page s’adresse aux étudiant⋅e⋅s du cours M1106 (initiation à la programmation Web) du DUT Réseaux &amp; Télécommunications de l’IUT de Villetaneuse (Université Paris 13).</p>
+
+<section>
+	<header>
+		<h2>Diapositives du cours de M1106</h2>
+	</header>
+	
+		<h3>Diapositives à trous</h3>
+		
+		<ul class="alt">
+			<li><a href="M1106-0-intro-web.pdf">Partie 0&nbsp;: introduction</a></li>
+			<li><a href="M1106-1-client-serveur-web.pdf">Partie 1&nbsp;: le modèle client serveur</a></li>
+			<li><a href="M1106-2-HTML-web.pdf">Partie 2&nbsp;: HTML</a></li>	
+			<li><a href="M1106-3-CSS-web.pdf">Partie 3&nbsp;: CSS</a></li>
+		</ul>
+		<p>(si vous avez absent⋅e en cours, il convient donc de trouver un⋅e camarade pour obtenir ce qui était affiché au tableau et qui devait être recopié sur la copie papier des diapositives distribuées en cours)</p>
+</section>
+
+<section>
+	<header>
+		<h2>Ressources des TP</h2>
+	</header>
+	
+	<div class="row 200%">
+		<div class="6u 12u$(medium)">
+			<h3>TP 1&nbsp;: bases du HTML</h3>
+			<ul class="alt">
+				<li><a href="M1106-TP1-sujet.pdf" class="button special icon fa-download">Sujet du TP 1</a></li>
+		</ul>
+		</div>
+
+		
+		
+		<div class="6u 12u$(medium)">
+			<h3>TP 2&nbsp;: un CV en HTML et CSS</h3>
+			<ul class="alt">
+				<li><a href="M1106-TP2-sujet.pdf" class="button special icon fa-download">Sujet du TP 2</a></li>
+			</ul>
+			
+			<h4>Exercice 1</h4>
+
+			<ul>
+				<li><a href="photo.png">photo.png</a></li>
+			</ul>
+
+			<h4>Exercice 2</h4>
+			<ul>
+				<li><a href="CV1-debut.png">CV1-debut.png</a></li>
+			</ul>
+			
+			<h4>Exercice 3</h4>
+
+			<ul>
+				<li><a href="CV-HTML-complet.pdf">CV-HTML-complet.pdf</a></li>
+				<li><a href="CV1-suite.png">CV1-suite.png</a></li>
+				<li><a href="CV1-fin.png">CV1-fin.png</a></li>
+				<li><a href="Bullet-blue.png">Bullet-blue.png</a></li>
+				<li><a href="Bullet_go.png">Bullet_go.png</a></li>
+			</ul>
+
+			<h4>Exercice 4</h4>
+			<ul>
+				<li><a href="CV2.png">CV2.png</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		<div class="6u 12u$(medium)">
+			<h3>TP 3&nbsp;: formulaires et CSS</h3>
+			<ul class="alt">
+				<li><a href="M1106-TP3-sujet.pdf" class="button special icon fa-download">Sujet du TP 3</a></li>
+			</ul>
+			
+			<p>Fichier à télécharger</p>
+			<ul>
+				<li><a href="TP3-formulaire-CSS.png">Apparence exercice 2</a></li>
+			</ul>
+		</div>
+
+		
+		
+		<div class="6u 12u$(medium)">
+			<h3>TP 4&nbsp;: sites Web adaptatifs</h3>
+			<ul class="alt">
+				<li><a href="M1106-TP4-sujet.pdf" class="button special icon fa-download">Sujet du TP 4</a></li>
+			</ul>
+			
+			<p>Fichiers à télécharger</p>
+			<ul class="alt">
+				<li><a href="M1106-TP4.html">M1106-TP4.html</a></li>
+				<li><a href="horizontal.html">horizontal.html</a></li>
+				<li><a href="horizontal.css">horizontal.css</a></li>
+				<li><a href="vertical.html">vertical.html</a></li>
+				<li><a href="vertical.css">vertical.css</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<header>
+		<h2>Un exemple de page HTML complète</h2>
+	</header>
+	<p>Ci-dessous un exemple complet de page HTML avec feuille de style CSS.</p>
+	<p><em>La maîtrise de cette page n’est pas nécessaire pour les TP ni pour le contrôle.</em></p>
+	<ul>
+		<li><a href="exemple/exempleComplet.html">exempleComplet.html</a></li>
+		<li><a href="exempleComplet-HTML.pdf">version PDF</a></li>
+	</ul>
+	
+	<ul>
+		<li><a href="exemple/exempleComplet.css">exempleComplet.css</a></li>
+		<li><a href="exempleComplet-CSS.pdf">version PDF</a></li>
+	</ul>
+</section>
+
+
+<section>
+	<header>
+		<h2>Licence des supports</h2>
+	</header>
+
+	<p>Ressources réutilisables selon les conditions de leur licence respective, en général <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/">Creative Commons CC BY-NC-SA 3.0</a>&nbsp;; auteur&nbsp;: <span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>.</p>
+
+	<p>Source LaTeX disponible pour les enseignants sur demande.</p>
+	
+	<p>Photo d’illustration&nbsp;: <a href="https://unsplash.com/photos/OqtafYT5kTw">Ilya Pavlov</a> (unsplash, domaine public)</p>
+</section>
+
+
+
+						</div>
+						
+						
+					<!-- Footer -->
+						<footer id="footer">
+						
+							<a href="http://www.loria.fr/"><img src="../../images/logo_loria_complet.jpg" alt="LORIA"></a>
+							<a href="http://www.univ-lorraine.fr/"><img src="../../images/logo-universite-de-lorraine.png" alt="Université de Lorraine"></a>
+							<a href="http://www.cnrs.fr/"><img src="../../images/cnrs.png" alt="CNRS"></a>
+						
+							<p class="copyright">&copy; Étienne André. All rights reserved. Design: <a href="https://html5up.net/editorial">Editorial</a> by <a href="https://html5up.net">HTML5 UP</a> (<a href="https://creativecommons.org/licenses/by/3.0/"><abbr title="Creative Commons Attribution 3.0 License">cc-by</abbr> 3.0</a>).</p>
+							<p class="copyright">Cette page est conforme aux standards
+	<a href="http://validator.w3.org/check?uri=referer">HTML 5</a>
+		et
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>.</p>
+
+						</footer>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+
+									<ul>
+										<li><a href="../../index_fr.php">Accueil</a></li>
+										<li><a href="../../jobs_fr.php">⭐ Offres de stages et post-doc</a></li>
+										<li><a href="../../index_fr.php#projects">Projets de recherche</a></li>
+										<li><a href="../../publications_fr.php">Publications</a></li>
+										<li><a href="../../index_fr.php#students">Étudiants</a></li>
+										<li><a href="../../index_fr.php#software">Développement logicel</a></li>
+										<li><a href="../../enseignement.php">Enseignement</a></li>
+										<li><a href="../../index_fr.php#education">Parcours universitaire</a></li>
+										<li><a href="../../index_fr.php#contact">Contact</a></li>
+									</ul>
+									<ul class="icons">
+										<li></li>
+									</ul>
+								</nav>
+
+						</div> <!-- inner -->
+					</div> <!-- sidebar -->
+					
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+			
+			
+	
+<!-- Begin Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+	</body>
+</html>
+
+
+

@@ -1,0 +1,19 @@
+Externalized and Internalized Notions of Behavioral Refinement
+
+Many different behavioral refinement notions for algebraic specifications have
+been proposed in the literature but the relationship between the various
+concepts is still unclear. In this paper we provide a classification and a
+comparative study of behavioral refinements according to two directions, the
+externalized approach which uses an explicit behavioral abstraction
+operator that is applied to the specification to be implemented, and the
+internalized approach which uses a built-in behavioral semantics of
+specifications. We show that both concepts are equivalent under suitable
+conditions. The formal basis of our study is provided by the COL institution
+(constructor-based observational logic). Hence, as a side-effect of our study
+on internalized behavioral refinements, we introduce also a novel concept of
+behavioral refinement for COL-specifications.
+
+This talk is based on the paper
+<A HREF="http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/ictac05-ID128.pdf">
+Externalized and Internalized Notions of Behavioral Refinement</A>
+by M. Bidoit and R. Hennicker.

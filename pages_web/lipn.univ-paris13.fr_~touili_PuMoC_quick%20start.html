@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LIAFA -- PuMoC</title>
+</head>
+
+<body>
+<blockquote>
+  <h1><strong><font color="#0000A0" size="7">PuMoC</font></strong></h1>
+  <h1><strong><font size="5">A CTL Model Checker for Sequential Program</font></strong><font size="5">s</font></h1>
+</blockquote>
+<table width="866" height="40" border="0" align="left" bordercolor="#FFFFFF" summary="main-menu">
+  <tr>
+    <td width="140" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="index.html"><font size="5">Home</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="download.html"><font size="5">Download</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="quick start.html"><font color="#FF0000" size="5"><strong>Quick Start</strong></font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="references.html"><font size="5">References</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="experiments.html"><font size="5">Experiments</font></a></p>    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr size="3" noshade>
+<p>We show a short guide to run PuMoC in Linux.</p>
+<h2><strong><font color="#0000FF" size="4">Emptiness problem of Alternating Buechi Pushdown Systems.</font></strong></h2>
+<p>Download <a href="download.html">PuMoC</a> and run the following commands from the directory containing PuMoC.tgz. </p>
+	<blockquote>
+	  <p><code><strong>tar -zxvf PuMoC.tar.gz</strong></code></p>
+      <p><code> <strong>cd PuMoC              </strong></code></p>
+      <p><strong><code>make </code></strong></p>
+</blockquote>
+	<p>Now, you can evaluate an example: <code> ./PuMoC -l2 test/quick start.abpds.</code> </p>
+	<p>Here <code><font color="#FF0000">-l2</font> </code>specifies checking the emptiness of the alternating Buechi pushdown system  <code><font color="#FF0000">quick start.abpds</font></code>. The following figure shows the results. </p>
+	<p><img src="abpds2.png" width="700" height="400"></p>
+	<p><strong><font color="#0000FF" size="4">CTL model-checking For Pushdown Systems.</font></strong></p>
+	<p>Hereafter, we assume that PuMoC has been installed in your computer and in the directory PuMoC. You can evaluate an example: </p>
+	<blockquote>
+	  <p><code> <strong>./PuMoC -l1 test/quick start.pds 'AG(p-&gt;EF q)'</strong></code></p>
+</blockquote>
+	<p align="left">Here<code> <font color="#FF0000">-l1</font></code> specifies CTL model-checking for pushdown systems, <code><font color="#FF0000">'AG(p-&gt;EF q)'</font></code> specifies the CTL formula <code><font color="#FF0000">AG(p-&gt;EF q)</font></code>.</p>
+	<p align="left">Or, You can evaluate an example: </p>
+	<blockquote>
+	  <p align="left"><code><strong>./PuMoC -l1 -f test/quick start.pds  </strong></code><strong><code>test/quick start.ctl</code></strong><code></code></p>
+</blockquote>
+	<p align="left">Here <code><font color="#FF0000" size="3">-f</font></code> specifies reading the CTL formula from the file <code><font color="#FF0000">test/quick start.ctl</font></code><font color="#FF0000">.</font> Results are shown in the following figure.</p>
+	<p align="left"><img src="pds1.png" width="876" height="429"></p>
+	<p align="left"><strong><font color="#0000FF" size="4">CTL model-checking for Pushdown Systems with Regular Valuations.</font></strong></p>
+	<p>You can evaluate an example: </p>
+	<blockquote>
+      <p><code> <strong>./PuMoC -l1 test/quick start.pds 'AG(p-&gt;EF (q&amp;&amp; #.|l1|l2|.*# ))'</strong></code></p>
+</blockquote>
+	<p align="left">Here  <code><font color="#FF0000" size="3">#.|l1|l2|.*#</font> </code> specifies a regular predicate<code> (regular valuations)<font color="#FF0000" size="3">.|l1|l2|.*<font color="#000000">, where</font></font></code></p>
+	<ul>
+	  <li> <code><font color="#FF0000" size="3">.</font></code> : matches any stack symbol, </li>
+      <li><font color="#FF0000">l1</font> : matches the symbol <font color="#FF0000">l1</font>, </li>
+      <li><font color="#FF0000">*</font> : matches the preceding element zero or more times,</li>
+      <li><code><font color="#FF0000" size="3">|</font></code> : is the concatenation operator. E.g.,<code><font color="#FF0000" size="3">.|l1|l2|.*</font><font color="#FF0000" size="3"> </font></code>matches the word<code><font color="#FF0000" size="3"> l3 l1 l2 l4 l2 l1...<font color="#000000">.</font></font></code></li>
+</ul>
+	<p><font color="#000000" size="3">The option <font color="#FF0000">-f</font> </font>reads the CTL formula from a file. Results are shown in the following figure.</p>
+	<p><img src="pds4.png" width="819" height="459"></p>
+	<p><strong><font color="#0000FF" size="4">CTL model-checking for Boolean Programs.</font></strong></p>
+	<p>You can evaluate an example: </p>
+	<blockquote>
+      <p><code> <strong>./PuMoC -l1 -f -b test/quick start.bp test/bp.ctl </strong></code></p>
+</blockquote>
+	<p>Here<code> <font color="#FF0000">-b</font> </code>specifies CTL model-checking for the boolean programs <code><font color="#FF0000" size="3"><font color="#000000"></font></font></code><code>test/quick start.bp</code>. Note that, the option <code> <font color="#FF0000">-l1fb</font></code> has the same function as the option <code> <font color="#FF0000">-l1 -f -b</font></code>. Results are shown in the following figure.</p>
+	<p><img src="bp1.png" width="822" height="336"></p>
+	<p><img src="bp2.png" width="656" height="363"></p>
+	<p><strong><font color="#0000FF" size="4">CTL model-checking for C Programs.</font></strong></p>
+	<p>First, you have to install <a href="http://www.cprover.org/satabs/">Satabs</a>. <font color="#0000FF">Satabs</font> is in the directory Satabs of PuMoC. Using Satabs, you can translate a C program into a boolean program  from the directory PuMoC </p>
+	<blockquote>
+	  <p><code><strong>./Satabs/satabs Satabs/lock.c --save-bps</strong></code></p>
+    </blockquote>
+	<p>Using the option <font color="#FF0000"> <code>--save-bps</code></font>, satabs translates the C program <code>Satabs/lock.c</code> taken from <font color="#0000FF">Satabs</font> into a boolean program at the directory PuMoC called <font color="#FF0000">satabs.1.bp</font>. Now, you can model-check the boolean program <font color="#FF0000">satabs.1.bp</font> as above.  </p>
+	<p><strong><font color="#0000FF" size="4">CTL model-checking for Java Programs.</font></strong></p>
+	<p>To do CTL model-checking for Java Programs. First download and install <a href="http://www.cs.ox.ac.uk/matthew.hague/pdsolver.html">JimpleToPDSolver</a> by the following commands. JimpletoPDSolver transforms Java programs into pushdown systems with use/def informations.</p>
+	<blockquote>
+	  <p> <code><strong>tar xzf jimpletopdsolver.tgz              </strong></code></p>
+	  <p><strong><code>cd JimpleToPDSolver              </code></strong></p>
+	  <p><strong><code>ant compile </code></strong></p>
+	</blockquote>
+	<p>&nbsp; </p>
+	<blockquote>
+	  <p> <code><strong>./JimpleToPDSolver -f javaprogram.pds "&lt;examples.javaprogram: void main(java.lang.String[])&gt;" </strong></code></p>
+</blockquote>
+	<p>JimpletoPDSolver translates the <code>javaprogram</code> into the pushdown system <code>javaprogram.pds</code>. Now, you can model-check the pushdown system <code>javaprogram.pds</code>. </p>
+	<hr noshade>
+<p align="center">Copyright © 2011-2012 LIAFA, University of Paris Diderot and CNRS.</p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <script type="text/javascript">
+	function toggle(id)
+	{
+		var item = document.getElementById(id);
+		if (item.className == 'hidden') item.className = 'visible';
+		else item.className = 'hidden';
+	}
+  </script>
+<link rel="icon" type="image/ico" href="favicon.ico"></link> 
+<link rel="shortcut icon" href="favicon.ico"></link>
+<head>
+<title>Manzonetto Giulio - HdR in Computer Science</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="gmanzone.css">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26493868-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = 
+true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+'.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<h1>Lambda Calculus, Linear Logic and Symbolic Computation</h1>
+<h3>Dossier scientifique pour l'obtention de l'habilitation &agrave; diriger les recherches</h3>
+<h3>Manzonetto Giulio</h3>
+<hr size="1">
+
+Defended on March 7<sup>th</sup>, 2017. <br><br>
+
+<i>Reviewers:</i> Jean Goubault-Larrecq (ENS-Cachan), Martin Hyland (Univesity of Cambridge), Jan Willem Klop (Vrije Universiteit).<br><br>
+
+<i>Jury members:</i> 
+Henk Barendregt (Radboud University), 
+Christophe Fouquer&eacute; (Universit&eacute; Paris-Nord), 
+Mai Gehrke (Universit&eacute; Paris-Diderot), 
+Jean Goubault-Larrecq (ENS-Cachan), 
+Stefano Guerrini (Universit&eacute; Paris-Nord), 
+Martin Hyland (University of Cambridge), 
+Delia Kesner (Universit&eacute; Paris-Diderot).
+
+<hr size="1">
+
+<ul>
+  <li>Lambda Calculus, Linear Logic and Symbolic Computation, <i>m&eacute;moire d'habilitation</i>, 2017. [<a href="HdrThesis.pdf">.pdf</a>].</li>
+  <li>Slides, March 7<sup>th</sup>, 2017. [<a href="slides/HdR_slides.pdf">.pdf</a>].</li>
+</ul>
+This manuscript presents recent advances in the theory of functional programming languages and in the algebraization of multi-valued logics.<br>
+A recurrent theme concerns the problem of characterizing the observational equivalences between programs by means of denotational semantics arising from linear logic.<br><br>
+
+<i>Chapter 1</i> illustrates new results concerning old problems in the area of &lambda;-calculus. On the one side we provide necessary and sufficient conditions for relational models to be fully abstract for Morris's original theory, and we show that such a theory satisfy a strong extensionality condition called "the &omega;-rule". On the other side we show a perhaps unexpected connection between the definability problem in simply typed &lambda;-calculus and the inhabitation problem of intersection types. Finally, we provide a normalization result for the second-order programming language ML<sup>F</sup>.<br><br>
+
+<i>Chapter 2</i> focuses on a resource sensitive extension of &lambda;-calculus known as the resource calculus and born from Ehrhard's differential &lambda;-calculus. 
+On the syntactic side, we show that the equivalent of Bohm's theorem holds namely that all Taylor-eta-distinct normal forms can be separated.
+On the semantic side, we provide a notion of linear reflexive object living in a Cartesian closed differential category as a sound model of such a calculus. We show that this notion is general enough to encompass all known examples, including the relational semantics of linear logic.<br><br>
+
+<i>Chapter 3</i> is devoted to construct denotational models of non-deterministic programming languages. First, we construct relational models of Call-By-Name and Call-By-Value &lambda;-calculi extended with non-deterministic choice and parallel composition.
+Second, we provide a categorical construction based on biproduct completions and idempotent splitting for building quantitative models of non deterministic extensions of PCF. This includes a weighted relational semantics that allow to compare programs not only with respect to "what they can do", but also "in how many steps" or "in how many different ways" (for non-deterministic PCF) or even "with what probability" (for probabilistic PCF).<br><br>
+
+<i>Chapter 4</i> provides an algebraization of classical and non-classical logics, based on factor varieties and decomposition operators. In particular, we provide a new method for determining whether a propositional formula is a tautology or a contradiction. This method can be automatized by defining a term rewriting system that enjoys confluence and strong normalization. This also suggests an original notion of logical gate and circuit, where propositional variables becomes logical gates and logical operations are implemented by substitution. Concerning formulas with quantifiers, we present a simple algorithm based on factor varieties for reducing first-order classical logic to equational logic. We achieve a completeness result for first-order classical logic without requiring any additional structure.
+
+<br><br>
+Other resources:
+<ul>
+  <li>a recent CV [<a href="cv-en.pdf">.pdf</a>];</li>
+  <li>all my publications are available <a href="research.html">here</a>.</li>
+</ul>
+
+<hr size="1">
+
+<p align="right">
+<i>
+Last update: 07/03/2017<br>
+</i>
+</p>   
+</body>
+</html>

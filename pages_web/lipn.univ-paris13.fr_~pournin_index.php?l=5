@@ -1,0 +1,125 @@
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="lipn.png">
+
+ 
+<title>Lionel Pournin - Links</title>
+<meta name="author" content="Lionel Pournin">
+<meta name="description" content="Lionel Pournin, research interests, publications, teaching">
+<meta name="keywords" content="Lionel Pournin, numerical simulation, granular media, discrete geometry, polytopes, operations research, triangulations">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div style="width=470;font-size:26px;font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">
+Lionel Pournin - Links
+</div>
+
+<hr align=left noshade size=2 width=200 style="margin-bottom:-5px;">
+
+<table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:120px;">
+      <p style="margin-top:20px;font-size:18px;"><a href="http://lipn.univ-paris13.fr/~pournin/">Main</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=2">Teaching</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=3">Research</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=4">Publications</a></p>
+<!--
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=6">Talks</a></p>
+-->
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=5">Links</a></p>
+      </div>
+    </td>
+    <td valign="top">
+      <table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:500px;">
+
+<p align="justify" style="font-size:16px">
+<a href="http://www.epfl.ch">EPFL's website</a>: the Swiss Federal Institute of Technology where I did my PhD, under the supervision of <a href="http://people.epfl.ch/thomas.liebling">Tom Liebling</a>.
+</p>
+
+<p align="justify" style="font-size:16px">
+<a href="http://cs.smith.edu/~orourke/TOPP/">The Open Problems Project</a>, maintained by Erik Demaine, Joseph Mitchell and Joseph O'Rourke lists a number of open problems in computational geometry, including that of <a href="http://cs.smith.edu/~orourke/TOPP/P28.html#Problem.28">flip-graph connectivity</a> in which I am particularly interested.
+</p>
+
+<p align="justify" style="font-size:16px">
+<a href="http://oeis.org/">The Online Encyclopedia of Integer Sequences</a>, if you need to know what some sequence of integers stands for.
+</p>
+
+<p align="justify" style="font-size:16px">
+<a href="http://www.theoremoftheday.org/">Theorem of the Day</a> by <a href="http://www.maths.qmul.ac.uk/~whitty/">Robin Whitty</a>: here you will find a beautiful one page description of a theorem every day.
+</p>
+
+<!--
+<p align="justify" style="font-size:16px">
+<a href="http://www.apprendre-en-ligne.net/auteur/">Didier M&uuml;ller's page</a>: lots of useful and funny mathematical stuff here (including granular media simulation).
+</p>
+
+<p align="justify" style="font-size:12px">
+<a href="http://people.idiap.ch/jaf/">Jean-Albert Ferrez's page</a>: the main author of the granular media simulation code developed at EPFL.
+</p>
+
+<p align="justify" style="font-size:16px">
+<a href="http://personales.unican.es/santosf/">Francisco Santos' page</a>: many impressive results in discrete geometry. He disproved Hirsch's conjecture in 2010.
+</p>
+
+<p align="justify" style="font-size:12px">
+The page of <a href="http://greedy.epfl.ch/">Greedy</a>, the EPFL grid computing facility, where you can find the statistics of job submissions.
+</p>
+-->
+
+<p align="justify" style="font-size:16px">
+<a href="http://infoscience.epfl.ch/">Infoscience</a>, the scientific publications archive of the EPFL, where you will be able to download some of my articles.
+</p>
+
+<p><span class="sp4"><i>... and two off-topic links:</i></span></p>
+
+<p align="justify" style="font-size:16px">
+The demoscene meeting place: <a href="http://pouet.net">pouet.net</a> and the webpage of a french manga editor, <a href="http://www.ki-oon.com">Ki-oon</a>, which I recommend.
+</p>
+      </div>
+    </td>
+    <td valign="center">
+      <div style="float:left;width:335px;" align="justify">
+      <div style="float:right;width:320px;" align="justify">
+        <video width="320" height="320" autoplay loop>
+          <source src="planet.mp4" type="video/mp4">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="320" height="320">
+            <param name="movie" value="planet.swf">
+            <param name="quality" value="high">
+            <param name="allowScriptAccess" value="sameDomain" />
+            <param name="allowFullScreen" value="True" />
+            <embed src="planet.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="320" height="320" allowScriptAccess="sameDomain" allowFullScreen="True">
+            </embed>
+          </object>
+        </video>
+        <br>
+        <font size=2>Coder colors, not real-time, but demo'ish! Sphero- simplices submitted to a central force eventually form a planet. Note the satellite! This movie was shown at the end of my PhD public defence talk.</font>
+      </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6627459; 
+var sc_invisible=1; 
+var sc_security="1f468d45"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

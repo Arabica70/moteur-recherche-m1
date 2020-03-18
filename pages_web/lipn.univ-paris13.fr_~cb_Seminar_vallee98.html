@@ -1,0 +1,1073 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Complete Analysis of the Binary GCD Algorithm</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+
+ <DIV ALIGN=center>
+ <FONT SIZE=4><B>Complete Analysis of the Binary GCD Algorithm</B></FONT><BR>
+<BR>
+[a text written by <A HREF="https://lipn.univ-paris13.fr/~banderier/">Cyril Banderier</a>, based on the talk 
+given by Brigitte Vallée at the Algoriths Seminar, April 27, 1998]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="vallee.ps">postscript</A> and in <A HREF="vallee.pdf">pdf</A>.
+ </DIV>
+<BR>
+<BR>
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+The analysis of the <EM>classical</EM> Euclidean algorithm 
+has been performed by Heilbronn&nbsp;[<A HREF="#Heilbronn69"><CITE>4</CITE></A>] and Dixon&nbsp;[<A HREF="#Dixon70"><CITE>3</CITE></A>], using different approaches.
+For a random pair of rational numbers, the average number of divisions is
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>D</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> ~ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>12 log 2</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> log <I>n</I>.</TD>
+</TR></TABLE></DIV><BR>
+Here, we will analyse the <EM>binary</EM> Euclidean algorithm, which uses only 
+subtractions and right binary shifts. This ``binary GCD algorithm'' takes as 
+input a pair of odd integers (<I>u</I>,<I>v</I>) from the set 
+<FONT FACE=symbol>W</FONT>={(<I>u</I>,<I>v</I>) odd, 0&lt;<I>u</I> <FONT FACE=symbol>£</FONT> <I>v</I>}.
+Then the GCD is recursively defined by 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>ï<BR>í<BR>ï<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>gcd(<I>u</I>,<I>v</I>)=gcd</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>v</I>-<I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP> 2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>Val</FONT><SUB><FONT SIZE=2>2</FONT></SUB><FONT SIZE=2>(<I>v</I>-<I>u</I>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,<I>v</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>gcd(<I>u</I>,<I>v</I>)=gcd(<I>v</I>,<I>u</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+where Val<SUB><FONT SIZE=2>2</FONT></SUB>(<I>n</I>) is the greatest integer <I>b</I> such 2<SUP><FONT SIZE=2><I>b</I></FONT></SUP> divides <I>n</I>, 
+i.e., the dyadic valuation of <I>n</I>.
+The corresponding binary GCD algorithm is as follows:
+<UL>
+<LI>
+while <I>u</I><FONT FACE=symbol>¹</FONT> <I>v</I> do
+<UL>
+<LI>
+while <I>u</I>&lt;<I>v</I> do
+<UL>
+<LI>
+<I>b</I>:=Val<SUB><FONT SIZE=2>2</FONT></SUB>(<I>v</I>-<I>u</I>);
+
+<LI><I>v</I>:=(<I>v</I>-<I>u</I>)/2<SUP><FONT SIZE=2><I>b</I></FONT></SUP>;
+</UL>
+
+<LI>end;
+
+<LI>exchange <I>u</I> and <I>v</I>;
+</UL>
+
+<LI>end;
+
+<LI>return <I>u</I>.
+</UL>
+
+<DIV ALIGN=left><B>Example&nbsp;1</B>&nbsp;&nbsp;<EM>
+If the input is </EM><EM>(<I>u</I>,<I>v</I>):=(7,61)</EM><EM> then
+</EM><EM><I>b</I>:=</EM><EM>Val</EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(61-7)=1</EM><EM>. Thus </EM><EM><I>v</I>:=54/2</EM><SUP><EM><FONT SIZE=2>1</FONT></EM></SUP><EM>=27</EM><EM>, 
+and the algorithm continues because </EM><EM><I>u</I>&lt;<I>v</I></EM><EM>.
+Now </EM><EM><I>b</I>:=</EM><EM>Val</EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(27-7)=2</EM><EM>. Thus </EM><EM><I>v</I>:=20/2</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>=5</EM><EM>.
+Now the algorithm restarts with </EM><EM>(<I>u</I>,<I>v</I>):=(5,7)</EM><EM>.
+It leads to </EM><EM><I>v</I>:=(7-5)/2</EM><SUP><EM><FONT SIZE=2>1</FONT></EM></SUP><EM>=1</EM><EM> and therefore one restarts with </EM><EM>(<I>u</I>,<I>v</I>):=(1,5)</EM><EM>
+which leads to </EM><EM><I>v</I>=1=<I>u</I></EM><EM> so the algorithm stops 
+and returns </EM><EM><I>u</I></EM><EM>, namely </EM><EM>1</EM><EM> (as expected since 7 and 61 are coprime).
+One can write:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>7</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>61</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>= </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>3+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM><SUP><EM><FONT SIZE=2>3</FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>1+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM><SUP><EM><FONT SIZE=2>1</FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1+2</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.
+</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+In general, for each ``inner while loop'', one has 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>+2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I></FONT><SUB><FONT SIZE=2><I>i</I></FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>x</I><SUB><FONT SIZE=2><I>i</I>+1</FONT></SUB></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV> 
+where <I>x</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>:=<I>u</I>/<I>v</I> (with (<I>u</I>,<I>v</I>) as in the beginning of the loop),
+ <I>x</I><SUB><FONT SIZE=2><I>i</I>+1</FONT></SUB>:=<I>u</I>/<I>v</I> (with (<I>u</I>,<I>v</I>) as after the exchange), where
+<I>a</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>:=1+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP><SUB><SUP><FONT SIZE=2>1</FONT></SUP></SUB>+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP><SUB><SUP><FONT SIZE=2>1</FONT></SUP></SUB><SUP><FONT SIZE=2>+<I>b</I></FONT></SUP><SUB><SUP><FONT SIZE=2>2</FONT></SUP></SUB>+...+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP><SUB><SUP><FONT SIZE=2>1</FONT></SUP></SUB><SUP><FONT SIZE=2>+...+<I>b</I></FONT></SUP><SUB><SUP><FONT SIZE=2><I>l</I>-1</FONT></SUP></SUB> 
+and <I>k</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>:=<I>b</I><SUB><FONT SIZE=2>1</FONT></SUB>+...+<I>b</I><SUB><FONT SIZE=2><I>l</I>-1</FONT></SUB>+<I>b</I><SUB><FONT SIZE=2><I>l</I></FONT></SUB> 
+(the sum of all the <I>b</I>'s obtained during the <I>i</I>-th inner while loop). 
+The algorithm thus produces the following binary continued fraction expansion
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>a</I><SUB><FONT SIZE=2>1</FONT></SUB>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I></FONT><SUB><FONT SIZE=2>1</FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>...+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I></FONT><SUB><FONT SIZE=2><I>r</I>-1</FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>+2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I></FONT><SUB><FONT SIZE=2><I>r</I></FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Three interesting parameters are: 
+<UL>
+<LI>
+ <I>r</I>, the depth of the continued fraction or equivalently the number of outer loops performed;
+
+<LI> <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>i</I>=1</FONT></SUB><SUP><FONT SIZE=2><I>r</I></FONT></SUP> <FONT FACE=symbol>n</FONT>(<I>a</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>), the number of subtractions (where <FONT FACE=symbol>n</FONT>(<I>w</I>) is the number of 1's in the binary expansion of the integer <I>w</I>);
+
+<LI> <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>i</I>=1</FONT></SUB><SUP><FONT SIZE=2><I>r</I></FONT></SUP> <I>k</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>, number of rights shifts performed or equivalently inner loop executions.
+</UL>
+Their average values on the set 
+<FONT FACE=symbol>W</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>={(<I>u</I>,<I>v</I>) odd, 0&lt;<I>u</I> <FONT FACE=symbol>£</FONT> <I>v</I> <FONT FACE=symbol>£</FONT> <I>n</I>} 
+are respectively noted <I>E</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, <I>P</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> and <I>S</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>.
+Note that <I>E</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> is also the average number of exchanges in the algorithm, and 
+that <I>P</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> is the average number of operations that are necessary to obtain 
+the expansion.<BR>
+<BR>
+<!--TOC section A Ruelle Operator for a Tauberian Theorem-->
+
+<H2>2&nbsp;&nbsp; A Ruelle Operator for a Tauberian Theorem</H2><!--SEC END -->
+In order to establish that these three parameters have averages that are 
+asymptotic to log <I>n</I>, 
+we introduce the following Ruelle operator:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>[<I>f</I>](<I>x</I>):= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2><I>a</I></FONT><FONT SIZE=2> odd</FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>1<FONT FACE=symbol>£</FONT> <I>a</I> <FONT FACE=symbol>£</FONT> 2</FONT><SUP><FONT SIZE=2><I>k</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(<I>a</I>+2<SUP><FONT SIZE=2><I>k</I></FONT></SUP> <I>x</I>)<SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>f</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>a</I> +2<SUP><FONT SIZE=2><I>k</I></FONT></SUP> <I>x</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+The average <I>E</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> is easily expressed in term of <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>,
+ with the help of the following definitions:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I>(<I>s</I>):=(Id-<I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-1</FONT></SUP>[Id](1), &nbsp;&nbsp; <I>G</I>(<I>s</I>):=(Id-<I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-2</FONT></SUP> <FONT FACE=symbol>°</FONT> <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>[Id</TD>
+<TD NOWRAP>](1), 
+&nbsp;&nbsp;&nbsp;&nbsp;
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>):=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I></FONT><FONT SIZE=2> odd</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>k</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP>1-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2<SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><FONT FACE=symbol>z</FONT>(<I>s</I>).</TD>
+</TR></TABLE></DIV> <BR>
+<DIV ALIGN=left><B>Proposition&nbsp;1</B>&nbsp;&nbsp;<EM>
+</EM><EM><I>E</I></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM> is a ratio of partial sums of the two Dirichlet series 
+</EM><EM><FONT FACE=symbol>z</FONT></EM><SUP><EM><FONT SIZE=2>~</FONT></EM></SUP><EM>(<I>s</I>) <I>F</I>(<I>s</I>)</EM><EM> and </EM><EM><FONT FACE=symbol>z</FONT></EM><SUP><EM><FONT SIZE=2>~</FONT></EM></SUP><EM>(<I>s</I>) <I>G</I>(<I>s</I>)</EM><EM>.
+</EM></DIV>
+<BR>
+<B>Proof.</B>
+Let <FONT FACE=symbol>W</FONT><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP> be the subset of <FONT FACE=symbol>W</FONT> for which the algorithm performs exactly <I>l</I> exchanges. Then, <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB><SUP><FONT SIZE=2><I>l</I></FONT></SUP>[<I>f</I>](1)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>(<I>u</I>,<I>v</I>)<FONT FACE=symbol>Î</FONT><FONT FACE=symbol>W</FONT></FONT><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>f</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Summing over all the possible heights (<I>l</I><FONT FACE=symbol>³</FONT> 0) yields:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>(Id</TD>
+<TD NOWRAP>-<I>w</I> <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-1</FONT></SUP>[<I>f</I>](1)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I> <FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>w</I><SUP><FONT SIZE=2><I>l</I></FONT></SUP> <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB><SUP><FONT SIZE=2><I>l</I></FONT></SUP>[<I>f</I>](1) = </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>(<I>u</I>,<I>v</I>)<FONT FACE=symbol>Î</FONT><FONT FACE=symbol>W</FONT></FONT><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>f</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Differentiating with respect to <I>w</I>, and then choosing <I>f</I>=1 and <I>w</I>=1 yields
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>E</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>| <FONT FACE=symbol>W</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB> | </TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>l</I> | <FONT FACE=symbol>W</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP>| 
+= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>l</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>£</FONT> <I>n</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>v</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>£</FONT> <I>n</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>v</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV> 
+The proof is completed by observing that
+ <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+<I>F</I>(<I>s</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>v</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP>,&nbsp;&nbsp;&nbsp;&nbsp;
+<I>G</I>(<I>s</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>l</I> <I>v</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP>. 
+</TD>
+</TR></TABLE></DIV><BR>
+The key is now to prove that the following theorem may be used:
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Tauberian theorem]&nbsp;&nbsp;</FONT><EM>
+If </EM><EM><I>F</I>(<I>s</I>)</EM><EM> is a Dirichlet series with non-negative coefficients
+ that is convergent for </EM><EM><FONT FACE=symbol>Â</FONT>(<I>s</I>)&gt;<FONT FACE=symbol>s</FONT>&gt;0</EM><EM> and if
+</EM><OL type=1>
+<LI><EM>
+</EM><EM> </EM><EM><I>F</I></EM><EM> is analytic on the line </EM><EM><FONT FACE=symbol>Â</FONT>(<I>s</I>)=<FONT FACE=symbol>s</FONT></EM><EM> except at </EM><EM><I>s</I>=<FONT FACE=symbol>s</FONT></EM><EM>;
+</EM>
+<LI><EM> </EM><EM><I>F</I>(<I>s</I>)=</EM><EM><I>A</I>(<I>s</I>)/(<I>s</I>-<FONT FACE=symbol>s</FONT>)</EM><SUP><EM><FONT SIZE=2><FONT FACE=symbol>g</FONT>+1</FONT></EM></SUP><EM>+<I>C</I>(<I>s</I>)</EM><EM> where </EM><EM><I>A</I>,<I>C</I></EM><EM> are 
+analytic at </EM><EM><FONT FACE=symbol>s</FONT></EM><EM> (with </EM><EM><I>A</I>(<FONT FACE=symbol>s</FONT>) <FONT FACE=symbol>¹</FONT> 0</EM><EM>);
+</EM></OL><EM>
+then one has, as </EM><EM><I>n</I> <FONT FACE=symbol>®</FONT> <FONT FACE=symbol>¥</FONT></EM><EM>, 
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>k</I> <FONT FACE=symbol>£</FONT> <I>n</I></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>a</I></EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><EM> = </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>A</I>(<FONT FACE=symbol>s</FONT>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>s</FONT> <FONT FACE=symbol>G</FONT>(<FONT FACE=symbol>g</FONT>+1)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 
+<I>n</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>s</FONT></FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>log</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>g</FONT></FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><I>n</I> (1+<FONT FACE=symbol>e</FONT>(<I>n</I>)),</EM></TD>
+</TR></TABLE></DIV><EM> where </EM><EM><FONT FACE=symbol>e</FONT>(<I>n</I>) <FONT FACE=symbol>®</FONT> 0</EM><EM>.
+</EM></DIV><BR>
+<BR>
+<BR>
+<B>Proof.</B>
+See Delange [<A HREF="#Delange54"><CITE>2</CITE></A>].<BR><BR>
+<BR>
+<DIV ALIGN=left><B>Lemma&nbsp;1</B>&nbsp;&nbsp;<EM>
+The Tauberian theorem applies to </EM><EM><I>F</I></EM><EM> with </EM><EM><FONT FACE=symbol>s</FONT>=2</EM><EM> and </EM><EM><FONT FACE=symbol>g</FONT>=0</EM><EM>.
+</EM></DIV>
+<BR>
+<B>Proof.</B>
+Indeed <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I>(<I>s</I>):=(Id-<I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-1</FONT></SUP>[Id](1)=1+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>2</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>v</I></FONT><FONT SIZE=2> odd</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>v</I>-1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>-1) </TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>~</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>z</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+1</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+The last member of the equality clearly satisfies the conditions of 
+the Tauberian theorem, and the same holds for <FONT FACE=symbol>z</FONT><SUP><FONT SIZE=2>~</FONT></SUP><I>F</I> 
+with <FONT FACE=symbol>s</FONT>=2 and <FONT FACE=symbol>g</FONT>=0.<BR><BR>
+<BR>
+<DIV ALIGN=left><B>Lemma&nbsp;2</B>&nbsp;&nbsp;<EM>
+The Tauberian theorem applies to </EM><EM><I>G</I></EM><EM> with </EM><EM><FONT FACE=symbol>s</FONT>=2</EM><EM> and </EM><EM><FONT FACE=symbol>g</FONT>=1</EM><EM>.
+</EM></DIV>
+<BR>
+<B>Proof.</B>
+Here lies the complex part of Brigitte Vallée's proof. It is impossible to 
+conclude as quickly as in lemma 1, indeed, this time we need to find an 
+appropriate functional space on which <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> is a compact operator. A mixture of 
+various functional analysis theorems (Fejer-Riesz' inequality, Gabriel's 
+inequality, Krasnoselsky's theorem and other works by Shapiro and Grothendieck) 
+show that it is the case on the Hardy space <I>H</I><SUP><FONT SIZE=2>2</FONT></SUP>(<I>D</I>), where <I>D</I> is an open disk 
+containing ]0,1]. This leads to the fact that for <I>s</I>&gt;3/2, <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> has a unique
+ positive dominant eigenvalue, equal to 1 when <I>s</I>=2. In addition <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> has a 
+spectral radius &lt;1 on <FONT FACE=symbol>Â</FONT>(<I>s</I>)<FONT FACE=symbol>³</FONT> 2, <I>s</I><FONT FACE=symbol>¹</FONT> 2. Thus (Id-<I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-1</FONT></SUP> 
+is regular on the domain <I>D</I> and condition 1 of the Tauberian 
+theorem is fulfilled. Condition 2 is proved by means of perturbation theory 
+applied to <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>=<I>P</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>+<I>N</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> (<I>P</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> is the projection of <I>V</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> on 
+the dominant eigensubspace), in a neighbourhood of <I>s</I>=2.
+See [<A HREF="#Vallee98"><CITE>7</CITE></A>] for a detailed proof.<BR><BR>
+<BR>
+This implies the following fundamental result:
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<EM>
+The average number of exchanges of the binary Euclidean algorithm on </EM><EM><FONT FACE=symbol>W</FONT></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM>
+is </EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>E</I></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM> ~ </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2 </EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM> <I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(1)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM><EM>log</EM><EM> <I>n</I>,</EM></TD>
+</TR></TABLE></DIV><EM>
+where </EM><EM><I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM> is the fixed point of the operator </EM><EM><I>V</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM> 
+that is normalised by </EM><EM><FONT SIZE=4><FONT FACE=symbol>ò</FONT></FONT></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><SUP><EM><FONT SIZE=2>1</FONT></EM></SUP><EM> <I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(<I>t</I>) <I>dt</I> =1</EM><EM>.
+</EM></DIV><BR>
+<!--TOC section The Other Two Parameters-->
+
+<H2>3&nbsp;&nbsp; The Other Two Parameters</H2><!--SEC END -->
+In order to study the other two parameters (total number of subtractions, 
+total number of shifts)
+ one still uses the Tauberian theorem but with a more intricate 
+Ruelle operator, see Vallée [<A HREF="#Vallee98"><CITE>7</CITE></A>].
+This leads to the following two results.
+<DIV ALIGN=left><B>Theorem&nbsp;3</B>&nbsp;&nbsp;<EM>
+The average number of total iterations is 
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>P</I></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM> ~ <I>A</I> </EM><EM>log</EM><EM> <I>n</I>&nbsp;&nbsp;&nbsp;&nbsp;</EM><EM>with</EM><EM>&nbsp;&nbsp; <I>A</I>:= </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>
+<I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(1)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>a</I></FONT></EM><EM><FONT SIZE=2> odd</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM> 2</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><I>k</I></FONT></EM><SUB><EM><FONT SIZE=2><I>a</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>F</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>a</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+</TR></TABLE></DIV><EM>
+where </EM><EM><I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM> is defined as above, </EM><EM><I>F</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(<I>x</I>):=</EM><EM><FONT SIZE=4><FONT FACE=symbol>ò</FONT></FONT></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>x</I></FONT></EM></SUP><EM> <I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(<I>t</I>) <I>dt</I></EM><EM>, </EM><EM><I>F</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(1)=1</EM><EM>
+(where </EM><EM><I>k</I></EM><SUB><EM><FONT SIZE=2><I>a</I></FONT></EM></SUB><EM> is the integer part of </EM><EM>log</EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM> <I>a</I></EM><EM>).
+</EM></DIV> <BR>
+<DIV ALIGN=left><B>Theorem&nbsp;4</B>&nbsp;&nbsp;<EM>
+The average number of the sum of exponents of 2 used in the numerators 
+of the binary continued fraction expansions, i.e., average total number 
+of right shifts is
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>S</I></EM><SUB><EM><FONT SIZE=2><I>n</I></FONT></EM></SUB><EM> ~ </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM> <I>f</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>(1)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM>2 </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>a</I></FONT></EM><EM><FONT SIZE=2> odd</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>2</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><I>k</I></FONT></EM><SUB><EM><FONT SIZE=2><I>a</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>F</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM> <I>a</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>log</EM><EM> <I>n</I>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<!--TOC section All Roads Lead to Rome-->
+
+<H2>4&nbsp;&nbsp; All Roads Lead to Rome</H2><!--SEC END -->
+In Brent's paper [<A HREF="#Brent76"><CITE>1</CITE></A>], one can find a different approach which suggests that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> ~ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>M</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> log <I>n</I>&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;&nbsp;
+<I>M</I>=log 2-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>1</FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> log (1-<I>x</I>) <I>g</I><SUB><FONT SIZE=2>2</FONT></SUB>(<I>x</I>) <I>dx</I> </TD>
+</TR></TABLE></DIV> and 
+where <I>g</I><SUB><FONT SIZE=2>2</FONT></SUB> is the fixed point (and normalised as <I>f</I><SUB><FONT SIZE=2>2</FONT></SUB>) of 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>B</I><SUB><FONT SIZE=2>2</FONT></SUB>[<I>f</I>](<I>x</I>):= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>b</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP> <I>x</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><FONT SIZE=2>2</FONT></SUP> 
+<I>f</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP> <I>x</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>b</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>x</I>+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><FONT SIZE=2>2</FONT></SUP> <I>f</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>x</I>+2<SUP><FONT SIZE=2><I>b</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Unfortunately, this approach is based on a heuristic 
+hypothesis (exercise 36, section 4.5.2, rated HM49 by Knuth in [<A HREF="#Knuth97"><CITE>5</CITE></A>]).
+Brigitte Vallée explored this approach 
+with a Brent operator <I>B</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>, 
+without heuristic arguments but providing a spectral conjecture holds,
+this leads to the following result:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> ~ <I>B</I> log <I>n</I> &nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;&nbsp; <I>B</I>:= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>4</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP> <I>g</I><SUB><FONT SIZE=2>2</FONT></SUB>(1)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+The miracle holds and, after numerical experiments,
+<I>A</I>=1/<I>M</I>=<I>B</I>=1.0185....
+But nobody has proved these equalities. 
+We can also note that a similar method was used by Brigitte 
+Vallée and one of her students to analyse 
+the Jacobi symbol algorithm [<A HREF="#VaLa"><CITE>6</CITE></A>].
+Finally, the binary Euclidian algorithm is only a slight variation on one of 
+the oldest known algorithms but there is still some unknown 
+territories in its ``complete'' analysis! <BR>
+<BR>
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Brent76"><FONT COLOR=purple>[1]</FONT></A><DD>
+Brent (Richard&nbsp;P.).&nbsp;--
+Analysis of the binary Euclidean algorithm. In <EM>Algorithms and
+ complexity</EM>, pp.&nbsp;321--355.&nbsp;--
+Academic Press, New York, 1976. Proceedings of a
+ Symposium held at Carnegie-Mellon University, 1976.<BR>
+<BR>
+
+<DT><A NAME="Delange54"><FONT COLOR=purple>[2]</FONT></A><DD>
+Delange (Hubert).&nbsp;--
+Généralisation du théorème de Ikehara. <EM>Annales
+ Scientifiques de l'</EM><EM>É</EM><EM>cole Normale Sup</EM><EM>é</EM><EM>rieure</EM>, vol.&nbsp;71, n&deg;3,
+ 1954, pp.&nbsp;213--242.<BR>
+<BR>
+
+<DT><A NAME="Dixon70"><FONT COLOR=purple>[3]</FONT></A><DD>
+Dixon (John&nbsp;D.).&nbsp;--
+The number of steps in the Euclidean algorithm. <EM>Journal of
+ Number Theory</EM>, vol.&nbsp;2, 1970.<BR>
+<BR>
+
+<DT><A NAME="Heilbronn69"><FONT COLOR=purple>[4]</FONT></A><DD>
+Heilbronn (H.).&nbsp;--
+On the average length of a class of finite continued fractions. In
+ <EM>Number Theory and Analysis (Papers in Honor of Edmund Landau)</EM>,
+ pp.&nbsp;87--96.&nbsp;--
+Plenum, New York, 1969.<BR>
+<BR>
+
+<DT><A NAME="Knuth97"><FONT COLOR=purple>[5]</FONT></A><DD>
+Knuth (Donald&nbsp;E.).&nbsp;--
+<EM>The Art of Computer Programming</EM>.&nbsp;--
+Addison-Wesley, 1997, third edition, vol.&nbsp;2.<BR>
+<BR>
+
+<DT><A NAME="VaLa"><FONT COLOR=purple>[6]</FONT></A><DD>
+Lemée (Charlie) and Vallée (Brigitte).&nbsp;--
+Analyse des algorithmes du symbole de Jacobi. <EM>GREYC</EM>,
+ 1998.<BR>
+<BR>
+
+<DT><A NAME="Vallee98"><FONT COLOR=purple>[7]</FONT></A><DD>
+Vallée (Brigitte).&nbsp;--
+The complete analysis of the binary Euclidean algorithm. In <EM>Proceedings ANTS'98</EM>.&nbsp;--
+1998.</DL>
+
+</HTML>
+

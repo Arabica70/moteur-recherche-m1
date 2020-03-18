@@ -1,0 +1,835 @@
+<html>
+<head>
+  <title>Sami Evangelista &gt; Publication list</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Publication list</h1>
+<h2>Journal papers</h2>
+
+<table>
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK14">1</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ A sweep-line method for büchi automata-based model checking.
+ <em>Fundam. Inform.</em>, 131(1):27-53, 2014.
+<blockquote><font size="-1">
+The sweep-line method allows explicit state model checkers to delete
+states from memory on-the-fly during state space
+exploration thereby lowering the memory demands of
+the verification procedure.  The sweep-line method
+is based on a least progress-first search order that
+prohibits the immediate use of standard on-the-fly
+Büchi automata-based model checking algorithms
+that rely on a depth-first search order in the
+search for an acceptance cycle. This paper proposes
+and experimentally evaluates an algorithm for
+Büchi automata-based model checking compatible
+with the search order prescribed by the sweep-line
+method.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK13">2</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ Dynamic state space partitioning for external memory state space
+  exploration.
+ <em>Science of Computer Programming</em>, 78(7):778-795, 2013.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/SCP-2013.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+We describe a dynamic partitioning scheme usable by explicit state
+space exploration techniques that divide the state space into
+partitions, such as many external memory and distributed model
+checking algorithms.  The goal of the scheme is to reduce the number
+of transitions that link states belonging to different partitions,
+and thereby limit the amount of disk access and network
+communication.  We report on several experiments made with our
+verification platform ASAP that implements the dynamic partitioning
+scheme proposed in this paper. The experiments demonstrate the
+importance of exploiting locality to reduce cross transitions and IO
+operations, and using informed heuristics when choosing components
+to be used as a basis for partition refinement. The experiments
+furthermore show that the proposed approach improves on earlier
+techniques and significantly outperforms these when provided with
+access to the same amount of bounded RAM.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="CDEKPY12">3</a>]
+</td>
+<td class="bibtexitem">
+Christine Choppy, Anna Dedova, Sami Evangelista, Kaïs Klaï, Laure Petrucci,
+  and Samir Youcef.
+ Modelling and Formal Verification of the NEO Protocol.
+ <em>Transactions on Petri Nets and Other Models of Concurrency VI</em>,
+  7400:197-225, 2012.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/TOPNOC-2012.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+In order to manage very large distributed databases such as
+those used for banking and e-government applications, and thus to han-
+dle sensitive data, an original peer-to-peer transaction protocol, called
+NEO, was proposed. To ensure its effective operation, it is necessary to
+check a set of critical properties. The most important ones are related
+to availability of data that must be guaranteed by the system. Thus,
+our objective aims at verifying critical properties of the NEO protocol
+so as to guarantee such properties are satisfied. The model is obtained
+by reverse-engineering from the source code and then formal verification
+is performed. We focus in this article on the two phases of the NEO
+protocol occurring at the initialisation of the system. The first one, the
+election phase, aims at designating a special node that will pilot the over-
+all system. The bootstrap protocol, triggered at the end of the election,
+ensures that the system will enter its operational state in a coherent
+way. Therefore, the correctness of these two phases is mandatory for the
+reliability of the system.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EP10">4</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Christophe Pajault.
+ Solving the Ignoring Problem for Partial Order Reduction.
+ <em>International Journal on Software Tools for Technology Transfer
+  (STTT)</em>, 12(2), May 2010.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/STTT-2010.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+Partial order reduction limits the state explosion problem that arises in
+model checking by limiting the exploration of redundant interleavings. A state
+space search algorithm based on this principle may ignore some interleavings by
+delaying the execution of some actions provided that an equivalent interleaving
+is explored. However, if one does not choose postponed actions carefully, some
+of these may be infinitely delayed. This pathological situation is commonly
+referred to as the ignoring problem. The prevention of this phenomenon is not
+mandatory if one wants to verify if the system halts but it must be resolved
+for more elaborate properties like, for example, safety or liveness properties.
+We present in this work some solutions to this problem. In order to assess
+the quality of our propositions, we included them in our model checker Helena.
+We report the result of some experiments which show that our algorithms yield
+better reductions than state of the art algorithms like those implemented in
+the Spin tool.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK10">5</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ Search-Order Independent State Caching.
+ <em>Transactions on Petri Nets and Other Models of Concurrency IV</em>,
+  6550:21-41, 2010.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/TOPNOC-2010.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+State caching is a memory reduction technique used by model
+checkers to alleviate the state explosion problem. It has traditionally
+been coupled with a depth-first search to ensure termination.  We propose
+and experimentally evaluate an extension of the state caching method
+for general state exploring algorithms that are independent of the search
+order (i.e., search algorithms that partition the state space into closed
+(visited) states, open (to visit) states and unmet states).
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EWK09">6</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Michael Westergaard, and Lars&nbsp;M. Kristensen.
+ The ComBack Method Revisited: Caching Strategies and Extension with
+  Delayed Duplicate Detection.
+ <em>Transactions on Petri Nets and Other Models of Concurrency III</em>,
+  5800:189-215, 2009.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/TOPNOC-2009.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The ComBack method is a memory reduction technique for explicit
+state space search algorithms.  It enhances hash compaction with
+state reconstruction to resolve hash conflicts on-the-fly thereby
+ensuring full coverage of the state space.  In this paper we provide
+two means to lower the run-time penalty induced by state
+reconstructions: a set of strategies to implement the caching method
+proposed in [20], and an extension through delayed
+duplicate detection that allows to group reconstructions together to
+save redundant work.
+</font></blockquote>
+<p>
+</td>
+</tr>
+</table><h2>Conference papers</h2>
+
+<table>
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="CEP18">1</a>]
+</td>
+<td class="bibtexitem">
+Camille Coti, Sami Evangelista, and Laure Petrucci.
+ One-Sided Communications for More Efficient Parallel State Space
+  Exploration over RDMA Clusters.
+ In <em>Euro-Par 2018</em>, volume 11014 of <em>LNCS</em>, pages 432-446.
+  Springer, 2018.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/EUROPAR-2018.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+This paper investigates the use of one-sided communications in the
+context of state space exploration.  This operation is often the
+core component of model checking tools that explores a system state
+space to look for behaviours deviating from its specification.  It
+basically consists in the exploration of a (usually huge) directed
+graph whose nodes and edges represent respectively system states and
+system changes.  We revisit the state of the art distributed
+algorithm and adapt it to RDMA clusters with an implementation over
+the OpenSHMEM library and report on preliminary experiments
+conducted on the Grid'5000 cluster. This asynchronous approach thus
+reduces the significant communication costs induced by process
+synchronisation in two-sided communications.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="CEP18-2">2</a>]
+</td>
+<td class="bibtexitem">
+Camille Coti, Sami Evangelista, and Laure Petrucci.
+ State Compression Based on One-Sided Communications for Distributed
+  Model Checking.
+ In <em>ICECCS 2018</em>. IEEE, 2018.
+ To appear.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICECCS-2018.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+We propose a distributed implementation of the collapse compression
+technique used by explicit state model checkers to reduce memory
+usage.  This adapatation makes use of lock-free distributed hash
+tables based on one-sided communication primitives provided by
+libraries such as OpenSHMEM.  We implemented this technique in the
+distributed version of the model checker Helena.  We report
+on experiments performed on the Grid'5000 cluster with an
+implementation over OpenMPI.  These reveal that, for some models,
+this distributed implementation can altogether preserve 
+the memory reduction provided by collapse
+compression and reduce execution times by allowing the exchanges of
+compressed states between processes.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EKP13">3</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Lars&nbsp;Michael Kristensen, and Laure Petrucci.
+ Multi-threaded Explicit State Space Exploration with State
+  Reconstruction.
+ In <em>Automated Technology for Verification and Analysis</em>, volume
+  8172 of <em>LNCS</em>, pages 208-223. Springer, 2013.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ATVA-2013.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+This article introduces a parallel state space exploration algorithm
+for shared memory multi-core architectures using state compression
+and state reconstruction to reduce memory consumption. The algorithm
+proceeds in rounds each consisting of three phases: concurrent
+expansion of open states, concurrent reduction of potentially new
+states, and concurrent duplicate detection. An important feature
+of the algorithm is that it requires little inter-thread
+synchronisation making it highly scalable. This is confirmed by an
+experimental evaluation that demonstrates good speed up at a low
+overhead in workload and with little waiting time caused by
+synchronisation.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK12">4</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ Hybrid On-the-Fly Model Checking with the Sweep-line Method.
+ In <em>ATPN'2012</em>, volume 7347 of <em>LNCS</em>, pages 248-267.
+  Springer, 2012.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICATPN-2012.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The sweep-line method allows explicit state model checkers to delete
+states from memory on-the-fly during state space
+exploration thereby lowering the memory demands of
+the verification procedure.  The sweep-line method
+is based on a least progress-first search order that
+prohibits the immediate use of standard on-the-fly
+LTL model checking algorithms that rely on a
+depth-first search order. This paper proposes and
+experimentally evaluates an algorithm for LTL model
+checking compatible with the search order prescribed
+by the sweep-line method.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK12-2">5</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ Combining the Sweep-Line Method with the use of an External-memory
+  Priority Queue.
+ In <em>SPIN'2012</em>, volume 7385 of <em>LNCS</em>, pages 43-61.
+  Springer, 2012.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/SPIN-2012.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The sweep-line method is an explicit-state model checking technique
+that uses a notion of progress to delete states from
+internal memory during state space exploration and
+thereby reduce peak memory usage.  The sweep-line
+algorithm relies on the use of a priority queue
+where the progress value assigned to a state
+determines the priority of the state. In earlier
+implementations of the sweep-line method the
+progress priority queue is kept in internal memory
+together with the current layer of states being
+explored. In this paper we investigate a scheme
+where the current layer is stored in internal memory
+while the priority queue is stored in external
+memory. From the perspective of the sweep-line
+method, we show that this combination can yield a
+significant reduction in peak memory usage compared
+to a pure internal memory implementation.  On an
+average of 60 example instances, this combination
+reduced peak memory usage by a factor of 25 at the
+cost of an increase in execution time by a factor of
+2.5.  From the perspective of external memory state
+space exploration, we demonstrate experimentally
+that the state deletion performed by the sweep-line
+method may reduce the I/O overhead induced by
+duplicate detection compared to a pure external
+memory state space exploration method.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ELPP12">6</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Alfons Laarman, Laure Petrucci, and Jaco Van&nbsp;De Pol.
+ Improved Multi-Core Nested Depth-First Search.
+ In <em>Automated Technology for Verification and Analysis</em>, volume
+  7561 of <em>LNCS</em>, pages 269-283. Springer, 2012.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ATVA-2012.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+This paper presents CNDFS, a tight integration of two earlier
+multi-core nested depth-first search (NDFS) algorithms for LTL model
+checking. CNDFS combines the different strengths and avoids some
+weaknesses of its predecessors. We compare CNDFS to an earlier
+ad-hoc combination of those two algorithms and show several benefits:
+It has shorter and simpler code and a simpler correctness proof.
+It exhibits more stable performance and scalability, while at
+the same time reducing memory requirements.<p>
+The algorithm has been implemented in the multi-core backend of the
+LTSmin model checker, which is now benchmarked for the first time on
+a 48&nbsp;core machine (previously 16). The experiments demonstrate better
+scalability than other parallel LTL model checking algorithms, but we also
+investigate apparent bottlenecks. Finally, we noticed that
+the multi-core NDFS algorithms produce shorter counterexamples,
+surprisingly often shorter than their BFS-based counterparts.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EPY11">7</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Laure Petrucci, and Samir Youcef.
+ Parallel Nested Depth-First Searches for LTL Model Checking.
+ In <em>Automated Technology for Verification and Analysis</em>, volume
+  6996 of <em>LNCS</em>, pages 381-396. Springer, 2011.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ATVA-2011.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+Even though the well-known nested-depth first search algorithm for
+LTL model checking provides good performance, it cannot benefit from the re-
+cent advent of multi-core computers. This paper proposes a new version of this
+algorithm, adapted to multi-core architectures with a shared memory. It can ex-
+hibit good speed-ups as supported by a series of experiments.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ACE11">8</a>]
+</td>
+<td class="bibtexitem">
+Leila Abidi, Christophe C&eacute;rin, and Sami Evangelista.
+ A Petri-Net Model for the Publish-Subscribe Paradigm and Its
+  Application for the Verification of the BonjourGrid Middleware.
+ In <em>SCC'2011</em>, pages 496-503. IEEE, 2011.
+<blockquote><font size="-1">
+In this article we focus on the modelization of
+the BonjourGrid protocol which is based on the Publish-
+Subscribe (Pub-Sub) paradigm, a paradigm for asynchronous
+communication that is useful for implementing some approaches
+in distributed programming. The aim of this paper
+is to isolate the generic mechanisms of construction for the
+publish-subscribe approach then to model and verify, based on
+those mechanisms, the BonjourGrid protocol that allows the
+coordination of multiple instances of desktop grid middleware.
+We produce models using colored Petri nets in order to describe
+a specific modeling approach for the Pub-Sub paradigm. Such
+models are important, first, to formally verify the adequacy
+of BonjourGrid in the coordination of resources in desktop
+grids - for example by proving the absence of a deadlock in
+the BonjourGrid protocol, and second, to offer a 'composition'
+mechanism for integrating any protocol based on the Pub-Sub
+paradigm. These ideas are illustrated along the BonjourGrid
+case study and they constitute a methodology of building Pub-
+Sub systems.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="CDEHKP10">9</a>]
+</td>
+<td class="bibtexitem">
+Christine Choppy, Anna Dedova, Sami Evangelista, Silien Hong, Kais Klai, and
+  Laure Petrucci.
+ The NEO Protocol for Large-Scale Distributed Database Systems:
+  Modelling and Initial Verification.
+ In <em>ATPN'2010</em>, volume 6128 of <em>LNCS</em>, pages 145-164.
+  Springer, 2010.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICATPN-2010.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+This paper presents the modelling process and first analysis results
+carried out within the NEOPPOD project. A protocol, NEO, has been
+designed in order to manage very large distributed databases such as
+those used for banking and e-government applications, and thus to
+handle sensitive data. Security of data is therefore a critical
+issue that must be ensured before the software can be released on
+the market.<p>
+Our project aims at verifying essential properties of the protocol
+so as to guarantee such properties are satisfied. The model was
+designed by reverse-engineering from the source code, and then
+initial verification was performed. This modelling work requires
+choices of adequate abstraction levels both at the modelling and
+verification stages. In particular, the overall system is so large
+that the model should be carefully built in order to make
+verification possible without getting too far from the actual
+protocol implementation.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EK09-3">10</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Lars&nbsp;M. Kristensen.
+ Dynamic State Space Partitioning for External Memory Model
+  Checking.
+ In <em>FMICS'2009</em>, volume 5825 of <em>LNCS</em>, pages 70-85.
+  Springer, 2009.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/FMICS-2009.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+We describe a dynamic partitioning scheme usable by model
+checking techniques that divide the state space into partitions, such as
+most external memory and distributed model checking algorithms. The
+goal of the scheme is to reduce the number of transitions that link states
+belonging to different partitions, and thereby limit the amount of disk
+access and network communication. We report on several experiments
+made with our verification platform ASAP that implements the dynamic
+partitioning scheme proposed in this paper.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="WEK09">11</a>]
+</td>
+<td class="bibtexitem">
+Michael Westergaard, Sami Evangelista, and Lars&nbsp;M. Kristensen.
+ ASAP: An Extensible Platform for State Space Analysis.
+ In <em>ATPN'2009</em>, volume 5606 of <em>LNCS</em>, pages 303-312.
+  Springer, 2009.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICATPN-2009.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The ASCoVeCo State space Analysis Platform (ASAP) is
+a tool for performing explicit state space analysis of coloured Petri nets
+(CPNs) and other formalisms. ASAP supports a wide range of state space
+reduction techniques and is intended to be easy to extend and to use,
+making it a suitable tool for students, researchers, and industrial users
+that would like to analyze protocols and/or experiment with different
+algorithms. This paper presents ASAP from these two perspectives.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="E08">12</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista.
+ Dynamic Delayed Duplicate Detection for External Memory Model
+  Checking.
+ In <em>SPIN'2008</em>, volume 5156 of <em>LNCS</em>, pages 77-94.
+  Springer, 2008.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/SPIN-2008.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+
+Duplicate detection is an expensive operation of disk-based
+model checkers. It consists of comparing some potentially new states, the
+candidate states, to previous visited states. We propose a new approach
+to this technique called dynamic delayed duplicate detection. This one
+exploits some typical properties of states spaces, and adapts itself to
+the structure of the state space to dynamically decide when duplicate
+detection must be conducted. We implemented this method in a new
+algorithm and found out that it greatly cuts down the cost of duplicate
+detection. On some classes of models, it performs significantly better
+than some previously published algorithms
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EPPP07">13</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Christophe Pajault, and Jean-Fran&ccedil;ois Pradat-Peyre.
+ A Simple Positive Flows Computation Algorithm for a Large Subclass
+  of Colored Nets.
+ In <em>FORTE'2007</em>, volume 4574 of <em>LNCS</em>, pages 177-195.
+  Springer, 2007.
+<blockquote><font size="-1">
+Positive flows provide very useful informations that can be
+used to perform efficient analysis of a model. Although algorithms computing
+(a generative family of) positive flows in ordinary Petri nets are
+well known, computing a generative family of positive flows in colored
+net remains an open problem. We propose in this paper a pragmatic approach
+that allows us to define an algorithm that computes a generative
+family of particular but useful positive flows in a large subclass of colored
+nets: the simple well-formed nets.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EP07">14</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Christophe Pajault.
+ Some Solutions to the Ignoring Problem.
+ In <em>SPIN'2007</em>, volume 4595 of <em>LNCS</em>, pages 76-94.
+  Springer, 2007.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/SPIN-2007.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+
+The ignoring problem refers to the fact that some actions may be infinitely
+postponed by a state space search algorithm that makes use of partial order
+reduction (POR). The prevention of this phenomenon is mandatory if one wants to
+verify more elaborate properties than the deadlock freeness, e.g., safety or
+liveness properties. We present in this work some solutions to this problem. In
+order to assess the quality of our propositions, we included them in our model
+checker Helena. We report the result of some experiments which show that our
+algorithms yield better reductions than state of the art algorithms like those
+implemented in the Spin tool.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EPP06">15</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Jean-Francois Pradat-Peyre.
+ On the Computation of Stubborn Sets of Colored Petri Nets.
+ In <em>ATPN'2006</em>, volume 4024 of <em>LNCS</em>, pages 146-165.
+  Springer, 2006.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICATPN-2006.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+Valmari's Stubborn Sets method is a member of the so-called
+partial order methods. These techniques are usually based on a selective
+search algorithm: at each state processed during the search, a stubborn
+set is calculated and only the enabled transitions of this set are used to
+generate the successors of the state. The computation of stubborn sets
+requires to detect dependencies between transitions in terms of conflict
+and causality. In colored Petri nets these dependencies are difficult to
+detect because of the color mappings present on the arcs: conflicts and
+causality connections depend on the structure of the net but also on
+these mappings. Thus, tools that implement this technique usually unfold
+the net before exploring the state space, an operation that is often
+untractable in practice. We present in this work an alternative method
+which avoids the cost of unfolding the net. To allow this, we use a
+syntactically restricted class of colored nets. Note that this class still
+enables wide modeling facilities since it is the one used in our model checker
+Helena which has been designed to support the verification of software
+specifications. The algorithm presented has been implemented and several
+experiments which show the benefits of our approach are reported.
+For several models we obtain a reduction close or even equal to the one
+obtained after an unfolding of the net. We were also able to efficiently
+reduce the state spaces of several models obtained by an automatic translation
+of concurrent software.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="E05">16</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista.
+ High Level Petri Nets Analysis with Helena.
+ In <em>ATPN'2005</em>, volume 3536 of <em>LNCS</em>, pages 455-464.
+  Springer, 2005.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ICATPN-2005.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+This paper presents the high level Petri nets analyzer Helena.
+Helena can be used for the on-the-fly verification of state properties, i.e.,
+properties that must hold in all the reachable states of the system, and
+deadlock freeness. Some features of Helena make it particularly efficient
+in terms of memory management. Structural abstractions techniques,
+mainly transitions agglomerations, are used to tackle the state explosion
+problem. Benchmarks are presented which compare our tool to Maria.
+Helena is developed in portable Ada and is freely available under the
+conditions of the GNU General Public License.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EKPPPR05">17</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Claude Kaiser, Christophe Pajault, Jean-Fran&ccedil;ois
+  Pradat-Peyre, and Pierre Rousseau.
+ Dynamic Tasks Verification with Quasar.
+ In <em>AEU'2005</em>, volume 3555 of <em>LNCS</em>, pages 91-104.
+  Springer, 2005.
+<blockquote><font size="-1">
+The inclusion of dynamic tasks modelisation in QUASAR, a tool for
+automatic analysis of concurrent programs, extends its applicative usefulness.
+However this extension leads to large size models whose processing has to face
+combinatory explosion of modeling states. This paper presents briefly Ada
+dynamic tasks semantic and dependences and then it explains the choice of an
+efficient generic modeling pattern. This implies to consider the naming, the
+hierarchy, the master retrieval, the termination of dynamic tasks and their
+synchronization dependences successively. The adequacy of both this modeling
+and the QUASAR techniques is highlighted by the analysis of two non-trivial Ada
+programs. The large reduction factor between the initial and final state
+numbers of these program models shows that the state explosion can be limited,
+making automatic validation of dynamic concurrent programs feasible.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EHPP05">18</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Serge Haddad, and Jean-Fran&ccedil;ois Pradat-Peyre.
+ Syntactical Colored Petri Nets Reductions.
+ In <em>Automated Technology for Verification and Analysis</em>, volume
+  3707 of <em>LNCS</em>, pages 202-216. Springer, 2005.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/ATVA-2005.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+In this paper, we develop a syntactical version of elaborated reductions
+for high-level Petri nets. These reductions simplify the model by merging
+some sequential transitions into an atomic one. Their conditions combine local
+structural ones (e.g. related to the actions of a thread) and global algebraic
+ones (e.g. related to the threads synchronization). We show that these
+conditions are performed in a syntactical way, when a syntax of the color
+mappings is given. We show also how our method outperforms previous ones on a
+recent case study with regard both to the reduction ratio and the
+automatization of their application.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EPP05">19</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista and Jean-Fran&ccedil;ois Pradat-Peyre.
+ Memory Efficient State Space Storage in Explicit Software Model
+  Checking.
+ In <em>SPIN'2005</em>, volume 3639 of <em>LNCS</em>, pages 43-57.
+  Springer, 2005.
+[&nbsp;<a href="http://www-lipn.univ-paris13.fr/~evangelista/publis/fichiers/SPIN-2005.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The limited amount of memory is the major bottleneck in
+model checking tools based on an explicit states enumeration. In this
+context, techniques allowing an efficient representation of the states are
+precious. We present in this paper a novel approach which enables to
+store the state space in a compact way. Though it belongs to the family
+of explicit storage methods, we qualify it as semi-explicit since all states
+are not explicitly represented in the state space. Our experiments report
+a memory reduction ratio up to 95time in the worst case.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EHPP04">20</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Serge Haddad, and Jean-Fran&ccedil;ois Pradat-Peyre.
+ New Coloured Reductions for Software Validation.
+ In <em>WODES'2004</em>, pages 355-360, 2004.
+<blockquote><font size="-1">
+Structural model abstraction is a powerful technique for reducing the
+complexity of a state based enumeration analysis.We present in this paper
+accurate reductions for high-level Petri nets based on new ordinary Petri nets
+reductions. These reductions involve only structural and algebraical
+conditions. They preserve the liveness of the net and any LTL formula that does
+not observe the reduced transitions of the net. The mixed use of structural and
+algebraical conditions signicantly enlarges their application area. Furthermore
+the specication of the transformation is parametric with respect to the
+cardinalities of coloured domains.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EKPPR03">21</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Claude Kaiser, Jean-Fran&ccedil;ois Pradat-Peyre, and Pierre
+  Rousseau.
+ Quasar: a New Tool for Analysing Concurrent Programs.
+ In <em>AEU'2003</em>, volume 2655 of <em>LNCS</em>, pages 168-181.
+  Springer, 2003.
+<blockquote><font size="-1">
+Concurrency introduces a high degree of combinatory which
+may be the source of subtle mistakes. We present a new tool, Quasar,
+which is based on ASIS and which uses fully the concept of patterns. The
+analysis of a concurrent Ada program by our tool proceeds in four steps:
+automatic extraction of the concurrent part of the program; translation
+of the simplified program into a formal model using predefined patterns
+that are combined by substitution and merging constructors; analysis of
+the model both by structural techniques and model-checking techniques;
+reporting deadlock or starvation results. We demonstrate the usefulness
+of Quasar by analyzing several variations of a non trivial concurrent
+program.
+</font></blockquote>
+<p>
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="EKPPR03-2">22</a>]
+</td>
+<td class="bibtexitem">
+Sami Evangelista, Claude Kaiser, Jean-Fran&ccedil;ois Pradat-Peyre, and Pierre
+  Rousseau.
+ Verifying linear time temporal logic properties of concurrent Ada
+  programs with quasar.
+ In <em>SIGADA'2003</em>, pages 17-24. ACM, 2003.
+<blockquote><font size="-1">
+In this paper we present an original and useful way for specifying
+and verifying temporal properties of concurrent programs with our tool
+named Quasar. Quasar is based on ASIS and uses formal methods (model
+checking). Properties that can be checked are either general, like
+deadlock or fairness, or more context specific, referring to tasks
+states or to value of variables; properties are then expressed in
+temporal logic. In order to simplify the expression of these
+properties, we define some templates that can be instantiated with
+specific items of the programs. We demonstrate the usefulness of these
+templates by verifying subtle variations of the Peterson
+algorithm. Thus, although Quasar uses up-to-date formal methods it
+remains accessible to a large class of practitioners.
+</font></blockquote>
+<p>
+</td>
+</tr>
+</table><hr><p><em>This file was generated by
+<a href="http://www.lri.fr/~filliatr/bibtex2html/">bibtex2html</a> 1.98.</em></p>
+</body>
+</html>

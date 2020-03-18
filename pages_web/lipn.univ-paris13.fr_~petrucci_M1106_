@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Cours M1106 (développement Web) − IUT de Villetaneuse</title>
+		
+
+		<meta name="author" content="Laure Petrucci" />
+		<meta name="description" content="Cours « Initiation au dévelopement Web » (M1106) du DUT réseaux et télécommunications de l’IUT de Villetaneuse, Université Paris 13, Sorbonne Paris Cité" />
+		<meta name="keywords" content="développement Web, programmation Web, HTML, CSS, feuille de style, responsive Web design, RWD, IUT, DUT R&amp;T, cours, TP, TD, Creative Commons, licence libre" />
+		<meta name="robots" content="index,follow" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+
+	<body>
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+                <div id="main">
+                    <div class="inner">
+
+	<header>
+
+		<h2>DUT réseaux et télécommunications</h2>
+
+		<h1>Cours M1106 (Initiation au développement Web)</h1>
+
+<p><em>Cette page est relative à l’enseignement M1106 dans le DUT Réseaux&amp;Télécommunications de l’IUT de Villetaneuse (Université Paris 13, Sorbonne Paris Cité). Cet enseignement a été réalisé initialement par Étienne André.</em></p>
+	</header>
+
+
+	<article>
+		<h2>Ressources du cours</h2>
+
+		<p>Diapositives à trous</p>
+
+		<ul>
+			<li><a href="M1106-0-intro.pdf">Partie 0&nbsp;: introduction</a></li>
+			<li><a href="M1106-1-client-serveur.pdf">Partie 1&nbsp;: le modèle client serveur</a></li>
+			<li><a href="M1106-2-HTML.pdf">Partie 2&nbsp;: HTML</a></li>
+			<li><a href="M1106-3-CSS.pdf">Partie 3&nbsp;: CSS</a></li>
+		</ul>
+
+		<p>Un exemple complet de page HTML avec feuille de style CSS</p>
+
+		<ul>
+			<li><a href="exemple/exempleComplet.html">exempleComplet.html</a> (version <a href="exempleComplet-HTML.pdf">PDF</a>)</li>
+			<li><a href="exemple/exempleComplet.css">exempleComplet.css</a> (version <a href="exempleComplet-CSS.pdf">PDF</a>)</li>
+		</ul>
+	</article>
+
+
+
+	<article>
+		<h2>Ressources des travaux pratiques</h2>
+
+		<p>Sujet des travaux pratiques&nbsp;:</p>
+
+		<h3>TP n°1&nbsp;: bases du HTML</h3>
+
+		<ul>
+			<li><a href="M1106-TP1.pdf">Sujet du TP n°1</a></li>
+		</ul>
+
+
+		<h3>TP n°2&nbsp;: un CV en HTML et CSS</h3>
+		<ul>
+			<li><a href="M1106-TP2.pdf">Sujet du TP n°2</a></li>
+		</ul>
+
+		<h4>Exercice 1</h4>
+
+		<ul>
+			<li><a href="photo.png">photo.png</a></li>
+		</ul>
+
+		<h4>Exercice 2</h4>
+		<ul>
+			<li><a href="CV1-debut.png">CV1-debut.png</a></li>
+		</ul>
+		
+		<h4>Exercice 3</h4>
+
+		<ul>
+			<li><a href="CV-HTML-complet.pdf">CV-HTML-complet.pdf</a></li>
+			<li><a href="CV1-suite.png">CV1-suite.png</a></li>
+			<li><a href="CV1-fin.png">CV1-fin.png</a></li>
+			<li><a href="Bullet-blue.png">Bullet-blue.png</a></li>
+			<li><a href="Bullet_go.png">Bullet_go.png</a></li>
+		</ul>
+
+		<h4>Exercice 4</h4>
+		<ul>
+			<li><a href="CV2.png">CV2.png</a></li>
+		</ul>
+
+
+		<h3>TP n°3&nbsp;: formulaires et CSS</h3>
+
+		<ul>
+			<li><a href="M1106-TP3.pdf">Sujet du TP n°3</a></li>
+			<!-- <li><a href="TP3-formulaire-CSS.png">Apparence exercice 2</a></li> -->
+		</ul>
+
+		
+		<h3>TP n°4&nbsp;: sites Web adaptatifs</h3>
+
+		<ul>
+			<li><a href="M1106-TP4.pdf">Sujet du TP n°4</a></li>
+		</ul>
+		
+		<p>Fichiers à télécharger</p>
+		<ul>
+			<li><a href="M1106-TP4.html">M1106-TP4.html</a></li>
+			<li><a href="horizontal.html">horizontal.html</a></li>
+			<li><a href="horizontal.css">horizontal.css</a></li>
+			<li><a href="vertical.html">vertical.html</a></li>
+			<li><a href="vertical.css">vertical.css</a></li>
+		</ul>
+	</article>
+
+
+
+		<footer id="bas">
+			<p>Ressources réutilisables selon les conditions de leur licence respective, en général <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/">Creative Commons CC BY-NC-SA 3.0</a>&nbsp;; auteur&nbsp;: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a>.</p>
+
+			<p>Source LaTeX disponible pour les enseignants sur demande.</p>
+
+			<p>Cette page est (évidemment&nbsp;!!) conforme aux standards
+			<a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+				et
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>.</p>
+		</footer>
+
+                </div>
+            </div>
+
+        <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <header class="major">
+                                <div class="image avatar"><a href="../index.html#header"><img src="../images/LP.jpg" alt="photo" align="right"></a></div>
+                                <h2>Menu</h2>
+                            </header>
+                            <ul>
+                                <li><a href="../presentation.html">Présentation</a></li>
+                                <li><a href="../index.html#actus">Actualités</a></li>
+                                <li><a href="../publications.html">Publications</a></li>
+                                <li><a href="../index.html#enseignement">Enseignement</a></li>
+                                <li><a href="../index.html#videos">Vidéos</a></li>
+                            </ul>
+                        </nav>
+
+                    <!-- Section -->
+                        <section>
+                            <header class="major">
+                                <h2>Contact</h2>
+                            </header>
+                            <ul class="contact">
+                                <li class="fa-envelope-o">laure.petrucci AT lipn.univ-paris13.fr</li>
+                                <li class="fa-phone">+33 (0)1 49 40 28 05</li>
+                                <li class="fa-vcard">Bureau A202, Institut Galilée<br/>
+                                LIPN, CNRS UMR 7030<br/>
+                                Université Paris 13<br/>
+                                99 avenue Jean-Baptiste Clément<br/>
+                                93430 VILLETANEUSE</li>
+                            </ul>
+                        </section>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <p class="copyright">&copy; Laure Petrucci. All rights reserved.<br>
+                                Design: <a href="https://html5up.net">HTML5 UP</a> (CCA 3.0).</p>
+                        </footer>
+
+                </div>
+            </div>
+
+    </div>
+
+<!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+	</body>
+
+
+</html>

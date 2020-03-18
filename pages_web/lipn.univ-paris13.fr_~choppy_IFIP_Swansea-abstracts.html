@@ -1,0 +1,483 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the Swansea IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talk at the Swansea IFIP WG1.3 meeting (September 6-8, 2005)</H2>
+</CENTER>
+<BR>------------------------------------------------------
+
+<LI><a name="Gaudel">Marie-Claude Gaudel:</a>
+Undoing in Composite Web Services 
+(<A HREF="SWANSEA-DATA/Gaudel-Swansea0905.pdf">slides</A>)
+
+<BR>Marie-Claude Gaudel, LRI, Paris-Sud University & CNRS, Orsay, France
+<BR>mcg at lri.fr
+<BR><BR>
+Cancelling or reversing the effect of a former action is a necessity
+in most interactive systems. The simplest and most frequent form of
+this facility is the "undo" command that is available in usual,
+individual, text or graphic editors. As soon as collaborative work is
+considered, undoing is more intricate since the notion of a last
+action is not always meaningful. Within this framework, the so-called
+"selective undo", which allows selecting and cancelling any (or rather
+some?) former action, has received lot of attention. There are some
+similarities between cooperative work and composite web services:
+Component web services are concurrently accessed; they may be treated
+as shared documents for undoing former actions. Among the latest
+results on undoing in group editors, the transformational model seems
+suitable for generalization to other kinds of distributed systems. It
+completely avoids backward state recovery and allows the selection and
+cancellation of any former operation. We present some relevant aspects
+of this model, and then some hints on how to transpose it into the
+framework of composite web services.
+<BR><BR>
+Full paper: Marie-Claude Gaudel, Undoing in Composite Web
+Services, ICSE/DSN 2004 Twin Workshops on Architecturing Dependable
+Systems (WADS 2004), Firenze, June 2004, proceedings in: Architecting
+Dependable Systems III, LNCS 3549, pp. 59-68, 2005
+</LI>
+<BR>------------------------------------------------------
+
+<LI><a name="Hennicker">Rolf Hennicker:</a>
+Externalized and Internalized Notions of Behavioral Refinement
+<BR>(joint work with M. Bidoit)
+<BR><BR>
+Many different behavioral refinement notions for algebraic specifications have
+been proposed in the literature but the relationship between the various
+concepts is still unclear. In this paper we provide a classification and a
+comparative study of behavioral refinements according to two directions, the
+externalized approach which uses an explicit behavioral abstraction
+operator that is applied to the specification to be implemented, and the
+internalized approach which uses a built-in behavioral semantics of
+specifications. We show that both concepts are equivalent under suitable
+conditions. The formal basis of our study is provided by the COL institution
+(constructor-based observational logic). Hence, as a side-effect of our study
+on internalized behavioral refinements, we introduce also a novel concept of
+behavioral refinement for COL-specifications.
+<BR>
+<BR>This talk is based on the paper
+<A HREF="http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/ictac05-ID128.pdf">
+Externalized and Internalized Notions of Behavioral Refinement</A>
+by M. Bidoit and R. Hennicker.
+<BR>
+Proc. ICTAC 2005, 2nd Int. Colloq. on Theoretical Aspects of Computing,
+2005, Hanoi, Springer Lecture Notes in Computer Science 3722, 334-350.
+</LI>
+<BR>------------------------------------------------------
+
+<LI><a name="Jacobs">Bart Jacobs:</a> 
+RIES - Internet Voting in Action
+(<A HREF="http://www.cs.ru.nl/B.Jacobs/PAPERS/compsac2005.pdf">paper</A>)
+<BR><BR>
+RIES stands for Rijnland Internet Election System.
+It is an online voting system that was developed by one of the 
+Dutch local authorities on water management. The system has been 
+used twice in the fall of 2004 for in total approximately two 
+million potential voters. We describe how this system 
+works. Furthermore we do not only describe how the outcome of the 
+elections can be verified but also how it has been verified by us.
+To conclude we describe some possible points for improvement.
+</LI>
+<BR>------------------------------------------------------
+
+<LI><a name="Kurz">Alexander Kurz:</a> Operations and Equation for Coalgebras
+<BR>
+(joint work with J. Rosicky, appeared in Mathematical Structures in
+Computer Science 15:149-166, 2005)
+<BR><BR>
+1.) Usually, coalgebras are given wrt a functor. We show that coalgebras
+can also be given by operations and equations. This relies on work of
+Linton from 1969 who showed how to specify algebras over an abribrary
+base category and, for example, proved that a  category is monadic (over
+some base category) if and only if it has a presentation by operations
+and equations and has free algebras (thus generalising a theorem
+well-known for algebras over Set). Since coalgebras over Set are (dual
+to) algebras over Set^op, Lintons approach gives a notion of operations
+and equations for coalgebras. We give some examples.
+<BR>
+<BR>
+2.) Given an arbitrary functor U:A-->Set, we say that two elements a,a'
+of two objects in A are *bisimilar* if they can be connected by
+morphisms in A. We show that coalgebraic operations correspond to
+predicate transformers that respect bisimulation and that coalgebraic
+equations correspond to modal predicates.
+<BR>
+<BR>
+3.) Given a functor U:A-->Set, an (n,m)-ary *implicit* (coalgebraic)
+operation is a natural transformation Set(U-,n)-->Set(U-,m). We show
+that classes of coalgebras closed under subcoalgebras, homomorphic
+images and coproducts are precisely the classes definable by equations
+in implicit operations. This theorem does not require the existence of
+cofree coalgebras and therefore generalises previously known
+Birkhoff-style theorems for coalgebras. It is the analogue for
+coalgebras of Reiterman's famous theorem in universal algebra.
+</LI>
+
+<BR>------------------------------------------------------
+<LI>
+<a name="MartiOliet">Narciso Marti-Oliet:</a> Towards a strategy language for Maude
+<BR>(joint work with Jose Meseguer and Alberto Verdejo)
+<BR><BR>
+We describe a proposal for a strategy language for Maude, to
+control the rewriting process and to be used at the object level instead of
+at the metalevel. We also describe a prototype implementation built over
+Full Maude using the metalevel and the metalanguage facilities provided
+by Maude. We include a series of examples that illustrate the main
+features of the proposed strategy language. This language
+has been put to work in the implementation of operational semantics
+for the ambient calculus and for the parallel functional language Eden.
+<BR>
+<BR>
+Related papers:
+
+<BR>N. Marti-Oliet, J. Meseguer, and A. Verdejo
+<BR><A HREF="http://www.sciencedirect.com/science/journal/15710661">Towards a strategy language for Maude</A>
+<BR>In N. Marti-Oliet (ed.),
+Fifth International Workshop on Rewriting Logic and its Applications,
+WRLA 2004, Barcelona, Spain, Part of ETAPS 2004,
+ENTCS 117, Elsevier Science, 417-441, 2005.
+<BR>
+<BR>F. Rosa-Velardo, C. Segura, and A. Verdejo.
+<BR>Typed Mobile Ambients in Maude.
+<BR>In H. Cirstea and N. Marti-Oliet (eds.),
+6th International Workshop on Rule-Based Programming,
+RULE 2005, Nara, Japan,
+ENTCS, Elsevier Science, to appear.
+<BR>
+<BR>M. Hidalgo-Herrero, A. Verdejo, and Y. Ortega-Mallen.
+<BR>Looking for Eden through Maude and its strategies.
+<BR>In F. Lopez-Fraguas (ed.),
+Fifth Spanish Conference on Programming and  Computer Languages,
+PROLE 2005, Granada, Spain, Part of CEDI 2005.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Mery">Dominique M&eacute;ry:</a> 
+Refinement and security - Ongoing works
+(<A HREF="SWANSEA-DATA/Mery-Swansea.pdf">slides</A>)
+<BR><BR>
+Software-based systems can be built in  step-by-step approach based on
+the    refinement relation   over   models and    they are correct  by
+construction.  The models are   supposed to satisfy safety  properties
+and other properties related to security can be useful to integrate in
+the  refinement-based   development.  We   present the   first results
+integrating ORBAC models into B  models and we show  how to link  both
+approaches.
+</LI>
+
+<BR>------------------------------------------------------
+<LI>
+<a name="Montanari"> Ugo Montanari:</a> 
+Reactive Systems for Context Borrowing, Symbolic Execution and Web Service 
+Binding
+<BR><BR>
+by Ugo Montanari, Dipartimento di Informatica, Università di Pisa
+<BR><BR>
+Joint work with Roberto Bruni, Gianluigi Ferrari, Fabio Gadducci,
+Pawel Sobocinski and Emilio Tuosto
+<BR><BR>
+
+A systematic method for deriving bisimulation congruence from
+reduction rules has been proposed by Leifer and Milner, on turn
+inspired by Sewell. Also,the approach of observing contexts imposed on
+agents at each step has been proposed earlier by Montanari and
+Sassone, yielding the notion of dynamic bisimilarity. The basic idea
+of Leifer and Milner is to express "minimality"conditions for electing
+the context c among the (possibly infinite) ones that allow p to
+react. These conditions have been distilled by them in the notion of
+relative push-out (RPO) in a categories of reactive systems and made
+more general by Sassone, Sobocinski and Lack. The RPO construction is
+reminiscent of the unification process of logic programming, which in
+fact can be given an interactive semantics in much the same style. In
+the talk we present a short survey of the work by Leifer and Milner
+and Sassone, Sobocinski and Lack, and describe some recent
+developments which allow to see this approach under a larger
+viewpoint. The first contribution [1] observes contexts also for
+symbolic execution, suggesting applications to web service binding;
+the second [2] tackles the weak case by taking advantage of the tile
+model; and the third [3] uses cospan categories on adhesive
+categories, as suggested by Sassone, Sobocinski and Lack, for
+representing process calculi as graph transformation systems.
+
+<BR><BR>
+[1] Ferrari, G., Montanari, U. and Tuosto, E., Model Checking for
+Nominal Calculi, invited talk, in: Vladimiro Sassone, Ed., FOSSACS
+2005, Springer LNCS 3441, 2005, pp. 1-24.  
+
+<BR><BR> 
+[2] Bruni, R., Gadducci, F., Montanari, U. and Sobocinski, P.,
+Deriving Weak Bisimulation Congruences from Reduction Systems, in:
+Martin Abadi and Luca De Alfaro, Eds., CONCUR 2005, Springer LNCS, to
+appear.
+
+<BR><BR>
+[3] Gadducci, F. and Montanari, U., Observing Reductions in Nominal
+Calculi via a Graphical Encoding of Processes, in: Festschrift in
+Honor of Jan Willem Klop, Springer LNCS, to appear.
+
+</LI>
+
+<BR>------------------------------------------------------
+<LI>
+<a name="Mossakowski">Till Mossakowski:</a> 
+Heterogeneous Framework Integration Initiative
+(<A HREF="http://www.tzi.de/~till/papers/ifip-calco.pdf">slides</A>)
+
+<BR><BR>
+The Heterogeneous Framework Integration Initiative has been initiated
+during January 2005 meeting of the IFIP WG 1.3. It aims at foundations
+and tools supporting the use of several modelling techniques during
+the development of systems, including
+logics, semi-formal notations such as the UML, and parallel program design
+languages and calculi, inter alia.  This effort responds to the
+challenge that software and hardware
+companies are facing to use multiple viewpoints when specifying
+complex software intensive systems: various viewpoint
+specifications are often needed to capture various specific aspect of the
+system, with global properties of system behaviour emerging from their
+composition.
+Moreover, heterogenetiy may also arise in the course of software
+development: changes in the formalisms involved may be needed, as
+appropriate for the given stage.
+<BR><BR>
+In spite of a number of proposals for ad-hoc combinations of
+different formalisms, we are not yet at a stage where modelling
+techniques can be integrated in a systematic way.  Moreover, we
+need to provide levels of semantic-based integration that can
+extend to tools and provide environments in which the design of
+software and hardware systems is an activity that meets engineering
+standards of quality and trust.  Finally, we need such environments to
+be endowed with an architecture that facilitates run-time integration
+and interoperability in order to avoid the risk of combinatorial
+explosion incurred when integration is performed at "compile-time".
+<BR><BR>
+HiFi is an open, collaborative initiative that will work on
+<BR><BR>
+- foundations of a meta-framework: what is a formalism?
+  Institutions can be a starting point, but how to integrate
+  process calculi, program design and architectural description
+  languages, transition systems, programming languages?
+<BR>- integration of many existing formalisms
+<BR>- a service-oriented architecture for tool integration in
+  a logical context, based on free software
+<BR>- case studies demonstrating the usefulness of the approach
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Padawitz">Peter Padawitz:</a> 
+Dialgebraic specification and modeling
+(<A HREF="http://ls5-www.cs.uni-dortmund.de/~peter/SwanSlides.pdf">slides</A>)
+<BR><BR>
+Dialgebraic specifications combine algebraic with coalgebraic ones. We
+present a uniform syntax, semantics and proof system for chains of
+signatures and axioms such that presentations of visible data types
+may alternate with those of hidden state types. Each element in the
+chain matches a design pattern that reflects some least/initial or
+greatest/final model construction over the respective predecessor in
+the chain. We sort out twelve such design patterns. Six of them lead
+to least models, the other six to greatest models. Each construction
+of the first group has its dual in the second group. All categories
+used in this approach are classes of structures with many-sorted
+carrier sets. The model constructions could be generalized to other
+categories, but this is not a goal of our approach. On the contrary,
+we aim at applications in software (and, maybe, also hardware) design
+and will show that for describing and solving problems in this area
+one need not go beyond categories of sets. Consequently, a fairly
+simple, though sufficiently powerful, syntax of dialgebraic
+specifications that builds upon classical algebraic notations as much
+as possible is crucial here. It captures the main constructions of
+both universal (co)algebra and relational fixpoint semantics, and
+thereby extends "Lawvere-style" algebraic theories from product to
+arbitrary polynomial types and modal logics from one- to many-sorted
+Kripke frames.
+<BR><BR>
+This work is still in progress. This 
+<A HREF="http://ls5-www.cs.uni-dortmund.de/~peter/Dialg.ps">draft paper</A>
+contains its current state.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Pattinson">Dirk Pattinson:</a> 
+Domain Theoretic Analysis of Separated Hybrid Automata
+(<A HREF="http://www.pst.ifi.lmu.de/~pattinso/Talks/">slides</A>)
+<BR><BR>
+We define a domain theoretic semantics of non-linear
+hybrid automata, and shows that this denotational semantics is effectively
+computable. For a hybrid automaton H, the semantics assigns to
+every point t in time the set $[| H |](t) of states that H can enter into
+at time t, starting from one if its initial states. The semantic function is
+defined as a least fixpoint in the domain of compact-set valued
+functions of one real variable. This allows to use standard
+domain theoretic techniques to obtain effective algorithms to
+compute the semantic function, resulting in a directly implementable
+framework for the reachability analysis of a large class of
+non-linear hybrid automata. As a by-product, we obtain several new
+computability and continuity results for hybrid automata.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Pavlovic">Dusko Pavlovic:</a> 
+On testing and specifying
+(<A HREF="SWANSEA-DATA/Dusko-tests-talk.pdf">slides</A>)
+<BR>
+talk by Dusko Pavlovic (joint work in progress with Bart Jacobs)
+<BR><BR>
+In the various areas of computer science, the notions of testing are
+formulated in different ways, and studied with different goals: e.g.,
+in concurrency theory, tests are used to establish equivalence of
+processes, whereas in software engineering, they are used to show that
+the implementations do not satisfy specifications. We present some
+preliminary results of work towards a general testing framework,
+allowing both qualitative and quantitative comparison of processes, on
+different levels of abstraction. Of particular interest are
+applications in representing distributed probabilistic processes, such
+as cryptosystems, and quantifying the information flows between them.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Ramesh">S. Ramesh:</a>  
+Modelling and verification with synchronous protocol automata
+<BR>
+S. Ramesh, GM R&D Bangalore and IIT Bombay
+<BR><BR>
+Plug-n-Play style Intellectual Property(IP) reuse in System
+on Chip(SoC) design is facilitated by the use of an on-chip bus architecture.
+Component integration and verification in such systems is a cumbersome
+and time consuming process largely concerned with interfacing
+related issues. We present a synchronous, Finite State Machine based
+framework for modelling communication aspects of such architectures.
+This formalism has been developed via interaction with designers and
+the industry and is intuitive and light weight. We have developed cycle
+accurate methods which can be used for protocol specification, compatibility
+verification, interface synthesis and model checking with automated
+specification. The case studies we performed include the AMBA family of
+protocols and a proprietary industrial bus protocol. Our experience has
+shown that our models enable reasoning about and comparison of di
+                                                                 erent
+bus architectures to gain valuable design insights. We demonstrate
+the utility of our framework by modelling the AMBA bus architecture
+including details such as pipelined operation, burst transfers, the AHBAPB
+bridge and arbitration features.
+</LI>              
+<BR>------------------------------------------------------
+<LI>
+<a name="Rutten">Jan Rutten:</a>  
+Algebraic specification and coalgebraic synthesis of
+Mealy automata
+<BR>J.J.M.M. Rutten, CWI and VUA, Amsterdam
+<BR><BR>
+We introduce the notion of functional stream derivative, generalising
+the notion of input derivative of rational expressions (Brzozowski
+1964) to the case of stream functions over arbitrary input and output
+alphabets. We show how to construct Mealy automata from algebraically
+specified stream functions by the symbolic computation of functional
+stream derivatives.  We illustrate this construction in full detail
+for various bitstream functions specified in the algebraic calculus of
+the 2-adic numbers.  This work is part of a larger ongoing effort to
+specify and model component connector circuits in terms of (functions
+and relations on) streams.
+<BR><BR>
+Reference:
+This paper will appear in the Proceedings of FACS'05.
+A <A HREF="http://www.cwi.nl/~janr">preliminary version</A> is available.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Ryan">Mark D. Ryan:</a>  
+Evaluating access control policies through model checking
+<BR><BR>
+This is the 
+<A HREF="ftp://ftp.cs.bham.ac.uk/pub/authors/M.D.Ryan/05-isc.pdf">paper</A> 
+corresponding to my talk.
+<BR>
+Nan Zhang, Mark D. Ryan and Dimitar Guelev, Evaluating Access Control
+Policies Through Model Checking. Eighth Information Security
+Conference (ISC\x{2019}05). Lecture Notes in Computer Science,
+Springer-Verlag, 2005.
+<BR><BR>
+Abstract. We present a model-checking algorithm which can be used to
+evaluate access control policies, and a tool which implements it. The
+evaluation includes not only assessing whether the policies give
+legitimate users enough permissions to reach their goals, but also
+checking whether the policies prevent intruders from reaching their
+malicious goals. Policies of the access control system and goals of
+agents must be described in the access control description and
+specification language introduced as RW in our earlier work. The
+algorithm takes a policy description and a goal as input and performs
+two modes of checking. In the assessing mode, the algorithm searches
+for strategies consisting of reading and writing steps which allow the
+agents to achieve their goals no matter what states the system may be
+driven into during the execution of the strategies. In the intrusion
+detection mode, a weaker notion of strategy is used, reflecting the
+willingness of intruders to guess the value of attributes which they
+cannot read.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Schroeder">Lutz Schr&ouml;der:</a>  
+Finite models for coalgebraic logic 
+(<A HREF="http://www.informatik.uni-bremen.de/~lschrode/talks/cml-slides.pdf">slides</A>)
+<BR><BR>
+In recent years, a tight connection has emerged between modal logic on
+the one hand and coalgebras, understood as generic transition systems,
+on the other hand. Here, we prove that finitary coalgebraic modal logic
+has the finite model property. This fact not only reproves known
+completeness results for coalgebraic modal logic, which we push further
+by establishing that every coalgebraic modal logic admits a complete
+rank-$1$-axiomatization; it also enables us to establish a generic
+decidability result and a first complexity bound. Examples covered by
+these general results include, besides standard Hennessy-Milner logic,
+graded modal logic and probabilistic modal logic.
+</LI>
+<BR>------------------------------------------------------
+<LI>
+<a name="Tucker">John Tucker:</a>  
+Specification and Computation with Continuous Data
+<BR><BR>
+J V Tucker (Swansea)
+<BR><BR>
+This talk reports on my work with J I Zucker (McMaster).
+<BR><BR>
+We consider computability theory for infinite data, such as real
+numbers, signals and wave forms, streams, spatial objects, and
+functions. Usually, such data is collected into topological spaces and
+so we consider models of computation for functions and sets on
+topological spaces.
+<BR><BR>
+The many models fall into two types. First, there are concrete models
+of computation which depend on building a representation of the space
+of data, usually from the natural numbers, and defining computability
+on the space in terms of computability on the representation. This is
+the standard approach of Computable Analysis starting in the 1950s; it
+is used in current work based on Pour El and Richards' computation
+structures, Klaus Weihrauch's TTE, Stoltenberg-Hansen, Tucker and
+Edalat's domain representations, and Spreen's effective topology.
+<BR><BR>
+Secondly, there are abstract models that define computability
+independently of all representations. The spaces are given algebraic
+structure (e.g., that of a Banach space) and programs and machines are
+based on the structure. Thus, computation is abstract in precisely the
+way algebra is abstract: computation is invariant under
+isomorphism. This is the approach of many generalisations of recursion
+theory starting in the 1950s; it is used in some current work by S
+Smale and his collaborators (on rings and fields) and J I Zucker and J
+V Tucker (on many sorted algebras).
+<BR><BR>
+The lecture discussed some current results and problems, especially on
+the equivalence of the concrete and abstract models. Recent results of
+Tucker and Zucker show that equivalence is possible for very general
+topological data types but requires a study of programmable
+approximations of partial multivalued functions on metric algebras.
+<BR><BR>
+We also discussed applications to the theory of algebraic
+specification of exact computation on real numbers and metric data
+types in general. We showed that there exist finite algebraic
+specifications, called universal specifications, that can define all
+the computably approximable functions on a metric algebra. Thus, there
+exist finite sets of algebraic formulae that can define uniquely all
+the computable systems and processes that can be faithfully simulated
+on a computer.
+</LI>

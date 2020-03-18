@@ -1,0 +1,456 @@
+\documentclass[notes=hide, compress]{beamer}
+\usetheme{LITIS}
+\setbeamercolor{title}{fg=blue,bg=black!13!yellow}
+
+\setbeamercovered{dynamic}
+\usefonttheme{structurebold}
+
+% Les packages
+%
+\usepackage{alltt}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage[french, english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xspace}
+\usepackage{graphics}
+\usepackage{times}
+
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\LogoEcole}{
+ %\includegraphics[height=1.5cm]{LogoEcole.jpg} % nom de votre logo 
+ %\includegraphics[height=.5cm]{logo-univ-rouen.png}
+ %\includegraphics[height=0.8cm]{logo-univ-lehavre.png}
+ \includegraphics[height=0.8cm]{lipnlogo.png}
+}
+
+ \newcommand{\LogoEco}{
+  %\includegraphics[height=1.5cm]{LogoEcole.jpg} % nom de votre logo 
+  %\includegraphics[height=.5cm]{logo-univ-rouen.png}
+ % \includegraphics[height=0.8cm]{logo-univ-lehavre.png}
+  \includegraphics[height=0.9cm]{logo-univ-lehavre.png}
+ }
+
+\definecolor{bleu}{rgb}{0.2,0.2,0.8}
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Community Detection and Clustering]{Adaptive Automata Community \\Detection and Clustering\\- A generic methodology -}
+\author[R. Ghnemat, C. Bertelle, G.H.E. Duchamp]{
+  %\small{ 
+		\href{mailto:rawan.ghnemat@litislab.eu}
+		{\textbf {Rawan Ghnemat$^{(1)}$,\\ Cyrille Bertelle$^{(1)}$ \& 
+					G\'erard H.E. Duchamp$^{(2)}$}}\\
+		{\footnotesize
+%		{\textbf {http:$\setminus\setminus$litislab.univ-lehavre.fr$\setminus\backsim$bertelle}}
+		}
+		%}
+		}
+\institute[LITIS \& LIPN]{ \footnotesize (1) LITIS - \textcolor{blue}{\textbf{Le Havre University - France}}\\
+(2) LIPN - \textcolor{blue}{\textbf{Paris XIII University - France}}}
+ \date{{\scriptsize \textcolor{red}{\textbf{ICCIIS'07 - WCE} \\ July 2-4, 2007 ~~~~London, UK }}}
+%\titlegraphic{\includegraphics[height=1.5cm]{logoLITIStitle.png} ~~~~\LogoEcole}
+%\vspace*{0.5cm}
+\titlegraphic{\includegraphics[height=1.2cm]{logoLitis3.jpg} 
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+\includegraphics[height=1.2cm]{lipnlogo.png}
+%\vspace*{-0.5cm}
+%\LogoEco
+}
+%\logo{\includegraphics[height=1.5cm]{logoLITIS.png} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\frame[plain]{
+\titlepage}
+
+
+\part{}
+
+\frame{\frametitle{Outline}
+%\tableofcontents[subsectionstyle=hide]}
+\tableofcontents}
+
+%\section{Introduction}
+
+\section[Context]{Context and Objectives}
+\begin{frame}
+\frametitle{Context and Objectives}
+\begin{block}{}
+\begin{itemize}
+\item Complexity theory cover wide area of Systems in Science, making relevant links between social, biological and physical systems;
+\item In these complex systems, spatial structures emerge from interacting entities crossed by energetic fluxes;
+\item These emergent spatial structure are self-organizations, controled by some global objectives;
+\item The communities computed in the following respect these characteristics. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Complexity Concept Approach}
+\begin{block}{Complexity Analysis is based on conceptual functions:}
+\begin{itemize}
+\item Complexity is based on multi-description
+   \begin{itemize} 
+   \item Multi-scale, Multi-actor and Multi-disciplinary
+   \item Micro/Macro interaction in multi-scale description
+   \end{itemize}
+\item Emergent self-organizations and associated morphologies
+   \begin{itemize}
+   \item Dynamic of the organizations: their evolution and their adaptation
+   \item Hierarchical structure of organization 
+   \item Organization feed-back on the entities (country laws feed-back on the cities management)
+   \end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section[Self-Organization Modeling]{Self-Organization Modeling}
+\frame{\frametitle{Outline}
+\tableofcontents[currentsection, subsectionstyle=hide]}{}
+
+
+\begin{frame}
+\frametitle{Self-Organization Modeling}
+\begin{block}{Emergent Computing Classification}
+\begin{itemize}
+\item Cellular Automata (CA) can model urban land-use or regional dynamics.
+   \begin{itemize}
+   \item From Schelling's model, we can study by CA simulation, the segregation-like phenomena
+   \end{itemize}
+\item Agent-based modelling extends the basic diffusion rules of CA to more sophisticated behavioral processes. \\ 
+\textcolor{red}{We developped in the following our specific agent behavior modeling using automata with multiplicities.}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Agent-Based Modeling}
+\begin{block}{Multi-agent for complex systems}
+\begin{center}
+\includegraphics[scale=0.44]{sysComp-en.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Agent-Based Modeling}
+\begin{block}{Interactives Agents System}
+\begin{center}
+\includegraphics[scale=0.3]{interact-agents.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Agent-Based Modeling}
+\begin{block}{Agents modeling}
+\begin{center}
+\includegraphics[scale=0.25]{agent.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Agent-Based Modeling}
+\begin{block}{Automata-based Agent Behavior}
+\begin{center}
+\includegraphics[scale=0.2]{modele.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Automata-based Agent Behavior Modeling}
+\begin{block}{Automata with multiplicities}
+Agent behavior is modelled by automata with multiplicities which is defined by
+\begin{itemize}
+\item A set of perception represented by an alphabet 
+\item A set of actions represented by a {\bf semi-ring} $K$
+\item A set of states with a subset of initial states and a subset of final states
+\item A set of transitions between states which is generate by a perception in input and which generate an action in output 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Automata-based Agent Behavior Modeling}
+\begin{block}{Automata with multiplicities}
+Because the set of actions $K$ is a {\bf semi-ring}, 
+\begin{itemize}
+\item we can represented the automata using a linear representation (vectors and matrices), 
+\item we can defined many kinds of operators on these automata and so improve automatic processes on agent management
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+%\begin{block}{}
+\begin{itemize}
+\item <1-> Strategy modeling using {\it probabilistic} automata for game theory
+\item <2-> Automata based model for player behavior with adversory
+   \begin{itemize}
+   \item <3-> 2 behavioral states: Cooperate (s1: C) or Defect (s2:D)
+   \item <4-> Probabilistic transition from one state to another according to what make the adversory at the previous step
+   \end{itemize}
+\end{itemize}
+\begin{overprint}
+\onslide<3|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{proba-s1.png}
+~~~~~
+\includegraphics[scale=0.23]{linear1.png}
+\end{center}
+\onslide<4|trans:2|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{proba-s2.png}
+~~~~~
+\includegraphics[scale=0.23]{linear2.png}
+\end{center}
+\onslide<5|trans:2|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{proba-s3.png}
+~~~~~
+\includegraphics[scale=0.23]{linear3.png}
+\end{center}
+\onslide<6|trans:2|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{proba-s4.png}
+~~~~~
+\includegraphics[scale=0.23]{linear4.png}
+\end{center}
+\onslide<7|trans:2|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{proba.png}
+~~~~~
+\includegraphics[scale=0.23]{linear.png}
+\end{center}
+\end{overprint}
+\end{frame}
+
+\section[Community Detect.]{Spatial and Behavioral Modeling Based on Community Detection}
+\frame{\frametitle{Outline}
+\tableofcontents[currentsection, subsectionstyle=hide]}{}
+
+\begin{frame}
+\frametitle{Spatial and Behavioral Modeling\\~~~~~~~~Based on Community Detection}
+\begin{block}{Spatial agent and associated distances}
+\begin{itemize}
+\item A spatial agent is defined by 
+   \begin{itemize}
+   \item Spatial coordinates
+   \item A behavior modeled by an automaton with multiplicities
+   \end{itemize}
+\item A {\bf spatial distance} between 2 agents, can be computed according to their spatial coordinates 
+\item A {\bf behavioral distance} between 2 agents can be compute by the distance between the vectors which stores all the coefficients of the linear representation of the agent behavior automata. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spatial and Behavioral Modeling\\~~~~~~~~Based on Community Detection}
+\begin{block}{Community Definition}
+\begin{itemize}
+\item A {\bf community} is a system or an organization which is
+characterized by a \textbf{\textit{spatial}} property, a \textbf{\textit{behavior}} property
+and the interaction between the both.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spatial and Behavioral Modeling\\~~~~~~~~Based on Community Detection}
+\begin{block}{Genetic operators on automata}
+\begin{itemize}
+\item Using the matrix representation of the automata with multiplicities, we can defined the classical genetic operators: duplication, crossing-over and mutation, using a chromosome composed of each lines of the matrices of the linear representation.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example ... following}
+\begin{block}{Genetic on strategy modeling for player behavior}
+\begin{itemize}
+\item <1-> Genetic operators deal with {\bf population} of {\bf individuals} (here player behavior modeled by automata).
+\item <2-> {\bf Individual} is described by a {\bf chromosome} which is a sequence of {\bf alleles} (elementary information).
+\item <3-> Here, the chromosomes are coding the transition matrices of the automata linear representation.
+\item <4-> Here, an allele is a matrix line ...
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example ... following}
+\begin{block}{Genetic on strategy modeling for player behavior}
+\begin{itemize}
+\item ... and the chromosome is the set of the matrix lines of all the transition matrices
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.25]{automataChromosome.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example ... following}
+\begin{block}{Genetic operators}
+\begin{overprint}
+\onslide<1|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.25]{duplication.png}
+\end{center}
+\onslide<2|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.25]{crossing-over.png}
+\end{center}
+\onslide<3|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.25]{mutation.png}
+\end{center}
+\end{overprint}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spatial and Behavioral Modeling\\~~~~~~~~Based on Community Detection}
+\begin{block}{Community Detection associated to fitness function}
+\begin{itemize}
+ \item We can defined the fitness of each agent as following:
+    \begin{itemize}
+    \item We compute his neighbourhood, using the \textbf{\textit{spatial distance}}
+    \item We sum the \textbf{\textit{behavioral distance}} of the agent itself with all the others agents included in the neighbourhood
+    \item We define the fitness as the inverse of the average of the previous sum.
+    \end{itemize}
+ \item \textcolor{red}{Self-organization communities emerge from the use of this fitness inside a genetic algorithm.}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spatial and Behavioral Modeling\\~~~~~~~~Based on Community Detection}
+\begin{block}{Community Detection associated to fitness function}
+Let ${\cal{V}}_x$ a
+neighbourhood of the agent $x$, relatively to its spatial location.  
+We define $f(x)$ the agent fitness of the agent $x$ as~:
+$$
+f(x) = 
+\left\lbrace
+\begin{array}{ll}
+\frac{ {\displaystyle card({\cal{V}}_x) } }
+     { {\displaystyle \sum\limits_{y_i \in {\cal{V}}_{x}} d(x, y_i)^2} } 
+     \ \ \ \ &\mbox{if} \sum\limits_{y_i \in {\cal{V}}_{x}} d(x,
+y_i)^2 \neq 0 \\
+\infty &\mbox{otherwise}
+\end{array}
+\right.
+$$
+where $d(x,y)$ is the behavioral semi-distance between the two agents $x$ and $y$.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example ... following}
+\begin{overprint}
+\onslide<1|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{community1.png}
+\end{center}
+\onslide<2|trans:1|handout:1>
+\begin{center}
+\includegraphics[scale=0.2]{community2.png}
+\end{center}
+\end{overprint}
+\end{frame}
+
+\section[GIS \& ABM]{Application: Geographical Information Systems and Agent-Based Modeling mixing}
+\frame{\frametitle{Outline}
+\tableofcontents[currentsection, subsectionstyle=hide]}{}
+
+
+\begin{frame}
+\frametitle{Application :GIS and 
+\\~~~~~~~~
+Agent-Based Modeling Mixing}
+\begin{block}{Geographical Information Systems - GIS}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+Nowadays, the geographical information is a very wide knowledge database
+\begin{itemize}
+\item GIS allow to store, manage and compute all this information
+\item Wide-world communication improve the interaction networks dealing with Geo-Politic 
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\begin{center}
+\includegraphics[scale=0.17]{telecom.jpg}\\
+\includegraphics[scale=0.12]{sig3D.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Application :GIS and 
+\\~~~~~~~~
+Agent-Based Modeling Mixing}
+\begin{block}{Geographical Information Systems - GIS}
+$\rightarrow$ The future improvement of GIS with automatic self-organization processes (like the communities detection proposed) can be one of the major aspect of the increasing of the world complexity to be controled as a whole, with the tools from the complexity concepts
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Application :GIS and 
+\\~~~~~~~~
+Agent-Based Modeling Mixing}
+\begin{block}{Agent-based mixing}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+\begin{itemize}
+\item Our goal is to include the community detection as a agent-based self-organization processus inside GIS
+\item We use Repast and its extension proposed by ESRI: Agent Analyst
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\begin{center}
+\includegraphics[scale=0.13]{agentAnalystGIS.png}\\
+\includegraphics[scale=0.13]{schellingGis.png}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+
+\section[Conclusion]{Conclusion and Perspective}
+\frame{\frametitle{Outline}
+\tableofcontents[currentsection, subsectionstyle=hide]}{}
+
+
+\begin{frame}
+\frametitle{Conclusion and Perspectives}
+\begin{block}{The future of the methodology and its applications}
+\begin{itemize}
+\item The methodology proposed here, is based on community clustering (spatial and behavioral control) emerging from complex evolutive agents systems described by automata
+\item Concrete applications can be developped using GIS mixed with adaptive/genetic agent modeling 
+\item Practical applications can be various and are under development now, specificaly on urban dynamics (economical, environmental, social or cultural development)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
+%%%%%%%%%%%%%%

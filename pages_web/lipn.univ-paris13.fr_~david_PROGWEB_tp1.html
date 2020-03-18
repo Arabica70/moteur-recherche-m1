@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="tp.css">
+  <title>Sujet de TP: les balises HTML5</title>
+</head>
+
+<body>
+  <header>Sujet de TP: les balises HTML5</header>
+
+  <main>
+    <article class="exercice">
+      <header><h2>Exercice 0: Mise en place</h2></header>
+      
+      <ul>
+	<li>A la racine de votre compte, s'il n'existe pas déjà, créez le répertoire <code>public_html</code>.</li>
+	<li>Entrez les commandes suivantes:
+	  <ul>
+	    <li><code>cd</code></li>
+	    <li><code>chmod -R 700 *</code></li>
+	    <li><code>chmod 755 .</code></li>
+	    <li><code>chmod 755 public_html</code></li>
+	    <li><code>chmod -R 755 public_html/*</code></li>
+	  </ul>
+	</li>
+	<li>Dans le répertoire <code>public_html</code>, créez un fichier <code>index.html</code> contenant le code: 
+	  <code>&lt;html&gt; Je suis une page de test. &lt;/html&gt;</code>
+	</li>
+	
+	<li>Ouvrez un navigateur. Entrez l'url suivante: <code>http://marseille/~VotreNumeroEtudiant/index.html</code></li>
+      </ul>
+      
+    </article>
+    
+    <div class="attention">Pour la suite des exercices, en plus d'utiliser le navigateur pour visualiser vos pages, vous testerez votre code avec le <a href="https://validator.w3.org/#validate_by_input">validateur W3C</a>.
+    </div>
+
+    <article class="exercice">
+      <header><h2>Exercice 1: la première page</h2></header>
+      Créez une page index.html contenant les informations suivantes:
+      
+      <ul>
+	<li>Titre : Bienvenue sur ma première page.</li>
+	<li>Encodage : utf-8.</li>
+	<li>en-tête: réecrire le titre de la page,</li>
+	<li>créez une barre de navigation contenant un lien vers la page inscription.html (on créera ce fichier dans l'exercice suivant),</li>
+	<li>créez un article (par étudiant devant machine) contenant:
+	  <ul>
+	    <li>en-tête: vos noms et prénoms,</li>
+	    <li>dans une section: des informations le concernant, 
+	      <ul>
+		<li>sous forme de liste, vos numéros étudiants et votre grade universitaire.</li>
+		<li>dans une balise <code>aside</code>, vos photos d'indentité (ou une autre image).</li>
+	      </ul>
+	    </li>
+	  </ul>
+	<li>créer un article contenant:
+	  <ul>
+	    <li>en en-tête: "Média",</li>
+	    <li>une vidéo (format mp4, webm ou ogv) et un mp3 de votre choix,</li>
+	  </ul>
+	</li>
+	<li>
+	  créer un article (par étudiant devant machine) contenant un tableau de vos notes dans les différentes matières du premier semestre. Vous utiliserez les balises <code>thead</code> et <code>tbody</code>.
+	</li>
+	<li>écrire le nom des auteurs en pied de page.</li>
+      </ul>
+      Dans un premier temps, on se contente de placer l'information dans les bonnes balises, sans se soucier de l'affichage à l'écran.
+
+      <div class="attention">
+	Placez les fichiers qui ne sont pas au format html (Ex: images, son, ...) dans d'autres répertoires (Ex: media/) <br/>
+	Afin que la liste du contenu de ces répertoires ne soient pas accessibles à l'aide d'un navigateur, placez un fichier <code>index.html</code>
+	vide dans ces répertoires.
+      </div>
+
+    </article>
+
+    <article class="exercice">
+      <header><h2>Exercice 2: formulaire</h2></header>
+      Créez une nouvelle page contenant un formulaire utilisant les types proposés par html5, permettant à l'utilisateur d'entrer:
+      <ul>
+	<li>un nom,</li>
+	<li>un prénom,</li>
+	<li>un pseudonyme <strong>(Ce champ est obligatoire)</strong>,</li>
+	<li>un mot de passe (ce que l'utilisateur entre ne doit pas être visible) <strong>(Ce champ est obligatoire)</strong>,</li>
+	<li>une adresse mail <strong>(Ce champ est obligatoire)</strong>,</li>
+	<li>son genre,</li>
+	<li>date de naissance,</li>
+	<li>lieu de naisssance,</li>
+	<li>sa situation (célibataire, en couple, pacsé, marié),</li>
+	<li>son numéro de téléphone,</li>
+	<li>Un bouton de type <code>submit</code> contenant le texte "Je m'inscris!".</li>
+      </ul>
+      <!-- <div class="attention"> -->
+      <!-- 	Le formulaire (hormis le bouton) sera placé dans un tableau à deux colonnes.<br/> -->
+      <!-- 	La première colonne fera usage de la balise <code>label</code>.	 -->
+      <!-- </div> -->
+    </article>
+  </main>
+
+<footer>Auteur: Julien David (2015)</footer>
+
+</body>
+
+</html>

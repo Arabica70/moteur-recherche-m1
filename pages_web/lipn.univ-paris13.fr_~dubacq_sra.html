@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Systèmes répartis en action : sécurité dans les grilles de calcul</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Systèmes répartis en action : sécurité dans les grilles de calcul"/>
+            <meta property="og:url" content="./sra.html"/>
+            <meta property="og:description" content="J'ai participé à l'écriture d'un chapitre du livre « Systèmes répartis en action », coordonné par Fabrice Kordon, Laurent Pautet et Laure Petrucci. Ce livre, en français, se veut un survol des technologies actuelles des systèmes répartis, c'est-à-dire s'exécutant sur plusieurs nœuds de calcul (de quelques processeurs jusqu'à une très large échelle) pour permettre d'acquérir une vision d'ensemble du domaine, faisant le lien entre des exemples concrets et les principales techniques du domaine. Après un panorama rapide d'une définition de la grille de calcul, nous parcourons un certain nombre de problématiques classiques de sécurité et les déclinons en leurs problèmes spécifiques liés aux grilles de calcul."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./sra.html"
+         rel="bookmark"
+         title="Permalink to Systèmes répartis en action : sécurité dans les grilles de calcul">
+        Systèmes répartis en action : sécurité dans les grilles de calcul
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>ven. 12 décembre 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/grid-computing.html">grid computing</a>
+        /
+	<a href="./tag/securite-informatique.html">sécurité informatique</a>
+        /
+	<a href="./tag/livre.html">livre</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/sra.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p><img alt="Systèmes répartis en action (couverture)" class="pull-right" src="./images/recherche/sra.png" /></p>
+<p>J'ai participé à l'écriture d'un chapitre du livre « <a href="http://www.lavoisier.fr/notice/fr2746219430.html">Systèmes répartis
+en action</a> »,
+coordonné par Fabrice Kordon, Laurent Pautet et Laure Petrucci. Ce
+livre, en français, se veut un survol des technologies actuelles des
+systèmes répartis, c'est-à-dire s'exécutant sur plusieurs nœuds de
+calcul (de quelques processeurs jusqu'à une très large échelle) pour
+permettre d'acquérir une vision d'ensemble du domaine, faisant le lien
+entre des exemples concrets et les principales techniques du domaine.</p>
+<p>Après un panorama rapide d'une définition de la grille de calcul, nous
+parcourons un certain nombre de problématiques classiques de sécurité et
+les déclinons en leurs problèmes spécifiques liés aux grilles de calcul.</p>
+<h2>Sécurité dans les grilles de calcul</h2>
+<p>Je reprends ici l'introduction du chapitre, qui décrit bien ce que nous
+y traitons :</p>
+<blockquote>
+<p>Les grilles ont de multiples usages, par exemple pour partager des
+connaissances en exploitant un grand nombre de ressources disséminées ou
+pour stocker des données en mutualisant l'espace disque d'un grand
+nombre de ressources disque.</p>
+<p>Ce chapitre insiste plus particulièrement sur les grilles de calcul.
+Les problématiques de sécurité sont cruciales dans les grilles. Par
+exemple, dans le cas de la mutualisation d'espace disque, il faut
+assurer la <em>pérennité</em> des données alors même que des machines se
+connectent ou se déconnectent de la grille et ne sont plus en mesure de
+rendre le service de stockage.</p>
+<p>Le chapitre est organisé autour des piliers de la sécurité :
+confidentialité, authentification, intégrité et disponibilité. Ces
+thèmes constituent donc le fil conducteur du chapitre.</p>
+</blockquote>
+<h2>Sommaire du livre</h2>
+<ul>
+<li>Préface</li>
+<li>Chapitre 1. Introduction générale</li>
+<li>Chapitre 2. Introduction au temps-réel réparti embarqué</li>
+<li>Chapitre 3. Aérospatial dans le concret</li>
+<li>Chapitre 4. Du modèle à la plate-forme</li>
+<li>Chapitre 5. La gestion du trafic aérien</li>
+<li>Chapitre 6. Introduction à la sécurité dans les systèmes répartis</li>
+<li>Chapitre 7. Cryptographie et procédés de chiffrement</li>
+<li>Chapitre 8. Sécurité dans les grilles de calcul<ul>
+<li>8.1. Introduction (page 153)</li>
+<li>8.2. Introduction aux grilles et à la sécurité (page 153)</li>
+<li>8.3. Problématiques (page 160)</li>
+<li>8.4. <em>Monitoring</em> de grille et IDS (page 181)</li>
+<li>8.5. Conclusion (page 183)</li>
+<li>8.6. Bibliographie (page 184)</li>
+</ul>
+</li>
+<li>Chapitre 9. Introduction aux systèmes répartis à large échelle</li>
+<li>Chapitre 10. Concepts des systèmes répartis à large échelle</li>
+<li>Chapitre 11. Applications pair-à-pair de partage de données</li>
+<li>Chapitre 12. Courrier électronique pair-à-pair</li>
+</ul>
+<h2>Citer cette publication</h2>
+<p>Cette publication a été faite aux éditions <a href="http://www.hermes-science.com/fr/">Hermes Science
+publications</a> /
+<a href="http://www.lavoisier.fr">Lavoisier</a> dans la série <em>Informatique et
+systèmes d'information</em>. Vous pouvez citer juste le chapitre ou le livre
+complet (deuxième référence).</p>
+<div class="highlight"><pre>@InBook{kpp08:8,
+  author =   {Christophe C{\&#39;e}rin and Jean-Christophe Dubacq and Thomas H{\&#39;e}rault and Ronan Keryell and Jean-Louis Pazat and Jean-Louis Roch and S{\&#39;e}bastien Varette},
+  title =    {Syst{\`e}mes r{\&#39;e}partis en action : S{\&#39;e}curit{\&#39;e} dans les grilles de calcul},
+  chapter =      {8},
+  publisher =    {Hermes Science Publications / Lavoisier},
+  year =     {2008},
+  series =   {Informatique et syst{\`e}mes d&#39;information},
+  address =      {Paris},
+  month =    nov,
+  pages =    {153--186},
+  note =     {ISBN: 978-2-7462-1943-4}
+}
+
+@Book{kpp08,
+  editor =   {Fabrice Kordon and Laurent Pautet and Laure Petrucci},
+  title =    {Syst{\`e}mes r{\&#39;e}partis en action},
+  publisher =    {Hermes Science Publications / Lavoisier},
+  year =     {2008},
+  series =   {Informatique et syst{\`e}mes d&#39;information},
+  address =      {Paris},
+  month =    nov,
+  note =     {ISBN: 978-2-7462-1943-4}
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

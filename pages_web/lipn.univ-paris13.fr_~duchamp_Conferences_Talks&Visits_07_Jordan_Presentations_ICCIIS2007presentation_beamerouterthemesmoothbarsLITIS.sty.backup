@@ -1,0 +1,145 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/outer/beamerouterthemesmoothbarsLITIS.sty,v 1.0 2006/04/09 20:53:10 LITIS Exp $
+
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+% Modified by Vincent Guigue
+% Modified by Gaëlle Loosli
+
+\newif\ifbeamer@sb@subsection
+
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@sb@subsection#1\endcsname}
+\ExecuteOptionsBeamer{subsection=false}
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+\setbeamercolor{frametitle}{parent=palette primary}
+%\setbeamercolor{subsection in head/foot}{parent=palette secondary}
+\setbeamercolor{section in head/foot}{parent=palette quaternary}
+
+
+\beamer@compresstrue
+
+\AtBeginDocument{
+ {
+   \usebeamerfont*{headline}
+   \colorlet{global.bg}{bg}
+   %\usebeamercolor{subsection in head/foot}
+   \usebeamercolor{section in head/foot}
+   \usebeamercolor{frametitle}
+
+   \ifbeamer@sb@subsection
+     \pgfdeclareverticalshading{beamer@barshade}{\the\paperwidth}{%
+        color(0ex)=(global.bg);%
+        color(1ex)=(subsection in head/foot.bg);%
+        color(3.25ex)=(subsection in head/foot.bg);%
+        color(4.25ex)=(section in head/foot.bg);%
+        color(9.75ex)=(section in head/foot.bg)%
+      }
+      \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+        color(0ex)=(frametitle.bg);%
+        color(1ex)=(frametitle.bg);%
+        color(2ex)=(subsection in head/foot.bg)
+      }
+   \else
+     \pgfdeclareverticalshading{beamer@barshade}{\the\paperwidth}{%
+        color(0ex)=(global.bg);%
+        color(1ex)=(section in head/foot.bg);%
+        color(7ex)=(section in head/foot.bg)%
+      }
+    \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+        color(0ex)=(frametitle.bg);%
+        color(1ex)=(frametitle.bg);%
+        color(2ex)=(section in head/foot.bg)
+      }
+   \fi
+
+   \pgfdeclareverticalshading{beamer@belowframetitle}{\the\paperwidth}{%
+     color(0ex)=(global.bg);%
+     color(1ex)=(frametitle.bg)
+   }
+ }
+}
+
+
+                               % Head
+\defbeamertemplate*{headline}{smoothbars theme}
+{%
+ \vspace{-2ex}
+ %\pgfuseshading{beamer@barshade}%
+\begin{beamercolorbox}[ignorebg,ht=5ex,dp=1ex,wd=\paperwidth]{section in
+ head/foot}
+\vspace{-0.5cm}
+  \hfill \insertnavigation{0.85\paperwidth}
+\end{beamercolorbox}%
+ \ifbeamer@sb@subsection%
+   \begin{beamercolorbox}[ignorebg,ht=2ex,dp=1.125ex,%
+     leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+     \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+   \end{beamercolorbox}%
+ \fi%
+}%
+
+
+\defbeamertemplate*{frametitle}{smoothbars theme}
+{%
+ \nointerlineskip%
+ \usebeamerfont{headline}%
+\vskip 1ex
+ \hbox{\begin{beamercolorbox}[ignorebg,ht=6ex,wd=0.095\paperwidth]{section in head/foot}
+ \end{beamercolorbox}%
+ \begin{beamercolorbox}[wd=0.905\paperwidth,ht=1.5ex,dp=1.125ex,leftskip=-0.2cm,vmode]{empty}
+   \pgfuseshading{beamer@aboveframetitle}%
+ \end{beamercolorbox}}%
+ \vskip-2ex%
+ \nointerlineskip%
+ \hbox{\begin{beamercolorbox}[ignorebg,ht=0ex,wd=0.085\paperwidth]{section in head/foot}
+ \vskip-1ex%
+ \end{beamercolorbox}%
+ \begin{beamercolorbox}[wd=0.915\paperwidth,leftskip=-0.2cm,rightskip=.3cm plus1fil,vmode]{frametitle}
+   \usebeamerfont*{frametitle}  ~~~~~~~ \insertframetitle%
+     \ifx\insertframesubtitle\@empty%
+       \strut\par%
+     \else
+       \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+     \fi%%
+ \end{beamercolorbox}}%
+ \hbox{\begin{beamercolorbox}[ignorebg,ht=0ex,wd=0.085\paperwidth]{section in head/foot}
+ \end{beamercolorbox}%
+ \begin{beamercolorbox}[wd=0.915\paperwidth,ht=.5ex,dp=0ex]{empty}
+    \pgfuseshading{beamer@belowframetitle}%
+ \end{beamercolorbox}}%
+ 
+}
+
+\defbeamertemplate*{footline}{smoothbars theme}
+{%
+ \leavevmode%
+ \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}%
+   \usebeamerfont{author in head/foot}\insertshortauthor
+ \end{beamercolorbox}%
+ \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.6cm,rightskip=.6cm plus1fil]{title in head/foot}%
+   \usebeamerfont{title in head/foot}\insertshorttitle \hfill \insertframenumber/\inserttotalframenumber
+ \end{beamercolorbox}}%
+ \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.55ex,dp=1.125ex,leftskip=0.2cm,rightskip=-3pt]{title in head/foot}%
+  \LogoEcole
+  \vskip-3pt
+ \end{beamercolorbox}%
+
+ \vskip0pt%
+}
+
+\defbeamertemplate*{sidebar left}{smoothbars theme}{
+\vspace{-6ex}
+\hbox{ \begin{beamercolorbox}[ignorebg,ht=20.1ex,dp=0ex,wd=0.09\paperwidth,leftskip=0pt,rightskip=-3ex]{section in head/foot}
+%  \includegraphics[height=20.1ex]{logoLITIS.png} 
+  \includegraphics[height=13.1ex]{logoLitis3.jpg} 
+ \end{beamercolorbox}}%
+}
+
+
+\mode
+<all>

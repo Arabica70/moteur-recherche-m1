@@ -1,0 +1,115 @@
+<HTML>
+<TITLE>Ecole Jeunes Chercheurs en Algorithmique et Calcul Formel
+</TITLE>
+<CENTER>
+
+<H2> Ecole Jeunes Chercheurs en Algorithmique et Calcul Formel</H2>
+(LaBRI, Universit&eacute; Bordeaux 1)<BR>
+
+<BR>
+<H3>"Combinatoire analytique : application aux marches al&eacute;atoires"</H3>
+Cyril Banderier, Projet Algorithmes, INRIA.
+</CENTER>
+
+<BR>
+<U>
+R&eacute;sum&eacute;</U> :
+
+Nombreux sont les domaines qui regorgent de structures combinatoires.
+On peut citer l'exemple historique des grammaires en th&eacute;orie des
+langages, le cas des mol&eacute;cules d'alcools ou diverses structures
+cristallines en chimie, les partitions, les facteurs des polyn&ocirc;mes en
+th&eacute;orie des nombres, l'ADN en biologie, 
+ le mod&egrave;le d'Ising, les tas de sable  en physique 
+statistique,  les arbres, les permutations en algorithmique.
+
+<P>
+
+Or il se trouve que les &eacute;galit&eacute;s qui d&eacute;finissent
+une structure combinatoire peuvent &ecirc;tre traduites en des 
+&eacute;quations fonctionnelles. Nous sommes alors
+ramen&eacute;s &agrave; faire de l'analyse sur des s&eacute;ries 
+g&eacute;n&eacute;ratrices. Les singularit&eacute;s des fonctions obtenues
+dictent la croissance des coefficients.
+Cela permet d'obtenir des r&eacute;sultats asymptotiques quant au 
+d&eacute;nombrement, de capter la
+moyenne, la variance et m&ecirc;me les moments d'ordre sup&eacute;rieur d'un
+param&egrave;tre (et donc d'en trouver la loi limite).
+
+<P>
+La combinatoire analytique a &eacute;t&eacute; popularis&eacute;e &agrave; la
+fin des ann&eacute;es 60 par D.E. Knuth (confer TAOCP) qui fut le
+premier &agrave; l'appliquer &agrave; l'analyse d'algorithmes (une
+premi&egrave;re &eacute;tape &eacute;tant de cerner la structure 
+combinatoire dissimul&eacute;e dans l'algorithme).
+En France, l'application de la combinatoire analytique 
+&agrave; l'analyse d'algorithmes et
+&agrave; l'&eacute;tude de nombreuses autres structures combinatoires 
+peut &ecirc;tre imput&eacute;e &agrave; P. Flajolet.
+
+<P>
+Je vais ci-apr&egrave;s illustrer un peu la philosophie et les m&eacute;thodes
+de la combinatoire analytique sur un exemple concret, que j'ai etudi&eacute;
+dans mon m&eacute;moire de DEA :
+celui de marches al&eacute;atoires dont les sauts ob&eacute;issent
+&agrave;  des r&egrave;gles pr&eacute;cises.
+<P>
+<CENTER>***</CENTER>
+<P>
+Les mots engendr&eacute;s par une grammaire avec un alphabet 
+infini et un ensemble infini de productions
+ peuvent &ecirc;tre vus comme les traces d'une marche dans un automate infini.
+<P>
+C'est un probl&egrave;me qui &eacute;quivaut &agrave; regarder les puissances it&eacute;r&eacute;es
+d'une matrice (infinie); c'est aussi, et c'est ce point de vue que nous retiendrons,
+&eacute;quivalent &agrave; l'&eacute;tude de marches (al&eacute;atoires) sur un r&eacute;seau discret.
+<P>
+Nous nous int&eacute;resserons plus particuli&egrave;rement aux s&eacute;ries 
+g&eacute;n&eacute;ratrices de ces  "marches al&eacute;atoires sur les entiers"
+qui d&eacute;comptent les chemins de longueur n  (les mots de longueur n)
+ou les excursions (les mots qui commencent et finissent en 0).
+<P>
+&Agrave; titre d'illustration, un cas bien connu est le langage de Dyck
+qui peut &ecirc;tre vu comme une marche pour laquelle on part de (0) et on finit
+en (0) en ne faisant que des pas +1 ou -1, tout en restant positif (la s&eacute;rie g&eacute;n&eacute;ratrice donne les
+nombres de Catalan).
+<P>
+On donnera toute une classe de grammaires infinies donnant des
+s&eacute;ries rationnelles, alg&eacute;briques ou transcendantes. Nous 
+montrerons comment expliciter ces s&eacute;ries g&eacute;n&eacute;ratrices.
+<P>
+Nous illustrerons nos propos par quelques exemples ludiques :
+<LI>les Motzkin, les Dyck, une marche rationnelle sur les nombres premiers,
+<LI>la r&eacute;solution de la conjecture de Pinzani sur les "arbres de
+g&eacute;n&eacute;ration",
+<LI>le probl&egrave;me du cavalier d'&eacute;checs, d&eacute;j&agrave; &eacute;tudi&eacute; via  
+d'autres m&eacute;thodes par Labelle et Yeh, 
+<LI>le lien avec les fractions continu&eacute;es, d&eacute;velopp&eacute;
+dans un autre contexte par un article de Flajolet en 1980,
+<LI>un probl&egrave;me ouvert de Petkovsek, sur un triangle "&agrave; la Pascal".
+<P>
+Finalement, nous nous attaquerons &eacute;galement 
+&agrave; des propri&eacute;t&eacute;s en moyenne (nombre moyen de
+facteurs d'un
+mot de Dyck) et surtout 
+&agrave; l'asymptotique du nombre de mots de longueur n.
+L'inversion de Lagrange marche pour des &eacute;quations u=z phi(u),
+nous devrons &eacute;tudier l'&eacute;quation plus g&eacute;n&eacute;rale  u^c=z phi(u),
+ce qui se fait via la m&eacute;thode du point col.
+<P>
+
+La r&eacute;solution de la conjecture de Pinzani a fait l'objet d'un
+article commun  (C. Banderier, M. Bousquet-M&eacute;lou, A. Denise, 
+P. Flajolet, D. Gardy et D. Gouyou-Beauchamps), accept&eacute; &agrave; FPSAC'99.
+<P>
+
+
+<BR>Cyril Banderier 
+<BR>Projet Algorithmes
+<BR>INRIA Rocquencourt 
+<BR>78153 Le Chesnay 
+<P>
+<A HREf="http://algo.inria.fr/banderier/">http://algo.inria.fr/banderier/</a>
+<BR>Cyril.Banderier <em>at</em> inria.fr 
+
+

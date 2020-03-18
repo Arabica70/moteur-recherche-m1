@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+      <html lang=fr >      <head>
+      <title>
+      Page académique de Victor Lutfalla
+      </title>
+      <meta charset="UTF-8">
+      <link href=styles.css rel="stylesheet"/>
+      <script src=functions.js></script>
+      </head>
+<body>
+
+     <div class="header-title">
+     <h1 id="maintitle"> Victor LUTFALLA </h1>
+     </div>     <div class="header-lang"> 
+     <img src="./img/en.gif" alt="english" onclick="set_lang('en')"> <br> 
+     <img src="./img/fr.gif" alt="français" onclick="set_lang('fr')"> 
+     </div>
+<div class="main">
+    <p> Doctorant au <a href="https://lipn.univ-paris13.fr/" target="_blank">LIPN</a> dans l'équipe <a href="https://lipn.univ-paris13.fr/accueil/equipe/calin/" target="_blank">CALIN</a> avec <a href="https://lipn.univ-paris13.fr/~fernique/" target="_blank">Thomas Fernique</a> </p>
+    <p>
+      Bureau: A106 <br/>
+      Téléphone: +33 1 49 40 40 69 <br/>
+      Courriel: lutfalla [at] lipn [point] univ-paris13 [point] fr
+    </p></div>
+
+ <div class="footmenu">
+      <table class="linktable" >
+	<tbody>
+	  <tr>
+	    <td> <a class="menulink" href="./index.php"  >Accueil</a> </td>
+	    <td> <a class="menulink" href="./recherche.php"  >Recherche</a> </td>
+	    <td> <a class="menulink" href="./publications.php"  >Publications</a> </td>
+	    <td> <a class="menulink" href="./talks.php"  >Talks et Posters</a> </td>
+	    <td> <a class="menulink" href="./evenements.php"  >Conférences, Workshop et Écoles de Recherche</a> </td>
+	    <td> <a class="menulink" href="./enseignement.php"  >Enseignement</a> </td>
+	    <td> <a class="menulink" href="./cv.php"  >CV</a> </td>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+      
+</body>
+</html>

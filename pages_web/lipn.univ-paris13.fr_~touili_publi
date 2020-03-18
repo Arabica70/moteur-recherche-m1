@@ -1,0 +1,572 @@
+<html>
+<head>
+<title>Tayssir TOUILI </title>
+</head>
+
+
+
+<H2><FONT COLOR="red"> Publications of Tayssir Touili:</FONT></H2> </p></li>
+
+
+
+
+
+<B><FONT COLOR="green">Proceedings and Edited Volumes:</FONT></B>
+
+<ul>
+<li>Tayssir Touili.
+ <FONT COLOR="brown">Special issue on Computer Aided Verification (CAV'10).
+</FONT> Formal Methods in System Design. Volume 40, Number 2 (2012).
+</li><br> <br>
+
+<li>Tayssir Touili, Byron Cook and  Paul Jackson.
+ <FONT COLOR="brown">Computer Aided Verification, 22nd International Conference,
+ CAV 2010, Edinburgh, UK,</FONT> July 15-19, 2010. Proceedings Springer 2010. (<a href="cav-2010.pdf">Preface and Table of Contents</a>)
+</li>
+</ul>
+
+
+<B><FONT COLOR="green">Book chapters:</FONT></B>
+
+<ul>
+
+ 
+<li>Aarti Gupta, Vineet Kahlon, Shaz Qadeer and  Tayssir Touili.
+ <FONT COLOR="brown">Model Checking Concurrent Programs.</FONT>  Handbook of Model Checking. Springer.
+</li>
+</ul>
+
+<B><FONT COLOR="green">Journals:</FONT></B>
+
+<ul>
+
+<li>
+Fu Song and Tayssir Touili.
+<FONT COLOR="brown">Model-checking software library API usage rules.</FONT> Software and System Modeling 15(4): 961-985 (2016) </i>
+</li><br> <br>
+
+
+<li>
+Fu Song and Tayssir Touili.
+<FONT COLOR="brown">Model checking dynamic pushdown networks.</FONT> Formal Asp. Comput. 27(2): 397-421 (2015)</i>
+</li><br> <br>
+
+
+	
+
+<li>
+Fu Song and Tayssir Touili.
+<FONT COLOR="brown">Efficient CTL model-checking for pushdown systems.</FONT>  Theor. Comput. Sci. 549: 127-145 (2014)</i>
+</li><br> <br>
+
+
+
+
+<li>
+Fu Song and Tayssir Touili.
+<FONT COLOR="brown">Pushdown model checking for malware detection.</FONT> STTT 16(2): 147-173 (2014)</i>
+</li><br> <br>
+
+
+
+
+<li>
+Tayssir Touili.
+<FONT COLOR="brown">Computing transitive closures of hedge transformations.</FONT> IJCCBS 3(1/2): 132-150 (2012)</i>
+</li><br> <br>
+
+
+<li>Ahmed Bouajjani, Tayssir Touili.
+<FONT COLOR="brown"> Widening techniques for regular tree model checking.</FONT> STTT 14(2): 145-165 (2012)</i>
+
+</li><br> <br>
+
+
+
+<li>Nicholas Kidd, Peter Lammich, Tayssir Touili and  Thomas W. Reps.
+<FONT COLOR="brown"> A decision procedure for detecting atomicity violations for communicating processes with locks. </FONT>
+<i> Int. Journal on Software Tools for Technology Transfer.</i> (<a href="STTT10.pdf">PDF</a>)
+</li><br> <br>
+
+
+<li>Tayssir Touili and  Mohamed Faouzi Atig.
+ <FONT COLOR="brown">Verifying parallel programs with dynamic communication structures.</FONT>
+<i> Theoretical  Computer  Science. Volume 411, Issues 38-39,  Pages 3460-3468, 28 August 2010. </i>
+(<a href="tcs.pdf">PDF</a>)
+</li><br> <br>
+
+
+
+<li>Mihaela Sighireanu and  Tayssir Touili.
+<FONT COLOR="brown">Bounded Communication Reachability Analysis of Process Rewrite Systems with Ordered Parallelism.</FONT>
+<i>  Electronic Notes in Theoretical Computer Science, Volume 239, Pages 43-56. 2009. </i>
+(<a href="entcs-prs.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+<li> Narjes Ben Rajeb, Brahim Nasraoui, Riadh Robbana and  Tayssir Touili.
+<FONT COLOR="brown">Verifying Multithreaded Recursive Programs with Integer Variables.</FONT>
+<i>  Electronic Notes in Theoretical Computer Science, Volume 239, Pages  143-154. 2009. </i>
+(<a href="entcs-mona.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+
+
+<li> Ahmed Bouajjani,  Jan Strejcek,  and Tayssir Touili. <FONT COLOR="brown">On Symbolic Verification of Weakly Extended PAD. </FONT>
+<i> Electronic Notes in Theoretical Computer Science, Volume 175, Issue 3, 28 June 2007, Pages 47-64. </i> 
+(<a href="etcs06.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+<li>Ahmed Bouajjani, Anca  Muscholl,   and Tayssir Touili.  <FONT COLOR="brown">Permutation Rewriting and Algorithmic Verification. </FONT>
+<i> Information and Computation. Volume 205, Issue 2  , February 2007, Pages 199-224 </i> 
+ (<a href="lics01-abstract">abstract </a>,  <a href="ic.ps.gz">gziped PostScript</a>)
+
+</li><br> <br> 
+
+<li>Ahmed Bouajjani, Javier Esparza, and Tayssir Touili.
+<FONT COLOR="brown">  Reachability analysis of synchronized PA-systems.</FONT>
+<i> Electronic Notes in Theoretical Computer Science, Volume 138, Issue 3,  Pages 153-178, 2005.</i> 
+(<a href="etcs05.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+<li> Ahmed Bouajjani,  Javier  Esparza,  and Tayssir Touili. <FONT COLOR="brown">A generic approach to the static analysis of concurrent programs with procedures. </FONT>
+<i>International Journal of Foundations of Computer Science, volume 14, number 4, august  2003.</i> 
+(<a href="popl03-abstract">abstract </a>,  <a href="IJFCS.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+</ul>
+
+<B><FONT COLOR="green">Conferences and workshops:</FONT></B>
+
+<ul>
+
+<li>   Tayssir Touili and Xin Ye. <FONT COLOR="brown">Reachability Analysis of Self-Modifying Code. 
+  </FONT><i> In Proceedings of ICECCS  2017.</i> 
+  
+
+</li><br> <br>
+
+<li>  Adrien Pommellet and  Tayssir Touili.   <FONT COLOR="brown">Static Analysis of Multithreaded Recursive Programs Communicating via Rendez-Vous.
+  </FONT><i> In Proceedings of APLAS 2017.</i> 
+  
+
+</li><br> <br> 
+
+
+
+
+
+  <li>  Huu-Vu Nguyen and  Tayssir Touili.<FONT COLOR="brown">CARET analysis of multithreaded programs. 
+  </FONT><i> In Proceedings of LOPSTR  2017.</i> 
+  
+
+</li><br> <br> 
+
+
+<li>  Huu-Vu Nguyen and  Tayssir Touili.<FONT COLOR="brown">CARET Model Checking For Malware Detection.
+  </FONT><i> In Proceedings of SPIN  2017.</i> 
+  
+
+</li><br> <br> 
+
+<li>   Marcio Diaz and Tayssir Touili.<FONT COLOR="brown">
+Dealing with Priorities and Locks for Concurrent Programs.
+  </FONT><i> In Proceedings of ATVA   2017.</i> 
+  
+
+</li><br> <br> 
+
+
+<li>   Marcio Diaz and Tayssir Touili.<FONT COLOR="brown">
+Reachability Analysis of Dynamic Pushdown Networks with Priorities.
+  </FONT><i> In Proceedings of NETYS   2017.</i> 
+  
+
+</li><br> <br> 
+
+
+
+
+<li>  Adrien Pommellet,  Marcio Diaz, and Tayssir Touili.<FONT COLOR="brown">Reachability Analysis of Pushdown Systems with
+an Upper Stack.
+  </FONT><i> In Proceedings of LATA   2017.</i> 
+  
+
+</li><br> <br> 
+
+
+
+<li>  Huu-Vu Nguyen and  Tayssir Touili.<FONT COLOR="brown">CARET Model Checking For Pushdown Systems.
+  </FONT><i> In Proceedings of SAC  2017.</i> 
+  
+
+</li><br> <br> 
+
+
+<li> The Khanh Huu Dam  and  Tayssir Touili.<FONT COLOR="brown"> Malware Detection Based On Graph Classification.
+  </FONT><i> In Proceedings of ICISSP 2017.</i> 
+  
+
+</li><br> <br> 
+
+
+
+<li> The Khanh Huu Dam  and  Tayssir Touili.<FONT COLOR="brown"> Extracting Android Malicious Behaviors.
+  </FONT><i> In Proceedings of ForSE 2017.</i> 
+  
+
+</li><br> <br> 
+
+<li> The Khanh Huu Dam  and  Tayssir Touili.<FONT COLOR="brown"> Automatic Extraction of Malicious Behaviors.
+  </FONT><i> In Proceedings of 11th International Conference on Malicious and Unwanted Software 2016.</i> 
+  
+
+</li><br> <br> 
+
+
+
+
+
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown"> Model-Checking for Android Malware Detection.
+  </FONT><i>  APLAS 2014: 216-235</i> (<a href="dpnlocks.pdf">PDF</a>)
+  
+
+</li><br> <br> 
+
+
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown"> LTL Model Checking for Dynamic Pushdown Networks Communicating via Locks.
+  </FONT><i> Technical Report. LIAFA 2014.</i> (<a href="dpnlocks.pdf">PDF</a>)
+  
+
+</li><br> <br> 
+
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown"> Model Checking Dynamic Pushdown Networks.
+  </FONT><i> In Proc.  11th Asian Symposium on Programming Languages and Systems
+(APLAS 2013).</i> 
+  
+
+</li><br> <br> 
+
+
+
+<li> Hugo Macedo and  Tayssir Touili.<FONT COLOR="brown"> Mining malware specifications through static reachability analysis.
+  </FONT><i> In Proc.  18th European Symposium on Research in Computer Security 
+(ESORICS 2013).</i> 
+  
+
+</li><br> <br> 
+
+
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown"> PoMMaDe: Pushdown Model-checking for Malware Detection.
+  </FONT><i> In Proc.  9th Joint Meeting of
+the European Software Engineering Conference and
+the ACM SIGSOFT Symposium
+on the Foundations of Software Engineering 
+(ESEC/FSE 2013).</i> 
+  
+
+</li><br> <br> 
+
+
+<li>  Tayssir Touili.<FONT COLOR="brown">
+  Process Rewrite Systems for Software Model Checking.</FONT><i> 
+In Proc.  7th International Symposium on Theoretical Aspects of Software Engineering
+(TASE 2013).</i> 
+  
+
+</li><br> <br> 
+
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+  Model-Checking Software Library API Usage Rules.</FONT><i> In Proc.  10th International Conference on integrated Formal Methods 
+(iFM 2013).</i> 
+  
+
+</li><br> <br> 
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+  LTL  Model-Checking for Malware Detection. </FONT><i>In Proc.  19th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2013).</i> 
+  
+
+</li><br> <br> 
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+ PuMoC: A CTL Model-Checker For Sequential Programs. </FONT><i>In Proc.  27th IEEE/ACM International Conference
+On Automated Software Engineering  (ASE  2012).</i>
+
+</li><br> <br> 
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+ Efficient  Malware Detection using  Model-Checking. </FONT><i>In Proc.  18th International Symposium on Formal Methods  (FM  2012).</i> 
+  
+
+</li><br> <br> 
+
+
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+  Pushdown Model-Checking for Malware Detection. </FONT><i>In Proc.  18th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2012).</i> (<a href="tacas2012.pdf">PDF</a>) .<FONT COLOR="red"> This paper won the EASST  best paper award at ETAPS 2012.</FONT>
+  
+
+</li><br> <br> 
+<li> Fu Song and  Tayssir Touili.<FONT COLOR="brown">
+Efficient CTL Model-Checking for Pushdown Systems. </FONT><i>In Proc. Intern. Conf. on Concurrency Theory (CONCUR 2011).</i> 
+(<a href="concur2011.pdf">PDF</a>)  
+
+</li><br> <br> 
+
+
+<li>
+Tayssir Touili.
+<FONT COLOR="brown">Constrained Reachability of Process Rewrite Systems.  </FONT>
+<i>In Proc. 6th International Colloquium on Theoretical Aspects of Computing (ICTAC'09). 2009.
+(<a href="ictac09.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+<li>
+Mohamed Faouzi Atig and  Tayssir Touili. 
+<FONT COLOR="brown">Verifying Parallel Programs with Dynamic Communication Structures. </FONT>
+<i>In Proc. 14th International Conference on Implementation and Application of Automata (CIAA'09). 2009.
+(<a href="ciaa09.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+<li>
+Nicholas Kidd, Peter Lammich, Tayssir Touili and  Thomas W. Reps.
+<FONT COLOR="brown"> A Decision Procedure for Detecting Atomicity Violations for Communicating Processes with Locks. </FONT>
+<i>In Proc. 16th International SPIN Workshop on Model Checking of Software (SPIN'09). 2009.
+(<a href="spin09.pdf">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+<li>Mohamed Faouzi Atig,  Ahmed Bouajjani, and Tayssir Touili.
+  <FONT COLOR="brown">Analyzing Asynchronous Programs with Preemption. </FONT>
+<i>In Proc. 28th Foundations of Software Technology and Theoretical Computer Science conference (FSTTCS'08). 2008.
+(<a href="fsttcs08.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+<li>Mohamed Faouzi Atig,  Ahmed Bouajjani, and Tayssir Touili.
+  <FONT COLOR="brown">On the Reachability Analysis of Acyclic Networks of Pushdown Systems. </FONT>
+<i>In Proc. 19th International Conference on Concurrency Theory (CONCUR'08).
+ Lecture Notes in Computer Science, 2008.
+(<a href="concur08.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+<li>Narjes Ben Rajeb, Brahim Nasraoui, Riadh Robbana, and Tayssir Touili.
+  <FONT COLOR="brown">Verifying Multithreaded Recursive Programs with  Integer Variables.</FONT>
+<i>In Proc. 10th International Workshop on Verification of Infinite-State Systems (INFINITY'08). 2008.
+(<a href="infinity08.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+
+
+
+<li>Ahmed Bouajjani,   Peter Habermehl,   Lukas Holik,   Tayssir Touili, and  Tomas Vojnar.
+  <FONT COLOR="brown"> Antichain-based Universality and Inclusion Testing over Nondeterministic
+Finite Tree Automata. </FONT>
+<i>In Proc. 13th   International Conference on Implementation and Application of Automata (CIAA'08).
+ Lecture Notes in Computer Science, 2008.
+(<a href="ciaa08.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+<li> Akash Lal,  Tayssir Touili,  Nicholas Kidd and Thomas Reps. <FONT COLOR="brown"> Interprocedural Analysis of Concurrent Programs Under a Context 
+Bound. </FONT>
+<i>In Proc. 14th  International Conference on Tools and  Algorithms for the  Construction and Analysis of Systems (TACAS'08).
+ Lecture Notes in Computer Science, 2008.
+(<a href="tacas08.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+
+
+<li> Akash Lal, Nicholas Kidd,  Thomas Reps and Tayssir Touili. <FONT COLOR="brown"> Abstract Error Projection. </FONT>
+<i>In Proc. 14th International Static Analysis Symposium (SAS'07). Lecture Notes in Computer Science, 2007.
+(<a href="sas07.ps.gz">gziped PostScript</a>)
+</li><br> <br>
+
+<li>  Tayssir Touili. <FONT COLOR="brown"> Computing Transitive Closures of Hedge Transformations.</FONT>
+<i>In Proc. 1st International Workshop on Verification and Evaluation  of Computer and Communication  Systems (VECOS'07). eWIC Series. British Computer Society, 2007.</i> 
+(<a href="vecos07.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+<li>  Gael Patin, Mihaela Sighireanu and Tayssir  Touili. 
+<FONT COLOR="brown">SPADE: Verification of Multithreaded  Dynamic and Recursive Programs. </FONT>
+ <i>In Proc. 19th Int. Conf. on Computer Aided Verification (CAV'07),
+             Lecture Notes in Computer Science, 2007.</i>  (<a href="spade.ps.gz">gziped PostScript</a>) 
+</li><br> <br>
+
+
+<li> Eugene Asarin, Thierry Cachat, Alexander Seliverstov, Tayssir Touili and Vassily Lyubetsky.
+ <FONT COLOR="brown"> Attenuation Regulation as a Term Rewriting System.</FONT>
+<i>In Proc. 2nd  International Conference on Algebraic Biology (AB'07).</i> 
+(<a href="ab07.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+<li> Mihaela Sighireanu  and Tayssir Touili. <FONT COLOR="brown"> Bounded Communication Reachability Analysis of Process Rewrite Systems with Ordered Parallelism.</FONT>
+<i>In Proc. 8th International Workshop on Verification of Infinite-State Systems (INFINITY'06).</i> 
+(<a href="infinity06.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+<li> Ahmed Bouajjani,  Jan Strejcek,  and Tayssir Touili. <FONT COLOR="brown">On Symbolic Verification of Weakly Extended PAD. </FONT>
+<i>In Proc.  of the 13th International Workshop on Expressiveness in Concurrency (EXPRESS'06).</i> 
+( <a href="express06.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+
+
+
+
+<li> Julien d'Orso   and Tayssir Touili. <FONT COLOR="brown">Regular Hedge Model Checking </FONT>
+<i>In Proc. of the  4th IFIP International Conference on Theoretical Computer Science (TCS'06).</i> 
+( <a href="ifip-tcs.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+
+
+
+<li>Sagar Chaki, Edmund Clarke,  Nicholas Kidd, Thomas Reps, and Tayssir Touili. 
+<FONT COLOR="brown">Verifying Concurrent message-Passing C programs with Recursive Calls.</FONT>
+<i>In Proc. 12th. International Conference on Tools and  Algorithms for the  Construction and Analysis of Systems (TACAS'06).</i> 
+(  <a href="tacas06.ps.gz">gziped PostScript</a>)  
+</li><br> <br> 
+
+
+
+
+<li>Sagar Chaki, Edmund Clarke, Orna Grumberg, Joel Ouaknine, Natasha Sharygina, Tayssir Touili, and Helmut Veith.
+<FONT COLOR="brown">State/Event Software Verification for Branching-Time Specifications.</FONT>
+<i>In Proc. 5th International Conference on Integrated Formal Methods (IFM'05).</i> (<a href="rapportcmu-abstract">abstract </a>,  <a href="seaw.ps.gz">gziped PostScript</a>)  
+</li><br> <br> 
+
+
+
+
+<li>  A. Bouajjani, M. Mueller-Olm, and T. Touili.   <FONT COLOR="brown">
+Regular Symbolic Analysis of Dynamic Networks of Pushdown Systems.</FONT>  <i>In Proc.
+ 16th Intern. Conf. on Concurrency Theory (CONCUR'05).</i>
+(  <a href="concur05.ps.gz">gziped PostScript</a>)  
+
+</li><br> <br>
+
+
+<li> A. Bouajjani, T. Touili. <FONT COLOR="brown"> On Computing Reachability Sets of Process Rewrite Systems. </FONT>  <i>
+In Proc. 16th Intern. Conf. on Rewriting Techniques and Applications (RTA'05).
+</i> 
+(<a href="rta05.ps.gz">gziped PostScript</a>)  
+
+</li><br> <br>
+
+
+
+
+
+<li>  Tayssir Touili.<FONT COLOR="brown">
+Dealing with communication  for  dynamic multithreaded recursive programs.</FONT> Invited paper. <i>In Proc. of VISSAS'05.</i> 
+(<a href="vissas-abstract">abstract </a>,  <a href="vissas.ps.gz">gziped PostScript</a>)  
+
+</li><br> <br>
+
+<li> Edmund Clarke, Muralidhar Talupur, Tayssir Touili, and Helmut Veith.<FONT COLOR="brown">
+Verification by Network Decomposition.</FONT>. <i>In Proc. Intern. Conf. on Concurrency Theory (CONCUR'04).</i> 
+(<a href="concur04-abstract">abstract </a>,  <a href="concur04.ps.gz">gziped PostScript</a>)  
+
+</li><br> <br> 
+
+
+<li> Ahmed Bouajjani,  Javier  Esparza,  and Tayssir Touili. <FONT COLOR="brown">Reachability Analysis of Synchronized PA Systems. </FONT>
+<i>In Proc. 6th International Workshop on Verification of Infinite-State Systems (INFINITY'04).</i> 
+(<a href="infinity04-abstract">abstract </a>,  <a href="infinity04.ps.gz">gziped PostScript</a>)    
+        
+</li><br> <br> 
+
+
+
+
+<li>Ahmed  Bouajjani and  Tayssir Touili.  <FONT COLOR="brown">Reachability Analysis of Process Rewrite Systems.</FONT>.
+
+<i>In Proc. Intern. Conf. on Foundations of Software Technology and Theoretical Computer Science (FSTTCS'03).</i> 
+(<a href="fsttcs03-abstract">abstract </a>,  <a href="fsttcs03.ps.gz">gziped PostScript</a>)  
+</li><br> <br> 
+
+<li> Ahmed Bouajjani,  Javier  Esparza,  and Tayssir Touili. <FONT COLOR="brown">A generic approach to the static analysis of concurrent programs with procedures. </FONT>
+<i>In Proc. 30th  ACM SIPGPLAN-SIGACT on Principles of Programming Languages (POPL'03).</i> 
+(<a href="popl03-abstract">abstract </a>,  <a href="popl03.ps.gz">gziped PostScript</a>)    
+        
+
+</li><br> <br> 
+
+<li> Ahmed Bouajjani and Tayssir Touili. <FONT COLOR="brown">Extrapolating Tree Transformations. </FONT>
+          <i>In Proc. 14th Int. Conf. on Computer Aided Verification (CAV'02),
+             Lecture Notes in Computer Science, 2002.   </i>  
+(<a href="cav02-abstract">abstract </a>,  <a href="cav02.ps.gz">gziped PostScript</a>)      
+       
+  
+ 
+</li><br> <br> 
+
+<li> Tayssir Touili. <FONT COLOR="brown">Regular Model Checking using Widening Techniques.</FONT>
+
+<i>1st Vepas Workshop (VEPAS'01). In  Volume 50 of Electronic Notes in TCS, 2001. </i> 
+(<a href="vepas01-abstract">abstract </a>,  <a href="vepas01.ps.gz">gziped PostScript</a>) 
+</li><br> <br>
+
+
+<li>Ahmed Bouajjani, Anca  Muscholl,   and Tayssir Touili.  <FONT COLOR="brown">Permutation Rewriting and Algorithmic Verification. </FONT>
+<i>In Proc. 16th IEEE Symp. on Logic in Computer Science (LICS'01), 2001.   </i> 
+ (<a href="lics01-abstract">abstract </a>,  <a href="lics01.ps.gz">gziped PostScript</a>) 
+
+</li><br> <br>
+
+
+
+<li> Ahmed Bouajjani, Bengt Jonsson,
+                Marcus Nilsson, and Tayssir Touili.  <FONT COLOR="brown">Regular Model Checking.</FONT>
+          <i>In Proc. 12th Int. Conf. on Computer Aided Verification (CAV'00),
+             Lecture Notes in Computer Science, 2000.   </i>       
+ (<a href="cav00-abstract">abstract </a>,  <a href="cav00.ps.gz">gziped PostScript</a>)       
+
+ 
+
+</li><br> <br>
+</ul>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

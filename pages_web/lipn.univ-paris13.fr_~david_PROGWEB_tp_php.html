@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="tp.css">
+    <title>Sujet de TP: PHP et les bases de données</title>
+  </head>
+
+  <body>
+    <header>Sujet de TP: PHP et les bases de données</header>
+
+    <main>
+           
+      <article class="exercice">
+	<header><h2>Exercice 1: le premier script</h2></header>
+	
+	<ul>
+	  <li>Créez un script test.php dans le répertoire <code>~/public_html/php/</code> 
+	    qu'il génère une page HTML5 minimale affichant le numéro de version de l’interpréteur PHP utilisée. </li>
+	  <li>Vérifiez avec un navigateur qu'il est bien exécuté avec l'URL 
+	    <code>http://marseille/~"numero étudiant"/test.php.</code> </li>
+	</ul>
+	
+      </article>
+
+
+      <article class="exercice">
+	<header><h2>Exercice 2: formulaire et PHP</h2></header>
+	
+	<p>
+	  Utilisez la méthode <code>POST</code> et le formulaire décrit dans <code>inscription.html</code>
+	  pour ajouter un utilisateur dans la base de données. Le code <code>PHP</code> sera inscrit dans un répertoire 
+	  <code>~/public_html/php/</code> dans un fichier <code>inscription.php</code>.
+	</p><ul>
+	  <li>Utiliser un filtre pour savoir si l'adresse mail est bien au bon format</li>
+	  <li>Vérifier que les champs ne sont pas vides.</li>
+	  <li>Initialiser un tableau <code>donnees</code> aux m\^emes clés et valeurs que le tableau <code>$_POST</code>
+	  <li>Afficher une nouvelle page produite par PHP, contenant une table <code>HTML</code> qui énumère les clés et les valeurs de <code>données</code>.</li>
+	</ul>
+	<p></p>
+      </article>
+
+      <article class="exercice">
+	<header><h2>Exercice 3: le blog en PHP</h2></header>
+	
+	<ul>
+	  <li>Reprendre le TP noté</li>
+	  <li>Ecrire dans un fichier <code>article_blog.php</code> une classe dont le constructeur initialise les tableaux de 3 cases <code>liens</code>, <code>contenu</code>, <code>titre</code> 
+	    et <code>image</code> aux valeurs que vous extrairez de votre page HTML. Vous supprimerez ensuite les articles de votre page <code>HTML</code>.</li>
+	  <li>Ecrire dans la classe une méthode <code>ecrireArticle</code> qui prend en entrée un entier, qui représente la clé que vous utiliserez pour accéder 
+	    aux quatres tableaux et produire en <code>PHP</code> un <code>article HTML</code> à l'aide de ces valeurs.</li>
+	  <li>écrire dans la classe une méthode <code>ecrireContenu</code>, qui utilise <code>ecrireArticle</code> pour afficher les 3 articles.</li>
+	  <li>Renommer votre fichier <code>index.html</code> en <code>index.php</code>. Utilisez un script <code>PHP</code> pour inclure <code>article_blog.php</code>, puis utilisez la classe pour produire les 3 articles.</li>
+	</ul>	
+      </article>
+
+
+    </main>
+
+      <footer>Auteur: Julien David (2017)</footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Teaching</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+
+  </head>
+  <body>
+    
+    <div id="main">
+      <div id="content">
+	<h3 id="section">2019-2020</h3>
+
+<h2 id="c-m2">C++ (M2)</h2>
+
+<p><a href="https://www.irif.fr/~carton/Enseignement/C++/">La page du cours</a></p>
+
+<p><a href="../cpp-m2mo/index.html">La page du TD</a></p>
+
+<h3 id="section-1">2017-2018</h3>
+
+<h2 id="algorithmique-1-l3">Algorithmique 1 (L3)</h2>
+
+<p>Voici les sujets des travaux dirigés du cours d'Algorithmique 1 :</p>
+
+<ul>
+  <li><a href="../Algo1/TD1.pdf">TD1</a></li>
+  <li><a href="../Algo1/TD2.pdf">TD2</a></li>
+  <li><a href="../Algo1/TD3.pdf">TD3</a></li>
+  <li><a href="../Algo1/TD4.pdf">TD4</a></li>
+  <li><a href="../Algo1/TD6.pdf">TD6</a></li>
+  <li><a href="../Algo1/TD7.pdf">TD7</a></li>
+  <li><a href="../Algo1/TD8.pdf">TD8</a></li>
+  <li><a href="../Algo1/TD9.pdf">TD9</a></li>
+</ul>
+
+      </div>
+    </div>
+    <!-- <div id='logo'> -->
+    <!--   <a href=/index.html> -->
+    <!-- 	<img alt='logo' src='/logo-logica.png' /> -->
+    <!--   </a> -->
+    <!-- </div> -->
+    <div id="sidebar">
+      <div id="logo">
+	<a href="../index.html">
+	  <h2>Luc Pellissier</h2>
+	  <img alt="Luc Pellissier" height="100" src="../Luc.jpg">
+	</a>
+	<!--   <a href="https://www.fing.edu.uy/imerl/inicio"> -->
+	<!--     <img alt='imerl' src='/logo-imerl.png' height='60' /> -->
+	<!--   </a>&ensp;&ensp;&ensp; -->
+	<!--   <a href="https://www.fing.edu.uy"> -->
+	<!--     <img alt='fing' src='/logo-fing.png' height='60'/> -->
+	<!--   </a> -->
+      </div>
+      <ul>
+	<li><a href="../work">Research</a></li>
+	<li><a href=".">Teaching</a></li>
+        <li><a href="../documents">Documents</a></li>
+	<li><a href="../links">Links</a></li>
+    </ul>
+</div>
+    <!-- <div id="footer"> -->
+    <!--   Equipo de Lógica — IMERL<br> -->
+    <!--   Julio Herrera y Reissig 565 — 11300 Montevideo <br> -->
+    <!--   Uruguay -->
+    <!-- </div> -->
+  </body>
+</html>

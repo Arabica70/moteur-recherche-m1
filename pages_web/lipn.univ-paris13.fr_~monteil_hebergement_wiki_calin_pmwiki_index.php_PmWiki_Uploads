@@ -1,0 +1,246 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Uploads </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.Uploads' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=search&amp;q=link=PmWiki.Uploads'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Uploads</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupMasterIndex'>Markup master index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables'>Tables</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>authors (intermediate) </span>
+</div>
+<p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWiki'>PmWiki</a> can be configured to allow authors to upload and store files and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Images'>images</a> (known as attaching them).
+These attachments may then be referenced from any page.  
+</p>
+<div class='vspace'></div><div class='indent'><em>Note</em>: <em><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWiki'>PmWiki</a> is distributed with uploads disabled by default.  See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadsAdmin'>Uploads Admin</a> for information about how to enable and configure the upload feature.</em>
+<div class='vspace'></div></div><div class='indent'><em>Note2</em>: <em>Uploads can be configured site-wide, by-group, or by-page; see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadsAdmin'>Uploads Admin</a> for details. This determines whether all uploads go in one directory for the site, an individual directory for each group, or an individual directory for each page. The default is to organize uploads by <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>group</a>.</em>
+</div><div class='vspace'></div><h2><code class='escaped'>Attach:</code> Syntax</h2>
+<p>To add or link to an attachment, an author edits a page to include the markup &ldquo;<code>Attach:</code>&rdquo; followed by a name of an attachment (e.g., &ldquo;<code>Attach:resume.pdf</code>&rdquo;).  When the page is displayed, the <code>Attach:</code> markup becomes one of the following:
+</p>
+<div class='vspace'></div><ul><li>A link to the named attachment (if uploaded, ie already in the upload directory)
+</li><li>A link to a form whereby the author can specify a file to be uploaded and used as the new attachment (if not yet uploaded, ie not in the upload directory)
+</li><li>If the attachment is an <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Images'>image</a> file with an extension such as .gif, .jpeg, or .png, it is displayed as an <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Images'>image</a>.
+</li></ul><p class='vspace'>The behaviour of links can be modified to
+</p><ul><li>prevent an image attachment from displaying as an image, place it in double brackets (e.g., <code class='escaped'>[[Attach:image.jpg]]</code>).
+</li><li>have a link to an attachment appear without the &ldquo;<code class='escaped'>Attach:</code>&rdquo; at the beginning of the link, use <code class='escaped'>[[(Attach:)file.ext]]</code>.
+</li></ul><div class='vspace'></div><h2>Attachments on other pages and groups</h2>
+<p>To link  to an uploaded attachment (image or file) from another group, you simply refer the group itself (make sure &ldquo;Groupname&rdquo; has the dot in it).
+</p><div class='indent'><code class='escaped'>Attach:Groupname./file_name.ext</code> (note the dot after the groupname)
+</div><p>If PmWiki is configured with an individual directory per page use
+</p><div class='indent'><code class='escaped'>Attach:Pagename/file_name.ext</code> (Pagename is in the same WikiGroup)
+</div><div class='indent'><code class='escaped'>Attach:Groupname.Pagename/file_name.ext</code>
+</div><div class='vspace'></div><h2>Names with spaces</h2>
+<p>To link to a filename with spaces in it use the bracket link notation, eg
+</p><div class='indent'><code class='escaped'>[[Attach:a filename with spaces.txt]]</code>
+</div><p class='vspace'>&ldquo;Embedding in the page&rdquo; an image with spaces is not supported: just upload the images with names without spaces, and use the markup <code class='escaped'>Attach:image.jpg</code>.
+</p>
+<p class='vspace'>The following workaround is possible, but is unsupported and not recommended:
+</p><div class='indent'><code class='escaped'>[[#blank | Attach:image space.jpeg]]</code>
+</div><div class='vspace'></div><h2>International characters in file names</h2>
+<p>See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadsAdmin'>UploadsAdmin</a> and <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadVariables#UploadNameChars'><code class='varlink'>&#036;UploadNameChars</code></a>.
+</p>
+<div class='vspace'></div><h2>Listing Uploaded Files On A Page</h2>
+<p>To list files that have been uploaded, use the markup:
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageDirectives#attachlist' title=":(:attachlist:):"><code class='escaped'>(:attachlist:)</code></a>
+</p>
+<p class='vspace'>This will list attachments to the current group or page, depending whether attachments are organised per group or per page; each instance includes a link to the attachment for viewing or downloading.  A list of attachments is also shown as part of the uploads page form.
+</p>
+<div class='vspace'></div><h3>Upload Form / Upload Replacement</h3>
+<p>One can go directly to the upload form by appending &ldquo;?action=upload&rdquo; to the URI for any page that has file uploads enabled by the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>Wiki Administrator</a>. Replace a file by simply uploading a new version of the file with the same name. 
+</p><ul><li>Be sure to clear your browser cache after replacing an upload. Otherwise, it may appear that the original upload is still on the server. 
+</li></ul><p>If you put <code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadVariables#EnableUploadVersions'><code class='varlink'>&#036;EnableUploadVersions</code></a>=1;</code> in your <code>local/config.php</code>, the old versions of the same files are renamed and not removed.
+</p>
+<p class='vspace'><a name='filetype' id='filetype'></a>
+</p><h3>Type and Size Restrictions</h3>
+<p>For security reasons, the upload feature is disabled when PmWiki is first installed.
+When enabled uploads are restricted as to the types and sizes of files that may be uploaded to the server (see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadsAdmin'>Uploads Admin</a>).  PmWiki&rsquo;s default configuration limits file sizes to 50 kilobytes and file extensions to common types such as &ldquo;.gif&rdquo;, &ldquo;.jpeg&rdquo;, &ldquo;.doc&rdquo;, &ldquo;.txt&rdquo;, and &ldquo;.pdf&rdquo;.  
+</p>
+<p class='vspace'>In addition, the administrator can configure the system to require an <code>upload</code> password&mdash;see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Passwords'>Passwords</a> and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PasswordsAdmin'>Passwords Admin</a>.
+</p>
+<p class='vspace'>By default the upload allows the following extensions. Note that by default, it is possible to upload files with no extensions.
+<a name='imagetypes' id='imagetypes'></a>   
+</p><pre> gif, jpg, jpeg, png, bmp, ico, wbmp, svg, svgz, xcf,       # images
+</pre><p><a name='imagetypesend' id='imagetypesend'></a>
+</p><pre> mp3, au, wav, ogg, flac,                                   # audio
+ ogv, mp4, webm, mpg, mpeg, wmf, mov, qt, avi,              # video
+ zip, 7z, gz, tgz, rpm, hqx, sit,                           # archives
+ odt, ods, odp, odg, doc, docx, ppt, pptx, xls, mdb, rtf,   # Office
+ exe,                                                       # executables
+ pdf, psd, ps, ai, eps,                                     # Adobe
+ htm, html, css, fla, swf,                                  # web stuff
+ txt, tex, dvi,                                             # text files
+ epub, kml, kmz, (files with no extension)                  # misc
+</pre><div class='vspace'></div><h3>Removal</h3>
+<p>At present uploaded files can only be deleted from the server by the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>wiki administrator</a>. Any uploads-authorized user may over-write an existing file by uploading another of the same name and extension to the same location.
+</p>
+<p class='vspace'>The administrator may remove an uploaded file by accessing the server via ftp (or via a control panel, if the host offers such a feature). The recipe <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Attachtable' rel='nofollow'>Cookbook:Attachtable</a> allows the deletion of the files from the wiki.
+</p>
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='vspace question'>Q When I upload a file, how do I make the link look like &ldquo;file.doc&rdquo; instead of &ldquo;<a rel='nofollow' class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=upload&amp;upname=file.doc'>Attach:file.doc</a><a rel='nofollow' class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=upload&amp;upname=file.doc'>&nbsp;&Delta;</a>&rdquo;?</p>
+<p> Use parentheses, as in <code class='escaped'>[[(Attach:)file.doc]]</code>.  There is also a configuration change that can eliminate the <code class='escaped'>Attach:</code> &mdash; see <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/AttachLinks' rel='nofollow'>Cookbook:AttachLinks</a>.
+</p>
+<p class='vspace question'>Q Why can&rsquo;t I upload files of size more than 50kB to my newly installed PmWiki?</p>
+<p> Out of the box PmWiki limits the size of files to be uploaded to 50kB. Add
+</p><div class='indent'><code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadVariables#UploadMaxSize'><code class='varlink'>&#036;UploadMaxSize</code></a> = 1000000; # limit upload file size to 1 megabyte</code>
+</div><div class='indent'>to your <em>config.php</em> to increase limit to 1MB (for example). See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadsAdmin'>UploadsAdmin</a> for how to further customize limits.  Note that both PHP and webservers also place their own limits on the size of uploaded files.
+</div><p class='vspace question'>Q Why does my upload exit unexpectedly with &ldquo;Incomplete file received&rdquo;?</p>
+<p> You may be running out of space in a &lsquo;scratch&rsquo; area, used either by PmWiki or by PHP.  On *nix, check that you have sufficient free space in /tmp and /var/tmp.
+</p>
+<p class='vspace question'>Q How do I make it so that the upload link still allows one to make another upload (if someone wants to replace the old version of a file with a newer version, for example). Currently you only get the upload link when there is no file in the upload directory.</p>
+<p> Use the Attach <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/PageActions'>page action</a>, and click on the delta symbol <span  style='color: blue;'>(&Delta;)</span> shown against each of files listed. If you can&rsquo;t see the attach action either uploads are not enabled, you are not authorized to upload, or the attach action has been commented out or is missing. See also <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/AvailableActions'>available actions</a>.
+</p>
+<p class='vspace question'>Q How do I hide the &ldquo;Attach:&rdquo; for all attachments</p>
+<p> See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/AttachLinks' rel='nofollow'>Cookbook:AttachLinks</a>, note that this does not currently work for <code class='escaped'> [[Attach:my file.ext]] </code>.
+</p>
+<p class='vspace question'>Q How can I link a file that have a 4-letter file extension such like &lsquo;abc.pptx&rsquo;?</p>
+<p> See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Upload%20Types' rel='nofollow'>Cookbook:Upload Types</a>
+</p>
+<p class='vspace question'>Q How can I prevent others from using the url&rsquo;s of my images on their site</p>
+<p> See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Prevent%20Hotlinking' rel='nofollow'>Cookbook:Prevent Hotlinking</a> 
+</p>
+<p class='vspace question'>Q How can I display a file that lacks a correct extension? <span style='font-size:83%'>(e.g. you are using <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/LinkIcons' rel='nofollow'>Cookbook:LinkIcons</a>)</span></p>
+<p> A file can be displayed by addition of a &ldquo;false&rdquo; extension to the URL. For example, if the url is <code><a class='urllink' href='http://example.com/dox/mydoc' rel='nofollow'>http://example.com/dox/mydoc</a></code>, add a fake query string on the end with the desired extension (e.g., <code><a class='urllink' href='http://example.com/dox/mydoc?format=.docx' rel='nofollow'>http://example.com/dox/mydoc?format=.docx</a></code>). If query strings are unsuitable, a fragment identifier should work, e.g. <code><a class='urllink' href='http://example.com/dox/mydoc#.docx' rel='nofollow'>http://example.com/dox/mydoc#.docx</a></code>.
+</p>
+<p class='vspace'> 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupMasterIndex'>Markup master index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables'>Tables</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Uploads' rel='nofollow'>PmWiki:Uploads</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Uploads-Talk' rel='nofollow'>PmWiki:Uploads-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on March 31, 2016, at 09:44 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

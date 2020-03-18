@@ -1,0 +1,852 @@
+<HTML>
+<HEAD>
+<TITLE>Algorithmes de factorisation à l'envi : crible quadratique, fractions continu&#233;es et consorts, par Cyril Banderier</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="facto">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+</HEAD>
+<BODY >
+<DIV ALIGN="CENTER">
+<FONT SIZE="+4">Algorithmes de factorisation à l'envi</FONT>
+<BR>
+<BR>
+<FONT SIZE="+2">[Crible quadratique, fractions continu&#233;es et consorts <br>
+o&#249; l'on verra &#201;ratosth&#232;ne, Fermat, Legendre, Gauss, Kra&#239;tchik, Lehmer, Pollard, Lenstra et Pomerance <BR>
+se disputant &#224; l'envi l'honneur du meilleur algorithme de factorisation.] <BR></FONT>
+<BR>
+<P>
+<BR>
+<BR>
+<BR>
+<P><FONT SIZE="+2">
+par Cyril Banderier,
+<BR>
+ma&#238;trise d'ingénierie math&#233;matique,
+<BR>
+Universit&#233; de Rouen.
+<BR>
+Année 1996/1997
+<P>
+</FONT></DIV>
+<P>
+<BR>
+<H2><A NAME="1">
+Table des mati&egrave;res</A>
+</H2>
+<!--Table of Contents-->
+<UL>
+<LI><A NAME="tex2html21"
+ HREF="#1">
+Table des mati&egrave;res</A>
+<LI><A NAME="tex2html22"
+ HREF="#2">
+Factorisation et second principe de la thermodynamique</A>
+<LI><A NAME="tex2html23"
+ HREF="#3">
+La m&#233;thode d'&#201;ratosth&#232;ne</A>
+<LI><A NAME="tex2html24"
+ HREF="#4">
+La m&#233;thode de Fermat</A>
+<LI><A NAME="tex2html25"
+ HREF="#5">
+La m&#233;thode de Gauss-Kra&#239;tchik</A>
+<LI><A NAME="tex2html26"
+ HREF="#6">
+Factorisation par les fractions continu&#233;es</A>
+<LI><A NAME="tex2html27"
+ HREF="#7">
+Chassez l'alg&#232;bre lin&#233;aire, elle revient au galop</A>
+<LI><A NAME="tex2html28"
+ HREF="#8">
+La rho m&#233;thode de Pollard </A>
+<LI><A NAME="tex2html29"
+ HREF="#9">
+La m&#233;thode p-1 de Pollard</A>
+<LI><A NAME="tex2html30"
+ HREF="#10">
+Factorisation par les courbes elliptiques</A>
+<LI><A NAME="tex2html31"
+ HREF="#11">
+Factorisation par crible quadratique</A>
+<LI><A NAME="tex2html32"
+ HREF="#12">
+D'une m&#233;thode &#224; l'autre</A>
+<LI><A NAME="tex2html33"
+ HREF="#13">
+La m&#233;thode des corps de nombres</A>
+<LI><A NAME="tex2html34"
+ HREF="#14">
+Irr&#233;ductibilit&#233; d'un polyn&#244;me modulo <I>n</I></A>
+<LI><A NAME="tex2html35"
+ HREF="#15">
+La m&#233;thode Lanczos par blocs</A>
+<LI><A NAME="tex2html36"
+ HREF="#16">
+RSA</A>
+<LI><A NAME="tex2html37"
+ HREF="#17">
+Bibliographie</A>
+</UL>
+<!--End of Table of Contents-->
+<P><H1><A NAME="2">
+Factorisation et second principe de la thermodynamique</A>
+</H1>
+<P>
+Le deuxi&#232;me principe de la thermodynamique implique que l'entropie d'un syst&#232;me isol&#233; va en augmentant,
+interdisant ainsi toute r&#233;versibilit&#233;&nbsp;: ceci implique qu'il est impossible de &quot;revenir en arri&#232;re&quot;.
+Les math&#233;maticiens d'antan, ignorant ce postulat, n'eurent de cesse de l'enfreindre.
+Si, &#224; tout hasard, on demande &#224; un babylonien, en -5000 avant J.C., de prendre deux nombres 
+et de les multiplier, il consultera ses tables, pr&#233;alablement &#233;tablies par additions successives
+(on supposera que nous sommes tomb&#233;s sur un autochtone qui dispose et sait utiliser de telles tables).
+ M&#234;me chose si on lui demandait de faire une division. Ce n'est que trois mille ans plus tard que nous
+ pouvons tomber sur des comptables connaissant un m&#233;canisme, un algorithme, pour effectuer plus rapidement
+  ces op&#233;rations, &quot;inverses&quot; l'une de l'autre.
+<P>
+Mais, si l'on y prend garde, la division n'est pas vraiment l'op&#233;ration &quot;r&#233;ciproque&quot; de notre multiplication.
+La r&#233;versibilit&#233; se poserait plut&#244;t sous cette forme&nbsp;: pouvez-vous me dire quels sont les deux nombres que j'ai multipli&#233; entre eux pour obtenir le nombre 8051&nbsp;? Formul&#233; plus math&#233;matiquement&nbsp;: pouvez-vous me donner la factorisation de 8051&nbsp;?
+En cryptologie (th&#233;orie des codes secrets), une telle op&#233;ration, facile dans un sens et &#233;pineuse dans l'autre, est appel&#233;e une fonction trappe. On a en g&#233;n&#233;ral besoin soit de beaucoup de temps, soit d'aide, i.e. d'informations suppl&#233;mentaires, pour pouvoir revenir en arri&#232;re&nbsp;: cette aide est souvent appel&#233;e la clef et la fonction trappe est alors d&#233;nomm&#233;e &quot;fonction &#224; br&#232;che secr&#232;te&quot; (en anglais&nbsp;: trapdoor function).
+<P>
+Nous venons ainsi de donner un premier champ d'application d&#233;montrant l'int&#233;r&#234;t de r&#233;pondre &#224; notre question&nbsp;: comment factoriser un nombre&nbsp;?
+<P><H1><A NAME="3">
+La m&#233;thode d'&#201;ratosth&#232;ne</A>
+</H1>
+<P>
+Le premier &#224; avoir donn&#233; une m&#233;thode permettant de r&#233;pondre &#224; cette question est &#201;ratosth&#232;ne, vers -250. Il propose de faire les divisions successives jusqu'&#224; <IMG WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sqrt n$">, m&#233;thode au
+demeurant un peu grossi&#232;re, voire barbare, adjectif qui n'est pas des plus ad&#233;quats pour un hell&#232;ne... enfin passons&nbsp;!
+En effet, d'apr&#232;s Tchebycheff, si <IMG WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\pi(x)$"> d&#233;signe le nombre de nombres premiers inf&#233;rieurs &#224; <I>x</I>, on a, pour <IMG WIDTH="53" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$x \geq 11$">&nbsp;:
+
+<P ALIGN="CENTER"><IMG WIDTH="217" HEIGHT="49"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}
+\pi(x) \gt {{x\over \ln(x)} \ln {2^{1/2} 3^{1/3} 5^{1/5}\over 30^{1/30}}}.\end{displaymath}"></P>
+Donc la m&#233;thode d'&#201;ratosth&#232;ne, pour factoriser un nombre de 100 chiffres qui serait le produit de deux nombres premiers de 50 chiffres, n&#233;cessiterait plus de  <IMG WIDTH="158" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$10^{50}/\ln(10^{50}) \times 0.92$"> divisions, &#224; raison de mille divisions par nanoseconde sur un super-ordinateur hyperparall&#232;le, quantique et extra-terrestre, il faudrait donc la bagatelle de <IMG WIDTH="64" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$2\times 10^{28}$"> ann&#233;es, ce qui est plus que l'&#226;ge de l'univers (m&#234;me en prenant une bonne marge suite aux querelles de cosmologistes).
+Et que des physiciens r&#233;visionniste ne viennent pas nous dire que notre espace
+euclidien na&#239;f et notre conception limit&#233;e du temps ne sont que leurres
+et surench&#233;rir en d&#233;clarant que la physique quantique n'interdit pas
+les voyages temporels, quoiqu'en dise notre premier chapitre...
+Nous aurions du mal &#224; comprendre les implications effectives de telles vocif&#233;rations, toutefois,
+nous ne n&#233;gligerons pas les potentialit&#233;s d'un ordinateur quantique
+&#224; la Deutsch-Lockwood&nbsp;: qui sait ce que deviendrait la th&#233;orie de 
+la complexit&#233; avec des &#233;lectrons qui font des micro-sauts dans le pass&#233;&nbsp;?
+<P><H1><A NAME="4">
+La m&#233;thode de Fermat</A>
+</H1>
+<P>
+En 1643, Fermat, en r&#233;ponse &#224; une colle de son ami le P&#232;re Mersenne, propose une m&#233;thode bas&#233;e sur l'identit&#233; remarquable <I>x<SUP>2</SUP></I>-<I>y<SUP>2</SUP></I>=(<I>x</I>+<I>y</I>)(<I>x</I>-<I>y</I>), ainsi on cherche d&#233;sormais &#224; factoriser <I>n</I> en l'&#233;crivant comme diff&#233;rence de carr&#233;s, ce qui reste n&#233;anmoins toujours fastidieux.
+<P>
+Tout nombre compos&#233; impair peut s'&#233;crire comme diff&#233;rence de deux carr&#233;s, en effet&nbsp;:
+<IMG WIDTH="160" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$ab=(\frac{a+b}{2})^{2}-(\frac{a-b}{2})^{2}$">. Cette m&#233;thode sera particuli&#232;rement recommand&#233;e si <I>a</I> et <I>b</I> sont proches l'un de l'autre.
+<P>
+<B>Exemple</B></P>
+<P>
+Si l'on tente de factoriser 8051, le plus rapide est sans doute de remarquer, comme le signale avec remords C. Pomerance dans son article, que 8051=8100-49=90<SUP>2</SUP>-7<SUP>2</SUP> d'o&#249; 8051=97*83.</P>
+<P>
+Toutefois cet algorithme n'est gu&#232;re plus int&#233;ressant que celui des divisions successives, c'est d&#251; au fait que la plupart des entiers n'ont pas des facteurs premiers proches.
+<P><H1><A NAME="5">
+La m&#233;thode de Gauss-Kra&#239;tchik</A>
+</H1>
+<P>
+C'est ce qui poussa, en 1801, Gauss &#224; s'int&#233;resser &#224; une am&#233;lioration de l'id&#233;e de Fermat, il suffit en effet d'avoir <I>x<SUP>2</SUP></I>-<I>y<SUP>2</SUP></I> &#233;gal &#224; un multiple de <I>n</I>, pour en tirer des informations&nbsp;: pgcd(<IMG WIDTH="61" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$x \pm y,n$">), si <IMG WIDTH="114" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$x \not \equiv \pm y \mbox{ mod }n$">, sera un diviseur de <I>n</I>. Avec un peu de chance, il sera diff&#233;rent de <I>n</I> et de 1. En fait, la relation s'&#233;crit plus math&#233;matiquement <IMG WIDTH="116" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$x^2\equiv y^2 \mbox{ mod }n$"> et on dit alors que <I>x<SUP>2</SUP></I> et <I>y<SUP>2</SUP></I> sont des carr&#233;s (ou encore des &quot;r&#233;sidus quadratiques&quot;) modulo <I>n</I>. Gauss se pr&#233;occupe alors de trouver des petits r&#233;sidus quadratiques pour que les calculs soient simples. C'est cette id&#233;e qui sera remise au go&#251;t du jour par M. Kra&#239;tchik en 1911.
+<P><H1><A NAME="6">
+Factorisation par les fractions continu&#233;es</A>
+</H1>
+<P>
+Cette factorisation par les r&#233;sidus quadratiques avait d'ailleurs &#233;t&#233; une id&#233;e que Legendre, dans sa <I>Th&#233;orie des nombres</I> de 1798, avait donn&#233;e en remarque en signalant m&#234;me que ces r&#233;sidus pouvait &#234;tre obtenus par le d&#233;veloppement en fraction continu&#233;e de <IMG WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sqrt n$">.<P>
+D.H. Lehmer et R.E. Powers ont clairement expos&#233; cette m&#233;thode dans leur article
+ <I>On factoring large numbers</I>, Bulletin of the American Mathematical Society, pp.770-776, 1931,
+  en ajoutant l'id&#233;e suivante&nbsp;: parmi la liste des relations <IMG WIDTH="136" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$A_{i-1}^2 \equiv Q_i \mbox{ mod }n $">   obtenues &#224; partir du d&#233;veloppement en fraction continu&#233;e de <IMG WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sqrt n$">    (comme ce sera d&#233;taill&#233; ci-dessous), il suffit de trouver <I>Q</I><SUB><I>i</I></SUB> et <I>Q</I><SUB><I>j</I></SUB> tel que leur produit
+     soit un carr&#233; (donc <IMG WIDTH="174" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\exists x,y\in {\fam\symfam\tensym N}\vert x^2 Q_i=y^2 Q_j$">) et on a alors
+      <IMG WIDTH="244" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$(x A_{i-i})^2-(y A_{j-1})^2 \equiv 0 \mbox{ mod }n $">, et avec un peu de chance le pgcd de
+       <I>n</I> et de <IMG WIDTH="114" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$x A_{i-i} \pm y A_{j-1}$"> sera un diviseur non trivial de <I>n</I>.
+<P>
+Pour factoriser <I>n</I>, &#233;crivons d'abord <IMG WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sqrt n$"> sous forme de fraction continu&#233;e&nbsp;:
+
+<P ALIGN="CENTER"><IMG WIDTH="170" HEIGHT="54"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}
+\sqrt n = b_0+{1 \over {b_1+ {1 \over {b_2+{1 \over \dots}}}}}.\end{displaymath}"></P>
+<P>
+Rappelons que ce calcul se fait tr&#232;s simplement avec
+<IMG WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$x_0 = \sqrt n$">, <I>b</I><SUB><I>i</I></SUB> = [<I>x</I><SUB><I>i</I></SUB>] et <IMG WIDTH="96" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$x_{i+1}={1\over {x_i-b_i}}$">.<P>
+On peut montrer par r&#233;currence que <I>x</I><SUB><I>i</I></SUB> peut s'&#233;crire
+<IMG WIDTH="50" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="${\sqrt n+P_i} \over Q_i$"> avec <I>P</I><SUB><I>i</I></SUB> et <I>Q</I><SUB><I>i</I></SUB> entiers.
+De plus, les r&#233;duites <I>A</I><SUB><I>n</I></SUB> / <I>B</I><SUB><I>n</I></SUB> peuvent s'obtenir par <IMG WIDTH="354" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$A_n=b_n A_{n-1}+A_{n-2} (\mbox{o\`u }
+A_{-2}=0 \mbox{ et } A_{-1}=1)$">.<P>
+Les r&#233;duites d'un d&#233;veloppement en fraction continu&#233;e d'un r&#233;el <I>x</I>&gt;1 v&#233;rifient
+|<I>A</I><SUB><I>i</I></SUB><SUP>2</SUP>-<I>x<SUP>2</SUP>B<SUP>2</SUP></I><SUB><I>i</I></SUB>|&lt;2<I>x</I> d'o&#249; <IMG WIDTH="145" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\vert A_i^2 \mbox{ mod }n\vert<2\sqrt n$"> et ainsi nous avons <IMG WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\vert Q_i\vert<2 \sqrt n$"> [Hardy,Koblitz],
+ce qui garantit une petite taille des r&#233;sidus quadratiques ainsi obtenus.
+<P>
+En
+outre, on a de nombreux r&#233;sultats sur le d&#233;veloppement en fraction continu&#233;e de <IMG WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sqrt n$">&nbsp;: on sait que
+la p&#233;riode est major&#233;e par <IMG WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="${1 \over 2} [\sqrt n]^2$">. Dans les faits, on a bien mieux&nbsp;:
+une majoration par <IMG WIDTH="100" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$(\ln n)^2 \ln \ln n$"> pour &quot;presque tous&quot; les entiers.
+On sait aussi que le d&#233;veloppement est du type <IMG WIDTH="241" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$b_0, [b_1 \dots b_k
+(b_k) b_{k-1} \dots b_1, 2b_0]^\infty$">.<P><H1><A NAME="7">
+Chassez l'alg&#232;bre lin&#233;aire, elle revient au galop</A>
+</H1>
+<P>
+Nos math&#233;maticiens modernes, plus soucieux du respect du second principe de la thermodynamique, comprirent que la r&#233;versibilit&#233; e&#251;t son co&#251;t (les algorithmiciens emploient volontiers le terme &quot;complexit&#233;&quot;) et surent d&#233;tecter l'importance du mot &quot;syst&#232;me&quot; dans l'&#233;nonc&#233; du second principe.
+<P>
+Effectivement, en d&#233;composant en facteurs premiers les diff&#233;rents <I>Q</I><SUB><I>i</I></SUB> sus-mentionn&#233;s, on obtient,
+pour chaque <I>Q</I><SUB><I>i</I></SUB>, une liste d'entiers <I>e</I><SUB><I>k</I></SUB> avec <IMG WIDTH="188" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$Q_i = (-1)^{e_0}
+p_1^{e_1} p_2^{e_2} \dots p_r^{e_r}$">, que l'on peut stocker sous forme de vecteurs&nbsp;; en fait on peut m&#234;me se limiter &#224; stocker ces vecteurs
+  modulo 2, car, pour savoir si un produit sera un carr&#233;, seule la parit&#233; compte.
+Comme il est difficile de stocker des vecteurs de longueur infinie (la base des nombres premiers est
+ bien infinie), on se limite &#224; des factorisations partielles sur une sous-base finie pr&#233;alablement
+  choisie. Pour de nombreux <I>Q</I><SUB><I>i</I></SUB>, de tels factorisations peuvent n&#233;anmoins s'av&#233;rer compl&#232;tes,
+   on dit que de tels nombres qui n'ont que de petits facteurs premiers sont <I>friables</I> 
+   (en anglais&nbsp;: smooth). Si le nombre de factorisations compl&#232;tes est plus grand que le cardinal 
+   de la sous-base de nombres premiers choisie, l'alg&#232;bre lin&#233;aire nous apprend que ces vecteurs 
+   sont li&#233;s&nbsp;: on peut donc trouver un produit &#233;gal &#224; un carr&#233;.
+<P>
+Cette l&#233;g&#232;re am&#233;lioration de l'algorithme de Lehmer et Powers, due en 1970 &#224; M.A. Morrison &amp; J.Brillhart (confer <I>A method of factoring and the factorization of <I>F<SUB>7</SUB></I></I>, Mathematics of computation, pp183-205, 1975) leur permit de r&#233;ussir la premi&#232;re factorisation du septi&#232;me nombre de Fermat <I>F<SUB>7</SUB></I>. Il faut bien avoir conscience, qu'avant 1970, un nombre de vingt chiffres repr&#233;sentait les limites de la factorisation mais qu'avec l'arriv&#233;e de l'algorithme de factorisation par les fractions continu&#233;es de Brillhart et Morrison, il &#233;tait d&#233;sormais facile de factoriser un nombre de 50 chiffres (<I>F<SUB>7</SUB></I> a 39 chiffres, de nos jours, sur un Pentium 100, il faut 22 minutes pour le factoriser avec l'algorithme de l'annexe 1).
+En fait, on peut m&#234;me regarder le d&#233;veloppement de <IMG WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\sqrt{kn}$"> pour un <I>k</I> pr&#233;alablement choisi.
+<P>
+Pomerance a estim&#233; la complexit&#233; de cet algorithme &#224; <IMG WIDTH="157" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\exp( \sqrt{2 (\ln n) \ln \ln n})$"> et, en 1983,
+il a propos&#233; une variante, avec S.Wagstaff, baptis&#233;e &quot;Early Abort Strategy&quot; d'une complexit&#233; de
+<IMG WIDTH="310" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$n^{\sqrt{1.5 \ln \ln n/\ln n)}} = \exp( \sqrt{1.5 (\ln n) \ln \ln n})$">.<P><H1><A NAME="8">
+La rho m&#233;thode de Pollard </A>
+</H1>
+Elle est aussi appel&#233;e m&#233;thode de Monte Carlo, car elle fait appel &#224; un choix al&#233;atoire (souvent en analyse num&#233;rique, c'est ainsi que de nombreuses m&#233;thodes s&#233;rendipiteuses,  i.e. tirant partie du hasard, sont dites de Monte-Carlo, voire pour certains anglophones, de Las-Vegas), cet algorithme a &#233;t&#233; expos&#233; par J.M. Pollard, <I>A Monte-Carlo method for factorization</I>, BIT, vol 15, 1975.
+On prend un polyn&#244;me <I>f</I> et on calcule <IMG WIDTH="158" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$x_{i+1}:=f(x_i) \mbox{ mod }n$"> o&#249; <I>x<SUB>0</SUB></I>=1 et on calcule <I>pgcd</I>(<I>x</I><SUB><I>i</I></SUB>-<I>x</I><SUB><I>k</I></SUB>,<I>n</I>) pour obtenir un diviseur de <I>n</I>.
+<P>
+<B>Exemple</B></P>
+<P>
+Tentons ainsi de factoriser <I>n</I>=8051 avec le polyn&#244;me <I>f</I>(<I>x</I>)=<I>x<SUP>2</SUP></I>+1.
+<BR>
+On choisit &#224; chaque fois <IMG WIDTH="202" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$k=2^{plancher(\ln(i)/\ln(2))}-1$">, c'est li&#233; &#224; la m&#233;thode de d&#233;tection de p&#233;riode de Brent.
+<P>
+<DIV ALIGN="CENTER">
+ <SMALL><TABLE CELLPADDING=3 BORDER="1">
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP><I>i</I></TD>
+<TD ALIGN="CENTER" NOWRAP><I>x</I><SUB><I>i</I></SUB></TD>
+<TD ALIGN="CENTER" NOWRAP><I>k</I></TD>
+<TD ALIGN="CENTER" NOWRAP><I>x</I><SUB><I>k</I></SUB></TD>
+<TD ALIGN="CENTER" NOWRAP>pgcd(<I>x</I><SUB><I>i</I></SUB>-<I>x</I><SUB><I>k</I></SUB>,<I>n</I>)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>26</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>4</TD>
+<TD ALIGN="CENTER" NOWRAP>677</TD>
+<TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>26</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>7474</TD>
+<TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>26</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>6</TD>
+<TD ALIGN="CENTER" NOWRAP>2839</TD>
+<TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>26</TD>
+<TD ALIGN="CENTER" NOWRAP>97</TD>
+</TR>
+</TABLE></SMALL>
+</DIV>
+<P>
+Une fois de plus, on obtient 8051=97*83. On pourra utiliser notre programme sous Maple (annexe 2) pour v&#233;rifier ces calculs.</P>
+<P>
+Cet algorithme a une complexit&#233; de <IMG WIDTH="305" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$n^{\sqrt{2.5 \ln \ln n / \ln n}}=\exp(\sqrt{2.5 (\ln n) \ln \ln n})$">.<P><H1><A NAME="9">
+La m&#233;thode p-1 de Pollard</A>
+</H1>
+C'est encore &#224; J.M. Pollard que l'on doit cette m&#233;thode, confer <I>Theorems on factorization and primality testing</I>, Proceedings Cambridge Phil. Soc., pp 521-528, 1974.
+<P>
+Elle est bas&#233;e sur le principe simple suivant&nbsp;:
+si on a <I>p</I>-1|<I>k</I>! alors, pour <I>a</I> premier avec <I>p</I>,
+on aura <I>p</I>|<I>a</I><SUP><I>p</I>-1</SUP>-1|<I>a</I><SUP><I>k</I>!</SUP>-1.
+<P>
+<B>Exemple</B></P>
+<P>
+Pour <I>n</I>=8051 et en prenant <I>a</I>=2.
+<DIV ALIGN="CENTER">
+ <SMALL><TABLE CELLPADDING=3 BORDER="1">
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP><I>k</I></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG WIDTH="78" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.gif"
+ ALT="$2^{k!} \mbox{ mod }n$"></TD>
+<TD ALIGN="CENTER" NOWRAP>pgcd(<IMG WIDTH="97" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$n,2^{k!} \mbox{ mod }n$">)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>63</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>4</TD>
+<TD ALIGN="CENTER" NOWRAP>6982</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>2520</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>6</TD>
+<TD ALIGN="CENTER" NOWRAP>4268</TD>
+<TD ALIGN="CENTER" NOWRAP>97</TD>
+</TR>
+</TABLE></SMALL>
+</DIV>
+<P>
+Pas de surprise&nbsp;: on obtient 8051=97*83. On pourra utiliser notre programme sous Maple (annexe 2) pour v&#233;rifier ces calculs.</P>
+<P>
+Bien s&#251;r, cette m&#233;thode n'est pas rentable si aucun des facteurs <I>p</I> n'est du type &quot;<I>p</I>-1 friable&quot;.
+<P><H1><A NAME="10">
+Factorisation par les courbes elliptiques</A>
+</H1>
+<P>
+M&#233;thode d&#233;couverte par H.W. Lenstra Jr en 1985 et qu'il a expos&#233;e dans <I>Factoring integers with elliptic curves </I>, Report 86-18, Matematisch Instituut, Universiteit van Amsterdam, 1986.
+<P>
+Cette m&#233;thode achoppe sur certains nombres, toutefois c'est elle qui donne les
+meilleurs r&#233;sultats pour trouver un facteur &lt;10<SUP>30</SUP> de <I>n</I>.
+On trouvera dans l'annexe 1 son impl&#233;mentation par I.Vardi sous Mathematica&nbsp;; elle est &#233;galement
+impl&#233;ment&#233;e sous Maple avec la commande <I>ifactor(n,lenstra)</I>&nbsp;; renvoyons les lecteurs curieux &#224; la lecture de [Atkin], [Koblitz], [Morain] et [Ribenboim].
+<P>
+Il appert ainsi qu'il existe de nombreux algorithmes de factorisations, pour lutter contre l'embarras du choix signalons
+que H. Riesel,
+dans <I>Prime numbers and computer methods for factorization</I>, Birkha&#252;ser, 1985,
+propose un algorithme de factorisation qui comporte un algorithme
+pour choisir quelle m&#233;thode de factorisation employer&nbsp;; c'est ce que l'on pourra appeler un m&#233;ta-algorithme ou une m&#233;tastrat&#233;gie&nbsp;!
+<P>
+La recherche d'un algorithme rapide de factorisation n'a pas seulement comme int&#233;r&#234;t d'enterrer la cryptographie,
+mais il permet aussi de servir de point de rep&#232;re quant &#224; l'&#233;volution des performances des ordinateurs,
+tout comme le calcul des d&#233;cimales de <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\pi$"> ou comme le th&#233;or&#232;me de Fermat a pu servir
+ de r&#233;f&#233;rence tout au long de l'histoire de la th&#233;orie des nombres.
+<P><H1><A NAME="11">
+Factorisation par crible quadratique</A>
+</H1>
+<P>
+En 1984, in <I>The quadratic sieve factoring algorithm</I>,
+Lecture Notes in Comp. Sci.,
+Springer, C. Pomerance propose son algorithme de factorisation
+par crible quadratique (Montgomery proposera une version l&#233;g&#233;rement
+am&#233;lior&#233;e car elle utilise plusieurs polyn&#244;mes&nbsp;:
+Multiple polynomial quadratic sieve ou MPQS).
+<P>
+La possibilit&#233; d'utiliser plusieurs polyn&#244;mes
+a le grand m&#233;rite de permettre une parall&#233;lisation de l'algorithme (i.e. on lance l'algorithme sur plusieurs machines &#224; travers le monde avec diff&#233;rents polyn&#244;mes g&#233;n&#233;rateurs).
+<P>
+Les algorithmes parall&#232;les ne sont qu'une version moderne de cet adage international&nbsp;: l'union fait la force.
+<P>
+C'est ainsi que Lenstra et Manasse ont d&#233;velopp&#233; un algorithme parall&#232;le utilisant le courrier &#233;lectronique et (avec  entre autres Lenstra Jr, Pollard, Odlyzko, Pomerance et Morain) le 15 juin 1990, ils purent annoncer au monde, via ce m&#234;me courrier la factorisation de
+<I>F<SUB>9</SUB></I>=2<SUP>2<SUP>9</SUP></SUP>+1=
+2424833 * 7455602825647884208337395736200454918783366342657 * <BR>
+<FONT SIZE="-2">741640062627530801524787141901937474059940781097519023905821316144415759504705008092818711693940737</FONT>.
+<P>
+Dans [Boender], on pourra trouver deux variantes de MPQS&nbsp;:
+<BR>
+-PMPQS&nbsp;: single large prime variation of MPQS,
+<BR>
+-PPMPQS&nbsp;: double large prime variation of MPQS.
+<P>
+PMPQS vient de partial MPQS&nbsp;: dans notre factorisation partielle, on ne retenait auparavant que les nombres
+friables, ici on s'autorise &#224; retenir le dernier cofacteur lorsque celui-ci est premier.
+<P>
+PPMPQS vient de partial-partial MPQS, on s'autorise ici &#224; retenir les deux derniers cofacteurs lorsque ceux-ci
+sont premiers.
+<P>
+Il s'agit une fois de plus de se ramener &#224; <IMG WIDTH="116" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$x^2\equiv y^2 \mbox{ mod }n$">,pour ce faire on  construit une suite de couples <IMG WIDTH="105" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.gif"
+ ALT="$a^2\equiv b \mbox{ mod }n$">. Nous sommes 
+alors assur&#233;s que <IMG WIDTH="136" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$b=P(a) \approx 2 a \sqrt n$"> est petit si <I>a</I> l'est.
+<P><H1><A NAME="12">
+D'une m&#233;thode &#224; l'autre</A>
+</H1>
+<P>
+Le 2 avril 1994, un challenge, propos&#233; par Martin Gardner en 1976 dans le
+Scientific American, fut relev&#233;&nbsp;: non, il ne fallait pas plus d'un milliard
+d'ann&#233;es pour factoriser RSA129, un nombre de 129 chiffres, qui ne sut r&#233;sister aux affres du crible quadratique.
+<P>
+Puis en 1996, le crible sur corps de nombres, d&#233;couvert par Pollard, donnait les m&#234;mes r&#233;sultats, en six fois moins de temps.
+<P>
+Le 12 avril 1996, Arjen K Lenstra et son &#233;quipe annonc&#232;rent par courier &#233;lectronique
+la factorisation de
+<BR>
+RSA130 = <SMALL>18070820886874048059516561644059055662781025167694013491701270214...
+<BR>
+50056662540244048387341127590812303371781887966563182013214880557
+<BR>
+= 39685999459597454290161126162883786067576449112810064832555157243 *
+<BR>
+45534498646735972188403686897274408864356301263205069600999044599
+<BR></SMALL>
+Il utilisa le crible sur corps de nombres avec le polyn&#244;me
+<BR>
+<IMG WIDTH="1237" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$5748302248738405200 X^5 + 9882261917482286102 X^4-13392499389128176685 X^3 \\ + 16875252458877684989 X^2+ 3759900174855208738 X - 46769930553931905995$">et sa racine 125 74411 16841 80059 80468 modulo RSA130.
+<P>
+Il estime le temps de calcul &#224; 500 ann&#233;es MIPS. Le fichier contenant
+les relations d&#233;tect&#233;es faisait plus de 3,5 Go. La matrice finale &#233;tait de
+taille 3 504 823 * 3 516 502.
+<P>
+De fait, les records de factorisation sont souvent soit des nombres du projet Cunningham, i.e. du type <IMG WIDTH="49" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$b^n\pm 1$"> avec <I>b</I> petit, soit des nombres de RSA Inc., qui sont bien plus durs que les pr&#233;c&#233;dents pour lesquels on a d&#233;sormais des algorithmes performants, voir
+les nombreux r&#233;sultats obtensibles &#224; <I>ftp://nimbus.anu.edu.au/pub/Brent/factors</I>.
+RSA Inc. propose d&#233;sormais la factorisation de nombres de partition, ou d'autres con&#231;us expr&#232;s pour s'y casser les dents...
+<P><H1><A NAME="13">
+La m&#233;thode des corps de nombres</A>
+</H1>
+<P>
+Toute cette section est traduite de [Elkenbracht-Huiwing].
+L'algorithme de factorisation par crible sur corps de nombres (en anglais&nbsp;: number field sieve ou NFS)
+ a &#233;t&#233; introduit par Pollard en 1988, c'est la m&#233;thode la plus rapide, elle se divise en fait en
+  deux algorithmes distincts&nbsp;:
+<BR>
+- le NFS sp&#233;cialement adapt&#233; &#224; des nombres du type <I>n</I>= <I>a r</I><SUP><I>t</I></SUP>+ <I>b s</I><SUP><I>u</I></SUP> (alias SNFS&nbsp;: special NFS),
+<BR>
+- le NFS applicable &#224; des nombres arbitraires (GNFS&nbsp;: general NFS).
+<P>
+Voici leur complexit&#233;&nbsp;:
+<BR>
+pour le SNFS&nbsp;: <IMG WIDTH="258" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\exp( (c+ o(1) ) (\ln n)^{1/3} (\ln \ln n)^{2/3})$"> o&#249; <IMG WIDTH="135" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$c={32 \over 9}^{1/3}\approx 1.523$">,
+<BR>
+pour le GNFS&nbsp;: <IMG WIDTH="258" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\exp( (c+ o(1) ) (\ln n)^{1/3} (\ln \ln n)^{2/3})$"> o&#249; <IMG WIDTH="135" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$c={64 \over 9}^{1/3}\approx 1.923$">.<P>
+Une version am&#233;lior&#233;e du GNFS avec beaucoup plus de polyn&#244;mes&nbsp;; due &#224; D. Coppersmith, a une
+complexit&#233; de <IMG WIDTH="258" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\exp( (c+ o(1) ) (\ln n)^{1/3} (\ln \ln n)^{2/3})$">o&#249; <IMG WIDTH="229" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$c={1 \over 3} (92+26 \sqrt {13})^{1/3}\approx 1.902$">.<P>
+C'est donc l'algorithme g&#233;n&#233;raliste le plus rapide.
+Rappelons que le MPQS a une complexit&#233; de <IMG WIDTH="259" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\exp( (1+ o(1) ) (\ln n)^{1/2} (\ln \ln n)^{1/2})$"> reste
+n&#233;anmoins plus int&#233;ressant pour des nombres ayant moins de 105 chiffres.
+Soit <I>n</I> le nombre que nous souhaitons factoriser, dans la suite, nous supposerons <I>n</I> nombre compos&#233; (un test de primalit&#233;, confer [Morain], permet rapidement de trancher cette question) impair qui n'est pas une puissance de nombre premier.
+<BR>
+Tout comme pour le MPQS, nous allons essayer de trouver une solution &#224; l'&#233;quation <IMG WIDTH="118" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$v^2\equiv w^2 \mbox{ mod }n$">.Pour au moins la moiti&#233; des <IMG WIDTH="143" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$v \mbox{ mod }n, w \mbox{ mod }n$"> v&#233;rifiant l'&#233;quation et <I>v</I>, <I>w</I> premiers avec n, le pgcd de <I>n</I> et de <I>v</I>-<I>w</I> donne un facteur non trivial de <I>n</I>.
+Pour obtenir <I>v</I> et <I>w</I>, nous allons d'abord choisir deux polyn&#244;mes primitifs <I>P<SUB>1</SUB></I> et <I>P<SUB>2</SUB></I> de degr&#233; <I>d<SUB>1</SUB></I> et <I>d<SUB>2</SUB></I> &#224; coefficients entiers et irr&#233;ductibles sur <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="${\fam\symfam\tensym Z}$"> (un polyn&#244;me est primitif si le pgcd de ses coefficients vaut 1). Soit <I>m</I> une racine commune, modulo <I>n</I>, de <I>P<SUB>1</SUB></I> et <I>P<SUB>2</SUB></I>.
+Dans le SNFS, on arrive &#224; obtenir de petits coefficients &#224; partir de <I>n</I>, ce qui n'est pas le cas 
+pour le GNFS, d'o&#249; une complexit&#233; sup&#233;rieure pour ce dernier.
+<P>
+En g&#233;n&#233;ral, au lieu de choisir au hasard un polyn&#244;me irr&#233;ductible, 
+on le construit de la mani&#232;re suivante&nbsp;: 
+on choisit son degr&#233; <I>d<SUB>1</SUB></I> puis on prend <I>m</I>=[<I>n</I><SUP>1/<I>d<SUB>1</SUB></I></SUP>] puis on &#233;crit <I>n</I> en base <I>m</I>, on a donc
+<IMG WIDTH="273" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$n=c_{d_1} m^{d_1}+c_{d_1-1} m^{d_1-1}+\dots +c_0$">. Le tour est jou&#233;&nbsp;: il nous suffit de prendre
+ <IMG WIDTH="294" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$P_1(x)=c_{d_1} x^{d_1}+c_{d_1-1} x^{d_1-1}+\dots+c_0$"> et <I>P<SUB>2</SUB></I>(<I>x</I>)=<I>x</I>-<I>m</I>&nbsp;; on aura m&#234;me <I>c</I><SUB><I>d<SUB>1</SUB></I></SUB>=1 
+ si (2<I>d<SUB>1</SUB></I>)<SUP><I>d<SUB>1</SUB></I></SUP>&lt;<I>n</I> (voir n&#233;anmoins le chapitre suivant sur l'irr&#233;ductibilit&#233;).
+<P>
+Soit <IMG WIDTH="19" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\alpha_i$">, pour <I>i</I>=1,2, une racine de <I>P</I><SUB><I>i</I></SUB> dans <IMG WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.gif"
+ ALT="${\fam\symfam\tensym C}$">. Soit <IMG WIDTH="24" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="${\fam\symfam\tensym Q}_n$"> l'anneau des rationnels
+ dont le d&#233;nominateur est premier avec <I>n</I>. Notre but est de trouver un ensemble <I>E</I> de paires (<I>a</I>,<I>b</I>) d'entiers
+  premiers entre eux tels que <IMG WIDTH="97" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\Pi_E (a-b \alpha_1)$"> et <IMG WIDTH="97" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\Pi_E (a-b\alpha_2)$"> sont des carr&#233;s&nbsp;:
+  <IMG WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\beta^2$"> dans <IMG WIDTH="52" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="${\fam\symfam\tensym Q}_n[\alpha_1]$"> et <IMG WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\gamma^2$"> dans <IMG WIDTH="52" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="${\fam\symfam\tensym Q}_n[\alpha_2]$">.<P>
+On peut rechercher les couples sur un pav&#233; <IMG WIDTH="138" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$[a \dots a'] 
+\times [b \dots b']$">, mais il existe aussi une m&#233;thode dite
+crible lin&#225;ire o&#249; l'on ne fait varier que <I>a</I> et l'on prend <I>b</I>=1. On fait appel &#224; l'analyse pour d&#233;terminer
+les bornes de l'intervalles de mani&#232;res &#224; arriver &#224; un compromis entre taille et effectivit&#233; (si
+l'on prend une fen&#234;tre de crible trop petite, nous avons peu de chances d'obtenir de nombres friables).
+<P>
+Nous avons deux homomorphismes d'anneaux <IMG WIDTH="155" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\varphi_i~: {\fam\symfam\tensym Q}_n[\alpha_i] \rightarrow {\fam\symfam\tensym Z}/n{\fam\symfam\tensym Z}$"> d&#233;finis
+ par <IMG WIDTH="143" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\varphi_i(\alpha_i)=m \mbox{ mod }n$">. Nous avons alors <IMG WIDTH="182" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\varphi_1(\beta^2)\equiv \varphi_2(\gamma^2)\mbox{ mod }n$"> et donc <IMG WIDTH="182" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\varphi_1(\beta)^2\equiv \varphi_2(\gamma)^2\mbox{ mod }n$">, si <IMG WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\varphi_1(\beta)$"> et <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\varphi_2(\gamma)$"> sont premiers entre eux, nous retombons bien sur un facteur,
+ &#224; savoir pgcd(<IMG WIDTH="128" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$n, \varphi_1(\beta)-\varphi_2(\gamma)$">), qui sera non trivial dans au moins la moiti&#233; des cas.
+<P>
+Une condition n&#233;cessaire pour que <IMG WIDTH="95" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\Pi_E (a-b \alpha_i)$"> soit un carr&#233; dans <IMG WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="${\fam\symfam\tensym Q}_n[\alpha_i]$"> est que sa norme <IMG WIDTH="124" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$N(\Pi_E (a-b \alpha_i))$"> soit un carr&#233; dans <IMG WIDTH="15" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="${\fam\symfam\tensym Q}$">. Notons, <IMG WIDTH="231" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$F_i(x,y) = y^{d_i} P_i(x/y) \in {\fam\symfam\tensym Z}[x,y]$"> la forme homog&#232;ne de <I>P</I><SUB><I>i</I></SUB>.
+Puisque nous avons <IMG WIDTH="202" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$N(a-b\alpha_i)=F_i(a,b)/c_{i,d_i}$">, nous pouvons en d&#233;duire que si le cardinal de <I>E</I> est pair et si <IMG WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\Pi_E F(a,b)$"> est un carr&#233; dans <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="${\fam\symfam\tensym Z}$">, alors <IMG WIDTH="124" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$N(\Pi_E (a-b \alpha_i))$"> est un carr&#233; dans <IMG WIDTH="15" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="${\fam\symfam\tensym Q}$">.<P>
+Le NFS cherche alors une paire (<I>a</I>,<I>b</I>) d'entiers premiers entre eux tels que les deux entiers <I>F</I><SUB><I>i</I></SUB>(<I>a</I>,<I>b</I>)
+se factorisent compl&#232;tement sur une base <I>K</I><SUB><I>i</I></SUB> de nombres premiers. On retombe alors dans le sch&#233;ma
+d&#233;crit ci-dessus pour le PMQS.
+<P>
+Malheureusement, la condition que la norme soit un carr&#233; dans <IMG WIDTH="15" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="${\fam\symfam\tensym Q}$"> n'est pas suffisante pour
+qu'on ait un carr&#233; dans <IMG WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="${\fam\symfam\tensym Q}_n[\alpha_i]$">.<P>
+Dans [Pomerance], on trouve aussi, la suite suivante d'objections&nbsp;:
+<BR>
+1. <IMG WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\fam\symfam\tensym Z}[\alpha]$"> peut &#234;tre diff&#233;rent de l'anneau des entiers alg&#233;briques.
+<BR>
+2. De plus, il est possible qu'il ne soit m&#234;me pas un anneau de Dedekind, donc
+on n'aura pas la d&#233;composition en id&#233;aux premiers.
+<BR>
+3. En outre, si nous avons une telle d&#233;composition, il se peut que l'id&#233;al produit soit le carr&#233;
+d'un id&#233;al non principal.
+<BR>
+4. De surcro&#238;t, m&#234;me principal, il peut &#234;tre engendr&#233; par un non entier alg&#233;brique (par exemple,
+c'est le cas de <IMG WIDTH="36" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$-9{\fam\symfam\tensym Z}$">).
+<BR>
+5. Le comble serait qu'il soit engendr&#233; par un entier alg&#233;brique mais que cet entier ne soit pas dans
+<IMG WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\fam\symfam\tensym Z}[\alpha]$"> !
+<BR>
+6. Et quand bien m&#234;me, comment trouver cet entier, i.e. comment extraire une racine carr&#233;e dans 
+<IMG WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\fam\symfam\tensym Z}[\alpha]$">&nbsp;?
+<P>
+La cinqui&#232;me objection est lev&#233;e par le r&#233;sultat suivant&nbsp;: si <I>f</I> est un polyn&#244;me unitaire irr&#233;ductible
+sur <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="${\fam\symfam\tensym Z}$">, alors toute racine complexe &alpha; de <I>f</I> et pour tout entier &gamma; de <IMG WIDTH="40" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="${\fam\symfam\tensym Q}(\alpha)$">,<IMG WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$f'(\alpha)\gamma$"> est dans <IMG WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\fam\symfam\tensym Z}[\alpha]$">. Ce qui nous int&#233;resse est que, si <IMG WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\gamma^2$"> est un carr&#233; dans les
+entiers de <IMG WIDTH="40" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="${\fam\symfam\tensym Q}(\alpha)$">, alors <IMG WIDTH="67" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$f'(\alpha)^2\gamma^2$"> est un carr&#233; dans <IMG WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="${\fam\symfam\tensym Z}[\alpha]$">.<P>
+Bien que l'on connaisse d&#233;j&#224; des algorithmes pour la sixi&#232;me objection, des recherches sont toujours en
+cours pour am&#233;liorer ces extractions de racines carr&#233;es. On peut par exemple suivre Couveignes en calculant
+des racines modulo <I>p</I> puis remonter en utilisant le th&#233;or&#232;me chinois&nbsp;; on peut aussi suivre Montgommery qui
+utilise une m&#233;thode it&#233;rative (une autre m&#233;thode due &#224; Cohen est ici inapplicable car elle aboutit &#224;
+des nombres gargantuesques).
+<P>
+Pour les autres objections, on va tester notre candidat <IMG WIDTH="52" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$a-\alpha b$">sur un lot de caract&#232;res (par exemple le
+symbole de Legendre <IMG WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$({a\over b})$"> pour diff&#233;rents <I>p</I>). Ainsi, si notre nombre est un carr&#233; dans tous ces
+corps, il aura de fortes chances d'&#234;tre r&#233;ellement un carr&#233;.
+<P><H1><A NAME="14">
+Irr&#233;ductibilit&#233; d'un polyn&#244;me modulo <I>n</I></A>
+</H1>
+<P>
+Nous avons vu au chapitre pr&#233;c&#233;dent que l'on recherche des polyn&#244;mes irr&#233;ductibles sur <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="${\fam\symfam\tensym Z}$">,ce qui sera bien le cas s'ils le sont dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="${\fam\symfam\tensym Z}/n{\fam\symfam\tensym Z}$">.<P>
+Or, en pratique, si l'on prend un <I>P</I> de degr&#233; 5, alors <I>P</I> est irr&#233;ductible modulo <I>n</I> ssi <I>P</I>|<I>X</I><SUP><I>n<SUP>5</SUP></I></SUP>-<I>X</I> et <I>pgcd</I>(<I>X</I><SUP><I>n</I></SUP>-<I>X</I>,<I>P</I>)=1 (voir [Naudin], p.129). C'est donc une &#233;tape peu co&#251;teuse algorithmiquement. Mais, concr&#232;tement, si nous tombons sur polyn&#244;me non irr&#233;ductible&nbsp;: quel drame&nbsp;! Loin de l&#224;, en effet&nbsp;: il existe diverses m&#233;thodes rapides de factorisation de polyn&#244;mes. On peut utiliser l'algo de Berlekamp (<I>Factoring polynomials over large finite fields</I>, Math. Comp., n<SUP><I>o</I></SUP>111, 1970) ou bien l'algo LLL de Lenstra, Lenstra et Lovasz. Le LLL est destin&#233; aux polyn&#244;mes primitifs et est en temps polynomial. Ainsi, nous avons donc deux polyn&#244;mes <I>Q</I> et <I>R</I> tels que <I>P</I>=<I>Q R</I>. D'o&#249; <I>n</I>=<I>P</I>(<I>m</I>)=<I>Q</I>(<I>m</I>) <I>R</I>(<I>m</I>) et, en faisant confiance &#224; [Pomerance], j'affirme qu'un r&#233;sultat de Brillhart, Filaseta et Odlyzko nous dit que cette factorisation n'est pas triviale. Dr&#244;le de drame&nbsp;!
+<P><H1><A NAME="15">
+La m&#233;thode Lanczos par blocs</A>
+</H1>
+<P>
+Nous avons vu, comment au cours des diff&#233;rents algorithmes de factorisation envisag&#233;s, nous retombions sur un
+ probl&#232;me classique d'alg&#232;bre lin&#233;aire&nbsp;: d&#233;terminer une relation de d&#233;pendance entre vecteurs. Comme
+ dans de nombreux autres probl&#232;mes d'analyse num&#233;rique, la m&#233;thode la plus int&#233;ressante est une
+  m&#233;thode it&#233;rative, et en raison de la structure particuli&#232;re des matrices sur lesquelles nous
+  travaillons, une m&#233;thode it&#233;rative par bloc&nbsp;: celle de Lanczos.
+Nous avons en premier lieu une liste de vecteurs donnant les exposants sur une base de nombres premiers,
+ nous les prenons modulo 2 et enlevons les colonnes nulles. Il s'agit donc de trouver un vecteur du noyau
+  (c'est un <IMG WIDTH="20" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="${\fam\symfam\tensym F}_2$"> espace vectoriel) de la matrice ainsi obtenue.
+A cause de la taille impressionnante  (on prend souvent une base de nombres premiers de cardinal
+sup&#233;rieur au million, condition d&#233;sormais sine qua non pour &#234;tre l'heureux d&#233;tenteur d'un
+record de factorisation du projet Cunningham &amp; Co) des matrices utilis&#233;es, m&#234;me si elles sont
+creuses, les m&#233;thodes classiques comme l'&#233;limination gaussienne [Knuth 4.6.2 algorithme N], non
+seulement sont trop co&#251;teuses en m&#233;moire mais aussi en temps. Une autre m&#233;thode envisageable
+est celle de Wiedemann par bloc, dans tous les cas, l'&#233;tape de d&#233;termination de vecteurs li&#233;s
+sur une matrice <IMG WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$k \times k$"> peut se faire en moins de <I>O</I>(<I>k<SUP>3</SUP></I>) &#233;tapes.
+<P>
+D&#233;taillons maintenant la m&#233;thode standard de Lanczos sur <IMG WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="${\fam\symfam\tensym R}$">.On part d'une matrice <IMG WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$k \times k$"> <I>A</I> sym&#233;trique et d&#233;finie positive. Pour r&#233;soudre <I>Ax</I>=<I>b</I>,
+on pose <I>w<SUB>0</SUB></I>=<I>b</I> et <IMG WIDTH="196" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$w_i=Aw_{i-1}-\sum^{i-1}_{j=0} c_{ij} w_j$"> o&#249;,
+pour <I>i</I>&gt;0, <IMG WIDTH="114" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$c_{ij}={w_j^T A^2 w_{i-1} \over w^T_j A w_j}$">. Apr&#232;s au plus <I>k</I> it&#233;rations,
+on a <I>w</I><SUB><I>i</I></SUB>=0. Si <I>l</I> est la plus petite valeur telle que <I>w</I><SUB><I>l</I></SUB>=0 on a donc <IMG WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$w^T_i A w_i \not = 0$">pour <IMG WIDTH="69" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$0\leq i < l$"> et <I>w</I><SUP><I>T</I></SUP><SUB><I>j</I></SUB> <I>A w</I><SUB><I>i</I></SUB>  = 0 pour <IMG WIDTH="40" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$i \not = j$"> et <IMG WIDTH="76" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$A {\cal W}\subset {\cal W}$"> o&#249; <IMG WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img92.gif"
+ ALT="${\cal W}$"> est
+l'espace engendr&#233; par <IMG WIDTH="96" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$w_0, \dots ,w_{l-1}$">. On en d&#233;duit que
+
+<P ALIGN="CENTER"><IMG WIDTH="134" HEIGHT="57"
+ SRC="img94.gif"
+ ALT="\begin{displaymath}
+x=\sum_{i=0}^{l-1} {w^T_ib\over w^T_i A w_i} w_i\end{displaymath}"></P>
+est une solution de <I>Ax</I>=<I>b</I>.
+ Puisque <I>w</I><SUP><I>T</I></SUP><SUB><I>j</I></SUB><I>A<SUP>2</SUP>w</I><SUB><I>i</I>-1</SUB>=0 pour <I>j</I>&lt;<I>i</I>-2, nous pouvons plus directement calculer <I>w</I><SUB><I>i</I></SUB> pour <IMG WIDTH="40" HEIGHT="27" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$i\geq 2$"> par <I>w</I><SUB><I>i</I></SUB>=<I>Aw</I><SUB><I>i</I>-1</SUB> - <I>c</I><SUB><I>i</I>,<I>i</I>-1</SUB> <I>w</I><SUB><I>i</I>-1</SUB> - <I>c</I><SUB><I>i</I>,<I>i</I>-2</SUB> <I>w</I><SUB><I>i</I>-2</SUB>.
+<P>
+La m&#233;thode fonctionne &#233;galement sur d'autres corps que <IMG WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="${\fam\symfam\tensym R}$">, du moment que <IMG WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$w^T_i A w_i \not = 0$"> quand
+<IMG WIDTH="52" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$w_i \not =0$">, l'avantage de travailler sur <IMG WIDTH="20" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="${\fam\symfam\tensym F}_2$"> est li&#233; au fait que l'ordinateur compte en binaire, ou
+presque&nbsp;: l'unit&#233; de base trait&#233;e peut &#234;tre 32 bits ou 64 bits... d'o&#249; une impl&#233;mentation par blocs,
+ chaque bloc correspond donc &#224; un sous espace vectoriel <IMG WIDTH="25" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="${\cal W}_i$">.<P>
+Dans la m&#233;thode standard, dans la moiti&#233; des cas, la condition <IMG WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$w^T_i A w_i \not = 0$"> quand <IMG WIDTH="52" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$w_i \not =0$">n'est pas respect&#233;e, dans la m&#233;thode par blocs, on retrouve cette condition sous la forme <I>W</I><SUP><I>T</I></SUP><SUB><I>i</I></SUB> <I>A W</I><SUB><I>i</I></SUB>
+inversible o&#249; les vecteurs colonnes de <I>W</I><SUB><I>i</I></SUB> engendrent <IMG WIDTH="25" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="${\cal W}_i$">.<P>
+On pourra se r&#233;f&#233;rer &#224;  P.L. Montgommery <I>A block Lanczos algorithm for finding
+dependences over GF(2)</I>, Eurocrypt'95, Springer, 1995.
+<P><H1><A NAME="16">
+RSA</A>
+</H1>
+<P>
+Bien s&#251;r, il ne nous reste plus qu'&#224; signaler la principale victime des avanc&#233;es des algorithmes de factorisation&nbsp;: c'est la cryptographie, qui, d'ann&#233;e en ann&#233;e, se voit obliger d'augmenter la taille de ses clefs, heureusement que les tests de primalit&#233;s sont bien plus rapides que les diff&#233;rentes m&#233;thodes de factorisation [Morain]&nbsp;!
+<P>
+En effet, c'est bien &#224; ce niveau que se joue l'avenir de la cryptographie, du moins de RSA, codage &#224; clef publique invent&#233; en 1977 par R.L. Rivest, A. Shamir &amp; L. Adleman (confer <I>A method for obtaining digital signatures and Public-Key cryptosystems</I>, communications of the A.C.M., f&#233;vrier 1978). Cette m&#233;thode commence par choisir deux grands nombres premiers <I>p</I> et <I>q</I>, ainsi qu'un nombre <I>e</I>, premier avec (<I>p</I>-1)(<I>q</I>-1), on rend public <I>n</I> (<I>n</I>=<I>pq</I> mais on se garde bien de le dire...) et <I>e</I>, tout le monde peut vous &#233;crire <IMG WIDTH="121" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img98.gif"
+ ALT="$C=M^e \mbox{ mod }n$">, que vous seul pouvez lire en calculant <IMG WIDTH="121" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img99.gif"
+ ALT="$M=C^d \mbox{ mod }n$">, o&#249; <I>d</I> est tel que <IMG WIDTH="201" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$de\equiv 1 \mbox{ mod }(p-1)(q-1)$">, il est trop difficile d'obtenir <I>d</I> pour qui ne conna&#238;t pas la factorisation <I>p</I>*<I>q</I> de <I>n</I>&nbsp;; c'est ce qui fait la fiabilit&#233; de RSA tant que nous ne connaissons pas d'algorithme rapide de factorisation.
+<P>
+D'ailleurs on ne sait rien sur la difficult&#233; intrins&#232;que de la factorisation, est-ce un probl&#232;me de classe P ou NP, myst&#232;re...
+On conjecture n&#233;anmoins que les meilleurs algorithmes seraient du type <IMG WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.gif"
+ ALT="$n^{\epsilon(n)}$"> avec <IMG WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\epsilon(n) \rightarrow 0$"> quand <IMG WIDTH="57" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img103.gif"
+ ALT="$n \rightarrow \infty$">. Les algorithmes actuels sont d&#233;j&#224; de cette forme, marchant m&#234;me souvent mieux que pr&#233;vu, mais, comme le dit C.
+Pomerance avec humour, heureusement que les nombres que nous tentons de factoriser, eux, ne le savent pas&nbsp;!
+<P>
+<H1>Post-scriptum</H1> Je remercie Gérard Duchamp, qui a eu la gentillesse de me photocopier 
+ l'article de Carl Pomerance et de me proposer d'en faire le thème de mon mémoire de maîtrise d'ingénierie mathématique.
+Ce mémoire se veut ainsi un petit survol des algorithmes de factorisation,
+compagnon de mon autre mémoire (de maîtrise de mathématiques) "<a href="/~banderier/Recipro/">Résidus quadratiques, lois de réciprocité quadratique</a>".
+Il s'appuie sur les sources ci-dessous.
+
+
+
+
+<P><H1><A NAME="17">
+Bibliographie</A>
+</H1>
+<P>
+Atkin, A. O. L. &amp; Morain, F., <I>Finding suitable curves for the elliptic curve method of factorization</I>, Math. Comp., janvier 1993
+<BR>
+Boender, H. &amp; te Riele, H., <I>Factoring integers with PMPQS</I>, Experimental math., n<SUP><I>o</I></SUP>4, 1996
+<BR>
+Chabert, J.L. &amp; coll., <I>Histoire d'algorithmes</I>, Belin, 1994
+<BR>
+Dahan-Dalmedico, A. &amp; Peiffer, J., <I>Une histoire des math&#233;matiques</I>, Seuil, 1986
+<BR>
+Elkenbracht-Huizing, M., <I>An implementation of the NFS</I>, Experimental math., n<SUP><I>o</I></SUP>3, 1996
+<BR>
+Guy, R.K., <I>Unsolved problems in number theory</I>, Springer, 1994
+<BR>
+Hardy G.H. &amp; Wright E.M., <I>An introduction to the theory of numbers</I>, Clarendon Press, 1959
+<BR>
+Knuth, D.E., <I>Seminumerical algorithms</I>, Addison-Wesley, 1981
+<BR>
+Koblitz, N., <I>A course in number theory and cryptography</I>, Springer, 1987
+<BR>
+Legendre, A.M., <I>Th&#233;orie des nombres</I>, Blanchard, 1955
+<BR>
+Morain, F., <I>Courbes elliptiques et tests de primalit&#233;</I>, Th&#232;se, Universit&#233; de Lyon I, 1990
+<BR>
+Morain, F., <I>Analysing PMPQS</I>, informal note, 1993
+<BR>
+Naudin, P. &amp; Quitt&#233;, C., <I>Algorithmique alg&#233;brique</I>, Masson, 1992
+<BR>
+Pomerance, C., <I>A tale of two sieves</I>, Notices of AMS, d&#233;cembre 1996
+<BR>
+Ribenboim, P., <I>The new book of prime number records</I>, Springer, 1996
+
+<P>
+<P>
+<BR><HR>
+<ADDRESS>
+<A HREF="../">Cyril Banderier</A>
+<BR><I>septembre 1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

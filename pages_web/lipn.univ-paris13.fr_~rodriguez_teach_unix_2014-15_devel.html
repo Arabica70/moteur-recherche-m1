@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Unix System Programming</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="unix-system-programming">
+<h1 class="title">Unix System Programming</h1>
+
+<!-- this course {{{ -->
+<div class="section" id="this-course">
+<h1>1&nbsp;&nbsp;&nbsp;This Course</h1>
+<ul class="simple">
+<li>Contact: César Rodríguez &lt;<a class="reference external" href="mailto:cesar.rodriguez&#64;lipn.univ-paris13.fr">cesar.rodriguez&#64;lipn.univ-paris13.fr</a>&gt;</li>
+<li>Course web page: <a class="reference external" href="http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2014-15/">http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2014-15/</a></li>
+<li>The <strong>exercises</strong> are <a class="reference external" href="e.pdf">here</a>.</li>
+</ul>
+<div class="section" id="syllabus">
+<h2>1.1&nbsp;&nbsp;&nbsp;Syllabus</h2>
+<ul class="simple">
+<li>gcc, make, vi</li>
+<li>File I/O</li>
+<li>Process management</li>
+<li>Pipes</li>
+<li>Signals</li>
+<li>Sockets</li>
+</ul>
+<!-- }}} -->
+<!-- intro {{{ -->
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>2&nbsp;&nbsp;&nbsp;Introduction</h1>
+<div class="section" id="getting-help">
+<h2>2.1&nbsp;&nbsp;&nbsp;Getting help</h2>
+<ul>
+<li><div class="first line-block">
+<div class="line">An online reference for the C language:</div>
+<div class="line"><a class="reference external" href="http://en.cppreference.com/w/c">http://en.cppreference.com/w/c</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">The manual pages, both from the terminal and online:</div>
+<div class="line"><a class="reference external" href="http://linux.die.net/man/">http://linux.die.net/man/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">The GNU C library manual:</div>
+<div class="line"><a class="reference external" href="https://www.gnu.org/software/libc/manual/html_node/index.html">https://www.gnu.org/software/libc/manual/html_node/index.html</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">A quick tutorial on the C language:</div>
+<div class="line"><a class="reference external" href="http://www.tutorialspoint.com/cprogramming/c_quick_guide.htm">http://www.tutorialspoint.com/cprogramming/c_quick_guide.htm</a></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="system-calls">
+<h2>2.2&nbsp;&nbsp;&nbsp;System calls</h2>
+<ul class="simple">
+<li>Specific procedure, as processor needs to switch to supervisor mode</li>
+<li>The standard C library provides C-wrappers</li>
+<li>Documented in <a class="reference external" href="http://linux.die.net/man/2/">section 2</a>; see also <a class="reference external" href="http://linux.die.net/man/3/">section 3</a> and <a class="reference external" href="http://linux.die.net/man/7/">section 7</a></li>
+<li>380 system calls for Linux 3.2.0, see <a class="reference external" href="http://linux.die.net/man/2/syscalls">syscalls(2)</a></li>
+</ul>
+</div>
+<div class="section" id="error-handling">
+<h2>2.3&nbsp;&nbsp;&nbsp;Error handling</h2>
+<ul>
+<li><p class="first">System calls almost always return -1 (or NULL) when an error occurs</p>
+</li>
+<li><p class="first">C library makes available an <cite>explanation</cite> through variable</p>
+<pre class="literal-block">
+extern int errno;
+</pre>
+<p>defined in <tt class="docutils literal">&lt;errno.h&gt;</tt>, see <a class="reference external" href="http://linux.die.net/man/3/errno">errno(3)</a></p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><strong>Variables</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/errno">errno(3)</a></td>
+</tr>
+<tr><td><strong>Functions</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/strerror">strerror(3)</a>, <a class="reference external" href="http://linux.die.net/man/3/perror">perror(3)</a></td>
+</tr>
+<tr><td><strong>See also</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/err">err(3)</a> (non-standard BSD functions, but very handy)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="first-example">
+<h2>2.4&nbsp;&nbsp;&nbsp;First example</h2>
+<pre class="literal-block">
+#include &lt;errno.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;err.h&gt;
+
+int main(int argc, char *argv[])
+{
+   fprintf(stderr, &quot;EACCES: %s\n&quot;, strerror(EACCES));
+   errno = ENOENT;
+   warn (&quot;%s: The error ENOENT&quot;, argv[0]);
+   exit(0);
+}
+</pre>
+<ul class="simple">
+<li>Use <tt class="docutils literal">exit(3)</tt> or simply <tt class="docutils literal">return</tt> from the main function to terminate
+the program.  The <cite>return code</cite> of the program is the value passed to
+<tt class="docutils literal">exit</tt> or returned from <tt class="docutils literal">main</tt>.</li>
+</ul>
+</div>
+<div class="section" id="compiling-with-gcc">
+<h2>2.5&nbsp;&nbsp;&nbsp;Compiling with <tt class="docutils literal">gcc</tt></h2>
+<p>Assume you have a small project consisting on two C files, <tt class="docutils literal">main.c</tt>,
+containing the <tt class="docutils literal">main()</tt> function of the program, and <tt class="docutils literal">aux.c</tt>,
+containing auxiliary code.</p>
+<p>Compiling and linking with one command:</p>
+<pre class="literal-block">
+gcc aux.c main.c -o myprog
+</pre>
+<p>Compiling into object code + linking:</p>
+<pre class="literal-block">
+gcc aux.c        # outputs aux.o
+gcc main.c       # outputs main.o
+gcc aux.o main.o -o myprog
+</pre>
+<p>The <strong>advantage</strong> of the second method is that it requires compiling only
+the files that were modified since last compilation (+ linking)</p>
+<p>Here are some <strong>frequent options</strong>:</p>
+<pre class="literal-block">
+-g
+-Wall
+-Wextra
+-O1, -O2, -O3
+-lm
+-lMY_LIB
+-I INCLUDE_DIR
+-D MACRO=VALUE
+</pre>
+</div>
+<div class="section" id="using-make">
+<h2>2.6&nbsp;&nbsp;&nbsp;Using <tt class="docutils literal">make</tt></h2>
+<ul>
+<li><p class="first">The tool <tt class="docutils literal">make</tt> computes which parts of a program need to be recompiled
+and calls the compiler accordingly</p>
+</li>
+<li><p class="first">Information about the source code is in the file <tt class="docutils literal">Makefile</tt> (or
+<tt class="docutils literal">makefile</tt>)</p>
+</li>
+<li><p class="first">Target-oriented rules of the form:</p>
+<pre class="literal-block">
+target : prerequisite1 prerequisite2
+&lt;TAB&gt; shell commands using the prerequisites and generating the target
+&lt;TAB&gt; more shell commands
+</pre>
+</li>
+<li><p class="first">Observe that the commands need to be prefixed with a tab (!)</p>
+</li>
+<li><p class="first">The target of the first rule in the <tt class="docutils literal">Makefile</tt> becomes the <cite>default
+target</cite></p>
+</li>
+</ul>
+<p>First example of a <tt class="docutils literal">Makefile</tt>:</p>
+<pre class="literal-block">
+myprog: main.c aux.c
+    gcc -Wall -Wextra -g aux.c main.c -o myprog
+</pre>
+<p>A more advanced version:</p>
+<pre class="literal-block">
+myprog: main.o aux.o
+    gcc main.o aux.o -o myprog
+
+main.o: main.c
+    gcc -Wall -Wextra -g -c main.c
+
+aux.o: aux.c
+    gcc -Wall -Wextra -g -c aux.c
+</pre>
+<p>Now the same but using <cite>pattern rules</cite> and <cite>automatic variables</cite>:</p>
+<pre class="literal-block">
+myprog: main.o aux.o
+    gcc $^ -o $&#64;
+
+%.o: %.c
+    gcc -Wall -Wextra -g -c $^ -o $&#64;
+</pre>
+<p>In fact, <tt class="docutils literal">make</tt> already knows the pattern rule above, not only for C but
+also for many other languages! Such <cite>built-in</cite> rules (which you can display
+running <tt class="docutils literal">make <span class="pre">-p</span></tt>) are parametrized with variables.
+An even shorter version of our <tt class="docutils literal">Makefile</tt> would be:</p>
+<pre class="literal-block">
+CC=gcc
+CFLAGS=-Wall -Wextra -g
+
+myprog: main.o aux.o
+    gcc $^ -o $&#64;
+</pre>
+<p>Some frequently used options of <tt class="docutils literal">make</tt> are</p>
+<pre class="literal-block">
+-n
+-j N
+-p
+</pre>
+<!-- }}} -->
+<!-- file i/o {{{ -->
+</div>
+</div>
+<div class="section" id="file-i-o">
+<h1>3&nbsp;&nbsp;&nbsp;File I/O</h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>open, creat</td>
+<td>open and possibly create a file or device</td>
+</tr>
+<tr><td>close</td>
+<td>close a file descriptor</td>
+</tr>
+<tr><td>lseek</td>
+<td>reposition read/write file offset</td>
+</tr>
+<tr><td>dup, dup2, dup3</td>
+<td>duplicate a file descriptor</td>
+</tr>
+<tr><td>read</td>
+<td>read from a file descriptor</td>
+</tr>
+<tr><td>write</td>
+<td>write to a file descriptor</td>
+</tr>
+<tr><td>stat, fstat, lstat</td>
+<td>get file status</td>
+</tr>
+<tr><td>sync, syncfs</td>
+<td>commit buffer cache to disk</td>
+</tr>
+<tr><td>fsync, fdatasync</td>
+<td>synchronize a file's in-core state with storage device</td>
+</tr>
+<tr><td>ioctl</td>
+<td>control device</td>
+</tr>
+<tr><td>truncate, ftruncate</td>
+<td>truncate a file to a specified length</td>
+</tr>
+<tr><td>remove</td>
+<td>remove a file or directory</td>
+</tr>
+<tr><td>mkdir</td>
+<td>create a directory</td>
+</tr>
+<tr><td>select</td>
+<td>synchronous I/O multiplexing</td>
+</tr>
+<tr><td>poll, ppoll</td>
+<td>wait for some event on a file descriptor</td>
+</tr>
+<tr><td>mmap, munmap</td>
+<td>map or unmap files or devices into memory</td>
+</tr>
+<tr><td>msync</td>
+<td>synchronize a file with a memory map</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example</strong>: <a class="reference external" href="code/mmap.c">mmap.c</a>, showing how to use mmap(2) to load for read/write
+access a newly created file</li>
+</ul>
+<!-- }}} -->
+<!-- processes {{{ -->
+</div>
+<div class="section" id="processes">
+<h1>4&nbsp;&nbsp;&nbsp;Processes</h1>
+<p>Process management:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>getpid, getppid</td>
+<td>get process identification</td>
+</tr>
+<tr><td>getuid, geteuid</td>
+<td>get user identity</td>
+</tr>
+<tr><td>setuid</td>
+<td>set user identity</td>
+</tr>
+<tr><td>setgid</td>
+<td>set group identity</td>
+</tr>
+<tr><td>fork</td>
+<td>create a child process</td>
+</tr>
+<tr><td>exit</td>
+<td>cause normal process termination</td>
+</tr>
+<tr><td>wait, waitpid, waitid</td>
+<td>wait for process to change state</td>
+</tr>
+<tr><td>execl, execv</td>
+<td>execute a file</td>
+</tr>
+<tr><td>system</td>
+<td>execute a shell command</td>
+</tr>
+</tbody>
+</table>
+<p>Basic thread management:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call                              Description</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>pthread_create</td>
+<td>create a new thread</td>
+</tr>
+<tr><td>pthread_attr_init, pthread_attr_destroy</td>
+<td>initialize and destroy thread attributes object</td>
+</tr>
+<tr><td>pthread_detach</td>
+<td>detach a thread</td>
+</tr>
+<tr><td>pthread_exit</td>
+<td>terminate calling thread</td>
+</tr>
+<tr><td>pthread_join</td>
+<td>join with a terminated thread</td>
+</tr>
+<tr><td>pthread_mutex_destroy, pthread_mutex_init</td>
+<td>destroy and initialize a mutex</td>
+</tr>
+<tr><td>pthread_mutex_lock, pthread_mutex_trylock, pthread_mutex_unlock</td>
+<td>lock and unlock a mutex</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example</strong>: <a class="reference external" href="code/pthreads.c">pthreads.c</a>, illustrating the creation of two threads;
+observe how we use the <tt class="docutils literal">errno</tt> variable to profit from the <tt class="docutils literal">err</tt>
+routine to print possible erros</li>
+</ul>
+<!-- - fork, in Linux implemented via clone (threads + processes)
+- setuid/setgid -->
+<!-- }}} -->
+<!-- pipes {{{ -->
+</div>
+<div class="section" id="pipes">
+<h1>5&nbsp;&nbsp;&nbsp;Pipes</h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>pipe, pipe2</td>
+<td>create a half-duplex pipe</td>
+</tr>
+<tr><td>popen, pclose</td>
+<td>pipe stream to or from a process</td>
+</tr>
+<tr><td>mkfifo</td>
+<td>make a FIFO special file (a named pipe)</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>pipe(2) is half-duplex; the most common ipc</li>
+<li><strong>Example</strong>: <a class="reference external" href="code/fork-exec-pipe.c">fork-exec-pipe.c</a>, showing how to use a pipe to read, from a
+parent process, the standard output of a child process</li>
+</ul>
+<!-- }}} -->
+<!-- signals {{{ -->
+</div>
+<div class="section" id="signals">
+<h1>6&nbsp;&nbsp;&nbsp;Signals</h1>
+<ul class="simple">
+<li>Why signals: terminal-generated events, hardware, software conditions</li>
+<li>Unreliable in early implementations</li>
+<li>Problem of malloc</li>
+<li>Problem of handling EINTR</li>
+</ul>
+<!-- - Fig. 10.1 in [SR13]_ -->
+<p>Signal management:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>signal</td>
+<td>ANSI C signal handling</td>
+</tr>
+<tr><td>kill</td>
+<td>send signal to a process</td>
+</tr>
+<tr><td>raise</td>
+<td>send a signal to the caller</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">Table of signals:</div>
+<div class="line">-- From the signal(7) manual page</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="14%" />
+<col width="11%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Signal</th>
+<th class="head">Value</th>
+<th class="head">Action</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>SIGHUP</td>
+<td>1</td>
+<td>Term</td>
+<td>Hangup detected on controlling terminal
+or death of controlling process</td>
+</tr>
+<tr><td>SIGINT</td>
+<td>2</td>
+<td>Term</td>
+<td>Interrupt from keyboard</td>
+</tr>
+<tr><td>SIGQUIT</td>
+<td>3</td>
+<td>Core</td>
+<td>Quit from keyboard</td>
+</tr>
+<tr><td>SIGILL</td>
+<td>4</td>
+<td>Core</td>
+<td>Illegal Instruction</td>
+</tr>
+<tr><td>SIGABRT</td>
+<td>6</td>
+<td>Core</td>
+<td>Abort signal from abort(3)</td>
+</tr>
+<tr><td>SIGFPE</td>
+<td>8</td>
+<td>Core</td>
+<td>Floating point exception</td>
+</tr>
+<tr><td>SIGKILL</td>
+<td>9</td>
+<td>Term</td>
+<td>Kill signal</td>
+</tr>
+<tr><td>SIGSEGV</td>
+<td>11</td>
+<td>Core</td>
+<td>Invalid memory reference</td>
+</tr>
+<tr><td>SIGPIPE</td>
+<td>13</td>
+<td>Term</td>
+<td>Broken pipe: write to pipe with no
+readers</td>
+</tr>
+<tr><td>SIGALRM</td>
+<td>14</td>
+<td>Term</td>
+<td>Timer signal from alarm(2)</td>
+</tr>
+<tr><td>SIGTERM</td>
+<td>15</td>
+<td>Term</td>
+<td>Termination signal</td>
+</tr>
+<tr><td>SIGUSR1</td>
+<td>30,10,16</td>
+<td>Term</td>
+<td>User-defined signal 1</td>
+</tr>
+<tr><td>SIGUSR2</td>
+<td>31,12,17</td>
+<td>Term</td>
+<td>User-defined signal 2</td>
+</tr>
+<tr><td>SIGCHLD</td>
+<td>20,17,18</td>
+<td>Ign</td>
+<td>Child stopped or terminated</td>
+</tr>
+<tr><td>SIGCONT</td>
+<td>19,18,25</td>
+<td>Cont</td>
+<td>Continue if stopped</td>
+</tr>
+<tr><td>SIGSTOP</td>
+<td>17,19,23</td>
+<td>Stop</td>
+<td>Stop process</td>
+</tr>
+<tr><td>SIGTSTP</td>
+<td>18,20,24</td>
+<td>Stop</td>
+<td>Stop typed at tty</td>
+</tr>
+<tr><td>SIGTTIN</td>
+<td>21,21,26</td>
+<td>Stop</td>
+<td>tty input for background process</td>
+</tr>
+<tr><td>SIGTTOU</td>
+<td>22,22,27</td>
+<td>Stop</td>
+<td>tty output for background process</td>
+</tr>
+</tbody>
+</table>
+<!-- }}} -->
+<!-- ipcs {{{ -->
+</div>
+<div class="section" id="other-inter-process-communication-ipc-primitives">
+<h1>7&nbsp;&nbsp;&nbsp;Other Inter-Process Communication (IPC) Primitives</h1>
+<ul class="simple">
+<li>Message queues: mq_overview(7)</li>
+<li>Shared memory: shm_overview(7)</li>
+<li>Semaphores: sem_overview(7)</li>
+<li>Unix domain sockets</li>
+</ul>
+<!-- }}} -->
+<!-- sockets {{{ -->
+</div>
+<div class="section" id="network">
+<h1>8&nbsp;&nbsp;&nbsp;Network</h1>
+<p>Network programming with POSIX sockets enables the initiation, handling and
+termination of TCP and UDP streams, among others.
+The interface primitives are thus coupled with the operations associated to
+these protocols.</p>
+<p>The following image illustrates the flow of operations that client and
+server shall carry out to maintain a TCP connection.</p>
+<img alt="fig/sockets.png" src="fig/sockets.png" style="width: 600px;" />
+<p>Both server and client will initially
+create a socket, specifying they want to use the <cite>internet</cite> protocols
+(<tt class="docutils literal">AF_INET</tt>), in particular a <cite>TCP stream</cite> (<tt class="docutils literal">SOCK_STREAM</tt>).
+The server will then <tt class="docutils literal">bind</tt> the socket to a <cite>service point</cite>,
+i.e., a
+couple (IP address, port) to which the client will later connect.</p>
+<p>When the server invokes <tt class="docutils literal">listen</tt>, the socket is set as a
+<cite>listening socket</cite>, that is, a socket that can only be used to
+derive new <cite>data sockets</cite>.
+No data will be transmitted through a listening socket. After
+calling <tt class="docutils literal">accept</tt>, the server will block until a client executes
+<tt class="docutils literal">connect</tt>.  The return value of <tt class="docutils literal">accept</tt> will be a new
+<cite>data socket</cite>, that can now be used to transmit data.</p>
+<p>Subsequent calls to <tt class="docutils literal">write</tt> and <tt class="docutils literal">read</tt> on the client or server
+will
+transfer data to the client or server.  It is not true that the
+<cite>data chunk</cite> passed to <tt class="docutils literal">write</tt> at one side of the connection will
+necessarily be the one that <tt class="docutils literal">read</tt> returns at the other side.  Each
+TCP
+stream is best thought as a <cite>data pipe</cite>, where <tt class="docutils literal">write</tt> pushes
+data
+at one side and <tt class="docutils literal">read</tt> extracts data from the other side.  Often,
+<tt class="docutils literal">read</tt> will return as soon as any data is available.  This may be
+triggered, for instance, by the arrival of an IP network packet
+encapsulating a
+TCP segment.  Realize that <cite>boundaries</cite> created the TCP segmentation
+algorithm will often not be boundaries associated to the <tt class="docutils literal">write</tt>
+calls,
+although it may be the case. <a class="footnote-reference" href="#id4" id="id1">[1]</a></p>
+<p>Invoking <tt class="docutils literal">close</tt> at the client or server will close the connection in
+both
+ways.  It is also possible to partially close the connection in any
+direction,
+using <tt class="docutils literal">shutdown</tt>.  Closing the connection at one side will trigger
+different events on the other side.  If the other side writes, the process
+will
+receive the signal <tt class="docutils literal">SIGPIPE</tt> <a class="footnote-reference" href="#id5" id="id2">[2]</a>,
+and write will fail with
+<tt class="docutils literal">EPIPE</tt>. <a class="footnote-reference" href="#id6" id="id3">[3]</a>
+If the other side reads, <tt class="docutils literal">read</tt> will return 0 bytes,
+indicating an <cite>end of file</cite>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>socket</td>
+<td>create an endpoint for communication</td>
+</tr>
+<tr><td>bind</td>
+<td>bind a nam to a socket</td>
+</tr>
+<tr><td>listen</td>
+<td>listen for connections on a socket</td>
+</tr>
+<tr><td>accept</td>
+<td>accept a connection on a socket</td>
+</tr>
+<tr><td>connect</td>
+<td>initiate a connection on a socket</td>
+</tr>
+<tr><td>shutdown</td>
+<td>shut down part of a full-duplex connection</td>
+</tr>
+<tr><td>htonl, htons, ntohl, ntohs</td>
+<td>convert values between host and network byte order</td>
+</tr>
+<tr><td>send, sendto, sendmsg</td>
+<td>send a message on a socket</td>
+</tr>
+<tr><td>recv, recvfrom, recvmsg</td>
+<td>receive a message from a socket</td>
+</tr>
+<tr><td>getaddrinfo, freeaddrinfo, gai_strerror</td>
+<td>network address and service translation</td>
+</tr>
+<tr><td>getsockopt, setsockopt</td>
+<td>get and set options on sockets</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example</strong>: <a class="reference external" href="code/tcp.c">tcp.c</a>, showing how to create a TCP client connecting to
+<tt class="docutils literal">localhost:1234</tt> and echoing to the connection whatever it reads from
+it.</li>
+<li><strong>Example</strong>: <a class="reference external" href="code/sock-thread.c">sock-thread.c</a>, showing how to use two threads to read and
+write on a TCP socket</li>
+</ul>
+<div class="section" id="exercise-the-command-tcpcat">
+<h2>8.1&nbsp;&nbsp;&nbsp;Exercise, the command <tt class="docutils literal">tcpcat</tt></h2>
+<p>The goal of this exercise is writing a simplified version of the netcat(1)
+command. The output should be called <strong>tcpcat</strong>, and it will be able to
+both open TCP connexions as a client and act as a TCP server, with the
+following syntax and functionality:</p>
+<ul>
+<li><div class="first line-block">
+<div class="line"><tt class="docutils literal">$ tcpcat HOST PORT</tt></div>
+<div class="line">where <tt class="docutils literal">HOST</tt> is either an IP address or an URL, and <tt class="docutils literal">PORT</tt> is a
+port number.</div>
+</div>
+<p>This command will open a connection to the port <tt class="docutils literal">PORT</tt> of the host
+<tt class="docutils literal">HOST</tt>. It will send anything written to its standard input and write
+on standard output anything received from the connection.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><tt class="docutils literal">$ tcpcat <span class="pre">-l</span> PORT</tt></div>
+<div class="line">where <tt class="docutils literal">PORT</tt> is a port number.</div>
+</div>
+<p>This command will open a listening TCP socket accepting incoming
+connections from any network card.  It will accept one client, will send
+to it anything read from its standard input, and will write to the
+standard output anything received from the connection.</p>
+</li>
+</ul>
+<p><strong>Note</strong>: you do <cite>not</cite> have the right to use threads to implement this
+program, use either poll(2) or select(2).</p>
+<!-- }}} -->
+<!-- references {{{ -->
+</div>
+</div>
+<div class="section" id="notes">
+<h1>9&nbsp;&nbsp;&nbsp;Notes</h1>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>If, for instance, your application introduces large enough amounts of
+time between each write.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>And will be killed, unless the default handler for this signal is
+modified.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>The <tt class="docutils literal">write</tt> primitive, as usual, will return <tt class="docutils literal"><span class="pre">-1</span></tt> and the variable
+<tt class="docutils literal">errno</tt> will be equal to the value <tt class="docutils literal">EPIPE</tt>.</td></tr>
+</tbody>
+</table>
+<!-- [SR13]
+W. Richard Stevens, Stephen A. Rago.
+Advanced programming in the UNIX environment.
+Pearson Education. 2013 -->
+<!-- }}} -->
+</div>
+</div>
+</body>
+</html>

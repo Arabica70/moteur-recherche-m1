@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>progressionTle</title>
+<!-- 2019-10-30 Wed 17:03 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">progressionTle</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Légende</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Les (&gt;&gt; Nom)</a></li>
+<li><a href="#sec-1-2">1.2. le (&#x2013;) sur un sous-thème</a></li>
+<li><a href="#sec-1-3">1.3. le (++) sur un sous-thème</a></li>
+<li><a href="#sec-1-4">1.4. le (++) sur une séquence</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Attendus</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Pour l'évaluation</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1. Une petite présentation de 15mn qui présente ce qui a été fait</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2. Après le bloque 5</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. Une mise à jours prenant en compte le contenu du bloque 5</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Avant la rentrée prochaine</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1. Un corpus de matériels</a></li>
+<li><a href="#sec-2-3-2">2.3.2. Un ensemble des compétences vues et référence au programme</a></li>
+<li><a href="#sec-2-3-3">2.3.3. Une évaluation sommative</a></li>
+<li><a href="#sec-2-3-4">2.3.4. Une ou plusieurs évaluations (qui peuvent prendre la forme de petits projets)</a></li>
+<li><a href="#sec-2-3-5">2.3.5. Quelques petits exercices</a></li>
+<li><a href="#sec-2-3-6">2.3.6. Des références sur le sujets</a></li>
+<li><a href="#sec-2-3-7">2.3.7. Tout ce que vous aimeriez que eux vous fournissent sur leur séquence&#x2026;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Trimestre 1 : De nouvelles structures de données</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Piles, files et résursivité</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. (&#x2013;) Listes et dictionnaires</a></li>
+<li><a href="#sec-3-1-2">3.1.2. (++) Extraction/serialisation de fichier YAML/JSON avec une API</a></li>
+<li><a href="#sec-3-1-3">3.1.3. Principes des piles et files</a></li>
+<li><a href="#sec-3-1-4">3.1.4. Implémentation par des listes ou tableaux fixés (queues)</a></li>
+<li><a href="#sec-3-1-5">3.1.5. Concept d'une liste chaînée et code donné</a></li>
+<li><a href="#sec-3-1-6">3.1.6. Différence entre l'interface et l'implémentation</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. Classes et Interfaces</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Classes</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Classes récursivement définies</a></li>
+<li><a href="#sec-3-2-3">3.2.3. Interfaces</a></li>
+<li><a href="#sec-3-2-4">3.2.4. (++) Outils de tests unitaire</a></li>
+<li><a href="#sec-3-2-5">3.2.5. Récursivité</a></li>
+<li><a href="#sec-3-2-6">3.2.6. Terminaison (paramètre décroissant)</a></li>
+<li><a href="#sec-3-2-7">3.2.7. (++) analyse partiel (en supposant la terminaison)</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3. Arbres</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. Concept d'arbres</a></li>
+<li><a href="#sec-3-3-2">3.3.2. Arbres binaires</a></li>
+<li><a href="#sec-3-3-3">3.3.3. Arbres binaires de recherches</a></li>
+<li><a href="#sec-3-3-4">3.3.4. (++) Arbres syntaxiques</a></li>
+<li><a href="#sec-3-3-5">3.3.5. (&#x2013;) complexité</a></li>
+<li><a href="#sec-3-3-6">3.3.6. (++) complexité sur les arbres</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-4">3.4. (++) Diviser pour régner</a>
+<ul>
+<li><a href="#sec-3-4-1">3.4.1. (&#x2013;) recherche dichotomique</a></li>
+<li><a href="#sec-3-4-2">3.4.2. ABR et quicksort</a></li>
+<li><a href="#sec-3-4-3">3.4.3. Trifusion et sa complexité</a></li>
+<li><a href="#sec-3-4-4">3.4.4. Autre algos diviser pour régner</a></li>
+<li><a href="#sec-3-4-5">3.4.5. Complexité des algorithmes</a></li>
+<li><a href="#sec-3-4-6">3.4.6. (++) Master theorem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Trimestre 2 : Structures complexes</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Extraction de BdD</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Sémantique à base de tables relationnelles</a></li>
+<li><a href="#sec-4-1-2">4.1.2. Principe d'une requête</a></li>
+<li><a href="#sec-4-1-3">4.1.3. (&#x2013;) Rappels booléens (++) parler du Nul</a></li>
+<li><a href="#sec-4-1-4">4.1.4. Select where et Order by</a></li>
+<li><a href="#sec-4-1-5">4.1.5. Jointures</a></li>
+<li><a href="#sec-4-1-6">4.1.6. (++) TP/projet d'utilisation d'une grosse BdD en ligne</a></li>
+<li><a href="#sec-4-1-7">4.1.7. (++) Group by</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2. Modification d'une BdD</a>
+<ul>
+<li><a href="#sec-4-2-1">4.2.1. (++) Modification d'une BdD : une opération concurrente</a></li>
+<li><a href="#sec-4-2-2">4.2.2. Insert et Delete</a></li>
+<li><a href="#sec-4-2-3">4.2.3. Update</a></li>
+<li><a href="#sec-4-2-4">4.2.4. Bien structurer une BdD</a></li>
+<li><a href="#sec-4-2-5">4.2.5. TP/projet d'utilisation d'une BdD local</a></li>
+<li><a href="#sec-4-2-6">4.2.6. (++) sous requêtes</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-3">4.3. Graphes</a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1. Arrêtes et Noeuds</a></li>
+<li><a href="#sec-4-3-2">4.3.2. Représentations d'un graphe</a></li>
+<li><a href="#sec-4-3-3">4.3.3. Graphe de l'internet</a></li>
+<li><a href="#sec-4-3-4">4.3.4. Algorithmes de graphes</a></li>
+<li><a href="#sec-4-3-5">4.3.5. Protocoles de routage et algos de graphes</a></li>
+<li><a href="#sec-4-3-6">4.3.6. (++) Utilisation d'un API d'extraction de BdD</a></li>
+<li><a href="#sec-4-3-7">4.3.7. (++) web semantic et graphes de données</a></li>
+<li><a href="#sec-4-3-8">4.3.8. (++) Algorithmes gloutons sur les graphes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-5">5. (++) Trimestre 3 : Problèmes complexes et paradigmes</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Un programme est une donnée comme les autres</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. Un programme sur un ordi/dans une requête</a></li>
+<li><a href="#sec-5-1-2">5.1.2. Programmation fonctionnelle</a></li>
+<li><a href="#sec-5-1-3">5.1.3. Calculabilité</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. (++) concurrence et parallélisme</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Gestion des processus et des ressources par un système d’exploitation</a></li>
+<li><a href="#sec-5-2-2">5.2.2. (++) Paradigmes Concurrent et distribué</a></li>
+<li><a href="#sec-5-2-3">5.2.3. (++) Bugs de concurrence, nécessité de protocoles</a></li>
+<li><a href="#sec-5-2-4">5.2.4. (++) Exemple de la BdD</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-3">5.3. Algorithmique par suppression des redondances</a>
+<ul>
+<li><a href="#sec-5-3-1">5.3.1. Analyse de redondance design d'algos par suppression des redondances</a></li>
+<li><a href="#sec-5-3-2">5.3.2. Programmation dynamique</a></li>
+<li><a href="#sec-5-3-3">5.3.3. Algorithme de Morris-Pratt</a></li>
+<li><a href="#sec-5-3-4">5.3.4. (++) Algorithme de Boyer-Moore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Sur l'année</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Projet filé sur plusieurs séquences</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Légende</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Les (&gt;&gt; Nom)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A été pris par un groupe (ceux-ci m'ont envoyé un mail)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> le (&#x2013;) sur un sous-thème</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+indique qu'il est sensé s'agir d'un rappel de première
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> le (++) sur un sous-thème</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+indique qu'il s'agit d'un développement avancé possible, non nécessaire pour le programme, mais que l'enseignant doit maîtriser
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> le (++) sur une séquence</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+indique que la séquence contient majoritairement des développements et peut donc être fusionnée avec la précédente
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Attendus</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Pour l'évaluation</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Une petite présentation de 15mn qui présente ce qui a été fait</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Après le bloque 5</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Une mise à jours prenant en compte le contenu du bloque 5</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Avant la rentrée prochaine</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> Un corpus de matériels</h4>
+</div>
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> Un ensemble des compétences vues et référence au programme</h4>
+</div>
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> Une évaluation sommative</h4>
+</div>
+<div id="outline-container-sec-2-3-4" class="outline-4">
+<h4 id="sec-2-3-4"><span class="section-number-4">2.3.4</span> Une ou plusieurs évaluations (qui peuvent prendre la forme de petits projets)</h4>
+</div>
+<div id="outline-container-sec-2-3-5" class="outline-4">
+<h4 id="sec-2-3-5"><span class="section-number-4">2.3.5</span> Quelques petits exercices</h4>
+</div>
+<div id="outline-container-sec-2-3-6" class="outline-4">
+<h4 id="sec-2-3-6"><span class="section-number-4">2.3.6</span> Des références sur le sujets</h4>
+</div>
+<div id="outline-container-sec-2-3-7" class="outline-4">
+<h4 id="sec-2-3-7"><span class="section-number-4">2.3.7</span> Tout ce que vous aimeriez que eux vous fournissent sur leur séquence&#x2026;</h4>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Trimestre 1 : De nouvelles structures de données</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Piles, files et résursivité</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> (&#x2013;) Listes et dictionnaires</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Révision
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> (++) Extraction/serialisation de fichier YAML/JSON avec une API</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Extraire/enregistrer de vrais documents JSON vers/depuis des listes et dictionnaires, 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> Principes des piles et files</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+Idée général, et quelques exemples dans la vrais vie et en informatique
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-4" class="outline-4">
+<h4 id="sec-3-1-4"><span class="section-number-4">3.1.4</span> Implémentation par des listes ou tableaux fixés (queues)</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+On voit une implémentation par une liste fixée avec deux pointeurs que l'on manipule
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-5" class="outline-4">
+<h4 id="sec-3-1-5"><span class="section-number-4">3.1.5</span> Concept d'une liste chaînée et code donné</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<p>
+On donne le concept de liste chaînée et on fait un un petit TP avec code "magique"
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-1-6" class="outline-4">
+<h4 id="sec-3-1-6"><span class="section-number-4">3.1.6</span> Différence entre l'interface et l'implémentation</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<p>
+On discute ici de la différence entre interface (entendre spécification) et une implémentation
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Classes et Interfaces</h3>
+<div class="outline-text-3" id="text-3-2">
+</div><div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Classes</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Syntaxe des classes, plein de petits exemples
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Classes récursivement définies</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Retour des liste chaînées
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3"><span class="section-number-4">3.2.3</span> Interfaces</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+Méthodes de noms génériques et programmes valides sur plusieurs classes
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-4" class="outline-4">
+<h4 id="sec-3-2-4"><span class="section-number-4">3.2.4</span> (++) Outils de tests unitaire</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+Je ne sais pas trop où le placer :s
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-5" class="outline-4">
+<h4 id="sec-3-2-5"><span class="section-number-4">3.2.5</span> Récursivité</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<p>
+Avec les classes récursive il faut insister sur le concept de récursivité et sur les étapes d'évaluation.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-6" class="outline-4">
+<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> Terminaison (paramètre décroissant)</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<p>
+Il faut parler de terminaison lorsque l'on parle de récursivité, 
+sinon les élèves sont bloqués à un moment par cette évaluation "magique".
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-7" class="outline-4">
+<h4 id="sec-3-2-7"><span class="section-number-4">3.2.7</span> (++) analyse partiel (en supposant la terminaison)</h4>
+<div class="outline-text-4" id="text-3-2-7">
+<p>
+Lorsque l'on suppose la terminaison, il y a une méthode fun d'analyse d'un invariant qui consiste à
+supposer l'invariant vrais sur tous les appels récursif et de vérifier qu'il est vrais à la fin. 
+C'est comme une récurrence, sauf que l'on ne vérifie pas que l'on est sur un ensemble bien fondé
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Arbres</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Concept d'arbres</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Idée général, et quelques exemples dans la vrais vie et en informatique
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Arbres binaires</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Petites manipulations et parcours en profondeur/largeur
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> Arbres binaires de recherches</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Voir TP ABR
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-4" class="outline-4">
+<h4 id="sec-3-3-4"><span class="section-number-4">3.3.4</span> (++) Arbres syntaxiques</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+Un programme est un arbre 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-5" class="outline-4">
+<h4 id="sec-3-3-5"><span class="section-number-4">3.3.5</span> (&#x2013;) complexité</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<p>
+révisions
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-3-6" class="outline-4">
+<h4 id="sec-3-3-6"><span class="section-number-4">3.3.6</span> (++) complexité sur les arbres</h4>
+<div class="outline-text-4" id="text-3-3-6">
+<p>
+Bien choisir le paramètre (hauteur ou taille)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> (++) Diviser pour régner</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1"><span class="section-number-4">3.4.1</span> (&#x2013;) recherche dichotomique</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+révisions
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4-2" class="outline-4">
+<h4 id="sec-3-4-2"><span class="section-number-4">3.4.2</span> ABR et quicksort</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+présenter quicksort et remarquer qu'il s'agit de la même chose que le tri par ABR
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4-3" class="outline-4">
+<h4 id="sec-3-4-3"><span class="section-number-4">3.4.3</span> Trifusion et sa complexité</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+présenter le tri fusion et étudier la complexité (nlogn dans tous les cas)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4-4" class="outline-4">
+<h4 id="sec-3-4-4"><span class="section-number-4">3.4.4</span> Autre algos diviser pour régner</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+Faires d'autres exemples pour bien asseoir le concept
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4-5" class="outline-4">
+<h4 id="sec-3-4-5"><span class="section-number-4">3.4.5</span> Complexité des algorithmes</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+Algos logarithmiques et en n.log(n)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4-6" class="outline-4">
+<h4 id="sec-3-4-6"><span class="section-number-4">3.4.6</span> (++) Master theorem</h4>
+<div class="outline-text-4" id="text-3-4-6">
+<p>
+Montrer que diviser pour régner n'amène pas toujours à du log n ou du n.logn.
+Montrer certains cas du master theorem ?
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Trimestre 2 : Structures complexes</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Extraction de BdD</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Sémantique à base de tables relationnelles</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Bien comprendre la décomposition en tables, colonnes et lignes
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Principe d'une requête</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+Une base de donnée est une énorme structure de donnée dont l'interface est un langage complet
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> (&#x2013;) Rappels booléens (++) parler du Nul</h4>
+</div>
+<div id="outline-container-sec-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Select where et Order by</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+Utiliser le Select &#x2026; where &#x2026;
+Faire de grosses requêtes avec des Or et And partout
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-1-5" class="outline-4">
+<h4 id="sec-4-1-5"><span class="section-number-4">4.1.5</span> Jointures</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<p>
+Ne faites que des inner joins, les autres ne seront pas utiles et vont perdre les élèves. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-1-6" class="outline-4">
+<h4 id="sec-4-1-6"><span class="section-number-4">4.1.6</span> (++) TP/projet d'utilisation d'une grosse BdD en ligne</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<p>
+Faisable si l'établissement autorise les requêtes à distances&#x2026; 
+Dans ce cas on peut récupérer des infos sympa.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-1-7" class="outline-4">
+<h4 id="sec-4-1-7"><span class="section-number-4">4.1.7</span> (++) Group by</h4>
+<div class="outline-text-4" id="text-4-1-7">
+<p>
+Pas au programme mais on doit pouvoir faire des exercices avec ?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Modification d'une BdD</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> (++) Modification d'une BdD : une opération concurrente</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+Lorsque l'on modifie une base de donnée, d'autres lisent et écrivent sur la même
+base de donnée. Celle-ci est capable de gérer ça correctement !
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Insert et Delete</h4>
+</div>
+<div id="outline-container-sec-4-2-3" class="outline-4">
+<h4 id="sec-4-2-3"><span class="section-number-4">4.2.3</span> Update</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+Savoir faire un Set correctement. Attention aux modifications trop générales qui écrasent des infos :)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-4" class="outline-4">
+<h4 id="sec-4-2-4"><span class="section-number-4">4.2.4</span> Bien structurer une BdD</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+Règles basique de structuration. 
+Je ne crois pas que les many-to-one et many-to-many soient au programme (à vérifier)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-5" class="outline-4">
+<h4 id="sec-4-2-5"><span class="section-number-4">4.2.5</span> TP/projet d'utilisation d'une BdD local</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+Dépend encore de vos ingé systèmes, mais normalement, vous avez des bases de données qui tournent sous python.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-6" class="outline-4">
+<h4 id="sec-4-2-6"><span class="section-number-4">4.2.6</span> (++) sous requêtes</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<p>
+Je ne crois pas qu'elles soient au programme, mais ça ne ferait pas de mal aux élèves de voir que ça existe 
+(cela montre le pouvoir expressif de SQL)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Graphes</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Arrêtes et Noeuds</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Faire des graphes au tableau, petits exemples naturels. 
+Pas de poids sur les arrêtes.
+Graphes orientés et non orientés
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Représentations d'un graphe</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Comme matrice, comme dictionnaire d'adjacence, ou accès "local" à un noeud et à sa liste d'adjacence.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-3" class="outline-4">
+<h4 id="sec-4-3-3"><span class="section-number-4">4.3.3</span> Graphe de l'internet</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+Présenter l'internet comme un graphe très gros qui est "vu de l'intérieur" 
+avec uniquement la vue de nos voisins
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-4" class="outline-4">
+<h4 id="sec-4-3-4"><span class="section-number-4">4.3.4</span> Algorithmes de graphes</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+Parcours en largeur et profondeur, recherche de cycles et recherche de chemin.   
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-5" class="outline-4">
+<h4 id="sec-4-3-5"><span class="section-number-4">4.3.5</span> Protocoles de routage et algos de graphes</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<p>
+Le routage n'est qu'une application des algorithmes de graphes.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3-6" class="outline-4">
+<h4 id="sec-4-3-6"><span class="section-number-4">4.3.6</span> (++) Utilisation d'un API d'extraction de BdD</h4>
+</div>
+<div id="outline-container-sec-4-3-7" class="outline-4">
+<h4 id="sec-4-3-7"><span class="section-number-4">4.3.7</span> (++) web semantic et graphes de données</h4>
+</div>
+<div id="outline-container-sec-4-3-8" class="outline-4">
+<h4 id="sec-4-3-8"><span class="section-number-4">4.3.8</span> (++) Algorithmes gloutons sur les graphes</h4>
+<div class="outline-text-4" id="text-4-3-8">
+<p>
+Rappels + introduction d'un algo glouton sur les graphes ?
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> (++) Trimestre 3 : Problèmes complexes et paradigmes</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Un programme est une donnée comme les autres</h3>
+<div class="outline-text-3" id="text-5-1">
+</div><div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Un programme sur un ordi/dans une requête</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Le programme est juste une grosse String, ou bien un arbre (AST), dans tous les 
+cas, c'est une donnée que l'on peut manipuler. 
+On ne parle pas de contexte c'est trop abstrait&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Programmation fonctionnelle</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+fonctions d'ordre supérieurs, quelques utilisations du map, dérouler à la main.
+On peut faire le liens avec la compréhension de liste ?
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-1-3" class="outline-4">
+<h4 id="sec-5-1-3"><span class="section-number-4">5.1.3</span> Calculabilité</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+Montrer avec les mains qu'il n'est pas possible d'avoir un programme qui 
+dit si oui ou non le programme donné en entré termine
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> (++) concurrence et parallélisme</h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Gestion des processus et des ressources par un système d’exploitation</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+cf. bloc 3
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> (++) Paradigmes Concurrent et distribué</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+On peut être concurrent avec un seul coeur et on peut être distribué sans 
+problématique de concurrence
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2-3" class="outline-4">
+<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> (++) Bugs de concurrence, nécessité de protocoles</h4>
+</div>
+<div id="outline-container-sec-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4"><span class="section-number-4">5.2.4</span> (++) Exemple de la BdD</h4>
+</div>
+</div>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Algorithmique par suppression des redondances</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Analyse de redondance design d'algos par suppression des redondances</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+On ne veut pas faire un calcule plusieurs fois ou lire une même donnée plusieurs fois,
+réfléchir à comment éviter cela.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Programmation dynamique</h4>
+</div>
+<div id="outline-container-sec-5-3-3" class="outline-4">
+<h4 id="sec-5-3-3"><span class="section-number-4">5.3.3</span> Algorithme de Morris-Pratt</h4>
+</div>
+<div id="outline-container-sec-5-3-4" class="outline-4">
+<h4 id="sec-5-3-4"><span class="section-number-4">5.3.4</span> (++) Algorithme de Boyer-Moore</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Sur l'année</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Projet filé sur plusieurs séquences</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+L'idée est d'imaginer un ou plusieurs projets de programmation s'étalant sur plusieurs séquences.
+On peut imaginer un gros projet découpé en phases ou des projets plus indépendant, mais partageant 
+un cadre formel (mise en place) permettant à l'élève de s'y retrouver et avec chaque petits projet 
+couvrant une ou deux séquences.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-10-30 Wed 17:03</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

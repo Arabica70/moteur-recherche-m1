@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Complexité de Kolmogorov et classification des automates cellulaires</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Complexité de Kolmogorov et classification des automates cellulaires"/>
+            <meta property="og:url" content="./ddf01.html"/>
+            <meta property="og:description" content="Cet article, écrit conjointement avec Enrico Formenti et Bruno Durand, présente une approche nouvelle de la classification des automates cellulaires (AC) fondée sur la complexité de Kolmogorov. Nous construisons un paramètre κ qui est basé seulement sur la table de transition des AC et mesure le « caractère aléatoire » des évolutions. κ est meilleur, dans un certain sens, que n'importe quel autre paramètre calculable défini uniquement par la table de transition des AC. Nous avons aussi examiné les relations entre l'approche classique (topologique) et la notre. Notre paramètre a été aussi comparé au paramètre λ de Langton : le notre est plus fondé théoriquement, et s'accorde aussi avec des constatations expérimentales déjà publiées. Finalement, nous proposons aussi un protocole d'approximation de κ et d'expérimentation sur le comportement dynamique des AC."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./ddf01.html"
+         rel="bookmark"
+         title="Permalink to Complexité de Kolmogorov et classification des automates cellulaires">
+        Complexité de Kolmogorov et classification des automates cellulaires
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>dim. 06 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/complexite-de-kolmogorov.html">Complexité de Kolmogorov</a>
+        /
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/journal.html">journal</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/ddf01.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Cet article, écrit conjointement avec Enrico Formenti et Bruno Durand,
+présente une approche nouvelle de la classification des automates
+cellulaires (AC) fondée sur la complexité de Kolmogorov. Nous
+construisons un paramètre κ qui est basé seulement sur la table de
+transition des AC et mesure le « caractère aléatoire » des évolutions. κ
+est meilleur, dans un certain sens, que n'importe quel autre paramètre
+calculable défini uniquement par la table de transition des AC. Nous
+avons aussi examiné les relations entre l'approche classique
+(topologique) et la notre. Notre paramètre a été aussi comparé au
+paramètre λ de Langton : le notre est plus fondé théoriquement, et
+s'accorde aussi avec des constatations expérimentales déjà
+publiées. Finalement, nous proposons aussi un protocole d'approximation
+de κ et d'expérimentation sur le comportement dynamique des AC.</p>
+<p>Même s'il est marqué comme publié en mai 2001, la dernière révision est
+datée du 31 mars 1999. Parfois, c'est long, le processus éditorial... Je
+note aussi qu'il a été soumis a de très nombreuses conférences avant de
+paraître (directement en journal): ISAAC'97, ICALP'98, MFCS'98, FCT'97,
+en tant que rapport de recherche interne... Les différentes versions
+sont trop proches les unes des autres pour que j'ai jugé utile de les
+garder ou les présenter.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/ddf01.pdf">L'article de journal format LLNCS</a></li>
+</ul>
+<h2>Citer cette publication</h2>
+<p>Cet <a href="http://dx.doi.org/10.1016/S0304-3975%2800%2900012-8">article</a> a été
+publié dans <em><a href="http://www.elsevier.com/wps/find/journaldescription.cws_home/505625/description">Theoretical Computer
+Science</a></em>,
+revue très sérieuse d'informatique théorique.</p>
+<div class="highlight"><pre>@Article{ddf01,
+  author =   {Jean-Christophe Dubacq and Bruno Durand and Enrico Formenti},
+  title =    {{Kolmogorov} complexity and cellular automata classification},
+  journal =      {Theoretical Computer Science},
+  year =     {2001},
+  volume =   {259},
+  number =   {1--2},
+  pages =    {271--285},
+  month =    may
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

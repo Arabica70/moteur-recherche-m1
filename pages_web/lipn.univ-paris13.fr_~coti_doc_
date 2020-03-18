@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="verify-v1" content="GNdG0Mo6nTiIfAwRvJA/ESU5NtZXysIoAg0Hq5v2y3M=" />
+    <meta name="description" content="ma page web" />
+    <meta name="keywords" lang="fr" content="CV, camille coti, mpi,
+					     tolÃ©rance aux fautes,
+					     openmpi, open-mpi,
+					     qoscosgrid, tp mpi,
+					     grille, cluster, grappe,
+					     qcg ompi, style latex these" /> 
+    <meta name="keywords" lang="en" content="resume, camille coti, mpi, fault
+					     tolerance, openmpi,
+					     open-mpi, qoscosgrid, mpi
+					     lab, grid, grid
+					     computing, cluster,
+					     qcg ompi" /> 
+    <title>Camille Coti : Documents</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_clair.css"/>
+
+  <script type="text/javascript">
+    function showHideDiv( obj )   {
+        var divstyle = new String();
+        divstyle = document.getElementById(obj).style.visibility;
+        if(divstyle.toLowerCase()=="visible" || divstyle == "") {
+	  document.getElementById(obj).style.visibility = "hidden";
+            document.getElementById(obj).style.display = "none";
+        }
+        else {
+	  document.getElementById(obj).style.visibility = "visible";
+            document.getElementById(obj).style.display = "block";
+	}
+    }
+  </script>   
+
+
+  </head>
+  
+  <body>
+   <div class="marge" id="nav"><div class="titre_marge">Links</div><ul><li>Home <a href="http://www-lipn.univ-paris13.fr/~coti/index_fr.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></a> / <a href="http://www-lipn.univ-paris13.fr/~coti/index.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /></a>
+</li><li><a href="http://www.github.com/coti">My GitHub homepage</a></li><li><a href="http://www.open-mpi.org">Open MPI</a></li><li><a href="http://mpich-v.lri.fr">MPICH-V</a></li><li><a href="https://bountyfactory.io">Bug Bounty</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/QosCosGrid">QosCosGrid</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/doc">Some documents</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/cours">Teaching</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><style>
+  .strava-badge- { display: inline-block; height: 32px; }
+  .strava-badge- img { visibility: hidden; height: 32px; }
+  .strava-badge-:hover { background-position: 0 -47px; }
+  .strava-badge-follow { height: 32px; width: 32px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+</style>
+<a href="http://strava.com/athletes/2676650/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" /></a><a href="http://www.strava.com/athletes/2676650">My Strava profile</a></li></ul></div>
+   <div class="infos">
+     Cette page rassemble quelques documents qui pourraient être utiles.
+     <ul>
+       <li><a href="#stylethese">Le style LaTeX</a> que j'ai utilisé pour rédiger ma thèse</li><!--'-->
+       <li><a href="#qualif">Dossier de candidature</a> à la qualification aux fonctions de Maître de Conférences</li>
+       <li><a href="#candi">Un exemple en LaTeX de dossier de candidature</a> sur un poste de Maître de Conférences</li>
+       <li><a href="#tutos">Quelques tutoriels</a></li>
+     </ul>
+   </div>
+
+   <div class="separateur"><a name="stylethese"></a>
+     Le style que j'ai utilisé pour rédiger ma thèse<!--'-->
+   </div>
+
+   <div class="main">
+     J'ai préparé une archive contenant la feuille de style que j'ai 
+     utilisée pour rédiger <a href="./these.pdf">ma
+     thèse</a>. 
+
+     <p>Ce style permet notamment de réaliser la page de couverture (avec
+       titre, composition du jury, etc) et il présente une mise en page 
+       mieux adaptée que le style de la classe LaTeX book.
+     </p>
+    
+     <p>L'archive contient également des outils tels qu'un Makefile (pour 
+       compiler facilement) ou les feuilles de style utiles à la rédaction 
+       d'un mémoire en français.<!--'-->
+     </p>
+
+    <ul>
+      <li><a href="./stylethese.tar.gz">Le style LaTeX</a>,
+           contenant un exemple d'utilisation</li>
+      <li><a href="./stylethese.pdf">Le tutoriel</a> pour 
+           l'utiliser</li>
+    </ul>
+   </div>
+
+   <div class="separateur"><a name="qualif"></a>
+     Dossier de candidature à la qualification aux fonctions de Maître de Conférences
+   </div>
+
+   <div class="main">
+      Il faut envoyer un dossier à deux rapporteurs. Les modalités sont publiées 
+      au Journal Officiel. En 2010 (arrêté du <a href="http://cnu27.lri.fr/Arrete_qualifs2010.pdf">16 
+      juillet 2009</a>), les pièces à fournir différaient des années 
+      précédentes. Outre les habituels rapports de thèse et preuve d'obtention 
+      d'un doctorat ou équivalent, il fallait non plus fournir un dossier dont le
+      contenu était laissé à l'appréciation du candidat (généralement un dossier
+      complet d'une vingtaine de pages, d'après ce que j'ai pu voir), mais un CV
+      limité à deux pages et un exposé limité à quatre pages. 
+      
+      <p>Il était par ailleurs possible de fournir tout autre document présentant 
+      sa candidature. J'ai donc joint un dossier complet présentant ma candidature.<!--'-->
+      </p>
+
+      <ul>
+        <li><a href="./cv3.pdf">Mon CV</a> de deux pages</li>
+        <li><a href="./expose.pdf">L'exposé de ma candidature</a> en quatre pages</li><!--'-->
+        <li><a href="./cv2.pdf">Mon dossier</a> de vingt pages présentant ma candidature de façon plus complète</li>
+      </ul>
+   </div>
+
+    <div class="separateur"><a name="candi"></a>
+     Exemple en LaTeX de dossier de candidature aux fonctions de Maître de Conférences
+   </div>
+
+   <div class="main">
+     Voici un exemple pour préparer en LaTeX son dossier de candidature sur un poste de maître de conférences. Il est <i>très</i> inspiré du dossier diffusé par l'INRIA <!--'--> pour sa campagne de recrutements CR2 en 2010.
+
+      <p>Pour des conseils pour candidater, la page de <a href="http://www.loria.fr/~lnussbau/recrutement_mcf.html">Lucas Nussbaum</a>.
+      </p>
+
+      <ul>
+        <li><a href="./dossier_mcf.pdf">Exemple de dossier</a> utilisant ce style</li>
+        <li><a href="./latex_mcf.tgz">Le dossier en LaTeX</a></li>
+      </ul>
+   </div>
+
+    <div class="separateur"><a name="tutos"></a>
+     Quelques tutoriels
+   </div>
+
+   <div class="main">
+     <ul>
+       <li><a href="./tutoblcr.pdf">Tutoriel BLCR</a> (Berkeley Lab checkpoint/Restart)</li>
+        <li><a href="./tutolapack.pdf">Tutoriel utilisation de LAPACK et des BLAS</a></li>
+        <li><a href="./tutonympyscipy.pdf">Mini-tutoriel NumPy et SciPy</a></li>
+        <li><a href="./tutopympi.pdf">Tutoriel MPI avec Python</a></li>
+	<li><a href="./tutoocamlmpi.pdf">Tutoriel MPI avec OCaml</a></li>
+      </ul>
+   </div>
+
+   
+   <!-- APRES CETTE LIGNE ON NE TOUCHE PLUS -->
+     
+
+
+    <!-- MOUCHARD GOOGLE ET W3C -->
+    <div class="marge_w3c">
+      <a href="http://validator.w3.org/check?uri=referer">
+	<img
+	   src="http://www.w3.org/Icons/valid-xhtml10-blue"
+	   alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+      </a>
+    </div>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-9116769-2");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    
+  </body>
+</html>

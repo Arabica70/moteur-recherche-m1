@@ -1,0 +1,127 @@
+
+
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flavien Breuvart's Homepage</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="Content-Language" content=uk />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href=publications.php?lang=uk>Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Grants <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href=Projets.php?lang=uk>Propositions</a></li>
+            <li><a href=CoGITARe/?lang=uk>ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=stages.php?lang=uk>Internships/PhDs</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Teaching <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=compilation/?lang=uk>Compilation</a></li>
+	         <li><a href=principes_de_programmation/?lang=uk>Haskell (old)</a></li>
+             <li><a href=prog_fonctionnelle/?lang=uk>Functional programming (old)</a></li>
+             <li><a href=LEE/?lang=uk>LEE</a></li>
+             <li><a href=Architecture_systeme/?lang=uk>Architecture and System (old)</a></li>
+             <li><a href=DIU-EIL/?lang=uk>DIU-EIL</a></li>
+             <li><a href=misa/?lang=uk>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=fr><img src=data/fr.png alt=lang:fr style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+
+    <div class="adresse"> <!-- <img src="data/photo.JPG" alt="Me" style="float:right;width:260px;height:360px;">-->
+    <header>
+      Flavien BREUVART </br>
+       Assistant Professor at LIPN    </header>
+    <h2> Contact </h2>
+      <p>
+	 Office A209 </br>
+     LIPN, UMR CNRS 7030</br>
+     Institut Galilée - Université Paris 13</br>
+	 99, avenue Jean-Baptiste Clément</br>
+	 93430 Villetaneuse
+      </p>
+      <p>
+	<a href="mailto:flavien[dot]breuvart[at]lipn.univ-paris13.fr">
+	  flavien[dot]breuvart[at]lipn.univ-paris13.fr
+	</a>
+      </p>
+    </div>
+
+    <div class="general">
+    <h2>  Events </h2>
+	<p >
+     <UL TYPE=square>
+    <LI> 15/07/18, <strong>ANR JCJC CoGITARe</strong> : </br> CoGITARe project accepted by the ANR JCJC, it will start in March. There is a fully funded PhD associated, please contact me if interested.	  </UL>
+	</p>
+    <h2> Research interests </h2>
+
+	<p >I am interested in operational and denotational semantics for functional programming languages.
+	  More precisely I am working on three directions
+	  and their interactions :
+	  <UL TYPE=square>
+	    <LI> Models of pure lambda-calculus: used for studying the lattice of lambda-theories,
+	      in particular its interactions with computability theory.
+	  </UL>
+	  <UL TYPE=square>
+	    <LI> Quantitative semantics: building parametrised concrete semantics either to extract
+	      quantitative information or to model resource sensitive calculi. I am particuliarly
+	      interested in probabilistic calculi as well as semantics sensible to complexity and
+	      sequentiality.
+	  </UL>
+	  <UL TYPE=square>
+	    <LI> Probabilistic (higher order) Rewriting: Understanding probabilistic reduction and termination.
+	      More exactly, I am interested in separating classical and
+	      probabilistic properties of probabilistic programs so that linear/non-probabilistic
+	      invariant that can be towed by lifting standard proof techniques.
+	  </UL>
+	</p>
+	<p> 
+	  By transitivity I am also interested in many related domains: logic, algebra, proof
+	  theory, computability theory, complexity theory,.. But also further computer sci-
+	  ence domains: language design, circuit design, cryptography protocols (differential
+	  privacy)...
+	</p>
+        <h2>  Internships and Theses </h2>
+	<p >
+     <UL TYPE=square>
+    <LI> 15/07/18: I am looking for intrnship or PhD student. If you are interested, please have a look at the  <a href='stages.php'>dedicated webpage</a>. We have a fully-funded PhD grant to provide for next september via <a href='CoGITARe/'>CoGITARe project</a>	  </UL>
+	</p>
+    <h2> <a href='CV.pdf'> Resume </a> </h2>
+</div>
+
+         
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

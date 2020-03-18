@@ -1,0 +1,192 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Other Variables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.OtherVariables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=search&amp;q=link=PmWiki.OtherVariables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Other Variables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LinkVariables'>Link Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PagelistVariables'>Pagelist Variables</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<dl><dt><a name='FmtV' id='FmtV'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtV'><code class='varlink'>&#036;FmtV</code></a></dt><dd> 
+</dd></dl><div class='indent'>This variable is an array that is used for string substitutions at the end of a call to <code><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName'>FmtPageName</a>()</code>. For each element in the array, the &ldquo;key&rdquo; (interpreted as a string) will be replaced by the corresponding &ldquo;value&rdquo;.  The variable is intended to be a place to store substitution variables that have frequently changing values (thus avoiding a rebuild of the variable cache making <code><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName'>FmtPageName</a>()</code> faster). Also see {$FmtP. %green%''Values of $}FmtV are set by the internal functions FormatTableRow, LinkIMap, HandleBrowse, PreviewPage, HandleEdit, PmWikiAuth, and PasswdVar, apparently to set values for system generated string substitutions like PageText.&prime;
+</div><div class='vspace'></div><dl><dt><a name='FmtP' id='FmtP'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtP'><code class='varlink'>&#036;FmtP</code></a></dt><dd>
+</dd></dl><div class='indent'>This variable is an array that is used for pattern substitutions near the beginning of a call to <code class='escaped'>FmtPageName</code>. For each element in the array, the &ldquo;key&rdquo; (interpreted as a pattern) will be replaced by the corresponding value evaluated for the name of the current page. This is for instance used to handle {$-substitutions that depend on the pagename passed to <code class='escaped'>FmtPageName()</code>.  Also see $}FmtV. <span  style='color: green;'>From robots.php: <em>If {$EnableRobotCloakActions is set, then a pattern is added to $}FmtP to hide any &ldquo;?action=&ldquo; url parameters in page urls generated by PmWiki for actions that robots aren&rsquo;t allowed to access.  This can greatly reduce the load on the server by not providing the robot with links to pages that it will be forbidden to index anyway.</em></span>
+</div><div class='vspace'></div><dl><dt><a name='FmtPV' id='FmtPV'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtPV'><code class='varlink'>&#036;FmtPV</code></a></dt><dd>
+</dd></dl><div class='indent'>This variable is an array that is used for defining <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page Variables</a>. New variables can be defined with <code class='escaped'>$FmtPV['$VarName'] = 'variable definition';</code> which can be used in markup with <code class='escaped'>{$VarName}</code>. Please note that the contents of <code class='escaped'>$FmtPV['$VarName']</code> are <code class='escaped'>eval()</code>ed to produce the final text for <code class='escaped'>$VarName</code>, so the contents must be a PHP expression which is valid at the time of substitution. In particular, <span  style='color: red;'>this does not work:</span>
+<div class='vspace'></div><div class='indent'><span  style='color: red;'><code class='escaped'>#This doesn't work</code></span>
+</div><div class='indent'><code class='escaped'>$FmtPV['$MyText'] = "This is my text."; # WARNING: Doesn't work!</code>
+</div><div class='vspace'></div></div><div class='indent'>The problem is that the text <span  style='color: blue;'><code class='escaped'>This is my text.</code></span> is not a valid PHP expression. To work it would need to be placed in quotes, so that what actually gets stored in <code class='escaped'>$FmtPV['$MyText']</code> is <span  style='color: blue;'><code class='escaped'>"This is my text."</code></span> which <strong>is</strong> a valid PHP expression for a text string. Thus the correct way to do this would be with an extra set of quotes:
+<div class='vspace'></div><div class='indent'><code class='escaped'>#This will work</code>
+</div><div class='indent'><code class='escaped'>$FmtPV['$MyText'] = '"This is my text."';</code>
+</div><div class='vspace'></div></div><div class='indent'>This also has implications for how internal PHP or PmWiki variables are accessed. To have the page variable <code class='escaped'>$MyVar</code> produce the contents of the internal variable <code class='escaped'>$myvar</code>, many folks try the following <span  style='color: red;'>which does not work:</span>
+<div class='vspace'></div><div class='indent'><span  style='color: red;'><code class='escaped'>#This doesn't work either!</code></span>
+</div><div class='indent'><code class='escaped'>$myvar = SomeComplexFunction();</code>
+</div><div class='indent'><code class='escaped'>$FmtPV['$MyVar'] = $myvar; # WARNING: Doesn't work!</code>
+</div><div class='vspace'></div></div><div class='indent'>There are several correct ways to do this, depending on whether you need the value of the <code class='escaped'>$myvar</code> variable as it was at the time the <code class='escaped'>$FmtPV</code> entry was created, or at the time that a particular instance of <code class='escaped'>$MyVar</code> is being rendered on a page. For most simple page variables that don&rsquo;t change during the processing of a page its more efficient to set the value when the entry is created:
+<div class='vspace'></div><div class='indent'><code class='escaped'>$myvar = SomeComplexFunction();</code>
+</div><div class='indent'><code class='escaped'>$FmtPV['$MyVar'] = "'" . $myvar . "'"; #capture contents of $myvar</code>
+</div><div class='vspace'></div></div><div class='indent'>NOTE: If <code class='escaped'>$myvar</code> should contain single quotes, the above won&rsquo;t work as is, and you&rsquo;ll need to process the variable to escape any internal quotes.
+<div class='vspace'></div></div><div class='indent'>For more complex cases where an internal variable may have different values at different places in the page (possibly due to the effects of other markup), then you need to make the <code class='escaped'>$FmtPV</code> entry make an explicit reference to the global value of the variable (and the variable had better be global) like this:
+<div class='vspace'></div><div class='indent'><code class='escaped'>global $myvar;</code>
+</div><div class='indent'><code class='escaped'>$FmtPV['$MyVar'] = '$GLOBALS["myvar"]';</code>
+</div><div class='vspace'></div></div><div class='indent'>Finally, there&rsquo;s nothing to stop you from simply having the evaluation of the <code class='escaped'>$FmtPV</code> entry execute a function to determine the replacement text:
+<div class='vspace'></div><div class='indent'><code class='escaped'># add page variable {$Today}, formats today's date as yyyy-mm-dd</code>
+</div><div class='indent'><code class='escaped'>$FmtPV['$Today'] = 'strftime("%Y-%m-%d", time() )';</code>
+</div></div><div class='vspace'></div><div class='frame' > 
+<div class='indent'>Once again, please note that the values of the elements of <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtPV'><code class='varlink'>&#036;FmtPV</code></a> are <code>eval()</code>ed so always sanitize any user input. The following is very insecure:
+<div class='vspace'></div><div class='indent'><code class='escaped'>$FmtPV['$Var'] = $_REQUEST['Var'];</code> <span  style='color: red;'># critically insecure, allows PHP code injection</span>
+</div><div class='indent'><code class='escaped'>$FmtPV['$Var'] = '"'. addslashes($_REQUEST['Var']).'"';</code> <span  style='color: red;'># critically insecure, allows PHP code injection</span>
+</div><div class='vspace'></div></div><div class='indent'>See the recipe <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/HttpVariables' rel='nofollow'>Cookbook:HttpVariables</a> for a better way to use these variables.
+</div></div>
+<div class='vspace'></div><div class='indent'>See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/MoreCustomPageVariables' rel='nofollow'>Cookbook:MoreCustomPageVariables</a> for more examples of how to use <code class='escaped'>$FmtPV</code>.
+</div><p class='vspace'>:{$MaxPageTextVars: This variable prevents endless loops in accidental recursive [[PageTextVariables]] which could lock down a server. Default is 500 which means that each PageTextVariable from one page can be displayed up to 500 times in one wiki page. If you need to display it more than 500 times, set in config.php something like<br />@@$}MaxPageTextVars = 10000;@@ # ten thousand times
+</p>
+<p class='vspace'>:{$PageCacheDir: Enables the cache of most of the HTML for pages with no conditionals. The variable contains the name of a writable directory where PmWiki can cache the HTML output to speed up subsequent displays of the same page. Default is empty, which disables the cache. See also $}PageListCacheDir.
+</p>
+<div class='vspace'></div><pre> # Enable HTML caching in work.d/
+ <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#PageCacheDir'><code class='varlink'>&#036;PageCacheDir</code></a> = &lsquo;work.d/&rsquo;;
+</pre><p class='vspace'> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LinkVariables'>Link Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PagelistVariables'>Pagelist Variables</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/OtherVariables' rel='nofollow'>PmWiki:OtherVariables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/OtherVariables-Talk' rel='nofollow'>PmWiki:OtherVariables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on December 19, 2015, at 06:06 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

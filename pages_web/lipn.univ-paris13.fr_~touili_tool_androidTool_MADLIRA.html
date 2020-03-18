@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>MADLIRA | Malware Detection using Learning and Information Retrieval for Android</title>
+<meta property="og:title" content="MADLIRA">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Malware detection using learning and information retrieval for Android">
+<meta property="og:description" content="Malware detection using learning and information retrieval for Android">
+<link rel="canonical" href="https://dkhuuthe.github.io/MADLIRA/">
+<meta property="og:url" content="https://dkhuuthe.github.io/MADLIRA/">
+<meta property="og:site_name" content="MADLIRA">
+<script type="application/ld+json">
+{"name":"MADLIRA","description":"Malware detection using learning and information retrieval for Android","author":null,"@type":"WebSite","url":"https://dkhuuthe.github.io/MADLIRA/","image":null,"publisher":null,"headline":"MADLIRA","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="MADLIRA_fichiers/style.css">
+    <script src="MADLIRA_fichiers/jquery.js"></script>
+    <script src="MADLIRA_fichiers/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92084241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92084241-1');
+</script>
+
+  </head>
+  <body>
+
+      <header>
+        <h1><font color="blue"; style='text-shadow:0px 2px 0px #FFF0E0'>MADLIRA</font></h1>
+        <p><font color="blue"; style='text-shadow:0px 2px 0px #FFF0E0'>Malware Detection using Learning and Information Retrieval for Android</font></p>
+      </header>
+
+
+    <div class="wrapper">
+      <nav>
+	  <ul>
+	  </ul>
+	  </nav>
+      <section style="height: auto;">
+        <h1 id="madlira">MADLIRA</h1>
+<p>Malware Detection using Learning and Information Retrieval for Android</p>
+
+<h2 id="overview">Overview</h2>
+<p><strong>MADLIRA</strong> is an Android static malware detector. It takes as input a set 
+of Android malwares and a set of
+Android benwares and
+can either (1) extract a malicious API graph representing the malicious 
+behaviors of the Android malwares
+in
+the set;
+or (2) learn to classify Android malwares without extracting the 
+malicious behaviors.
+These phases are called the training phases.
+Then, given a new Android application, MADLIRA  checks whether it is
+malicious or not.</p>
+
+
+
+<h2 id="insalling">Installing</h2>
+<ul>
+<li>Download file <a href="https://lipn.univ-paris13.fr/~dam/tool/androidTool/MADLIRA.7z">MADLIRA.7z</a> which contains executable files and decompress it.
+</li>
+<li>Download file <a href="https://lipn.univ-paris13.fr/~dam/tool/androidTool/MADLIRA_Data.7z">MADLIRA_Data.7z</a> which contains training data and decompress it.
+</li>
+</ul>
+
+
+<h4 id="installed-data">Installed Data:</h4>
+<ul>
+  <li><em>MADLIRA.jar</em> is the main application.</li>
+  <li><em>noAPI.txt</em>  declares the prefix of APIs.</li>
+  <li><em>family.txt</em> lists malwares by family.</li>
+  <li>Folder <em>TrainData</em> contains the training configuration and training model.</li>
+  <li>Folder <em>Samples</em>  contains sample data.</li>
+  <li>Folder <em>TempData</em> contains data for kernel computation.</li>
+</ul>
+
+<h2 id="functionality">Functionality</h2>
+<p>This tool has two main components: <a href='#tfidf-component'>TFIDF component</a>, which extracts the 
+malicious behaviors
+  and uses these malicious behaviors to check whether a new application 
+is malicious or not
+  (read  paper [<a href='#references'>1</a>] for more details), and <a href='#svm-component'>SVM component</a>, which applies 
+Random walk Graph kernel
+  based support vector machines to classify  malwares from benign 
+programs (read  paper [<a href='#references'>2</a>]
+for more details).</p>
+<h3 id="tfidf-component"><font color="red">TFIDF component</font></h3>
+<p><center>
+<img src="MADLIRA_fichiers/tfidfTool.PNG" alt="TFIDF is a tool for malware detection">
+TFIDF component
+</center>
+</p>
+<p align="justify">
+<strong>Extraction of Malicious Behaviors Module</strong> takes as input a set of malwares and a set of benwares. After applying 
+the Graph Computation component to extract their corresponding
+  API call graphs, these  graphs are fed to the Malicious Graph 
+Computation component to compute the malicious API graph.  This component implements the TFIDF weighting term scheme introduced in [1] to compute the malicious behaviors. It outputs malicious API graphs representing the malicious behaviors.
+</p>
+<p align="justify">
+<strong>Malicious Behavior Detection Module</strong> takes as input a binary program. It 
+first applies the Graph Computation component to compute its corresponding API
+call graph. Then,   it checks whether this graph contains any malicious behavior from the malicious API graphs (the output of Extraction of Malicious Behaviors Module) or not. If this program contains any malicious behavior, the output is <em>Malicious!</em>. Otherwise, the output is <em>Benign!</em>.
+</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: MADLIRA TFIDF
+</code></pre></div></div>
+<p>For this component, there are two functions: the training function 
+(Malicious behavior extraction) and the test function (Malicious 
+behavior detection)</p>
+
+<h4 id="malicious-behavior-extraction"><strong>Malicious behavior extraction</strong></h4>
+<ul>
+  <li>Collect benign applications and malicious applications and put 
+them in folders named benignAPKFolder and maliciousApkFolder, 
+respectively.</li>
+  <li>Prepare training data and pack them in two files named benignPack and maliciousPack by using the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF packAPK -PB benignApkFolder -B benignPack -PM maliciousApkFolder -M maliciousPack
+</code></pre></div>    </div>
+  </li>
+  <li>Extract malicious behaviors from the two packed files (benignPack and maliciousPack) by using the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF train -B benignPack -M maliciousPack
+</code></pre></div>    </div>
+  </li>
+  </ul>
+  <h4 id="malicious-behavior-detection"><strong>Malicious behavior detection</strong></h4>
+  <ul>
+  <li>Collect new applications and put them in a folder named checkApk.</li>
+  <li>Detect malicious behaviors of applications in the folder checkApk by using the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF check -S checkApk
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Command:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF train &lt;Options&gt;
+        Compute the malicious specifications for a given training data.
+                -B &lt;filename&gt;: the archive file contains all graphs of training benwares.
+                -M &lt;filename&gt;: the archive file contains all categories of training malwares.
+
+MADLIRA TFIDF check &lt;Options&gt;
+        Check malicious behaviors in the given applications in a folder.
+                -S &lt;folder&gt;: the folder contains all applications (apk files).
+
+MADLIRA TFIDF test &lt;Options&gt;
+        Test the classifier for a given test data.
+                -S &lt;folder&gt;: the folder contains all graphs for testing.
+
+MADLIRA TFIDF clear
+        Clean all training data.
+
+MADLIRA TFIDF install
+        Clean old training data and install a new data for training.
+                -B &lt;filename&gt;: the archive file contains all graphs of training benwares.
+                -M &lt;filename&gt;: the archive file contains all categories of training malwares.
+
+</code></pre></div></div>
+<h4 id="examples">Examples:</h4>
+<p><strong>Training new data:</strong></p>
+<ul>
+  <li>First collect training applications (APK files) and store them in folders named MalApkFolder and BenApkFolder.</li>
+  <li>Pack training applications into archive files named MalPack and BenPack by using this command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF packAPK -PB BenApkFolder -B BenPack -PM MalApkFolder -M MalPack
+</code></pre></div>    </div>
+  </li>
+  <li>Clean old training data:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF clear
+</code></pre></div>    </div>
+  </li>
+  <li>Compute the malicious graphs from the training packs (BenPack and MalPack)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF train -B BenPack -M MalPack
+</code></pre></div>    </div>
+    
+  </li>
+  </ul>
+  <p><strong>Checking new applications:</strong></p>
+  <ul>
+  <li>put these applications in a folder named checkApk and use this command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA TFIDF check -S checkApk
+</code></pre></div>    </div>
+    <p>Output:
+<img src="MADLIRA_fichiers/testSamples.PNG" alt="output"></p>
+  MADLIRA marks <em>Malicious!</em> programs detected as malwares and <em>Benign!</em> the benign ones.
+  </li>
+</ul>
+
+<h3 id="svm-component"><font color="red">SVM component</font></h3>
+<p><center>
+<img src="MADLIRA_fichiers/SVMTool.PNG" alt="SVM is a tool for malware detection">
+SVM component
+</center>
+</p>
+<p align="justify">
+<strong>Learning Malicious Behaviors Module</strong> implements two phases: the learning phase and the detection phase.
+In the learning phase, it takes as input a set of malwares and a set of benwares. It first applies the first  Module to compute their corresponding API
+call graphs. Then,  these API call graphs are fed to the SVM training 
+component, i.e.,  <a href='https://www.csie.ntu.edu.tw/~cjlin/libsvm/'>LIBSVM</a>, to compute a SVM training model.
+In the detection phase, it takes as input a binary code and applies the 
+first  Module to compute its
+  corresponding API call graph. Then, it uses SVM classifier with the training model (the output of the first phase) to classify the program either <em>Malicious!</em> or <em>Benign!</em>.
+</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command: MADLIRA SVM
+</code></pre></div></div>
+<p>For this component, there are two functions: the training function and the test function.</p>
+<h4 id="training-phase"><strong>Training phase</strong></h4>
+<ul>
+  <li>Collect benign applications  in a folder named benignApkFolder and malicious applications in a folder named maliciousApkFolder.</li>
+  <li>Prepare training data by using the commands:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA SVM packAPK -PB benignApkFolder -B benignPack -PM maliciousApkFolder -M maliciousPack
+</code></pre></div>    </div>
+  </li>
+  <li>Learn the malicious behavior as a SVM training model by the following command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA SVM train -B benignPack -M maliciousPack
+</code></pre></div>    </div>
+    
+  </li>
+  </ul>
+  <h4 id="malicious-behavior-detection-1"><strong>Malicious behavior detection</strong></h4>
+  <ul>
+  <li>Collect new  applications and put  them in a folder named checkApk</li>
+  <li>Detect malicious behaviors of applications in the folder checkApk by using the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA SVM check -S checkApk
+</code></pre></div>    </div>
+
+<p><strong>Command:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MADLIRA SVM train &lt;Options&gt;
+        Compute the classifier for given training data.
+                -T &lt;t&gt;: max length of the common walks (default value = 3).
+                -l &lt;lambda&gt;: lambda value to control the importance of length of walks (default value = 0.4).
+				-B &lt;filename&gt;: the archive file contains all graphs of training benwares.
+				-M &lt;filename&gt;: the archive file contains all graphs of training malwares.
+
+MADLIRA SVM check &lt;Options&gt;
+        Check malicious behaviors in the given applications in a folder.
+                -S &lt;folder&gt;: the folder contains all applications (apk files).
+
+MADLIRA SVM test &lt;Options&gt;
+        Test the classifier for a given test data.
+                -S &lt;folder&gt;: the folder contains all graphs for testing.
+
+MADLIRA SVM clear
+        Clean all training data.
+</code></pre></div></div>
+
+<h4 id="packages">Packages</h4>
+<p>This tool uses the following packages:</p>
+<ul>
+  <li><a href='https://ibotpeaches.github.io/Apktool/'>apktool-2.2.1 </a></li>
+  <li><a href='https://github.com/optimatika/ojAlgo'>ojalgo-41.0.0</a></li>
+  <li><a href='http://www.csie.ntu.edu.tw/~cjlin/libsvm/'>libsvm</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+<ol>
+  <li><a href='http://www.scitepress.org/DigitalLibrary/PublicationsDetail.aspx?ID=y2Ax5W+/94w=&t=1' target='_blank'>Khanh Huu The Dam and Tayssir Touili. Extracting Android Malicious Behaviors. In Proceedings of The 1st International Workshop on FORmal methods for Security Engineering 2017</a></li>
+  <li><a href='https://dl.acm.org/citation.cfm?id=3105826' target='_blank'>Khanh Huu The Dam and Tayssir Touili. Learn Android malware. In Proceedings of The 6th International Workshop on Security of Mobile Applications 2017</a></li>
+</ol>
+
+
+      </section>
+      <footer>
+        
+          <p>Project maintained by <strong>Khanh Huu The Dam</strong> and <strong>Tayssir Touili</strong></p>
+        
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  
+
+</body></html>

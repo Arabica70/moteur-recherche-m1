@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 4</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 4: Classes, Organisation du code en plusieurs fichiers</h2>
+
+<h3>Rappels</h3>
+<ul>
+  <li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<h2>Ce TD n'est pas noté directement -- les rendus seront examinés à la main, et incorporés a la note globale (avec d'autres éléments tels le style)</h2>
+
+<h3>Exercice 1: Classes, mini-projet</h3>
+<ol>
+  <li>
+    Dans un fichier <tt>student.h</tt>, <b>écrivez</b> le prototype (i.e. <i>déclaration</i>) d'une classe <tt>Student</tt> contenant:
+    <ul>
+      <li>Le nom de l'étudiant (limité à 127 caractères: <b>on n'utilisera pas <tt>string</tt></b>)</li>
+      <li>La date de naissance de l'étudiant, encodée dans un <b>entier</b> au format YYYYMMDD.</li>
+    </ul>
+    Le <i>constructeur</i> de cette classe devra prendre ces données en argument.
+    <br/>
+    <br/><b>Ajoutez</b> à cette classe les fonctions (<b>seulement les déclarations!</b>):
+    <ul>
+      <li>Name(), qui renvoie le nom (un <tt>const char*</tt>).</li>
+      <li>Birthday(), qui renvoie un entier representant l'anniversaire de l'étudiant au format MMDD (donc s'il est né le 23/07, on renvoie 723)</li>
+    </ul>
+    <br/><b class="orange">RENDU:</b> <tt>student.h</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Dans un fichier <tt>student.cc</tt>, <b>écrivez</b> l'implémentation de cette classe.
+    <br/>Indications:
+    <ul>
+      <li>N'oubliez pas d'inclure le <tt>.h</tt> au début.</li>
+      <li>La syntaxe pour définir une fonction de classe hors de la classe ressemble à:
+        <pre><code class="c++">type Class::Method(type_arg arg1, type_arg arg2) {
+  ...
+}</code></pre>
+      </li>
+      <li><b>Copiez</b> bien la chaine de caractères (le nom), caractère par caractère. Ne gardez pas que le pointeur!
+      <br/>On pourra par exemple utiliser <a href="http://www.cplusplus.com/reference/cstring/strncpy"><tt>strncpy</tt></a> mais attention à bien ajouter le caractère <tt>'\0'</tt> si nécessaire!</li>
+    </ul>
+    <br/>
+    <b>Vérifiez</b> en compilant vos fichiers: <tt>g++ student.cc -c -o student.o</tt>. Réparez <tt>student.h</tt> si besoin.
+    <br/><br/><b class="orange">RENDU:</b> <tt>student.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Dans 2 fichiers <tt>class.h</tt> et <tt>class.cc</tt>, <b>écrivez</b> le prototype et l'implémentation (i.e. <i>déclaration</i> et <i>définition</i>) d'une classe <tt>Class</tt> contenant:
+    <ul>
+      <li>Le nom du cours (taille illimitée), par exemple "XML", et une fonction <tt>Name()</tt> le renvoyant.
+      <br/>Mais cette fois, <b>utilisez <tt>string</tt></b> au lieu de <tt>char*</tt> ou <tt>char[]</tt>! vous aurez besoin de <tt>#include &lt;string&gt;</tt> et de <tt>using std::string;</tt>.</li>
+      <li>Le nombre maximal d'étudiants pouvant s'inscrire à ce cours (qui ne dépassera jamais 1000), et une fonction <tt>MaxNumberOfStudents()</tt> le renvoyant.</li>
+      <li>La liste des étudiants inscrits a ce cours:
+        <ul>
+          <li>Le nombre d'étudiants inscrits: une fonction <tt>NumStudents()</tt>.</li>
+          <li>La possibilité d'inscrire un étudiant au cours: une fonction <tt>AddStudent(Student* student)</tt>, qui renvoie l'index de l'étudiant (0 pour le premier étudiant, 1 pour le deuxième, etc), ou -1 si le cours est déjà rempli au maximum.</li>
+          <li>Consulter un étudiant inscrit: une fonction <tt>GetStudent(int student_index)</tt>. Que va-t'elle renvoyer?</li>
+        </ul>
+      </li>
+    </ul>
+    <br/><b>Note</b>: Pensez à inclure le fichier <tt>student.h</tt>
+    <br/><b>Note</b>: Pour construire une <tt>Class</tt>, on prendra son nom et son nombre maximal d'étudiants, et on aura aucun étudiant inscrit au début.
+    <br/>
+    <br/>Pensez à <b>Vérifier</b> votre code, au moins en le compilant!
+    <br/><br/><b class="orange">RENDUS:</b> <tt>class.h</tt> et  <tt>class.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Dans des fichiers <tt>io.h</tt> et <tt>io.cc</tt>, <b>écrivez</b> le prototype puis l'implémentation des fonctions:
+    <ul>
+      <li><tt>void PrintStudent(const Student&amp;)</tt>, qui "affiche" la description d'un étudiant (avec <tt>cout &lt;&lt; ...</tt>) sur une ligne.</li>
+      <li><tt>void PrintClass(const Class&amp;)</tt> qui affiche la description d'une classe (sur une ligne) et de tous les étudiants qui y sont inscrits (un par ligne)</li>
+      <li><tt>Student* EnterStudent()</tt> qui <i>crée</i> et <i>remplit</i> un <tt>Student</tt> (nom, date de naissance) avec l'entrée interactive <tt>cin</tt>, et en utilisant l'opérateur <a href="http://en.cppreference.com/w/cpp/memory/new/operator_new"><tt>new</tt></a></li>
+      <li><tt>Class* EnterClass()</tt> qui fait la même chose pour une classe, puis qui demande le nombre d'étudiants a inscrire, et qui les saisit un par un et les ajoute.</li>
+    </ul>
+    <br/>
+    Incluez bien les fichiers <tt>student.h</tt> et <tt>class.h</tt> dans le fichier <tt>io.h</tt>.
+    <br/>Cela provoquera sans doute une erreur de compilation de "déclaration dupliquée": la solution, classique en C++, est un <tt>#ifdef</tt> guard dans les fichiers <tt>.h</tt>. Je vous expliquerai au tableau. 
+    <br/><br/><b class="orange">RENDUS:</b> <tt>io.h</tt> et <tt>io.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Dans un fichier <tt>main.cc</tt>, <b>écrivez</b> une fonction <tt>main()</tt> qui, à l'aide des fonctions faites plus haut, demandera l'entrée interactive d'une <tt>Class</tt>, et l'affichera ensuite.
+    <br/>
+    <br/><b>Compilez</b>-le par étapes séparées:
+    <ul>
+      <li>Pour chaque <i>module</i> fait précédemment: <tt>g++ -c <span class="red">module</span>.cc -o <span class="red">module</span>.o</tt></li>
+      <li>Pour le main.cc, au choix:
+        <ul>
+          <li><tt>g++ module1.o module2.o .. main.cc [-o main]</tt></li>
+          <li>Idem, mais avec l'option <tt>-c</tt>, et avec <tt>-o main.o</tt>, et ensuite <tt>g++ module1.o module2.o .. main.o [-o main]</tt></li>
+        </ul>
+      </li>
+    </ul>
+    <br/><b>Faites-le tourner!</b>
+    <br/><br/><b class="orange">RENDU:</b> <tt>main.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    (*) Écrivez un <tt>Makefile</tt> qui orchestrera tout ça, avec une <i>target</i> par défaut qui sera le binaire <tt>main</tt>, et une <i>target</i> <tt><span class="red">module</span>.o</tt> par module.
+    <br/>
+    <br/><b>Testez-le</b> avec la commande <tt>make</tt>.
+    <br/><br/><b class="orange">RENDU:</b> <tt>Makefile</tt>
+    <br/>
+    <br/>
+  </li>
+</ol>
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</body>
+</html>
+

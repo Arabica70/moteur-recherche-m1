@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>STAMAD – STAtic MAlware Detection | STAMAD</title>
+<meta property="og:title" content="STAMAD – STAtic MAlware Detection">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="A Tool for Malware Detection">
+<meta property="og:description" content="A Tool for Malware Detection">
+<link rel="canonical" href="https://dkhuuthe.github.io/MalDet/">
+<meta property="og:url" content="https://dkhuuthe.github.io/MalDet/">
+<meta property="og:site_name" content="MalDet">
+<script type="application/ld+json">
+{"name":"MalDet","description":"A Tool for Malware Detection","author":null,"@type":"WebSite","url":"https://dkhuuthe.github.io/MalDet/","image":null,"publisher":null,"headline":"MalDet – A Tool for Malware Detection","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="MalDet_MalDet_fichiers/style.css">
+    <script src="MalDet_MalDet_fichiers/jquery.js"></script>
+    <script src="MalDet_MalDet_fichiers/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92084241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92084241-1');
+</script>
+
+
+  </head>
+  <body>
+
+      <header>
+        <h1>STAMAD</h1>
+        <p>STAtic MAlware Detection</p>
+      </header>
+
+      
+
+    <div class="wrapper">
+      
+      <section style="height: auto;">
+        
+
+<h2 id="overview">Overview</h2>
+<p align="justify">
+<strong>STAMAD</strong> is a static malware detector. It takes as input a set of malwares 
+and a set of benwares and
+can either (<a href='#how-toExtraction'>1</a>) extract a malicious API graph representing the malicious 
+behaviors of the malwares in
+the set;
+or (<a href='#how-toLearning'>2</a>) learn to classify malwares without extracting the malicious 
+behaviors.
+These phases are called the training phases.
+Then, given a new program, STAMAD  checks whether it is
+malicious or not. </p>
+<p align="justify">
+STAMAD consists of the following modules:
+</p>
+<img src="MalDet_MalDet_fichiers/GraphComputation.png" alt="Graph computation">
+<p align="justify">
+<strong>API Call Graph Computation Module</strong> takes as input a binary code and produces an API call graph corresponding to this code. It consists in three processing steps. In the first  step, it takes as input a binary code of the program and uses <a href='https://github.com/erocarrera/pefile'>PEfile</a>  to check whether the binary code is packed or not. If so, this code is unpacked by the corresponding unpacker, e.g.,  <a href='https://upx.github.io/'>UPX</a>. Then it is fed to the Oracle. Otherwise, this binary code is directly passed to the Oracle.  In the second step, the Oracle gets the binary code and outputs the assembly program, information of the API functions and the control flow graph of this assembly code. The Oracle relies on <a href="http://www.jakstab.org/">Jakstab</a> and <a href="https://www.hex-rays.com/products/ida/index.shtml">IDA Pro</a>. <a href="http://www.jakstab.org/">Jakstab</a> performs static analysis of the binary program and provides its corresponding assembly program and control flow graph. However, it does not allow to extract information of API functions in the program and indirect calls to API functions. Hence, <a href="https://www.hex-rays.com/products/ida/index.shtml">IDA Pro</a> is used to get these informations of API functions with an assembly code. The outputs of the Oracle are passed to the last component to compute the API call graph. In the last step, this component  implements  the algorithm in [<a href='#references'>1</a>] to compute an API call graph from the control flow graph and API information of the program. 
+</p>
+
+<img src="MalDet_MalDet_fichiers/MalDet_small.png" alt="MalDet is a tool for malware detection">
+<p align="justify">
+<strong>Extraction of Malicious Behaviors Module</strong> takes as input a set of malwares and a set of benwares. After applying the previous Module to extract their corresponding API call graphs, these graphs are fed to the Malicious Graph Computation component to compute the malicious API graph. This component implements the TFIDF weighting term scheme introduced in [<a href='#references'>1</a>] to compute the malicious behaviors. It outputs malicious API graphs representing the malicious behaviors. This phase will be called "training phase".
+</p>
+<p align="justify">
+<strong>Malicious Behavior Detection Module</strong> takes as input a binary program and applies the first Module to compute its corresponding API call graph. Then,   it checks whether the program's graph contains any malicious behavior from the malicious API graphs (the output of the Extraction of Malicious Behaviors Module) or not. If this program contains any malicious behavior, the output is <em>Malicious!</em>. Otherwise, the output is <em>Benign!</em>.
+</p>
+
+
+<img src="MalDet_MalDet_fichiers/SVMTool.PNG" alt="MalDet is a tool for malware detection">
+<p align="justify">
+<strong>Learning Malicious Behaviors Module</strong> implements two phases: the learning phase and the detection phase.
+In the learning phase, it takes as input a set of malwares and a set of benwares. It first applies the first  Module to compute their corresponding API
+call graphs. Then,  these API call graphs are fed to the SVM training 
+component, i.e.,  <a href='https://www.csie.ntu.edu.tw/~cjlin/libsvm/'>LIBSVM</a>, to compute a SVM training model.
+In the detection phase, it takes as input a binary code, applies the 
+first  Module to compute its
+  corresponding API call graph. Then, it uses SVM classifier with the training model (the output of the first phase) to classify the program either <em>Malicious!</em> or <em>Benign!</em>.
+</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>STAMAD uses the following tools:</p>
+<ul>
+  <li><a href="https://www.hex-rays.com/products/ida/index.shtml"><strong>IDA Pro</strong></a></li>
+  <li><a href="http://www.jakstab.org/"><strong>Jakstab</strong></a></li>
+  <li><a href="http://www2.informatik.uni-stuttgart.de/fmi/szs/tools/moped/"><strong>Moped</strong></a></li>
+  <li><a href='https://www.csie.ntu.edu.tw/~cjlin/libsvm/'><strong>LIBSVM</strong></a></li>
+  <li><a href='https://developer.nvidia.com/cuda-80-ga2-download-archive'><strong>The CUDA Toolkit 8.0</strong> </a>(for the computation of the random walk kernel)</li>
+</ul>
+
+<h2 id="installing">Installing</h2>
+
+<p align="justify">This tool is setup in the folder <em>STAMAD</em> by the following steps:
+<ul>
+  <li>Download <a href="https://lipn.univ-paris13.fr/~touili/tool/STAMAD.7z"><em>STAMAD.7z</em></a> and decompress it.</li>
+  <li>Install <a href="https://www.hex-rays.com/products/ida/index.shtml"><em>IDA Pro</em></a>. Then, copy the IDA Pro folder to <em>STAMAD</em> and copy two files <em>analysis.idc</em> and <em>idc.idc</em> to the folder <em>idc</em> in the IDA Pro folder.</li>
+  <li>Copy the <a href="http://www.jakstab.org/">Jakstab</a> folder to <em>STAMAD</em>.</li>
+  <li>Download the source code of <a href="http://www2.informatik.uni-stuttgart.de/fmi/szs/tools/moped/">Moped</a> and replace <em>poststar.c</em> in Moped with <em>poststar.c</em> in the folder STAMAD. Then, compile this source code to get the executable file and copy it to <em>moped_src</em> in <em>STAMAD</em>.</li>
+  <li>Download GPU Computing SDK 8.0 at <a href='https://developer.nvidia.com/cuda-80-ga2-download-archive'><strong>CUDA Toolkit Archive</strong></a> and install it.</li>
+</ul></p>
+
+<h2 id="how-to">How to use</h2>
+<h3 id="how-toLearning"><font color="red">Learning Malicious Behaviors</font></h3>
+<p align="justify">To understand the following, it is important that you first read the paper [<a href='#references'>2</a>].</p>
+<h4 id="svmtraining-phase"><strong>Training phase:</strong></h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: STAMAD.exe SVM Train [options] &lt;ListFiles&gt;
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Options:
+   -g&lt;n&gt;  specifies the kind of graph to compute
+          n=0 denotes Extended API call graph (default),
+          n=1 denotes API call graph,
+   -T&lt;t&gt;  specifies the length of walk in the Random walk kernel.
+   -L&lt;l&gt;  specifies the value of lambda (0&lt; l &lt;1) in the Random walk kernel.
+</code></pre></div></div>
+<p align="justify">STAMAD takes an input <em>ListFiles</em> which contains a set of malwares
+ and a set of benwares and gives a training model (<em>trainingModel</em>). An example of <em>ListFiles</em> (<em>trainSamples.txt 	</em>) is as follows.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@Trojan-Dropper
+SVMTrainData\Trojan-Dropper.Win32.ZomJoiner.200.exe.upx
+SVMTrainData\Trojan-Dropper.Win32.Delf.cg.exe.upx
+SVMTrainData\Trojan-Dropper.Win32.Small.np.exe.upx
+@Worm
+SVMTrainData\Worm.Win32.Shorm.120.a.exe
+SVMTrainData\Worm.Win32.Lioten.exe.upx
+SVMTrainData\Worm.Win32.Petik.c.exe.upx
+SVMTrainData\Worm.Win32.Antinny.v.exe
+SVMTrainData\Worm.Win32.Antinny.k.exe
+@NegativeSet
+SVMTrainData\411toppm.exe
+SVMTrainData\CbLauncher.exe
+SVMTrainData\Deadwood.exe
+SVMTrainData\ELFDump.exe
+SVMTrainData\a2p.exe
+SVMTrainData\alternatives.exe
+SVMTrainData\animate.exe
+SVMTrainData\annoyance-filter.exe
+</code></pre></div></div>
+<p align="justify">This example of <em>ListFiles</em> contains Trojan-Dropper family (<em>Trojan-Dropper</em>), Worm family (<em>Worm</em>) and a set of benign programs (<em>NegativeSet</em>).</p>
+<p align="justify"> We will compute the training model (a SVM classifier) from the set of malwares and benwares listed in <em>trainSamples.txt</em>.
+We compute the training model with the random walk of length 5 and lambda 0.5 by the following command.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe SVM Train -T5 -L0.5 trainSamples.txt
+</code></pre></div></div>
+<p><img src="MalDet_MalDet_fichiers/trainSVM.png" alt="Training">
+<h4 id="svmtest-phase"><strong>Test phase:</strong></h4>
+<p align="justify">Using the malicious API call graph extracted from the training phase, STAMAD can check whether a new program is malicious or not.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: STAMAD.exe SVM Test [options] &lt;TestFile&gt; &lt;ListFiles&gt;
+</code></pre></div></div>
+<p align="justify">We have to choose the options according to the specifications computed in the training phase.
+<ul>
+  <li>To check whether the program <strong>reg.exe</strong> in the folder <strong>Samples</strong> contains any malicious behavior or not using the malicious graph extracted from the list <em>trainSvm.txt</em>, we use the following command.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe SVM Test -T5 -L0.5 Samples\reg.exe trainSamples.txt
+</code></pre></div>    </div>
+    <p>The answer is “<strong>Benign!</strong>”.
+<img src="MalDet_MalDet_fichiers/testSVMreg.png" alt="reg.exe Benign"></p>
+  </li>
+  <li>To check whether the program <strong>Trojan-Downloader.Win32.Agent.hs.exe</strong> in the folder <strong>Samples</strong> contains any malicious behavior or not, we use the following command.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe SVM Test -T5 -L0.5 Samples\Trojan-Downloader.Win32.Agent.hs.exe trainSamples.txt
+</code></pre></div>    </div>
+    <p>The answer is “<strong>Malicious!</strong>”.
+<img src="MalDet_MalDet_fichiers/testSVMTrojan.png" alt="Trojan-Downloader.Win32.Agent.hs.exe Malicious"></p>
+  </li>
+</ul>
+</p>
+
+<h3 id="how-toExtraction"><font color="red">Extraction of Malicious Behavior</font></h3>
+<p align="justify">To understand the following, it is important that you first read the paper [<a href='#references'>1</a>].</p>
+<h4 id="training-phase"><strong>Training phase:</strong></h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: STAMAD.exe TFIDF Train [options] &lt;ListFiles&gt;
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Options:
+   -g&lt;n&gt;  specifies the kind of graph to compute
+          n=0 denotes Extended API call graph (default),
+          n=1 denotes API call graph,
+   -N&lt;n&gt;  specifies the number of nodes/edges in the malicious API graph.
+   -F&lt;f&gt;  specifies the type of the function for term weight computation.
+          f=0 denotes function F1 (a linear function),
+          f=1 denotes function F2 (a rational function),
+          f=2 denotes function F3 (a logarithmic function),
+          f=3 denotes function F4 (a sigmoid function).
+   -W&lt;w&gt;  specifies the Equation for term weight computation.
+          w=1 denotes Rocchio Equation,
+          w=2 denotes Ratio Equation.
+   -S&lt;s&gt;  specifies the strategy (s=1,2,3) to compute graphs.
+</code></pre></div></div>
+<p align="justify">STAMAD takes an input <em>ListFiles</em> which contains a set of malwares
+ and a set benwares and gives the malicious API call graph which is 
+extracted from these two sets. An example of <em>ListFiles</em> (<em>trainSvm.txt</em>) is as follows.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Backdoor
+Backdoor.Win32.Hupigon.are.exe
+Backdoor.Win32.WCRat.11.exe
+Backdoor.Win32.Plunix.c.exe.upx
+Backdoor.Win32.Sneaker.exe.upx
+Backdoor.Win32.DSNX.plugin.PortScan.exe.upx
+@Worm
+Worm.Win32.Shorm.120.a.exe
+Worm.Win32.Lioten.exe.upx
+Worm.Win32.Petik.c.exe.upx
+@NegativeSet
+aafire.exe
+aaflip.exe
+aainfo.exe
+aasavefont.exe
+aatest.exe
+</code></pre></div></div>
+<p align="justify">This example of <em>ListFiles</em> contains Backdoor family (<em>Backdoor</em>), Worm family (<em>Worm</em>) and a set of benign programs (<em>NegativeSet</em>).</p>
+
+<p align="justify">There are different options to compute the malicious API call graph according to the parameters <strong>S</strong> (strategy), <strong>F</strong> (Frequency Function), <strong>W</strong> (Equation), <strong>N</strong> (the number of nodes/edges). The output of the training phase is stored in the folder <em>specification</em>.</p>
+
+<p align="justify"><strong>Extraction of Malious Behaviors</strong> We will extract the malicious behaviors from the set of malwares and benwares listed in <em>trainSvm.txt</em>.
+Using the  following command, the malcious graph is extracted by using Strategy S1 with Equation Ratio and Formula F3 with n=55.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe TFIDF Train -N55 -S1 -W2 -F3 trainSvm.txt
+</code></pre></div></div>
+<p><img src="MalDet_MalDet_fichiers/train.png" alt="Training">
+<strong>Output:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>n55_S1_w2_f3_@Backdoor_Edge.txt
+n55_S1_w2_f3_@Backdoor_Node.txt
+n55_S1_w2_f3_@Worm_Edge.txt
+n55_S1_w2_f3_@Worm_Node.txt
+</code></pre></div></div>
+<p align="justify">We get the malicious graphs which are extracted from Backdoor family and Worm family declared in the training set (<em>trainSvm.txt</em>). The malcious graph for Backdoor family is specified by two files <em>n55_S1_w2_f3_@Backdoor_Edge.txt</em> (contains edges) and <em>n55_S1_w2_f3_@Backdoor_Node.txt</em> (contains nodes). <em>n55_S1_w2_f3_@Worm_Edge.txt</em> (contains edges) and <em>n55_S1_w2_f3_@Worm_Node.txt</em> (contains nodes) characterize the malicious behaviors from Worm family.</p>
+
+<h4 id="test-phase"><strong>Test phase:</strong></h4>
+<p align="justify">Using the malicious API call graph extracted from the training phase, STAMAD can check whether a new program is malicious or not.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: STAMAD.exe TFIDF Test [options] &lt;TestFile&gt; &lt;ListFiles&gt;
+</code></pre></div></div>
+<p align="justify">We have to choose the options according to the specifications computed in the training phase.
+<ul>
+  <li>To check whether the program <strong>reg.exe</strong> in the folder <strong>Samples</strong> contains any malicious behavior or not using the malicious graph extracted from the list <em>trainSvm.txt</em>, we use the following command.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe TFIDF Test -N55 -S1 -W2 -F3 Samples\reg.exe trainSvm.txt
+</code></pre></div>    </div>
+    <p>The answer is “<strong>Benign!</strong>”.
+<img src="MalDet_MalDet_fichiers/testreg.png" alt="reg.exe Benign"></p>
+  </li>
+  <li>To check whether the program <strong>Trojan-Downloader.Win32.Agent.hs.exe</strong> in the folder <strong>Samples</strong> contains any malicious behavior or not, we use the following command.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STAMAD.exe TFIDF Test -N55 -S1 -W2 -F3 Samples\Trojan-Downloader.Win32.Agent.hs.exe trainSvm.txt
+</code></pre></div>    </div>
+    <p>The answer is “<strong>Malicious!</strong>”.
+<img src="MalDet_MalDet_fichiers/testTrojan.png" alt="Trojan-Downloader.Win32.Agent.hs.exe Malicious"></p>
+  </li>
+</ul>
+</p>
+<h2 id="references">References</h2>
+<p align="justify">
+<ol >
+<li>
+<a href='http://ieeexplore.ieee.org/document/7888729/' target="_blank">Khanh Huu The Dam and Tayssir Touili. Automatic Extraction of Malicious Behaviors. In Proceedings of the 11th International Conference on Malicious and Unwanted Software 2016</a>
+</li>
+<li><a href='http://www.scitepress.org/DigitalLibrary/PublicationsDetail.aspx?ID=kgkwoJpDnSo=&t=1' target='_blank'>
+Khanh Huu The Dam and Tayssir Touili. Malware Detection Based On Graph Classification. In Proceedings of the 3rd International Conference on Information Systems Security and Privacy 2017</a>
+</li>
+</ol>
+</p>
+
+      </section>
+      <footer>
+        
+          <p>Project maintained by <strong>Khanh Huu The DAM </strong> and <strong>Tayssir TOUILI</strong></p>
+        
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+  
+
+</body></html>

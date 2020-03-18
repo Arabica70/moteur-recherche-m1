@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 13</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    .footnote { }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 13 C++: STL: string, containers</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 2: Graphe, BFS, Dijkstra</h3>
+<ol>
+  <li>
+    <b>Complétez</b> le fichier <a href="2.1.h" download>2.1.h</a> et <b>implémentez-le</b> dans un fichier <tt>2.1.cc</tt>!
+    <pre><code class="c++">// A directed graph is a set of nodes, linked by arcs. Arcs are directed: they
+// go from a node to another node.
+// In this implementation, each node is an integer in [0, num_nodes-1].
+//
+// For example, the following graph:
+//
+//  0 &lt;--- 1 &lt;--&gt; 3 ---&gt; 4
+//  ^      |       \     ^
+//  |      v        `----'
+//  '----- 2
+//
+// Can be obtained by calling this on a fresh DirectedGraph:
+//   AddArc(1, 0);
+//   AddArc(1, 3);
+//   AddArc(3, 1);
+//   AddArc(2, 0);
+//   AddArc(1, 2);
+//   AddArc(3, 4);
+//   AddArc(3, 4);
+//
+class DirectedGraph {
+ public:
+  void AddArc(int from, int to);
+
+  // Returns 1 + the highest node index that was ever given to AddArc(), as
+  // 'from' or 'to' argument.
+  int NumNodes() const;
+
+  // Returns the number of arcs originating from "node".
+  // In the example above, OutDegree(1) = 3, OutDegree(4) = 0.
+  int OutDegree(int node) const;
+
+  // Returns all the destination nodes that were added with arcs
+  // originating from "node".
+  // In the example above, Neighbors(1) is {0, 2, 3} and Neighbors(2) is {0}.
+  const vector&lt;int&gt;&amp; Neighbors(int node) const;
+
+ private:
+  // TODO
+};</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 2.tar.gz; wget --no-cache <a href="2.tar.gz" download>http://fabien.viger.free.fr/cpp/td13/2.tar.gz</a>
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b class="orange">RENDU</b>: <tt>2.1.h</tt>, <tt>2.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Implémentez la fonction <tt>BFS()</tt> décrite dans le fichier <a href="2.2.h" download>2.2.h</a>:
+    <pre><code class="c++">#include "2.1.h"
+
+// Runs a Breadth-First-Search on the graph, starting from node "src".
+// See https://en.wikipedia.org/wiki/Breadth-first_search .
+// Returns a vector of size N (N is the number of nodes of the
+// graph) representing the "parent" tree: parent[i] is the parent of
+// node #i in the BFS tree. The parent of "src" is itself, and the
+// parent of a node that wasn't reached by the BFS exploration is -1.
+vector&lt;int&gt; BFS(const DirectedGraph&amp; graph, int src);</code></pre>
+    La complexité devra être O(M + N), où M est le nombre d'arcs et N le nombre de noeuds.
+    <br/><br/><b>Test</b>: <b><i>vous devez d'abord faire le 2.3!</i></b> 
+    <br/><tt>make 2.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Implémentez la fonction <tt>GetBfsDistances()</tt> décrite dans le fichier <a href="2.3.h" download>2.3.h</a>:
+    <pre><code class="c++">#include &lt;vector&gt;
+using std::vector;
+
+// Extracts the distances of each node in the given BFS tree, which
+// is the returned format described in 2.2.h
+// Eg. in the following tree, whose root is "2":
+//
+//         .---- 4
+//         v
+//   2 &lt;-- 3 &lt;-- 1
+//   ^
+//   '---- 0 &lt;-- 5
+//
+// The bfs tree is represented by the following 'parent' vector:
+// [2, 3, 2, 2, 3, 0]
+// And the distance vector should be:
+// [1, 2, 0, 1, 2, 2]
+//
+// If a node was not reached by the BFS, its parent is -1, and its distance
+// should also be -1.
+vector&lt;int&gt; GetBfsDistances(const vector&lt;int&gt;&amp; bfs_tree);</code></pre>
+    <b>Test</b>: <tt>make 2.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.3.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Implémentez la fonction <tt>GetShortestPathFromRootedTree()</tt>
+    décrite dans le fichier <a href="2.4.h" download>2.4.h</a>:
+    <pre><code class="c++">#include &lt;vector&gt;
+using std::vector;
+
+// Returns the shortest path, from the source of a BFS to the given target node.
+// The argument is the target node and the BFS "parent" tree.
+// If the target node was not reached by the BFS, the returned path should be
+// empty.
+// Example: using the same example as in 2.3.h, with BFS 'parent' tree:
+// [2, 3, 2, 2, 3, 0]
+// Then:
+// - the shortest path to node #4 should be: [2, 3, 4]
+// - the shortest path to node #0 should be: [2, 0]
+// - the shortest path to node #5 should be: [2, 0, 5]
+// - the shortest path to node #2 should be: [2]
+vector&lt;int&gt; GetShortestPathFromRootedTree(const vector&lt;int&gt;&amp; parent, int target);</code></pre>
+    <b>Test</b>: <tt>make 2.4</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.4.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>2.1.h</tt> et <tt>2.1.cc</tt> dans <tt>2.5.h</tt> et <tt>2.5.cc</tt>,
+    et modifiez la fonction <tt>AddArc()</tt> pour qu'elle prenne un argument
+    supplémentaire: <tt>double length</tt>.
+    <br/>Modifiez également la fonction <tt>Neighbors()</tt> pour qu'elle renvoie
+    un <tt>const vector&lt;pair&lt;int, double&gt;&gt;&amp;</tt>.
+    <br/><br/><b>Test</b>: <tt>make 2.5</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.5.h</tt> et <tt>2.5.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>(**)</b>
+    Implémentez la fonction <tt>Dijkstra()</tt>
+    décrite dans le fichier <a href="2.6.h" download>2.6.h</a>:
+    <pre><code class="c++">#include "2.5.h"
+
+// Runs a Dijkstra search on the graph, starting from node "src".
+// See https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm .
+// Returns the same "parent" vector as BFS() in 2.2.h.
+vector&lt;int&gt; Dijkstra(const DirectedGraph&amp; graph, int src);</code></pre>
+    On utilisera <tt>priority_queue&lt;&gt;</tt> sur une <tt>struct</tt>
+    qu'on définira, qui correspond à un noeud du graph associé à sa
+    distance depuis la source, assorti d'un opérateur <tt><b>&lt;</b></tt>
+    adapté à ce qu'on en veut pour la <tt>priority_queue</tt>.
+    <br/>La complexité devra être O(N + M log(M)).
+    <br/><b>Test</b>: <tt>make 2.6</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.6.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

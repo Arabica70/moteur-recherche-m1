@@ -1,0 +1,110 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="../resources/css/styles.css" rel="stylesheet" /><title>Antoine Kaszczyc</title></head><h1>M1 Info : Compilation 2018-19</h1><ul><li><a href="../index.html" >index site</a></li></ul><section><h1><span class="unicode" >&#x270d;</span>Ressources</h1><div><ul><li><a href="../resources/m1-cp-18-19/determinisation.pdf" >PDF sur le premier TD</a></li><li><a href="../resources/m1-cp-18-19/TP_C.pdf" >PDF sur le TP version C</a></li><li><a href="../resources/m1-cp-18-19/cobra.ml" >machine abstraite python (incomplète) (envoyez un mail si bug)</a></li></ul></div></section><section><h1><span class="unicode" >&#x270d;</span>LR0, SLR, LALR, LR1</h1><div><section><h2><span class="unicode" >&#x270d;</span>LR0</h2><div><p>Commençons par une grammaire LR0 très simple que nous modifierons par la suite afin de générer des conflits :</p><pre>S -> Xb | Yc
+X -> x
+Y -> y</pre><img src="../resources/m1-cp-18-19/lr0.png" /><p>Modifions les règles X et Y pour qu'elles contiennent le terminal 'a'. La grammaire obtenue n'est pas ambigüe, bien que X et Y aient la même règle.</p><pre>S -> Xb | Yc
+X -> a
+Y -> a</pre><p>L'automate a maintenant un conflit reduce/reduce :</p><img src="../resources/m1-cp-18-19/lr0-conflit.png" /></div></section><section><h2><span class="unicode" >&#x270d;</span>SLR</h2><div><p>Le principe de SLR est de calculer les follow et d'appliquer un masque sur les conditions des reduces.</p><pre>Fol(S) = { $ }
+Fol(X) = { b }
+Fol(Y) = { c }</pre><img src="../resources/m1-cp-18-19/slr.png" /><p>Ajoutons une troisième règle à S pour tromper SLR :</p><pre>S -> Xb | Yc | eXc
+X -> a
+Y -> a</pre><pre>Fol(S) = { $ }
+Fol(X) = { b, c }
+Fol(Y) = { c }</pre><img src="../resources/m1-cp-18-19/slr-conflit.png" /></div></section><section><h2><span class="unicode" >&#x270d;</span>LALR</h2><div><p>LALR va générer une grammaire plus précise, dans laquelle il y aura plusieurs versions des non-terminaux, ce qui permettra des follow plus précis.</p><p>Le principe est de générer une version d'un non-terminal pour chaque shift de ce non-terminal dans l'automate LR0. Les règles de cette version de non-terminal sont les mêmes que la version originale, dans laquelle on a remplacé les non-terminaux par leurs équivalents avec version.</p><p>Commençons par numéroter les états de l'automate précédent ce qui permettra de les désigner de façon concise. Ici on utilise l'automate issu de SLR, mais remarquez que c'est le même que LR0 en ce qui concerne les états et les shift.</p><img src="../resources/m1-cp-18-19/lalr-nums.png" /><p>Voici la grammaire originale :</p><pre>S -> Xb | Yc | eXc
+X -> a
+Y -> a</pre><p>Et voici la grammaire LALR :</p><pre>S(1) -> X(1)b | Y(1)c | eX(8)c
+X(1) -> a
+Y(1) -> a
+X(8) -> a</pre><p>Les follow sont plus précis. En appliquant SLR avec la grammaire LALR, on obtient l'automate LALR qui ne contient plus de conflits :</p><pre>Fol(S(1)) = { $ }
+Fol(X(1)) = { b }
+Fol(Y(1)) = { c }
+Fol(X(8)) = { c }</pre><img src="../resources/m1-cp-18-19/lalr.png" /><p>Maintenant voici l'algorithme :</p><pre>nouveaux non-terminaux = { N(q) | shift(q, N) != vide }
+
+regles(N(q)) = union { LA(q, N -> . w) | w est dans regles(N) }
+
+LA(q, N -> w .)     = epsilon
+LA(q, N -> w' . tw) = t LA(q', N -> w't . w)
+                      avec shift(q, N) = q'
+
+LA(q, N -> w' . Mw) = M(q) LA(q', N -> w'M . w)
+                      avec shift(q, M) = q'</pre><p>Appliquons-le :</p><pre>nouveaux non-terminaux = { S(1), X(1), Y(1), X(8) }
+
+regles(S(1)) = union { 
+    LA(1, S -> . Xb), LA(1, S -> . Yc), LA(1, S -> . eXc) } 
+
+LA(1, S -> . Xb) = X(1) LA(4, S -> X . b)
+                 = X(1)b LA(5, S -> Xb .)
+                 = X(1)b epsilon
+                 = X(1)b
+
+LA(1, S -> . eXc) = e LA(8, S -> e . Xc)
+                  = eX(8) LA(10, S -> eX . c)
+                  = eX(8)c LA(11, S -> eXc .)
+                  = eX(8)c epsilon
+                  = eX(8)c
+etc</pre><p>On note que l'algorithme suit l'automate SLR original, en utilisant les numéros lors des shift.</p><p>On remarque que LALR n'augmente pas le nombre d'état, il ne fait qu'utiliser une grammaire intermédiaire plus grande. C'est un avantage puisque cela est économique en espace, mais cela peut donner des conflits. En effet deux états peuvent avoir un reduce sur un non-terminal associé à plus d'une seule version. C'est possible car la version ne vient pas de l'état courant mais d'un (ou des) état précédent, celui (ceux) qui avait initié le shift. Voici un petit exemple (qui ne génère pas de conflit mais associe deux versions) :</p><pre>S -> aFb | cFd
+F -> f</pre><img src="../resources/m1-cp-18-19/lr0-version.png" /><pre>S(1) -> aF(5)b | cF(3)d
+F(5) -> f
+F(3) -> f</pre><pre>Fol(S(1)) = { $ }
+Fol(F(5)) = { b }
+Fol(F(3)) = { c }</pre><p>Dans l'automate LALR, le reduce de F se fera avec le masque { b, d }. En effet, l'état précédent le reduce est originaire de deux shift : celui de l'état (5) et celui de l'état (3). On fusionne alors les masques : { b } union { c }.</p><p>Voici un exemple qui génère un conflit :</p><pre>S -> aFb | cFd | aGd | cGb
+F -> f
+G -> f</pre><img src="../resources/m1-cp-18-19/lalr-conflit.jpeg" /><pre>S(1) -> aF(3)b | cF(8)d | aG(3)d | cG(8)b
+F(3) -> f
+F(8) -> f
+G(3) -> f
+G(8) -> f</pre><pre>Fol(S(1)) = { $ }
+Fol(F(3)) = Fol(G(8)) = { b }
+Fol(F(8)) = Fol(G(3)) = { d }</pre><img src="../resources/m1-cp-18-19/lalr-conflit-toujours.jpeg" /><p>Le conflit n'est pas une erreur. Retirer le 'b' ou le 'd' du masque rendrait impossible de parser certaines règles de S. L'automate n'a pas vraiment le choix avec un seul état, il est bien obligé d'exprimer les deux possibilités.</p></div></section><section><h2><span class="unicode" >&#x270d;</span>LR1</h2><div><p>Résolvons le conflit de l'exemple précédent avec un automate LR1. Ce dernier peut contenir plus d'états que l'automate LR0.</p><p>Il s'agit de créer une version d'un non-terminal pour chaque terminal dans ses Follow.</p><pre>nouveaux non-terminaux = { N(t) | t dans Fol(N) }
+
+regles(N(t)) = union { LR1(w,t) | w dans regles(N) }
+
+LR1(wt',t) = { w't' | w' dans LR1(w,t') } 
+
+LR1(wM,t) = { w'M(t) | w' dans union { LR1(w,t') | t' dans First(Mt) }}
+
+LR1(epsilon,t) = { epsilon }</pre><p>Voici la grammaire originale :</p><pre>S -> aFb | cFd | aGd | cGb
+F -> f
+G -> f</pre><p>Appliquons l'algorithme :</p><pre>nouveaux non-terminaux = { S($), F(b), F(d), G(d), G(b) }
+
+regles(F(b)) = union { LR1(w,b) | w dans regles(F) }
+             = LR1(f,b)
+             = { w'f | w' dans LR1(epsilon,f) }
+             = { f } 
+
+regles(S($)) = union { LR1(w,$) | w dans regles(S) }
+             = union { LR1(aFb,$), LR1(cFd,$), LR1(aGd,$), LR1(cGb,$) }
+
+LR1(aFb,$) = { w'b | w' dans LR1(aF,b) } 
+
+LR1(aF,b) = { w'F(b) | w' dans union { LR1(a,t') | t' dans First(Fb) }}
+          = { w'F(b) | w' dans LR1(a,f) } 
+          = { w'F(b) | w' dans { a } }
+          = { aF(b) } 
+
+LR1(aFb,$) = { aF(b)b } 
+
+etc</pre><p>Celà donne finalement :</p><pre>S($) -> aF(b)b | cF(d)d | aG(d)d | cG(b)b
+F(b) -> f
+F(d) -> f
+G(d) -> f
+G(b) -> f</pre><p>On génère l'automate SLR avec la grammaire LR1, ce qui donne l'automate LR1 :</p><img src="../resources/m1-cp-18-19/lr1.jpeg" /></div></section></div></section><section><h1><span class="unicode" >&#x270d;</span>Exercice de déterminisation</h1><div><p>Vous êtes dans un projet de programmation et vous récupérez des informations d'un serveur. Mais ce dernier vous donne un fichier non structuré.<br/>Vous savez qu'il y a trois types de données :</p><ul><li>un numéro adhérent, constitué d'une lettre minuscule, d'un chiffre, d'une lettre majuscule, de deux autres chiffres et du symbole '%'</li><li>une adresse mail, constituée plus ou moins d'une lettre, de chiffres, de lettres (avec '.' et '-'), d'un symbole '@', puis de chiffres et de lettres avec '.' et '-'.</li><li>une formule excel, constituée de cases (une lettre majuscule et un ou deux chiffres) et d'opérations ('-', '+', '*').</li></ul><p>Afin de récupérer les informations du fichier, vous devez :</p><ul><li>Écrire un automate qui reconnaît une suite de données des trois types définis. Pensez à utiliser des epsilon-transitions.</li><li>Réaliser la déterminisation de cet automate</li><li>Réaliser la minimisation de cet automate</li></ul></div></section><section><h1><span class="unicode" >&#x270d;</span>Exercice de suppression d'ambigüité</h1><div><p>Il faut supprimer l'ambigüité dans la grammaire suivante :</p><pre>&lt;div&gt; ::= if &lt;bool&gt; then &lt;div&gt; else &lt;div&gt;
+        | if &lt;bool&gt; then &lt;div&gt;
+        | &lt;expr&gt;
+
+&lt;bool&gt; ::= True | False
+&lt;expr&gt; ::= &lt;Num&gt; | &lt;Num&gt; + &lt;expr&gt;</pre><p>Le plus facile est d'ajouter des parenthèses. Essayez de le faire sans ajouter de parenthèse, pour vous entraîner. L'avantage est que ça ne modifie pas le langage accepté.</p></div></section><section><h1><span class="unicode" >&#x270d;</span>Exercice de grammaire complet</h1><div><p>Voici l'énoncé complet de l'exercice vu en TD où il fallait vérifier l'accessibilité, l'ambigüité, etc...</p><pre>&lt;operation&gt; ::= if &lt;exprBool&gt; then &lt;operation&gt;
+              | if &lt;exprBool&gt; then &lt;operation&gt; else &lt;operation&gt;
+              | &lt;var&gt; = &lt;expr&gt;
+
+&lt;exprBool&gt; ::= &lt;exprBool&gt; == &lt;exprBool&gt;
+             | &lt;seqExprBool&gt;
+
+&lt;seqExprBool&gt; ::= &lt;exprBool&gt; && &lt;seqExprBool&gt;
+
+&lt;expr&gt; ::= &lt;facteur&gt;
+         | &lt;expr&gt; + &lt;expr&gt;
+         | &lt;facteur&gt; - &lt;facteur&gt;
+
+&lt;term&gt; ::= &lt;facteur&gt; * &lt;terme&gt;
+         | &lt;facteur&gt;
+
+&lt;facteur&gt; ::= &lt;Num&gt;</pre></div></section><section><h1><span class="unicode" >&#x270d;</span>Exercice LR0</h1><div><p>Attention dans l'exercice donné dans le TD du 27 février, il s'agit de chercher à savoir si l'automate est LR0. Autrement dit, il n'y a pas forcément besoin de construire l'automate complet : on peut arrêter de chercher au premier conflit trouvé, puisque cela suffit pour dire qu'il n'est pas LR0, peu importe le reste de l'automate.</p></div></section><footer><p>Site réalisé statiquement en Scala, HTML et CSS.<br/>Faut pas se casser la tête pour afficher du texte...</p></footer></html>

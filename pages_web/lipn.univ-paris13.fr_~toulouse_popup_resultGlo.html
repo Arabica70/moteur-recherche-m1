@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--	_________________________________________________
+		_______________ENTETE _________________________
+-->
+<head>
+<!-- jeu de caract&egrave;res -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/lipnPopUp.css">
+<title>Optima locaux à garantie de performance</title>
+<meta name="author" content="Sophie Toulouse">
+<meta name="date" content="10/29/2004">
+<meta name="keywords" lang="en" content="LIPN, computer sciences, polynomial approximation, differential approximation, local optima">
+<meta name="keywords" lang="fr" content="LIPN, informatique théorique, approximation polynomiale, approximation differentielle, optima locaux">
+<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html">
+</head>
+
+<BODY class="popup">
+
+<p class="popup">
+Considérant les voisinages <span class="math">h</span>-bornés et <span class="math">h</span>-bornés miroir, nous posons la question suivante&nbsp;: pour quels problèmes tous les optima locaux sont-ils de bonne solutions au sens de l'approximation au pire des cas, où l'optimalité locale peut être définie soit relativement à l'objectif initial du problème, soit relativement à un objectif altéré&nbsp;?
+
+Différents résultats, positifs comme négatifs, ont été établis&nbsp;; nous en donnons ici quelques-uns à titre d'illustration. Nous montrons par exemple que les optima 3-locaux de Max<span class="math">K3</span>-free Partial Subgraph assurent une <span class="math">3/(B+1)</span>-approximation dans les graphes à degré borné par <span class="math">B</span> [MPT04]&nbsp;; dans ce cadre, les solutions voisines d'une solution <span class="math">s</span> donnée sont toutes les solutions réalisables que l'on peut obtenir à partir de <span class="math">s</span> en moins de trois modifications. Concernant le problème du voyageur de commerce, le fameux voisinage 2-opt produit des optima locaux qui sont une 1/2-approximation différentielle [MPT02]&nbsp;; les optima 2-locaux des problèmes de partitionnement héréditaires (Bin packing, Coloration etc..) en font de même. 
+<br>
+
+Pour Max 2CCSP, on établit que le rapport des optima locaux pour un voisinage "miroir" 2-borné est de 1/3 [MPT031]&nbsp;; cette fois, une affectation <span class="math">T'</span> est voisine de <span class="math">T</span> si toutes les variables coïncident, ou toutes sont opposées, sauf peut-être une. Pour Max<span class="math">k</span>Sat, le rapport est de <span class="math">2k/(2k+1)</span> pour les optima locaux du même voisinage, mais évalués par l'objectif NAESat [MPT031]&nbsp;: <span class="math">T</span> est meilleure que <span class="math">T'</span> si le nombre de clauses contenant conjointement des littéraux vrais et faux est plus important dans <span class="math">T</span> que dans <span class="math">T'</span>. Pour ces deux derniers résultats, on montre que l'agrandissement de la taille du voisinage (passer du 1-borné au 2-, 3- etc. -borné) ne permet pas d'améliorer la performance des optima locaux.
+<br>
+
+En revanche, MaxSubsetSum par exemple ne garantit pas la qualité de ses optima locaux [MPT031]. 
+</p>
+
+<hr>
+
+<p class="popup">
+[MPT02] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Approximation algorithms for the traveling salesman problem<br>
+Mathematical Models of Operations Research,  décembre 2002, vol 145/3 pp 537-548
+</p>
+
+<p class="popup">
+[MPT031] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Approximation polynomiale des problèmes NP-difficiles - Optima locaux et rapport différentiel<br>
+Hermes Science, janvier 2003
+</p>
+
+<p class="popup">
+[MPT04] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Local approximations for maximum partial subgraph problem,<br>
+Operations Research Letters, 32 (2004), 217-224
+</p>
+
+</BODY>
+</HTML>

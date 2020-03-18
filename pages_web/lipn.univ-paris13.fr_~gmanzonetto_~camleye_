@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Camleye - A Software for Edge Detection and Figure-Ground Discrimination</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../gmanzone.css">
+</head>
+
+<body>
+
+<h2>Camleye - A Software for Edge Detection and Figure-Ground Discrimination</h2>
+<hr size="1">
+<a href="mailto:gmanzone(at)dsi.unive.it">gmanzone[at]dsi dot unive dot it</a><br><br>
+Authors: Giulio Manzonetto, Giulio Marcon and Anna Sperotto.
+
+
+<h3>Sources and Binaries</h3>
+
+<table cellspacing="3" cellpadding="2" border="0">
+  <tr> 
+    <td>
+	<ul>
+	  <li> <a href="camleye.tar.gz" target="_blank">CamlEye: A functional implementation of Edge Detection and Figure-Ground Discrimination</a></li>
+	</ul>
+    </td>
+  </tr>
+</table>
+
+<h3>Documentation</h3>
+<table cellspacing="3" cellpadding="2" border="0">
+  <tr> 
+    <td>
+	<ul>
+	<li><a href="camleye-en.ps" target="_blank">User Manual and Results (In English)</a></li>
+	</ul>
+	<ul>
+	<li><a href="camleye-doc.ps" target="_blank">User Manual and Results (In Italian)</a></li>
+	</ul>
+    </td>
+  </tr>
+</table>
+
+<h3>Authors</h3>
+<table cellspacing="3" cellpadding="2" border="0">
+  <tr>
+    <td align="center"><img src="./sperotto.jpg" width="200" heigth="200" border="0"></td>
+    <td align="center"><img src="./sperotto2.jpg" width="200" heigth="200" border="0"></td>
+  </tr>    
+  <tr>
+    <td align="center"><img src="./manzo.jpg" width="200" heigth="200" border="0"></td>
+    <td align="center"><img src="./manzo2.jpg" width="200" heigth="200" border="0"></td>
+  </tr>    
+  <tr>
+    <td align="center"><img src="./marcon.jpg" width="200" heigth="200" border="0"></td>
+    <td align="center"><img src="./marcon2.jpg" width="200" heigth="200" border="0"></td>
+  </tr>  
+</table>
+
+<p align="center">
+<i>
+Copyrights are owned by the authors and Ca'Foscari University.<br>
+</i>
+</p>
+   
+</body>
+</html>

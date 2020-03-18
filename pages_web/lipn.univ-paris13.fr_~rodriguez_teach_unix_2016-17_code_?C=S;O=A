@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /~rodriguez/teach/unix/2016-17/code</title>
+ </head>
+ <body>
+<h1>Index of /~rodriguez/teach/unix/2016-17/code</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/~rodriguez/teach/unix/2016-17/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Makefile">Makefile</a></td><td align="right">2016-09-07 22:00  </td><td align="right">249 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="getenv.c">getenv.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">265 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="first-example.c">first-example.c</a></td><td align="right">2016-09-07 22:02  </td><td align="right">514 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="sigaction.c">sigaction.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">638 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="stdin-stdout.c">stdin-stdout.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">746 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="mmap.c">mmap.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">848 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fork-simple.c">fork-simple.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">869 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="pthreads.c">pthreads.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">876 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tcp-client.c">tcp-client.c</a></td><td align="right">2016-09-07 22:19  </td><td align="right">933 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fork-exec-pipe.c">fork-exec-pipe.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="read-copy.c">read-copy.c</a></td><td align="right">2016-09-07 21:57  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tcp-server.c">tcp-server.c</a></td><td align="right">2016-09-08 11:26  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="sock-thread.c">sock-thread.c</a></td><td align="right">2016-08-14 12:08  </td><td align="right">2.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="mini-httpd-20150921.tar.gz">mini-httpd-20150921.tar.gz</a></td><td align="right">2016-08-14 12:08  </td><td align="right">2.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="poll.c">poll.c</a></td><td align="right">2016-09-07 21:50  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

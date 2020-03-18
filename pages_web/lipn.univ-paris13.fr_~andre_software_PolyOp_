@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>PolyOp</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="PolyOp: Operations for Polyhedra" />
+	<meta name="keywords" content="PolyOp, tool, software, prototype, polyhedron, PPL" />
+	<meta name="robots" content="index,follow" />
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="../../etienne.css" />
+</head>
+
+
+<body>
+
+
+<h1>PolyOp</h1>
+
+<p>This tool is a simple interface to some operations on polyhedra provided by the <a href="http://www.cs.unipr.it/ppl/">Parma Polyhedra Library</a>.</p>
+
+<p>It computes basic operations on polyhedra, e.g.:</p>
+<ul>
+	<li>Intersection of linear constraints</li>
+	<li>Elimination of variables</li>
+	<li>Time elapsing</li>
+	<li>Satisfiability test</li>
+	<li>Equality test</li>
+	<li>Inclusion test</li>
+</ul>
+
+<p>PolyOp is developed in <a href="http://caml.inria.fr/">OCaml</a>
+by <span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>.
+It is provided under the <a href="http://www.gnu.org/licenses/gpl.html">GNU-GPL license</a>.</p>
+
+
+
+<h2>Using PolyOp</h2>
+
+<p>PolyOp opens a file in which the operation is described, and returns the result both on screen and into a log file.</p>
+
+<p>The syntax is described in a functional style.
+Examples of calls to PolyOp are provided in this <a href="test.polyop">sample file</a>.
+Note that PolyOp only performs one (possibly nested) operation.</p>
+
+<p><b>Call syntax:</b></p>
+
+<p style="font-family:mono;">PolyOp [file.polyop]</p>
+
+<p>PolyOp will open file <span style="font-family:mono;">[file.polyop]</span>, and will create
+a file <span style="font-family:mono;">[file.polyop.res]</span> in which the result is given.</p>
+
+
+
+<h2>Download and Install</h2>
+
+<p><b>See <a href="https://github.com/etienneandre/PolyOp/">GitHub</a> for most up-to-date versions, documentation and examples.</b></p>
+
+<p>Below is an <em>outdated</em> version (from 2011).</p>
+
+<table class="tableau">
+	<tr>
+		<th>Version</th>
+		<th>Release</th>
+		<th>Source (tar.bz2)</th>
+		<th>Source (zip)</th>
+		<th>Binary (32 bits)</th>
+	</tr>
+
+	<tr>
+		<td class="centre">0.1</td>
+		<td class="centre">30th May 2011</td>
+		<td class="centre"><a href="PolyOp.tar.bz2">PolyOp.tar.bz2</a> (31Ko)</td>
+		<td class="centre"><a href="PolyOp.zip">PolyOp.zip</a> (46Ko)</td>
+		<td class="centre"><a href="PolyOp32.tar.gz">PolyOp</a> (13Mo)</td>
+	</tr>
+</table>
+
+<p>The binary is a fully standalone binary for 32 bits architectures.
+	Hence, it should work on any Linux-like system.
+	It has been compiled under <a href="http://www.xubuntu.org/">Xubuntu</a>&nbsp;12.04.</p>
+
+
+<p>Installation instructions: <a href="INSTALL.txt">INSTALL.txt</a>.
+This files explains which and how additional libraries should be installed.</p>
+
+<p>Note that the large size of the binary comes from the numerous dependencies.</p>
+
+
+
+<h2>Contact</h2>
+
+<ul>
+	<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> (developer)</li>
+</ul>
+
+
+
+<div id="bas">
+	<p>This page makes use of
+	<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+		and
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+</div>
+
+
+<!-- Begin Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+</body>
+
+</html>

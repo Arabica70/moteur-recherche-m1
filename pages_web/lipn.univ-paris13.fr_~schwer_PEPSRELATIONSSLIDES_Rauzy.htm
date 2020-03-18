@@ -1,0 +1,62 @@
+<html><head><meta name=Titre content="Présentation PowerPoint"><meta name="Mots clés" content=""><meta http-equiv=Content-Type content="text/html; charset=macintosh"><meta name=ProgId content=PowerPoint.Slide><meta name=Generator content="Microsoft Macintosh PowerPoint 11"><link rel=Edit-Time-Data href="Rauzy_fichiers/editdata.mso"><link rel=OLE-Object-Data href="Rauzy_fichiers/oledata.mso"><title>Présentation PowerPoint</title><link title="Presentation File" type="application/powerpoint" rel=alternatehref="Rauzy_fichiers/Rauzy.ppt"><meta http-equiv=expires content=0><script>
+<!--
+var appVer = navigator.appVersion;
+var msie = appVer.indexOf( "MSIE " ) + appVer.indexOf( "Internet Explorer " );
+var msieWin31 = (appVer.indexOf( "Windows 3.1" ) >= 0), isMac = (appVer.indexOf("Macintosh") >= 0);
+  var ver = 0;
+  var msiePos = appVer.indexOf( "MSIE " );
+  var inexPos = appVer.indexOf( "Internet Explorer " );
+  if( msiePos >= 0 )
+    ver = parseFloat( appVer.substring( msiePos+5, appVer.indexOf ( ";", msiePos ) ) );
+  else if( inexPos >= 0 )
+    ver=parseFloat( appVer.substring( inexPos+18, appVer.indexOf(";",inexPos) ) )
+  else
+    ver = parseInt( appVer );    
+	isIEFiles 			= 2;
+	isNAVFiles 			= 8;
+	isFLATFiles 			= 16;
+	PPTPRESENTATION     = 1;
+function present() {
+  var os = window.navigator.platform.indexOf("Mac");
+  if ( (os < 0 && ver >= 4 ) || ( os >= 0 && ver >= 5 ) || (os >=0 && msie < 0 && ver >= 4 ) ) 
+  { /* for compatible browsers */
+	if( msie >= 0  && isIEFiles > 0  ) 
+		  path = 'Rauzy_fichiers/slide0001.htm';
+	 else if (msie < 0 && isNAVFiles > 0 && ver < 5 ) 
+		path = 'Rauzy_fichiers/slide0002.htm';
+	 else if ( isFLATFiles > 0 ) {
+	  	//window.status = "Cette présentation est optimisée pour des versions antérieures de votre navigateur. Étant donné que vous utilisez une version plus récente de Microsoft Internet Explorer ou de Netscape Navigator, optimisez cette présentation pour pouvoir profiter des capacités avancées de votre navigateur."; 
+	  	path = 'Rauzy_fichiers/slide0003.htm';
+	 }	
+	 else  {
+  		AlertError();
+  		return;
+  	 }
+  }
+  else { /* for all other browsers */
+	  if ( isFLATFiles > 0 ) {
+	  	//window.status ="Il est possible que votre navigateur ne puisse pas afficher correctement le contenu de cette présentation. Elle est optimisée pour des versions plus récentes de  Microsoft Internet Explorer ou de Netscape Navigator."; 
+	  	path = 'Rauzy_fichiers/slide0003.htm';
+	  }	
+	  else  {
+  		AlertError();
+  		return;
+  	  }
+  }   
+     display();
+}
+     
+function display() {
+  if ( !msieWin31 && ( ( msie >= 0 && ver >= 3.02 ) || ( msie < 0 && ver >= 3 ) )  ) 
+      window.location.replace(path);
+  else 
+    window.location.href = path;
+}
+
+function AlertError() {
+window.location.replace( "Rauzy_fichiers/error.htm" );
+}
+present();
+//-->
+</script>
+</head></html>

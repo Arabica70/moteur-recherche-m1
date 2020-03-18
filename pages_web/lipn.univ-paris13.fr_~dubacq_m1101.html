@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Module M1101: Introduction à l'informatique</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Module M1101: Introduction à l'informatique"/>
+            <meta property="og:url" content="./m1101.html"/>
+            <meta property="og:description" content="J'ai la responsabilité du module M1101 Introduction à l'informatique"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./m1101.html"
+         rel="bookmark"
+         title="Permalink to Module M1101: Introduction à l'informatique">
+        Module M1101: Introduction à l'informatique
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>lun. 30 septembre 2013
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/architecture.html">Architecture</a>
+        /
+	<a href="./tag/systeme.html">Système</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>du département Informatique à l'IUT de Villetaneuse.</p>
+<script type="text/javascript">
+$(function() {
+  $("span.password").each(function(index,element) {
+    // comment to hide
+    // $(this).hide();return;
+    var desiredpassword=element.innerHTML;
+    function revealBuilder(expectedpassword,elem,clicked) {
+      return (function() {
+        var password=prompt('Mot de passe ?');
+        if (password == expectedpassword) {
+          elem.show();
+          clicked.hide();
+        } else {
+          alert('Mot de passe incorrect');
+        }
+      });
+    }
+    $(element).parent().find('a').wrap('<span class="unlock"></span>').before('<span class="glyphicon glyphicon-lock"></span> ').each(function(xindex,el) {
+      var e=$(el);
+      var x=e.hide().parent().children('.glyphicon-lock');
+      x.click(revealBuilder(desiredpassword,e,x));
+    });
+    $(element).hide();
+  });
+});
+</script>
+
+<p>J'ai la responsabilité du module M1101 <strong>Introduction à l'informatique</strong>
+du département Informatique à l'IUT de Villetaneuse.</p>
+<p>Voici les supports de cours:</p>
+<table>
+<thead>
+<tr>
+<th>Titre</th>
+<th>Transparent</th>
+<th>Polycopié</th>
+<th>Exercices</th>
+<th>Corrigés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architecture</strong></td>
+<td><a href="./pdf/m1101/archi.pdf">1-6</a></td>
+<td><a href="./pdf/m1101/poly.pdf">1-6</a></td>
+<td><a href="./pdf/m1101/exo.pdf">1-6</a></td>
+<td><a href="./pdf/m1101/prof.pdf">1-6</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les bits</td>
+<td><a href="./pdf/m1101/archi01.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly01.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo01.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof01.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les nombres</td>
+<td><a href="./pdf/m1101/archi02.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly02.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo02.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof02.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les opérations</td>
+<td><a href="./pdf/m1101/archi03.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly03.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo03.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof03.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les textes</td>
+<td><a href="./pdf/m1101/archi04.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly04.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo04.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof04.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les formats</td>
+<td><a href="./pdf/m1101/archi05.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly05.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo05.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof05.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td>Les médias</td>
+<td><a href="./pdf/m1101/archi06.pdf">✓</a></td>
+<td><a href="./pdf/m1101/poly06.pdf">✓</a></td>
+<td><a href="./pdf/m1101/exo06.pdf">✓</a></td>
+<td><a href="./pdf/m1101/prof06.pdf">✓</a>  <span class="password">IUTV</span></td>
+</tr>
+<tr>
+<td><strong>Système</strong></td>
+<td><a href="./pdf/m1101/sys.pdf">1-6</a></td>
+<td><a href="./pdf/m1101/spoly.pdf">1-6</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Le système d'exploitation</td>
+<td><a href="./pdf/m1101/sys01.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly01.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Les fichiers</td>
+<td><a href="./pdf/m1101/sys02.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly02.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Les processus</td>
+<td><a href="./pdf/m1101/sys03.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly03.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>L'arborescence</td>
+<td><a href="./pdf/m1101/sys04.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly04.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Les flux</td>
+<td><a href="./pdf/m1101/sys05.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly05.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Les scripts</td>
+<td><a href="./pdf/m1101/sys06.pdf">✓</a></td>
+<td><a href="./pdf/m1101/spoly06.pdf">✓</a></td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<p>Données supplémentaires :</p>
+<ul>
+<li><a href="./pdf/m1101/photos.tar">Le fichier de photos du deuxième TD de système</a></li>
+</ul>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

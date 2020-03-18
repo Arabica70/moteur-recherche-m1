@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="tp.css">
+    <title>Sujet de TP: PHP et les bases de données</title>
+  </head>
+
+  <body>
+    <header>Sujet de TP: PHP, PDO et les bases de données</header>
+
+    <main>
+           
+      <article class="exercice">
+	<header><h2>Exercice: accès à la base de données</h2></header>
+	
+	<ul>
+	  <li>Téléchargez le fichier <a href="TP_BLOG.sql">TP_BLOG.sql</a></li>
+	  <li>Connectez vous à l'<a href="http://marseille/phpmyadmin/">adresse suivante</a>. (login: "E" puis votre numéro étudiant,
+	      mot de passe: INE inscrit sur votre carte d'étudiant). Importez le fichier <code>TP_BLOG.sql</code></li>
+	  <li>Modifiez le constructeur de votre classe afin qu'il contiennent une connexion à la base de donnée, en utilisant la classe
+	      <a href="http://php.net/manual/fr/pdo.connections.php">PDO</a>. Le nom du serveur est bien entendu <code>marseille</code>.
+	      Le nom de votre base de donnée est "BDE" suivi de votre numéro étudiant.</li>
+	  <li>Modifier les méthodes de la classe afin que le code <code>HTML</code> soit engendré non plus à partir de tableaux mais à 
+	   partir du contenu de la base de donnée.</li>
+	</ul>	
+      </article>
+
+
+    </main>
+
+      <footer>Auteur: Julien David (2017)</footer>
+
+  </body>
+
+</html>

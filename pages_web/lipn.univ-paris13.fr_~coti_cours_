@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />    
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--    <meta name="verify-v1"
+    content="MiRUGn7ybJr0YPufOrjYyA3ioPLbA9fJqx6dAX+IMPE=" /> -->
+    <meta name="verify-v1" content="GNdG0Mo6nTiIfAwRvJA/ESU5NtZXysIoAg0Hq5v2y3M=" />
+    <meta name="description" content="ma page web" />
+    <meta name="keywords" lang="fr" content="CV, camille coti, mpi,
+					     tolérance aux fautes,
+					     openmpi, open-mpi,
+					     qoscosgrid, tp mpi,
+					     grille, cluster, grappe,
+					     qcg ompi" /> 
+    <meta name="keywords" lang="en" content="resume, camille coti, mpi, fault
+					     tolerance, openmpi,
+					     open-mpi, qoscosgrid, mpi
+					     lab, grid, grid
+					     computing, cluster,
+					     qcg ompi" /> 
+    <title>Cours</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_clair.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/code.css"/> 
+  </head>
+  
+  <body>
+   <div class="marge" id="nav"><div class="titre_marge">Links</div><ul><li>Home <a href="http://www-lipn.univ-paris13.fr/~coti/index_fr.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en fran�ais" /></a> / <a href="http://www-lipn.univ-paris13.fr/~coti/index.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /></a>
+</li><li><a href="http://www.github.com/coti">My GitHub homepage</a></li><li><a href="http://www.open-mpi.org">Open MPI</a></li><li><a href="http://mpich-v.lri.fr">MPICH-V</a></li><li><a href="https://bountyfactory.io">Bug Bounty</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/QosCosGrid">QosCosGrid</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/doc">Some documents</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/cours">Teaching</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><style>
+  .strava-badge- { display: inline-block; height: 32px; }
+  .strava-badge- img { visibility: hidden; height: 32px; }
+  .strava-badge-:hover { background-position: 0 -47px; }
+  .strava-badge-follow { height: 32px; width: 32px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+</style>
+<a href="http://strava.com/athletes/2676650/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" /></a><a href="http://www.strava.com/athletes/2676650">My Strava profile</a></li></ul></div>
+    <div class="infos">
+      <p>
+	DUT R&amp;T (PPN 2013)
+      </p>
+      <ul>
+	<li><a href="#M2106">RT1 M2106 (Bases des services réseaux)</a></li>
+	<li><a href="#M2103">RT1 M2103 (Technologie de l'Internet)</a></li>
+	<li><a href="#M2102">RT1 M2102 (Administration système)</a></li>
+      </ul>
+
+      <p>
+	DUT R&amp;T (PPN 2007)
+      </p>
+      <ul>
+	<li><a href="#tr2">RT2 TR2 (Technologies de l'Internet)</a></li>
+	<li><a href="#tr2web">RT2 TR2 : partie Web séparément</a></li>
+	<li><a href="#I3">RT1 I3 (Intro à la prog en C)</a></li>
+	<li><a href="#r3">RT1 R3 : Exercices supplémentaires de TP</a></li>
+      </ul>
+      
+      <p>
+	Licence Pro ASUR
+      </p>
+      <ul>
+	<li><a href="#M02j"> 0-M02 (Intro Java)</a></li>
+	<li><a href="#M02p">0-M02 (Intro Python, 2012)</a></li>
+	<li><a href="#M02p2013">0-M02 (Intro Python, à partir de 2013)</a></li>
+        <li><a href="#M8p">M8p (Programmation d'applications client-serveur)</a></li>
+      </ul>
+
+      <p>
+	Institut Galilée
+      </p>
+      <ul>
+ 	<li><a href="#SD">M1 informatique : Systèmes distribués</a></li>
+ 	<li><a href="#GCC">M2 PLS : Grilles de Calcul et Cloud</a></li>
+	<li><a href="#APD">Ingé Info 3 / AIR 3 : Applications Parallèles et Distribuées</a></li>
+  	<li><a href="#mpiinfo3">Conférence sur le parallélisme (2010)</a></li> 
+      </ul>
+
+      <p>
+	École doctorale Galilée
+      </p>
+      <ul>
+	<li><a href="#ED2018">Module calcul scientifique édition 2018-2019</a></li>
+	<li><a href="#ED">Module calcul scientifique</a></li>
+      </ul>
+      
+      <p>
+	École Centrale
+      </p>
+      <ul>
+	<li><a href="#mihps">École Centrale Paris : Master MIHPS</a></li>
+	<li><a href="#pekin">École Centrale P&eacute;kin : introduction
+	&agrave; l'analyse num&eacute;rique</a></li>
+      </ul>
+
+      <p>
+	Années précédentes : c'est quelque part, mais je fais le ménage sur
+	cette page de temps en temps...
+      </p>
+    </div>
+
+     <div class="separateur"><a name="tips4stud"></a>
+       Bien communiquer avec ses enseignants d'informatique à l'université.
+     </div>
+     
+     <div class="main">
+       <p>
+	 En juillet 2015, j'ai participé à la rédaction en compagnie de <a href="http://laure.gonnord.org">Laure Gonnord</a> (Université de Lyon 1), <a href="http://www-verimag.imag.fr/~monniaux">David Monniaux</a> (CNRS) et <a href="http://www.normalesup.org/~truchet">Charlotte Truchet</a> (Université de Nantes) d'un petit guide à l'intention des étudiants en informatique donnant quelques conseils sur la façon de rendre son travail et comment communiquer avec ses enseignants.
+       </p>
+
+       <p>
+	 Ce document est disponible en <a href="http://laure.gonnord.org/pro/conseils.html">HTML</a> et en <a href="http://laure.gonnord.org/pro/conseils.pdf">PDF</a>.
+       </p>
+    </div>
+
+   <div class="separateur"><a name="M02p2013"></a>
+    IUT R&amp;T : licence pro ASUR 0-M02 (Intro Python, depuis 2013)
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./M02/M02poly2013.pdf">Poly de Python et algo</a></li>
+	<li><a href="./M02/M02pythonCours2013.pdf">Slides des cours</a></li>
+	<li><a href="./M02/M02pythonTD.pdf">Sujets de TD</a></li>
+ 	<li><a href="./M02/M02pythonTP2013.pdf">Sujets de TP</a></li>
+     </ul>
+    </div>
+
+    <div class="separateur"><a name="M02p"></a>
+    IUT R&amp;T : licence pro ASUR 0-M02 (2012-2013)
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./M02/M02_polyalgo.pdf">Poly d'algorithmique</a></li>
+	<li><a href="./M02/M02pythonPoly.pdf">Poly de Python</a></li>
+	<li><a href="./M02/M02pythonCours.pdf">Slides des cours</a></li>
+	<li><a href="./M02/M02pythonTD.pdf">Sujets de TD</a></li>
+ 	<li><a href="./M02/M02pythonTP.pdf">Sujets de TP</a></li>
+        <li><a href="./M02/M02pythonProjet.pdf">Sujet de mini projet</a></li>
+     </ul>
+
+    </div>
+
+    <div class="separateur"><a name="M02j"></a>
+    IUT R&amp;T : licence pro ASUR 0-M02 (Intro Java)
+    </div>
+
+    <div class="main">
+      Cycle algo :
+      <ul>
+	<li><a href="./M02_polyalgo.pdf">Poly d'algorithmique</a></li>
+	<li><a href="./M02_polyobjet.pdf">Poly de conception orientée objet</a></li>
+	<li>Slides des cours :
+	<ul>
+	  <li><a href="./M02_cm1.pdf">Cours 1</a></li>
+	  <li><a href="./M02_cm2.pdf">Cours 2</a></li>
+	</ul>
+	</li>
+	<li>Sujets de TD :
+	  <ul>
+	    <li><a href="./M02_td1.pdf">TD 1</a></li>
+            <li><a href="./M02_td2.pdf">TD 2</a></li>
+	  </ul>
+	</li>
+      </ul>
+      
+      Cycle Java :
+      <ul>
+	<li>Slides des cours :
+	<ul>
+	  <li><a href="./M02_cm3.pdf">Cours 3</a></li>
+	  <li><a href="./M02_cm4.pdf">Cours 4</a></li>
+	  <li><a href="./M02_cm5.pdf">Cours 5</a></li>
+	  <li><a href="./M02_cm6.pdf">Cours 6</a></li>
+	</ul>
+	</li>
+	<li>Sujets de TD :
+	  <ul>
+            <li><a href="./M02_td3.pdf">TD 3</a></li>
+	  </ul>
+	</li>
+	<li>Sujets de TP :
+	<ul>
+	  <li><a href="./M02_tp1.pdf">TP 1</a></li>
+	  <li><a href="./M02_tp2.pdf">TP 2</a></li>
+	  <li><a href="./M02_tp3.pdf">TP 3</a></li>
+	</ul>
+	</li>
+	<li><a href="./Clavier.java">La classe Clavier</a></li>
+	<li>Exceptions :
+	<ul>
+	  <li><a href="./Facto.java">La classe Facto</a></li>
+	  <li><a href="./PasDefini.java">La classe d'exception PasDefini</a></li>
+	  <li><a href="./TropGros.java">La classe d'exception TropGros</a></li>
+	</ul>
+	</li>
+      </ul>
+      </div>
+
+    <div class="separateur"><a name="M8p"></a>
+    IUT R&amp;T : licence pro ASUR M8p
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./M8.pdf">Sujet de TP</a></li>
+     </ul>
+
+    </div>
+
+    <div class="separateur"><a name="M2106"></a>
+    IUT R&amp;T : RT1 M2106 : Bases des services réseaux
+    </div>
+
+    <div class="main">
+    <p>
+      Les TP sont réalisés sous <a href="http://www.marionnet.org">Marionnet</a>.
+    </p>
+
+      <ul>
+	<li><a href="./M2106cours.pdf">Slides du cours</a></li>
+	<li><a href="./M2106_TP.pdf">Poly de TP</a></li>
+      </ul>
+    </div>
+
+    <div class="separateur"><a name="M2103"></a>
+    IUT R&amp;T : RT1 M2103 : Technologie de l'Internet
+    </div>
+
+    <div class="main">
+
+      <ul>
+	<li><a href="./M2103cours.pdf">Slides du cours</a></li>
+	<li><a href="./RT_M2103_TD.pdf">Poly de TD</a></li>
+	<li><a href="./RT_M2103_TP.pdf">Poly de TP</a></li>
+      </ul>
+
+    </div>
+
+    <div class="separateur"><a name="M2102"></a>
+    IUT R&amp;T : RT1 M2102 : Administration système
+    </div>
+
+    <div class="main">
+
+      <ul>
+	<li><a href="./M2102cours.pdf">Slides du cours</a></li>
+	<li><a href="./RT_M2102.pdf">Poly de cours</a></li>
+	<li><a href="./RT_M2102_TP.pdf">Poly de TP</a>, mis à jour par Luca Saiu en 2018-2019</li>
+      </ul>
+
+    </div>
+
+
+    <div class="separateur"><a name="tr2"></a>
+    IUT R&amp;T : RT2 TR2 
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./TR2/courstr2.pdf">Slides du cours</a></li>
+	<li><a href="./TR2/TR2_td.pdf">Feuilles de TD</a></li>
+	<li>Sujets de TP :
+	  <ul>
+	    <li><a href="./TR2/TP0.pdf">TP 0</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="separateur"><a name="tr2web"></a>
+      IUT R&amp;T : TR2, HTTP et Web (2010 à 2012)
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./coursweb.pdf">Slides du cours</a></li>
+	<li><a href="./tdweb.pdf">Feuille de TD</a></li>
+      </ul>
+      <p>
+	Quelques liens utiles :
+      </p>
+      <ul>
+	<li><a href="http://httpd.apache.org/">Apache HTTP
+	server</a></li>
+	<li><a href="http://www.php.net/">PHP</a></li>
+	<li><a href="http://acid3.acidtests.org/">La derni&egrave;re version
+	de la s&eacute;rie de tests Acid</a> (testez la compatibilit&eacute; de
+	votre navigateur avec les standards !)</li>
+	<li><a href="http://www.w3.org/">Le W3C</a></li>
+	<li><a href="http://validator.w3.org/check?uri=referer">Testez
+	la compatibilit&eacute; de cette page</a> avec le standard dans lequel
+	elle est &eacute;crite (XHTML 1.0 strict)</li>
+	<li><a href="http://tools.ietf.org/html/rfc2616">RFC 2616
+	d&eacute;finissant le protocole HTTP 1.1</a></li>
+      </ul>
+    </div>
+
+    </div>
+
+    <div class="separateur"><a name="ED2018"></a>
+      École Doctorale Galilée : calcul scientifique (2018-2019)
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./ED/calculscientifique.pdf">Slides du cours</a></li>
+	<li><a href="./ED/calcul.tgz">Code source fourni</a></li>
+      </ul>
+    </div>
+
+<div class="separateur"><a name="ED"></a>
+      École Doctorale Galilée : calcul scientifique (2012-2013)
+    </div>
+
+    <div class="main">
+      <ul>
+	<li><a href="./progparallele.pdf">Programmation de machines parallèles</a></li>
+	<li><a href="./prognumerique.pdf">Programmation numérique</a></li>
+      </ul>
+    </div>
+
+    <div class="separateur"><a name="APD"></a>
+      Institut Galilée : Applications Parallèles et Distribuées
+    </div>
+
+    <div class="main">
+      Slides :
+      <ul>
+	<li><a href="./coursmpi1.pdf">Cours 3 : MPI
+	1</a> : Introduction à la programmation de machines parallèles
+	distribuées avec MPI</li>
+	<li><a href="./coursmpi2.pdf">Cours 4 : MPI 2</a> : Communications collectives</li>
+	<li><a href="./coursmpi3ig2011.pdf">Cours 4 : MPI 3</a> : Applications parallèles</li>
+     </ul>
+
+     Séances de TP :
+      <ul>
+	<li><a href="./TPmpi.pdf">Sujet</a></li>
+       <li><a href="./code/APD_tokenring.c">Anneau à jeton</a></li>
+       <li><a href="./code/APD_pingpong.c">Ping-pong</a></li>
+       <li><a href="./code/APD_pingpong_nb.c">Ping-pong non-bloquant</a></li>
+        <li><a href="./code/APD_TP_MPI.tgz">Code fourni pour le dernier TP : jeu de la vie</a></li>
+    </ul>
+
+
+   <!--    Code du TD :
+     <ul>
+       <li><a href="./code/APD_voisins.c">Échange avec les voisins</a></li>
+     <li><a href="./code/APD_MWstatique.c">Maître-esclave statique</a></li>
+       <li><a href="./code/APD_MWdynamique.c">Maître-esclave dynamique</a></li>
+       <li><a href="./code/APD_cart_comm.c">Topologie cartésienne et sous-communicateur</a></li> 
+     </ul>-->
+
+      <p>
+	Pour préparer votre environnement pour les TP de MPI, vous avez besoin
+	de configurer votre compte de manière à pouvoir utiliser SSH sans mot de
+	passe. 
+      </p>
+      <p>
+	Générez une paire de clés publique/privée avec ssh-keygen. Tapez entrer
+	à toutes les questions qu'on vous pose (clés à mettre dans les fichiers
+	par défaut, passphrase vide). Un répertoire ~/.ssh est alors créé,
+	contenant notamment le fichier contenant votre clé privée et votre clé
+	publique. Mettez votre clé publique dans un fichier
+	~/.ssh/authorized_keys.
+      </p>
+      <div class="codeLarge">
+	$ ssh-keygen -t dsa <br />
+	[...]<br />
+	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+      </div>
+    
+      <p>
+	Il faut maintenant que vous puissiez vous connecter à d'autres machines
+	sans que SSH vous demande si vous acceptez la clé des machines. Ajoutez
+	la ligne suivante dans un fichier ~/.ssh/config.
+      </p>
+      <div class="codeLarge">
+	StrictHostKeyChecking no
+      </div>
+    </div>
+
+    <div class="separateur"><a name="SD"></a>
+      Institut Galilée, M1 informatique : Systèmes Distribués (SD)
+    </div>
+    
+    <div class="main">
+      <ul>
+	<li><a href="./sd_slides.pdf">Slides des cours</a></li>
+ 	<li><a href="./sd_tp.pdf">Poly de TP</a></li>
+      </ul>
+      <p>Ressources supplémentaires : voir <a href="#GCC">M2 PLS, module GCC</a>.
+      </p>
+    </div>
+
+    <div class="separateur"><a name="GCC"></a>
+      Institut Galilée, M2 PLS : Grilles de Calcul et Cloud (GCC)
+    </div>
+    
+    <div class="main">
+
+      <ul>
+        <li><a href="./gcc_slides.pdf">Slides des cours</a></li>
+        <li><a href="./tp_gcc.pdf">Poly de TP</a></li>
+      </ul>
+
+      Rappels de Python :
+      <ul>
+	<li><a href="./M02/M02pythonPoly.pdf">Polycopié d'introduction à Python</a>.</li>
+	<li>Un livre : Apprendre à Programmer avec Python, par Gérard Swinnen, <a href="https://inforef.be/swi/download/apprendre_python.pdf">Python 2</a> et <a href="https://inforef.be/swi/download/apprendre_python3.pdf">Python 3</a>.</li>
+	<li>Un autre livre: <a href="http://www.diveintopython.net/">Dive into Python</a>, et <a href="http://gent.uab.cat/jdidier/sites/gent.uab.cat.jdidier/files/diveintopython.pdf">sa traduction en français</a>. Même chose pour <a href="http://www.diveintopython3.net/">Python 3</a>.</li>
+	<li>Pour vous entraîner : les cours et exercices de <a href="http://www.france-ioi.org/algo/chapters.php">France-IOI</a>.</li>
+      </ul>
+
+      Quelques ressources sur le calcul parallèle
+      <ul>
+	<li>Le site du <a href="http://mpi-forum.org/">Forum MPI</a> : normalisation.</li>
+	<li>Le <a href="https://www.top500.org/">Top 500</a> et son copain écolo le <a href="https://www.top500.org/green500/">Green 500</a>.</li>
+	<li>Les specs d'<a href="http://www.openmp.org/specifications/">Open MP</a>.</li>
+	<li><a href="http://www.numpy.org/">NumPy</a> et <a href="https://www.scipy.org/">SciPy</a>.</li>
+	<li><a href="https://gcc.gnu.org/onlinedocs/gcc-4.9.0/libgomp.pdf">Implémentation d'OpenMP dans gcc 4.9</a></li>
+	<li>Un poly : <a href="https://cel.archives-ouvertes.fr/cel-00395829/document">Introduction au calcul parallèle avec la bibliothèque MPI</a> par Stephanie Delage Santacreu.</li>
+      </ul>
+
+      
+    </div>
+
+    <div class="separateur"><a name="I3"></a>
+    IUT R&amp;T : RT1 I3
+    </div>
+
+    <div class="main">
+      <p>
+      Cycle algo :
+       </p>
+       <ul>
+	 <li><a href="./I3_polyalgo.pdf">Poly d'algorithmique</a></li>
+	 <li>Slides des cours :
+	   <ul>
+	     <li><a href="./I3cm1.pdf">Cours 1</a> : variables et tests</li>
+	     <li><a href="./I3cm2.pdf">Cours 2</a> : structures de contrôle</li>
+	   </ul>
+	 </li>
+	 <li>Sujets de TD :
+	   <ul>
+	     <li><a href="./I3td1.pdf">TD 1</a></li>
+	     <li><a href="./I3td2.pdf">TD 2</a></li>
+	     <li><a href="./I3td3.pdf">TD 3</a></li>
+	   </ul>
+	 </li>
+       </ul>
+
+       <p>
+	 Cycle C : 
+       </p>
+      <ul>
+	<li><a href="./I3_polyoutils.pdf">Poly sur les outils gdb et Make</a></li>
+	<li>Slides des cours :
+	<ul>
+	  <li><a href="./I3cm3.pdf">Cours 3</a> : programmation structurée, premier programme en C</li>
+	  <li><a href="./I3cm4.pdf">Cours 4</a> : introduction au langage C</li>
+	  <li><a href="./I3cm5.pdf">Cours 5</a> : gestion de la mémoire, structures de données et types dérivés</li>
+	  <li><a href="./I3cm6.pdf">Cours 6</a> : listes chaînées et débuggage avec gdb</li>
+	  <li><a href="./I3cm7.pdf">Cours 7</a> : bibliothèques, compilation avec Make</li>
+	  <li><a href="./I3cm8.pdf">Cours 8</a> : manipulation de fichiers</li>
+	  <li><a href="./I3cm9.pdf">Cours 9</a> : rappels de C</li>
+	</ul>
+	</li>
+	<li>Sujets de TD :
+	  <ul>
+	    <li><a href="./I3td4.pdf">TD 4</a></li>
+	    <li><a href="./I3td5.pdf">TD 5</a></li>
+	  </ul>
+	</li>
+	<li>Sujets de TP :
+	  <ul>
+	    <li><a href="./I3tp1.pdf">TP 1</a></li>
+	    <li><a href="./I3tp2.pdf">TP 2</a></li>
+	    <li><a href="./I3tp3.pdf">TP 3</a></li>
+	    <li><a href="./I3tp4.pdf">TP 4</a></li>
+	    <li><a href="./I3tp5.pdf">TP 5</a></li>
+	    <li><a href="./I3tp6.pdf">TP 6</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </div>
+                                        
+    <div class="separateur"><a name="pekin"></a>
+      Ecole Centrale P&eacute;kin : introduction &agrave; l'analyse
+      num&eacute;rique (2010-2011) 
+    </div>
+          
+    <div class="main">
+      <ul>
+	<li>Les <a href="./centralepekin.pdf">slides de la
+	pr&eacute;sentation</a></li> 
+      </ul>
+      <p>
+	Quelques liens utiles :
+      </p>
+      <ul>
+	<li><a href="http://www.netlib.org/blas/">BLAS</a></li>
+	<li><a href="http://www.tacc.utexas.edu/tacc-projects/gotoblas2">GotoBLAS</a></li>
+	<li><a href="http://www.netlib.org/lapack/">LAPACK</a></li>
+	<li><a href="http://www.cs.utexas.edu/users/flame/">FLAME</a></li>
+	<li><a href="http://icl.cs.utk.edu/plasma">PLASMA</a></li>
+	<li><a href="http://www.netlib.org/lapack/lawns/lawn41.ps">Documentation LAPACK : la Lapack Working Note 41</a></li>
+      </ul>
+    </div>
+
+    <div class="separateur"><a name="r3"></a>
+       IUT R&amp;T : Exercices supplémentaires TP R3
+    </div>
+          
+    <div class="main">
+      <ul>
+        <li><a href="./tpsupplementaires.pdf">Exercices supplémentaires</a></li>
+        <li><a href="./auth.log.tgz">Les fichiers d'exemples auth.log</a> pour l'exercice 1</li>
+      </ul>
+    </div>
+
+    <div class="separateur"><a name="mpiinfo3"></a>
+      Institut Galilée : Conférence sur le
+	parallélisme pour les INFO3 (2010-2011)
+    </div>
+    
+    <div class="main">
+      <p>
+	Supports de cours :
+     </p>
+     <ul>
+     <li>Slides de la présentation : <a href="./mpiIG.pdf">slides</a></li>
+     <li>Codes :
+       <ul>
+	 <li><a href="./code/helloomp.c">Hello World OpenMP</a></li>
+	 <li><a href="./code/parmax.c">Maximum parallèle OpenMP</a></li>
+ 	 <li><a href="./code/hellompi.c">Hello World MPI</a></li>
+   	 <li><a href="./code/pingpongmpi.c">Ping Pong MPI</a></li>
+    </ul>
+     </li>
+     </ul>
+     <p>
+     Liens utiles :
+     </p>
+     <ul>
+     <li><a href="http://www.top500.org">Top 500</a></li>
+     <li><a href="http://www.open-mpi.org/">Open MPI</a></li>
+     </ul>
+    </div>
+
+    <div class="separateur"><a name="mihps"></a>
+     Master MIHPS (2010-2011)
+     </div>
+     
+     <div class="main">
+     <p>
+     Supports de cours :
+     </p>
+     <ul>
+     <li>cours du 11/10/10 : <a href="./MIHPScoursmpi1.pdf">slides</a></li>
+     <li>cours du 26/10/10 :
+     <ul>
+     <li><a href="./MIHPScoursmpi2.pdf">Slides</a></li>
+     <li><a href="./tpmpi.php">Travaux pratiques</a></li>
+     <li><a href="./cg.C.16.16.31805.1.mpiP">Exemple de traces d'execution obtenues avec mpiP</a></li><!-- ' -->
+     </ul>
+     </li>
+	 <li>cours du 2/11/10 :
+	   <ul>
+	     <li><a href="./MIHPScoursmpi3.pdf">Slides</a></li>
+	     <li><a href="./tpmpi2.php">Travaux pratiques</a></li>
+	   </ul>
+	 </li>
+     </ul>
+     
+     <p>
+     Liens utiles :
+     </p>
+
+     <ul>
+     <li><a href="http://www.top500.org">Top 500</a></li>
+     <li><a href="http://www.open-mpi.org/">Open MPI</a></li>
+     <li><a href="http://mpip.sourceforge.net/">mpiP</a></li>
+     <li><a href="http://www.scl.ameslab.gov/netpipe">NetPipe</a></li>
+     <li><a href="http://icl.cs.utk.edu/hpcc">HPC Challenge</a></li>
+     <li><a href="http://icl.cs.utk.edu/ft-la/index.html">FT-LA</a></li>
+     <li><a href="http://icl.cs.utk.edu/ft-mpi/index.html">FT-MPI</a></li>
+     <li><a href="http://mpich-v.lri.fr">MPICH-V</a></li>
+     
+     </ul>
+
+     </div>
+
+
+    <!-- APRES CETTE LIGNE ON NE TOUCHE PLUS -->
+          
+
+    <!-- MOUCHARD GOOGLE ET W3C -->
+    <div class="marge_w3c">
+      <a href="http://www.nerdtests.com/ft_nq.php">
+        <img src="http://www.nerdtests.com/images/ft/nq/21991e3bef.gif" alt="I
+        am nerdier than 98% of all people. Are you a nerd? Click here to take
+        the Nerd Test, get nerdy images and jokes, and talk on the nerd forum!" /></a>
+      <a href="http://validator.w3.org/check?uri=referer">
+        <img
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+      </a>
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-396274-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ 
+    
+  </body>
+</html>

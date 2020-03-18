@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 12</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    .footnote { }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<h2>TD 12 C++: <tt>template&lt;&gt;</tt></h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<h3 class="blue">Les barêmes (en bleu) sont <i>indicatifs</i>: les notes seront certainement remontées.</h3>
+Faites les exercices dans l'ordre: C'est de loin la stratégie la plus efficace.
+
+<hr/>
+<h3>Exercice 1 (20/100): Fonction générique</h3>
+<ol>
+  <li>
+    <b class=blue>(6/100)</b><br/>
+    <b>Implémentez</b> dans un fichier <tt>1.1.h</tt> une fonction <i>générique</i> <tt>void Print(x)</tt> qui prend un argument <tt>x</tt>
+    et l'imprime (avec <tt>cout &lt;&lt; x</tt>). L'argument <tt>x</tt> pourra avoir n'importe quel type.
+    <br/>Notez bien que je demande un <tt>.h</tt> et pas de <tt>.cc</tt>! C'est dû à l'utilisation de <tt>template</tt>:
+    dans un projet C++ classique, on implémente les fonctions génériques dans les .h, pour qu'elle soient utilisables
+    par les autres fichiers (explication au tableau si vous voulez).
+    <br/><br/><b>Testez</b> votre code:
+    <pre>rm 1.tar.gz; wget --no-cache <a href="1.tar.gz" download>http://fabien.viger.free.fr/cpp/td12/1.tar.gz</a>
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU</b>: <tt>1.1.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(7/100)</b><br/>
+    Copiez <tt>1.1.h</tt> dans <tt>1.2.h</tt> et <i>spécialisez</i> la fonction Print
+    pour qu'elle ait un comportement particulier quand x est un <tt>int</tt>: elle devra alors
+    afficher <tt>"int(x)"</tt> (sans les guillemets, et en remplaçant le "x" par sa valeur).
+    <br/>Vous utiliserez les <tt>template</tt>, et pas la surcharge!
+    <br/><br/><b>Test</b>: <tt>make 1.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>1.2.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(7/100)</b><br/>
+    Dans une copie <tt>1.3.h</tt>, continuez à spécialiser <tt>Print()</tt> pour que:
+    <ul>
+      <li>Si <tt>x</tt> est un <tt>unsigned int</tt>, elle affiche <tt>"unsigned int(<i class="pink">x</i>)"</tt></li>
+      <li>Si <tt>x</tt> est un <tt>long</tt>, elle affiche <tt>"long(<i class="pink">x</i>)"</tt></li>
+      <li>Si <tt>x</tt> est un <tt>unsigned long</tt>, elle affiche <tt>"unsigned long(<i class="pink">x</i>)"</tt></li>
+    </ul>
+    <br/><b>Test</b>: <tt>make 1.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>1.3.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2 (15/100): Classe générique</h3>
+<ol>
+  <li>
+    <b class=blue>(7/100)</b><br/>
+    En suivant le <i>modèle</i> suivant, qui serait valide étant donné une classe donnée <tt>SomeClass</tt>,
+    <b>implémentez</b> dans un fichier <tt>2.1.h</tt> une classe générique <tt>Track</tt> qui encapsulera
+    une classe quelquonque<sup><a href="#footnote1">*</a></sup>.
+    <br/><b class="red">Gardez</b> le même texte affiché dans <tt>cerr</tt>: les auto-tests s'en servent
+    pour détécter que tout marche bien.
+<pre><code class="c++">class Track : public SomeClass {
+ public:
+  Track() : SomeClass() {
+    cerr &lt;&lt; "Default-Constructing @" &lt;&lt; this &lt;&lt; "\n";
+  }
+
+  Track(const SomeClass&amp; obj) : SomeClass(obj) {
+    cerr &lt;&lt; "Copy-Constructing @" &lt;&lt; this &lt;&lt; "\n";
+  }
+
+  ~Track() {
+    cerr &lt;&lt; "Destructing @" &lt;&lt; this &lt;&lt; "\n";
+  }
+};</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 2.tar.gz; wget --no-cache <a href="2.tar.gz" download>http://fabien.viger.free.fr/cpp/td12/2.tar.gz</a>
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b class="orange">RENDU</b>: <tt>2.1.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(8/100)</b><br/>
+    Copiez votre fichier dans <tt>2.2.h</tt> et ajoutez deux fonctions "accesseurs":
+    <ul>
+      <li><tt>Get()</tt>, qui renverra le <tt>const <i>SomeClass</i>&amp;</tt> de l'objet encapsulé.</li>
+      <li><tt>Mutable()</tt>, de même mais qui renvoie un pointeur (non-constant!) au lieu d'un <tt>const&amp;</tt>.</li>
+    </ul>
+    <br/><b>Test</b>: <tt>make 2.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>2.2.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 3 (15/100): Triplet&lt;&gt;</h3>
+<ol>
+  <li>
+    <b class=blue>(5/100)</b><br/>
+    Dans un fichier <tt>3.1.h</tt>, <b>implémentez</b> une classe générique <tt>Triplet</tt>
+    qui implémente un triplet d'objet quelquonques<sup><a href="#footnote1" class="footnote">*</a></sup>.
+    <br/>
+    Le code qui l'utilisera pourra ressembler à ça:
+    <pre><code class="c++">const double x = 3.0;
+SomeClass my_class;
+Triplet&lt;int, SomeClass, double&gt; t(42, my_class, x);
+cout &lt;&lt; "Triplet: " &lt;&lt; t.first &lt;&lt; "; " &lt;&lt; t.second &lt;&lt; "; " &lt;&lt; t.third &lt;&lt; "\n";
+t.third /= 2.0;
+cout &lt;&lt; t.third &lt;&lt; "\n";</code></pre>
+    Cahier des charges:
+    <ul>
+      <li>Un <tt>Triplet</tt> de trois objets se construit en donnant les trois objets.</li>
+      <li>Les <b>membres public</b> <tt>first</tt>, <tt>second</tt> et <tt>third</tt> seront
+      les objets du triplet</li>
+    </ul>
+    <br/><b>Test:</b>
+    <pre>rm 3.tar.gz; wget --no-cache <a href="3.tar.gz" download>http://fabien.viger.free.fr/cpp/td12/3.tar.gz</a>
+tar xf 3.tar.gz
+make 3.1</pre>
+    <b class="orange">RENDU</b>: <tt>3.1.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(3/100)</b><br/>
+    Dans une copie <tt>3.2.h</tt>, ajoutez un constructeur par défaut (qui construira par défaut chaque objet du triplet).
+    <br/><br/><b>Test</b>: <tt>make 3.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>3.2.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(4/100)</b><br/>
+    Dans une copie <tt>3.3.h</tt>, ajoutez un operateur <tt>&lt;</tt> qui fera la comparaison stricte dans l'ordre lexicographique:
+    <ul>
+      <li>(1, 3, 6) &lt; (2, 2, -1)</li>
+      <li>(2, 2, 2) &lt; (2, 2, 5)</li>
+    </ul>
+    <br/><b>Test</b>: <tt>make 3.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>3.3.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(3/100)</b><br/>
+    Idem dans un <tt>3.4.h</tt> mais faites en sorte que votre code n'utilise que l'opérateur <tt>&lt;</tt> sur les classes
+    sous-jacentes.
+    <br/><b>Test</b>: <tt>make 3.4</tt>
+    <br/><b class="orange">RENDU</b>: <tt>3.4.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 4 (50/100): Cardinality Counter</h3>
+<ol>
+  <li>
+    <b class=blue>(7/100)</b><br/>
+    <b>Complétez</b> le fichier <a href="4.1.h" download>4.1.h</a>, en l'implémentant!
+    <pre><code class="c++">// Generic cardinality counter for hashable objects.
+// It counts how many times a given object was inserted, all
+// in constant time.
+template&lt;class T&gt;
+class CardinalityCounter {
+ public:
+  // Adds an object once, i.e. increments its cardinality count.
+  void Add(const T&amp; t) {
+    // TODO
+  }
+
+  // Returns the current cardinality cound of object t, i.e. the number of
+  // times Add(t) was called. Can be 0 if t was never added.
+  int NumOccurences(const T&amp; t) const {
+    // TODO
+  }
+
+ private:
+  // TODO
+};</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 4.tar.gz; wget --no-cache <a href="4.tar.gz" download>http://fabien.viger.free.fr/cpp/td12/4.tar.gz</a>
+tar xf 4.tar.gz
+make 4.1</pre>
+    <b class="orange">RENDU</b>: <tt>4.1.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(2/100)</b><br/>
+    Dans une copie <tt>4.2.h</tt>, <b>ajoutez</b> une fonction <tt>int Size()</tt> qui
+    renvoie le nombre d'élément <i>distincts</i> insérés jusque-là.
+    <br/><br/><b>Test</b>: <tt>make 4.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>4.2.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(9/100)</b><br/>
+    Dans une copie <tt>4.3.h</tt>, <b>ajoutez</b> une fonction <tt>const T&amp; MostFrequent()</tt>
+    qui presupposera que <tt>Size() &gt; 0</tt> et qui renverra l'élément dont la cardinalité est
+    la plus grande (si plusieurs éléments sont <i>ex aequo</i>, retournez n'importe lequel).
+    <br/>Débrouillez-vous pour que ça marche en <b>temps constant O(1)</b>, les autres opérations
+    devant également rester en temps constant.
+    <br/><br/><b>Test</b>: <tt>make 4.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>4.3.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(12/100)</b> &nbsp; <b>(*)</b><br/>
+    Dans une copie <tt>4.4.h</tt>, <b>ajoutez</b> une fonction <tt>Remove()</tt> qui
+    enlève <b>une</b> occurence d'un objet donné en argument. Si l'objet n'était pas présent, elle ne
+    fait rien.
+    <br/><b>Attention</b>:
+    <ul>
+      <li>Toutes les autres opérations doivent rester en temps constant</li>
+      <li>
+        Si l'objet n'est plus présent après la fonction Remove() [nombre d'occurences = 0],
+        pensez bien à l'enlever complètement de votre structure de données! Le test le verifiera.
+      </li>
+      <li>
+        Faites en sorte que MostFrequent() marche encore:
+        <ul>
+          <li>Vous pourrez par exemple effectuer un re-calcul en O(N) <i>si nécéssaire</i>, i.e. quand
+          on a appelé Remove() sur l'élément le plus fréquent (car il n'est peut-être plus le plus fréquent!).
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <br/><b>Test</b>: <tt>make 4.4</tt>
+    <br/><b class="orange">RENDU</b>: <tt>4.4.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b class=blue>(20/100)</b> &nbsp; <b>(**)</b><br/>
+    Modifiez la structure de données pour garantir une complexité O(log(N)) voire O(1) pour toutes les operations, dans le pire cas, même <tt>Remove()</tt>.
+    <br/>Pour garantir le max de points, obtenez la complexité pire cas en O(1).
+    <br/>
+    <b>Indice</b>: dans un conteneur de type <a href="http://en.cppreference.com/w/cpp/container/set"><tt>set</tt></a>,
+    <a href="http://en.cppreference.com/w/cpp/container/unordered_set"><tt>unordered_set</tt></a>,
+    <a href="http://en.cppreference.com/w/cpp/container/map"><tt>map</tt></a> ou
+    <a href="http://en.cppreference.com/w/cpp/container/unordered_map"><tt>unordered_map</tt></a>,
+    les références (donc également les pointeurs) vers des éléments du set ou du map (clé et/ou valeur)
+    restent valides tant qu'on n'enlève pas l'élément! En d'autres termes, une fois inséré, les clés (et/ou leur valeur associée)
+    gardent une adresse mémoire constante tant qu'il ne sont pas retirés. Le code suivant marche bien, par exemple:
+    <pre><code class="c++">std::map<int, double> my_map;
+my_map[5] = 4.567;
+double* value_of_5 = &amp;(my_map[5]);
+int* key_of_5 = &amp;(my_map.find(5)-&gt;first);
+my_map[4] = 3;
+my_map[2] = 8;
+my_map.erase(4);
+cout &lt;&lt; *key_of_5;  // Prints "5".
+cout &lt;&lt; *value_of_5;  // Prints "4.567".
+my_map[5] = 9.8;
+cout &lt;&lt; *key_of_5;  // Prints "5".
+cout &lt;&lt; *value_of_5;  // Prints "9.8".
+</code></pre>
+    <b>Test</b>: <tt>make 4.5</tt> <b class="red">
+    <br/><b class="orange">RENDU</b>: <tt>4.5.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<div>
+<a name="footnote">*</a>: <i>presque</i> quelquonque: l'objet en question devra avoir un constructeur
+par copie et par défaut.
+</div>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+
+</body>
+</html>

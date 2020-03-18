@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <script type="text/javascript">
+	function toggle(id)
+	{
+		var item = document.getElementById(id);
+		if (item.className == 'hidden') item.className = 'visible';
+		else item.className = 'hidden';
+	}
+  </script>
+<link rel="icon" type="image/ico" href="favicon.ico"></link> 
+<link rel="shortcut icon" href="favicon.ico"></link>
+<head>
+<title>Manzonetto Giulio - Ph.D. in Computer Science - Research work</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="gmanzone.css">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26493868-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = 
+true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+'.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<h2>Manzonetto Giulio</h2>
+<hr size="1">
+<a href="mailto:gmanzone(at)gmail.com">(&lambda;<i>x</i>.gmanzone<i>x</i>gmail.com)@</a><br>
+Ph.D. in Computer Science<br>
+
+<h3>Research Interests</h3>
+
+My main interest in computer science is in lambda calculus, resource calculi, denotational semantics, categorical semantics, universal algebra, topology and computability theory.<br>
+
+<a href="erdos.html" target="_blank">Erdos number: 3</a>
+(but <a href="http://xkcd.com/599/" target="_blank">there is still hope</a>).<br>
+
+<h3>Current research students</h3>
+<ul>
+  <li>Emma Kerinec</li>
+  <li><a href="https://lipn.univ-paris13.fr/~barbarossa/" target="_blank">Davide Barbarossa</a></li>
+</ul>
+
+<h3>Past research students</h3>
+<ul>
+  <li><a href="https://www.doc.ic.ac.uk/~druoppol" target="_blank">Domenico Ruoppolo</a></li>
+</ul>
+
+<h3>Journal Papers</h3>
+<ul>
+    <li><b>Taylor Subsumes Scott, Berry, Kahn and Plotkin.</b><br>
+        D. Barbarossa and G. Manzonetto. Principles of Programming Languages, PACMPL Vol. 4, pp. 1:1-1:23, 2020.
+        <a href="javascript:toggle('barbapapa_j');">(abstract)</a>&nbsp;<a href="./papers/BarbarossaM20.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#BarbarossaM20">(bib)</a>
+           <div id="barbapapa_j" class="hidden">
+             <p>
+	     The speculative ambition of replacing the old theory of program approximation based on syntactic continuity with the theory of resource consumption based on Taylor expansion and originating from the differential &lambda;-calculus is nowadays at hand. Using this resource sensitive theory, we provide simple proofs of important results in &lambda;-calculus that are usually demonstrated by exploiting Scott's continuity, Berry's stability or Kahn and Plotkin's sequentiality theory.  
+A paradigmatic example is given by the Perpendicular Lines Lemma for the B&ouml;hm tree semantics, which is proved here simply by induction, but relying on the main properties of resource approximants: strong normalization, confluence and linearity.
+             </p>
+	   </div>
+    </li>
+    <li><b>Revisiting Call-by-value B&ouml;hm trees in light of their Taylor expansion.</b><br>
+        E. Kerinec, G. Manzonetto and M. Pagani. Submitted on September 2018.
+        <a href="javascript:toggle('kemapa_j');">(abstract)</a>&nbsp;<a href="./papers/KerinecMP18.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#KerinecMP18">(bib)</a>
+           <div id="kemapa_j" class="hidden">
+	     <p>
+	     The call-by-value &lambda;-calculus can be endowed with permutation rules, arising from linear logic proof-nets, having the advantage of unblocking some redexes that otherwise get stuck during the reduction. We show that such an extension allows to define a satisfying notion of B&ouml;hm(-like) tree and a theory of program approximation in the call-by-value setting. We prove that all lambda terms having the same B&ouml;hm tree are observationally equivalent, and characterize those B&ouml;hm-like trees arising as actual B&ouml;hm trees of lambda terms. 
+We also compare this approach with Ehrhard's theory of program approximation based on the Taylor expansion of lambda terms, translating each lambda term into a possibly infinite set of so-called resource terms. We provide sufficient and necessary conditions for a set of resource terms in order to be the Taylor expansion of a lambda term. Finally, we show that the normal form of the Taylor expansion of a lambda term can be computed by performing a normalized Taylor expansion of its B&ouml;hm tree. From this it follows that two lambda terms have the same B&ouml;hm tree if and only if the normal forms of their Taylor expansions coincide.
+	     </p>
+	   </div>
+    </li>    
+    <li><b>New semantical insights into Call-by-Value &lambda;-calculus</b><br>
+        G. Manzonetto, M. Pagani and S. Ronchi Della Rocca. Fundamenta Informaticae, Vol. 170(1-3), pp. 241-265, 2019.
+        <a href="javascript:toggle('maparo_j');">(abstract)</a>&nbsp;<a href="./papers/MaPaRo18.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#ManzonettoPR18">(bib)</a>
+           <div id="maparo_j" class="hidden">
+	     <p>
+	     Despite the fact that call-by-value &lambda;-calculus was defined by Plotkin in 1977, we believe that its theory of program approximation is still at the beginning. A problem that is often encountered when studying its operational semantics is that, during the reduction of a &lambda;-term, some redexes remain stuck (waiting for a value). Recently, Carraro and Guerrieri proposed to endow this calculus with permutation rules, naturally arising in the context of linear logic proof-nets, that succeed in unblocking a certain number of such redexes. In the present paper we introduce a new class of models of call-by-value &lambda;-calculus, arising from non-idempotent intersection type systems. Beside satisfying the usual properties as soundness and adequacy, these models validate the permutation rules mentioned above as well as some reductions obtained by contracting suitable &lambda;I-redexes. Thanks to these (perhaps unexpected) features, we are able to demonstrate that every model living in this class satisfies an Approximation Theorem with respect to a refined notion of syntactic approximant. While this kind of results often require impredicative techniques like reducibility candidates, the quantitative information carried by type derivations in our system allows us to provide a combinatorial proof.
+	     </p>
+	   </div>
+    </li>    
+    <li><b>Degrees of extensionality in the theory of B&ouml;hm trees and Sall&eacute;'s conjecture</b><br>
+	B. Intrigila, G. Manzonetto and A. Polonsky. Logical Methods in Computer Science, Volume 15, Issue 1, 2019.
+        <a href="javascript:toggle('sallesworng_j');">(abstract)</a>&nbsp;<a href="./papers/IntrigilaMP18.pdf">(pdf)</a>&nbsp;<a href="./papers/IntrigilaMP18.ps">(ps)</a>&nbsp;<a href="bibtex.html#IntrigilaMP18">(bib)</a>
+           <div id="sallesworng_j" class="hidden">
+	   <p>
+	     The main observational equivalences of the untyped &lambda;-calculus have been characterized in terms of extensional equalities between B&ouml;hm trees.
+	     It is well known that the &lambda;-theory H<sup>*</sup>, arising by taking as observables the head normal forms, equates two &lambda;-terms whenever their B&ouml;hm trees are equal up to countably many possibly infinite eta-expansions.
+	     Similarly, two &lambda;-terms are equal in Morris's original observational theory H<sup>+</sup>, generated by considering as observable the beta-normal forms, whenever their B&ouml;hm trees are equal up to countably many finite eta-expansions.
+
+	     The &lambda;-calculus also possesses a strong notion of extensionality called "the &omega;-rule", which has been the subject of many investigations.
+	     It is a longstanding open problem whether the equivalence B&omega; obtained by closing the theory of B&ouml;hm trees under the &omega;-rule is strictly included in H<sup>+</sup>, as conjectured by Sall&eacute; in the seventies.
+In this paper we demonstrate that the two aforementioned theories actually coincide, thus disproving Sall&eacute;'s conjecture.
+
+The proof technique we develop for proving the latter inclusion is general enough to provide as a byproduct a new characterization, based on bounded eta-expansions, of the least extensional equality between B&ouml;hmtrees.
+Together, these results provide a taxonomy of the different degrees of extensionality in the theory of B&ouml;hm trees.
+	     </p>
+	   </div>
+    </li>  	   
+    <li><b>The Fixed Point Property and a Technique to Harness Double Fixed Point Combinators</b><br>
+	G. Manzonetto, A. Polonsky, A. Saurin and J. Simonsen. Journal of Logic and Computation, Vol. 29(5), pp. 831-880, 2019.
+        <a href="javascript:toggle('fppanddfpcs_j');">(abstract)</a>&nbsp;<a href="./papers/ManzonettoPSS18.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#ManzonettoPSS17">(bib)</a>
+           <div id="fppanddfpcs_j" class="hidden">
+	   <p>
+	     The &lambda;-calculus enjoys the property that each &lambda;-term has at least one fixed point, which is due to the existence of a fixed point combinator.
+		It is unknown whether it enjoys the "fixed point property" stating that each &lambda;-term has either one or infinitely many pairwise distinct fixed points. 
+		We show that the fixed point property holds when considering possibly open fixed points. 
+		The problem of counting fixed points in the closed setting remains open, but we provide sufficient conditions for a &lambda;-term to have either one or infinitely many fixed points.
+		In the main result of this paper we prove that in every sensible &lambda;-theory there exists a &lambda;-term that violates the fixed point property.
+
+		We then study the open problem concerning the existence of a double fixed point combinator and propose a proof technique that could lead towards a negative solution.
+		We consider interpretations of the &lambda;Y-calculus into the &lambda;-calculus together with two Reduction Extension Properties, whose validity would entail the non-existence of any double fixed point combinators.
+		We conjecture that both properties hold when typed &lambda;Y-terms are interpreted by arbitrary fixed point combinators.
+		We prove Reduction Extension Property I for a large class of fixed point combinators.
+
+		Finally, we prove that the &lambda;Y-theory generated by the equation characterizing double fixed point combinators is a conservative extension of the &lambda;-calculus.
+	     </p>
+	   </div>
+    </li>  
+    <li><b>Relational Graph Models at Work</b><br>
+        F. Breuvart, G. Manzonetto and D. Ruoppolo. Logical Methods in Computer Science, Vol. 14(3:2), pp. 1-43, 2018.
+        <a href="javascript:toggle('rgms_at_work_j');">(abstract)</a>&nbsp;<a href="./papers/bmr18.pdf">(pdf)</a>&nbsp;<a href="./papers/bmr18.ps">(ps)</a>&nbsp;<a href="bibtex.html#BreuvartMR17">(bib)</a>
+           <div id="rgms_at_work_j" class="hidden">
+	   <p>
+	     We study the relational graph models that constitute a natural subclass of relational models of &lambda;-calculus. We prove that among the &lambda;-theories induced by such models there exists a minimal one, and that the corresponding relational graph model is very natural and easy to construct. We then study relational graph models that are fully abstract, in the sense that they capture some observational equivalence between lambda-terms. We focus on the two main observational equivalences in the &lambda;-calculus, the theory H<sup>+</sup> generated by taking as observables the &beta;-normal forms, and H* generated by considering as observables the head normal forms. On the one hand we introduce a notion of &lambda;-K&ouml;nig model and prove that a relational graph model is fully abstract for H<sup>+</sup> if and only if it is extensional and lambda-K&ouml;onig. On the other hand we show that the dual notion of hyperimmune model, together with extensionality, captures the full abstraction for H*.
+	     </p>
+	   </div>
+    </li>  
+    <li><b>Constructing Differential Categories and Deconstructing Categories of Games.</b><br> J. Laird, G. Manzonetto and G. McCusker. Long version.
+           Information and Computation, Volume 222, Issue C, pp. 247-264, 2013. <a href="javascript:toggle('diff_cat_j');">(abstract)</a>&nbsp;<a href="./papers/lmm13.pdf">(pdf)</a>&nbsp;<a href="./papers/lmm13.ps">(ps)</a>&nbsp;<a href="bibtex.html#LairdMM13">(bib)</a>
+           <div id="diff_cat_j" class="hidden">
+	   <p>
+	     Differential categories were introduced by Blute, Cockett and Seely to axiomatize categorically Ehrhard and Regnier's syntactic
+	     differential operator. We present an abstract construction that takes a symmetric monoidal category and yields a differential category,
+	     and show how this construction may be applied to categories of games. In one instance, we recover the category previously used to give a
+	     fully abstract model of a nondeterministic imperative language. The construction exposes the differential structure already present in
+	     this model, and shows how the differential combinator may be encoded in the imperative language. A second instance corresponds to a new
+	     differential cartesian category of games. We give a model of a simply-typed resource calculus, Resource PCF, in this category and show
+	     that it possesses the finite definability property. Comparison with a semantics based on Bucciarelli, Ehrhard and Manzonetto's relational
+	     model reveals that the latter also possesses this property and is fully abstract.
+	     </p>
+	   </div>
+    </li>        
+    <li><b>Full Abstraction for the Resource Lambda Calculus with Tests, through Taylor Expansion.</b><br> A. Bucciarelli, A. Carraro, T. Ehrhard and G. Manzonetto.
+           Logical Methods in Computer Science, Volume 8, Issue 4, Paper 3, pp. 1-44, 2012. <a href="javascript:toggle('tests_taylor_journal');">(abstract)</a>&nbsp;<a href="./papers/bcem12.pdf">(pdf)</a>&nbsp;<a href="./papers/bcem12.ps">(ps)</a>&nbsp;<a href="bibtex.html#BucciarelliCEM12">(bib)</a>
+           <div id="tests_taylor_journal" class="hidden">
+	   <p>
+	     We study the semantics of a resource sensitive extension of the lambda calculus in a canonical reflexive object of a category of sets
+	     and relations, a relational version of Scott's original model of the pure lambda calculus. This calculus is related to Boudol's
+	     resource calculus and is derived from Ehrhard and Regnier's differential extension of Linear Logic and of the lambda calculus.
+	     We extend it with new constructions, to be understood as implementing a very simple exception mechanism, and with a "must" parallel
+	     composition. These new operations allow to associate a context of this calculus with any point of the model and to prove full
+	     abstraction for the finite sub-calculus where ordinary lambda calculus application is not allowed. The result is then extended to the
+	     full calculus by means of a Taylor Expansion formula.
+	     As an intermediate result we prove that the exception mechanism is not essential in the finite sub-calculus.
+	     </p>
+	   </div>
+    </li>    
+    <li><b>Strong Normalization of ML<sup>F</sup> via a Coercion Calculus</b><br> 
+	   G. Manzonetto and P. Tranquilli. Theoretical Computer Science, Volume 417C, pages 74-94, 2012. (37pp). <a href="javascript:toggle('SN_MLF_j');">(abstract)</a>&nbsp;<a href="./papers/ManT-TCS.pdf">(pdf)</a>&nbsp;<a href="./papers/ManT-TCS.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoT10j">(bib)</a>
+	   <div id="SN_MLF_j" class="hidden">
+	   <p>
+	     ML<sup>F</sup> is a type system extending ML with first-class polymorphism as in system F. The main goal of the present paper is to show
+	     that ML<sup>F</sup> enjoys strong normalization, i.e., it has no infinite reduction paths. The proof of this result is achieved in several
+	     steps. We first focus on xML<sup>F</sup>, the Church-style version of ML<sup>F</sup>, and show that it can be translated into a calculus
+	     of coercions:
+	     terms are mapped into terms and instantiations into coercions. This coercion calculus can be seen as a decorated version of system F,
+	     so that the simulation result entails strong normalization of xML<sup>F</sup> through the same property of system F.
+	     We then transfer the result to all other versions of ML<sup>F</sup> using the fact that they can be compiled into xML<sup>F</sup> and
+	     showing there is a bisimulation between the two. We conclude by discussing what results and issues are encountered when using the
+	     candidates of reducibility approach to the same problem.
+	     </p>
+	   </div>
+    </li>   
+    <li><b>What is a Categorical Model of the Differential and the Resource Lambda Calculi?</b><br> 
+	   G. Manzonetto. Mathematical Structures in Computer Science, Volume 22(3), pages 451-520, 2012. <a href="javascript:toggle('cat_diff_j');">(abstract)</a>&nbsp;<a href="./papers/man12.pdf">(pdf)</a>&nbsp;<a href="./papers/man12.ps">(ps)</a>&nbsp;<a href="bibtex.html#Manzonetto12">(bib)</a>
+	   <div id="cat_diff_j" class="hidden">
+	   <p>
+	     The differential &lambda;-calculus is a paradigmatic functional programming language endowed with a syntactical differentiation operator
+	     that allows to apply a program to an argument in a linear way. One of the main features of this language is that it is resource conscious
+	     and gives the programmer suitable primitives to handle explicitly the resources used by a program during its execution. The differential
+	     operator also allows to write the full Taylor expansion of a program. Through this expansion every program can be decomposed into an
+	     infinite sum (representing non-deterministic choice) of 'simpler' programs that are strictly linear.
+
+	     The aim of this paper is to develop an abstract 'model theory' for the untyped differential &lambda;-calculus. In particular, we
+	     investigate what should be a general categorical definition of denotational model for this calculus. Starting from the work of Blute,
+	     Cockett and Seely on differential categories we provide the notion of Cartesian closed differential category and we prove that linear
+	     reflexive objects living in such categories constitute sound models of the untyped differential &lambda;-calculus.
+	     We also give sufficient conditions for Cartesian closed differential categories to model the Taylor expansion. This entails that every
+	     model living in such categories equates all programs having the same full Taylor expansion.
+	     We then provide a concrete example of a Cartesian closed differential category modeling the Taylor expansion, namely the category MRel of
+	     sets and relations from finite multisets to sets. We prove that the relational model <i>D</i> of &lambda;-calculus we have recently built
+	     in MRel is linear, and therefore it is also a model of the untyped differential &lambda;-calculus.
+
+	     Finally, we study the relationship between the differential &lambda;-calculus and the resource calculus, a functional programming language
+             combining the ideas behind the differential &lambda;-calculus with those behind the lambda-calculus with multiplicities. We define two
+             translation maps between these two calculi and we study the properties of these translations. In particular, from this analysis it follows
+             that the two calculi share the same notion of model. Therefore the resource calculus can be interpreted by translation into every linear
+             reflexive object living in a Cartesian closed differential category.
+	     </p>
+	   </div>
+    </li>
+    <li><b>A Relational Semantics for Parallelism and Non-Determinism in a Functional Setting.</b><br> 
+	    A. Bucciarelli, T. Ehrhard and G. Manzonetto. Annals of Pure and Applied Logic, Vol. 163, issue 7, pp. 918-934, 2012. <a href="javascript:toggle('apal');">(abstract)</a>&nbsp;<a href="./papers/apal12.pdf">(pdf)</a>&nbsp;<a href="./papers/apal12.ps">(ps)</a>&nbsp;<a href="bibtex.html#BucciarelliEM12">(bib)</a>
+	   <div id="apal" class="hidden">
+	   <p>
+	     We recently introduced an extensional model of the pure &lambda;-calculus living in a canonical cartesian closed category of sets and
+	     relations. In the present paper, we study the non-deterministic features of this model.
+             Unlike most traditional approaches, our way of interpreting non-determinism does not require any additional powerdomain construction.
+             We show that our model provides a straightforward semantics of non-determinism (may convergence) by means of unions of interpretations,
+             as well as of parallelism (must convergence) by means of a binary, non-idempotent operation available on the model, which is related to
+	     the mix rule of Linear Logic. 
+             More precisely, we introduce a &lambda;-calculus extended with non-deterministic choice and parallel composition, and we define its
+	     operational semantics (based on the may and must intuitions underlying our two additional operations). 
+             We describe the interpretation of this calculus in our model and show that this interpretation is 'sensible' with respect to our
+	     operational semantics: a term converges if, and only if, it has a non-empty interpretation.	     
+	   </p>
+	   </div>
+
+    </li>
+    <li><b>Applying Universal Algebra to Lambda Calculus.</b><br> 
+	    G. Manzonetto and A. Salibra. Special issue of Journal of Logic and Computation on Logic and Algebra, Volume 20, Number 4,pp. 877-915, 2010. <a href="javascript:toggle('app_univ_alj');">(abstract)</a>&nbsp;<a href="./papers/ms08.pdf">(pdf)</a>&nbsp;<a href="./papers/ms08.ps">(ps)</a>&nbsp;<a href="bibtex.html#Manzonetto11">(bib)</a>
+	   <div id="app_univ_alj" class="hidden">
+	     <p>
+	     The aim of this article is twofold. From one side we survey the knowledge we have acquired these last ten years about the lattice of all &lambda;-theories (equational extensions of untyped &lambda;-calculus) and the models of lambda calculus via universal algebra. This includes positive or negative answers to several questions raised in these years as well as several independent results, the state of the art about the long-standing open questions concerning the representability of &lambda;-theories as theories of models, and 26 open problems. On the other side, against the common belief, we show that lambda calculus and combinatory logic satisfy interesting algebraic properties. In fact the Stone representation theorem for Boolean algebras can be generalized to combinatory algebras and &lambda;-abstraction algebras. In every combinatory and &lambda;-abstraction algebra, there is a Boolean algebra of central elements (playing the role of idempotent elements in rings). Central elements are used to represent any combinatory and &lambda;-abstraction algebra as a weak Boolean product of directly indecomposable algebras (i.e. algebras that cannot be decomposed as the Cartesian product of two other non-trivial algebras). Central elements are also used to provide applications of the representation theorem to lambda calculus. We show that the indecomposable semantics (i.e. the semantics of lambda calculus given in terms of models of lambda calculus, which are directly indecomposable as combinatory algebras) includes the continuous, stable and strongly stable semantics, and the term models of all semisensible &lambda;-theories. In one of the main results of the article we show that the indecomposable semantics is equationally incomplete, and this incompleteness is as wide as possible.
+	     </p>
+	   </div>
+    </li>
+    <li><b>Effective Lambda Models Versus Recursively Enumerable Lambda Theories.</b><br> 
+	    C. Berline, G. Manzonetto and A. Salibra. Mathematical Structures in Computer Science. Volume 19, Issue 05, pp 897-942, 2009. <a href="javascript:toggle('berline');">(abstract)</a>&nbsp;<a href="./papers/BMS08.pdf">(pdf)</a>&nbsp;<a href="./papers/BMS08.ps">(ps)</a>&nbsp;<a href="bibtex.html#BerlineMS09">(bib)</a>.
+	   <div id="berline" class="hidden">
+	   <p>
+	     A longstanding open problem is whether there exists a non-syntactical model of the untyped &lambda;-calculus whose theory is exactly the
+	     least &lambda;-theory &lambda;&beta;. In this paper we investigate the more general question of whether the equational/order theory of a
+	     model of the untyped &lambda;-calculus can be recursively enumerable (r.e. for brevity). We introduce a notion of effective model of
+	     &lambda;-calculus, which covers in particular all the models individually introduced  in the literature.
+	     We prove that the order theory of an effective model is never r.e.; from this it follows that its equational theory cannot be
+	     &lambda;&beta; or &lambda;&beta;&eta;.
+	     We then show that no effective model living in the stable or strongly stable semantics has an r.e. equational theory.
+	     Concerning Scott's semantics, we investigate the class of graph models and prove that no order theory of a graph model can be r.e., and
+	     that there exists an effective graph model whose equational/order  theory is the minimum among the theories of graph models.
+	     Finally, we show that the class of graph models enjoys a kind of downwards Lowenheim-Skolem theorem.
+	   </p>
+	   </div>
+    </li>
+  </ul>
+
+<h3>Conference Papers</h3>
+  <ul>
+      <li>
+      <b>The Bang Calculus and the Two Girard's Translations (Extended abstract).</b><br>
+    G. Guerrieri and G. Manzonetto. Electronic Proceedings in Theoretical Computer Science, Vol. 292, pp. 15-30, 2019.
+           <a href="javascript:toggle('gg18');">(abstract)</a>&nbsp;<a href="./papers/GG18.pdf">(pdf)&nbsp;<a href="bibtex.html#GuerrieriM18">(bib)</a>.
+	   <div id="gg18" class="hidden">
+	   <p>
+	   We study the two Girard's translations of intuitionistic implication into linear logic by exploiting the bang calculus, a paradigmatic functional language with an explicit box-operator that allows both the call-by-name and call-by-value &lambda;-calculi to be encoded in. We investigate how the bang calculus subsumes both call-by-name and call-by-value &lambda;-calculi from a syntactic and a semantic viewpoint.
+	   </p>
+	   </div>
+     </li>
+      <li>
+      <b>Refutation of Sall&eacute;'s Longstanding Conjecture.</b><br>
+           B. Intrigila, G. Manzonetto and A. Polonsky. Proc. of Formal Structures for Computation and Deduction (FSCD 2017), LIPIcs Vol. 84, pages 20:1-20:18, 2017. 
+           <a href="javascript:toggle('imp17');">(abstract)</a>&nbsp;<a href="./papers/imp17.pdf">(pdf)&nbsp;<a href="./papers/imp17.ps">(ps)&nbsp;<a href="bibtex.html#IntrigilaMP17">(bib)</a>.
+	   <div id="imp17" class="hidden">
+	   <p>
+	   The &lambda;-calculus possesses a strong notion of extensionality, called "the &omega;-rule", which has been the subject of many investigations. It is a longstanding open problem whether the equivalence obtained by closing the theory of B&ouml;hm trees under the &omega;-rule is strictly included in Morris's original observational theory, as conjectured by Sall&eacute; in the seventies.
+In a recent work, Breuvart <i>et al.</i> have shown that Morris's theory satisfies the &omega;-rule.
+In this paper we demonstrate that the two aforementioned theories actually coincide, thus disproving Sall&eacute;'s conjecture.
+	   </p>
+	   </div>
+    </li>
+    <li>
+      <b>New Results on Morris's Observational Theory: the benefits of separating the inseparable.</b><br>
+           F. Breuvart, G. Manzonetto, A. Polonsky and D. Ruoppolo. In Proc. of Formal Structures for Computation
+               and Deduction (FSCD 2016), LIPIcs Vol. 52, pages 15:1-15:18, 2016. <a href="javascript:toggle('bmpr16');">(abstract)</a>&nbsp;<a href="./papers/bmpr16.pdf">(pdf)&nbsp;<a href="./papers/bmpr16.ps">(ps)&nbsp;<a href="bibtex.html#BreuvartMPR16">(bib)</a>.
+	   <div id="bmpr16" class="hidden">
+	   <p>
+	     We study the theory of contextual equivalence in the untyped &lambda;-calculus, generated by taking the normal forms as observables. Introduced by Morris in 1968, this is the original extensional &lambda;-theory H<sup>+</sup> of observational equivalence. On the syntactic side, we show that this &lambda;-theory validates the &omega;-rule, thus settling a long-standing open problem. On the semantic side, we provide sufficient and necessary conditions for relational graph models to be fully abstract for H<sup>+</sup>. We show that a relational graph model captures Morris's observational pre-order exactly when it is extensional and &lambda;-K&ouml;nig. Intuitively, a model is &lambda;-K&ouml;nig when every &lambda;-definable tree has an infinite path which is witnessed by some element of the model.
+
+	     Both results follows from a weak separability property enjoyed by terms differing only because of some infinite &eta;-expansion, which is proved through a refined version of the B&ouml;hm-out technique.
+	   </p>
+	   </div>
+    </li>
+    <li>
+      <b>Factor Varieties and Symbolic Computation.</b><br>
+           A. Salibra, G. Manzonetto and G. Favro. In Proc. of LICS, pages 738-747, New York, USA, 2016. <a href="javascript:toggle('smf16');">(abstract)</a>&nbsp;<a href="./papers/SalibraMF16.pdf">(pdf)&nbsp;<a href="./papers/SalibraMF16.ps">(ps)&nbsp;<a href="bibtex.html#SalibraMF16">(bib)</a>.
+	   <div id="smf16" class="hidden">
+	   <p>
+	     We propose an algebraization of classical and non-classical logics, based on factor varieties and decomposition operators. In particular, we provide a new method for determining whether a propositional formula is a tautology or a contradiction. This method can be automatized by defining a term rewriting system that enjoys confluence and strong normalization. This also suggests an original notion of logical gate and circuit, where propositional variables becomes logical gates and logical operations are implemented by substitution. Concerning formulas with quantifiers, we present a simple algorithm based on factor varieties for reducing first-order classical logic to equational logic. We achieve a completeness result for first-order classical logic without requiring any additional structure.
+	   </p>
+	   </div>
+    </li>	   
+    <li><b>Relational Graph Models, Taylor Expansion and Extensionality.</b><br>
+           G. Manzonetto and D. Ruoppolo. Proc. of MFCS14, Electronic Notes in Theoretical Computer Science, Vol. 308, pages 245-272, 2014. <a href="javascript:toggle('mr14');">(abstract)</a>&nbsp;<a href="./papers/mr14.pdf">(pdf)&nbsp;<a href="bibtex.html#ManzonettoR14">(bib)</a>.
+	   <div id="mr14" class="hidden">
+	   <p>
+	     We define the class of relational graph models and study the induced order- and equational-theories. 
+             Using the Taylor expansion, we show that all &lambda;-terms with the same B&ouml;hm tree are equated in any relational graph model.
+	     If the model is moreover extensional and satisfies a technical condition, then its order-theory coincides with Morris's observational pre-order.
+	     Finally, we introduce an extensional version of the Taylor expansion, then prove that two &lambda;-terms have the same extensional Taylor expansion exactly when
+	     they are equivalent in Morris's sense.
+	   </p>
+	   </div>
+    </li>
+    <li><b>Weighted Relational Models of Typed Lambda-Calculi</b><br>J. Laird, G. Manzonetto, G. McCusker and M. Pagani. 28th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2013), pp. 301-310, 2013. <a href="javascript:toggle('lmmp13');">(abstract)</a>&nbsp;<a href="./papers/lmmp13.pdf">(pdf)&nbsp;<a href="./papers/lmmp13-coffee.pdf">(coffee stained pdf)</a>&nbsp;<a href="bibtex.html#LairdMMP13">(bib)</a>.
+	   <div id="lmmp13" class="hidden">
+	   <p>
+	     The category <b>Rel</b> of sets and relations yields one among the simplest denotational semantics of Linear Logic (LL). It is known that <b>Rel</b> is the biproduct completion of the Boolean ring. We consider the generalization of this construction to an arbitrary continuous semiring R, producing a cpo-enriched category which is a semantics of LL, and its (co)Kleisli category is an adequate model of an extension of PCF, parametrized by R. Specific instances of R allow us to compare programs not only with respect to "what they can do", but also "in how many steps" or "in how many different ways" (for non-deterministic PCF) or even "with what probability" (for probabilistic PCF).
+	   </p>
+	   </div>
+    </li>    
+    <li><b>Call-By-Value Non-Determinism in a Linear Logic Type Discipline.</b><br> A. Diaz-Caro, G. Manzonetto and M. Pagani. Proc. of Symposium on Logical Foundations of Computer Science 2013, Volume 7392 of LNCS, pp. 364-376, 2013. <a href="javascript:toggle('dcmp13');">(abstract)</a>&nbsp;<a href="./papers/dmp13.pdf">(pdf)</a>&nbsp;<a href="./papers/dmp13.ps">(ps)</a>&nbsp;<a href="bibtex.html#DiazCaroMP13">(bib)</a>.
+	   <div id="dcmp13" class="hidden">
+	   <p>
+	     We consider the call-by-value &lambda;-calculus extended with a may-convergent non-deterministic choice and a must-convergent parallel composition.
+	     Inspired by recent works on the relational semantics of linear logic (LL) and non-idempotent intersection types, we endow this calculus with a
+	     type system based on the so-called Girard's second translation of intuitionistic logic into LL.
+	     We prove that a term is typable if and only if is converging, and that its typing tree carries enough information to give a bound on the length of
+	     its lazy call-by-value reduction. Moreover, when the typing tree is minimal, such a bound becomes the exact length of the reduction.
+	   </p>
+	   </div>
+    </li>
+    <li><b>Loader and Urzyczyn are Logically Related.</b><br> S. Salvati, G. Manzonetto, M. Gehrke and H.P. Barendregt. Automata, Languages and Programming - 39th International Colloquium (ICALP 2012), Proceedings, Part II, ed. A. Czumaj et al., Lecture Notes in Computer Science, Volume 7392, pages 364-376, Springer, 2012.<a href="javascript:toggle('smgb12');">(abstract)</a>&nbsp;<a href="./papers/smgb12.pdf">(pdf)</a>&nbsp;<a href="./papers/smgb12.ps">(ps)</a>&nbsp;<a href="bibtex.html#SalvatiMGB12">(bib)</a>.
+	   <div id="smgb12" class="hidden">
+	   <p>
+	     In simply typed &lambda;-calculus with one ground type the following theorem due to Loader holds.
+             <i>(i)</i> Given the full model <i>F</i> over a finite set, the question whether some element <i>f</i>&isin;<i>F</i> is &lambda;-definable is undecidable.
+             In the &lambda;-calculus with intersection types based on countably many atoms, the following is proved by Urzyczyn.
+             <i>(ii)</i> It is undecidable whether a type is inhabited.
+             Both statements are major results presented in Barendregt-Dekkers-Statman'12.
+             We show that <i>(i)</i> and <i>(ii)</i> follow from each other in a natural way, by interpreting intersection types as continuous functions 
+             logically related to elements of <i>F</i>.
+             From this, and a result by Joly on &lambda;-definability, we get that Urzyczyn's theorem already holds for intersection types with at most two atoms.
+	   </p>
+	   </div>
+    </li>
+    <li><b>Constructing Differential Categories and Deconstructing Categories of Games.</b><br> J. Laird, G. Manzonetto and G. McCusker. International Conference on Automata, Languages and Programming - Part II (ICALP 2011), Volume 6756 of LNCS, pages 186-197, 2011. <a href="javascript:toggle('lmm11');">(abstract)</a>&nbsp;<a href="./papers/lmm11.pdf">(pdf)</a>&nbsp;<a href="./papers/lmm11.ps">(ps)</a>&nbsp;<a href="bibtex.html#LairdMM11">(bib)</a>.
+	   <div id="lmm11" class="hidden">
+	   <p>
+	     We present an abstract construction for building differential categories useful to model resource sensitive calculi, and we apply it to
+	     categories of games. In one instance, we recover a category previously used to give a fully abstract model of a nondeterministic
+	     imperative language. The construction exposes the differential structure already present in this model. A second instance corresponds to a
+	     new Cartesian differential category of games. We give a model of a Resource PCF in this category and show that it enjoys the finite
+	     definability property. Comparison with a relational semantics reveals that the latter also possesses this property and is fully abstract.
+	   </p>
+	   </div>
+    </li>    
+    <li><b>B&ouml;hm's Theorem for Resource Lambda Calculus through Taylor Expansion.</b><br> G. Manzonetto and M. Pagani. Typed Lambda Calculi and Applications (TLCA'11), Volume 6690 of LNCS, pages 153-168, 2011. <a href="javascript:toggle('bohm');">(abstract)</a>&nbsp;<a href="./papers/mp11.pdf">(pdf)</a>&nbsp;<a href="./papers/mp11.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoP11">(bib)</a>
+	   <div id="bohm" class="hidden">
+	   <p>
+	     We study the resource calculus, an extension of the &lambda;-calculus allowing to model resource consumption. We achieve an internal
+	     separation result, in analogy with B&ouml;hm's theorem of &lambda;-calculus. We define an equivalence relation on the terms, which we prove to
+	     be the maximal non-trivial congruence on normalizable terms respecting &beta;-reduction. It is significant that this equivalence extends
+	     the usual &eta;-equivalence and is related to Ehrhard's Taylor expansion - a translation mapping terms into series of finite resources.
+	   </p>
+	   </div>
+    </li>    
+    <li><b>Full Abstraction for Resource Calculus with Tests.</b><br> A. Bucciarelli, A. Carraro, T. Ehrhard and G. Manzonetto.
+           In M. Bezem, editor, Computer Science Logic (CSL'11), volume 12 of Leibniz International Proceedings in Informatics (LIPIcs), pages 97-111,
+           Dagstuhl, Germany, 2011. <a href="javascript:toggle('full-res-tests');">(abstract)</a>&nbsp;<a href="./papers/bcem11.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#BucciarelliCEM11">(bib)</a>
+    	   <div id="full-res-tests" class="hidden">
+	   <p>
+	     We study the semantics of a resource sensitive extension of the &lambda;-calculus in a canonical reflexive object of a category of sets and
+	     relations, a relational version of the original Scott D<sub>&infin;</sub> model of the pure &lambda;-calculus. This calculus is related to
+	     Boudol's resource calculus and is derived from Ehrhard and Regnier's differential extension of Linear Logic and of the &lambda;-calculus.
+	     We extend it with new constructions, to be understood as implementing a very simple exception mechanism, and with a 'must' parallel
+	     composition.
+	     These new operations allow to associate a context of this calculus with any point of the model and to prove full abstraction for the
+	     finite sub-calculus where ordinary &lambda;-calculus application is not allowed. The result is then extended to the full calculus by means
+	     of a Taylor Expansion formula.
+	   </p>
+	   </div>
+    </li>
+    <li><b>Harnessing ML<sup>F</sup> with the Power of System F.</b><br>
+    G. Manzonetto and P. Tranquilli. International Symposium on Mathematical Foundations of Computer Science (MFCS'10), Volume 6281 of LNCS, pages 525-536, 2010. <a href="javascript:toggle('mfcs10');">(abstract)</a>&nbsp;<a href="./papers/mfcs10.pdf">(pdf)</a>&nbsp;<a href="./papers/mfcs10.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoT10">(bib)</a>
+           <div id="mfcs10" class="hidden">
+	   <p>
+	      We provide a strong normalization result for ML<sup>F</sup>, a type system generalizing ML with first-class polymorphism as in system F.
+	      The proof is achieved by translating ML<sup>F</sup> into a calculus of coercions, and showing that this calculus is just a decorated version of
+	      system F.
+	   </p>
+	   </div>
+    </li> 
+    <li><b>Categorical Models for Simply Typed Resource Calculi.</b><br> 
+	A. Bucciarelli, T. Ehrhard and G. Manzonetto.
+	26th Conference on the Mathematical Foundations of Programming Semantics (MFPS'10),
+        Volume 265 of Electronic Notes in Theoretical Computer Science, Pages 213-230, 2010. <a href="javascript:toggle('mfps10');">(abstract)</a>&nbsp;<a href="./papers/mfps10.pdf">(pdf)</a>&nbsp;<a href="./papers/mfps10.ps">(ps)</a>&nbsp;<a href="bibtex.html#BucciarelliEM10">(bib)</a>
+           <div id="mfps10" class="hidden">
+	   <p>
+	     We introduce the notion of differential &lambda;-category as an extension of Blute-Cockett-Seely's differential Cartesian categories.
+	     We prove that differential &lambda;-categories can be used to model the simply typed versions of: (i) the differential &lambda;-calculus,
+	     a &lambda;-calculus extended with a syntactic derivative operator; (ii) the resource calculus, a non-lazy axiomatisation of Boudol's
+	     &lambda;-calculus with multiplicities. Finally, we provide two concrete examples of differential &lambda;-categories, namely, the category
+	     MRel of sets and relations, and the category MFin of finiteness spaces and finitary relations.
+	   </p>
+	   </div>
+    </li> 
+    <li><b>A General Class of Models of <i>H*</i>.</b><br> 
+	G. Manzonetto.
+	34th International Symposium on Mathematical Foundations of Computer Science (MFCS'09), volume 5734 of LNCS, pages 574-586, 2009. <a href="javascript:toggle('mfcs09');">(abstract)</a>&nbsp;<a href="./papers/mfcs09.pdf">(pdf)</a>&nbsp;<a href="./papers/mfcs09.ps">(ps)</a>&nbsp;<a href="bibtex.html#Manzonetto09">(bib)</a>
+           <div id="mfcs09" class="hidden">
+	   <p>
+	     We recently introduced an extensional model of the pure &lambda;-calculus living in a cartesian closed category of sets and relations.
+	     In this paper, we provide sufficient conditions for categorical models living in arbitrary cpo-enriched cartesian closed categories to
+	     have <i>H*</i>, the maximal consistent sensible &lambda;-theory, as their equational theory. Finally, we prove that our relational model fulfils
+	     these conditions.
+	   </p>
+	   </div>
+    </li> 
+    <li><b>Lattices of Equational Theories as Church Algebras.</b><br> 
+	G. Manzonetto and A. Salibra.
+	In C. Drossos, P. Peppas, and C. Tsinakis, eds, Proc. 7th Panhellenic Logic Symposium, pages 117-121. Patras University Press, 2009. <a href="javascript:toggle('ms09');">(abstract)</a>&nbsp;<a href="./papers/ms09.pdf">(pdf)</a>&nbsp;<a href="./papers/ms09.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoS09">(bib)</a>
+           <div id="ms09" class="hidden">
+	   <p>
+	     We introduce the class of Church algebras, which is general enough to compass all Boolean algebras, Heyting algebras and rings with unit.
+	     Using a new equational characterization of central elements, we prove that Church algebras satisfy a Stone representation theorem. We show
+	     that every lattice of equational theories is isomorphic to the congruence lattice of a suitable Church algebra, and we use this property
+	     to prove a meta-Stone representation theorem which is applicable to all varieties of algebras.
+	   </p>
+	   </div>
+    </li> 
+	<li><b>A Relational Model of a Parallel and Non-Deterministic &lambda;-calculus.</b><br> 
+	A. Bucciarelli, T. Ehrhard and G. Manzonetto. Symposium on Logical Foundations of Computer Science (LFCS'09), volume 5407 of LNCS, pages 107-121, 2009. <a href="javascript:toggle('lfcs09');">(abstract)</a>&nbsp;<a href="./papers/lfcs09.pdf">(pdf)</a>&nbsp;<a href="./papers/lfcs09.ps">(ps)</a>&nbsp;<a href="bibtex.html#BucciarelliEM09">(bib)</a>
+           <div id="lfcs09" class="hidden">
+	   <p>
+              We recently introduced an extensional model of the pure &lambda;-calculus living in a canonical cartesian closed category of sets and
+	     relations. In the present paper, we study the non-deterministic features of this model. Unlike most traditional approaches, our way of
+	     interpreting non-determinism does not require any additional powerdomain construction: we show that our model provides a straightforward
+	     semantics of non-determinism (may convergence) by means of unions of interpretations as well as of parallelism (must convergence) by means
+	     of a binary, non-idempotent, operation available on the model, which is related to the mix rule of Linear Logic. More precisely, we
+	     introduce a &lambda;-calculus extended with non-deterministic choice and parallel composition, and we define its operational semantics
+	     (based on the may and must intuitions underlying our two additional operations). We describe the interpretation of this calculus in our
+	     model and show that this interpretation is sensible with respect to our operational semantics: a term converges if, and only if, it has a
+	     non-empty interpretation.
+	   </p>
+	   </div>
+     </li>
+     <li><b>From Lambda Calculus to Universal Algebra and Back.</b><br> 
+	G. Manzonetto and A. Salibra. 33rd International Symposium on Mathematical Foundations of Computer Science (MFCS'08),
+	volume 5162 of LNCS, pages 479-490, 2008. <a href="javascript:toggle('lfcs09');">(abstract)</a>&nbsp;<a href="./papers/mfcs08.pdf">(pdf)</a>&nbsp;<a href="./papers/mfcs08.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoS08">(bib)</a>
+           <div id="mfcs08" class="hidden">
+	   <p>
+             We generalize to universal algebra concepts originating from &lambda;-calculus and programming to prove a new result on the lattice
+             &lambda;T of &lambda;-theories, and a general theorem of pure universal algebra which can be seen as a meta version of the Stone
+             Representation Theorem. 
+             In this paper we introduce the class of <i>Church algebras</i> (which includes all Boolean algebras, combinatory algebras, rings with unit
+	     and  the term algebras of all &lambda;-theories) to model the "if-then-else" instruction of programming. The interest of Church algebras
+	     is that each has a Boolean algebra of central elements, which play the role of the idempotent elements in rings.
+	     Central elements are the key tool to represent any Church algebra as a weak Boolean product of indecomposable Church algebras and to prove
+	     the meta representation theorem mentioned above. 
+             We generalize the notion of easy &lambda;-term of lambda calculus to prove that any Church algebra with an 'easy set' of cardinality
+	     <i>n</i> admits (at the top) a lattice interval of congruences  isomorphic to the free Boolean algebra with <i>n</i> generators. This
+	     theorem has the following consequence for the lattice of &lambda;-theories: for every recursively enumerable &lambda;-theory &phi; and
+	     each <i>n</i>, there is a &lambda;-theory &phi;<sub>n</sub> &ge; &phi; such that {&psi; : &psi; &ge; &phi;<sub>n</sub>}  'is' the
+	     Boolean lattice with 2<sup>n</sup> elements. 
+	   </p>
+	   </div>
+    </li>
+    <li><b>Not Enough Points is Enough.</b><br> 
+	    A. Bucciarelli, T. Ehrhard and G. Manzonetto. 16th EACSL Annual Conference on Computer Science and Logic (CSL'07), volume 4646 of LNCS, pages 268-282, 2007. <a href="javascript:toggle('bem2007');">(abstract)</a>&nbsp;<a href = "./papers/bem2007.pdf">(pdf)</a>&nbsp;<a href = "./papers/bem2007.ps">(ps)</a>&nbsp;<a href="bibtex.html#BucciarelliEM07">(bib)</a>
+           <div id="bem2007" class="hidden">
+	   <p>
+	     Models of the untyped &lambda;-calculus may be defined either as applicative structures satisfying a bunch of first-order axioms
+	     (&lambda;-models), or as reflexive objects in cartesian closed categories (categorical models). In this paper we show that any categorical
+	     model of &lambda;-calculus can be presented as a &lambda;-model, even when the underlying category does not have enough points.
+	     We provide an example of an extensional model of &lambda;-calculus in a category of sets and relations which has not enough points.
+	     Finally, we present some of its algebraic properties which make it suitable for dealing with non-deterministic extensions of
+	     &lambda;-calculus.
+	   </p>
+	   </div>
+    </li>    
+    <li><b>Lambda Theories of Effective Lambda Models.</b><br>
+	    C. Berline, G. Manzonetto and A. Salibra. 16th EACSL Annual Conference on Computer Science and Logic (CSL'07), volume 4646 of LNCS, pages 298-312, 2007. <a href="javascript:toggle('bms2');">(abstract)</a>&nbsp;<a href = "./papers/bms2.pdf">(pdf)</a>&nbsp;<a href = "./papers/bms2.ps">(ps)</a>&nbsp;<a href="bibtex.html#BerlineMS07">(bib)</a>
+           <div id="bms2" class="hidden">
+	   <p>
+	     A longstanding open problem is whether there exists a non-syntactical model of the untyped &lambda;-calculus whose theory is exactly the
+	     least &lambda;-theory &lambda;&beta;. In this paper we investigate the more general question of whether the equational/order theory of a
+	     model of the untyped &lambda;-calculus can be recursively enumerable (r.e. for brevity). We introduce a notion of effective model of
+	     &lambda;-calculus, which covers in particular all the models individually introduced in the literature. We prove that the order theory of
+	     an effective model is never r.e.; from this it follows that its equational theory cannot be &lambda;&beta;, &lambda;&beta;&eta;. We then
+	     show that no effective model living in the stable or strongly stable semantics has an r.e. equational theory. Concerning Scott's
+	     semantics, we investigate the class of graph models and prove that no order theory of a graph model can be r.e., and that there exists an
+	     effective graph model whose equational/order theory is the minimum one. Finally, we show that the class of graph models enjoys a kind of
+	     downwards Lowenheim-Skolem theorem.
+	   </p>
+	   </div>
+    </li>    
+	<li><b>Boolean Algebras for Lambda Calculus.</b><br> 
+	    G. Manzonetto and A. Salibra. 21st Annual IEEE Symposium on Logic in Computer Science (LICS'06), pages 139-148, Seattle, Washington, Usa, August 12th-15th, 2006. <a href="javascript:toggle('lics06');">(abstract)</a>&nbsp;<a href = "./papers/manzosali2006.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#ManzonettoS06">(bib)</a>
+           <div id="lics06" class="hidden">
+	   <p>
+	     In this paper we show that the Stone representation theorem for Boolean algebras can be generalized to combinatory algebras. In every
+	     combinatory algebra there is a Boolean algebra of central elements (playing the role of idempotent elements in rings), whose operations
+	     are defined by suitable combinators. Central elements are used to represent any combinatory algebra as a Boolean product of directly
+	     indecomposable combinatory algebras (i.e., algebras which cannot be decomposed as the Cartesian product of two other nontrivial
+	     algebras). Central elements are also used to provide applications of the representation theorem to lambda calculus. We show that the
+	     indecomposable semantics (i.e., the semantics of lambda calculus given in terms of models of lambda calculus, which are directly
+	     indecomposable as combinatory algebras) includes the continuous, stable and strongly stable semantics, and the term models of all
+	     semisensible lambda theories. In one of the main results of the paper we show that the indecomposable semantics is equationally
+	     incomplete, and this incompleteness is as wide as possible: for every recursively enumerable lambda theory <i>T</i>, there is a continuum
+	     of lambda theories including <i>T</i> which are omitted by the indecomposable semantics.
+	   </p>
+	   </div>
+    </li>
+  </ul>
+
+<h3>Workshop Papers</h3>
+  <ul>
+    <li><b>The Bang Calculus and the Two Girard's Translations.</b><br> 
+	    G. Guerrieri and G. Manzonetto. <a href="javascript:toggle('2Girry');">(abstract)</a>&nbsp;<a href="./papers/GG18.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#GuerrieriM18w">(bib)</a>
+           <div id="2Girry" class="hidden">
+	   <p>
+	     We study the two Girard's translations of intuitionistic implication into linear logic by exploiting the bang calculus, a paradigmatic
+	     functional language with an explicit box-operator that allows both the call-by-name and call-by value &lambda;-calculi to be encoded in.
+	     We investigate how the bang calculus subsumes both call-by-name and call-by-value &lambda;-calculi from a syntactic and a semantic viewpoint.
+    	   </p>
+	   </div>
+    </li>
+    <li><b>A Calculus of Coercions Proving the Strong Normalization of ML<sup>F</sup>.</b><br> 
+	    G. Manzonetto and P. Tranquilli. 5th International Workshop on Higher-Order Rewriting (HOR'10), pages 17-21. <a href="javascript:toggle('hormlf');">(abstract)</a>&nbsp;<a href="./papers/hormlf.pdf">(pdf)</a>&nbsp;<a href="./papers/hormlf.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoT10w">(bib)</a>
+           <div id="hormlf" class="hidden">
+	   <p>
+	     We provide a strong normalization result for ML<sup>F</sup>, a type system generalizing ML with first-class polymorphism as in system F.
+	     The proof is achieved by translating ML<sup>F</sup> into a calculus of coercions, and showing that this calculus is just a decorated
+	     version of system F. Simulation results then entail strong normalization from the same property of system F.
+    	   </p>
+	   </div>
+    </li>
+    <li><b>Semantic and Syntactic Characterizations of Morris's equivalence.</b><br> 
+	    G. Manzonetto and D. Ruoppolo. Domains XI, September 8-10, 2014. <a href="javascript:toggle('domains');">(abstract)</a>&nbsp;<a href="./papers/DomainsXI.pdf">(pdf)</a>&nbsp;<a href="./papers/DomainsXI.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoR14w">(bib)</a>
+           <div id="domains" class="hidden">
+	   <p>
+	     We describe preliminary investigation on Morris's original observational equivalence H<sup>+</sup>.</p>
+	   </div>
+    </li>    
+    <li><b>On Unification of lambda terms.</b><br> 
+	   G. Manzonetto and A. Polonsky. Proc. of TYPES, 2016. <a href="javascript:toggle('unification');">(abstract)</a>&nbsp;<a href="./papers/unilc.pdf">(pdf)</a>&nbsp;<a href="./papers/unilc.ps">(ps)</a>&nbsp;<a href="bibtex.html#ManzonettoP16w">(bib)</a>
+           <div id="unification" class="hidden">
+	   <p>
+	     We present an algorithm for unifying untyped lambda terms.
+    	   </p>
+	   </div>
+    </li>
+  </ul>
+
+<h3>Invited Papers</h3>
+  <ul>
+    <li><b>Turing's Contributions to Lambda Calculus.</b><br> 
+	G. Manzonetto and H.P. Barendregt. In Collection <a href="http://www.mathcomp.leeds.ac.uk/turing2012/give-page.php?300" target="_blank">"Alan Turing - His Work and Impact"</a> for the Centenary Celebration of the Life and Work of Alan Turing, pp. 139-143, 2013. <a href="./papers/BareM13.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#BarendregtM13">(bib)</a>
+    </li>
+    <li><b>The Imperative and Functional Programming Paradigm.</b><br> 
+	G. Manzonetto, H.P. Barendregt and Rinus Plasmeijer. In Collection <a href="http://www.mathcomp.leeds.ac.uk/turing2012/give-page.php?300" target="_blank">"Alan Turing - His Work and Impact"</a> for the Centenary Celebration of the Life and Work of Alan Turing</a>, pp. 121-126, 2013. <a href="./papers/BareMP13.pdf">(pdf)</a>&nbsp;<a href="bibtex.html#BarendregtMP13">(bib)</a>
+    </li>    
+  </ul>
+
+<h3>Thesis</h3>
+  <ul>
+    <li><b>Models and Theories of Lambda Calculus.</b><br> 
+	   G. Manzonetto. January 2008. <a href="./ManzonettoPhdThesis.pdf">(Thesis pdf)</a>&nbsp;<a href="./ManzonettoPhdThesis.ps">(Thesis ps)</a>&nbsp;<a href="bibtex.html#PhD">(bib)</a>.<br><br>
+      <ul>
+        <li> On December 2008 this thesis was awarded the prize for the Best French Thesis in Computer Science (<a href="http://www.fondation.eads.net/fr/node/176" target="_blank">EADS Prix de la Meilleure Th&egrave;se 2008</a>).
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><b>Lambda Calculus, Linear Logic and Symbolic Computation.</b><br>
+           G. Manzonetto. March 2017. <a href="./HdRThesis.pdf">(Thesis pdf)</a>&nbsp;<a href="bibtex.html#HdR">(bib)</a>.
+    </li>
+  </ul>
+  
+  
+<h3>Technical Reports</h3>
+  <ul>
+  <li><b>Models and Theories of Lambda Calculus.</b><br>
+	    G. Manzonetto. <a href = "http://hal.inria.fr/inria-00380183/en/">Technical Report INRIA. March 2009 (pdf)</a> (Description of Manzonetto's PhD thesis in 20 pages).</li>    
+    <li><b>The Visser Topology of Lambda Calculus.</b><br>
+	    C. Berline, G. Manzonetto and A. Salibra. <a href = "./papers/bms.pdf">Preprint January 2007 (pdf)</a> (preliminary version of 'Lambda theories of effective lambda models').</li>    
+  </ul>
+
+<h3>Posters</h3>
+  <ul>
+    <li><b>A Refutation of Sall&eacute;'s Longstanding Conjecture.</b><br>
+           F. Breuvart, G. Manzonetto and D. Ruoppolo. <a href="./papers/poster-salle.pdf" target="_blank">Poster (pdf)</a>.
+    </li>    
+    <li><b>CALMOC: Categorical and Algebraic Models of Computation.</b><br>
+           H. Barendregt, M. Gehrke, H. Geuvers, G. Manzonetto and J. Rutten. Poster presented at SIREN/NL 2010. <a href="./papers/poster-calmoc.pdf" target="_blank">Poster (pdf)</a>.
+    </li>
+  </ul>
+
+<h3>Research Projects</h3>
+  <ul>
+    <li><a href="http://lipn.univ-paris13.fr/~pagani/pmwiki/pmwiki.php/Coquas/Coquas" target="_blank">COQUAS</a>, Computing with Quantitative Semantics.</li>            
+    <li><a href="http://www-lipn.univ-paris13.fr/complice/" target="_blank">COMPLICE</a>, Implicit Computational Complexity, Concurrency and Extraction.</li>        
+    <li><a href="http://www.cs.ru.nl/calmoc/" target="_blank">CALMOC</a>, Categorical and Algebraic Models of Computation.</li>    
+    <li><a href="http://www-lipn.univ-paris13.fr/~mazza/Collodi/" target="_blank">COLLODI</a>, Complexity and concurrency through ludics and differential linear logic.</li>
+    <li><a href="http://moscova.inria.fr/~zappa/projects/parsec/parsec.html" target="_blank">PARSEC</a>, Parallelism and Security.</li>
+    <li><a href="http://www.cs.unibo.it/~martini/CONCERTO/" target="_blank">CONCERTO</a>, CONtrol and CERTification of Resources Usage.</li>
+    <li><a href="http://follia.di.unito.it/" target="_blank">FOLLIA</a>, Logical foundations of abstract programming languages.</li>    
+  </ul>
+
+<h3>Video Talks</h3>
+  <ul>
+	<li>24/01/20 - <a href="https://youtu.be/qBQlCgXvRNk" target="_blank">Taylor Subsumes Scott, Berry, Kahn and Plotkin.</a> @ POPL 2020.</li>
+  </ul>
+
+
+<h3>Software</h3>
+  <ul>
+	<li><a href="./~camleye/" target="_blank">Camleye</a>: A functional implementation of a perceptual grouping solver</li>
+  </ul>
+
+
+<h3>Reviewer Activities</h3>
+  <ul>
+    <li>Journals:
+     <a href = "http://www.elsevier.com/locate/tcs" target="_blank">TCS</a>,
+     <a href = "http://journals.cambridge.org/action/displayJournal?jid=JFP" target="_blank">JFP</a>,
+     <a href = "http://www.nd.edu/~ndjfl/" target="_blank">NDJFL</a>,
+     <a href = "http://www.lmcs-online.org/" target="_blank">LMCS</a>,
+     <a href = "http://www.aslonline.org/journals-journal.html" target="_blank">JSL</a>.
+     <a href = "http://www.journals.elsevier.com/information-processing-letters/" target="_blank">IPL</a>,
+     <a href = "http://journals.cambridge.org/action/displayJournal?jid=MSC" target="_blank">MSCS</a>.
+    </li>
+    <li>Conferences:
+     <a href = "http://www.dsi.unive.it/ppdp2006/" target="_blank">PPDP'06</a>,
+     <a href = "http://www.inf.u-szeged.hu/~csl06/" target="_blank">CSL'06</a>,
+     <a href = "http://www.di.unito.it/~lambda/cdr60/" target="_blank">CDR60</a>,
+     <a href = "http://csl2008.cs.unibo.it/" target="_blank">CSL'08</a>,
+     <a href = "http://www.mat.ufmg.br/lsfa2008" target="_blank">LSFA'08</a>,
+     <a href = "http://fossacs09.soe.ucsc.edu/" target="_blank">FOSSACS'09</a>,
+     <a href = "http://research.microsoft.com/en-us/um/people/adg/esop2010/" target="_blank">ESOP2010</a>,
+     <a href = "http://icalp10.inria.fr/" target="_blank">ICALP'10</a>,
+     <a href = "http://www.risc.uni-linz.ac.at/about/conferences/ppdp2010/" target="_blank">PPDP'10</a>,
+     <a href = "http://www.etaps.org/2011/fossacs" target="_blank">FOSSACS'11</a>,
+     <a href = "http://www.rdp2011.uns.ac.rs/rta/" target="_blank">RTA'11</a>,
+     <a href = "http://icalp11.inf.ethz.ch/" target="_blank">ICALP'11</a>,
+     <a href = "http://latin2012.cs.iastate.edu/" target="_blank">LATIN'12</a>,
+     <a href = "http://www.kurims.kyoto-u.ac.jp/tlca2013/" target="_blank">TLCA'13</a>,    
+     <a href = "http://lii.rwth-aachen.de/lics/lics13/" target="_blank">LICS'13</a>,
+     <a href = "http://lics.siglog.org/csl-lics14/" target="_blank">CSL-LICS2014</a>,
+     <a href = "https://www.etaps.org/index.php/2017/fossacs" target="_blank">FOSSACS'17</a>,
+         <a href = "https://lics.siglog.org/lics17/" target="_blank">LICS'17</a>,
+    <a href = "https://www.cs.ox.ac.uk/conferences/fscd2017/" target="_blank">FSCD'17</a>,
+    <a href = "https://lics.siglog.org/lics18/" target="_blank">LICS'18</a>,
+    <a href = "https://lics.siglog.org/lics19/" target="_blank">LICS'19</a>.    
+  </li>
+  <li>Workshops:
+       <a href = "http://www.floc-conference.org/HOR-home.html" target="_blank">HOR'10</a>,
+       <a href="http://wollic.org/wollic2011/" target="_blank">WOLLIC'11</a>.
+  </li>
+  </ul>
+
+<h3>People I'm researching with</h3>
+  <table cellspacing="3" cellpadding="2" border="0">
+    <tr>
+      <td align="right" width="25%">Davide Barbarossa</td>
+      <td>Taylor expansion for the &lambda;&mu;-calculus;</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Flavien Breuvart</td>
+      <td>Non-standard observational equivalences;</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Claudia Faggian</td>
+      <td>Abstract notions of B&ouml;hm trees;</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Giulio Guerrieri</td>
+      <td>Abstract notions of B&ouml;hm trees;</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Stefano Guerrini</td>
+      <td>Taylor expansion for the &lambda;&mu;-calculus;</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Benedetto Intrigila</td>
+      <td>Computability theory</td>
+    </tr>
+    <tr>
+      <td align="right" width="25%">Emma Kerinec</td>
+      <td>Non-standard observational equivalences; Call-By-Value Lambda Calculus;</td>
+    </tr>    
+    <tr>
+      <td align="right" width="25%">Simona Ronchi della Rocca</td>
+      <td>Call-By-Value Lambda Calculus.</td>
+    </tr>
+  </table>
+
+<br>
+  <table cellspacing="3" cellpadding="2" border="0" align="center">
+    <tr>
+      <td align="center"><br><h3><a href="index.html">Home</a></h3></td>
+      <td align="center"><br><h3><a href="teaching.html">Teaching</a></h3></td>
+      <td align="center"><br><h3><a href="curriculum.html">Curriculum</a></h3></td>
+	  <td align="center"><br><h3><a href="spare.html">Spare Time</a></h3></td>
+    </tr>
+  </table>
+
+<p align="center">
+<i>
+A mathematician is a machine for turning coffee into theorems.<br>
+</i>
+</p>   
+</body>
+</html>

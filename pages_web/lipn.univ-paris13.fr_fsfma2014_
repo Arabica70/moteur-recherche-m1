@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<!--************************************************************
+ * 
+ * HTML Code for conference Web sites
+ * 
+ * Author: Etienne ANDRE
+ * 
+ * LIPN, Universite Paris 13, Sorbonne Paris Cite, France
+ * http://lipn.univ-paris13.fr/~andre/
+ * 
+ * Created      : 2013/02/06
+ * Last modified: 2013/12/01
+ * 
+ * This CSS and HTML code can be reused and modified following the terms of the license
+ * "Creative Commons Attribution-NonCommercial 3.0 Unported" (CC BY-NC 3.0)
+ * https://creativecommons.org/licenses/by-nc/3.0/
+ *
+ * Note: if you copy this code, please REMOVE THE VISITOR TRACKER
+ * (at the bottom of the page)
+ *
+************************************************************-->
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>FSFMA 2014: 2nd French Singaporean Workshop on Formal Methods and Applications</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="FSFMA 2014 (2nd French Singaporean Workshop on Formal Methods and Applications) will take place in Singapore in May 2014 as a satellite of the Formal Methods Conference" />
+	<meta name="keywords" content="FSFMA, workshop, conference, call for papers, FM, Singapore, 2014" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="FSFMA.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<h1><a href="./">FSFMA 2014</a></h1>
+		<h2>2nd French Singaporean Workshop on Formal Methods and Applications</h2>
+		<h3>13th May 2014, Singapore</h3>
+		<img src="lamp.jpg" width="1024" alt="Singapore" title="Singapore – Photo: Singapore lamp (Étienne André) – Licence CC-BY-NC-SA 3.0" />
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="committees.php">Committees</a></li>
+			<li><a href="invited-speakers.php">Invited Speakers</a></li>
+			<li><a href="program.php">Program</a></li>
+			<li><a href="submission.php">Submission</a></li>
+			<li><a href="pictures.php">Pictures</a></li>
+			<li><a href="past.php">Past editions</a></li>
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>Important dates</h3>
+		<p><strong>Submission (abstract)</strong><br /><span class="barre">March 2nd</span> March 23rd, 2014 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Submission (paper)</strong><br /><span class="barre">March 9th</span> March 23rd, 2014 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Notification	</strong><br /><span class="barre">April 15th</span> April 18th, 2014</p>
+		
+		<p><strong>Workshop</strong><br />May 13th, 2014</p>
+		
+		<p><strong>Post-proceedings</strong><br />June 15th, 2014</p>
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+			<h2>Aim</h2>
+			<p>The 2nd French Singaporean Workshop in Formal Methods and Applications (FSFMA) aims at sharing research interests and launching collaborations in the area of formal methods and their applications.</p>
+			
+			<p>The scientific subject of the workshop covers (but does not limit to) areas such as formal specification, model checking, verification, program analysis/transformation, software engineering, and applications in major areas of computer science, including aeronautics and aerospace.</p>
+			
+			<p>The workshop will bring together researchers and industry R&amp;D experts from all countries together to exchange their knowledge, discuss their research findings, and explore potential collaborations.</p>
+			
+			<p>Round tables will focus on French Singaporean funding and cooperation opportunities.</p>
+			
+			<p>Finally, a PhD session will allow Master and PhD students to present their work.</p>
+
+			<p>The workshop will take place on 13th of May 2014, in Singapore as a satellite of <a href="http://www.comp.nus.edu.sg/~pat/FM2014/">FM 2014</a>.</p>
+
+			
+			
+		<h2>Topics of the Workshop</h2>
+			<p>The main theme of the workshop is to establish links between academic and industry scientists interested in methods and techniques for constructing reliable systems using formal methods.
+			The scientific topics of the workshop include, but are not limited to:</p>
+			
+		<ul>
+			<li>concurrent and distributed systems</li>
+			<li>formal specification and semantics</li>
+			<li>infinite-state and parameterized systems</li>
+			<li>model checking algorithms</li>
+			<li>SAT and SMT solvers</li>
+			<li>security and privacy</li>
+			<li>software engineering and formal methods</li>
+			<li>specification and verification (hardware and embedded systems, probabilistic and real-time systems, etc.)</li>
+			<li>case studies and experience reports on the use of formal methods</li>
+			<li>tools and industrial applications</li>
+			<li>applications in aeronautics and aerospace</li>
+		</ul>
+			
+
+		<p>Two kinds of papers are welcome: regular papers and PhD papers (for the doctoral session).
+			The content of papers should be original and not submitted elsewhere.
+			All papers will be assigned to at least three reviews.</p>
+
+			<p>The page limit is 12 pages (regular paper) and 6 pages (PhD paper) in the <a href="http://style.eptcs.org/">EPTCS format</a>.
+			Accepted papers in both categories will be published by the Electronic Proceedings in Theoretical Computer Science (<a href="http://about.eptcs.org/">EPTCS</a>), a free open-access and online electronic proceedings series, referenced in major databases such as <a href="http://www.informatik.uni-trier.de/~ley/db/">DBLP</a>.
+			The proceedings are published under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons CC-BY license</a>.
+			Hereby, the authors retain their copyright.</p>
+			
+		
+		<p>Additional remarks:</p>
+		
+		<ul>
+			<li>There are no restrictions on authors’ citizenships and working countries.</li>
+			<li>For PhD papers, at least one author must be Master or PhD student.</li>
+		</ul>
+
+		
+		<h2>Venue</h2>
+		
+		<p>FSFMA 2014 is a satellite of the <a href="http://www.comp.nus.edu.sg/~pat/FM2014/">FM 2014</a> conference taking place in Singapore.</p>
+
+		
+	<hr class="float_correction" />
+	</div> <!-- end main -->
+ 
+ 
+<!-- 		<div style="text-align:center; margin-top:50px">
+			
+		
+		</div>-->
+		
+		
+ 
+	<footer>
+	
+			<p>
+				<a href="http://lipn.univ-paris13.fr/"><img src="images/lipn.jpg" height="75" alt="Laboratoire d’Informatique de Paris Nord, Sorbonne Paris Cité, Université Paris 13, France" title="Laboratoire d’Informatique de Paris Nord, Sorbonne Paris Cité, Université Paris 13, France" style="margin-right:25px" /></a>
+			</p>
+	
+		<p>Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC-SA 3.0)</p>
+		<p>This page makes use of
+		<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+			and
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+
+<!-- Begin Visitor Tracking Code
+ (if you copy this design PLEASE REMOVE THIS HTML CODE PORTION)
+-->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 9);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=9" style="border:0" alt="" /></p></noscript>
+<!-- End Visitor Tracking Code -->
+
+
+</body>
+</html>

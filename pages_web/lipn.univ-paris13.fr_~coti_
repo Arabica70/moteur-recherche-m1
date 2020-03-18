@@ -1,0 +1,532 @@
+<!DOCTYPE HTML>
+
+<!-- PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="verify-v1" content="GNdG0Mo6nTiIfAwRvJA/ESU5NtZXysIoAg0Hq5v2y3M=" />
+    <meta name="description" content="ma page web" />
+    <meta name="keywords" lang="fr" content="CV, camille coti, mpi,
+					     tolérance aux fautes,
+					     openmpi, open-mpi,
+					     qoscosgrid, tp mpi,
+					     grille, cluster, grappe,
+					     qcg ompi" /> 
+    <meta name="keywords" lang="en" content="resume, camille coti, mpi, fault
+					     tolerance, openmpi,
+					     open-mpi, qoscosgrid, mpi
+					     lab, grid, grid
+					     computing, cluster,
+					     qcg ompi" /> 
+    <meta name="google-site-verification"
+          content="9DD3B1Rvkw4usEElWZbrnkLROa_j9J-nzZ4nIV66d3E" />
+    <title>Camille Coti</title>
+    <link rel="stylesheet" type="text/css" href="styles/style_clair.css"/>
+
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+  <script type="text/javascript">
+    function showHideDiv( obj )   {
+        var divstyle = new String();
+        divstyle = document.getElementById(obj).style.visibility;
+        if(divstyle.toLowerCase()=="visible" || divstyle == "") {
+	  document.getElementById(obj).style.visibility = "hidden";
+            document.getElementById(obj).style.display = "none";
+        }
+        else {
+	  document.getElementById(obj).style.visibility = "visible";
+            document.getElementById(obj).style.display = "block";
+     	}
+    }
+    function replaceContent() { 
+        $url="randomimage.php";
+        $('#DisplayDiv').load( $url );
+        return false;
+    }
+
+  </script>
+
+
+  </head>
+  
+  <body>
+
+   <div class="marge" id="nav"><div class="titre_marge">Links</div><ul><li>Home <a href="http://www-lipn.univ-paris13.fr/~coti/index_fr.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en fran�ais" /></a> / <a href="http://www-lipn.univ-paris13.fr/~coti/index.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /></a>
+</li><li><a href="http://www.github.com/coti">My GitHub homepage</a></li><li><a href="http://www.open-mpi.org">Open MPI</a></li><li><a href="http://mpich-v.lri.fr">MPICH-V</a></li><li><a href="https://bountyfactory.io">Bug Bounty</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/QosCosGrid">QosCosGrid</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/doc">Some documents</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/cours">Teaching</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><style>
+  .strava-badge- { display: inline-block; height: 32px; }
+  .strava-badge- img { visibility: hidden; height: 32px; }
+  .strava-badge-:hover { background-position: 0 -47px; }
+  .strava-badge-follow { height: 32px; width: 32px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+</style>
+<a href="http://strava.com/athletes/2676650/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" /></a><a href="http://www.strava.com/athletes/2676650">My Strava profile</a></li></ul></div>
+   <div class="infos">
+<table class="photo" cellspacing=0 cellpadding=0> <tr> <td>
+   <a href="images/chine.png">
+<img
+	  src="images/chine_sm.png" height="130" alt="Camille's
+	  picture coming soon!" />
+</a>
+    </td> </tr> <tr><td class="caption" style="height:15px;">
+     <p><center><a href="disclaimerpic.php">Disclaimer</a></center></p>
+</td> </tr> </table>
+<!--
+     <img class="photo" src="images/portrait.png" height="150" alt="Camille's
+	  picture coming soon!" />
+-->
+<!--     <a href="images/chine.png"><img class="photo" src="images/chine_sm.png"
+	  height="150" alt="Camille's picture coming soon!" /></a>
+-->
+<!--       <form id="SubmitForm" method="post">
+        </form>  
+      <div id="DisplayDiv" style="background-color:red;">
+/*   
+<div id="mypicture" style="float: right;"><table><tr><td><div id="myimg"><a href="images/moi/8.jpg"><img class="photo" src="images/moi/8.jpg" height="150" alt="Camille's picture coming soon!" /></a></div></td></tr><tr><td align="center"><button type="submit" form="SubmitForm" onclick="return replaceContent();">Another random pic?</button></td></tr></table></div>
+*/
+
+</div>
+-->
+
+     <table>
+	<tr><td>Name: </td><td>Camille Coti</td></tr>
+	<tr><td>Email: </td><td><img src="./images/adresse2.png" alt="camille|dot|coti|at|lipn|dot|univ-paris13|dot|fr" height="22" /></td></tr>
+       <tr><td>Position: </td> <td>Assistant Professor</td></tr>
+       <tr><td>Phone: </td>
+       		      <td>in France: <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /> +33 1 49 40 28 61</td>
+		      <td>in Oregon: <img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /> +1 541-346-4430</td>
+
+       </tr>
+       <tr><td>Office </td>
+       		      <td><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /> A204 (LIPN) - L202 (IUT)</td>
+		      <td><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /> Deschutes 311</td>
+      </tr>
+       <tr><td valign="top">Address:</td>
+			<td><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" />  Laboratoire d'Informatique de Paris Nord<br />
+				   99 avenue Jean-Baptiste Cl&eacute;ment<br />
+				   93430 Villetaneuse<br />
+				   France<br /></td>
+		      <td><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /> Computer and Information Science<br />
+		      1202 University of Oregon<br />
+		      1477 E. 13th Ave.<br />
+		      Eugene, OR 97403-1202<br />
+		      USA<br /></td>
+</tr> 
+	   
+     </table>
+     
+   </div>
+   
+   <div class="separateur">
+     Introduction
+   </div>
+    <div class="main">
+    <p>I am an assistant professor in the <a href="http://www.iutv.univ-paris13.fr/iutv/reseaux_telecommunications.php" rel="outbound">Networks and Telecommunication</a> department of the <a href="http://www.iutv.univ-paris13.fr/iutv/index.php" rel="outbound">IUT de Villetaneuse</a> (<a href="http://www.univ-paris13.fr/" rel="outbound">University of Paris XIII</a>). I am a member of the <a href="http://www-lipn.univ-paris13.fr/AOC/?lang=fr" rel="outbound">AOC</a> team of the <a href="http://www-lipn.univ-paris13.fr">LIPN</a>. Since Sept 2019 I have been on a sabbatical (<it>délégation CNRS</it>) at the <a href="http://cs.uoregon.edu">University of Oregon</a>.
+    </p>
+    <p>In 2009-2010 I worked as a post doc in the <a href="http://hpcgroup.public.iastate.edu" rel="outbound">HPC group</a> of the <a href="http://www.iastate.edu" rel="outbound">Iowa State University of Science and Technology</a>. I worked for the <a href="http://www.math.iastate.edu" rel="outbound">Department of Mathematics</a> under the supervision of <a href="http://www.public.iastate.edu" rel="outbound">Glenn Luecke</a>. Prior to that I was a PhD student in INRIA's Grand Large team. My advisor was
+	<a href="http://www.lri.fr/~fci" rel="outbound">Franck Cappello</a>. I was part of
+	the <a href="http://www.lri.fr/parall/introduction.fr.html" rel="outbound">Parallelism
+	team</a>  of the <a href="http://www.lri.fr" rel="outbound">Laboratoire de
+	Recherche en Informatique</a>
+	of <a href="http://www.u-psud.fr" rel="outbound">University Paris-Sud</a> in
+	Orsay. I was also a visitor
+	at the <a href="http://icl.cs.utk.edu" rel="outbound">Innovative Computing
+	  Laboratory</a>, where I worked
+	with <a href="http://www.cs.utk.edu/~bosilca" rel="outbound">George
+	Bosilca</a>, Aurélien Bouteiller and <a href="http://www.cs.utk.edu/~lemarini/" rel="outbound">Pierre Lemarinier</a> in the
+	MPI group of Jack Dongarra's team. Even before, I did an internship in the <a href="https://www.kcl.ac.uk/nms/depts/mathematics/index.aspx">Department of Mathematics</a> of <a href="http://www.kcl.ac.uk/">King's College London</a>, where I worked with <a href="https://nms.kcl.ac.uk/peter.sollich/">Peter Sollich</a>.
+      </p>
+	<p>
+	My <a href="./genealogie.png">academic genealogy</a>, obtained for the <a href="http://www.genealogy.ams.org">Math Genealogy project</a> using <a href="http://www.davidalber.net/geneagrapher/">Mathematics Genealogy Grapher</a>.
+	</p>
+<!--	<p>CV : <a href="./cv_web_fr.pdf">[in French <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" />]</A> or <a href="./cv_web_en.pdf">[in English <img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" />]</a> (updated: 7/11/2018). 
+        </p>-->
+	<p> <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-1224-7786" href="https://orcid.org/0000-0002-1224-7786" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-1224-7786</a></div>
+</p>
+      <p><a href="images/couchersoleil.png" rel="outbound">Sunset in Ajaccio, les Iles Sanguinaires, 2012</a> - <a href="images/sanguinaires2003.jpg" rel="outbound">Les Iles Sanguinaires, Ajaccio, 2003</a> - <a href="images/calanches.jpg" rel="outbound">Calanches de Piana, 2012</a></p>
+    </div>
+
+     <div class="separateur"><a name="publis"></a>
+      Publications
+    </div> 
+    <div class="publis">
+      <p>Full publication list <a href="./publications.php">here</a>.</p>
+      <p>
+	Click on the <img src="images/plus.png" height="20" alt="plus" /> icons to
+	unfold each list.
+      </p>
+
+      <p>Talks:</p>
+      <ul>
+	<li>C. Coti: "DiPOSH: a modular testbed and OpenSHMEM implementation", OpenSHMEM "Bird of a feather" session, SC|19, Denver, November 2019. [<a href="./presentations/bof-sc19.pdf">slides</a>]</li>
+	<li>C. Coti: "Scalable, fault-tolerant matrix factorization", 7th Workshop on Parallel-in-Time methods, Roscoff, France, May 2018. [<a href="./presentations/PINT18.pdf">slides</a>]</li>
+	<li>C. Coti: `Exploiting Redundant Computation in Communication-Avoiding Algorithms for Algorithm-Based Fault Tolerance, SIAM Parallel Processing for Scientific Computing (PP16), minisymposium "Resilience", Paris, France, April 2016. [<a href="./presentations/SIAMPP16.pdf">slides</a>]</li>
+	<li>Xu Huang (chair), Miroslaw Malek, Stephen S. Yau, Koji Nakano and Camille Coti: Future and Challenges of Parallel and Distributed Computing, <i>ICA3PP 2012 panel</i>. <a href=http://conf.kyusan-u.ac.jp/files/PanelDiscussion-ICA3PP.pdf>[PDF]</a></li>
+      </ul>
+
+     <p>Book chapters: </p>
+<ul>
+<li>Camille Coti: Fault Tolerance Techniques for Distributed, Parallel Applications, in <i>Qusay F. Hassan (Editor): <i>Innovative Research and Applications in Next-Generation High Performance Computing</i></i>, section 4, chapter 1, June 2016, IGI Global  <a href="papiers/ftchapter.pdf">[overview]</a>  <a href="http://www.igi-global.com/book/innovative-research-applications-next-generation/145466">[WWW]</a> </li>
+<li>Camille Coti and Franck Cappello: Scalable run-time environments for  large-scale parallel applications, in <i>S. U. Khan</i>, L. Wang, and A. Y. Zomaya (Editors): <i>Scalable Computing and Communications: Theory and Practice</i>, chapter 26, pages 563-590, March 2013, Wiley  <a href="papiers/ScalCompComm.pdf">[overview]</a>  <a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111816265X.html">[WWW]</a> </li>
+<li>Krzysztof Kurowski, Bartosz Bosak, Piotr Grabowski, Mariusz Mamonski, Tomasz Piontek, George Kampis, Laszlo Gulyas, Camille Coti, Thomas  Herault and Franck Cappello: QosCosGrid e-Science Infrastructure for Large-Scale Complex System Simulations, in <i>Werner Dubitzky</i>, Krzysztof Kurowski and Bernhard Schott (Editors): <i>QosCosGrid e-Science Infrastructure for Large-Scale Complex System Simulations</i>, chapter 9, pages 163-185, Jan. 2012, Wiley  <a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0470592443.html">[WWW]</a> </li>
+<li>Martin Swain, Camille Coti, Johannes Mandel and Werner Dubitzky: A Topology-Aware Evolutionary Algorithm for Reverse-Engineering Gene Regulatory Networks, in <i>Werner Dubitzky</i>, Krzysztof Kurowski and Bernhard Schott (Editors): <i>QosCosGrid e-Science Infrastructure for Large-Scale Complex System Simulations</i>, chapter 8, pages 141-162, Jan. 2012, Wiley  <a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0470592443.html">[WWW]</a> </li>
+<li>Benoit Bertholon, Christophe Cerin, Camille Coti, Jean-Christophe Dubacq and Sebastien Varrette: Practical Security in Distributed Systems, in <i>Serge Haddad</i>, Fabrice Kordon, Laurent Pautet and Laure Petrucci (Editors): <i>Distributed Systems: Design and Algorithms</i>, volume 1, chapter 11, pages 301-330, May 2011, Wiley  <a href="http://www.iste.co.uk/index.php?f=a&amp;=View&amp;=415">[WWW]</a> </li>
+</ul>
+      
+<p>Latest articles in international conferences and journals: </p>
+<ul>
+<li>C. Coti, A. D. Malony: On the Road to DiPOSH: Adventures in High-Performance OpenSHMEM, in <i>Proceedings of the 13th International Conference on Parallel Processing and Applied Mathematics (PPAM 2019)</i>, September 2019, Bialystok, Poland (<i>to appear</i>)
+ </li>
+<li>C. Coti, D. Monniaux, H. Yu: Parallel parametric linear programming solving, and application to polyhedral computations, in <i>Proceedings of the International Conference on Computational Science (ICCS 2019)</i>, June 2019, Faro, Portugal  <a href="https://hal.archives-ouvertes.fr/hal-02097321/document">[HAL]</a>  <a href="https://arxiv.org/abs/1904.06079">[arxiv]</a> </li>
+<li>C. Coti, L. Petrucci, D. A. Torres Gonzalez: Fault-tolerant matrix factorisation: a formal model and proof, in <i>Proceedings of the 6th Workshop on Synthesis of Complex Parameters (SynCoP 2019)</i>, Prague, Cz Rep, April 2019  <a href="papiers/CPT19.pdf">[PDF]</a> </li>
+<li>C. Coti, S. Evangelista, L. Petrucci: State Compression Based on One-Sided Communications   for Distributed Model Checking, in <i>23rd International conference on Engineering of Complex Computer Systems (ICECCS 2018)</i>, December 2018  <a href="papiers/CEP18b.pdf">[PDF]</a> </li>
+</ul><div id="pub1" style="visibility:hidden ; display:none" ><ul><li>C. Coti, S. Evangelista, L. Petrucci: One-Sided Communications for more Efficient Parallel State Space Exploration over RDMA Clusters, in <i>24th international european conference on parallel and distributed computing (EuroPar 2018)</i>, August 2018, Turin, Italy  <a href="papiers/CEP18.pdf">[PDF]</a> </li>
+<li>F. Butelle, C. Coti: Distributed Snapshot for Rollback-Recovery with One-Sided Communications, in <i>2018 International Conference on High Performance Computing & Simulation (HPCS 2018)</i>, July 2018, Orleans, France.  <a href="papiers/BC18.pdf">[PDF]</a>  <a href="presentations/hpcs_18.pdf">[slides]</a> </li>
+<li>H.T.T. Nguyen, C. Rodriguez, M. Sousa, C. Coti, L. Petrucci: Quasi-Optimal Partial Order Reduction, in <i>30th International Conference on Computer Aided Verification (CAV 2018)</i>, July 2018, Oxford, UK.  <a href="https://arxiv.org/abs/1802.03950">[arxiv]</a>  <a href="https://github.com/cesaro/dpu-cav18-exp">[artifact]</a> </li>
+<li>C. Coti, E. Leclercq, F. Roupin, F. Butelle: Solving 0-1 Quadratic Problems with Two-Level Parallelization of the BiqCrunch Solver, in <i>10th International Workshop on Computational Optimization (WCO'17) part of the Federated Conference on Computer Science and Information Systems (FedCSIS)</i>, <b>best paper award!</b>, Prague, Czech Republic, Sept 2017  <a href="papiers/CLRB17.pdf">[PDF]</a> </li>
+<li>C. Coti, J.-V. Loddo, E. Viennet: An Overview of the Options Available for Practical Activities in Distributed Computing, in <i>Proceedings of the 16th International Conference on Information Technology Based Higher Education and Training (ITHET17)</i>, Robin Braun (ed), Ohrid (Mk), July 2017  <a href="papiers/CLV17.pdf">[PDF]</a>  <a href="presentations/slides_ithet17.pdf">[slides]</a> </li>
+<li>F. Butelle, C. Coti, E. Leclercq, F. Roupin: Une version Multithread du solveur BiqCrunch, in <i>18ème congrès annuel de la société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF'17)</i>, Feb 2017, Metz, France  <a href="papiers/BCLR17.pdf">[PDF]</a> </li>
+<li>C. Coti: Scalable, Robust, Fault-Tolerant Parallel QR Factorization, in <i>Proceedings of the 15th International Symposium on Distributed Computing and Applications to Business</i>, Engineering and Science (DCABES 2016), <b>best paper award!</b>, S. Khaddaj, Paris, August 2016  <a href="papiers/C16e.pdf">[PDF]</a>  <a href="presentations/slides_dcabes16.pdf">[slides]</a> </li>
+<li>C. Coti, C. Lakos, L. Petrucci: Formally Proving and Enhancing a Self-Stabilising Algorithm, in <i>Proceedings of the International Workshop on Petri Nets and Software Engineering (PNSE'16)</i>, Lawrence Cabac, Lars Michael Kristensen and Heiko Rölke, Torun, Poland, June 2016  <a href="papiers/CLP16.pdf">[PDF]</a>  <a href="presentations/slidesPNSE16.pdf">[slides]</a> </li>
+<li>C. Coti: Exploiting Redundant Computation in Communication-Avoiding Algorithms for Algorithm-Based Fault Tolerance, in <i>Proceedings of the 2nd IEEE International Conference on High Performance and Smart Computing (IEEE HPSC 2016)</i>, New York, USA, April 2016  <a href="papiers/C16a.pdf">[PDF]</a>  <a href="papiers/C16a_slides.pdf">[slides]</a> </li>
+<li>C. Coti: Parametric, Probabilistic, Timed Resource Discovery System, in <i>Proceedings of the 3rd International Workshop on Synthesis of Complex Parameters (SynCoP'16)</i>, Eindhoven, Nd, April 2016  <a href="papiers/C16b.pdf">[PDF]</a>  <a href="papiers/C16b_slides.pdf">[slides]</a> </li>
+<li>F. Butelle, L. Alfandari, C. Coti, L. Finta, L. Letocart, G. Plateau, F. Roupin, A. Rozenknop, R. Wolfler Calvo: Fast machine reassignment, in <i>Annals of Operations Research</i>, December 2015  <a href="http://link.springer.com/article/10.1007/s10479-015-2082-3">[WWW]</a>  <a href="papiers/BACFLPRRW16.pdf">[PDF]</a> </li>
+<li>É. André, C. Coti, H. G. Nguyen: Enhanced Distributed Behavioral Cartography of Parametric Timed Automata, in <i>Proceedings of The 17th International Conference on Formal Engineering Methods (ICFEM 2015)</i>, November 2015  <a href="papiers/ACN15.pdf">[PDF]</a> </li>
+<li>C. Coti, S. Evangelista, K. Klai: Queuless, Uncentralized Resource Discovery:  Formal Specification and Verification, in <i>Proceedings of the International Workshop on Petri Nets and Software Engineering (PNSE'15)</i>, Daniel Moldt, Heiko Rölke, Harald Störrle (eds.), June 2015  <a href="papiers/CEK15_pnse.pdf">[PDF]</a>  <a href="././../../../.././papiers/poster_pnse15.pdf">[poster]</a> </li>
+<li>C. Coti, J.-V. Loddo, E. Viennet: Practical activities in network courses for MOOCs, SPOCs and eLearning with Marionnet, in <i> Proceedings of the 14th International Conference on Information Technology Based Higher Education and Training (ITHET15)</i>, Anikó Costa, Robin Braun (eds.), June 2015  <a href="papiers/ithet2015_clv.pdf">[PDF]</a>  <a href="papiers/ithet_extendedabstract.pdf">[extended abstract]</a>  <a href="papiers/ithet_presentation.pdf">[slides]</a> </li>
+<li>É. André, C. Coti, H. G. Nguyen: Enhanced Distributed Behavioral Cartography of Parametric Timed Automata (Informal Presentation), in <i>Proceedings of the 2nd International Workshop on Synthesis of Complex Parameters (SynCoP'15)</i>, April 2015  <a href="papiers/ACN15b.pdf">[PDF]</a>  <a href="http://drops.dagstuhl.de/opus/volltexte/2015/5613/">[WWW]</a> </li>
+<li>É. André, C. Coti, S. Evangelista: Distributed Behavioral Cartography of Timed Automata, in <i>Proceedings of the 21th European PVM/MPI Users' Group Meeting (EuroMPI/Asia'14)</i>, Yutaka Ishikawa and Atsushi Hori (eds.), September 2014  <a href="papiers/ACE14.pdf">[PDF]</a>  <a href="http://dl.acm.org/citation.cfm?id=2642784">[WWW]</a> </li>
+<li>C. Coti: POSH: Paris OpenSHMEM: A High-Performance OpenSHMEM Implementation for Shared Memory Systems, in <i>Proceedings of the International Conference on Computational Science (ICCS 2014)</i>, Cairns, Aus, June 2014  <a href="papiers/C14.pdf">[PDF]</a>  <a href="././../../../.././papiers/postericcs14.pdf">[poster]</a>  <a href="http://authors.elsevier.com/sd/article/S1877050914004037">[WWW]</a> </li>
+<li>C. Coti, M. Koskas, C. Cerin: Fault Tolerance Logical Network Properties of Irregular Graphs, in <i>Proceedings of the 12th International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP-12)</i>, Fukuoka, Jp, September 2012  <a href="papiers/CKC12.pdf">[PDF]</a>  <a href="presentations/presentationICA3PP.pdf">[slides]</a> </li>
+<li>L. Alfandari, F. Butelle, C. Coti, L. Finta, G. Plateau, A. Rozenknop, F. Roupin: Combining VNS, simulated annealing, and a greedy heuristic for the ROADEF/EURO 2012 challenge, in <i>25th European Conference on Operational Research (EURO 2012)</i>, Vilnius, July 2012
+ </li>
+<li>L. Alfandari, F. Butelle, C. Coti, L. Finta, L. Létocart, G. Plateau, F. Roupin, A. and Rozenknop and R. Wolfler Calvo: Extended abstract on method used by Senior Team S26 for the ROADEF/EURO 2012 Challenge, in <i>13ème congrès annuel de la société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF'12)</i>, Apr 2012, Angers, France.
+ </li>
+<li>F. Butelle, C. Coti: Data Coherency in Distributed Shared Memory, in <i>the International Journal of Networking and Computing (IJNC)</i>, Volume 2, issue 1, pp 117-130, 2012  <a href="papiers/BC12.pdf">[PDF]</a> </li>
+<li>F. Butelle, C. Coti: A Model for Coherent Distributed Memory For Race Condition Detection, in <i>Proceedings of the 13th Workshop on Advances in Parallel and Distributed Computational Models (APDCM'11)</i>, Anchorage, Ak, May 2011  <a href="papiers/BC11.pdf">[PDF]</a>  <a href="http://arxiv.org/abs/1101.4193">[arXiv]</a> </li>
+<li>E. Agullo, C. Coti, T. Herault, J. Langou, S. Peyronnet, A. Rezmerita, F. Cappello, J. Dongarra: QCG-OMPI: MPI Applications on Grids, in <i>Future Generation Computer Systems</i>, Volume 27, issue 4, pages 357-369, April 2011  <a href="http://dx.doi.org/10.1016/j.future.2010.11.015">[WWW]</a>  <a href="papiers/ACHLPRCD10.pdf">[PDF]</a>  <a href="http://hal.inria.fr/inria-00548895">[HAL]</a> </li>
+<li>F. Berenger, C. Coti, K. Zhang: PAR: A PARallel And Distributed Job Crusher, in <i>Bioinformatics 26 (22)</i>, pages 2918-2919, November 2010  <a href="http://bioinformatics.oxfordjournals.org/content/early/2010/09/22/bioinformatics.btq542.full.pdf+html">[WWW]</a>  <a href="papiers/BCZ10.pdf">[PDF]</a> </li>
+<li>G. Bosilca, C. Coti, T. Herault, P. Lemarinier, J. Dongarra: Constructing Resilient Communication Infrastructure for Runtime Environments, in <i>Advances in Parallel Computing</i>, Apr 2010, vol. 19, pages 441-451  <a href="http://www.booksonline.iospress.nl/Content/View.aspx?piid=16594">[WWW]</a>  <a href="papiers/BCHLD10.pdf">[PDF]</a> </li>
+<li>E. Agullo, C. Coti, J. Dongarra, T. Herault, J. Langou: QR Factorization of Tall and Skinny Matrices in a Grid Computing Environment, in <i>24th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS'10)</i>, Atlanta, Ga, April 2010  <a href="papiers/ACDHL10.pdf">[PDF]</a> </li>
+<li>P. Bar, C. Coti, D. Groen, T. Herault, V. Kravtsov, A. Schuster, M. Swain: Running parallel applications with topology-aware grid middleware, in <i>5th IEEE International Conference on e-Science (eScience 2009)</i>, Oxford, UK, December 2009  <a href="papiers/BCGHKSS09.pdf">[PDF]</a> </li>
+<li>P. Sollich, M. Urry, C. Coti: Kernels and learning curves for Gaussian process regression on random graphs, in <i>Advances in Neural Information Processing Systems 22 (NIPS 2009)</i>, Vancouver, BC, Canada, December 2009  <a href="papiers/92_paper.pdf">[PDF]</a>  <a href="http://books.nips.cc/papers/files/nips22/NIPS2009_0092_correction.pdf">[correction]</a> </li>
+<li>G. Bosilca, C. Coti, T. Herault, P. Lemarinier, J. Dongarra: Constructing Resilient Communication Infrastructure for Runtime Environments, in <i>International Conference in Parallel Computing (ParCo2009)</i>, Lyon, France, September 2009  <a href="papiers/BCHLD09.pdf">[PDF]</a>  <a href="papiers/BCHLD09b.pdf">[report ]</a> </li>
+<li>C. Coti, T. Herault, F. Cappello: MPI Applications on Grids: a Topology-Aware approach, in <i>Proceedings of the 15th International European Conference on Parallel and Distributed Computing (EuroPar'09)</i>, Delft, the Netherlands, August 2009, pages 466-477  <a href="papiers/CHC09.pdf">[PDF]</a> </li>
+<li>C. Coti, T. Herault, S. Peyronnet, A. Rezmerita, F. Cappello: Grid Services for MPI, in <i>Proceedings of the 8th IEEE International Symposium on Cluster Computing and the Grid (CCGrid'08)</i>, Lyon, Fra, May 2008  <a href="papiers/CHPRC08.pdf">[PDF]</a> </li>
+<li>D. Buntinas, C. Coti, T. Herault, P. Lemarinier, L. Pilard, A. Rezmerita, E. Rodriguez, F. Cappello: Blocking vs. Non-Blocking Coordinated Checkpointing for Large-Scale Fault Tolerant MPI, in <i>Future Generation Computer Systems</i>, Elsevier, Jan 2008, vol. 24, issue 1, pages 73-84  <a href="papiers/fgcs-bchlrrc06.pdf">[PDF]</a>  <a href="http://dx.doi.org/10.1016/j.future.2007.02.002">[WWW]</a> </li>
+<li>C. Coti, A. Rezmerita, T. Herault, F. Cappello: Grid Services for MPI, in <i>Proceedings of the 14th European PVM/MPI Users' Group Meeting (EuroPVM/MPI)</i>, Paris, October 2007, 393-394  <a href="papiers/47570393.pdf">[PDF]</a> </li>
+<li>C. Coti,  T. Herault, P. Lemarinier, L. Pilard, A. Rezmerita, E. Rodriguez, F. Cappello: Blocking vs. Non-Blocking Coordinated Checkpointing for Large-Scale Fault Tolerant MPI, in <i>IEEE/ACM Proceedings of the International Conference for High Performance Computing</i>, Network Storage and Analysis (SC'2006), Tampa, FL, November 2006  <a href="papiers/CHLPRRC06.pdf">[PDF]</a> </li>
+</ul>
+</div>
+<ul>
+<li><a onclick="showHideDiv('pub1'); return false"><span class="bouton"><img src="images/plus.png" height="20" alt="plus" />[More/Less]</span></a></li>
+</ul>
+      
+<p>Latest research reports: </p>
+<ul>
+<li>O. Bodini, C. Coti, J. David: Parallel Galton Watson Process, in <i>CoRR arXiv:1606.06629 [cs.DC]</i>, June 2016, 6 pages  <a href="https://arxiv.org/abs/1606.06629">[arXiv]</a> </li>
+<li>C. Coti: Fault Tolerant QR Factorization for General Matrices, in <i>CoRR abs/1604.02504v2  [cs.DC]</i>, April 2016, 4 pages   <a href="http://arxiv.org/abs/1604.02504v2">[arXiv]</a> </li>
+</ul><div id="pub2" style="visibility:hidden ; display:none" ><ul><li>C. Coti, C. Lakos, L. Petrucci: Formally Proving and Enhancing a Self-Stabilising Distributed Algorithm, in <i>CoRR arXiv:1601.03767 [cs.DC]</i>, January 2016, 21 pages  <a href="https://arxiv.org/abs/1601.03767">[arXiv]</a> </li>
+<li>C. Coti: Exploiting Redundant Computation in Communication-Avoiding Algorithms for Algorithm-Based Fault Tolerance, in <i>CoRR abs/1511.00212 [cs.DC]</i>, November 2015, 4 pages   <a href="http://arxiv.org/abs/1511.00212">[arXiv]</a> </li>
+<li>C. Coti: POSH: Paris OpenSHMEM: A High-Performance OpenSHMEM Implementation for Shared Memory Systems, in <i>CoRR abs/1403.7791 [cs.DC]</i>, March 2014, 13 pages   <a href="http://arxiv.org/abs/1403.7791">[arXiv]</a> </li>
+<li>F. Butelle, C. Coti: A Model for Coherent Distributed Memory For Race Condition Detection, in <i>CoRR abs/1101.4193 [cs.DC]</i>, February 2011, 7 pages  <a href="http://arxiv.org/abs/1101.4193">[arXiv]</a> </li>
+<li>E. Agullo, C. Coti, J. Dongarra, T. Herault, J. Langou: QR Factorization of Tall and Skinny Matrices in a Grid Computing Environment, in <i>LAPACK Working Note #224</i>, UTK research report UT-CS-10-651, January 2010, 15 pages  <a href="http://www.netlib.org/lapack/lawnspdf/lawn224.pdf">[PDF]</a>  <a href="http://www.netlib.org/lapack/lawnspdf/lawn224.ps">[PS]</a> </li>
+<li>E. Agullo, C. Coti, J. Dongarra, T. Herault, J. Langou: QR Factorization of Tall and Skinny Matrices in a Grid Computing Environment, in <i>CoRR abs/0912.2572mak [cs.DC]</i>, December 2009, 15 pages  <a href="http://arxiv.org/abs/0912.2572">[arXiv]</a>  <a href="http://arxiv.org/pdf/0912.2572v1">[PDF]</a>  <a href="http://arxiv.org/ps/0912.2572v1">[PS]</a> </li>
+<li>A. Rezmerita, C. Coti, T. Herault, S. Peyronnet: Définition des mécanismes minimaux d'un runtime tolérant aux pannes dans les infrastructures Petascale, in <i>November 2009</i>, 14 pages, ANR project deliverable.
+ </li>
+<li>E. Brunet, F. Cappello, C. Coti, T. Herault, S. Peyronnet: Supports d'exécution pour environnements petascales : État de l'art, in <i>July 2009</i>, 19 pages, ANR project deliverable.
+ </li>
+<li>C. Coti, T. Herault, D. Groen, M. Mamonski: D1.2c: Adapted version of the OpenMPI Communication Library, in <i>June 2009</i>, 28 pages, European Union deliverable.
+ </li>
+<li>C. Coti, T. Herault, A. Rezmerita: D1.2b: Adapted version of the OpenMPI Communication Library, in <i>October 2008</i>, 45 pages, European Union deliverable.
+ </li>
+<li>K. Kurowski, M. Mamonski, P. Grabowski, Y. Langlois, G. Mecheneau, T. Herault, C. Coti, M. Ragan: D1.4: Second Prototype and Integration of Grid Services Together with QoS-Aware Grid MW Providers, in <i> October 2008</i>, 28 pages, European Union deliverable.
+ </li>
+<li>C. Coti, T. Herault, F. Cappello: MPI Applications on Grids: A Topology-Aware Approach, in <i>INRIA research report #6633</i>, September 2008, 21 pages  <a href="http://hal.inria.fr/inria-00319241/en">[WWW]</a>  <a href="papiers/RR-6633.pdf">[PDF ]</a> </li>
+<li>C. Coti, T. Herault, P. Lemarinier, S. Peyronnet, A. Rezmerita: D1.2a: OpenMPI Communication Library, in <i>October 2007</i>, 37 pages, European Union deliverable.
+ </li>
+<li>D. Carmeli, V. Kravtsov, B. Yoshpa, A. Schuster, K. Kurowski, C. Coti, T. Herault: D2.1 Part 1: Grid Services for Quasi Opportunistic Super Computing, in <i> April 2007</i>, 75 pages, European Union deliverable.
+ </li>
+<li>C. Coti, T. Herault, K. Kurowski, P. Lemarinier, G. Mecheneau: D1.1: State of the art/Gap analysis of Existing Grid Middleware Services for CS modeling, in <i> April 2007</i>, 32 pages, European Union deliverable.
+ </li>
+</ul>
+</div>
+<ul>
+<li><a onclick="showHideDiv('pub2'); return false"><span class="bouton"><img src="images/plus.png" height="20" alt="plus" />[More/Less]</span></a></li>
+</ul>
+      
+<p>Latest national audience reports: </p>
+<ul>
+<li><i>Environnements d'exécution pour applications parallèles communiquant par passage de messages pour les systèmes à grande échelle et les grilles de calcul</i>, PhD dissertation, November 2009 <a href="http://tel.archives-ouvertes.fr/tel-00676937">[TEL]</a> </li>
+<li><i>Conception et évaluation d'un algorithme de tolérance aux fautes à points de reprise coordonnés pour MPICH-2</i>, Louis Leprince-Ringuet Foundation awards, additional text, October 2006 <a href="FLLR.pdf">[PDF]</a> </li>
+<li><i>Conception et évaluation d'un algorithme de tolérance aux fautes à points de reprise coordonnés pour MPICH-2</i>, MSc final internship report, September 2006 <a href="internship_report.pdf">[PDF]</a> </li>
+</ul>
+      
+<p>Latest papers in teaching workshops (in French): </p>
+<ul>
+<li>C. Coti: Introduction à la virtualisation en DUT R&T : retour d'expérience, in <i>3ème Workshop Pédagogique Réseaux & Télécoms</i>, Novembre 2014  <a href="C14b.pdf">[PDF]</a> </li>
+<li>C. Coti, J.-V. Loddo: Progressivité dans les modules de réseaux avec Marionnet, in <i>3ème Workshop Pédagogique Réseaux & Télécoms</i>, Novembre 2014   <a href="CL14.pdf">[PDF]</a> </li>
+</ul>
+      
+
+<!--      <p>
+      Click <a href="presentations/index.php">here</a> for a list a
+      my main presentations and posters.<br />
+      My <a href="./myBib.bib">bibTeX</a>.
+      </p>
+-->    
+<p>My <a href="./myBib.bib">bibTeX</a>. </p>
+
+
+      <p>
+       Co-authors:  <a onclick="showHideDiv('coauthors'); return false"><span class="bouton"><img src="images/plus.png" height="20" alt="plus" />[More/Less]</span></a>
+     </p>
+
+    <div id="coauthors" style="visibility:hidden ; display:none" >
+     <p>
+     <a href="http://icl.cs.utk.edu/~eagullo">Emmanuel Agullo</a> (INRIA Bordeaux Sud-Ouest, France), 
+     <a href="http://www.cs.technion.ac.il/people/bpavel">Pavel Bar</a> (Technion, Israel), 
+     Francois Berenger (Zhang Initiative Research Unit, RIKEN, Japan),
+     <a href="http://wwwfr.uni.lu/recherche/fstc/computer_science_and_communications_research_unit/members/benoit_bertholon">Benoit Bertholon</a> (Université du Luxembourg), 
+     <a href="http://icl.cs.utk.edu/~bosilca">George Bosilca</a> (University of Tennessee, Knoxville, USA), 
+     <a href="https://www.mcs.anl.gov/">Darius Buntinas</a> (Argonne National Laboratory, USA),
+           <a href="http://www-lipn.univ-paris13.fr/~butelle">Franck Butelle</a> (Université Paris 13, France),
+     <a href="http://www.lri.fr/~fci">Franck Cappello</a> (INRIA Saclay-Ile de France, France), 
+     <a href="http://www-lipn.univ-paris13.fr/~cerin">Christophe Cérin</a> (Unviersité Paris 13, France), 
+     <a href="http://www.netlib.org/utk/people/JackDongarra">Jack Dongarra</a> (University of Tennessee, Knoxville, USA), 
+     <a href="http://www-lipn.univ-paris13.fr/~dubacq">Jean-Christophe Dubacq</a> (Unviersité Paris 13, France), 
+     <a href="http://www.ulster.ac.uk/staff/w.dubitzky.html">Werner Dubitzky</a> (University of Ulster, UK),
+     <a href="http://castle.strw.leidenuniv.nl/people/derek-groen.html">Derek Groen</a> (University of Amsterdam and Leiden Observatory, the Netherlands), 
+     <a href="http://www.lri.fr/~herault">Thomas Herault</a> (University of Tennessee, Knoxville, USA), 
+     <a href="https://www.cs.technion.ac.il/">Valentin Kravtsov</a> (Technion, Israel),
+     <a href="http://math.ucdenver.edu/~langou">Julien Langou</a> (University of Collorado Denver, USA), 
+     <a href="http://icl.cs.utk.edu/~lemarini">Pierre Lemarinier</a> (University of Tennessee, Knoxville, USA), 
+     <a href="http://sylvain.berbiqui.org">Sylvain Peyronnet</a> (University of Paris South-XI), 
+     <a href="http://www.prism.uvsq.fr/~pila">Laurence Pilard</a> (University of Versailles-Saint Quentin, France), 
+     <a href="http://www.lri.fr/~rezmerit">Ala Rezmerita</a> (INRIA Saclay-Ile de France, France), 
+     Eric Rodriguez, 
+     <a href="https://www.cs.technion.ac.il/~assaf">Assaf Schuster</a> (Technion, Israel),
+     <a href="https://nms.kcl.ac.uk/peter.sollich">Peter Sollich</a> (King's College, London, UK),
+     Martin Swain (Aberystwyth University),
+     <a href="http://www.mth.kcl.ac.uk/~matturry">Matthew Urry</a> (King's College, London, UK),
+     <a href="http://wwwfr.uni.lu/recherche/fstc/computer_science_and_communications_research_unit/members/sebastien_varrette">Sébastien Varrette</a> (Unviersité du Luxembourg), 
+     <a href="http://www.riken.go.jp/engn/r-world/research/lab/iru/zhang/index.html">Kam Zhang</a> (Zhang Initiative Research Unit, RIKEN, Japan)
+     </p>
+    </div>
+
+    </div>
+
+      <div class="separateur">
+	Paris OpenSHMEM (POSH)
+      </div>
+      
+      <div class="main">
+	<table>
+	  <tr>
+	    <td>
+	      <p>I am the author of the POSH implementation of the <a href="http://www.openshmem.org">OpenSHMEM standard</a>. For the moment, POSH works for shared memory systems only. </p>
+	      <p>More details on the <a href="./POSH">dedicated page</a> or on my <a href=http://www.github.com/coti/POSH">GitHub account</a>. </p>
+	    </td>
+	    <td>
+	      <a href="./images/logo_paris_open_shmem.png">
+		<img src="./images/logo_paris_open_shmem.png" height="80" alt="POSH logo" />
+	      </a>
+	    </td>
+	  </tr>
+	</table>
+
+      </div>
+
+      <div class="separateur">
+	Parallel.py (PAR)
+      </div>
+      
+      <div class="main">
+	<table>
+	  <tr>
+	    <td>
+	      <p>I contribute
+		to <a href="http://savannah.nongnu.org/projects/par" rel="outbound">parallel.py</a>
+		(also called PAR) mostly on portability issues. parallel.py is a simple parallel
+		and distributed job crusher written by François Berenger.</p>
+	      <p>I have written a specific branch of PAR,
+	      called <a href="https://github.com/coti/PAR" rel="outbound">PARrfoo</a>, which is
+	      expected to be more scalable. Small-scale benchmarks showed no
+	      difference, large-scale experiments are coming... soon.</p>
+	    </td>
+	    <td>
+	      <a href="./images/PAR_kun_high_res.png">
+		<img src="./images/PAR_kun_low_res.png" height="80" alt="PAR logo" />
+	      </a>
+	    </td>
+	  </tr>
+	</table>
+
+      </div>
+
+      <div class="separateur">
+	QCG-OMPI
+      </div>
+      
+      <div class="main">
+	<b>QCG-OMPI</b> has been released! More information in the 
+	<a href="QosCosGrid/qcgompi.php" rel="outbound">QCG-OMPI</a> section.
+	
+	<p><a href="code/qcg-ompi.tgz" rel="outbound">download
+	  QCG-OMPI</a> (approx. 11 MB).
+	</p>
+      </div>
+
+      <div class="separateur">
+	International Working Group on Cloud Computing Resiliency (IWGCR)
+      </div>
+      
+      <div class="main">
+	<p>
+	  I am an active member of the <a href="http://iwgcr.org/" rel="outbound">International
+	    Working Group on Cloud Computing Resiliency</a> (IWGCR). The
+	  International Working Group on Cloud Computing Resiliency (IWGCR) is a
+	  working group with a mission to monitor and analyze Cloud Computing
+	  resiliency. The working group is composed of I.T. Executives, academic
+	  researchers and industry representatives.
+	</p>
+
+	<ul>
+	<li><a href="http://iwgcr.org/about-iwgcr/" rel="outbound">Presentation of the
+	IWGCR</a>.</li>
+	<li><a href="http://iwgcr.org/international-working-group-formed-to-study-cloud-computing-resiliency/" rel="outbound">Press release</a>.</li>
+	</ul>
+
+	<p>
+	  In March 2012 the IWGCR released a report presenting the downtime
+	  statistics of current cloud solutions and rankings of the reliability
+	  of the solutions that are currently available on the cloud
+	  market. New reports were published in June 2013 and in March 2014. 
+	</p>
+
+	<ul>
+	  <li><i>Downtime Statistics of Current Cloud Solutions (Update version - March
+	      2014)</i>, Christophe Cerin, Camille Coti, Pierre Delort, Felipe Diaz, Maurice
+	    Gagnaire, Marija Mijic, Quentin Gaumer, Nicolas Guillaume, Jonathan Le
+	    Lous, Stephane Lubiarz, Jean-Luc Raffaelli, Kazuhiko Shiozaki, Herve
+	    Schauer, Jean-Paul Smets, Laurent Seguin, Alexandrine Ville
+	    <a href="http://iwgcr.org/wp-content/uploads/2014/03/downtime-statistics-current-1.3.pdf" rel="outbound">[PDF]</a></li>
+
+	  <li><i>Downtime statistics of current cloud solutions (June 2013
+	      Update)</i>, Christophe Cerin, Camille Coti, Pierre Delort, Felipe Diaz, Maurice 
+	    Gagnaire, Quentin Gaumer, Nicolas Guillaume, Jonathan Le
+	    Lous, Stephane Lubiarz, Jean-Luc Raffaelli, Kazuhiko Shiozaki, Herve
+	    Schauer, Jean-Paul Smets, Laurent Seguin, Alexandrine Ville
+	    <a href="http://iwgcr.org/wp-content/uploads/2013/06/IWGCR-Paris.Ranking-003.2-en.pdf" rel="outbound">[PDF]</a></li>
+
+	  <li><i>Downtime statistics of current cloud solutions</i>, Maurice Gagnaire, Felipe
+	    Dia, Camille Coti, Christophe Cerin, Kazuhiko Shiozaki, Yingjie Xu, Pierre
+	    Delort, Jean-Paul Smets, Jonathan Le Lous, Stephen Lubiarz, Pierrick Leclerc
+	    <a href="http://iwgcr.files.wordpress.com/2012/06/iwgcr-paris-ranking-001-en1.pdf" rel="outbound">[PDF]</a> </li>
+	</ul>
+
+
+      </div>
+
+      <div class="separateur">
+	Classement
+      </div>
+
+      <div class="main">
+	<p>
+	     I developped a program that computes a player's future ranking in
+	     the French Tennis system.
+	</p>
+
+	<p>
+	  The French tennis ranking system works with points: if you win agains
+	  a player whose ranking is higher than yours, you get more points than
+	  if your opponent has a lower ranking than yours. The tricky part is
+	  that the ranking that is taken into account is not the one that your
+	  opponent had the day you played against each other, which would be too
+	  easy. It is the one you opponent will have for the next season. So you
+	  need to know what your opponent's future ranking to make an estimation
+	  of your future ranking.
+	</p>
+
+	<p>
+	  In practice, the French Tennis Federation makes multiple computations
+	  (30 to 35) until the computation stabilizes, with an algorithm that
+	  fixes oscillations. 
+	</p>
+
+	<p>
+	  As a consequence, in order to have a precise idea of their
+	  future ranking, players need to looks at their opponents'
+	  palmares, then their opponents' opponents' palamres, etc,
+	  recursively, until all the connected component of the graph has been
+	  explored. 
+	</p>
+
+	<p>
+	  The program I have developped performs requests on the Web server of
+	  the French Tennis Federation and makes a recursive exploration of the
+	  matches that involved a player and their opponents, to make a
+	  recursive estimation of his/her future ranking. The computation stops
+	  at a given depth, which is chosen by the user of the program. The
+	  deeper you go, the more precise and reliable the estimation will be.
+	</p>
+
+	<p>
+	  This program is available (under CeCILL-C and LGPL licence) on
+	  <a href="http://www.github.com/coti/classement" rel="outbound">GitHub</a>. 
+	</p>
+
+      </div>
+
+
+      <div class="separateur">
+	Miscellaneous contributions
+      </div>
+
+      <div class="main">
+	<ul>
+	<li><a href="https://www.la-croix.com/Economie/supercalculateurs-simposent-aussi-lindustrie-2019-06-27-1201031808">La Croix : Les supercalculateurs s’imposent aussi dans l’industrie</a>, 06/27/2019: I was interviewed for this article in a national daily newspaper. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li>A short video <a href="https://www.youtube.com/watch?v=kQa4j9i7iMQ">presenting my lab</a>. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li>A call to treat scientific dissemination better: <a href="https://medium.com/@monod.olivier/les-fausses-informations-scientifiques-sont-des-fake-news-comme-les-autres-3d91ca6fa83b">Les fausses informations scientifiques sont des "fake news" comme les autres</a> <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li><a href="http://www.cnrs.fr/ins2i/spip.php?article2233">Mettre les données doubles sur les supercalculateurs</a>, INS2I/CNRS. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	  <li> <a href="https://www-galilee.univ-paris13.fr/actualite.php?id_info=474">Camille Coti primée pour son article à Dcabes 2016</a>, actualités de l'Institut Galilée. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li><a href="http://www.liberation.fr/debats/2016/03/28/publications-scientifiques-on-vaut-mieux-que-ca_1442009" rel=outbound">Publications scientifiques : on vaut mieux que ça</a>. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li><a href="http://binaire.blog.lemonde.fr/2016/04/08/sil-vous-plait-dessine-moi-un-superordinateur" rel="outbound">S'il vous plaît... dessine-moi un superordinateur</a>, Binaire, blog d'informatictiens de la SIF. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	<li><a href="https://www-galilee.univ-paris13.fr/fichiers/poster_LIPN.pdf">LIPN's presentation poster</a>.</li>
+	  <li>I contributed to a <a href="http://www.rue89.com/rue89-sport/2012/04/30/non-courir-sans-soutif-nest-pas-mauvais-pour-les-seins-231516" rel="outbound">high-quality article on a national news media</a> written by Renée Greusard by telling my own experience about jogging (my story is cited twice) <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	  <li>I contributed to a quote on <a href="http://danstonchat.com/5421.html" rel="outbound">BashFR</a> (the French bash.org) with my friend Thomas D. <img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></li>
+	</ul>
+      </div>
+
+    <!-- APRES CETTE LIGNE ON NE TOUCHE PLUS -->
+
+            
+
+    <!-- MOUCHARD GOOGLE ET W3C -->
+    <div class="marge_w3c">
+      <a href="http://www.nerdtests.com/ft_nq.php">
+        <img src="http://www.nerdtests.com/images/ft/nq/21991e3bef.gif" alt="I
+        am nerdier than 98% of all people. Are you a nerd? Click here to take
+        the Nerd Test, get nerdy images and jokes, and talk on the nerd forum!" /></a>
+      <a href="http://validator.w3.org/check?uri=referer">
+        <img
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+      </a>
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-396274-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>

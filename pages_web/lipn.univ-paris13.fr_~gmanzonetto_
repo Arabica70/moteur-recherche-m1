@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Manzonetto Giulio - MCF in Computer Science - Home page</title>
+<meta name="description" content="Giulio Manzonetto's Home Page - Researcher in Computer Science">
+<link rel="stylesheet" href="gmanzone.css">
+<link rel="icon" type="image/ico" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26493868-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = 
+true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+'.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<img src="caricatura.gif" width="142" height="400" border="0" alt="Cartoon" align="right">
+<a href="https://webmail.dsi.unive.it/squirrelmail/src/login.php"><img src="pixel.gif" width="20" height="20" border="0" alt="" align="right"></a>
+
+
+<h2>Manzonetto Giulio</h2>
+<hr size="1">
+<a href="mailto:gmanzone(at)gmail.com">(&lambda;<i>x</i>.gmanzone<i>x</i>gmail.com)@</a><br>
+Ph.D. in Computer Science<br>
+<!-- Via Torino 155, 30172 Mestre (VE)<br>Room 13, tel. +39 041 23 48 452<br> -->
+<!-- PPS, Universit&eacute; Denis Diderot, Case 7014, 175, rue du Chevaleret, 75013 Paris.<br>Room 5C09, tel. (+33)(0)1 44 27 69 30-->
+<!-- Post-doc <a href="http://moscova.inria.fr/~zappa/projects/parsec/" target="_blank">ParSec</a>, <a href="http://moscova.inria.fr/" target="_blank">Moscova</a> project-team, <a href="http://www.inria.fr/" target="_blank">INRIA</a> <a href="http://www.inria.fr/rocquencourt/" target="_blank">Paris-Rocquencourt</a>.<br>
+Address 1: INRIA Paris-Rocquencourt, B.P. 105, 78153 Le Chesnay Cedex, France. Phone: (+33) (0)1 39 63 54 67.<br>
+Address 2: INRIA-Microsoft Research, Parc Orsay Universit&eacute;, 28, rue Jean Rostand, 91893 Orsay Cedex, France. Phone: (+33) (0)1 77 57 80 12
+Post-doc Collodi<br>
+Address: LIPN - Institut Galil&eacute;e, Universit&eacute; Paris-Nord, 99, av. Jean-Baptiste Cl&eacute;ment, 93430 Villetaneuse, France<br>
+Office A203, tel. (+33)(0)1 49 40 44 43.
+Post-doc Calmoc<br>
+Address: Department of Computer Science, Faculty of Science, Radboud University<br>
+Heyendaalseweg 135, 6525 AJ Nijmegen, The Netherlands<br> 
+Office 02.534, tel. (+31)(0)24 36 52 613 
+-->
+Address: LIPN - Institut Galil&eacute;e, Universit&eacute; Paris-Nord, 99, av. Jean-Baptiste Cl&eacute;ment, 93430 Villetaneuse<br>
+Office 1: A207, Tel. +33 (0)1 49 40 36 84, <a href="http://www-lipn.univ-paris13.fr/" target="_blank">Laboratoire d'Informatique de Paris Nord (LIPN)</a> - 
+&Eacute;quipe <a href="http://lipn.univ-paris13.fr/en/lcr" target="_blank">LCR</a><br>
+Office 2: L212, <a href="http://www.iutv.univ-paris13.fr/" target="_blank">IUT de Villetaneuse</a> - 
+<a href="http://www-gtr.iutv.univ-paris13.fr/" target="_blank">D&eacute;partement R&amp;T</a><br>
+
+<p align="right">
+<i>
+Fo lo manto al caco macaco<br>
+e'l truffo sgarruffo a lo spino del baco<br>
+(Marius, poeta efficace)
+</i>
+</p>
+
+  <table cellspacing="1" cellpadding="0" border="0" align="center" width="1000px">
+  <tr>
+    <td align="center"><h2><br>Ma&icirc;tre de Conf&eacute;rences</h2></td>
+  </tr>  
+  <tr>
+    <td>
+	<br>
+	<a href="./pic/gmanzone.jpg"><img src="./pic/gmanzone_small.png" width="292" height="202" border="0" alt="Giulio Manzonetto in Canada"></a>
+	<a href="./pic/gmanzone2.jpg"><img src="./pic/gmanzone2_small.png" width="292" height="200" border="0" alt="Giulio Manzonetto in the Netherlands"></a>
+    </td>
+  </tr>
+  </table>
+
+<h3>News</h3>
+  <ul>
+  <li>1 jun 2019: I am an invited speaker at the <a
+  href="https://hor2019.github.io" target="_blank">10th International
+  Workshop on Higher-Order Rewriting</a>.
+  <li>15 Feb 2018: I am spending four months as invited member of the
+  <a href="https://www.i2m.univ-amu.fr/" target="_blank">laboratory I2M</a> in Marseille.</li>
+  <li>28 Avr 2017: I am in the <a href="http://lipn.univ-paris13.fr/TLLA17" target="_blank">Program Committee of Trends in Linear Logic
+  and Applications</a>, a satellite workshop of FSCD 2017.</li>
+  <li>3 Mar 2017: Today I defended my <a href="hdr.html"><i>m&eacute;moir
+  d'Habilitation &agrave; diriger des recherches</i></a>. I wish to
+  thank all jury members and all the people who attended.</li>
+  <li>1 Sep 2016: This academical year I am in d&eacute;l&eacute;gation
+  CNRS at the laboratory
+  <a href="https://www.irif.univ-paris-diderot.fr" target="_blank">IRIF, University Paris-Diderot</a>. Starting today.</li>
+  <li>14 May 2016: <a href="pic/tardis.jpg">The things you can find in London...</a></li>
+  <li>8-13 May 2016: Invited at the University of Bath to work with <a href="http://www.cs.bath.ac.uk/~gam23/" target="_blank">Guy McCusker</a> and <a href="http://www.cs.bath.ac.uk/~jl317/" target="_blank">Jim Laird</a>.</li>
+  <li>23 Oct 2015: I am a member of the jury evaluating <a href="http://www.pps.univ-paris-diderot.fr/~breuvart/these.html" target="_blank">Breuvart's Phd defense</a>.</li>
+  <li>3 Sep 2015: A new academical year is starting today at the <a href="http://www.iutv.univ-paris13.fr/formations/dut/reseaux-et-telecommunications.html" target="_blank">IUT de Villetaneuse</a>... ready to go?</li>  
+  <li>1 Sep 2015: I am in the organizing committee of <a href="https://lipn.univ-paris13.fr/CIE2016/" target="_blank">CiE 2016</a> that will be host at Paris 7.</li>
+  <li>15 Apr 2015: We are happy to have <a href="http://www.dsi.unive.it/~salibra/" target="_blank">Antonino Salibra</a> as our guest at LIPN.</li>     
+</ul>
+
+<a href="archive.html">News Archive</a>.
+
+<h3>Future Events</h3>  
+<ul>
+  <li>FSCD'2020, IJCAR'2020 will be co-located in Paris: campus
+  Condorcet of Universit&eacute; Paris-Nord.</li>
+</ul>
+
+<h3>Past Events</h3>  
+<ul>
+  <li>3-9 September 2017: <a href="http://lipn.univ-paris13.fr/TLLA17" target="_blank">TLLA 17: Trends in Linear Logic and Applications (FSCD satellite)</a>
+  </li>  
+    <li>2,3 September 2016: <a href="http://lipn.univ-paris13.fr/~pagani/pmwiki/pmwiki.php/Coquas/ProgramQslc" target="_blank">Coquas Workshop (CSL satellite)</a>
+  </li>
+  <li>27 June - 2 July 2016: <a href="https://lipn.univ-paris13.fr/CIE2016/" target="_blank">CiE 2016: Pursuit of the Universal</a>.
+  </li>
+  <li>1-2 July 2013: A <a
+  href="http://www.pps.univ-paris-diderot.fr/Nino-meeting"
+  target="_blank">Meeting in Honor of Antonino Salibra</a>.</li>   
+</ul>
+
+  <table cellspacing="3" cellpadding="2" border="0" align="center">
+    <tr>
+      <td align="center"><br><h3><a href="teaching.html">Teaching</a></h3></td>
+      <td align="center"><br><h3><a href="research.html">Research</a></h3></td>
+      <td align="center"><br><h3><a href="curriculum.html">Curriculum</a></h3></td>
+      <td align="center"><br><h3><a href="spare.html">Spare Time</a></h3></td>
+    </tr>
+  </table>
+<br>
+<script type="text/javascript" id="clustrmaps"
+src="//cdn.clustrmaps.com/map_v2.js?u=Dp56&d=Pw9ftYunyai36MSfhNC4F2a6pOeAFkFH1J3mO-H1Xmo"></script>
+
+<p align="center">
+<i>
+Page maintained by Giulio Manzonetto 
+</i>
+</p>
+
+</body>
+</html>

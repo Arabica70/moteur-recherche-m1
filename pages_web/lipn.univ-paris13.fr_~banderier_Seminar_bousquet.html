@@ -1,0 +1,969 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Sorted and/or Sortable Permutations</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea bousquet -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Sorted and/or Sortable Permutations</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Mireille Bousquet-Mélou</FONT></I></FONT><BR>
+<BR>
+
+ LaBRI, Université de Bordeaux<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+June 8, 1998<BR>
+<BR>
+[summary by <A HREf="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="bousquet.ps">postscript</A> and in <A HREF="bousquet.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+The classical railroad cars switching problem&nbsp;[<A HREF="#knuth"><CITE>12</CITE></A>] (<EM>viz.</EM> 
+to reorder cars in a given order with the help of a single garage-track)
+ is here revisited and generalised in terms of permutations and trees.
+Permutations which are sortable by one (or more than one) stack 
+have been studied by West&nbsp;[<A HREF="#west"><CITE>14</CITE></A>] and some generating functions have been
+found&nbsp;[<A HREF="#zeil"><CITE>15</CITE></A>]. By factorising 
+permutations (following and generalising an idea of Zeilberger's), 
+Mireille Bousquet-Mélou obtained functional equations for one-stack sortable, 
+two-stack sortable, sorted permutations, sorted and sortable permutations. 
+She shows <I>q</I>-analogues arise in counting inversions. 
+Most of these functional equations involve divided differences.
+The quadratic method allows to solve some of them while the other ones
+remain quite mysterious. She also gives an algorithm which 
+decides if a permutation is sorted.<BR>
+<BR>
+<!--TOC section Sorting Procedure-->
+
+<H2>2&nbsp;&nbsp; Sorting Procedure</H2><!--SEC END -->
+In his Ph.D. thesis [<A HREF="#west"><CITE>14</CITE></A>], Julian West studied a
+procedure <FONT FACE=symbol>P</FONT> that permutes the letters of a word&nbsp;<FONT FACE=symbol>s</FONT>
+consisting of distinct
+letters in the alphabet {1,2,3, ... }. 
+The procedure uses a stack&nbsp;<I>s</I> and works as follows: <BR>
+<BR>
+<UL>
+<LI>
+<FONT FACE=symbol>t</FONT>:=<FONT FACE=symbol>e</FONT>
+
+<LI><I>s</I>:=<FONT FACE=symbol>e</FONT>
+
+<LI><B>while</B> <FONT FACE=symbol>s</FONT><FONT FACE=symbol>¹</FONT> <FONT FACE=symbol>e</FONT> <B>do</B>
+<UL>
+<LI>
+<I>f</I>:=Firstletter(<FONT FACE=symbol>s</FONT>)
+
+<LI><B>if</B> <I>s</I>=<FONT FACE=symbol>e</FONT> <B>or</B> <I>f</I>&lt;Top(<I>s</I>) 
+<UL>
+<LI>  <B>then</B>
+<UL>
+<LI>
+<I>s</I>:=<I>s</I> <I>f</I>
+
+<LI><FONT FACE=symbol>s</FONT>:=<I>f</I><SUP><FONT SIZE=2>-1</FONT></SUP><FONT FACE=symbol>s</FONT>
+</UL>
+
+<LI><B>else</B>
+<UL>
+<LI>
+<I>s</I>:=<I>s</I> Top(<I>s</I>)<SUP><FONT SIZE=2>-1</FONT></SUP>
+
+<LI><FONT FACE=symbol>t</FONT>:=<FONT FACE=symbol>t</FONT>Top(<I>s</I>)
+</UL>
+</UL>
+</UL>
+
+<LI><B>end</B>
+
+<LI><FONT FACE=symbol>t</FONT>:=<FONT FACE=symbol>t</FONT><I>s</I><SUP><FONT SIZE=2>~</FONT></SUP>
+
+<LI><B>return</B> <FONT FACE=symbol>t</FONT>
+</UL>
+In this procedure, <FONT FACE=symbol>e</FONT> is the empty word, <I>s</I><SUP><FONT SIZE=2>~</FONT></SUP> is the
+mirror of the word <I>s</I> and the inverse <I>b</I><SUP><FONT SIZE=2>-1</FONT></SUP> of a letter <I>b</I> of
+the alphabet 
+{1,2,3, ... } is a new letter with the property 
+<I>b</I> <I>b</I><SUP><FONT SIZE=2>-1</FONT></SUP>=<I>b</I><SUP><FONT SIZE=2>-1</FONT></SUP> <I>b</I> = <FONT FACE=symbol>e</FONT>.
+The output word <FONT FACE=symbol>t</FONT> has <I>n</I> letters, and we define
+it to be <FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT>), the word obtained by <EM>sorting </EM><EM><FONT FACE=symbol>s</FONT></EM><EM>
+through a stack.</EM> 
+This procedure extends a procedure described by Knuth
+[<A HREF="#knuth"><CITE>12</CITE></A><CITE>, p. 238</CITE>]. <BR>
+<BR>
+West observed that the map <FONT FACE=symbol>P</FONT> can alternatively be
+described recursively by <DIV ALIGN=center><FONT FACE=symbol>P</FONT> (<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP> <I>m</I> <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>)
+=<FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP>)<FONT FACE=symbol>P</FONT> (<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>)<I>m</I> </DIV>
+ where <I>m</I> is the largest letter of
+the word <FONT FACE=symbol>s</FONT> = <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP> <I>m</I> <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>.
+With at most <I>n</I>-1 iterations, <FONT FACE=symbol>s</FONT> is an increasing word, <EM>i.e.</EM>
+<FONT FACE=symbol>P</FONT> sorts the letters of <FONT FACE=symbol>s</FONT>.<BR>
+<BR>
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+<IMG SRC="bousquet001.gif">
+</DIV>
+<BR>
+<DIV ALIGN=center>Figure 1: The sorting algorithm applied to <FONT FACE=symbol>s</FONT>=2351674.</DIV><BR>
+
+<A NAME="stack"></A>
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>Let <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB> be the set of permutations of {1,2,...,<I>n</I>}. 
+We represent the action of <FONT FACE=symbol>P</FONT> on <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB> by a <EM>sorting tree</EM>: the nodes of this tree are the elements of <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, and
+an edge connects <FONT FACE=symbol>s</FONT> to <FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT>) for all <FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>. <BR>
+<BR>
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+<IMG SRC="bousquet002.gif">
+</DIV>
+<BR>
+<DIV ALIGN=center>Figure 2: The sorting trees for <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2>3</FONT></SUB> and <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2>4</FONT></SUB>.</DIV><BR>
+
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>
+We can visualise on this tree the four classes of permutations 
+we will consider in this paper.<BR>
+<BR>
+<!--TOC paragraph One-stack sortable permutations-->
+
+<H5> One-stack sortable permutations</H5><!--SEC END -->
+ These permutations occur
+in the last two columns of the sorting 
+tree. Knuth&nbsp;[<A HREF="#knuth"><CITE>12</CITE></A>] proved that the number of such permutations is binomial(2<I>n,n</I>)/(<I>n</I>+1).
+They are exactly the permutations avoiding the pattern 231: there
+exists no triple (<I>i</I>,<I>j</I>,<I>k</I>) with 1<FONT FACE=symbol>£</FONT> <I>i</I>&lt;<I>j</I>&lt;<I>k</I><FONT FACE=symbol>£</FONT> <I>n</I> such that
+<FONT FACE=symbol>s</FONT>(<I>k</I>)&lt;<FONT FACE=symbol>s</FONT>(<I>i</I>)&lt;<FONT FACE=symbol>s</FONT>(<I>j</I>). <BR>
+<BR>
+<!--TOC paragraph Two-stack sortable permutations-->
+
+<H5> Two-stack sortable permutations</H5><!--SEC END -->
+ They occur in the last three
+columns of the sorting tree. Their generating function <FONT FACE=symbol>å</FONT> <I>c</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> <I>x</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> satisfies 
+<DIV ALIGN=center><I>x</I><SUP><FONT SIZE=2>2</FONT></SUP><I>F</I><SUP><FONT SIZE=2>3</FONT></SUP>+<I>x</I>(2+3<I>x</I>)<I>F</I><SUP><FONT SIZE=2>2</FONT></SUP>+(1-14<I>x</I>+3<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)<I>F</I>+<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+11<I>x</I>-1=0.</DIV> West conjectured that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>c</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>2(3<I>n</I>)!</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(2<I>n</I>+1)!(<I>n</I>+1)!</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV> This was proved by Zeilberger&nbsp;[<A HREF="#zeil"><CITE>15</CITE></A>], 
+who found the previous equation and then used the Lagrange inversion formula.<BR>
+<BR>
+<!--TOC paragraph Sorted permutations-->
+
+<H5> Sorted permutations</H5><!--SEC END -->
+ These are those permutations which belong to
+<FONT FACE=symbol>P</FONT>(<FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>). 
+Induction on the length of permutations shows that
+any suffix of a sorted permutation is a sorted word. 
+ Sorted permutations cannot be described in terms of 
+forbidden patterns: in fact any pattern occurs as a factor in some 
+sorted permutation. 
+We shall give a functional
+equation satisfied by their generating function.<BR>
+<BR>
+<!--TOC paragraph Sorted and (one-stack) sortable permutations-->
+
+<H5> Sorted and (one-stack) sortable permutations</H5><!--SEC END -->
+
+Their generating function satisfies
+<DIV ALIGN=center><I>x</I><SUP><FONT SIZE=2>3</FONT></SUP> <I>F</I><SUP><FONT SIZE=2>4</FONT></SUP>+<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>(3+4<I>x</I>)<I>F</I><SUP><FONT SIZE=2>3</FONT></SUP>+<I>x</I>(3-29<I>x</I>+6<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)<I>F</I><SUP><FONT SIZE=2>2</FONT></SUP>+(1-7<I>x</I>+29<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+4<I>x</I><SUP><FONT SIZE=2>3</FONT></SUP>)<I>F</I>-(1-<I>x</I>)<SUP><FONT SIZE=2>3</FONT></SUP>=0.</DIV><BR>
+<!--TOC section Permutations and Trees-->
+
+<H2>3&nbsp;&nbsp; Permutations and Trees</H2><!--SEC END -->
+There is a classical bijection between permutations and binary search trees:
+one gets a permutation from a labelled tree by reading it with a 
+``lower reading'' (you start at the root, and recursively, you read the 
+subtrees, the left one at first, and when you have visited all the left 
+children, you add the label of the current node to a list, the final list 
+is the permutation associated to the tree),
+on the other hand
+one gets a tree from a permutation <FONT FACE=symbol>s</FONT>=<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP> <I>m</I> <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP> by 
+creating recursively the tree with root <I>m</I> and 
+a left subtree associated to <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP> 
+and a right subtree associated to <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>.<BR>
+<BR>
+We will now show on an example an algorithm that decides whether a 
+permutation is sorted and, if it is indeed sorted, gives the pre-image.
+Beginning with <FONT FACE=symbol>t</FONT> = 6.3.11.1.4.5.2.7.9.8.10.12 <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2>12</FONT></SUB>,
+one splits it after each descent: 6 | 3.11 | 1.4.5 | 2.7.9 | 8.10.12
+then one reads it from right to left, and for each factor one creates the
+ associated tree where the root is the maximum and each node has only a right 
+child.
+One gets then fives trees (12,10,8), (9,7,2), (5,4,1), (11,3) and (6).
+And finally one tries to create the associated binary search tree, which is
+possible if and only if <FONT FACE=symbol>t</FONT> is sorted. What is more, by noting <FONT FACE=symbol>s</FONT>
+the word given by a ``lower reading'' of the final tree, 
+we get <FONT FACE=symbol>t</FONT>= <FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT>).
+With our example, we have <FONT FACE=symbol>t</FONT>= <FONT FACE=symbol>P</FONT>(6.11.3.12.9.5.4.1.7.2.10.8) is sorted.<BR>
+<BR>
+<!--TOC section Notations-->
+
+<H2>4&nbsp;&nbsp; Notations</H2><!--SEC END -->
+
+The number of 2<U>3</U> 1 patterns in a permutation <FONT FACE=symbol>s</FONT> 
+is the number of pairs
+(<I>i</I>,<I>k</I>) with <I>i</I>&lt;<I>k</I> such that there exists <I>j</I> <FONT FACE=symbol>Î</FONT> [<I>i</I>, <I>k</I>] with
+<FONT FACE=symbol>s</FONT>(<I>k</I>)&lt;<FONT FACE=symbol>s</FONT>(<I>i</I>)&lt;<FONT FACE=symbol>s</FONT>(<I>j</I>). 
+Note that the number of 2<U>3</U> 1 patterns in a permutation <FONT FACE=symbol>s</FONT>, 
+denoted below INV (<FONT FACE=symbol>s</FONT>), is the number of inversions of 
+<FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT>).
+For instance, the permutation <FONT FACE=symbol>s</FONT> of
+Fig.&nbsp;<A HREF="#stack">1</A> has four 2 <U>3</U> 1 patterns (corresponding
+to the pairs of letters (2,1), (3,1), (5,4) and (6,4)) and
+<FONT FACE=symbol>P</FONT>(<FONT FACE=symbol>s</FONT>) has four inversions (given by the same pairs of letters).
+For <FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, we define <I>z</I>(<FONT FACE=symbol>s</FONT>) by the largest <I>l</I> such that
+<I>n</I>  occurs before  <I>n</I>-1 and <I>n</I>-1  occurs 
+before  <I>n</I>-2 and ··· and 
+<I>n</I>-(<I>l</I> -2)  occurs before  <I>n</I>-(<I>l</I>-1)}.
+For instance, <I>z</I>(519268374)=3.
+For <I>m</I>,<I>n</I> <FONT FACE=symbol>³</FONT> 0, we define the sets <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> 
+and <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> = { <FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>+<I>n</I></FONT></SUB> : <I>z</I>(<FONT FACE=symbol>s</FONT>) <FONT FACE=symbol>³</FONT> <I>n</I> }
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT COLOR=red> <I>S</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> = { <FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>+<I>n</I></FONT></SUB> : <I>z</I>(<FONT FACE=symbol>s</FONT>)
+= <I>n</I> }.</TD>
+</TR></TABLE></DIV> <BR>
+Let <FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> <FONT COLOR=red> <I>S</I></FONT><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB>
+and <FONT FACE=symbol>s</FONT>=<FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>L</I></FONT></SUP> <I>m</I> <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>, we note <I>m</I>' the largest letter of <FONT FACE=symbol>s</FONT><SUP><FONT SIZE=2><I>R</I></FONT></SUP>,
+so we have the factorisation <FONT FACE=symbol>s</FONT>=<I>A</I> <I>m</I>' <I>B</I>. It is this factorisation which 
+allowed the author to find equations verified by the generating functions.
+We will use the usual notations [<I>n</I>]=1+<I>q</I>+... + <I>q</I><SUP><FONT SIZE=2><I>n</I>-1</FONT></SUP>=1-<I>q</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>/1-<I>q</I>
+and [<I>n</I>]!=[1][2] ··· [<I>n</I>]. Let <FONT COLOR=red> <I>C</I></FONT> be a set of 
+permutations. By the <EM>ordinary</EM> (resp. <EM>exponential</EM>) <EM>generating function of</EM> <FONT COLOR=red> <I>C</I></FONT> we mean the series
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>C</I>(<I>x</I>,<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>, <I>n</I> <FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB><I>x</I><SUP><FONT SIZE=2><I>m</I></FONT></SUP><I>y</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>,
+&nbsp;&nbsp;&nbsp;&nbsp;resp.</TD>
+<TD NOWRAP>&nbsp;&nbsp;
+<I>C</I>(<I>x</I>,<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>, <I>n</I> <FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2><I>m</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>m</I>!</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>y</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>,</TD>
+</TR></TABLE></DIV>
+where <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> is the number of permutations <FONT FACE=symbol>s</FONT> of <FONT COLOR=red> <I>C</I></FONT> 
+of length <I>m</I>+<I>n</I> such that <I>z</I>(<FONT FACE=symbol>s</FONT>) <FONT FACE=symbol>³</FONT> <I>n</I>. The <EM>ordinary</EM> (resp. <EM>Eulerian</EM>) INV-<EM>generating function of</EM> <FONT COLOR=red> <I>C</I></FONT> is
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>C</I>(<I>x</I>,<I>y</I>;<I>q</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>, <I>n</I> <FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB><I>x</I><SUP><FONT SIZE=2><I>m</I></FONT></SUP><I>y</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>,
+&nbsp;&nbsp;&nbsp;&nbsp;resp.</TD>
+<TD NOWRAP>&nbsp;&nbsp;
+ <I>C</I>(<I>x</I>,<I>y</I>;<I>q</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>, <I>n</I> <FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2><I>m</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>[<I>m</I>]!</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>y</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>,</TD>
+</TR></TABLE></DIV>
+where <I>c</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB>=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><FONT FACE=symbol>s</FONT> <FONT FACE=symbol>Î</FONT> </FONT></SUB><SUB><FONT SIZE=2><FONT COLOR=red> <I>C</I></FONT></FONT></SUB><SUB><FONT SIZE=2> <FONT FACE=symbol>Ç</FONT> </FONT></SUB><SUB><FONT SIZE=2><FONT COLOR=red> <I>S</I></FONT></FONT></SUB><SUB><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB></SUB>
+<I>q</I><SUP><FONT SIZE=2>INV</FONT></SUP><SUP><FONT SIZE=2>(<FONT FACE=symbol>s</FONT>)</FONT></SUP>. The definition for the inv-<EM>generating function of</EM> <FONT COLOR=red> <I>C</I></FONT> is similar.<BR>
+<BR>
+<!--TOC section Functional Equations-->
+
+<H2>5&nbsp;&nbsp; Functional Equations</H2><!--SEC END -->
+<DIV ALIGN=left><B>Proposition&nbsp;1</B>&nbsp;&nbsp;<EM> </EM><A NAME="A-eq-q"></A><EM>
+The Eulerian </EM><EM>INV</EM><EM>-generating function </EM><EM><I>A</I>(<I>x</I>,<I>y</I>;<I>q</I>)</EM><EM> for general permutations is completely characterised by the
+initial condition </EM><EM><I>A</I>(0,<I>y</I>;<I>q</I>)=1/(1-<I>y</I>)</EM><EM> and the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>A</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>A</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>x</I>(1-<I>q</I>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> =</EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM> 1+<I>y</I> <I>A</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>A</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>A</I>(<I>x</I>,0;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM><A NAME="A-eq-premiere"></A></TD>
+</TR></TABLE></DIV><EM>
+In the limit </EM><EM><I>q</I><FONT FACE=symbol>®</FONT> 1</EM><EM>, we find, for the series </EM><EM><I>A</I>(<I>x</I>,<I>y</I>)</EM><EM>, the
+initial condition </EM><EM><I>A</I>(0,<I>y</I>)=1/(1-<I>y</I>)</EM><EM> and the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>A</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>x</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> (<I>x</I>,<I>y</I>) =</EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM> 1+<I>yA</I>(<I>x</I>,<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>A</I>(<I>x</I>,<I>y</I>)-<I>A</I>(<I>x</I>,0)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM><A NAME="A-eq"></A></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Proposition&nbsp;2</B>&nbsp;&nbsp;<EM> </EM><A NAME="B-eq"></A><EM>
+The ordinary generating function </EM><EM><I>B</I>(<I>x</I>,<I>y</I>)</EM><EM> for one-stack sortable permutations 
+ is completely characterised by the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>B</I>(<I>x</I>,<I>y</I>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> +</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>x</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>B</I>(<I>x</I>,<I>y</I>)-<I>B</I>(<I>x</I>,0)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM></TD>
+</TR></TABLE></DIV></DIV><BR>
+<DIV ALIGN=left><B>Proposition&nbsp;3</B>&nbsp;&nbsp;<EM> </EM><A NAME="C-eq-q"></A><EM>
+The ordinary </EM><EM>INV</EM><EM>-generating function </EM><EM><I>C</I>(<I>x</I>,<I>y</I>)</EM><EM> for two-stack 
+sortable permutations is completely characterised by the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>C</I> (<I>x</I>,<I>y</I>;<I>q</I>) = </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+ <I>x</I></EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM>1+<I>y</I> <I>C</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>C</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>C</I>(<I>x</I>,0;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Proposition&nbsp;4</B>&nbsp;&nbsp;<EM> </EM><A NAME="D-eq-q"></A><EM>
+The Eulerian </EM><EM>inv</EM><EM>-generating function </EM><EM><I>D</I>(<I>x</I>,<I>y</I>;<I>q</I>) </EM><EM> for sorted 
+permutations is completely characterised
+by the initial condition 
+</EM><EM><I>D</I>(0,<I>y</I>;<I>q</I>)=1/(1-<I>y</I>)</EM><EM> and the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>D</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>D</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>x</I>(1-<I>q</I>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> =(1-<I>y</I>) </EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM> 1+<I>y</I>
+<I>D</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>D</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>D</I>(<I>x</I>,0;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.
+</EM><A NAME="D-eq-premiere"></A><EM> </EM></TD>
+</TR></TABLE></DIV><EM>
+In the limit </EM><EM><I>q</I><FONT FACE=symbol>®</FONT> 1</EM><EM>, we obtain for the exponential generating
+function </EM><EM><I>D</I>(<I>x</I>,<I>y</I>) </EM><EM> the initial condition 
+</EM><EM><I>D</I>(0,<I>y</I>)=1/(1-<I>y</I>)</EM><EM> and the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>D</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>x</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> (<I>x</I>,<I>y</I>) =(1-<I>y</I>) </EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM> 1+<I>yD</I>(<I>x</I>,<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>D</I>(<I>x</I>,<I>y</I>)-<I>D</I>(<I>x</I>,0)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Proposition&nbsp;5</B>&nbsp;&nbsp;<EM> </EM><A NAME="E-eq-q"></A><EM>
+The ordinary </EM><EM>inv</EM><EM>-generating function </EM><EM><I>E</I>(<I>x</I>,<I>y</I>;<I>q</I>)</EM><EM> for sorted and
+sortable permutations is completely characterised by the equation
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>E</I> (<I>x</I>,<I>y</I>;<I>q</I>) = </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+ <I>x</I>(1-<I>y</I>) </EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM>1+<I>y</I> <I>E</I>(<I>xq</I>,<I>y</I>;<I>q</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM> <I>E</I>(<I>x</I>,<I>y</I>;<I>q</I>)- <I>E</I>(<I>x</I>,0;<I>q</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>. </EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<!--TOC paragraph Remarks-->
+
+<H5> Remarks</H5><!--SEC END -->
+
+The ordinary length generating function <I>B</I>(<I>x</I>,0) for
+one-stack sortable permutations can be solved by the kernel method.
+The equations of Propositions&nbsp;<A HREF="#C-eq-q">3</A> (two-stack sortable permutations) 
+and&nbsp;<A HREF="#E-eq-q">5</A> (sorted and sortable permutations) can be solved when <I>q</I>=1 via the so-called 
+<EM>quadratic method</EM>, which is due to Brown&nbsp;[<A HREF="#brown"><CITE>6</CITE></A><CITE>, section 2.9.1</CITE>].
+There is no known <I>q</I>-analogue of this method!
+On the other hand, the equations for the general permutations and for
+sorted permutations can be ``solved'' as we will see in the next section.<BR>
+<BR>
+<!--TOC section Solving Equations with a <I>q</I>-Derivative-->
+
+<H2>6&nbsp;&nbsp; Solving Equations with a <I>q</I>-Derivative</H2><!--SEC END -->
+
+Both equations are of the following form:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT> <I>F</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT> <I>x</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> (<I>x</I>,<I>y</I>) =<I>c</I>(<I>y</I>) </TD>
+<TD NOWRAP>[</TD>
+<TD NOWRAP> 1+<I>yF</I>(<I>x</I>,<I>y</I>)</TD>
+<TD NOWRAP>]</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>F</I>(<I>x</I>,<I>y</I>)-<I>F</I>(<I>x</I>,0)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>y</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>, <A NAME="eq-F"></A> 
+&nbsp;&nbsp;&nbsp;&nbsp;(1)</TD>
+</TR></TABLE></DIV>
+where <I>c</I>(<I>y</I>)=1 for general permutations and <I>c</I>(<I>y</I>)=1-<I>y</I> for sorted permutations. <BR>
+<BR>
+One uses the two following results in order to ``solve'' these equations.
+<DIV ALIGN=left><B>Lemma&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Bernoulli linearisation]&nbsp;&nbsp;</FONT><EM>
+Let </EM><EM><I>F</I>(<I>x</I>,<I>y</I>) <FONT FACE=symbol>Î</FONT> </EM><EM><B><I>R</I></B></EM><EM>(<I>y</I>)[[<I>x</I>]]</EM><EM> be defined by the initial condition
+</EM><EM><I>F</I>(0,<I>y</I>)=1/(1-<I>y</I>)</EM><EM> and Eq.&nbsp;</EM>(<A HREF="#eq-F">1</A>)<EM>, with </EM><EM><I>c</I>(<I>y</I>)=1</EM><EM> or
+</EM><EM><I>c</I>(<I>y</I>)=1-<I>y</I></EM><EM>. Let </EM><EM><I>G</I>(<I>x</I>,<I>y</I>)</EM><EM> be 
+the following series of </EM><EM><B><I>R</I></B></EM><EM>(<I>y</I>)[[<I>x</I>]]</EM><EM>:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>G</I>(<I>x</I>,<I>y</I>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>c</I>(<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM>1+<I>yF</I>(<I>x</I>,<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+Then </EM><EM><I>G</I>(0,<I>y</I>)=(1-<I>y</I>)/<I>c</I>(<I>y</I>)</EM><EM> and
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>y</I> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>G</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>x</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(<I>x</I>,<I>y</I>)-<I>c</I>(<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM>1+<I>yF</I>(<I>x</I>,0)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM><I>G</I>(<I>x</I>,<I>y</I>)+1=0.</EM><A NAME="G-eq-q"></A><EM> </EM></TD>
+</TR></TABLE></DIV><EM>
+Most importantly, </EM><EM><I>G</I>(<I>x</I>,<I>y</I>)</EM><EM> has </EM>polynomial coefficients<EM> in </EM><EM><I>y</I></EM><EM>, i.e.,
+</EM><EM><I>G</I>(<I>x</I>,<I>y</I>) <FONT FACE=symbol>Î</FONT> </EM><EM><B><I>R</I></B></EM><EM>[<I>y</I>][[<I>x</I>]]</EM><EM>.
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Lemma&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[Laplace transform]&nbsp;&nbsp;</FONT><EM> </EM><A NAME="laplace"></A><EM>
+Let </EM><EM><I>h</I>(<I>x</I>,<I>y</I>) <FONT FACE=symbol>Î</FONT> </EM><EM><B><I>R</I></B></EM><EM>[<I>y</I>][[<I>x</I>]]</EM><EM> be a formal series in </EM><EM><I>x</I></EM><EM> with polynomial
+coefficients in </EM><EM><I>y</I></EM><EM>. Let </EM><EM><I>G</I>(<I>x</I>,<I>y</I>)</EM><EM> be the series of </EM><EM><B><I>R</I></B></EM><EM>(<I>y</I>)[[<I>x</I>]]</EM><EM>
+defined by an initial condition </EM><EM><I>G</I>(0,<I>y</I>) <FONT FACE=symbol>Î</FONT> </EM><EM><B><I>R</I></B></EM><EM>(<I>y</I>)</EM><EM> and the
+differential equation:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>y</I> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>G</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>¶</FONT> <I>x</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(<I>x</I>,<I>y</I>)-</EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM>1+<I>yh</I>(<I>x</I>,<I>y</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM><I>G</I>(<I>x</I>,<I>y</I>)+1=0. </EM></TD>
+</TR></TABLE></DIV><EM>
+Let 
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>H</I>(<I>x</I>,<I>y</I>) = </EM><EM>exp</EM><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+é<BR>ê<BR>ê<BR>ê<BR>ê<BR>ë</FONT></EM></TD>
+<TD NOWRAP><EM> - </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>ó<BR>õ</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2><I>x</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=left><EM><BR><BR></EM></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>h</I>(<I>u</I>,<I>y</I>) </EM><EM> <I>d</I></EM><EM> <I>u</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ù<BR>ú<BR>ú<BR>ú<BR>ú<BR>û</FONT></EM></TD>
+<TD NOWRAP><EM>= </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>i</I><FONT FACE=symbol>³</FONT> 0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+<I>H</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB><EM>(<I>y</I>) </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>x</I></EM><SUP><EM><FONT SIZE=2><I>i</I></FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>i</I>!</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+Then the coefficients of </EM><EM><I>G</I>(<I>x</I>,<I>y</I>)</EM><EM> are polynomials in </EM><EM><I>y</I></EM><EM> if and only
+if </EM><EM><I>G</I>(0,<I>y</I>)<FONT FACE=symbol>Î</FONT> </EM><EM><B><I>R</I></B></EM><EM>[<I>y</I>]</EM><EM> and
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>i</I><FONT FACE=symbol>³</FONT> 0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>H</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB><EM>(<I>y</I>) <I>y</I></EM><SUP><EM><FONT SIZE=2><I>i</I></FONT></EM></SUP><EM>=<I>G</I>(0,<I>y</I>).</EM></TD>
+</TR></TABLE></DIV><EM>
+In other words, the Laplace transform of </EM><EM><I>H</I>(<I>x</I>,<I>y</I>)</EM><EM> with respect
+to </EM><EM><I>x</I></EM><EM>
+is exactly </EM><EM><I>G</I>(0,<I>y</I>)</EM><EM> when evaluated at </EM><EM><I>x</I>=<I>y</I></EM><EM>:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>ó<BR>õ</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=left><EM><BR><BR></EM></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><I>e</I></EM><SUP><EM><FONT SIZE=2>-<I>u</I>/<I>y</I></FONT></EM></SUP><EM><I>H</I>(<I>u</I>,<I>y</I>) <I>d</I> <I>u</I> =<I>G</I>(0,<I>y</I>). </EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+For <EM>general permutations</EM>, with <I>c</I>(<I>y</I>)=1, one gets
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I>(<I>x</I>,<I>y</I>)=<I>A</I>(<I>x</I>,<I>y</I>) =</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<I>x</I>-<I>y</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+For <EM>sorted permutations</EM>, with <I>c</I>(<I>y</I>)=1-<I>y</I>,
+the series <I>F</I>(<I>x</I>,<I>y</I>) is the exponential generating function <I>D</I>(<I>x</I>,<I>y</I>) for 
+sorted permutations.
+ The series <I>G</I>(<I>x</I>,<I>y</I>)=1/[ (1-<I>y</I>) (1+<I>yD</I>(<I>x</I>,<I>y</I>))] satisfies&nbsp;(<A HREF="#G-eq-q">1</A>) 
+with <I>h</I>(<I>x</I>,<I>y</I>)=(1-<I>y</I>)<I>D</I>(<I>x</I>,0)-1. Moreover, <I>G</I>(0,<I>y</I>)=1. 
+With the notations of Lemma <A HREF="#laplace">2</A>, we have:
+<DIV ALIGN=center><I>H</I>(<I>x</I>,<I>y</I>)=exp(<I>x</I>+(<I>y</I>-1) <FONT COLOR=red> <I>D</I></FONT> (<I>x</I>))</DIV>
+where <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT COLOR=red> <I>D</I></FONT></TD>
+<TD NOWRAP>(<I>x</I>) = </TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>x</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>D</I>(<I>u</I>,0)<I>du</I>.</TD>
+</TR></TABLE></DIV> Lemma <A HREF="#laplace">2</A> gives 
+the following result.<BR>
+<BR>
+<DIV ALIGN=left><B>Proposition&nbsp;6</B>&nbsp;&nbsp;<EM> Let 
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><FONT COLOR=red> <I>D</I></FONT></EM></TD>
+<TD NOWRAP><EM>(<I>x</I>) = </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>m</I><FONT FACE=symbol>³</FONT> 0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> <I>d</I></EM><SUB><EM><FONT SIZE=2><I>m</I>,0</FONT></EM></SUB><EM> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>x</I></EM><SUP><EM><FONT SIZE=2><I>m</I>+1</FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>(<I>m</I>+1)!</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><EM> 
+where </EM><EM><I>d</I></EM><SUB><EM><FONT SIZE=2><I>m</I>,0</FONT></EM></SUB><EM> is the number of sorted 
+ permutations of length </EM><EM><I>m</I></EM><EM>. Then the series </EM><EM><FONT COLOR=red> <I>D</I></FONT></EM><EM>(<I>x</I>)</EM><EM> is
+completely characterised by the following equation:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>ó<BR>õ</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=left><EM><BR><BR></EM></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><EM><FONT SIZE=2>0</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><I>e</I></EM><SUP><EM><FONT SIZE=2>-<I>u</I>(1-<I>y</I>)/<I>y</I></FONT></EM></SUP><EM> </EM><EM>exp</EM><EM> </EM></TD>
+<TD NOWRAP><EM>[</EM></TD>
+<TD NOWRAP><EM> (<I>y</I>-1)</EM><EM><FONT COLOR=red> <I>D</I></FONT></EM><EM>
+(<I>u</I>)</EM></TD>
+<TD NOWRAP><EM>]</EM></TD>
+<TD NOWRAP><EM><I>du</I> = 1-<I>y</I>.</EM></TD>
+</TR></TABLE></DIV><EM>
+In other words, let 
+</EM><EM><I>K</I> (<I>x</I>,<I>y</I>)= </EM><EM>exp</EM><EM> [ (<I>y</I>-1)</EM><EM><FONT COLOR=red> <I>D</I></FONT></EM><EM> (<I>x</I>)]=<FONT FACE=symbol>å</FONT></EM><SUB><EM><FONT SIZE=2><I>i</I><FONT FACE=symbol>³</FONT> 0</FONT></EM></SUB><EM> <I>K</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB><EM>(<I>y</I>) <I>x</I></EM><SUP><EM><FONT SIZE=2><I>i</I></FONT></EM></SUP><EM> / <I>i</I>!</EM><EM>,
+and let </EM><EM><I>K</I></EM><SUP><EM><FONT SIZE=2>^</FONT></EM></SUP><EM> (<I>x</I>,<I>y</I>)= <FONT FACE=symbol>å</FONT></EM><SUB><EM><FONT SIZE=2><I>i</I><FONT FACE=symbol>³</FONT> 0</FONT></EM></SUB><EM> <I>K</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB><EM>(<I>y</I>) <I>x</I></EM><SUP><EM><FONT SIZE=2><I>i</I></FONT></EM></SUP><EM> </EM><EM> be its Laplace transform 
+with respect to </EM><EM><I>x</I></EM><EM>.
+Then
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>^</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>K</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>y</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1-<I>y</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>, <I>y</I></EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>= 1-<I>y</I>,&nbsp;&nbsp;&nbsp;&nbsp;</EM><EM> or, equivalently</EM></TD>
+<TD NOWRAP><EM>&nbsp;&nbsp;
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>^</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>K</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></EM></TD>
+<TD NOWRAP><EM> <I>u</I>, </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>u</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1+<I>u</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> </EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>= </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>1+<I>u</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+The first coefficients of the series are
+1,1,2,5,17,68,326,1780,11033,76028,578290,4803696.
+One does not know if this series is algebraic, <I>D</I>-finite,...Thus, the generating function for sorted permutations remains mysterious.
+Mireille Bousquet-Mélou will give a solving method
+for the full <I>q</I>-analogue equations in a for coming paper.<BR>
+<BR>
+
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="florence"><FONT COLOR=purple>[1]</FONT></A><DD>
+Barcucci (Elena), Del Lungo (Alberto), Lanini (S.), Macrí (M.), and
+ Pinzani (Renzo).&nbsp;--
+The inversion number of some permutations with forbidden
+ subsequences. Proceedings of SOCA'96 Tianjin, 1996,
+ pp.&nbsp;21--32.<BR>
+<BR>
+
+<DT><A NAME="bousquet-temperley"><FONT COLOR=purple>[2]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+A method for the enumeration of various classes of column-convex
+ polygons. <EM>Discrete Mathematics</EM>, vol.&nbsp;154, n&deg;1-3,
+ 1996, pp.&nbsp;1--25.<BR>
+<BR>
+
+<DT><A NAME="mbm-2ss"><FONT COLOR=purple>[3]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+Multi-statistic enumeration of two-stack sortable permutations. <EM>Electronic Journal of Combinatorics</EM>, vol.&nbsp;5, n&deg;1, 1998.<BR>
+<BR>
+
+<DT><A NAME="Bo98"><FONT COLOR=purple>[4]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+Sorted and/or sortable permutation. <EM>Preprint, LaBRI</EM>,
+ 1998.<BR>
+<BR>
+
+<DT><A NAME="brown-dissections"><FONT COLOR=purple>[5]</FONT></A><DD>
+Brown (William&nbsp;G.).&nbsp;--
+Enumeration of quadrangular dissections of the disk. <EM>Canadian
+ Journal of Mathematics</EM>, vol.&nbsp;17, 1965, pp.&nbsp;302--317.<BR>
+<BR>
+
+<DT><A NAME="brown"><FONT COLOR=purple>[6]</FONT></A><DD>
+Brown (William&nbsp;G.).&nbsp;--
+On the existence of square roots in certain rings of power series.
+ <EM>Mathematische Annalen</EM>, vol.&nbsp;158, 1965, pp.&nbsp;82--89.<BR>
+<BR>
+
+<DT><A NAME="brown-maps"><FONT COLOR=purple>[7]</FONT></A><DD>
+Brown (William&nbsp;G.).&nbsp;--
+On the enumeration of non-planar maps. <EM>Memoirs of the American
+ Mathematical Society</EM>, vol.&nbsp;65, 1966, p.&nbsp;42.<BR>
+<BR>
+
+<DT><A NAME="brown-tutte"><FONT COLOR=purple>[8]</FONT></A><DD>
+Brown (William&nbsp;G.) and Tutte (William&nbsp;Thomas).&nbsp;--
+On the enumeration of rooted non-separable planar maps. <EM>Canadian
+ Journal of Mathematics</EM>, vol.&nbsp;16, 1964, pp.&nbsp;572--577.<BR>
+<BR>
+
+<DT><A NAME="Cori"><FONT COLOR=purple>[9]</FONT></A><DD>
+Cori (Robert), Jacquard (B.), and Schaeffer (Gilles).&nbsp;--
+Description trees for some families of planar maps. In <EM>Formal
+ Power Series and Algebraic Combinatorics</EM>, pp.&nbsp;196--208.&nbsp;--
+1997. Proceedings of the 9th Conference, Vienna.<BR>
+<BR>
+
+<DT><A NAME="CoRi72"><FONT COLOR=purple>[10]</FONT></A><DD>
+Cori (Robert) and Richard (Jean).&nbsp;--
+Énumération des graphes planaires à l'aide des séries
+ formelles en variables non commutatives. <EM>Discrete Mathematics</EM>, vol.&nbsp;2,
+ 1972, pp.&nbsp;115--162.<BR>
+<BR>
+
+<DT><A NAME="MR98a:05081"><FONT COLOR=purple>[11]</FONT></A><DD>
+Dulucq (Serge), Gire (S.), and West (Julian).&nbsp;--
+Permutations with forbidden subsequences and nonseparable planar
+ maps. <EM>Discrete Mathematics</EM>, vol.&nbsp;153, n&deg;1-3, 1996,
+ pp.&nbsp;85--103.<BR>
+<BR>
+
+<DT><A NAME="knuth"><FONT COLOR=purple>[12]</FONT></A><DD>
+Knuth (Donald&nbsp;E.).&nbsp;--
+<EM>The Art of Computer Programming</EM>.&nbsp;--
+Addison-Wesley, 1973, vol.&nbsp;1.<BR>
+<BR>
+
+<DT><A NAME="rawlings2"><FONT COLOR=purple>[13]</FONT></A><DD>
+Rawlings (Don).&nbsp;--
+The Euler-Catalan identity. <EM>European Journal of
+ Combinatorics</EM>, vol.&nbsp;9, n&deg;1, 1988, pp.&nbsp;53--60.<BR>
+<BR>
+
+<DT><A NAME="west"><FONT COLOR=purple>[14]</FONT></A><DD>
+West (Julian).&nbsp;--
+<EM>Permutations with restricted subsequences and stack-sortable
+ permutations</EM>.&nbsp;--
+PhD thesis, MIT, 1990.<BR>
+<BR>
+
+<DT><A NAME="zeil"><FONT COLOR=purple>[15]</FONT></A><DD>
+Zeilberger (Doron).&nbsp;--
+A proof of Julian West's conjecture that the number of
+ two-stack-sortable permutations of length <I>n</I> is 2(3<I>n</I>)!/((<I>n</I>+1)!(2<I>n</I>+1)!).
+ <EM>Discrete Mathematics</EM>, vol.&nbsp;102, n&deg;1, 1992,
+ pp.&nbsp;85--93.</DL>
+
+
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="0" height="0"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+
+</HTML>
+

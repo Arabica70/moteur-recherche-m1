@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page perso Thomas Rubiano</title>
+    <link rel="stylesheet" href="/~rubiano/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <!-- <meta name="generator" content="nanoc 3.8.0"> -->
+  </head>
+  <body>
+    <div id="main">
+      
+<h1 id="thomas-rubiano">Thomas Rubiano</h1>
+
+<p>I did my PhD at the <a href="http://lipn.univ-paris13.fr/">LIPN</a> at Université
+Paris 13 and <a href="http://www.diku.dk/english/about/">DIKU</a> at University of Copenhagen. I implemented some Implicit Computational Complexity theories.
+This thesis was supervised by
+<a href="http://lipn.univ-paris13.fr/~moyen/">Jean-Yves Moyen</a>, <a href="http://lipn.univ-paris13.fr/~mogbil/">Virgile
+Mogbil</a> and <a href="http://www.diku.dk/~simonsen/">Jakob Grue Simonsen</a>, it’s funded by the <a href="http://lipn.univ-paris13.fr/~mazza/Elica/">ELICA ANR
+project</a>. I’m currently working on a <a href="http://llvm.org/">LLVM</a> module able to hoist quasi-invariant chunks in loops.</p>
+
+<h2 id="contact">Contact</h2>
+
+<ul>
+  <li>rubiano at lipn dot univ-paris13 dot fr</li>
+  <li>Université Paris 13 - Institut Galilée - Bureau B103 - 99, avenue
+Jean-Baptiste Clément F-93430 Villetaneuse</li>
+  <li><strong>IRC</strong> : <em>rubiano</em> on <a href="freenode.net">freenode</a></li>
+  <li><strong>Framasphere</strong> : <em>ruby@framasphere.org</em></li>
+  <li><strong>Github</strong> : <a href="https://github.com/ThomasRuby"><em>ThomasRuby</em></a></li>
+</ul>
+
+<h2 id="curriculum-vitae">Curriculum Vitae</h2>
+
+<p>You can find my thesis <a href="./thesis.pdf">here</a> and the slides of my defense <a href="./thesis_slides.pdf">here</a>.</p>
+
+<p>You can find my CV <a href="./Professional_CV.pdf">here</a></p>
+
+    </div>
+    <div id="sidebar">
+      <h2><a href="/~rubiano/">About me</a></h2>
+      <ul>
+        <li><a href="/~rubiano/subject/">PhD Thesis</a></li>
+        <li><a href="/~rubiano/talks/">Talks</a></li>
+      </ul>
+      <h2>Teaching</h2>
+      <ul>
+        <li><a href="/~rubiano/ING1/">Ingénieur Première année</a></li>
+        <li><a href="/~rubiano/L1/">Licence Première année</a></li>
+      </ul>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://fsf.org/">Free Software Foundation</a></li>
+        <li><a href="http://framasoft.org/">Framasoft</a></li>
+        <li><a href="http://www.april.org/">April</a></li>
+        <li><a href="http://www.laquadrature.net/">La Quadrature du Net</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

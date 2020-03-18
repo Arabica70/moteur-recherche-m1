@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Sami Evangelista</title>
+  <meta name="author" content="Sami Evangelista">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">  
+</head>
+<body>
+<big style="font-weight: bold;">
+  <big>
+    Sami Evangelista
+  </big>
+</big>
+<hr style="width: 100%; height: 2px;"><br> Maître de conférences à
+l'université Paris 13, membre
+du <a href="http://www-lipn.univ-paris13.fr">LIPN</a>, dans l'équipe
+<a href="http://www-lipn.univ-paris13.fr/LCR/">LCR</a>, axe
+<a href="http://www-lipn.univ-paris13.fr/specif/">Spécification et
+vérification</a>.
+<br><br>
+<table style="text-align: left; width: 603px; height: 60px;" border="0"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td valign="top">Adresse</td>
+      <td>
+	Laboratoire d'Informatique de l'Universit&eacute; Paris Nord<br>
+	Institut Galil&eacute;e<br>
+	Avenue J.B. Cl&eacute;ment<br>
+	93430 Villetaneuse<br>
+	FRANCE
+      </td>
+    </tr>
+    <tr>
+      <td>Tel.</td>
+      <td>[+33 1]/[01] 49 40 36 62 (LIPN)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>[+33 1]/[01] 49 40 36 28 (IUT)</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>first-name.last-name at lipn.univ-paris13.fr</td>
+    </tr>
+  </tbody>
+</table>
+<hr style="width: 100%; height: 2px;">
+Quelques liens :
+<ul>
+  <li><a href="helena/">L'outil helena</a></li>
+  <li><a href="cours/">Page de cours</a></li>
+  <li><a href="publis/">Publications</a></li>
+</ul>
+</body>
+</html>

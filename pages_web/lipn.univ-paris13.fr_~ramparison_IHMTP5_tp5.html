@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>TD-IG2</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.2  (Unix)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Thierry Charnois">
+	<META NAME="CHANGED" CONTENT="20160609;11502600">
+	<STYLE TYPE="text/css">
+	<!--
+		H1 { color: #000000 }
+		P { color: #000000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" TEXT="#000000" DIR="LTR">
+<H1>Java IHM</H1>
+<H1><FONT SIZE=5>Département Informatique – DUT app</FONT></H1>
+<H1>TP - TD Dessin (1)</H1>
+<P><FONT SIZE=5><B>Exercice 1</B></FONT><BR><BR><FONT SIZE=5>Exécutez
+le fichier 'AFaire.class' et testez les différentes actions souris
+et souris (déplacement de la souris en cliquant, sans cliquer...).
+Testez notamment les combinaisons de touche suivantes : &lt; Ctrl + c
+&gt;, &lt; Alt + r &gt;, &lt; Ctrl + Alt + Shift + d &gt;</FONT><BR><BR><FONT SIZE=5><B>Exercice
+2</B></FONT><BR><BR><FONT SIZE=5>Ouvrez le fichier 'Squelette.java'
+et faites les modifications nécessaires pour avoir un programme
+équivalent à 'AFaire'.</FONT><BR><BR><FONT SIZE=5><B>Exercice 3</B></FONT><BR><BR><FONT SIZE=5>Si
+l'on iconifie la fenêtre, le dessin disparaît. Corrigez le problème
+(utilisez notamment un tableau de points nommé 'dess').</FONT><BR><BR><FONT SIZE=5><B>Exercice
+4</B></FONT> <FONT SIZE=5><B><BR><BR></B></FONT><FONT SIZE=5>Modifiez
+le code en utilisant un </FONT><FONT SIZE=5><B>JPanel </B></FONT><FONT SIZE=5>pour
+le tracé du dessin et un </FONT><FONT SIZE=5><B>JLabel (ou mieux un
+JTextArea), </B></FONT><FONT SIZE=5>placé dans un JPanel au bas de
+la fenêtre, pour l'affichage du texte de la console.</FONT><FONT SIZE=5><B><BR></B></FONT><BR><BR>
+</P>
+<P><FONT SIZE=5><B>Exercice 5<BR><BR></B></FONT><FONT SIZE=5><SPAN STYLE="font-weight: normal">Générez
+une exception si l'on tente de dépasser la capacité du tableau. </SPAN></FONT>
+</P>
+<P><FONT SIZE=5><B>Exercice 6</B></FONT></P>
+<P><FONT SIZE=5><SPAN STYLE="font-weight: normal">On pourra aussi
+utiliser une liste de type ArrayList.</SPAN></FONT><FONT SIZE=5><B><BR><BR>Exercice
+7<BR><BR></B></FONT><FONT SIZE=5><SPAN STYLE="font-weight: normal">On
+souhaite maintenant sauver dans un fichier votre beau dessin. Ecrire
+les méthodes permettant la sauvegarde et le chargement d'un tel
+fichier.</SPAN></FONT><FONT SIZE=5><B><BR></B></FONT><BR><BR>
+</P>
+Suite du Dessin... 
+
+
+<p>Au lieu d'utiliser un tableau de coordonnees, on va maintenant utiliser une liste de figures geométriques pour memoriser le dessin que vous réalisez à la souris. On veut également mémoriser non seulement les segments de droite, mais aussi toutes les figures geométriques (cercle, rectangle, triangle...).</p>
+<p>Pour ce faire, on utilisera l'interface suivante :
+<br><br>
+	interface Tracable{
+	<br>	public void dessine(Graphics g);
+	<br>}
+</p>
+<p> Modifiez le programme réalisé au TP précédent qui permettront d'obtenir les fonctionnalités suivantes :</p>
+<p>
+1 l'appui sur une touche du clavier modifie le mode de tracé :<br>
+	&lt; c &gt; pour un cercle, &lt; Alt + c &gt; pour un cercle peint, etc.
+    un clic souris dessinant la figure en fonction du mode sélectionné ;</p>
+<p>
+2 pour chaque figure dessinée, un objet de la classe correspondante est instancié et l'instance est mémorisée dans une liste ;
+</p>
+<p>3 on souhaite utiliser un mode "couleur" permettant de changer la couleur de la figure à dessiner parmi un ensemble de couleurs mémorisés dans un tableau. Ainsi, les appuis successifs sur une touche (par exemple '1') permettront de dessiner en bleu, puis en rouge....
+</p>
+<p>
+4 On ajoutera des boutons qui rempliront aussi ces fonctions :
+on souhaite utiliser un mode "couleur" permettant de changer la couleur de la figure à dessiner parmi un ensemble de couleurs.
+</p>
+<p>
+conseils : </p>
+<p>	- utiliser la méthode requestFocus() pour obtenir le focus si les touches clavier "ne répondent pas" ;</p>
+<p>	- utiliser la méthode setColor(Color c) de la classe Graphics pour changer la couleur de trait ;</p>
+<p>	- voir la documentation Java de la classe Color.
+</p>
+
+
+</BODY>
+</HTML>

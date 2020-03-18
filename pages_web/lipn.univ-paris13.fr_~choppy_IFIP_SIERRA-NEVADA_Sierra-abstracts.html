@@ -1,0 +1,352 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the Sierra Nevada IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talks at the Sierra Nevada IFIP WG1.3 meeting (January 14-18th, 2008)</H2>
+</CENTER>
+== Monday, January 14th, 2008
+<LI>1 - <a name="LeGall">Pascale LeGall</a>
+(<A HREF="SIERRA-DATA/LeGallSierraNevada.pdf">slides</A>)
+<BR>Biological Regulatory Networks modeled as an institution: 
+property preservation along embedding
+<BR>[Joint work with Mbarka MABROUKI and Marc AIGUIER]
+<BR>Abstract:<BR> 
+In the course of understanding the functioning of cellular processes,
+or more specifically of biological regulatory networks, scientists
+usually focused on subparts of the global system. Then modeling
+frameworks for biological regulatory networks are mandatory in order
+to reason on the models and their properties. Various model-checking
+technics have already been successfully used to reason on discrete
+models of biological regulatory networks where studied biological
+properties are expressed by temporal formulas. In this talk, we take
+benefit of these logical approaches to study the properties
+preservation. Signature of considered networks, constituted by a
+graph, is one of the distinctive features on which embeddings can be
+defined, leading us to give a first condition on the subgraphs which
+allows us to preserve properties of the embedded graphs. We thus give
+a first proposition for defining biological regulatory networks as an 
+institution.
+<BR>------------------------------------------------------
+</LI><LI>2 - <a name="Orejas">Fernando Orejas</a>, 
+Dpto de L.S.I., Univ. Polit. Catalunya,
+Barcelona, Spain 
+(<A HREF="SIERRA-DATA/Orejas-Constraints_WG1.3.pdf">slides</A>)
+<BR> A logic of graph constraints.
+<BR>[Joint work with Hartmut Ehrig and Ulrike Prange, 
+Tech. Univ. Berlin, Germany]
+<BR>Abstract:<BR>  
+Graph constraints were introduced in the area of graph transformation,
+in connection with the notion of (negative) application conditions, as
+a form to limit the applicability of transformation rules. However, we
+believe that graph constraints may also play a significant role in the
+area of visual software modelling or in the specification and
+verification of semi-structured documents or websites (i.e. HTML or
+XML sets of documents). In this sense, after some discussion on these
+application areas, we concentrate on the problem of how to prove the
+consistency of specifications based on this kind of constraints. In
+particular, we present proof rules for three classes of (increasingly
+more powerful) graph constraints and show that our proof rules are
+sound and (refutationally) complete for each class.
+</LI>
+======================================================================
+<BR><BR>== Tuesday, January 15th, 2008
+<LI>3 - Jos&eacute; Meseguer: The temporal logic of rewriting.
+</LI>
+<LI>4 - <a name="Dusko">Dusko Pavlovic</a>
+<A HREF="SIERRA-DATA/Dusko-0801-Granada.pdf">slides</A>
+<BR>Specifying authentication protocols for pervasive and social computation.
+<BR>Abstract:<BR> 
+In this talk I described a new security landscape, arising from the
+new pervasive technologies, such as Near Field Communication, which
+place computational system components in physical space. Of particular
+interest are the methods of authentication without any previous
+security infrastructure, based on the physical properties of timed
+channels, or on authenticated, low bandwidth social channels. While
+such channels recently attracted a lot of attention in several
+research communities, their properties and applications were analyzed
+informally, since neither the usual symbolic models of secure systems,
+nor the computational crypto models, support the needed refinement
+mechanisms. I demonstrated incremental derivations, supported by
+Protocol Derivation Assistant, of a family of distance-bounding
+protocols, using timed channels, and of basic social authentication
+protocols, using social channels.
+<BR>------------------------------------------------------
+</LI><LI>5 - <a name="Roggenbach">Markus Roggenbach</a>, Swansea (Wales)
+<A HREF="SIERRA-DATA/roggenbach.pdf">slides</A>, and 
+<A HREF="SIERRA-DATA/Roggenbach-paper-testing.pdf">paper</A>
+<BR>Towards testing from CSP-CASL.
+<BR>[Joint work with B-H Schlingloff, Berlin & T Kahsai, Swansea]
+<BR>Abstract:<BR>
+In this talk, we present a theory for the evaluation of test cases with
+respect to formal specifications. In particular, we use the specification
+language CSP-CASL to define and evaluate black-box tests for reactive
+systems. Using loose semantics and three-valued test oracles, our approach is
+well-suited to deal with the refinement of specifications. In a structured
+development process of computational systems, abstract specifications are
+gradually refined into more concrete ones. With our approach, it is possible
+to develop test cases already from very abstract and basic specifications, and
+to reuse them later on in more refined systems.
+<BR>------------------------------------------------------
+</LI><LI>6 - <a name="Petria">Marius Petria</a> 
+<A HREF="SIERRA-DATA/Petria-free-wg1.pdf">slides</A>
+<BR>Free theorems for refinement.
+<BR>Abstract:<BR>
+In this paper we apply insights drawn from the use of parametricity
+in second order lambda calculus, to facilitate proofs of refinements
+via stable constructors between behavioral algebraic
+specifications.Our final goal is to identify a setting to express
+"theorems for free" in the style of Wadler for behavioral refinements.
+</LI>
+======================================================================
+<BR><BR>== Wednesday, January 16th, 2008
+<LI>7 - <a name="Padawitz">Peter Padawitz</a>
+<A HREF="SIERRA-DATA/PadawitzAlgComp.pdf">slides</A>
+<BR>Algebraic compilers and their implementation in Haskell
+<BR>Abstract:<BR>
+The construction of compilers with the help of algebra may now
+celebrate its 40th anniversary. Big projects have followed the basic
+ideas developed in the seventies of the last century. They are bound
+to languages tailored to the view that compilation is
+rewrite-rule-driven program transformation. This is, of course, an
+adequate way of implementing compilers algebraically. Nevertheless, a
+modern functional language like Haskell offers constructs
+(polymorphism, data types, monads,...) that are at least equally
+well-suited for writing algebraic compilers. In particular, the class
+of all target languages (Sigma-algebras) of a given source language
+(Sigma) can be implemented in Haskell as a single data type with
+fields. This allows us to fully exploit the fact that (abstract)
+syntax is initial semantics and thus a compiler is completely
+determined by the extension of its target language to a
+Sigma-algebra. We present the main definitions and illustrate the
+Haskell coding of generic interpreters and compilers and their
+instantiation by algebras at a small Java fragment.
+<BR>------------------------------------------------------
+</LI><LI>8 - <a name="Jacobs">Bart Jacobs</a>
+<BR>Coalgebraic trace semantics for combined possibilitistic 
+and probabilistic systems
+<BR>Abstract:<BR>
+Non-deterministic (also known as possibilistic) and probabilistic
+state based systems (or automata) have been studied for quite some
+time. Separately, they are reasonably well-understood.  The
+combination however is difficult, both for conceptual and technical
+reasons. Here we study the combination from a coalgebraic perspective
+and identify a monad CM that captures the combination---following
+work of Varacca. We use this monad to apply the coalgebraic framework
+for (finite) trace semantics in this setting. It yields a smooth, but
+not entirely trivial, description of traces.
+<BR>------------------------------------------------------
+</LI><LI>9 - Leila Ribeiro: Revisiting linerar-ordered graph grammars.
+</LI>
+<LI>10 -  <a name="Bettaz">Mohamed Bettaz</a>, MESRS Algeria 
+(<A HREF="SIERRA-DATA/Bettaz_Slides.pdf">slides</A>)
+<BR>An Object-Z/CSP based approach for the specification of architectural 
+connectors.
+<BR>[Joint work with Mourad Maouche, Philadelphia University, Jordan]
+<BR>Abstract:<BR>
+Our objective in this work is to propose a semantically safe
+"combination" of Object-Z and CSP forspecifying architectural
+connectors. The approach, which considers connectors as first-class
+entities,intends to support incremental development of
+specifications, as well as verification of properties. Westart from
+the very informal definition that software architecture is a
+collection of computationalcomponents together with a collection of
+connectors, and follow the formal framework set by [1]. Inthis
+framework a connector specification relies on the explicit definition
+of the notions component,port, role, glue, connector, and
+attachment.
+<BR>
+    In the suggested approach, roles, ports and glue, which as
+considered as components, are specified(in the same way as
+computational components) by Object-Z classes. The internal behavior
+of thesecomponents is governed by preconditions on adequate state
+variables. The behavior of the connector isspecified by a parallel
+composition of the roles and their glue. The attachment of ports
+(which arerefinements of roles) as roles is specified by a CSP
+process parameterized by Object-Z classes.
+<BR>
+    The fact that both languages have common semantic basis 
+[4, 5, 6, 7, and 8], enables using and / ordeveloping a unified method 
+of refinement for the integrated notation.
+<BR>
+    Among the similar work we might cite: [1, 2, and 9]. 
+In [1] all aspects of architectural connectorsare specified in a
+CSP-like notation. [2], which abstracts of the notion of glue, defines
+ports and rolesas basic types. In [9], connectors are categorical
+entities, ports are not defined explicitly, andcomponents are seen as
+refinement of roles.
+<BR>
+References
+<BR>
+1. R. Allen and D. Garlan, A Formal
+Basis for Architectural Connection, 1998
+<BR>
+2. G. Abowd, R. Allen and
+Garlan, Formalizing style to understand descriptions of
+softwarearchitectures, 1994
+<BR>
+3. M. Shaw and D. Galan, Formulations and
+Formalisms in Software Architecture, 1996
+<BR>
+4. G. Smith and J. Derrick,
+specification, refinement and verification of concurrent systems Ð
+anintegration of Object-Z and CSP, 2001
+<BR>
+5. G. Smith and J. Derrick,
+Refinement and Verification of Concurrent systems specified in
+Object-Zand CSP, 1997
+<BR>
+6. G. Smith and J. Derrick, Abstract
+Specification in Object-Z and CSP, 2002
+<BR>
+7. J. Derrick and G. Smith,
+Structural Refinement in Object-Z / CSP, 2000
+<BR>
+8. G. Smith, A Semantic
+Integration of Object-Z and CSP for the Specification of
+ConcurrentSystems, 1998
+<BR>
+9. J.L. Fiadeiro, A. Lopes and
+M. Wermelinger, A Mathematical Semantics for ArchitecturalConnectors,
+2002
+<BR>
+10. T. McComb and G. Smith, Architectural Design in Object-Z,
+2004
+<BR>
+11. T. Bures, Generating Connectors for Homogeneous and
+Heterogeneous Deployment, 2006
+</LI>
+======================================================================
+<BR><BR>== Thursday, January 17th, 2008
+<LI>11 - <a name="Corradini">Andrea Corradini</a> 
+<A HREF="SIERRA-DATA/Corradini-SierraNevada.pdf">slides</A> 
+<BR>Subobject transformation system and elementary net systems.
+<BR>[Joint work with Frank Hermann and Pawel Sobocinski]
+<BR>Abstract:<BR>
+Subobject Transformation Systems (STS) are proposed as a novel formal
+framework for the analysis of derivations of transformation systems
+based on the algebraic, double-pushout approach.  They can be
+considered as a simplified variant of DPO rewriting, acting in the
+distributive lattice of subobjects of a given object of an adhesive
+category. 
+<BR><BR>
+Interestingly, it turns out that STSs in the category of sets
+with rules having empty interfaces correspond precisely to
+Elementary Net System, a class of Petri nets widely studied in
+the literature.
+<BR><BR>
+The formal setting of STSs allows a direct analysis of all possible
+notions of dependency between any two productions without requiring an
+explicit match.  In particular, several equivalent characterizations
+of independence of productions are proposed, as well as a local
+Church-Rosser theorem in the setting of STS. Also, we show how any
+derivation tree in an ordinary DPO grammar leads to an STS via a
+suitable construction, and we argue that relational reasoning in the
+resulting STS is sound and complete with respect to the independence
+in the original derivation tree.
+<BR><BR>
+From a methodological perspective, the relationship with ENSs could
+provide challenging intuitions that could be generalized, at least in
+part, to the more abstract setting of transformation systems over
+adhesive categories.
+<BR>------------------------------------------------------
+</LI>
+<LI>12 - <a name="Gaducci">Fabio Gadducci</a> 
+<A HREF="SIERRA-DATA/wg1_3SierraGadducci.pdf">slides</A> and
+<A HREF="SIERRA-DATA/Gaducci-fsen07.pdf">paper</A>
+<BR> A behavioural semantics for Petri nets (with an application to web  
+services development).
+<BR>[Joint work with Filippo Bonchi, Antonio Brogi and Sara Cortfini].
+<BR>Abstract:<BR>
+Web services are emerging as a promising technology for the
+development of distributed heterogeneous software systems. In this
+talk we first introduce a simple variant of standard condition/event
+(C/E) Petri nets to naturally model the behaviour of Web services, and
+in particular the persistency of data. Next step is the identification
+of a suitable behavioural equivalence for our class of nets. Such an
+equivalence is based on bisimilarity and inspired by recent advances
+in the theory of reactive systems, more specifically, from the
+relative pushouts methodology devised by Leifer and Milner. Hence, by
+exploiting the firing relation we distill a set of labels, in order to
+build a labelled reduction relation, such that the associated
+behavioural notion of bisimilarity is a compositional equivalence. We
+round up the talk by pointing out the main features of our proposal,
+namely, weakness and decidability.
+<BR>------------------------------------------------------
+</LI><LI>13 - <a name="Kissig">Christian Kissig</a>
+<A HREF="SIERRA-DATA/SierraNevada-Kissig.pdf">slides</A>
+<BR>Logics for traces.
+<BR>[Joint work with Alexander Kurzi]
+<BR>Abstract:<BR>
+<BR>------------------------------------------------------
+</LI><LI>14 - <a name="Gnesi">Stefania Gnesi</a>
+<A HREF="SIERRA-DATA/Gnesi-cow-logic-slides-sand.pdf">slides</A>
+<BR>A logical approach to specify service-oriented application
+<BR>[Joint work with Alessandro Fantechi, Alessandro Lapadula, Franco Mazzanti,
+Rosario Pugliese and Francesco Tiezzi]
+<BR>Abstract:<BR>
+We introduce a logical verification framework for checking
+functional properties of service-oriented applications formally
+specified using the service specification language COWS. The
+properties are described by means of Socl, a logic specifically
+designed to capture peculiar aspects of services. Service behaviours
+are abstracted in terms of Doubly Labelled Transition Systems, which
+are used as the interpretation domain for Socl formulae. We
+also illustrate the Socl model checker at work on a bank
+service scenario specified in COWS 
+<BR>------------------------------------------------------
+</LI><LI>15 - <a name="Koenig">Barbara Koenig</a>
+<A HREF="SIERRA-DATA/Koenig-sierra-nevada08.pdf">slides</A>
+<BR> Graph minors and the analysis of graph transformation systems.
+<BR>[Joint work with Salil Joshi, IIT Delhi]
+<BR>Abstract:<BR>
+We show how to view certain subclasses of (single-pushout) graph
+  transformation systems as well-structured transition systems, which
+  leads to decidability of the covering problem via a backward
+  analysis. As the well-quasi order required for a well-structured
+  transition system we use the graph minor ordering. We give an
+  explicit construction of the backward step and apply our theory in
+  order to verify a termination detection protocol.
+<BR>------------------------------------------------------
+</LI><LI>16 - <a name="Schroeder">Lutz Schroeder</a>
+<A HREF="SIERRA-DATA/Schroeder-k4like.pdf">slides</A>
+<BR>Coalgebraic modal logic beyond rank 1.
+<BR>[Joint work with Dirk Pattinson]
+<BR>Abstract:<BR>
+The semantics of modal logics applied in various areas of computer
+science such as knowledge representation, decision making, or
+multi-agent systems often deviates rather substantially from traditional
+Kripke semantics. Coalgebraic modal logic has emerged as a suitable
+generic semantic framework covering in particular also such non-normal
+modal logics. Somewhat surprisingly, this framework supports also a
+generic theory of (automated) modal reasoning; however, results in this
+area have so far been limited to logics whose axioms do not nest modal
+operators. Here, we present work aimed at overcoming this limitation,
+i.e. we establish a generic method to obtain completeness,
+decidability, and upper complexity bounds for logics defined by frame
+conditions with nested modalities. Our method applies to classical
+examples such as $K4$ and to certain conditional logics; as an extended
+example, we moreover prove completeness and decidability of a
+description logic with qualified number restrictions for descendancy
+relations in tree-like structures.
+</LI>
+======================================================================
+<BR><BR>== Friday, January 18th, 2008
+<LI>17 - <a name="Duval">Dominique Duval</a>
+<A HREF="SIERRA-DATA/Duval-grenade.pdf">slides</A>
+<BR> A double-pushout approach for modeling pointer redirection
+<BR>[Joint work with Rachid Echahed, Fr&eacute;d&eacute;ric Prost]
+<BR>Abstract:<BR>
+The aim of this talk is to present a framework for data-structure
+rewriting, including cyclic data-structures with pointers such as
+circular lists, doubly-linked lists, etc.  Our framework follows the
+categorical approach of the DPO (double pushout) method, but with
+non-classical assumptions on rules and matchings. It allows local
+pointer redirection, for redirecting some specific pointers, and
+global pointer redirection, for redirecting all pointers with some
+specific target to another target.
+
+</LI>
+

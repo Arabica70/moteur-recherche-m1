@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Study of the NP-completeness of the Compact Table</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Study of the NP-completeness of the Compact Table"/>
+            <meta property="og:url" content="./dm08.html"/>
+            <meta property="og:description" content="The problem of compact tables is to maximise the overlap when building a word that is to include permutations of every given words (all the words being the same length). This problem is shown to be NP-complete in the general case, and some specific restrictions are studied. To show this on a small example (beyond what is in the article), imagine that in a game (like checkers) if blue takes red, on a result of 1, both are eliminated, on 2 or 3, red remains and blue remains in the other cases. If red takes blue, results 1 to 4 make red win and on 5 to 6, blue wins. The compact table in this case would be to keep the table as is in the blue versus red, add +2 if red versus blue, with results 7 and 8 letting red win."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./../theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./../theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./..
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Who?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/~dubacq">Français</a></li>
+            <li class="active"><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dm08.html"
+         rel="bookmark"
+         title="Permalink to Study of the NP-completeness of the Compact Table">
+        Study of the NP-completeness of the Compact Table
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>mar. 15 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/cellular-automata.html">cellular automata</a>
+        /
+	<a href="./tag/journal.html">journal</a>
+<span class="label label-default">Other languages</span>
+	<a href="./../dm08.html">Français</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>The problem of compact tables is to maximise the overlap when building a word that is to include permutations of every given words (all the words being the same length). This problem is shown to be NP-complete in the general case, and some specific restrictions are studied.</p>
+<p>To show this on a small example (beyond what is in the article), imagine that in a game (like checkers) if blue takes red, on a result of 1, both are eliminated, on 2 or 3, red remains and blue remains in the other cases. If red takes blue, results 1 to 4 make red win and on 5 to 6, blue wins. The <strong>compact table</strong> in this case would be to keep the table as is in the blue versus red, add +2 if red versus blue, with results 7 and 8 letting red win.</p></p>
+<h2>About this article</h2>
+<p>This publication in the proceedings of the JAC 2008 conference was a bit out of scope, and therefore classified as an exploratory paper. I made my own comments on the conference including a few pictures on a <a href="./jac2008-fr.html">separate page</a>.</p>
+<p>The inspiration for this article comes from my wargaming experience. It is a bit spoken-of in the slides, but the main point is that when considering the tables typically found in wargames, you often use modifiers (e.g. +1 to the result of the dice roll). While the tables are usually in ascending order of effect (or descending), when modifiers come into play, the result 11 (which is 10 as the result of the 10-sided dice + 1) can be of a lower effect than a 10 + 0 result. This is considered normal; what you have to consider is that when you do that, you can roll in the range 2-11 only and you should compare the 11 result to the 1 result (which is no more possible) instead.</p>
+<h2>The main result</h2>
+<p>As explained in the slides and in the introduction, this problem is a variant of the superword problem: given a set of words (of the same length), one wants the shortest word containing contiguously all the words of the collection, or any permutation of these words (without this addition, there are already well known results, see e.g. De Bruijn graphs). For example, if I give the words <em>aabc</em>, <em>abbb</em> and <em>abcc</em>, the word <em>bbabcc</em> is a correct answer to the problem.</p>
+<p>The problem is NP-complete (and thus difficult). It is also #P-complete, which means that if one can count the answers to this problem, one can count the answers to many others. The reduction is done from the <a href="http://en.wikipedia.org/wiki/Hamiltonian_path_problem">hamiltonian path problem</a>.</p>
+<p><img alt="Hamiltonian Path widget" src="./../images/recherche/hamiltonian-path.png" /></p>
+<p>The restrictions remain NP-complete as soon as three letter words or more are concerned. If one has two letters words only (head or tail somehow), there exists a polynomial answer (based on the eulerian path problem).</p>
+<p>An interesting open problem appeared during the writing of this paper. There are <span class="math">\(\\ell+k-1\\choose\\ell\)</span> possible words of <em>k</em> letters and length <span class="math">\(\\ell\)</span>. One could imagine placing these words with a maximum overlap adding only one letter per word. Strangely enough, this is not possible. The length of the smallest word containing a permutation of all the words of <em>k</em> letters of length <span class="math">\(\\ell\)</span> remains a mystery.</p>
+<h2>The documents</h2>
+<ul>
+<li><a href="./../pdf/publications/dm.pdf">L'article de proceedings</a></li>
+<li><a href="./../pdf/publications/jac2008.pdf">L'exposé</a></li>
+</ul>
+<h2>Citing this publication</h2>
+<p>This publication was made in the proceedings of the <a href="http://www.lif.univ-mrs.fr/jac/">JAC
+2008 conference</a> that took place this
+year in Uzès (France). This article was furthermore put under the
+<a href="http://creativecommons.org/licenses/by-nd/3.0/deed.fr">CC-BY-ND</a> et
+inserted automatically in
+<a href="http://hal.archives-ouvertes.fr/hal-00274004/fr/">HAL</a> (and from there,
+in arXiv).</p>
+<div class="highlight"><pre>@InProceedings{dm08,
+  author =   {Jean-Christophe Dubacq and Jean-Yves Moyen},
+  title =    {Study of the NP-completeness of the Compact Table problem},
+  booktitle =    {Proceedings of the First Symposium on Cellular Automata Journ\&#39;{e}es Automates Cellulaires},
+  pages =    {451--464},
+  year =     {2008},
+  editor =   {Bruno Durand},
+  address =  {Moscow},
+  month =    apr,
+  publisher =    {MCCME Publishing House},
+  isbn =         {978-5-94057-377-7}
+}
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./../theme/js/respond.min.js"></script>
+    <script src="./../theme/js/local.js"></script>
+
+  </body>
+</html>

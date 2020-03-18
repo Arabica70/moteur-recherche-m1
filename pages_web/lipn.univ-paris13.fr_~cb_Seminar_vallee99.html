@@ -1,0 +1,695 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Unified Analysis of Euclidean Algorithms</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea vallee2 -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Unified Analysis of Euclidean Algorithms</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Brigitte Vallée</FONT></I></FONT><BR>
+<BR>
+
+ Université de Caen<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+March 29, 1999<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="vallee2.ps">postscript</A> and in <A HREF="vallee2.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+The average behavior of nine algorithms derived from the Euclidean
+ Algorithm is analysed. Some of them are useful in computing the Jacobi symbol.
+It is shown that these algorithms form two classes: the fast 
+and the slow algorithms (<FONT FACE=symbol>Q</FONT>(ln <I>N</I>)) versus <FONT FACE=symbol>Q</FONT>(ln<SUP><FONT SIZE=2>2</FONT></SUP> <I>N</I>)). 
+The author suggests a general method, in which the algorithm and the
+ set of its data are viewed as a dynamical system. The Ruelle operator
+and functional analysis are key tools. 
+This unified approach gives not only the
+ previously known results for classical Euclidean algorithms but also
+new results about the binary GCD and Jacobi symbol algorithms.
+In particular, conjectures due to Brent, Bach and Shallit are
+ solved. The average behavior is linked to the entropy of the
+ dynamical system, thus new universal constants 
+(explicit for classical cases, computed numerically in the other cases)
+are exhibited.
+</BLOCKQUOTE><BR>
+<!--TOC section Euclidean Algorithms-->
+
+<H2>1&nbsp;&nbsp; Euclidean Algorithms</H2><!--SEC END -->
+
+A previous talk of Brigitte Vallée (see the summary in the
+proceedings of year 97/98) 
+was devoted to the complete analysis of the binary GCD algorithm.
+The summary ended by mentioning the application
+of Vallée's method to the Jacobi Symbol. 
+The last year has seen a unification of the approaches
+and the reader will find here the analysis of nine algorithms.
+These are ``flip and reduce'' algorithms
+and are more or less variations of the ``classical Euclid algorithm'',
+an algorithm which dates from 300BC 
+and which can also be found in a first-century AD Chinese text (Chiu Chang Suan Shu).<BR>
+<BR>
+Before the ``functional analytic number theoretical dynamical
+ systematic''
+ approach of Vallée, the state of the art was due to 
+Brent&nbsp;[<A HREF="#Brent76"><CITE>1</CITE></A>], Knuth&nbsp;[<A HREF="#Knuth97"><CITE>5</CITE></A>],
+ Heilbron&nbsp;[<A HREF="#Heilbronn69"><CITE>4</CITE></A>], Dixon&nbsp;[<A HREF="#Dixon70"><CITE>3</CITE></A>], Vardi&nbsp;[<A HREF="#Va93"><CITE>10</CITE></A>],
+ Bach, Shallit&nbsp;[<A HREF="#Sh94"><CITE>7</CITE></A>].<BR>
+<BR>
+Vallée and her student, C. Lemée, 
+gave some new results for the analysis of the
+average complexity of the computation of a fundamental function in
+number theory: the Jacobi symbol, which allows to
+determine whether a number is a square in a given modular arithmetic
+or not.<BR>
+<BR>
+The Legendre symbol is defined for an odd prime number <I>v</I> as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+(</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>0,&nbsp;&nbsp;</TD>
+<TD ALIGN=left NOWRAP>if <I>u</I><FONT FACE=symbol>º</FONT> 0 mod <I>v</I>;</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>1,&nbsp;&nbsp;</TD>
+<TD ALIGN=left NOWRAP>if <I>v</I> is a square modulo <I>v</I>;</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>-1,&nbsp;&nbsp;</TD>
+<TD ALIGN=left NOWRAP>if <I>v</I> is not a square mod <I>v</I>.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+The Jacobi symbol extends the Legendre symbol and is defined as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>J</I>(<I>u</I>,<I>v</I>):=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I><FONT FACE=symbol>Î</FONT> <I>I</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> (</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>e</I></FONT><SUB><FONT SIZE=2><I>i</I></FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> &nbsp;&nbsp;&nbsp;&nbsp;for </TD>
+<TD NOWRAP>
+<I>v</I>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I><FONT FACE=symbol>Î</FONT> <I>I</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>v</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>e</I></FONT><SUB><FONT SIZE=2><I>i</I></FONT></SUB></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>i</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>  with odd primes <I>v</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>. </TD>
+</TR></TABLE></DIV>
+Of course one does not need to know the factorisation of <I>v</I> in order
+to compute <I>J</I>(<I>u</I>,<I>v</I>). Instead, one uses the following formulæ:
+<DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=right NOWRAP>Quadratic reciprocity law:</TD>
+<TD ALIGN=left NOWRAP>&nbsp;&nbsp;</TD>
+<TD ALIGN=right NOWRAP><I>J</I>(<I>u</I>,<I>v</I>)</TD>
+<TD ALIGN=left NOWRAP>=(-1)<SUP><FONT SIZE=2>(<I>u</I>-1)(<I>v</I>-1)/4</FONT></SUP><I>J</I>(<I>v</I>,<I>u</I>)&nbsp;&nbsp;&nbsp;&nbsp;for <I>u</I>,<I>v</I> odd positive
+integers,</TD>
+</TR>
+<TR><TD ALIGN=right NOWRAP>Modulo law:</TD>
+<TD ALIGN=left NOWRAP>&nbsp;</TD>
+<TD ALIGN=right NOWRAP><I>J</I>(<I>v</I>,<I>u</I>)</TD>
+<TD ALIGN=left NOWRAP>=<I>J</I>(<I>v</I>-<I>bu</I>,<I>u</I>),</TD>
+</TR>
+<TR><TD ALIGN=right NOWRAP> Multiplicativity law:</TD>
+<TD ALIGN=left NOWRAP>&nbsp;</TD>
+<TD ALIGN=right NOWRAP><I>J</I>(<I>vw</I>,<I>u</I>)</TD>
+<TD ALIGN=left NOWRAP>=<I>J</I>(<I>v</I>,<I>u</I>)<I>J</I>(<I>w</I>,<I>u</I>),</TD>
+</TR>
+<TR><TD ALIGN=right NOWRAP>Special values:</TD>
+<TD ALIGN=left NOWRAP>&nbsp;</TD>
+<TD ALIGN=right NOWRAP><I>J</I>(2,<I>v</I>)</TD>
+<TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>=(-1)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>(<I>v</I></FONT><SUP><FONT SIZE=2>2</FONT></SUP><FONT SIZE=2>-1)/8</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>, &nbsp;&nbsp;&nbsp;&nbsp;
+<I>J</I>(<FONT FACE=symbol>e</FONT>,<I>u</I>)=<FONT FACE=symbol>e</FONT><SUP><FONT SIZE=2>(<I>u</I>-1)/2</FONT></SUP>&nbsp;&nbsp; for <FONT FACE=symbol>e</FONT>=± 1.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+Then one has several Euclidean-like possible algorithms.
+We distinguish the nine following cases
+(name, constraints of the algorithm and
+an example are given):
+
+<DIV ALIGN=center>
+
+<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>Classical with positive remainders</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+<I>r</I>, 0<FONT FACE=symbol>£</FONT> <I>r</I>&lt;<I>u</I>
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/5+1/1+1/3+1/3+0</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Subtractive classical</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>u</I>+(<I>v</I>-<I>u</I>)
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/1+1+1+1+1+1/1+1/1+1+1+1/1+1+1</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Classical with negative remainders</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>-<I>r</I></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>0<FONT FACE=symbol>£</FONT> <I>r</I> &lt;<I>u</I>
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/6-1/5-1/2-1/2+0</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Classical with centred remainders</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+<FONT FACE=symbol>e</FONT> <I>r</I></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>c</I><FONT FACE=symbol>³</FONT> 2, <FONT FACE=symbol>e</FONT>=±1, (<I>c</I>,<FONT FACE=symbol>e</FONT>)<FONT FACE=symbol>¹</FONT> (2,-1)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>0<FONT FACE=symbol>£</FONT> <I>r</I> <FONT FACE=symbol>£</FONT> <I>u</I>/2
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/6-1/4+1/3</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Even CF</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+<FONT FACE=symbol>e</FONT> <I>s</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>c</I> even, <FONT FACE=symbol>e</FONT>=± 1 <I>s</I> odd, 0&lt;<I>s</I>&lt;<I>u</I>
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/6-1/4+1/4-1</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Odd CF</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+<FONT FACE=symbol>e</FONT> 2<SUP><FONT SIZE=2><I>k</I></FONT></SUP> <I>s</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>c</I> odd, <FONT FACE=symbol>e</FONT>=± 1,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>s</I> odd, <I>k</I><FONT FACE=symbol>³</FONT> 1, 0<FONT FACE=symbol>£</FONT> 2<SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>s</I> &lt;<I>u</I>
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/5+2/3-2/5+0</TD>
+</TR></TABLE>
+<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>Ordinary CF</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+2<SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>s</I>, <I>s</I>=0 or <I>s</I> odd,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>k</I><FONT FACE=symbol>³</FONT> 0,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>0<FONT FACE=symbol>£</FONT> 2<SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>s</I>&lt;<I>u</I> </TD>
+<TD ALIGN=right NOWRAP>13/75=1/5+2/2+1/1+2/3+0</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Centred CF</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>cu</I>+<FONT FACE=symbol>e</FONT>2<SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>s</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>s</I>=0 or <I>s</I> odd, <I>k</I><FONT FACE=symbol>³</FONT> 0,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>0<FONT FACE=symbol>£</FONT> 2<SUP><FONT SIZE=2><I>k</I></FONT></SUP> <I>s</I>&lt;<I>u</I>/2
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/6-1/4+1/3+0</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>Binary GCD</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>v</I>=<I>au</I>+2<SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>r</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>a</I> odd,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>a</I>&lt;2<SUP><FONT SIZE=2><I>k</I></FONT></SUP>, <I>r</I><FONT FACE=symbol>£</FONT> <I>u</I>
+</TD>
+<TD ALIGN=right NOWRAP>13/75=1/1+2+2<SUP><FONT SIZE=2>2</FONT></SUP>/1+2<SUP><FONT SIZE=2>2</FONT></SUP>/1+2<SUP><FONT SIZE=2>3</FONT></SUP></TD>
+</TR></TABLE>
+
+</DIV><BR>
+<!--TOC section Functional Analytic Number theory-->
+
+<H2>2&nbsp;&nbsp; Functional Analytic Number theory</H2><!--SEC END -->
+Performing <I>l</I> steps of one of the above algorithms gives a continued
+fraction of height <I>l</I> and the expression of the rational <I>u</I>/<I>v</I> as 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><A NAME="evident"></A>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>u</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>v</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=<I>h</I><SUB><FONT SIZE=2>1</FONT></SUB><FONT FACE=symbol>°</FONT> <I>h</I><SUB><FONT SIZE=2>2</FONT></SUB> <FONT FACE=symbol>°</FONT> ...<FONT FACE=symbol>°</FONT> <I>h</I><SUB><FONT SIZE=2><I>l</I></FONT></SUB>(<FONT FACE=symbol>a</FONT>)
+&nbsp;&nbsp;&nbsp;&nbsp;(1)</TD>
+</TR></TABLE></DIV>
+where <FONT FACE=symbol>a</FONT> is 1 or 0 and where the <I>h</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>'s are ``linear fractional
+transformations'' or LFT (``homographie'' in French).
+Of course the values of <I>a</I>,<I>b</I>,<I>c</I>,<I>d</I> in <I>h</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>=<I>az</I>+<I>b</I>/<I>cz</I>+<I>d</I> depend
+on the algorithms. What is more, the shape of the first and 
+last LFT can be different from the other ``intermediate'' generic LFT, depending
+on the initial and stopping conditions of the algorithm.<BR>
+<BR>
+Introduce the double Dirichlet generating function
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>S</I>(<I>s</I>,<I>w</I>):=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>&gt;1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>n</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>w</I><SUP><FONT SIZE=2><I>l</I></FONT></SUP></TD>
+</TR></TABLE></DIV>
+where <FONT FACE=symbol>n</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP> is the number of rationals of <FONT FACE=symbol>W</FONT> (set of
+valid inputs in [0,1] or [0,1/2], depending on the algorithm) 
+of the form <I>u</I>/<I>n</I> 
+which give a continued fraction of height <I>l</I>.
+Defining <I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> and <I>b</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>S</I>(<I>s</I>,1)=:</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>&gt; 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> &nbsp;&nbsp;&nbsp;&nbsp;  and  &nbsp;&nbsp;&nbsp;&nbsp; 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT> <I>w</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>S</I>(<I>s</I>,<I>w</I>)|<SUB><FONT SIZE=2><I>w</I>=1</FONT></SUB>=:</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>&gt;1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>b</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+allows to express <I>S</I><SUB><FONT SIZE=2><I>N</I></FONT></SUB>, the average number of steps of the algorithm on
+the rationals <I>u</I>/<I>v</I> of <FONT FACE=symbol>W</FONT> for <I>u</I><FONT FACE=symbol>£</FONT> <I>N</I>, as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>S</I><SUB><FONT SIZE=2><I>N</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>£</FONT> <I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>b</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>£</FONT> <I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>£</FONT>
+<I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>l</I> <FONT FACE=symbol>n</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP> </TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>£</FONT>
+<I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>n</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2>[<I>l</I>]</FONT></SUP> </TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+Thus the average behavior of the algorithm is dictated by
+the asymptotics of partial sums of coefficients of the function <I>S</I>.<BR>
+<BR>
+For any Dirichlet series&nbsp;<I>F</I>(<I>s</I>) with nonnegative coefficients&nbsp;<I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>
+ converging in&nbsp;<FONT FACE=symbol>Â</FONT>(<I>s</I>)&gt;<FONT FACE=symbol>s</FONT>&gt;0, 
+a theorem of Delange gives
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>£</FONT> <I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>A</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>s</FONT><FONT FACE=symbol>G</FONT>(<FONT FACE=symbol>g</FONT>+1)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>N</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>s</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>ln</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>g</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>N</I> (1+<I>o</I>(<I>N</I>)).</TD>
+</TR></TABLE></DIV>
+As for any Tauberian theorem, <I>F</I>(<I>s</I>) has to fulfill some hypotheses
+(analyticity on <FONT FACE=symbol>Â</FONT>(<I>s</I>)=<FONT FACE=symbol>s</FONT> for <I>s</I><FONT FACE=symbol>¹</FONT> <FONT FACE=symbol>s</FONT> and 
+ there exist <I>A</I>,<I>B</I> analytic at <FONT FACE=symbol>s</FONT> such that 
+<I>F</I>(<I>s</I>)=<I>A</I>(<I>s</I>)(<I>s</I>-<FONT FACE=symbol>s</FONT>)<SUP><FONT SIZE=2>-<FONT FACE=symbol>g</FONT>-1</FONT></SUP>+<I>B</I>(<I>s</I>)). 
+A major part of the the work consists in proving that these properties hold.<BR>
+<BR>
+Recall that for each algorithm, there are 4 sets of LFT: the
+single LFT's&nbsp;<FONT COLOR=red> <I>K</I></FONT>, the initial LFT's&nbsp;<FONT COLOR=red> <I>I</I></FONT>, the final LFT's&nbsp;<FONT COLOR=red> <I>F</I></FONT> and the intermediate LFT's&nbsp;<FONT COLOR=red> <I>H</I></FONT>.
+Now define the ``Ruelle operator'' <I>A</I> relative to a set&nbsp;<FONT COLOR=red> <I>A</I></FONT> of
+LFT's by <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>A</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<I>f</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>h</I><FONT FACE=symbol>Î</FONT> </FONT><FONT SIZE=2><FONT COLOR=red> <I>A</I></FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>f</I><FONT FACE=symbol>°</FONT>
+<I>h</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>denom(<I>h</I>)<SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+The decomposition of an algorithm as a
+single LFT or as final+sequence(intermediate)+initial LFT's 
+(for short <FONT COLOR=red>  <I>K</I>+<I>FH</I></FONT><SUP><FONT COLOR=red><FONT SIZE=2>*</FONT></FONT></SUP><FONT COLOR=red><I>J</I></FONT>) 
+leads to <I>S</I>(<I>s</I>,<I>w</I>)=<I>wK</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(1)(<FONT FACE=symbol>a</FONT>)+<I>w</I><SUP><FONT SIZE=2>2</FONT></SUP><I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB><FONT FACE=symbol>°</FONT> (<I>I</I>-<I>wH</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>)<SUP><FONT SIZE=2>-1</FONT></SUP><FONT FACE=symbol>°</FONT>
+<I>J</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(1)(<FONT FACE=symbol>a</FONT>)
+(where <FONT FACE=symbol>a</FONT> is defined as in
+equation&nbsp;<A HREF="#evident">1</A> and where <FONT FACE=symbol>°</FONT> is the composition over the
+space of operators).
+Variations for Markovian cases are possible and lead to the same
+treatment.<BR>
+<BR>
+Finally, spectral properties of <I>I</I>-<I>H</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> 
+allow to determine <FONT FACE=symbol>s</FONT>=2 and <FONT FACE=symbol>g</FONT>=1 or 2 (in some cases, one needs
+to choose an adequate functional space in order to establish this).<BR>
+<BR>
+Here is a summary of the average number of steps performed by the nine algorithms:
+<DIV ALIGN=center>
+<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD BGCOLOR=black COLSPAN=4><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>positive remainders	</TD>
+<TD ALIGN=center NOWRAP>12ln 2/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>.842 ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>Heilbron &amp; Dixon 70</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>subtractive		</TD>
+<TD ALIGN=center NOWRAP>6/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>(ln <I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP>	</TD>
+<TD ALIGN=center NOWRAP>.607(ln
+<I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD ALIGN=center NOWRAP>Knuth &amp; Yao 75</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>negative remainders</TD>
+<TD ALIGN=center NOWRAP>3/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP> (ln <I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP> 	</TD>
+<TD ALIGN=center NOWRAP>.303(ln <I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD ALIGN=center NOWRAP>Vardi 92</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>centred remainders</TD>
+<TD ALIGN=center NOWRAP>12ln <FONT FACE=symbol>f</FONT>/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>.585ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>Rieger 80</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>even	</TD>
+<TD ALIGN=center NOWRAP>2/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>(ln <I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD ALIGN=center NOWRAP>.202(ln <I>N</I>)<SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD ALIGN=center NOWRAP>Vallée &amp; Lemée 98</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>odd		</TD>
+<TD ALIGN=center NOWRAP><I>A</I><SUB><FONT SIZE=2><I>O</I></FONT></SUB>ln <I>N</I>	</TD>
+<TD ALIGN=center NOWRAP>.435 ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>Vallée &amp; Lemée 98</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>ordinary	</TD>
+<TD ALIGN=center NOWRAP><I>A</I><SUB><FONT SIZE=2><I>U</I></FONT></SUB>ln <I>N</I>	</TD>
+<TD ALIGN=center NOWRAP>.535 ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>Vallée &amp; Lemée 98</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>centred	</TD>
+<TD ALIGN=center NOWRAP><I>A</I><SUB><FONT SIZE=2><I>C</I></FONT></SUB>ln <I>N</I>	</TD>
+<TD ALIGN=center NOWRAP>.430 ln <I>N</I></TD>
+<TD ALIGN=center NOWRAP>Vallée &amp; Lemée 98</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>binary GCD	</TD>
+<TD ALIGN=center NOWRAP><I>A</I><SUB><FONT SIZE=2><I>B</I></FONT></SUB>ln <I>N</I>	</TD>
+<TD ALIGN=center NOWRAP>.555 ln <I>N</I>	</TD>
+<TD ALIGN=center NOWRAP>Vallée 98</TD>
+</TR>
+<TR><TD BGCOLOR=black COLSPAN=4><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR></TABLE>
+</DIV><BR>
+The author also makes the link between the constants given here
+and the entropy of the dynamical system related to the algorithm.<BR>
+<BR>
+The results presented here are mainly in&nbsp;[<A HREF="#Va99"><CITE>9</CITE></A>]
+and in a preprint of Brigitte and her student&nbsp;[<A HREF="#VaLe98"><CITE>6</CITE></A>].
+Like other preprints of the author, it is
+available at her home page<BR><TT>http://www.info.unicaen.fr/</TT><TT>~</TT><TT>brigitte/Publications/</TT><BR>
+<BR>
+
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Brent76"><FONT COLOR=purple>[1]</FONT></A><DD>
+Brent (Richard&nbsp;P.).&nbsp;--
+Analysis of the binary Euclidean algorithm. In <EM>Algorithms and
+ complexity</EM>, pp.&nbsp;321--355.&nbsp;--
+Academic Press, New York, 1976. Proceedings of a
+ Symposium held at Carnegie-Mellon University, 1976.<BR>
+<BR>
+
+<DT><A NAME="Delange54"><FONT COLOR=purple>[2]</FONT></A><DD>
+Delange (Hubert).&nbsp;--
+Généralisation du théorème de Ikehara. <EM>Annales
+ Scientifiques de l'</EM><EM>É</EM><EM>cole Normale Sup</EM><EM>é</EM><EM>rieure</EM>, vol.&nbsp;71, n&deg;3,
+ 1954, pp.&nbsp;213--242.<BR>
+<BR>
+
+<DT><A NAME="Dixon70"><FONT COLOR=purple>[3]</FONT></A><DD>
+Dixon (John&nbsp;D.).&nbsp;--
+The number of steps in the Euclidean algorithm. <EM>Journal of
+ Number Theory</EM>, vol.&nbsp;2, 1970.<BR>
+<BR>
+
+<DT><A NAME="Heilbronn69"><FONT COLOR=purple>[4]</FONT></A><DD>
+Heilbronn (H.).&nbsp;--
+On the average length of a class of finite continued fractions. In
+ <EM>Number Theory and Analysis (Papers in Honor of Edmund Landau)</EM>,
+ pp.&nbsp;87--96.&nbsp;--
+Plenum, New York, 1969.<BR>
+<BR>
+
+<DT><A NAME="Knuth97"><FONT COLOR=purple>[5]</FONT></A><DD>
+Knuth (Donald&nbsp;E.).&nbsp;--
+<EM>The Art of Computer Programming</EM>.&nbsp;--
+Addison-Wesley, 1997, third edition, vol.&nbsp;2.<BR>
+<BR>
+
+<DT><A NAME="VaLe98"><FONT COLOR=purple>[6]</FONT></A><DD>
+Lemée (Charlie) and Vallée (Brigitte).&nbsp;--
+Analyse des algorithmes du symbole de Jacobi. <EM>GREYC</EM>,
+ 1998.<BR>
+<BR>
+
+<DT><A NAME="Sh94"><FONT COLOR=purple>[7]</FONT></A><DD>
+Shallit (Jeffrey).&nbsp;--
+Origins of the analysis of the Euclidean algorithm. <EM>Historia
+ Mathematica</EM>, vol.&nbsp;21, n&deg;4, 1994, pp.&nbsp;401--419.<BR>
+<BR>
+
+<DT><A NAME="Va98"><FONT COLOR=purple>[8]</FONT></A><DD>
+Vallée (Brigitte).&nbsp;--
+The complete analysis of the binary Euclidean algorithm. In <EM>Proceedings ANTS'98</EM>.&nbsp;--
+1998.<BR>
+<BR>
+
+<DT><A NAME="Va99"><FONT COLOR=purple>[9]</FONT></A><DD>
+Vallée (Brigitte).&nbsp;--
+A Unifying Framework for the Analysis of a Class of
+ Euclidean Algorithms. In <EM>Proceedings FOCS'99</EM>.&nbsp;--
+1999.<BR>
+<BR>
+
+<DT><A NAME="Va93"><FONT COLOR=purple>[10]</FONT></A><DD>
+Vardi (Ilan).&nbsp;--
+Dedekind sums have a limiting distribution. <EM>Duke Mathematical
+ Journal</EM>, n&deg;1, 1993, pp.&nbsp;1--12.</DL>
+
+
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+</HTML>
+

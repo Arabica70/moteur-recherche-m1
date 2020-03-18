@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />    
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--    <meta name="verify-v1"
+    content="MiRUGn7ybJr0YPufOrjYyA3ioPLbA9fJqx6dAX+IMPE=" /> -->
+    <meta name="verify-v1" content="GNdG0Mo6nTiIfAwRvJA/ESU5NtZXysIoAg0Hq5v2y3M=" />
+    <meta name="description" content="ma page web" />
+    <meta name="keywords" lang="fr" content="CV, camille coti, mpi,
+					     tolérance aux fautes,
+					     openmpi, open-mpi,
+					     qoscosgrid, tp mpi,
+					     grille, cluster, grappe,
+					     qcg ompi" /> 
+    <meta name="keywords" lang="en" content="resume, camille coti, mpi, fault
+					     tolerance, openmpi,
+					     open-mpi, qoscosgrid, mpi
+					     lab, grid, grid
+					     computing, cluster,
+					     qcg ompi" /> 
+    <title>POSH</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_clair.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/code.css"/> 
+  </head>
+  
+  <body>
+   <div class="marge" id="nav"><div class="titre_marge">Links</div><ul><li>Home <a href="http://www-lipn.univ-paris13.fr/~coti/index_fr.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></a> / <a href="http://www-lipn.univ-paris13.fr/~coti/index.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /></a>
+</li><li><a href="http://www.github.com/coti">My GitHub homepage</a></li><li><a href="http://www.open-mpi.org">Open MPI</a></li><li><a href="http://mpich-v.lri.fr">MPICH-V</a></li><li><a href="https://bountyfactory.io">Bug Bounty</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/QosCosGrid">QosCosGrid</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/doc">Some documents</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/cours">Teaching</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><style>
+  .strava-badge- { display: inline-block; height: 32px; }
+  .strava-badge- img { visibility: hidden; height: 32px; }
+  .strava-badge-:hover { background-position: 0 -47px; }
+  .strava-badge-follow { height: 32px; width: 32px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+</style>
+<a href="http://strava.com/athletes/2676650/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" /></a><a href="http://www.strava.com/athletes/2676650">My Strava profile</a></li></ul></div>
+   <div class="infos">
+	<table width=100%>
+	  <tr>
+	    <td>
+     <p>
+       POSH (Paris OpenSHMEM) is an open-source implementation of the <a href="http://openshmem.org/">OpenSHMEM</a>
+       specification. 
+     </p>
+
+     <p>
+       It was released under the GPLv3 library. The logo was designed by the awesome Juliette Pouzet, then intern at LIPN.
+     </p>
+	  </td>
+	    <td>
+	      <a href="../images/logo_paris_open_shmem.png">
+		<img src="../images/logo_paris_open_shmem.png" height="100" alt="POSH logo" />
+	      </a>
+	    </td>
+	  </tr>
+	</table>
+   </div>
+
+   <div class="separateur">
+     POSH on GitHub
+   </div>
+
+   <div class="main">
+     <p>
+       A more or less up-to-date version of POSH is available on
+       <a href="https://github.com/coti/POSH">GitHub</a>. Right now you can find
+       v0.11 there.
+     </p>
+   </div>
+
+   <div class="separateur">
+     Release: v0.1.1
+   </div>
+
+   <div class="main">
+	<p>
+	  New! A nice autoconfautomake system has been added to POSH. Here comes v0.1.1!
+	</p>
+  <p>
+       It can be downloaded from
+       here: <a href="./files/POSH_v0.1.tar.gz">[GZ]</a>
+       or <a href="./files/POSH_v0.1.tar.bz2">[BZ2]</a>.
+     </p>
+     <p>
+       It requires:
+     </p>
+     <ul>
+       <li>a C++11 compiler</li>
+       <li>flex</li>
+       <li>perl</li>
+       <li>some parts of Boost: boost.Interprocess, Boost.Threads, Boost.System</li>
+     </ul>
+
+    </div>
+
+   <div class="separateur">
+     Release: v0.1
+   </div>
+
+	<div class="main">
+     <p>
+       The current and very first version of POSH is v0.1. It is very
+       preliminary. It does not feature any nice automake/autoconf configuration
+       and compilation system yet (but it comes with a Makefile), the algorithms
+       used inside are quite simplistic, but it works.
+     </p>
+
+     <p>
+       It can be downloaded from
+       here: <a href="./files/POSH_v0.1.tar.gz">[GZ]</a>
+       or <a href="./files/POSH_v0.1.tar.bz2">[BZ2]</a>. 
+     </p>
+
+    </div>
+
+   <div class="separateur">
+     Publications
+   </div>
+
+   <div class="main">
+     <ul>
+       <li>C. Coti: POSH: Paris OpenSHMEM: A High-Performance OpenSHMEM
+       Implementation for Shared Memory Systems, in <i>Proceedings of the
+       International Conference on Computational Science (ICCS 2014)</i>,
+	 Cairns, Aus, June 2014. <a href="../papiers/C14.pdf">[PDF]</a> <a href="http://authors.elsevier.com/sd/article/S1877050914004037">[WWW]</a></li>
+       <li>C. Coti: POSH: Paris OpenSHMEM: A High-Performance OpenSHMEM
+       Implementation for Shared Memory Systems, in <i>CoRR abs/1403.7791
+       [cs.DC]</i>, March 2014, 13
+       pages   <a href="http://arxiv.org/abs/1403.7791">[arXiv]</a> </li> 
+     </ul>
+
+  </div>
+
+   <div class="separateur">
+     Poster
+   </div>
+
+   <div class="main">
+     <ul>
+     <li>C. Coti: POSH: Paris OpenSHMEM, prestented at <i>the
+       International Conference on Computational Science (ICCS 2014)</i>,
+	 Cairns, Aus, June 2014. <a href="../papiers/postericcs14.pdf">[PDF]</a>.
+     </li>
+     </ul>
+
+     <img src="figures/postericcs14.jpg" alt="poster ICCS" />
+
+  </div>
+
+   <div class="separateur">
+     Memory model
+   </div>
+
+   <div class="main">
+      <div id="symmetricheap" style="float: right;">
+	<table>
+	  <tr><td>
+	    <img class="photo" src="./figures/symmetricHeap.png" height="200"
+	    alt="Symmetric heap" />
+	  </td></tr>
+	</table>
+      </div>
+
+      <p>
+	The memory model specified by OpenSHMEM and implemented by POSH consists
+	of two parts for each processing element:
+      </p>
+      <ul>
+	<li>Its private memory, that cannot be accessed by other processing
+	  elements;</li>
+	<li>Its symmetric heap, which is public and can be accessd in read and
+	  write mode by other processing elements.</li>
+      </ul>
+
+      <p>
+	Global, static variables are put inside of the symmetric heap. 
+      </p>
+
+      <p>The fact
+	that it public heaps are symmetric is important for memory
+	management. As a matter of fact, memory allocations in the symmetric
+	heap must be done in a symmetric way, in a sense that all the processing
+	elements perform the same memory allocation. The OpenSHMEM specification
+	states that before exiting, allocations in the symmetric heap must call
+	a synchronization barrier in order to ensure this symmetry.
+      </p>
+   </div>
+
+   <div class="separateur">
+     Communication model
+   </div>
+
+   <div class="main">
+      <div id="onesided" style="float: right; width=20%;">
+	<table>
+	  <tr><td>
+	    <img class="photo" src="./figures/onesided.png" height="200"
+	    alt="One-sided communications" />
+	  </td></tr>
+	</table>
+      </div>
+
+      <table>
+	<tr><td>
+      <p>
+	OpenSHMEM specifies one-sided peer-to-peer communications between
+	processing elements. Basically, a process can read data from another
+	process's symmetric heap or write data in another process's symmetric
+	heap. 
+      </p>
+
+      <p>
+	Memory is allocated in symmetric heaps using the shmalloc() routine. A
+	family of shmem_*_put() and shmem_*_p() routines are available (one for
+	each supported datatype) to write data at a remote address.
+      </p>
+
+      </td></tr><tr><td>
+
+      <div class="codeLarge">
+   long source[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; <br />
+   static long* target = (int *) shmalloc( 10 * sizeof( long ) ); <br />
+ <br />
+   if (_my_pe() == 0) { <br />
+ &nbsp;&nbsp;  /* put 10 elements into target on PE 1 */ <br />
+ &nbsp;&nbsp;  shmem_long_put(target, source, 10, 1); <br />
+   }
+   </div>
+
+      </td></tr><tr><td>
+
+     <p>
+	Similarly, a family of shmem_*_get() and shmem_*_g() routines are
+	available (one for each supported datatype) to read remote data.
+      </p>
+
+       </td></tr><tr><td>
+
+      <div class="codeLarge">
+   short* ptr; <br />
+   ptr = (short*)shmalloc( sizeof( short ) ); <br />
+   short toto = shmem_short_g( ptr, ( rank + 1 ) % size ); <br />
+      </div>
+
+      </td></tr>
+      </table>
+
+   </div>
+
+
+    <!-- APRES CETTE LIGNE ON NE TOUCHE PLUS -->
+     
+    
+    <!-- MOUCHARD GOOGLE ET W3C -->
+    <div class="marge_w3c">
+      <a href="http://validator.w3.org/check?uri=referer">
+	<img
+	   src="http://www.w3.org/Icons/valid-xhtml10-blue"
+	   alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+      </a>
+    </div>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-9116769-2");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    
+  </body>
+</html>
+
+

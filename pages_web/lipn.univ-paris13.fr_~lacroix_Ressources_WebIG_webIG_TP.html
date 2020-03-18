@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<title> Programmation Web 2017 - 2018 </title>
+	<meta charset="utf-8"/>
+  <link rel="stylesheet" href="../../main.css">
+  <link rel="stylesheet" href="../../utils/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../utils/highlight/styles/github.css">
+ <script src="../../utils/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header id="banner">
+    <div class="only_title">
+      <span class="menu_logo open_menu"><i class="fa fa-bars fa-3x"></i></span>
+      <h2> Programmation Web</h2>
+      <h3> TP</h3>
+  <div class="only_title">
+
+</header>  
+
+<main>
+
+
+
+
+
+
+
+<section  class="boite exercice" id="exercice1">
+  <div class="no-grille">
+        <h2> Exercice 1 : Première page Web</h2>
+        Pour chaque question, vous vérifierez que le code HTML est valide  avec le <a href="https://validator.w3.org/"> validateur du W3C</a>.
+        <ol>
+          <li> Écrivez une première page en HTML nommée <code>exercice1.html</code> contenant un titre de niveau 1 et un paragraphe et affichez-la avec le navigateur Firefox.  </li>
+          <li> Ajoutez une liste ordonnée contenant 3 items et une liste non ordonnée contenant 2 items. </li>
+          <li> Ajoutez un tableau contenant 3 lignes et 2 colonnes, la première ligne devant contenir des cellules d'en-tête.</li> 
+        </ol>
+  </div>
+</section>	
+
+
+
+<section  class="boite exercice" id="exercice2">
+    <div class="no-grille">
+        <h2> Exercice 2 : Arbre de représentation</h2>
+        <p> Accédez à la page Web <a href="Documents/Exercice2/exercice2.html">exercice2.html</a> et affichez son code source dans le navigateur à l'aide du raccourci <code>Ctrl+U</code>.
+          Dessinez sur une feuille l'arbre de représentation du code HTML.
+        </p>    
+    </div>
+  </section>
+
+  <section  class="boite exercice" id="exercice3">
+      <div class="no-grille">
+        <h2> Exercice 3 : Onglet Réseau du module de développement Web</h2>
+        <p> Accédez à la page Web <a href="Documents/Exercice2/exercice2.html">exercice2.html</a> et ouvrez l'onglet réseau du module développement Web de Firefox (raccourci <code>Ctrl+Maj+E</code>). Rafraîchissez la page à l'aide du raccourci (<code>Ctrl+R</code>) et répondez aux questions suivantes (utiliser la <a href="https://developer.mozilla.org/fr/docs/Outils/Moniteur_r%C3%A9seau"> documentation</a> de Firefox si besoin).
+        </p>
+        <ol>
+          <li>Combien de requêtes ont été faites pour afficher cette page Web ?</li>
+          <li>Quelle est la taille totale de la page Web ? la taille transférée ? Pourquoi ces deux valeurs sont-elles différentes ?</li>
+          <li>Pourquoi y a-t-il plus d'images téléchargées qu'il n'y a de balises img dans le document HTML ? </li>
+          <li>Les requêtes ont-elle été faites toutes en même temps ? </li>
+          <li>Combien de temps a mis Firefox pour charger/analyser le code HTML ?</li>
+          <li>Quel est le temps mis par Firefox pour afficher entièrement la page ?</li>
+          <li>Recharger la page avec le raccourci <code>F5</code>. Qu'est-ce que cela change ?</li>
+        </ol>
+        <p> Accédez à la page de l'<a href="https://galilee.univ-paris13.fr/">Institut Galilée</a> et répondez aux questions.</p>
+        <ol>
+          <li>Combien de requêtes sont effectuées pour afficher la page ?</li>
+          <li>Combien de scripts javascript ont été chargés ? Combien d'images ? </li>
+          <li>Combien de temps faut-il pour charger complètement la page ?</li>
+        </ol>
+      </div>
+    </section>
+
+  
+    <section  class="boite exercice" id="exercice4">
+        <div class="no-grille">
+          <h2>Exercice 4 : Liens hypertextes</h2>
+          <ol>
+            <li> Téléchargez l'<a href="Documents/Exercice2.zip">archive</a> contenant les sources (html, css, images) de la page Web de l'exercice 2 et extrayez-la dans le répertoire contenant le fichier <code>exercice1.html</code>. Ajoutez un deuxième sous-répertoire nommé <code>TEST</code> dans lequel vous créerez un fichier <code>hello_world.html</code> qui contiendra uniquement un titre de niveau <code>Hello World!</code> (ce fichier devra quand même être un fichier HTML valide). Dans le même répertoire, vous devez avoir le fichier <code>exercice1.html</code> et les deux répertoires <code>Exercice2</code> et <code>TEST</code>.</li>
+            <li>Dans le fichier <code>hello_world.html</code>, ajouter 3 liens hypertextes :
+              <ul>
+                <li>un sur le fichier <code>exercice1.html</code>,</li>
+                <li>un sur le fichier <code>exercice2.html</code>,</li>
+                <li>un sur le site Web de l'institut Galilée.</li>
+              </ul> 
+            </li>
+          </ol>
+        </div>
+    </section>  
+
+<section class="boite exercice" id="exercice5">
+  <div class="no-grille">
+    <h2>Exercice 5 : Premier CSS</h2>
+    Modifier le code du fichier <code>style.css</code> dans le répertoire <code>Exercice</code> (et uniquement celui-ci) pour que la page Web <code>exercice2.html</code> ressemble à : <br/><img src="img/rendu_css.png" alt="rendu avec css">.
+    <br/>  Pour cela, vous devez notamment :
+    <ul>
+      <li> changer la couleur d'écriture des paragraphes en <code>rosybrown</code>, </li>
+      <li>ne pas afficher les lignes horizontales,</li>
+      <li>pour le <code>body</code> : 
+        <ul>
+          <li> lui ajouter des bordures, le centrer et lui ajouter une marge interne de 50 pixels,</li>
+          <li> modifier son image de fond pour qu'elle s'affiche centrée en bas avec une taille de 200px (<a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size"><code>background-size</code></a>),</li>      
+        </ul>
+      </li>
+      <li> pour le titre et le premier paragraphe (pseudo classe <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child"><code>:nth-child(1)</code></a>) :
+        <ul>
+          <li>supprimer les marges extérieures (basse pour le titre, hautre pour le paragraphe),</li>
+          <li>les centrer,</li>
+          <li>modifier certains arrondis de bordure (propriétés 
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-top-left-radius"><code>border-top-left-radius</code></a>, 
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-top-right-radius"><code>border-top-right-radius</code></a>, 
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-bottom-left-radius"><code>border-bottom-left-radius</code></a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-bottom-right-radius"><code>border-bottom-right-radius</code></a>),</li>
+        </ul>
+      </li>
+      <li> pour les items de la liste : 
+        <ul>
+          <li>supprimer les puces,</li>
+          <li>les afficher sous forme <code>inline-block</code> pour avoir des marges mais ne pas faire de retour à la ligne,</li>
+          <li>leur fixer une hauter de 50 pixels et une marge intérieure de 5 pixels sauf pour la marge intérieure haute qui est de 30 pixels,</li>
+          <li> alterner leur couleurs de fond <code>rgb(255,228,196)</code> <code>rgb(222,184,135)</code> en utilisant la pseudo class <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child"><code>:nth-child(2n+1)</code></a>,</li>
+        </ul>
+        <li> modifier la couleur des éléments mis en valeurs dans les paragraphes (et uniquement eux) en <code>#8a2be2</code>.</li>
+      </li>
+    </ul>
+    <p>Vous devez vérifier à la fin que votre code CSS est valide à l'aide du validateur <a href="http://jigsaw.w3.org/css-validator/">W3C</a>.</p>
+  </div>
+</section>
+
+
+
+<section class="boite exercice" id="exercice6">
+    <div class="no-grille">
+      <h2>Exercice 6 : </h2>
+      <p>Considérons les codes HTML et CSS suivants.</p>
+      <pre><code class="html">&lt;p&gt; 
+  a &lt;strong&gt; b &lt;a href="doc.html"&gt; c &lt;/a&gt; d &lt;/strong&gt; e  
+  &lt;strong class="a"&gt; f &lt;a href="doc.html" class="a"&gt; g &lt;/a&gt; h &lt;/strong&gt; i 
+  &lt;strong class="a"&gt; j &lt;a href="doc.html"&gt; k &lt;em class="a"&gt; l &lt;/em&gt;  m  &lt;em&gt; n &lt;/em&gt; o &lt;/a&gt; p &lt;/strong&gt; q 
+&lt;/p&gt;</code></pre>
+<pre><code class="css">strong { color : yellow; }
+
+p { color : red; }
+
+strong.a { color : blue; }
+
+strong .a {	color : purple; }
+
+strong > .a { color : silver; }
+
+strong a { color : olive; }</code></pre>
+
+<p> Répondez aux questions suivantes.</p>
+<ol>
+  <li>Pour chaque règle, indiquez quelle est la cible du sélecteur (quels éléments sont modifiés par cette règle).</li>
+  <li>Donnez la priorité de chaque règle. Que se passe-t-il si l’on inverse les règles 4 et 5 dans le code CSS ?</li>
+  <li> Pour chaque lettre, indiquez quelle(s) règle(s) s’applique(nt). </li>
+  <li>Prédisez la couleur de chaque lettre.</li>
+  <li>Vérifiez si vous n'avez pas fait d'erreur de prédiction en vérifiant sur <a href="https://codepen.io/mathieulacroix/pen/bjXdXj">CodePen</a>.</li>
+</ol>
+  </div>
+</section>
+
+<section class="boite exercice" id="exercice7">
+    <div class="no-grille">
+    <h2>Exercice 7 : Premiers pas avec la propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/position"><code>position</code></a></h2>
+    <p> Pour avoir un aperçu rapide du fonctionnement de la propriété <code>position</code>, vous allez effectuer quelques tests sur <a href="https://codepen.io/">CodePen</a>. CodePen est un site Web permettant de tester très rapidement du code HTML, CSS et JS, ainsi que de partager votre code. Vous pouvez l'utiliser en vous inscrivant (gratuitement) ou de manière anonyme (vous ne pourrez juste pas sauvegarder votre code).</p>
+
+    <p> Accédez à <a href="https://codepen.io/mathieulacroix/pen/mjZxVx">cette page</a> et suivez les instructions en analysant à chaque fois le résultat obtenu.</p>
+    <ol>
+      <li>Décommentez la ligne 4 de la partie CSS.</li>
+      <li>Décommentez les lignes 5 et 6 de la partie CSS.</li>
+      <li>Commentez les lignes 5 et 6 et remplacer la valeur <code>absolute</code> de la ligne 4 par <code>relative</code>.</li>
+      <li>Décommentez les lignes 5 et 6 de la partie CSS.</li>
+    </ol>     
+
+    <p> Accédez maintenant à <a href="https://codepen.io/mathieulacroix/pen/BPXaMe">cette page</a> et suivez les instructions en analysant à chaque fois le résultat obtenu.</p>
+    <ol>
+      <li>Décommentez la ligne 10 de la partie CSS.</li>
+      <li>Décommentez les lignes 11 et 12 de la partie CSS.</li>
+      <li>Décommentez la ligne 4.</li>
+    </ol>     
+  </div>
+</section>
+
+
+
+<section class="boite exercice" id="exercice8">
+    <div class="no-grille">
+      <h2>Exercice 8 : propriété <a href="https://developer.mozilla.org/fr/docs/Web/CSS/position"><code>position</code></a></h2>
+      <p> Téléchargez le fichier HTML <a href="Documents/exercice8.html"><code>exercice8.html</code></a>. Sans le modifier, en créant uniquement un fichier <code>style_exercice8.css</code>, modifiez l'affichage de la page Web pour qu'elle corresponde à la photo suivante : <img src="img/position_exercice8.png" alt="rendu css" /> </p>
+      <h4>Indications </h4>
+      <ul>
+        <li>le <code>body</code> fait 1200 pixels de large et est centré sur la page,</li>
+        <li>les sections font 400 pixels de large et sont éloignées horizontalement de 100 pixels du bord du <code>body</code>,</li>
+        <li>les articles font 200 pixels de large et 50 pixels de haut.</li>
+      </ul>
+  </div>
+</section>
+
+
+<section class="boite exercice"  id="exercice9">
+  <div class="no-grille">
+    <h2>Exercice 9 : Premiers pas avec le positionnement par grille</h2>
+    <p> Accédez à <a href="https://codepen.io/mathieulacroix/pen/aabmGL">cette page</a> et suivez les instructions en analysant à chaque fois le résultat obtenu.</p>
+    <ol>
+      <li>Commentez la ligne 20 de la partie CSS puis décommentez-la après avoir compris le résultat.</li>
+      <li>Commentez les lignes 22 à 24 et décommentez les lignes 26 à 29  de la partie CSS.</li>
+      <li>Commentez les lignes 26 à 29  et décommentez les lignes 31 à 34  de la partie CSS.</li>
+      <li>Modifier la valeur de <code>grid-template-areas</code> pour obtenir le positionnement suivant : 
+      <br/><img src="img/grid_layout_exo9_1.png" alt="layout"/></li>
+      <li>Modifier les valeurs de <code>grid-template-columns</code> et <code>grid-template-areas</code> pour obtenir le positionnement suivant : 
+      <br/><img src="img/grid_layout_exo9_2.png" alt="layout" style="width:100%"/></li>
+    </ol>
+  </div>
+</section>     
+
+
+<section class="boite exercice" id="exercice10">
+    <div class="no-grille">
+      <h2>Exercice 10 : Responsive Design - part 1</h2>
+      <p> Cet exercice et les deux suivants ont pour objectif de créer une page Web Responsive correspondant à un CV.</p>
+      <p> Téléchargez l'archive <a href="Documents/CV.zip">CV.zip</a>. Sans modifier le fichier HTML, modifiez l'apparence du site pour qu'il ressemble à :<br/>
+        <div class="align-img">
+      <img src="img/cv_rd_small.png" alt="RD small" /> <img src="img/cv_rd_small_part.png"  style="width:90%" alt="RD small -- part"/>
+        </div>
+      </p>
+      <h4>Indications</h4>
+      <ul>
+        <li>le <code>body</code> fait entre 480 et 959 pixels de large (l'affichage doit fonctionner pour n'importe laquelle de ces largeurs) et est centré sur la page,</li>
+        <li>le <code>body</code> a <code>code.jpg</code> comme image de fond et les propriétés <code>background-size: 100%; background-attachment: fixed;</code>. </li>
+      </ul>
+</div>
+</section>
+
+<section class="boite exercice" id="exercice11">
+    <div class="no-grille">
+      <h2>Exercice 11 : Responsive Design - part 2</h2>
+      <p>Modifier le CSS de l'exercice précédent pour que le CV, lorsque l'écran fait au minimum 960 pixels,  ressemble à :<br/>
+      <img src="img/cv_rd_medium.png" alt="RD medium"/>
+      </p>
+    </div>
+</section>
+
+
+<section class="boite exercice" id="exercice12">
+    <div class="no-grille">
+      <h2>Exercice 12 : Responsive Design - part 3</h2>
+      <p>Modifier le CSS de l'exercice précédent pour que le CV, lorsque l'écran fait au minimum 1680 pixels, ressemble à :<br/>
+      <img src="img/cv_rd_large.png" alt="RD large"/>
+      </p>
+    </div>
+  </section>
+
+
+
+
+</main>
+
+
+
+
+<nav id="menu_side">
+		<div class="titre_menu">
+      <h3> NAVIGATION</h3>
+			<i class="fa fa-remove fa-3x close_menu"></i>
+      </div>
+      <ul>
+        <li> <a href="../../index.html" class="close_menu">ACCUEIL</a></li>
+        <li> <a href="../../recherche.html" class="close_menu">RECHERCHE</a></li>
+        <li> <a href="../../enseignement.html" class="close_menu">ENSEIGNEMENT</a></li>
+      </ul>
+      </h3>
+      <div class="titre_menu">
+        <h3>EXERCICES DE TP</h3>
+      </div>
+		</div>
+		<ul >
+      <li><a href="#exercice1" class="close_menu">Exercice1</a></li>
+      <li><a href="#exercice2" class="close_menu">Exercice2</a></li>
+      <li><a href="#exercice3" class="close_menu">Exercice3</a></li>
+      <li><a href="#exercice4" class="close_menu">Exercice4</a></li>
+      <li><a href="#exercice5" class="close_menu">Exercice5</a></li>
+      <li><a href="#exercice6" class="close_menu">Exercice6</a></li>
+      <li><a href="#exercice7" class="close_menu">Exercice7</a></li>
+      <li><a href="#exercice8" class="close_menu" >Exercice8</a></li>
+      <li><a href="#exercice9" class="close_menu">Exercice9</a></li>
+      <li><a href="#exercice10" class="close_menu">Exercice10</a></li>
+      <li><a href="#exercice11" class="close_menu">Exercice11</a></li>
+      <li><a href="#exercice12" class="close_menu">Exercice12</a></li>
+    </ul>
+		</nav>
+
+<!-- Return to Top -->
+<i id="return-to-top" class="fa fa-arrow-circle-up fa-3x"></i>
+
+    <script src="../../utils/js/menu.js"></script>    
+</body>
+</html>
+

@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>Elica project -- Meetings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+</head>
+
+<body>
+<table>
+	<tr>
+		<td style="vertical-align: top">
+<div class="navbar">
+<a href="http://www.agence-nationale-recherche.fr/"><img style="border:0;width:165px;height:70px" src="img/ANR.jpg" alt="ANR"></a>
+<h2>Elica project</h2>
+<a class="home" href="http://lipn.univ-paris13.fr/~mazza/Elica/">Home page</a>
+<ul>
+	<li><a class="button" href="?page=obj">Objectives</a></li>
+<li><a class="button" href="?page=part">Participants</a></li>
+<li class="button">Meetings</li>
+</ul>
+<p>
+	<a href="http://www.univ-paris13.fr"><img style="border:0;width:225px;height:70px" src="img/Paris13.gif" alt="Universit&eacute; Paris 13"></a><br>
+	<a href="http://www.ens-lyon.eu"><img style="border:0;width:225px;height:70px" src="img/ENSLyon.png" alt="ENS Lyon"></a>
+	<a href="http://www.inria.fr"><img style="border:0;width:225px;height:70px" src="img/Inria.jpg" alt="Inria"></a><br>
+	<a href="http://welcome.univ-lorraine.fr/en"><img  style="border:0;width:70px;height:70px" src="img/UL.jpg" alt="Universit&eacute; de Lorraine"></a>&nbsp;<a href="http://www.unibo.it/en/homepage"><img  style="border:0;width:70px;height:70px" src="img/UnivBologna.png" alt="Universit&agrave; di Bologna"></a>&nbsp;<a href="http://www.cnrs.fr/index.php"><img  style="border:0;width:70px;height:70px" src="img/CNRS.gif" alt="CNRS"></a>
+</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/valid-html401.png" alt="Valid HTML 4.01!"></a>
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a><br>
+	Webmaster: <a href="http://www.lipn.univ-paris13.fr/~mazza">Damiano Mazza</a>
+</p>
+</div>
+    	</td>
+		<td style="vertical-align: top">
+<div>
+<table border="0" width="100%">
+<tr>
+<td>
+<h3>Meetings</h3>
+<p>We regularly organized scientific meetings to discuss specific topics of interest for the project, share and disseminate the advances made by the various members of the project, and to assess the development of the project itself.</p>
+<p>For its duration, Elica was also the main sponsor of the <a href="http://perso.ens-lyon.fr/patrick.baillot/DICE/">DICE workshop series</a>, which served as a further meeting venue.</p>
+<p>Elica also provided financial support to the first edition of the <a href="https://caleidoscope.sciencesconf.org/">Caleidoscope Research School</a> in June 2019.</p>
+<p>Here is the list of all meetings held. The slides of some of the talks are available (via the link next to the name of the speaker).</p>
+</td>
+<td>
+</td>
+</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">06/02/2015:</td>
+		<td>Kick-off meeting</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>LIPN, Paris 13</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Speakers:</td>
+		<td>D. Mazza [<a href="Slides/Elica150206-Mazza">slides</a>], M. Avanzini, T. Rubiano, D. Varacca, C. Aubert, T. Seiller, R. P&eacute;choux.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">11-12/04/2015:</td>
+		<td><a href="http://dice15.computing.dundee.ac.uk/">DICE 2015</a></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>London (UK)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Chair:</td>
+		<td><a href="http://www.acsu.buffalo.edu/~gaboardi/">Marco Gaboardi</a></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">30/09/2015:</td>
+		<td>2nd meeting</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>LIP, ENS Lyon</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Speakers:</td>
+		<td>D. Mazza, L. Pellissier, M. Avanzini, H. Godfroy, S. Guerrini, U. Dal Lago.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">02-03/04/2016:</td>
+		<td><a href="http://lipn.univ-paris13.fr/DICE2016/">DICE 2016</a></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>Eindhoven (The Netherlands)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Chair:</td>
+		<td><a href="http://lipn.univ-paris13.fr/~mazza/">Damiano Mazza</a></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">06-07/10/2016:</td>
+		<td>3rd meeting</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>Dipartimento di Informatica - Scienza e Ingegneria, Universit&agrave; di Bologna</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Speakers:</td>
+		<td>A. Das [<a href="Slides/Elica161006-07-Das.pdf">slides</a>], M. Avanzini [<a href="Slides/Elica161006-07-Avanzini.pdf">slides</a>], T. Rubiano, Ch. Grellois [<a href="Slides/Elica161006-07-Grellois.pdf">slides</a>], J.-Y. Moyen [<a href="Slides/Elica161006-07-Moyen.pdf">slides</a>] [<a href="Slides/Elica161006-07-Moyen-Puzzle1.pdf">puzzle, part 1</a>] [<a href="Slides/Elica161006-07-Moyen-Puzzle2.pdf">puzzle, part 2</a>], R. P&eacute;choux [<a href="Slides/Elica161006-07-Pechoux.pdf">slides</a>], M. Solieri, P. Vial [<a href="Slides/Elica161006-07-Vial.pdf">slides</a>].</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">22-23/04/2017:</td>
+		<td><a href="http://cbr.uibk.ac.at/events/dice-fopara/">DICE 2017 (joint with FOPARA)</a></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>Uppsala (Sweden)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Chair:</td>
+		<td><a href="https://members.loria.fr/GBonfante/">Guillaume Bonfante</a></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">05/10/2017:</td>
+		<td>4th meeting</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>ENS Lyon</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Speakers:</td>
+		<td>U. Dal Lago, O. Laurent, D. Mazza.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">14-15/04/2018:</td>
+		<td><a href="http://cl-informatik.uibk.ac.at/users/zini/events/dice18/">DICE 2018</a></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>Thessaloniki (Greece)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Chair:</td>
+		<td><a href="http://cl-informatik.uibk.ac.at/users/zini">Martin Avanzini</a></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">08-11/10/2018:</td>
+		<td>Final meeting (joint with the <a href="http://crecogi.cs.unibo.it/index.shtml">CRECOGI</a> project and co-sponsored by <a href="http://linear-logic.org/en/">GDRI LL</a>)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>IRIF, Universit&eacute; Paris 7</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Speakers:</td>
+		<td>The full program of the joint meeting is available <a href="http://crecogi.cs.unibo.it/parismeeting.shtml">here</a>.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="text-align:right">06-07/04/2019:</td>
+		<td><a href="https://conf.researchr.org/track/etaps-2019/dice-fopara-2019-papers">DICE 2019 (joint with FOPARA)</a></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Location:</td>
+		<td>Prague (Czech Republic)</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">Chair:</td>
+		<td><a href="https://www.seiller.org/">Thomas Seiller</a></td>
+	</tr>
+</table>
+</div>
+		</td>
+	</tr>
+</table>
+</body>
+
+</html>

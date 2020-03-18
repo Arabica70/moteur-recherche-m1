@@ -1,0 +1,466 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the Udine IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talks at the Udine IFIP WG1.3 meeting (September 11-12th, 2009) </H2>
+</CENTER>
+== Friday September 11th, 2009
+
+<!-- partie commente'e
+<LI>1 - <a name=""> </a>,
+<BR>
+<BR>[Joint work with]
+<BR>Abstract:<BR>
+
+<BR>------------------------------------------------------
+</LI><LI>2 -<a name=""> </a>,
+<BR>
+<BR>[Joint work with]
+<BR>Abstract:<BR>
+
+<BR>------------------------------------------------------
+-->
+
+
+<LI>1 - <a name="Rutten">Jan Rutten</a>, 
+CWI & VUA (Vrije Universiteit Amsterdam)
+<!-- partie commente'e
+<A HREF="UDINE-DATA/Rutten.pdf">slides</A> ?
+-->
+<BR>Kleene coalgebra
+<!-- <BR>[Joint work with] -->
+<BR>Abstract: <BR>
+We present an overview of four recent papers:
+<BR><BR>
+1. Marcello Bonsangue, Jan Rutten, Alexandra Silva.
+<BR>Coalgebraic logic and synthesis of Mealy machines.
+<BR>FoSSaCS 2008.
+<BR><BR>
+2. Marcello Bonsangue, Jan Rutten, Alexandra Silva.
+<BR>A Kleene theorem for polynomial coalgebras.
+<BR>FoSSaCS 2009.
+<BR><BR>
+3. Marcello Bonsangue, Jan Rutten, Alexandra Silva.
+<BR>Algebras for Kripke polynomial coalgebras.
+<BR>LICS 2009.
+<BR><BR>
+4. Filippo Bonchi, Marcello Bonsangue, Jan Rutten,
+<BR>Alexandra Silva. Deriving syntax and axioms for
+quantitative regular behaviours.
+<BR>CONCUR 2009.
+
+<BR>------------------------------------------------------
+</LI><LI>2 -<a name="Sobocinski">Pawel Sobocinski</a>,
+<A HREF="UDINE-DATA/Sobocinski.pdf">SLIDES</A>,
+<A HREF="http://users.ecs.soton.ac.uk/ps/papers/ice09.pdf">PAPER</A>
+<BR> The wire calculus
+<!-- <BR>[Joint work with] -->
+<BR>Abstract:<BR>
+The wire calculus is a process algebra for modelling truly concurrent
+systems with explicit network topologies. Instead of a
+Dijsktra-Hoare-Milner
+commutative parallel operator it features a non-communicating
+non-commutative parallel and an operator for synchronisation on a
+common boundary. The dynamics are handled by operators inspired by
+Milner's CCS and Hoare's CSP: unary prefix operation, binary choice
+and a standard recursion construct. The operational semantics is a
+labelled transition systems derived using SOS rules. After presenting
+the
+formal definition of the calculus I will discuss some basic results
+and give several examples.
+
+
+<BR>------------------------------------------------------
+</LI><LI>3 -<a name="Koenig">Barbara Koenig</a>, 
+Universitaet Duisburg-Essen, Germany
+<A HREF="http://www.ti.inf.unidue.de/publications/koenig/icgt08b.pdf">PAPER</A>,
+<A HREF="UDINE-DATA/Koenig.pdf">SLIDES</A>
+<BR> On the recognizability of arrow and graph languages
+<BR>[Joint work with Christoph Blume, Sander Bruggink] 
+<BR>Abstract:<BR>
+We present a category-based characterization of recognizability. A
+recognizable subset of arrows is defined via a functor into the
+category of relations on (finite) sets, which can be seen as a
+straightforward generalization of a finite automaton. Furthermore we
+apply the theory to graphs, and we show that our approach is a
+generalization of Courcelle's recognizable graph languages. In
+addition the practical aspects of the work, including an
+implementation and applications to verification, are discussed.
+
+<BR>------------------------------------------------------
+</LI><LI>4 -<a name="Klin">Bartek Klin</a>,
+<A HREF="UDINE-DATA/Klin.pdf">SLIDES</A>
+<BR> Context alterations as labels
+<!-- <BR>[Joint work with] -->
+<BR>Abstract:<BR>
+I study the problem of defining a general notion of equivalence for reactive system specifications, that would give expected results on both synchronous and asynchronous CCS. I show that various flavours of the "context as labels" approach seem inadequate for that purpose, and I suggest an alternative approach of "context alterations as labels", loosely based on the general philosophy of Milner's button-pushing experiments. 
+<BR>------------------------------------------------------
+</LI><LI>5 <a name="Tarlecki">Andrzej Tarlecki</a>,
+Institute of Informatics, University of Warsaw,      
+and Institute of Computer Science PAS, Warsaw, Poland,
+<A HREF="UDINE-DATA/Tarlecki.pdf">SLIDES</A>
+<BR> An easy exercise in Hoare's logic: imperative expressions
+<!-- <BR>[Joint work with] -->
+<BR>Abstract:<BR>
+I will sketch a simple Hoare logic for while-programs with imperative
+expressions. While the form of basic partial correctness judgements
+remains as in the standard case, since expressions then may have
+side-effects and so are not just included as terms in typical logical
+formulae, we need new forms of judgements for partial correctness of
+expressions, where post-conditions describe both the values of
+expressions and the properties of states (as well as relationship
+between them). For such judgements a number of expected proof rules
+must be given then, and their use must be built into the proof rules
+for partial correctness of statements. Once this is done, it is easy
+to recover the usual results on the soundness and (relative)
+completeness of the proof system. Perhaps surprisingly, the latter
+requires some (mild and fully acceptable) technical assumptions
+concerning the built-in data type of the while-programs, as well as
+the language of these programs itself.
+
+As proving correctness of programs with various constructs is a
+well-researched area, the main purpose of this talk is to learn from
+the Group about any earlier work addressing this topic.
+<BR>------------------------------------------------------
+</LI><LI>6 <a name="Marti-Oliet">Narciso Marti-Oliet,
+Universidad Complutense de Madrid, Spain
+<A HREF="UDINE-DATA/Marti-Oliet.pdf">slides</A>
+<BR>Declarative debugging of missing answers in Maude specifications
+<BR>[Joint work with Adrian Riesco and Alberto Verdejo]
+<BR>Abstract:<BR>
+Maude is a high-level language and high-performance system supporting both equational
+and rewriting logic computation. In previous work, we developed a declarative debugging
+framework for wrong answers in equational and rewriting logic specifications.
+In a non-deterministic framework, a term can be rewritten to different terms. In this case, it
+is possible that not all the solutions expected by the user are reached. Each of these lost
+terms is a missing answer.  We have defined a calculus that allows to infer, given a term,
+a condition, and a number of steps, the complete set of terms that satisfy the condition and
+are reachable in, at most, the given steps. With this calculus, we can detect missing answers
+due to: a wrong statement (that is, an error in the definition of an equation, a membership,
+or a rewrite rule), an error in the formulation of the condition, or a missing rule.
+Then, we have implemented a declarative debugger for Maude that allows to debug
+both wrong and missing answers in different ways.
+
+<BR>------------------------------------------------------
+</LI><LI>7 -<a name="Montanari">Ugo Montanari</a>,
+Dipartimento di Informatica, Universita di Pisa
+<A HREF="UDINE-DATA/Montanari.pdf">SLIDES</A>
+<BR> Coalgebras for Named Sets
+<BR>[Joint work with Vincenzo Ciancia, Universidad Complutense Madrid]
+<BR>Abstract:<BR>
+The semantics of name-passing calculi is often defined employing coalgebraic models over presheaf categories. This elegant theory lacks finiteness properties, hence it is not apt to implementation. Coalgebras over named sets, called history-dependent automata, are better suited for the purpose, due to locality of names. A theory of behavioural functors for named sets is still lacking: the semantics of each language has been given in an ad-hoc way, and algorithms were implemented only for the pi-calculus. Existence of the final coalgebra for the pi-calculus was never proved. We introduce a language of accessible functors to specify history-dependent automata in a modular way, leading to a clean formulation and a generalisation of previous results, and to the proof of existence of a final coalgebra in a wide range of cases
+
+<BR>------------------------------------------------------
+</LI><LI>8 -<a name="Boerger">Egon Boerger</a>, 
+Universita di Pisa, Italy
+<A HREF="http://www.di.unipi.it/~boerger/Papers/SyncMsgSema.pdf">PAPER</A>
+<BR> Modeling Operating System Kernels
+<BR>[Joint work with Iain Craig, Birmingham, UK]
+<BR>Abstract:<BR>
+The overall goal of the project, which is ongoing joint work with Iain
+Craig (Birmingham), consists in high-level modeling (and verifying
+properties of) operating system kernels. In [BoeCra09] we defined an
+ASM model for an OS kernel which comes with an abstract scheduler that
+stands for a wide class of scheduling disciplines one encounters in
+practice.  As an example for using such an accurate model to
+mathematically verify OS related properties of interest we a) define a
+high-level model for synchronous message passing which we claim to
+correctly capture the requirements for synchronous message passing, b) refine
+this model using semaphores and c) prove the correctness of the refinement.
+
+We use the ASM refinement notion defined in [Boe03] because it works
+for stepwise refining programs that are used in distributed runs of
+multiple agents, based upon Gurevich's most general axiomatic notion
+of distributed ASM runs (see [BoeSta03] for a detailed definition).
+<BR>
+
+[BoeCra09] E. Boerger and I. Craig: Modeling an Operating System
+  Kernel. In: V. Diekert, K. Weicker, N. Weicker
+  (Eds): Informatik als Dialog zwischen Theorie und
+  Anwendung. Festschrift fuer Volker Claus zum 65.Geburtstag, pp.199-216.
+  Vieweg+Teubner, Reihe Wissenschaft, Wiesbaden 2009, ISBN 978-3-8348-0824-0.
+<BR>
+[Boe03] E. Boerger: The ASM Refinement Method. In: Formal Aspects of
+Computing, ISSN 0934-5043, 15:237-257, 2003.
+<BR>
+[BoeSta03] E. Boerger and R. F. Staerk: Abstract State Machines. A
+Method for High-Level System Design and Analysis. Springer 2003
+<BR><BR>
+The two books on the ASM Method and its applications have been reprinted
+and are again available:
+<BR>
+
+E.Boerger, R.Staerk: 
+<A HREF="http://www.di.unipi.it/AsmBook/">Abstract State Machines. A Method for High-Level System Design and Analysis</A>
+<BR>
+R.Staerk, J.Schmid, E.Boerger: 
+<A HREF="http://www.inf.ethz.ch/personal/staerk/jbook">Java and the Java Virtual Machine Definition, Verification, Validation</A>
+<!-- partie commente'e
+Implementing synchronous message passing by semaphores
+An ASM refinement case study
+-->
+<BR>------------------------------------------------------
+
+</LI><LI>9 -<a name="Futatsugi">Kokichi Futatsugi</a>,
+JAIST (Japan Advanced Institute of Science and Technology)
+<A HREF="UDINE-DATA/Futatsugi.pdf">SLIDES</A>
+<BR> Combining inference and search in CafeOBJ verifications 
+with proof scores
+<!-- <BR>[Joint work with] -->
+<BR>Abstract:<BR>
+One of the most important technical issues in current system
+verification is how to combine inference (a la interactive theorem
+proving) and search (a la automatic model checking) in an effective
+and efficient way.
+
+CafeOBJ is a most advanced algebraic formal specification language
+system with rewriting/reduction engine which can be used for
+interactive verification.  CafeOBJ also has a searching facility which
+can be used to search all reachable states of a system to check
+whether some property holds for all reachable states.  We have been
+developing an interactive verification method with proof scores in
+CafeOBJ, and are currently trying to combine this method with the
+searching to achieve more powerful verification method.
+
+In this talk, our current achievement of combining inference and
+search in verification is explained by using a simple but non-trivial
+example of mutual exclusion protocol.
+
+<BR>------------------------------------------------------
+</LI><LI>10 -<a name="Duval">Dominique Duval</a>,
+<A HREF="UDINE-DATA/Duval.pdf">SLIDES</A>
+<BR> Zooms for Effects
+<BR>[Joint work with]
+<BR>Abstract:<BR>
+The slogan of this talk is:
+  First be wrong, then add corrections,
+    in order to finally get right
+<BR><BR>References
+<BR>
+- César Dominguez, Dominique Duval.
+ <BR> Diagrammatic logic applied to a parameterization process
+ arXiv:0908.3737 (2009).
+ <BR>
+- Jean-Guillaume Dumas , Dominique Duval, Jean-Claude Reynaud.
+ <BR> Cartesian effect categories are Freyd-categories.
+
+<BR>------------------------------------------------------
+
+<BR><BR>== Saturday September 12th, 2009
+
+<BR>
+
+</LI><LI>11 -<a name="Mossakowski"> Mihai Codescu</a>
+(DFKI GmbH Bremen, Germany), 
+Till Mossakowski (DFKI GmbH Bremen and University of Bremen, Germany), 
+Florian Rabe (Jacobs University, Bremen, Germany), 
+<A HREF="UDINE-DATA/Mossakowski-Rabe-Codescu.pdf">SLIDES</A>
+<BR> Model-Level vs Theory-Level Semantics
+<BR>Abstract:<BR>
+We present alternatives for giving semantics of module
+systems, orriginating from different communities of
+research: firstly, model-level semantics illustrated for the
+heterogeneous specification structuring language of the
+Heterogenous Tool Set HETS and its most recent
+developments; and secondly, theory-level semantics using the example
+of the newly-developed language for mathematical knowledge
+management MMT. While the approaches are compatible in some cases,
+they yield different semantics for some operations on modules,
+most notably hiding. We present several examples that
+are handled differently in the two frameworks and discuss
+ideas to reconcile the two methods.
+<BR>------------------------------------------------------
+</LI><LI>12 -<a name="Ryan">Mark Ryan</a>, 
+University of Birmingham
+<A HREF="UDINE-DATA/Ryan.pdf">SLIDES</A>
+<BR> Analysis of electronic voting protocols
+in applied pi calculus
+<BR>[Joint work with Ben Smyth, Steve Kremer, Mounira Kourjieh]
+<BR>Abstract:<BR>
+The talk presents work on formalising properties of voting protocols.
+The requirements of receipt-freeness and vote-verifiability
+intuitively appear to conflict with each other: vote-verifiability
+provides proof that the voters vote was counted, and this might
+constitute a receipt. To resolve the conflict, we show how these
+properties can be formalised, and give examples from the literature of
+protocols that satisfy both.
+<BR>------------------------------------------------------
+
+</LI><LI>13 -<a name="Schroeder">Lutz Schroeder</a>,
+<A HREF="UDINE-DATA/Schroeder.pdf">SLIDES</A>,
+<A HREF="http://www.informatik.uni-bremen.de/~lschrode/papers/CAD.pdf">PAPER</A>
+<BR>
+<BR>[Joint work with Michael Kohlhase, Johannes Lemburg and Ewaryst Schulz]
+<BR>Abstract:<BR>
+Systematic engineering design processes have many aspects in common
+  with software engineering, with CAD/CAM objects replacing program
+  code as the implementation stage of the development. They are,
+  however, currently considerably less formal. We propose to draw on
+  the mentioned similarities and transfer methods from software
+  engineering to engineering design in order to enhance in particular
+  the reliability and reusability of engineering processes. We lay out
+  a vision of a document-oriented design process that integrates
+  CAD/CAM documents with requirement specifications; as a first step
+  towards supporting such a process, we present a tool that interfaces
+  a CAD system with program verification workflows, thus allowing for
+  completely formalised development strands within a semi-formal
+  methodology.
+<BR><BR>
+Reference: Michael Kohlhase, Johannes Lemburg, Lutz Schröder and Ewaryst
+Schulz: Formal Management of CAD/CAM Processes. In Ana Cavalcanti,
+Dennis Dams (Eds.), Formal Methods (FM 2009), Lecture Notes in Computer
+Science. Springer. To appear.
+<BR>------------------------------------------------------
+
+</LI><LI>14 -<a name="Heckel">Reiko Heckel</a>, University of Leicester, UK, 
+<A HREF="UDINE-DATA/Heckel.pdf">SLIDES</A>, PAPER referenced at the end
+<BR> Stochastic Analysis of Graph Transformation Systems
+<BR>[Joint work with Paolo Torrini and Ajab Khan]
+<BR>Abstract:<BR>
+In distributed and mobile systems with volatile bandwidth
+and fragile connectivity, non-functional aspects like performance and reliability become more and more important. To formalise, measure, and
+predict these properties, stochastic methods are required. At the same
+time such systems are characterised by a high degree of architectural
+reconfiguration. Viewing the architecture of a distributed system as a
+graph, this is naturally modelled by graph transformations.
+<BR><BR>
+To address these two concerns, stochastic graph transformation systems
+associate with each rule and match a probability distribution governing the delay of its application. Depending on the nature of these distributions, different techniques for analysis are available.
+In the case of exponential distributions, continuous-time Markov chains can be derived which allow us to verify reliability properties through model checking. We illustrate this approach by an example of
+simple P2P network architectures.
+<BR><BR>
+If the network carries VoIP services such as Skype, attributes like packet delay and jitter (its variation over time) provide a measure of the user experience. In this case, the reconfiguration of the network should depend on the measurement of such attributes by the peers themselves, i.e., the stochastic model needs to be aware of its the passage of time.
+<BR><BR>
+Generalised stochastic graph transformation systems allow for such models, where clocks are represented as attributes of peers and clock ticks governed by normal distributions. Generalised semi-
+Markov processes provide a semantic model supporting simulations.
+<BR><BR>
+However, the use of local clocks and explicit clock ticks induces a large overhead on the simulation. An alternative is the use of a global (simulation) clock. This case is illustrated by the scenario of an accident management system deploying emergency vehicles to serve accidents. The integrated modelling of physical movement and communication requires the use of advanced features of graph transformation, including multi objects and derived attributes and links.
+<BR><BR>
+Reference
+<BR><BR>
+Ajab Khan, Paolo Torrini, Reiko Heckel (2008)  Model-based Simulation of VoIP Network Reconfigurations using Graph Transformation Systems, 
+<A HREF="http://eceasst.cs.tu-berlin.de/index.php/eceasst/issue/view/26"> ICGT'08 - Doctoral Symposium</A>
+<BR> ------------------------------------------------------
+</LI><LI>15 -<a name="Gadducci">Fabio Gadducci</a>, University of Pisa, Italy
+<A HREF="UDINE-DATA/Gadducci.pdf">SLIDES</A>
+<BR> On the net encoding of asynchronous interactions
+<BR>[Joint work with Paolo Baldan (U. Padova) and 
+Filippo Bonchi (CWI Amsterdam)]
+<BR>Abstract:<BR>
+The talk presents an encoding for (bound) processes of the asynchronous CCS with replication into open Petri nets: ordinary Petri nets equipped with a distinguished set of "open" places. The standard token game of nets models the reduction semantics of the calculus; the exchange of tokens on open places models the interactions between processes and their environment. The encoding preserves strong and weak CCS asynchronous bisimilarities: some results on expressiveness can thus be transferred from the calculus to nets and bac
+
+<BR>------------------------------------------------------
+</LI><LI>16 -<a name="Pattinson">Dirk Pattinson</a>,
+<A HREF="UDINE-DATA/Pattinson.pdf">SLIDES</A>
+<BR> Continuous Functions on Infinite Structures
+<BR>[Joint work with Neil Ghani and Peter Hancock]
+<BR>Abstract:<BR>
+The well-known representation  of real numbers as infinite streams
+of digits is a well-studied instance of the use of coinductive types
+to represent continuous data types. The fact that also (total)
+continuous functions may be represented as a coinductive type
+suggests that this analogy can be carried over to a larger variety
+of structures and spaces usually found in analysis, with the main
+benefit of being able to use coinduction both as a definition and a
+proof principle on representatives. In this talk, we argue that
+indeed many types of spaces found in analysis can be represented
+coinductively by generalising known representation theorems for
+function spaces from infinite streams to infinite trees, and
+subsequently to spaces of higher-order functions. The main challenge
+is to adequately capture the topology on the represented spaces,
+which leads to an information-theoretic interpretation.
+<BR> extends the paper <BR>
+``Representations of Stream Processors using nested fixed points'' by
+Peter Hancock, Neil Ghani, Dirk Pattinson, Logical Methods in Computer Science, to appear, 2009.
+
+<BR>------------------------------------------------------
+</LI><LI>17 -<a name="Mery">Dominique Mery</a>, 
+Universit&eacute; Henri Poincar&eacute; Nancy 1  & LORIA
+<A HREF="UDINE-DATA/Mery.pdf">SLIDES</A> 
+<BR> Refinement-based guidelines  for algorithmic systems
+<BR>[Joint work with]
+<BR>Abstract:<BR>
+The correct-by-construction approach can be supported by a
+ progressive and incremental process  controlled by the refinement of
+ models of programs.  We  explore the Event B modelling  language  to
+ illustrate the expression of our methodological proposal using
+ proof-based patterns called guidelines. The main
+ objective is to  facilitate the correct-by-construction approach for
+ designing    classical    sequential algorithms.    We   address the
+ description of guidelines for the  design of programs and algorithms
+ and the integration of proof-based aspects using the RODIN platform.
+ More precisely, we introduce several methodological steps identified
+ during the development  of  case studies,  and  we propose auxiliary
+ notions, such as  refinement   diagrams, for guiding  users   during
+ problem    analysis.    A   general   structure characterizes    the
+ relationship between the contract,  the  \eventb, and the  developed
+ algorithm  using   a  specific application   of  \eventb  models and
+ refinement. We  simplify  the translation   of \eventb models   into
+ algorithmic elements by promoting  the use of recursive  constructs.
+ The resulting  algorithm is proved to  be sound  with respect to the
+ pre/post specification, namely, the contract. Applications rely on a
+ dynamic programming technique  that illustrates the applicability of
+ these  patterns  based  on    a  call-as-event   relationship.  Each
+ proof-based  development is validated using  the RODIN platform. Our
+ paper contributes to the  development of patterns for  assisting the
+ proof-based development of algorithmic systems.
+
+<BR>------------------------------------------------------
+</LI><LI>18 -<a name="Bettaz">Mohamed Bettaz</a>,
+<A HREF="UDINE-DATA/Bettaz.pdf">SLIDES</A>
+<BR>An Object-Z based Metamodel for Wright
+<BR>[Joint work with M. Maouche (Philadelphia University, Jordan), 
+and M. Mosteghanemi (MESRS/ESI, Algeria)]
+<BR>Abstract:<BR>
+Abstract. Wright is a component model designed for formal description of software architecture.
+To the best of our knowledge this model is, so far, defined only by its ADL
+(Architecture Description Language). Our interest in metamodeling of Wright is motivated
+by the regain of interest in software architectural models, mainly those supporting
+connectors but also by the fact, that Wright - which is considered as a reference for
+formal architectural models - provides support for connectors; Moreover many component
+systems are leaving their ADL-based definitions for metamodel based definitions
+(PALLADIO, PRISMA, SOFA 2, etc.). 
+The benefits of such an evolution reside in the possibility of creating semi-automatically
+development and runtime management tools.
+The objective of this work is to build an Object-Z metamodel for Wright, and to show,
+through a simplified client-server architecture example, how to derive a Wright model.
+The used approach consists in using MOF - UML (without OCL) as an intermediary notation
+(to be in conformity with the standards, and exploit the possibility of reusing results
+of works based on MOF), and then transforming UML metamodels into Object-Z notation to
+get more formal metamodels, which may be rigorously checked, and formally analyzed;
+This is achieved through adaption  of existing transformation techniques.
+Using of Object-Z as a ``replacement'' to the association MOF-OCL is motivated throughout
+of the work.
+<BR>
+Some references
+<BR>
+1. R. Allen, A Formal Approach to Software Architecture, PhD thesis, 1997
+<BR>
+2. S-K. Kim and D. Carrington, A Formal Mapping between UML Models and Object-Z Specifications, 2000
+<BR>
+3. N. Amalio and F. Polack, Comparison of Formalisation Approaches of UML Class Constructs in Z and Object-Z,  2002
+<BR>
+4. D. Roe et al., Mapping UML Models incorporating OCL Constraints into Object-Z, 2003
+<BR>
+5. J. Ivers et al., Documenting Component and Connector Views with UML 2.0, 2004
+<BR>
+6. P. Hentynka, F. Plasil, The Power of MOF-based Mata-modeling of Components, 2005
+<BR>
+7. M. Navarc√≠k, Using UML with OCL as ADL, 2005
+<BR>
+8. M. Bettaz, M. Maouche, Towards Mobile Z Schemas, 2005
+<BR>
+9. S. Kell, Rethinking Software Connectors, 2007
+<BR>
+10. D. Bisztray, K. Ehrig, and R.. Heckel, Case Study: UML to CSP transformation, 2007
+<BR>
+11. M. Bettaz, M. Maouche & R. Heckel, From Graph Transformation to Z Notation, 2008
+
+<BR>------------------------------------------------------
+
+
+<!-- partie commente'e
+-->

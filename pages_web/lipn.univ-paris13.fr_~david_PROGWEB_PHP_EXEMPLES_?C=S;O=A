@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /~david/PROGWEB/PHP_EXEMPLES</title>
+ </head>
+ <body>
+<h1>Index of /~david/PROGWEB/PHP_EXEMPLES</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/~david/PROGWEB/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="moyenne.php">moyenne.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right"> 72 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="variables.php">variables.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">111 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="9_form.php">9_form.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">116 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="1_echo.html">1_echo.html</a></td><td align="right">2016-02-11 18:14  </td><td align="right">221 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="1_echo.php">1_echo.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">221 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="3_require.php">3_require.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">238 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10_form_post.php">10_form_post.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">267 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="7_fonctions.php">7_fonctions.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">287 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="8_class.php">8_class.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">295 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="2_variables.php">2_variables.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">308 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="4_tableau.php">4_tableau.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">342 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="8_class_etudiant.php">8_class_etudiant.php</a></td><td align="right">2017-05-15 11:25  </td><td align="right">367 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="etudiant.php">etudiant.php</a></td><td align="right">2017-05-15 11:24  </td><td align="right">404 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="9_form.html">9_form.html</a></td><td align="right">2016-02-11 18:14  </td><td align="right">407 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="11_form_session.html">11_form_session.html</a></td><td align="right">2016-02-11 18:14  </td><td align="right">414 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="10_form_post.html">10_form_post.html</a></td><td align="right">2016-02-11 18:14  </td><td align="right">416 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="acceuil.php">acceuil.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">444 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="11_session.php">11_session.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">463 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="6_foreach.php">6_foreach.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">468 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="5_if.php">5_if.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">792 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="automate.php">automate.php</a></td><td align="right">2016-02-11 18:14  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="exemples.tgz">exemples.tgz</a></td><td align="right">2017-05-15 11:24  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Edit Variables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.EditVariables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=search&amp;q=link=PmWiki.EditVariables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Edit Variables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DebugVariables'>Debug Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables'>I18n Variables</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p>To set many of the variables below specify them in <code>config.php</code>.
+</p>
+<div class='vspace'></div><dl><dt><a name='AutoCreate' id='AutoCreate'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#AutoCreate'><code class='varlink'>&#036;AutoCreate</code></a></dt><dd>Used in conjunction with the AutoCreateTargets edit function, this array records any sets of pages which should be created automatically if they don&rsquo;t exist.  The syntax is<pre class='escaped'>
+    $AutoCreate[REGEXP] = PAGE_PARAMETERS;
+</pre>where <code>REGEXP</code> is a regular expression which will identify the pages to be autocreated, and <code>PAGE_PARAMETERS</code> is an array of attributes for the page to be created.  For example<pre class='escaped'>
+    $AutoCreate['/^Category\\./'] = array('ctime' =&gt; $Now);
+</pre>will create a blank page with a current creation time for any missing Category page.
+<div class='vspace'></div></dd><dt><a name='DefaultPageTextFmt' id='DefaultPageTextFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#DefaultPageTextFmt'><code class='varlink'>&#036;DefaultPageTextFmt</code></a></dt><dd>The text that should be displayed when browsing non-existent pages. As default PmWiki uses the contents of Site.PageNotFound:<pre class='escaped'>
+    $DefaultPageTextFmt = '(:include $[{$SiteGroup}.PageNotFound]:)';</pre> 
+<div class='vspace'></div></dd><dt><a name='DeleteKeyPattern' id='DeleteKeyPattern'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#DeleteKeyPattern'><code class='varlink'>&#036;DeleteKeyPattern</code></a></dt><dd>The pattern used to determine if a page should be deleted.  The default is to remove pages that contain only the single word &ldquo;delete&rdquo; (and optional spaces).
+<ol><li>Change delete word to &ldquo;remove&rdquo;:<pre class='escaped'>
+  $DeleteKeyPattern = "^\\s*remove\\s*$";</pre>
+</li><li>Delete any page with no visible text, i.e., empty:<pre class='escaped'>
+  $DeleteKeyPattern = "^\\s*$";</pre>
+</li></ol><div class='vspace'></div></dd><dt>{$DiffKeepDays:The $}DiffKeepDays variable sets the minimum length of time that a page&rsquo;s revision history is kept. By default it is set to 3650 days, or a little less than ten years. You can change this value in a customization file to be something smaller, e.g.</dt><dd><pre class='escaped'>
+    $DiffKeepDays = 30; # keep revisions at least 30 days
+</pre>If you want to suppress a page&rsquo;s revision history, you can insert into a customization file <pre class='escaped'>
+    $DiffKeepDays = $DiffKeepNum = -1; # suppress revision history    
+</pre>Note that a specific page revision isn&rsquo;t removed from the page until the first edit after the time specified by {$DiffKeepDays has elapsed. Thus, it's still possible for some pages to have revisions older than $}DiffKeepDays &mdash; such revisions will be removed the next time those pages are edited.
+</dd></dl><div class='vspace'></div>:{$DiffKeepNum:This variable contains the minimum number of changes to be kept in the page history, even if some of them are older than the limit defined by $}DiffKeepDays. It prevents lost history of pages that are older, but have few changes.<pre class='escaped'>
+    $DiffKeepNum = 50; # keep at least 50 revisions (default is 20)
+</pre>To suppress page&rsquo;s revision history with <code class='escaped'>$DiffKeepNum = -1</code> see <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#DiffKeepDays'><code class='varlink'>&#036;DiffKeepDays</code></a> above.
+<div class='vspace'></div><dl><dt><a name='DraftActionsPattern' id='DraftActionsPattern'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#DraftActionsPattern'><code class='varlink'>&#036;DraftActionsPattern</code></a></dt><dd>The actions which allow full loading of the draft.php functionality for custom actions. Default is &lsquo;edit&rsquo;. You can enable drafts for other actions like:<pre class='escaped'>
+    $DraftActionsPattern = 'edit|pmform|translate';
+        # Enable drafts for actions 'edit', 'pmform' and 'translate'.</pre>
+<div class='vspace'></div></dd><dt><a name='DraftSuffix' id='DraftSuffix'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#DraftSuffix'><code class='varlink'>&#036;DraftSuffix</code></a></dt><dd>The suffix to use for draft versions of pages (default &ldquo;-Draft&rdquo;).
+<div class='vspace'></div></dd><dt><a name='EditFunctions' id='EditFunctions'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EditFunctions'><code class='varlink'>&#036;EditFunctions</code></a></dt><dd> This array contains the sequence of functions that are called when a page is edited.  It can be customized to provide additional functions to be called as part of the editing process.  The standard setting is:<pre class='escaped'>
+$EditFunctions = array('EditTemplate', 'RestorePage', 'ReplaceOnSave',
+  'SaveAttributes', 'PostPage', 'PostRecentChanges', 'AutoCreateTargets', 'PreviewPage');
+
+</pre>Many recipes manipulate this array, so it is recommended, instead of redefining the complete array to add your custom functions, to use functions like array_unshift(), array_push() and array_splice().
+</dd></dl><p class='vspace'>:{$EditRedirectFmt: The page to which an author is sent after pressing "Save" or "Cancel" from an edit form.  Defaults to "$}FullName&rdquo;, which sends the author to the page just edited, but can be changed to specify another page.
+</p><dl><dd><ol><li>Redirect to Main.HomePage:<pre class='escaped'>
+  $EditRedirectFmt = 'Main.HomePage';</pre>
+</li><li>Redirect to HomePage of current group:<pre class='escaped'>
+  $EditRedirectFmt = '{$Group}.HomePage';</pre>
+</li></ol><div class='vspace'></div></dd><dt><a name='EditTemplatesFmt' id='EditTemplatesFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EditTemplatesFmt'><code class='varlink'>&#036;EditTemplatesFmt</code></a></dt><dd>Name of the page (or an array of names) to be used as the default text for any newly created pages.
+<ol><li>Use &lsquo;Main.NewPageTemplate&rsquo; as default text of all new pages:<pre class='escaped'>
+  $EditTemplatesFmt = 'Main.NewPageTemplate';</pre>
+</li><li>Use &lsquo;Template&rsquo; in the current group for new pages:<pre class='escaped'>
+  $EditTemplatesFmt = '$Group.Template';</pre>
+</li><li>Use &lsquo;Template&rsquo; in the current group if it exists, otherwise<br />use &lsquo;Main.NewPageTemplate&rsquo;:<pre class='escaped'>
+  $EditTemplatesFmt = array('$Group.Template', 'Main.NewPageTemplate');</pre>
+</li></ol></dd></dl><div class='indent'>See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/EditTemplates' rel='nofollow'>Cookbook:EditTemplates</a> for more information.
+</div><div class='vspace'></div><dl><dt><a name='EnableDrafts' id='EnableDrafts'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EnableDrafts'><code class='varlink'>&#036;EnableDrafts</code></a></dt><dd>When set to &lsquo;1&rsquo;, enables the &ldquo;Save draft&rdquo; button and built-in handling of &ldquo;draft&rdquo; versions of pages, where: 
+<ol><li>Initial &ldquo;Save draft&rdquo; of an existing page (&ldquo;PageName&rdquo;) saves changes to a new name (&ldquo;PageName-Draft&rdquo;).
+</li><li>Subsequent attempts to edit PageName causes PageName-Draft to be edited.
+</li><li>Subsequent selections of &ldquo;Save draft&rdquo; cause PageName-Draft to be saved.
+</li><li>Pressing &ldquo;Publish&rdquo; causes PageName-Draft to be posted to PageName, and deleted.
+</li></ol></dd></dl><div class='indent'>Turn on draft edits:<pre class='escaped'>
+    $EnableDrafts = 1;</pre>
+</div><div class='indent'>A related variable, <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SecurityVariables#EnablePublishAttr'><code class='varlink'>&#036;EnablePublishAttr</code></a>, adds a new &ldquo;publish&rdquo; authorization level to distinguish editing of drafts from publishing them.
+</div><p class='vspace'>:{$EnableDraftAtomicDiff:When set to 1, "publishing" a draft version will clear the "draft" history, leaving a single "diff" between the latest and the previous "published" versions. Note that this will delete the author names, dates and contributions of the intermediate, unpublished versions. ([[Drafts]] need to be enabled, see $}EnableDrafts.)
+</p>
+<div class='vspace'></div><dl><dt><a name='EnableGUIButtons' id='EnableGUIButtons'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EnableGUIButtons'><code class='varlink'>&#036;EnableGUIButtons</code></a></dt><dd>When set to &lsquo;1&rsquo;, turns on the graphical buttons in the &ldquo;Edit Page&rdquo; form.
+<ol><li>Turn on graphical edit buttons:<pre class='escaped'>
+  $EnableGUIButtons = 1;</pre>
+</li></ol><div class='vspace'></div></dd><dt><a name='EnablePostAuthorRequired' id='EnablePostAuthorRequired'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EnablePostAuthorRequired'><code class='varlink'>&#036;EnablePostAuthorRequired</code></a></dt><dd>When set to &lsquo;1&rsquo;, posting of pages requires the author to provide an author name.  Otherwise, authors can post without a name.
+<ol><li>Require authors to provide a name:<pre class='escaped'>
+  $EnablePostAuthorRequired = 1;</pre> 
+</li></ol><div class='vspace'></div></dd><dt><a name='EnableRevUserAgent' id='EnableRevUserAgent'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#EnableRevUserAgent'><code class='varlink'>&#036;EnableRevUserAgent</code></a></dt><dd>When set to &lsquo;1&rsquo;, the page history will store the &ldquo;User agent&rdquo; string from the browser of the writer (by default this feature is disabled). This can be useful for tracking bugs in custom applications, by examining the disk files in wiki.d.
+<ol><li>Store browser user agent with page diffs:<pre class='escaped'>
+  $EnableRevUserAgent = 1; </pre>
+</li></ol><div class='vspace'></div></dd><dt><a name='GUIButtons' id='GUIButtons'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#GUIButtons'><code class='varlink'>&#036;GUIButtons</code></a></dt><dd>Allows the configuration of the buttons which appear at the top of the text area when editing a page.  See scripts/guiedit.php for the default definition.  Note that the 5th element can be HTML code rather than just the url of a gif - this allows more flexibility in defining the related javascript.
+</dd></dl><p class='vspace'>:{$HandleEditFmt: Like $}HandleBrowseFmt, this specifies the entire output format for <code class='escaped'>?action=edit</code> for a page.
+</p>
+<div class='vspace'></div><dl><dt><a name='IsPagePosted' id='IsPagePosted'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#IsPagePosted'><code class='varlink'>&#036;IsPagePosted</code></a></dt><dd> Set to a true value if the page is actually saved (e.g., this is used to tell the RecentChanges handlers if they need to update).
+<div class='vspace'></div></dd><dt><a name='PageEditFmt' id='PageEditFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#PageEditFmt'><code class='varlink'>&#036;PageEditFmt</code></a></dt><dd> By default, this is the HTML to be displayed for an edit form.
+</dd></dl><p class='vspace'>:{$PageEditForm: Specifies the edit form for <code class='escaped'>?action=edit</code>.  Defaults to '$}SiteGroup.EditForm&rsquo;.
+</p>
+<div class='vspace'></div><dl><dt><a name='ROEPatterns' id='ROEPatterns'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#ROEPatterns'><code class='varlink'>&#036;ROEPatterns</code></a></dt><dd> With this array you can add a pattern as <em>key</em> and set a text <em>value</em> which replace it on every edit request, using preg_replace function. Specifically it is replaced when the page is loaded into the editform, whenever a preview is done, and when the page is saved (from PmWiki 2.2.0beta45). See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/ROEPatterns' rel='nofollow'>Cookbook:ROEPatterns</a> for examples.
+</dd></dl><p class='vspace'>:{$ROSPatterns: With this array you can add patterns as ''key'' and set a text ''value'' which will replace it when the edited page is posted (as signaled by $}EnablePost).  It is not replaced when the page is loaded into the editform nor when a preview is done, but it is replaced only when the page is saved.  See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/ROSPatterns' rel='nofollow'>Cookbook:ROSPatterns</a> for examples.
+</p>
+<p class='vspace'>:{$EnableROSEscape: If set to 1, the $}ROEPatterns and <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#ROSPatterns'><code class='varlink'>&#036;ROSPatterns</code></a> replacements will skip escaped text (surrounded by <code class='escaped'>[=...=]</code> or <code>[@...@]</code>). If not set, or if set to 0, the replacements will happen even inside escaped text.
+</p>
+<p class='vspace'>Categories: <a class='categorylink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Category/PmWikiDeveloper'>PmWiki Developer</a>
+ 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DebugVariables'>Debug Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables'>I18n Variables</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/EditVariables' rel='nofollow'>PmWiki:EditVariables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/EditVariables-Talk' rel='nofollow'>PmWiki:EditVariables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on January 09, 2018, at 11:30 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

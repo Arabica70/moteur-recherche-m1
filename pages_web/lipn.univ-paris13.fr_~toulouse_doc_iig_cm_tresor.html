@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<title>Institut Galil&eacute;e Universit&eacute; Paris 13 - Licence 1 - Initiation aux Interfaces Graphiques : Mod&eacute;lisation</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="author" content="Sophie Toulouse" />
+	<meta name="date" content="1/1/2012" />
+	<meta name="keywords" lang="fr" content="modelisation, etude de cas"/>
+
+	<link rel="stylesheet" type="text/css" href="http://www-lipn.univ-paris13.fr/~toulouse/css/lipn-new.css" />
+	<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html" />
+
+	<style type="text/css">
+		#info{background-color: #000044; color:white; padding:20px; width:75%; text-align: left;}
+
+		code{background-color: #CCCCCC; display:block; width:90%;margin-left:0.5cm; margin: 10px; padding: 5px;}
+		.comment{font-style:italic; color:#000099;}
+		.comment:before{content:"/* ";}
+		.comment:after{content:" */";}
+		.string{color:#990000;}
+		.string:before{content:"\"";}
+		.string:after{content:"\"";}
+		.char{color:#990000;}
+		.char:before{content:"'";}
+		.char:after{content:"'";}
+		.emph{font-style:italic; font-weight:bolder;}
+	</style>
+</head>
+
+<body>
+	<ul id="menu-h">
+		<li><a href="doc/iig/cm/tresor.html#iig-mod">principes (rappels de cours)</a></li>
+		<li><a href="doc/iig/cm/tresor.html#iig-cas">&eacute;tude de cas (tr&eacute;sor)</a></li>
+		<li><a href="doc/iig/cm/tresor.html#iig-prog">bonnes pratiques (impl&eacute;mentation)</a></li>
+		<li><a id="retour" href="l1.html">retour</a></li>
+    </ul>
+
+	<h1>Initiation aux Interfaces Graphiques&nbsp;: <em>Mod&eacute;lisation</em></h1>
+
+	<hr/>
+	<div id="iig-intro">
+		<q>Initiation aux Interfaces Graphiques</q>, IIG est une mati&egrave;re d'ordre <em>m&eacute;thodologique</em>, permettant d'acqu&eacute;rir plusieurs savoir-faire&nbsp;: 
+		<ol>
+			<li><a href="doc/iig/cm/tresor.html#iig-mod">Mod&eacute;lisation d'un concept du monde <q>r&eacute;el</q></a><br/>
+				Il faut identifier les <em>informations</em> qui d&eacute;crivent le concept &agrave; mod&eacute;liser, mais aussi les actions que l'on peut faire subir &agrave; ce concept&nbsp;:
+				<ol>
+					<li>Structure de donn&eacute;e (liste organis&eacute;e des <em>informations</em> sp&eacute;cifiant le concept).</li>
+					<li>Interface de cette structure&nbsp;: son <em>mode d'emploi</em>, la listes de fonctions permettant de la manipuler.</li> 
+				</ol>
+			</li>
+			<li>Mise en &oelig;uvre d'une biblioth&egrave;que&nbsp; pour la r&eacute;alisation d'un but pr&eacute;cis.
+			</li>
+			<li>Conception de l'interface graphique d'une application&nbsp;:
+				<ol>
+					<li>D&eacute;fintion de l'interface (utilisation de la bibilioth&egrave;que graphique gtk)</li>
+					<li>Programmation &eacute;v&eacute;nementielle</li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+	<hr/>
+
+	<div id="iig-mod">
+		<h2>D&eacute;marche de mod&eacute;lisation</h2>
+
+		<h3>Probl&eacute;matique</h3>
+		Le but est de mod&eacute;liser un concept du monde r&eacute;el pour le repr&eacute;senter sous format informatique. Cette mod&eacute;lisation peut &ecirc;tre initalement motiv&eacute;e par un but d'utilisation pr&eacute;cis. Il faut toujours penser&nbsp;: que ce but peut changer, &eacute;voluer, s'enrichir&nbsp;; et donc, s'en rendre le plus ind&eacute;pendant possible.
+
+		Prenons l'exemple du concept <q>nombres complexes</q>. Un nombre complexe est la donn&eacute; d'une partie r&eacute;elle et d'une partie imaginaire. On peut pour le repr&eacute;senter utiliser la structure <q>struct s_complexe</q> suivante&nbsp;:
+			<code>
+				struct s_complexe<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;float reel;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;float img;<br/>
+				};<br/>
+				<br/>
+				typedef struct s_complexe complexe;
+			</code>
+
+		Pour manipuler les nombres complexes, on doit pouvoir (liste non exhaustive)&nbsp;: lire (consulter) la partie r&eacute;elle / la partie imaginaire d'un nombre complexe, &eacute;crire (affecter) la partie r&eacute;elle / la partie imaginaire d'un nombre complexe, d&eacute;terminer le module / l'argument / le conjugu&eacute; d'un nombre complexe, sommer, soustraire, multiplier, diviser deux nombres complexes entre eux, initialiser &agrave; 0 un nombre complexe&nbsp;; soit, on doit disposer de la liste suivante de fonctions&nbsp;:
+			<code>
+				float complexe_get_reel(complexe z);<br/>
+				float complexe_get_img(complexe z);<br/>
+				complexe complexe_set_reel(complexe z, float reel);<br/>
+				complexe complexe_set_img(complexe z, float img);<br/>
+				complexe complexe_set_zero(complexe z);<br/>
+				float complexe_get_module(complexe z);<br/>
+				float complexe_get_argument(complexe z);<br/>
+				complexe complexe_get_conjugue(complexe z);<br/>
+				complexe complexe_get_somme(complexe z1, complexe z2);<br/>
+				complexe complexe_get_difference(complexe z1, complexe z2);<br/>
+				complexe complexe_get_produit(complexe z1, complexe z2);<br/>
+				complexe complexe_get_division(complexe z1, complexe z2);<br/>
+			</code>
+
+		On donne l'exemple de la d&eacute;finition de ces fonctions, pour quelques fonctions seulement&nbsp;:
+			<code>
+				float complexe_get_reel(complexe z)<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return z.reel;<br/>
+				}<br/>
+				<br/>
+				complexe complexe_set_img(complexe z, float img)<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.img = img;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return z;<br/>
+				}<br/>
+				<br/>
+				complexe complexe_set_zero(complexe)<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.reel = 0;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.img = 0;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return z;<br/>
+				}<br/>
+				<br/>
+				float complexe_get_module(complexe z)<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;float module;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;module = sqrt( pow(z.reel, 2) + pow(z.img, 2) );<br/> 
+						<!--&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">attention :</span>-->
+				&nbsp;&nbsp;&nbsp;&nbsp;return z;<br/>
+				}<br/>
+				<br/>
+				complexe complexe_get_difference(complexe z1, complexe z2)<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;complexe z;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.reel = z1.reel -z2.reel;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.img = z1.img -z2.img;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return z;<br/>
+				}<br/>
+			</code>
+
+		<h3>Trois bonne raisons de d&eacute;finir l'interface d'une structure de donn&eacute;e</h3>
+		<ul>
+			<li><span class="emph">Pour permettre et faciliter la manipulation de la structure par des programmes tierces.</span> Concernant les nombres complexes&nbsp;: on s'imagine que d&egrave;s lors que l'on manipule des nombres (complexes ou autres), on peut vouloir les sommer&nbsp;; il semble alors naturel de disposer d'une fonction <q>somme</q>.</li>
+			<li><span class="emph">Pour contr&ocirc;ler l'acc&egrave;s au donn&eacute;es et en maintenir la coh&eacute;rence.</span> Par exemple, si l'on manipule un type de donn&eacute;e <q>personne</q> impl&eacute;me nt&eacute; par une structure <q>struct s_personne</q> qui contient un champ <q>date de naissance</q> et un champ <q>age</q>, et si l'on d&eacute;finit l'accesseur en &eacute;criture <q>personne_set_naissance</q>, alors cette fonction ne doit pas seulement mettre &agrave; jour le champ <q>date de naissance</q>, mais aussi le champ <q>age</q> de la variable du type <q>personne</q> pass&eacute;e en param&egrave;tre (notons que ce n'est pas forc&eacute;ment une bonne id&eacute;e que de manipuler un champ <q>age</q>, mais passons). Le <a href="doc/iig/cm/tresor.html#iig-cas">cas <q>tr&eacute;sor</q></a> illustre bien cette probl&eacute;matique.</li>
+			<li><span class="emph">Pour se rendre le plus possible ind&eacute;pendant de l'impl&eacute;mentation.</span> Concernant les nombres complexes, la structure utilis&eacute;ee et la d&eacute;finition des fonctions de manipulation peuvent changer, sans pour autant que cela impacte les programmes qui utilisent la biblioth&egrave;que <q>complexe</q>. Si l'on remplace la structure s_complexe par la structure s_complexe_2 suivante&nbsp;:
+			<code>
+				struct s_complexe_2<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;float module;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;float argument;<br/>
+				};<br/>
+				<br/>
+				typedef struct s_complexe_2 complexe;
+			</code>
+			Et consid&eacute;rons; alors les deux programmes suivants (o&ugrave; le fichier <q>complexe.h</q> regroupe la sp&eacute;cifiation du type <q>complexe</q> et la d&eacute;claration des fonctions de manipulation des nombres complexes)&nbsp;:
+			<code>
+				<span class="comment">programme_1</span><br/>
+				&#35;include&lt;stdlib.h&gt; <span class="comment">pour la constante symbolique EXIT_SUCCESS</span><br/>
+				&#35;include&lt;stdio.h&gt; <span class="comment">pour la fonction printf</span><br/>
+				&#35;include"complexe.h" <span class="comment">pour manipuler les nombres complexes</span><br/>
+				int main()<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;complexe z;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.reel=0;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z.img=0;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">Le zero complexe est %f + %f i</span>, z.reel, z.img);<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return EXIT_SUCCESS;<br/>				
+				};<br/>
+			</code>
+			<code>
+				<span class="comment">programme_2</span><br/>
+				&#35;include&lt;stdlib.h&gt; <span class="comment">pour la constante symbolique EXIT_SUCCESS</span><br/>
+				&#35;include&lt;stdio.h&gt; <span class="comment">pour la fonction printf</span><br/>
+				&#35;include"complexe.h" <span class="comment">pour manipuler les nombres complexes</span><br/>
+				int main()<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;complexe z;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;z = complexe_set_zero(z);<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">Le zero complexe est %f + %f i</span>, complexe_get_reel(z), complexe_get_img(z));<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;return EXIT_SUCCESS;<br/>				
+				};<br/>
+			</code>
+
+			Le premier programme ne compile pas apr&egrave;s la modification apport&eacute;e &agrave; la biblioth&egrave;que <q>complexe</q>, tandis que le second programme, lui, n'a pas besoin d'&ecirc;tre modif&eacute;.</li>
+		</ul>
+
+		<h3>Quelques r&egrave;gles pour concevoir l'interface d'une structure de donn&eacute;e</h3>
+		<ul>
+			<li id="regle_0"><span class="emph">R&egrave;gle num&eacute;ro&nbsp;0&nbsp;:</span> d&eacute;finir les r&egrave;gles de coh&eacute;rence des informations. Par exemple&nbsp;: pour les personnes, <q>age == date - date de naissance</q>&nbsp;; pour une partie du <a href="doc/iig/cm/tresor.html#iig-cas">jeu <q>tr&eacute;sor</q></a>, si au moins 3 coups ont &eacute;t&eacute; jou&eacute;s et que le tr&eacute;sor n'a pas &eacute;t&eacute; trouv&eacute;, alors la partie est en &eacute;tat <q>perdu</q>.</li>
+			<li id="regle_1"><span class="emph">R&egrave;gle num&eacute;ro&nbsp;1&nbsp;:</span> en tenant compte de la r&egrave;gle num&eacute;ro&nbsp;0, pour toute information, &eacute;crire une m&eacute;thode <q>get</q> et une m&eacute;thode <q>set</q> permettant d'acc&eacute;der en lecture et en &eacute;criture &agrave; cette information. Pour le <a href="doc/iig/cm/tresor.html#iig-cas">jeu <q>tr&eacute;sor</q></a> par exemple, on se rend compte que l'&eacute;tat de la partie ne peut &ecirc;tre modifi&eacute; que lorsque l'on joue un coup (la partie &agrave; l'issue de ce coup peut passer en l'&eacute;tat <q>gagn&eacute;</q> ou <q>perdu</q>), ou lorsque l'on r&eacute;initialise une partie&nbsp;; alors il ne faut pas &eacute;crire de m&eacute;thode <q>tresor_set_etat</q>, car une telle m&eacute;thode permettrait d'agir sur l'&eacute;tat de la partie, alors que ce n'est pas justifi&eacute; par les autres informations du jeu.</li>
+			<li id="regle_2"><span class="emph">R&egrave;gle num&eacute;ro&nbsp;2&nbsp;:</span> moduler la r&egrave;gle num&eacute;ro&nbsp;1, en fonction de l'utilisation que l'on imagine qu'il sera faite de la biblioth&egrave;que.</li>
+			<li id="regle_3"><span class="emph">R&egrave;gle num&eacute;ro&nbsp;3&nbsp;:</span> moduler la r&egrave;gle num&eacute;ro&nbsp;2, en cherchant &agrave; rester le plus &eacute;volutif possible.</li>
+		</ul>
+	</div>
+<!-- (<em>ex.</em>, utiliser la biblioth&egrave;que <q>complexe</q> pour r&eacute;aliser une calculatrice sur les nombres complexes)	-->
+
+	<div id="iig-cas">
+		<h2>Mod&eacute;lisation du <q>Jeu de tr&eacute;sor</q></h2>
+
+		<h3>Fichiers source</h3>
+		<ul>
+			<li>Biblioth&egrave;que <q>tresor</q>&nbsp;: <a href="doc/iig/cm/tresor1/tresor.h">fichier d'ent&ecirc;te</a>, <a href="doc/iig/cm/tresor1/tresor.c">fichier source</a></li>
+			<li>Programme de jeu&nbsp;: <a href="doc/iig/cm/tresor1/jouer.c">fichier source</a>.</li>
+			<li>Biblioth&egrave;que <q>tresor</q> avec passage par adresse des arguments&nbsp;: <a href="doc/iig/cm/tresor2/tresor.h">fichier d'ent&ecirc;te</a>, <a href="doc/iig/cm/tresor2/tresor.c">fichier source</a></li>
+			<li>Programme de jeu avec passage par adresse des arguments&nbsp;: <a href="doc/iig/cm/tresor2/jouer.c">fichier source</a>.</li>
+		</ul>
+
+		<h3>Ce que l'on doit mod&eacute;liser</h3>
+		Un forrain propose l'animation suivante&nbsp;: 8 bo&icirc;tes sont propos&eacute;es &agrave; un joueur&nbsp;; l'une de ces bo&icirc;tes, et une seule, contient un tr&eacute;sor&nbsp;; le joueur peut demander &agrave; ouvrir au plus 3 bo&icirc;tes. Le joueur remporte le tr&eacute;sor s'il ouvre la bo&icirc;te contenant le tr&eacute;sor.
+
+		<h3>Structures de donn&eacute;e</h3>
+		<h4>Quelles sont les concepts et informations manipul&eacute;s&nbsp;?</h4>
+		<ul>
+			<li>Concept de bo&icirc;te. Une bo&icirc;te peut &ecirc;tre ouverte ou ferm&eacute;e &rArr; concept d'&eacute;tat d'une bo&icirc;te. Une bo&icirc;te peut &ecirc;tre gagnante ou perdante &rArr; concept de statut d'une bo&icirc;te.</li>
+			<li>Concept de partie. La partie contient 8 bo&icirc;tes qu'elle doit &ecirc;tre capable d'identifier. Pour pouvoir jouer, une bo&icirc;te gagnante doit avoir &eacute;t&eacute; d&eacute;sign&eacute;e. Une partie peut &ecirc;tre gagn&eacute; (le joueur a trouv&eacute; la bo&icirc;te gagnante en au plus 3 coups), perdue (le joueur a ouvert 3 bo&icirc;tes, mais aucune de ces bo&icirc;te ne contient le tr&eacute;sor) ou en cours (ou voire encore, pas lanc&eacute;e, si la bo&icirc;te gagnante n'a pas &eacute;t&eacute; d&eacute;sign&eacute;e).</li>
+		</ul>
+
+		<h4>Leur traduction en code C</h4>
+		<code>
+			<span class="comment">etat d'une boite</span><br/>
+			enum e_etat_boite<br/>
+			{<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;BOITE_FERMEE;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;BOITE_OUVERTE;<br/>
+			};
+			<br/><br/>
+			<span class="comment">statut d'une boite</span><br/>
+			enum e_statut_boite<br/>
+			{<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;BOITE_PERDANTE;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;BOITE_GAGNANTE;<br/>
+			};
+			<br/><br/>
+			<span class="comment">concept de boite</span><br/>
+			struct s_boite<br/>
+			{<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;enum e_etat_boite etat;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;enum e_statut_boite statut;<br/>
+			};
+		</code>
+		<code>
+			<span class="comment">etat d'une partie</span><br/>
+			enum e_etat_partie<br/>
+			{<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;PARTIE_ENCOURS;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;PARTIE_GAGNEE;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;PARTIE_PERDUE;<br/>
+			};
+			<br/><br/>
+			<span class="comment">constantes de la partie</span><br/>
+			&#35;define NB_BOITE 8 <span class="comment">nombre de boites dans le jeu</span><br/>
+			&#35;define NB_ESSAI 3 <span class="comment">nombre mximum de boites que le joueur peut ouvrir au cours d'une partie</span><br/>
+			<br/>
+			<span class="comment">concept de partie</span><br/>
+			struct s_tresor<br/>
+			{<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;struct s_boite liste_boites[NB_BOITE];<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;int	nb_essais_joues;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;enum e_etat_partie etat;<br/>
+			};
+		</code>
+		<code>
+			<span class="comment">types</span><br/>
+			typedef enum e_etat_boite etat_boite;<br/>
+			typedef enum e_statut_boite statut_boite;<br/>
+			typedef enum e_etat_partie etat_partie;<br/>
+			typedef struct s_boite boite;<br/>
+			typedef struct s_tresor tresor;
+		</code>
+
+		Remarque&nbsp;: on pourrait se passer des champs <q>nb_essais_joues</q> et <q>etat</q> de la structure <q>struct s_tresor</q>, car leur valeur peut &ecirc;tre d&eacute;duite des deux autres champs <q>liste_boites</q> et <q>id_boite_tresor</q>.
+
+		<h3>Interface</h3>
+		Si l'on devait tout &eacute;crire, la liste des fonctions de manipulation pour le concept de <q>tr&eacute;sor</q> serait la suivante (<a href="doc/iig/cm/tresor.html#regle_1">r&egrave;gle&nbsp;1</a>)&nbsp;:
+		<ul>
+			<li>Boite&nbsp;:
+				<code>
+					<span class="comment">__ Accesseurs en lecture</span>
+					<br/><br/>
+					<span class="comment">retourne le champ <q>etat</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre</span><br/>
+					etat_boite boite_get_etat(boite une_boite);
+					<br/><br/>
+					<span class="comment">retourne le champ <q>statut</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre</span><br/>
+					statut_boite boite_get_statut(boite une_boite);
+				</code>
+				<code>
+					<span class="comment">__ Accesseurs en ecriture</span>
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>etat</q> au champ <q>etat</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre et renvoie la boite ainsi modifiee</span><br/>
+					boite boite_set_etat(boite une_boite, etat_boite etat);
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>statut</q> au champ <q>statut</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre et renvoie la boite ainsi modifiee</span><br/>
+					boite boite_set_statut(boite une_boite, statut_boite statut);<br/>
+				</code>
+			</li>
+			<li>Tr&eacute;sor&nbsp;:
+				<code>
+					<span class="comment">__ Accesseurs en lecture</span>
+					<br/><br/>
+					<span class="comment">retourne le champ <q>nb_coups_joues</q> de la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre</span><br/>
+					int tresor_get_nb_coups_joues(tresor un_tresor);
+					<br/><br/>
+					<span class="comment">retourne le champ <q>etat</q> de la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre</span><br/>
+					etat_partie tresor_get_etat(tresor un_tresor);
+					<br/><br/>
+					<span class="comment">retourne le champ <q>etat</q> de la boite d'indice <q>indice</q> dans le tableau <q>liste_boite</q> dans la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre</span><br/>
+					etat_boite tresor_get_boite_etat(tresor un_tresor, int indice);
+					<br/><br/>
+					<span class="comment">retourne le champ <q>statut</q> de la boite d'indice <q>indice</q> dans le tableau <q>liste_boite</q> dans la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre</span><br/>
+					statut_boite tresor_get_boite_statut(tresor un_tresor, int indice);<br/>
+				</code>
+				<code>
+					<span class="comment">__ Accesseurs en ecriture</span>
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>nb_coups</q> au champ <q>nb_coups_joues</q> de la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre et renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_set_nb_coups_joues(tresor un_tresor, int nb_coups);
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>etat</q> au champ <q>etat</q> de la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre et renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_set_etat(tresor un_tresor, etat_partie etat);
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>etat</q> au champ <q>etat</q> de la boite d'indice <q>indice</q> dans le tableau <q>liste_boite</q> dans la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre et renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_set_boite_etat(tresor un_tresor, int indice, etat_boite etat);
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>statut</q> au champ <q>statut</q> de la boite d'indice <q>indice</q> dans le tableau <q>liste_boite</q> dans la variable <q>un_tresor</q> de type <q>tresor</q> passee en parametre et renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_set_boite_statut(tresor un_tresor, int indice, statut_boite statut);<br/>
+				</code>
+			</li>
+		</ul>
+
+		<h3>R&egrave;gles de coh&eacute;rence</h3>
+		N&eacute;anmoins, mieux vaut pour d&eacute;finir l'interface de la structure de donn&eacute;e <q>tresor</q> d&eacute;finir d'abord les r&egrave;gles de coh&eacute;rence (<a href="doc/iig/cm/tresor.html#regle_0">r&egrave;gle&nbsp;0</a>). On s'appuie de plus sur les phases de jeu (utilisation qui sera faite de la structure <q>tresor</q>, <a href="doc/iig/cm/tresor.html#regle_2">r&egrave;gle&nbsp;2</a>)&nbsp;:
+		<ul>
+			<li>Pour pouvoir jouer, une partie doit d'abord &ecirc;tre initialis&eacute;e.</li>
+			<li>Initialiser une partie, c'est&nbsp;:
+				<ul>
+					<li>D&eacute;terminer une bo&icirc;te gagnante.</li>
+					<li>Fermer toutes les bo&icirc;tes.</li>
+					<li>Mettre &agrave; z&eacute;ro le nombre de coups jou&eacute;s.</li>
+				</ul>
+				La partie est alors dans l'etat <q>en cours</q>.
+			</li>
+			<li>Jouer un coup, c'est, pour une bo&icirc;te d&eacute;sign&eacute;e&nbsp;:
+				<ul>
+					<li>Ouvrir la bo&icirc;te.</li>
+					<li>Incr&eacute;menter le nombre de coups jou&eacute;s.</li>
+				</ul>
+				Si la bo&icirc;te ouverte contient le tr&eacute;sor, la partie passe en &eacute;tat <q>gagn&eacute;e</q>&nbsp;; sinon, si le nombre maximum de coups que l'on peut jouer est atteint, la partie passe en &eacute;tat <q>perdue</q>.
+			</li>
+		</ul>
+
+		De cette analyse, on d&eacute;duit l'interface minimale suivante&nbsp;:
+		<ul>
+			<li>Tr&eacute;sor (fonctions utilis&eacute;es par exemple par un programme d&eacute;roulant une partie du jeu <q>tr&eacute;sor</q>)&nbsp;:
+				<code>
+					<span class="comment">__ Accesseurs en lecture</span>
+					<br/><br/>
+					<span class="comment">permet de connaitre le nombre de coups joues de la partie passee en parametre</span><br/>
+					int tresor_get_nb_coups_joues(tresor un_tresor);
+					<br/><br/>
+					<span class="comment">permet de connaitre l'&eacute;tat de la partie passee en parametre</span><br/>
+					etat_partie tresor_get_etat(tresor un_tresor);
+					<br/><br/>
+					<span class="comment">permet de connaitre l'&eacute;tat de la boite dont l'identifiant est passe en parametre</span><br/>
+					etat_boite tresor_get_boite_etat(tresor un_tresor, int id);
+					<br/><br/>
+					<span class="comment">permet de connaitre le statut de la boite dont l'identifiant est passe en parametre</span><br/>
+					statut_boite tresor_get_boite_statut(tresor un_tresor, int id);<br/>
+				</code>
+				<code>
+					<span class="comment">__ Accesseurs en ecriture</span>
+					<br/><br/>
+					<span class="comment">initialise une partie du jeu <q>tresor</q>&nbsp;: ferme toutes les boites, designe (au hasard) la boite gagnante, met a zero le nombre de coups joues, place la partie dans l'etat <q>en cours</q> -- renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_initialiser(tresor un_tresor);
+					<br/><br/>
+					<span class="comment">joue la boite dont l'identifiant est passe en parametre&nbsp;: ouvre le boite, incremente le nombre de coups joues, place la partie dans l'etat <q>gagnee</q> ou <q>perdue</q>, le cas echeant -- renvoie le tresor ainsi modifie</span><br/>
+					tresor tresor_jouer_boite(tresor un_tresor, int id);<br/>
+				</code>
+			</li>
+			<li>Boite (fonctions utilis&eacute;es par les fonctions de manipulation du type <q>tresor</q>, lorsque celles-ci acc&egrave;dent aux &eacute;l&eacute;ments du tableau liste_boite)&nbsp;:
+				<code>
+					<span class="comment">__ Accesseurs en lecture</span>
+					<br/><br/>
+					<span class="comment">retourne le champ <q>etat</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre</span><br/>
+					etat_boite boite_get_etat(boite une_boite);
+					<br/><br/>
+					<span class="comment">retourne le champ <q>statut</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre</span><br/>
+					statut_boite boite_get_statut(boite une_boite);
+				</code>
+				<code>
+					<span class="comment">__ Accesseurs en ecriture</span>
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>etat</q> au champ <q>etat</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre et renvoie la boite ainsi modifiee</span><br/>
+					boite boite_set_etat(boite une_boite, etat_boite etat);
+					<br/><br/>
+					<span class="comment">attribue la valeur <q>statut</q> au champ <q>statut</q> de la variable <q>une_boite</q> de type <q>boite</q> passee en parametre et renvoie la boite ainsi modifiee</span><br/>
+					boite boite_set_statut(boite une_boite, statut_boite statut);<br/>
+				</code>
+			</li>
+		</ul>
+
+		<h3>Exemple de mise en &oelig;uvre</h3>
+		Pour jouer au jeu de tr&eacute;sor en mode console, il ne reste plus qu'&agrave; &eacute;crire quelques fonctions d'entr&eacute;e/sortie et un programme de jeu&nbsp;!
+		<ul>
+			<li>Fonctions d'entr&eacute;e/sortie&nbsp;:
+				<code>
+					<span class="comment">__ Affichage</span>
+					<br/><br/>
+					<span class="comment">fonction affichant &agrave; l'&eacute;cran la partie pass&eacute;e en param&egrave;tre</span><br/>
+					void tresor_afficher(tresor un_tresor)<br/>
+					{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;int ind_boite;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;char car_affiche;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">Affichage de la partie (<span class="char">$</span> tresor, <span class="char">X</span> boite vide, <span class="char">?</span> boite non ouverte) -- etat == %s, nombre coups joues == %d :\n</span>, tresor_get_libelle_etat(un_tresor), tresor_get_nb_coups_joues(un_tresor));<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">affichage du couvercle des boites (present ou non selon que la boite est fermee ou non) </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;for (ind_boite = 0 ; ind_boite &lt; NB_BOITE ; ind_boite++)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_boite_etat(un_tresor, ind_boite) == BOITE_OUVERTE)<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;car_affiche = <span class="char">&nbsp;</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;car_affiche = <span class="char">_</span>;<br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string"> %c  </span>, car_affiche);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">\n</span>);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">affichage du contenu (inconnu si la boite est fermee et partie en cours, vide ou tresor si la boite est ouverte ou partie finie)    </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;for (ind_boite = 0 ; ind_boite &lt; NB_BOITE ; ind_boite++)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_boite_etat(un_tresor, ind_boite) == BOITE_OUVERTE || tresor_get_etat(un_tresor) != PARTIE_ENCOURS)<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_boite_statut(un_tresor, ind_boite) == BOITE_GAGNANTE)<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;car_affiche = <span class="char">$</span>;<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;car_affiche = <span class="char">X</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;car_affiche = <span class="char">?</span>;<br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">|%c| </span>, car_affiche);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">\n</span>);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">affichage des indices des boite (de 0 à NB_BOITE -1 ; on suppose pour simplifier la gestion de l'affichage : NB_BOITE -1 &lt;= 9)   </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;for (ind_boite = 0 ; ind_boite &lt; NB_BOITE ; ind_boite++)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	printf(<span class="string"> %d  </span>, ind_boite);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="string">\n</span>);<br/>
+					}
+					<br/><br/>
+					<span class="comment">fonction renvoyant un libell&eacute; correspondant &agrave; l'&eacute;tat de la partie pass&eacute;e en param&egrave;tre</span><br/>
+					const char* tresor_get_libelle_etat(tresor un_tresor)<br/>
+					{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_etat(un_tresor) == PARTIE_GAGNEE)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	return <span class="string">gagnee</span>;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_etat(un_tresor) == PARTIE_PERDUE)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	return <span class="string">perdue</span>;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;if (tresor_get_etat(un_tresor) == PARTIE_ENCOURS)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	return <span class="string">en cours</span>;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;return <span class="string">tresor donnees erronees : etat non reconnu</span>;<br/>
+					}<br/>
+				</code>
+				<code>
+					<span class="comment">__ Saisie</span>
+					<br/><br/>
+					<span class="comment">fonction permattant de vider le buffer</span><br/>
+					void purger ()<br/>
+					{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;char c;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;while ((c = getchar()) != <span class="char">\n</span> &amp;&amp; c != EOF)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;{}<br/>
+					}
+					<br/><br/>
+					<span class="comment">fonction permettant de jouer une bo&icirc;te saisie deson indice au clavier</span><br/>
+					tresor tresor_jouer_boite_par_saisie(tresor un_tresor)<br/>
+					{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;int id = -1;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">saisie de l'indentifiant de la boite a jouer</span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;while (id &lt; 0  || id > NB_BOITE -1)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	printf(<span class="string">Saisir id boite a jouer dans l'intervalle %d...%d :\n</span>, 0, NB_BOITE -1);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	scanf(<span class="string">%d</span>, &amp;id);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	if (id &gt;= 0  &amp;&amp; id &lt;= NB_BOITE -1 &amp;&amp; tresor_get_boite_etat(un_tresor, id) == BOITE_OUVERTE)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		printf(<span class="string">Le boite %d a deja ete ouverte... \n</span>, id);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		id = -1;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	}<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">on joue la boite</span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;un_tresor = tresor_jouer_boite(un_tresor, id);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;return un_tresor;<br/>
+					}<br/>
+				</code>
+			</li>
+			<li>Programme&nbsp;:
+				<code>
+					<span class="comment">__ Fonction principale (renvoie EXIT_SUCCESS en cas de succ&egrave;s)</span><br/>
+					int main()<br/>
+					{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"> choix utilisateur </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;char choix = <span class="char">O</span>;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"> variables de jeu	</span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;tresor un_tresor;<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"> initialisation de la graine aleatoire	</span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;srand(time(NULL));<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"> boucle sur les parties	</span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;while (choix != <span class="char">S</span> &amp;&amp; choix != <span class="char">s</span>)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span class="comment"> initialisation de la partie </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	un_tresor = tresor_initialiser(un_tresor);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span class="comment"> deroulement de la partie </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	while(tresor_get_etat(un_tresor) == PARTIE_ENCOURS)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	{<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		un_tresor = tresor_jouer_boite_par_saisie(un_tresor);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		purger();<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		tresor_afficher(un_tresor);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	}<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span class="comment"> affichage partie </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	if (tresor_get_etat(un_tresor) == PARTIE_GAGNEE)<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		printf(<span class="string">Bravo, vous avez remporte le tresor !\n</span>);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	else<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		printf(<span class="string">Le tresor vous a malheureusement echappe.\n</span>);<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span class="comment"> invitation a poursuivre </span><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	printf(<span class="string">... appuyer sur une touche pour continuer, s/S pour arreter\n</span>);<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	choix = getchar();<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;return EXIT_SUCCESS;<br/>
+					}<br/>
+				</code>
+			</li>
+		</ul>
+	</div>
+
+	<div id="iig-prog">
+		<h2>Liste de bonnes pratiques</h2>
+		<ul>
+			<li>Bien organiser le code en fichiers, pour le rendre r&eacute;-utilisable, &eacute;volutif et robuste (programmation modulaire, encapsulation).</li>
+			<li>Rendre son code lisible&nbsp;: bien nommer (variables, fonctions), commenter (pourquoi on fait les choses), pr&eacute;ciser le comportement attendu (pr&eacute;- et post-conditions des fonctions, &eacute;volution de la valeur des variables au fil du temps, <em>etc.</em>).</li>
+			<li>Favoriser les passages par adresse (performances &agrave; l'ex&eacute;cution).</li>
+			<li>Tester syst&eacute;matiquement. Une structure &rArr; fonctions de test associ&eacute;es&nbsp;: chaque acc&egrave;s au champ d'une structure, chaque fonction doit &ecirc;tre au moins techniquement test&eacute;e (tests unitaires). Un programme &rArr; des sc&eacute;narios de test fonctionnels. Il faut s'assurer du maintien de la coh&eacute;rence des donn&eacute;es au fil du temps.</li>
+		</ul>
+	</div>
+
+	<div id="carte-visite">
+		<a href="coursfr.html">Sophie Toulouse</a>, LIPN - Institut Galil&eacute;e	<br/>
+		+33.1.49.40.40.73 (tel.) - Bureau A103<br/>
+		<span class="mail">sophie.toulouse 'at' lipn.univ-paris13.fr</span>
+	</div>
+
+	<ul id="w3c">
+ 		<li>
+			<a href="http://validator.w3.org/check?uri=referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict"/>
+			</a>
+		</li>
+		<li>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+			</a>
+		</li>
+    </ul>
+
+<script type="text/javascript">
+	var sc_project=3463137; 
+	var sc_invisible=1; 
+	var sc_partition=38; 
+	var sc_security="42bad5b8"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c39.statcounter.com/3463137/0/42bad5b8/1/" alt="unique visitor counter" /></a></div></noscript>
+
+</body>
+
+</html>
+
+<!--
+\section{Analyse}
+Il faut mod&eacute;liser un jeu de hasard nomm&eacute; tr&eacute;sor, a priori dans le but de pouvoir y jouer.
+
+\subsection{Concept}
+Qu'est-ce que le jeu de tr&eacute;sor&nbsp;?
+
+\subsubsection{Donn&eacute;es statiques}
+\begin{itemize}
+	\item nombre de bo&icirc;tes&nbsp;;
+	\item nombre de bo&icirc;tes que l'on peut ouvrir.
+\end{itemize}
+
+\subsubsection{Donn&eacute;es dynamiques}
+\begin{itemize}
+	\item les bo&icirc;tes, qui peuvent &ecirc;tre ferm&eacute;es ou ouvertes, contenir ou non le tr&eacute;sor&nbsp;;
+	\item la partie, qui peut &ecirc;tre en cours, remport&eacute;e ou perdue par le joueur.
+\end{itemize}
+$\Rightarrow$ notion d'&eacute;tat des bo&icirc;tes et de la partie, la liste de ces &eacute;tats sont aussi des donn&eacute;es statiques. En revanche, la bo&icirc;te contenant le tr&eacute;sor peut &ecirc;tre repr&eacute;sent&eacute; par une variable qui contient l'identifiant de cette bo&icirc;te (ce ne serait donc pas un attribut de la bo&icirc;te).
+
+\subsection{Repr&eacute;sentation}
+Pour les donn&eacute;es statiques, on utilise des {\em constantes {\bf symboliques}} $\Rightarrow$ \texttt{\#define, enum}.
+\begin{itemize}
+	\item \texttt{\#define NB\_BOITE}
+	\item \texttt{\#define NB\_COUP}
+	\item \texttt{typedef enum \{PARTIE\_ETAT\_AUCUNE, PARTIE\_ETAT\_ENCOURS, PARTIE\_ETAT\_GAGNEE, PARTIE\_ETAT\_PERDUE\} e\_etat\_partie}
+	\item \texttt{typedef enum \{BOITE\_ETAT\_OUVERTE, PARTIE\_ETAT\_FERMEE\} e\_etat\_boite}
+\end{itemize}
+
+Pour les donn&eacute;es dynamiques, un concept est d&eacute;crit (le plus souvent) par un ensemble de donn&eacute;es $\Rightarrow$ \texttt{struct}.
+\begin{itemize}
+	\item \texttt{typedef struct \{int id; e\_etat\_boite etat;\} s\_boite;}
+	\item \texttt{typedef struct \{e\_etat\_partie etat; s\_boite[NB\_BOITE]; int id\_tresor\} s\_tresor;}
+	\item typedef enum \{BOITE\_ETAT\_OUVERTE, PARTIE\_ETAT\_FERMEE\}
+\end{itemize}
+
+\subsection{Fonctions de manipulation}
+D&egrave;s lors que l'on mod&eacute;lise un concept, il faut &eacute;crire ses fonctions de manipulation.
+Accesseurs ``get'' et ``set''. Constructeur / destructeur.
+
+\subsection{But d'utilisation pr&eacute;cisFonctionnalit&eacute; du jeu}
+
+\subsection{Ce que j'ai fait}
+CM1 : structures (&agrave; peine entam&eacute; get / set). Bo&icirc;te avec id + etat.\\
+CM2 : accesseurs. Se rendre compte : tous ne sont pas n&eacute;cessaires, de m&ecirc;me que boite.id. Affichage : se rendre compte au contraire on manque de fonctions.
+\end{document}
+-->
+

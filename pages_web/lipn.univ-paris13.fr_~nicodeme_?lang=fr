@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Pierre Nicodème</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Pierre Nicodème">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/CALIN/?lang=fr">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Pierre Nicodème</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 670px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="pierre.nicodeme"  width="220" alt="pierre.nicodeme"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Pierre Nicodème<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   A106<br>
+Tél :    +33 1 49 40  40 69<br>
+Fax :   +33 1 48 26 07 12<br>
+Courriel : pierre.nicodeme   <i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<BR>
+<TABLE BORDER=0 CELLSPACING=0 width="100%">
+<TR VALIGN=middle ALIGN=center>
+    <TD><FONT SIZE="+1"><A HREF="http://algo.inria.fr/libraries/libraries.html#regexpcount"><STRONG>Regexpcount</STRONG></A>
+    <TD><FONT SIZE="+1"><A HREF="publications.html"><STRONG>Publications</STRONG></A>
+    <TD><FONT SIZE="+1"><A HREF="slides.html"><STRONG>Slides</STRONG></A>
+</TABLE>
+
+
+<H2>Research Interests:</H2>
+
+I am working on <CITE>Analysis of Algorithms</CITE> and
+on <CITE>Analytic Combinatorics</CITE> and, in particular, on Words
+and Motif Statistics, Automata, Random Trees and Random Walks.
+
+
+<H2>Administrative and scientific position</H2>
+
+I am a former <A HREF="http://www.cnrs.fr">CNRS</A> researcher,
+presently (since Feb. 2013) associated researcher at 
+the Computer Science Laboratory LIPN of University Paris 13
+(Paris-North).
+
+I did my PhD (1994-1997) at the 
+<A HREF="http://lix.polytechnique.fr">LIX</A> of
+the <A HREF="http://www.polytechnique.fr">Ecole polytechnique</A>
+and at the <A HREF="http://algo.inria.fr">Algorithms Project</A> of INRIA.
+
+I have been a postdoc (1998-1999) visiting the <A
+HREF="http://www.dkfz-heidelberg.de/tbi/">TBI</A>
+group (Theoretical Bioinformatics)
+at the <A HREF="http://www.dkfz.de/">DKFZ</A> (German Cancer
+    Research Center), Heidelberg (Germany).
+
+I have been hired by CNRS in 1999 at
+the <A HREF="http://stat.genopole.cnrs.fr">Laboratory Statistics and
+  Genomes</A> of the Genopole of Evry, where I stayed until 2002.
+
+I worked next (2002-2011) at
+the <A HREF="http://lix.polytechnique.fr">LIX</A>
+of Ecole polytechnique and (2011-2013) at
+the <A HREF="http://lipn.univ-paris13.fr/en/">LIPN</A> of University
+Paris13
+</br>
+<H2> Collaboration with Palestinian Universities </H2>
+
+<H2><font size=7, color=red> Birzeit, August 2018 </font>
+<H2><A HREF="http://www-lipn.univ-paris13.fr/~nicodeme/birzeit18RAND">
+	     Conference Random Graphs, Trees and Walks, Birzeit,
+	     Palestine (Second Half of August, 2018)</A> </H2>
+</br>
+Former event:
+<H2><A HREF="http://www-lipn.univ-paris13.fr/~nicodeme/nablus14">
+	     CIMPA Summer School in Nablus, Palestine (August 18-27, 2014)</A> </H2>
+This school has been devoted to the analysis of random structures
+ by  analytic and probabilistic methods.
+
+
+
+
+<H2>Vita</H2>
+Here is my <A HREF="vita.en.pdf">vita</A> (pdf file).
+
+
+
+
+
+
+</BODY>
+</HTML>
+

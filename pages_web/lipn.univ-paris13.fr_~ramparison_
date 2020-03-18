@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js" style="background-color:#CBBD00">
+<head>
+
+    <title>mr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="x-subsite-id" content="3" />
+ <meta name = "reply-to" content = "@lipn.fr"/>
+    <meta name = "author" content = "page professionnelle LIPN"/>
+    <meta name = "description" content = "page professionnalle LIPN univ paris 13"/>
+    <meta name = "keywords" content = "LIPN universite paris 13 zer parametric timed automaton"/>
+
+    <meta name="robots" content="universite paris 13 LIPN parametric timed automaton ouloulou">
+
+<link rel="stylesheet" type="text/css" href="azerty.css" />
+<script type="text/javascript" src="modernizr.js"></script>
+
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101174952);</script>
+<script async src="//static.getclicky.com/js"></script>
+
+</head>
+<body style="background-color:#CBBD00">
+	<header class="main wrapper" style="background-color:#CBBD00">
+        <nav class="main">
+			<a href="index.html" title="" class="logo">Mathias RAMPARISON</a>
+        </nav>
+
+		<nav class="meta">
+			<ul>
+
+				<li><a href="mailto:last-name@lipn.fr" class="link underlined lower">Kontakt</a></li>
+
+				<li><a href="/" class="current icon icon-thin-close"></a></li>
+			</ul>
+		</nav>
+	</header>
+ <!--   <nav class="alphabet vcenter">
+
+            <ul class="vcentered">
+
+
+
+
+                    <li>
+
+                            <a href="http://lipn.univ-paris13.fr/~ramparison/index.html" class="link">H</a>
+
+                    </li>
+
+
+
+                    <li>
+
+                            <a href="http://lipn.univ-paris13.fr/~ramparison" class="link">R</a>
+
+                    </li>
+
+
+                    <li>
+
+                            <a href="http://lipn.univ-paris13.fr/~ramparison/teaching.html" class="link">T</a>
+
+                    </li>
+
+
+            </ul>
+
+    </nav> -->
+	<main id="Content" class="wrapper" role="main">
+		<article class="content-left">
+    <h1 class="lower fixed" style="background-color:#CBBD00">about me</h1>
+    <div class="scroll-pane">
+        <div class="scroll-pane__content">
+            <p>Post-doc in the <a href="http://satoss.uni.lu/" target=_"blank"/>SaToSS</a> group &#127473;&#127482;</p>
+
+    <h1 style="background-color:#CBBD00">Since September 1st, 2019, I am a post-doctoral researcher in <a href="https://wwwen.uni.lu/" target=_"blank"/>University of Luxembourg</a>, in the <a href="http://satoss.uni.lu/" target=_"blank"/>SaToSS</a> group.
+    </h1>
+	    <h1 style="background-color:#CBBD00">I passed my PhD viva on September 5th, 2019.
+        I was a PhD student from October 2016 to August 2019 at <a href="http://lipn.univ-paris13.fr/" target=_"blank"/>LIPN</a>, funded by <a href="https://lipn.univ-paris13.fr/PACS/" target="_blank">ANR PACS project</a>.
+        My supervisors were <a href="http://lipn.univ-paris13.fr/~andre/" target=_"blank"/>Etienne André</a> & <a href="http://pagesperso.ls2n.fr/~lime-d/" target=_"blank"/>Didier Lime</a>.
+        I worked in the <a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/" target="_blank">LoVe team of the LIPN, Universit&eacute; Paris 13</a>, member of <a href="http://sorbonne-paris-cite.fr" target="_blank">Universit&eacute; Sorbonne Paris Cit&eacute;</a>.
+		    Prior to that, I did my MSc research internship at <a href="https://www.ls2n.fr/equipe/str/" target="_blank">LS2N, &Eacute;cole Centrale de Nantes</a> in the STR team.</h1>
+    <h1 style="background-color:#CBBD00">I am mostly interested in parametric model-checking and particularly in the study of (un)decidability TCTL problems for subclasses of parametric timed automata, the application of these theoretical results to risk management through extensions of attack trees.
+	    Another research interest is the study of hybrid systems.</h1>
+
+  <!--  <h1 style="background-color:#CBBD00">I am currently (until August 7) working in <a href="https://group-mmm.org/~ichiro" target="_blank">Ichiro Hasuo</a>'s <a href="https://group-mmm.org/eratommsd/" target="_blank">ERATO MMSD</a> research project in Tokyo, Japan. </h1>-->
+
+
+   <h1 style="background-color:#CBBD00">From May to August 2019, I was working in <a href="https://group-mmm.org/~ichiro" target="_blank">Ichiro Hasuo</a>'s <a href="https://group-mmm.org/eratommsd/" target="_blank">ERATO MMSD</a> research project in Tokyo, Japan. </h1>
+	</div>
+    </div>
+</article>
+<nav class="content-right">
+    <ul class="entries">
+             <li>
+                <a href="http://lipn.univ-paris13.fr/~ramparison/publications.html">Publications</a>
+            </li>
+
+            <li>
+                <a href="teaching.html">Teaching</a>
+            </li>
+
+
+    </ul>
+</nav>
+<footer class="content-right">
+
+	<h1 style="background-color:#CBBD00">
+    <p>Since September 2019 I teach in the <a href="https://wwwfr.uni.lu/formations/fstc/interdisciplinary_space_master" target="_blank">Interdisciplinary Space Master</a> at University of Luxembourg.</p>
+		<p>From 2016 to 2019 I was the co-organiser of the monthly PhD and post-doc seminar at LIPN, a.k.a. the junior seminar. The webpage is here <a href="http://lipn.univ-paris13.fr/~ramparison/juniorseminar/index.html">Junior seminar LIPN</a>.</p>
+		<p>From 2016 to 2019 I taught in first and second year of <a href="https://iutv.univ-paris13.fr/dut-informatique/" target="_blank">DUT informatique</a>, a selective two year course in practical computer science at Université Paris 13.</p>
+	</h1>
+    <h1 class="lower" style="background-color:#CBBD00">keywords: formal methods, model checking, real-time systems, parametric timed automaton, parameter synthesis, attack-fault trees, parametric updates</h1>
+	<h1 class="lower" style="background-color:#CBBD00">brutalist website, Serra approved.
+<!-- &#124; &not;(this website is just as fertile as dustbunnies are).-->
+</h1>
+</footer>
+
+	</main>
+	<span id="MobileIndicator"></span>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

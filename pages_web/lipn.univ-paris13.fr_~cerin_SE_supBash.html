@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Exercices suppl&eacute;mentaires Syst&egrave;me</TITLE>
+	<META NAME="GENERATOR" CONTENT="NeoOffice 2.2  (Unix)">
+	<META NAME="CREATED" CONTENT="20080912;16585800">
+	<META NAME="CHANGEDBY" CONTENT="Christophe C&eacute;rin">
+	<META NAME="CHANGED" CONTENT="20080913;14515800">
+	<STYLE TYPE="text/css">
+        P { face: Arial;text-align: justify}
+        body {
+	     font-family: Verdana, Helvetica, sans-serif, Arial;
+	     color: blue;
+	     # background-color: #fff;
+} 
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+        -->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR" >
+<P ALIGN=CENTER STYLE="font: Arial;margin-bottom: 0cm"><FONT SIZE=5 STYLE="font-size: 20pt"><B>Exercices
+Bash suppl&eacute;mentaires</B></FONT></P>
+<P STYLE="margin-bottom: 0cm"><B>A- Figlet</B></P>
+<P STYLE="margin-bottom: 0cm">Installer l'outil figlet depuis
+<A HREF="http://www.figlet.org/"></A><A HREF="http://www.figlet.org/"></A><A HREF="http://www.figlet.org/">http://www.figlet.org</A><A HREF="http://www.figlet.org/"></A><A HREF="http://www.figlet.org/"></A></P>
+<P STYLE="margin-bottom: 0cm">Cet outil permet d'afficher du texte
+dans des polices &laquo;&nbsp;exotiques&nbsp;&raquo; ou avec des
+d&eacute;corations. Par exemple :</P>
+<pre style="background: #ffff99">
+$ ./figlet -f fonts/bubble.flf "Christophe"
+  _   _   _   _   _   _   _   _   _   _
+ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \
+( C | h | r | i | s | t | o | p | h | e )
+ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+</pre>
+<P STYLE="margin-bottom: 0cm">On vous demande d'&eacute;crire un
+script <FONT FACE="Courier, monospace">figlet.sh</FONT> qui prend un
+texte en param&egrave;tre et qui affiche ce texte avec la
+d&eacute;coration de la police bubble.flt. Ce script ne fait pas
+d'appel &agrave; l'executable figlet, bien entendu, sinon c'est trop
+facile. C'est &agrave; vous de simuler son comportement, en Bash et
+seulement en Bash !</P>
+
+<P STYLE="margin-bottom: 0cm">On vous
+demande ensuite un script <FONT FACE="Courier, monospace">figlet1.sh</FONT>
+qui prend en param&egrave;tre un texte &eacute;crit en minuscule et
+qui produit &agrave; l'&eacute;cran ceci :</P>
+
+<pre style="background: #cccccc">
+ ./figlet1.sh "abcdefghijklmopqrstuvwxyz"
+               _
+ _.|_  _ _| __|__ |_ oo| |._ _  _ ._  _..___|_             _
+(_||_)(_(_|(/_|(_|| ||||<|| | |(_)|_)(_||_> |_|_|\/\/\/><\//_
+                _|   _|           |    |                 /
+</pre>
+
+<P STYLE="margin-bottom: 0cm">Ecrire le script <FONT FACE="Courier,
+monospace">figlet3.sh</FONT> qui produit un texte en minuscule dans
+l'alphabet suivant :</P> <pre style="background: #94bd5e">
+./figlet3.sh "abcdefghijklmopqrstuvwxyz" 
+      _                   _        _           _    _
+     | |          |      | |      | |    o  o | |  | |
+ __, | |   __   __|   _  | |  __, | |         | |  | |  _  _  _    __    _
+/  | |/ \_/    /  |  |/  |/  /  | |/ \   |  | |/_) |/  / |/ |/ |  /  \_|/ \_
+\_/|_/\_/ \___/\_/|_/|__/|__/\_/|/|   |_/|_/|/| \_/|__/  |  |  |_/\__/ |__/
+                         |\    /|          /|                         /|
+                         |/    \|          \|                         \|
+
+ __,   ,_    , _|_                                 __
+/  |  /  |  / \_|  |   |  |  |_|  |  |_/\/  |   | / / _
+\_/|_/   |_/ \/ |_/ \_/|_/ \/   \/ \/   /\_/ \_/|/ /_/
+   |\                                          /|   /|
+   |/                                          \|   \|
+</pre>
+
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=3><I>Plus
+difficile :</I> reprendre les 2 derniers scripts pour les modifier de
+la fa&ccedil;on suivante : un deuxi&egrave;me param&egrave;tre est
+pass&eacute; au script qui sp&eacute;cifie un facteur d'&eacute;chelle
+(2 =&gt; police 2 fois plus grosse que l'affichage de base ; 3 =&gt; 
+police 3 fois plus grosse que l'affichage de base ;
+...)</FONT></P>
+
+
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=3><B>B-
+Gestion de bibliographie</B></FONT></P>
+
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=3><SPAN STYLE="font-weight: medium">Bibtex
+(</SPAN><A HREF="http://en.wikipedia.org/wiki/BibTeX"></A><A HREF="http://en.wikipedia.org/wiki/BibTeX"></A><A HREF="http://en.wikipedia.org/wiki/BibTeX"><SPAN STYLE="font-weight: medium">http://en.wikipedia.org/wiki/BibTeX</SPAN></A><A HREF="http://en.wikipedia.org/wiki/BibTeX"></A><A HREF="http://en.wikipedia.org/wiki/BibTeX"></A><SPAN STYLE="font-weight: medium">
+ou Kbibtex : </SPAN><A HREF="http://www.unix-ag.uni-kl.de/~fischer/kbibtex/"></A><A HREF="http://www.unix-ag.uni-kl.de/~fischer/kbibtex/"></A><A HREF="http://www.unix-ag.uni-kl.de/~fischer/kbibtex/"><SPAN STYLE="font-weight: medium">http://www.unix-ag.uni-kl.de/~fischer/kbibtex/</SPAN></A><A HREF="http://www.unix-ag.uni-kl.de/~fischer/kbibtex/"></A><A HREF="http://www.unix-ag.uni-kl.de/~fischer/kbibtex/"></A><SPAN STYLE="font-weight: medium">)
+est un outil pour g&eacute;rer de la bibliographie.</SPAN></FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>Apr&egrave;s
+avoir compris le format des entr&eacute;es d'un fichier Bibtex, vous
+&eacute;crirez un script sortBibtex.sh qui va trier un fichier .bib
+par ordre alphab&eacute;tique de l'auteur (si l'auteur est seul).
+Vous v&eacute;rifirez que les entr&eacute;es sont bien des entr&eacute;es
+possibles (Inproceedings, etc).</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>Ensuite,
+si l'auteur n'est pas seul, il s'agira de trier selon l'ordre
+alphab&eacute;tique des auteurs pour l'entr&eacute;e consid&eacute;r&eacute;e,
+puis de trier par entr&eacute;e bibliographique sur les noms
+d'auteurs.</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>Vous
+pouvez faire des hypoth&egrave;ses du genre : les noms apparaissent
+sous la forme &laquo;&nbsp;Pr&eacute;nom Nom&nbsp;&raquo;, les
+noms/pr&eacute;noms compos&eacute;s le sont avec le symbole â
+(exemple Jean-Christophe). Ensuite vous essayerez de lever toutes les
+contraintes.</FONT></P>
+
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=3><B>C- Tableaux</B></FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+&Eacute;crire un script Bash qui fait la somme de deux tableaux de
+m&ecirc;me longueur qui contiennent des entiers, puis un script
+qui fait la somme de toutes les valeurs contenues dans deux tableaux
+qui n'ont pas forc&eacute;ment la m&ecirc;me taille.
+</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+Voila les tableaux sur lesquels il faut travailler :
+</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+<pre>
+t1=([0]=7 [1]=3 [2]=4)
+t2=([0]=7 [1]=3 [2]=4)
+puis
+t1=([0]=7 [1]=3 [2]=4 [6]=6)
+t2=([0]=7 [1]=3 [2]=4 [4]=6 [8]=8)
+</pre>
+</FONT></P>
+
+
+<P STYLE="margin-bottom: 0cm"><FONT SIZE=3><B>D- Dictionnaire</B></FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+&Eacute;crire un script Bash qui prend en param&egrave;tre un fichier
+texte et compte de nombre d'occurences des mots du fichier texte
+en rangeant les diff&eacute;rents mots dans un dictionnaire. Voici un
+exemple :
+</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+<pre>
+$ /opt/local/bin/bash dico2.sh titi
+------Fichier en entree: titi-------------
+ASSOC[ZZeeZZ] = 1
+ASSOC[fdg] = 1
+ASSOC[ZZ] = 1
+ASSOC[fsdf] = 1
+ASSOC[sdf] = 1
+ASSOC[ZZ] = 2
+ASSOC[sdfsdf] = 1
+ASSOC[sdf] = 2
+ASSOC[$] = 1
+ASSOC[sdf] = 3
+ASSOC[sdfds] = 1
+ASSOC[$sdfsf] = 1
+ASSOC[dfgdf] = 1
+ASSOC[ZZ] = 3
+ASSOC[dfgdfg] = 1
+</pre>
+</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+</FONT></P>
+
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>
+</FONT></P>
+</BODY>
+</HTML>

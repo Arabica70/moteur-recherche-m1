@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>GDR IM 2016</title>
+	<meta name="author" content="Christophe Fouqueré" />
+	<meta name="description" content="Les journées nationales du GDR IM 2016 auront lieu à Villetaneuse du 18 au 20 Janvier 2016" />
+	<meta name="keywords" content="Journées du GDR IM 2016, Accueil, Participants, Programme, Inscriptions, Informations pratiques" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="GDR-IM2016.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<a href="images/affiche_gdrim.pdf"><img style="float:left;" src="images/affiche_gdrim_300.jpg" height="100"></a>
+		<a href="https://www.gdr-im.fr/"><img style="float:right;" src="images/logo-gdrim.png" alt="GDR-IM" height="100" title="GDR IM 2016" /></a>
+		<h1><a href="index.php">Journées nationales 2016</a></h1>
+		<h1><a href="index.php">GDR Informatique Mathématique</a></h1>
+		<h2>18 - 20 Janvier 2016, Villetaneuse</h2>
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Accueil</a></li>
+			<!-- <li><a href="call-for-paper.php">Call for papers</a></li> -->
+			<li><a href="registration.php">Inscription</a></li>
+			<li><a href="program.php">Programme</a></li>
+			<li><a href="invited-speakers.php">Orateurs invités</a></li>
+			<li><a href="talks.php">Exposés</a></li>
+			<li><a href="postersLundi.php">Posters</a></li>
+			<li><a href="participants.php">Participants</a></li>
+			<!-- <li><a href="social-event.php">Social Event </a></a></li> -->
+			<li><a href="practical.php">Informations pratiques</a></li>
+			<li><a href="venue.php">Accès </a></li>
+			<li><a href="committees.php">Organisateurs</a></li>
+			<!-- <li><a href="pictures.php">Pictures</a></li> -->
+			<!-- <li><a href="past.php">Past editions</a></li> -->
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+  
+	<div id="main">
+		<h2>Présentation des journées du GDR-IM</h2>
+
+	<p>Les journées du GDR IM (Informatique mathématique) sont un lieu d'information et d'échange annuel entre chercheurs de la discipline. Les <a href="http://gdrim2015.labri.fr">journées du GDR-IM 2015</a> ont eu lieu à l'université de Bordeaux. Les journées 2016 se tiendront au LIPN à l'université de Paris 13 du 18 au 20 janvier 2016.</p>
+
+<p>Elles comprendront des présentations scientifiques d'orateurs extérieurs, de membres du GDR proposés par ses responsables de pôles et de groupes de travail, ainsi que des exposés courts et posters de jeunes docteur.e.s. Les détails figurent sur le programme.</p>
+
+<p><b>Les exposés commenceront le lundi 18 janvier à 13 heures pour se terminer le mercredi 20 janvier à 16h.</b></p>
+
+<p>L'<a href="registration.php"><b>inscription</b></a> aux journées est gratuite mais obligatoire.</p>
+
+<p>Pour toute question, contacter les <a href="committees.php">organisateurs</a>.</p>
+
+<p>Ces journées seront suivies, le mercredi à partir de 16h30, de la remise par Valérie Berthé de la <b>Légion d'Honneur à Brigitte Vallée</b>, où vous êtes également bienvenus.</p>
+
+<p>Les journées auront lieu dans les locaux de l'Institut Galilée (voir <a href="venue.php">accès</a>):
+	<ul>
+	<li> <b>Conférences: amphi D</b>
+	<li> <b>Buffet, posters: salles F003-F004</b>
+	</ul>
+</p>
+		
+<p>
+<a href="https://lipn.univ-paris13.fr/applications/gdr-im-2016/liste.php">Liste des participants</a>
+</p>
+
+<p>
+<b>IMPORTANT : Programme et Informations d'accès à imprimer</b>: <a href="ProgrammeEtAcces.pdf">ici</a>
+</p>
+
+<p>
+Affiche des journées: <a href="images/affiche_gdrim.pdf"><img src="images/affiche_gdrim_300.jpg" width="82" alt="GDR-IM 2016" title="GDR-IM 2016"></a>
+</p>
+
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<!-- <img src="images/cnrs.png" alt="CNRS" title="CNRS"> -->
+			<a href="https://www.gdr-im.fr/"><img src="images/logo-gdrim.png" alt="GdR IM CNRS" title="GdR IM"></a>
+			<a href="http://www.sorbonne-paris-cite.fr/"><img src="images/logosorbonnepariscit.jpg" alt="USPC" title="USPC"></a>
+			<a href="http://www.univ-paris13.fr/"><img src="images/paris13.png" alt="Université Paris 13" title="Université Paris 13"></a>
+			<a href="https://lipn.univ-paris13.fr/fr/"><img src="images/lipn.jpg" alt="LIPN" title="LIPN"></a>
+			<a href="http://www.iutv.univ-paris13.fr/index.php"><img src="images/logoIUT-villetaneuse2010_ev.jpg" alt="IUT Villetaneuse" title="IUT Villetaneuse"></a>
+		</div>
+		
+		<div id="sponsors-labos">
+			<img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR">
+			<a href="https://lipn.univ-paris13.fr/~fernique/quasicool/"><img src="images/quasicool.gif" alt="Projet financé par l’ANR" title="ANR QuasiCool" width="90"></a>
+			<a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>
+			<a href="http://http://www.liafa.univ-paris-diderot.fr/dyna3s/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR Dyma3S"></a>
+			<a href="https://mathstic.univ-paris13.fr/"><img src="images/logo_mathstic.png" alt="MathSTIC" title="MathSTIC"></a>
+			<a href="https://digicosme.lri.fr/tiki-index.php"><img src="images/logo-DigiSaclaysmall.png" alt="DigiCosme" title="DigiCosme"></a>
+			<!-- <img src="images/alea.gif" alt="Projet SPC Alea" title="Alea"> -->
+		</div>
+		
+		<div id="contact">
+			<p> Contact: Frédérique Bassino. Email: bassino [ at ] lipn.univ-paris13.fr </p>
+		</div>
+		
+		<div id="copyright">
+			<p>Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)</p>
+			<p>Title font: <a href="https://fontlibrary.org/en/font/bretan">Coval</a> (SIL Open Font); Main banner: Paulin de Naurois</p>
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+</body>
+</html>
+ 

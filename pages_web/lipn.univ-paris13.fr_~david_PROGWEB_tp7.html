@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="tp.css">
+  <title>Sujet de TP: Recherche et mise en page</title>
+</head>
+
+<body>
+  <header>Sujet de TP: Recherche et mise en page</header>
+
+  <main>
+    
+
+
+    <article class="exercice">
+      <header><h2>Exercice: Mise en Forme du résultat d'une recherche</h2></header>
+      Dans cet exercice, on utilisera les paramètres <code>LIMIT</code> et <code>OFFSET</code> en <code>SQL</code>.<br/>
+      Télécharger les fichiers suivants: <a href="SQL_EXEMPLES/creationProf.sql">creationProf.sql</a> et <a href="SQL_EXEMPLES/insertProf.sql">insertProf.sql</a>
+      <ul>
+	<li>Afficher les enseignants de la base dans une page web (10 enseignants par page). Permettre à l'utilisateur d'accéder à la page suvante, la page précédente, ou la page de son choix.
+	  On utilisera la méthode GET pour connaitre le numéro de la page. </li>
+	<li>Créer une classe <code>prof</code> pour la mise en page.
+	<li>Créer un outil de recherche permettant de rechercher grace à son nom, son statut ou son bureau</li>
+	<li>la barre de navigation et la <code>table</code> sont produites par la classe Prof par les méthodes <code>printNavigation</code> et <code>printTable</code>.</li>
+	<li>la chaîne de caractère utilisée pour faire la requête qui produit la table est initialisée dans le constructeur de la classe Prof.</li>  
+	<!--<li>Créer un outil de recherche permettant de rechercher grace à son nom (zone texte), son statut (menu déroulant) ou son bureau (menu déroulant). -->
+      </ul>
+    </article>
+  </main>
+
+<footer>Auteur: Julien David (2015)</footer>
+
+</body>
+
+</html>

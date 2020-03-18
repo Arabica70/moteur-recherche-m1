@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!-- meta charset="UTF-8"-->
+<html> <head>
+<title>TLLA 17</title>
+</head>
+
+<body>
+<h1><a href="http://lipn.univ-paris13.fr/TLLA17">TLLA 17: Trends in Linear Logic and Applications</a></h1>
+<h3>International Workshop affiliated with <a href="http://www.cs.ox.ac.uk/conferences/fscd2017/">FSCD 2017</a><h3/>
+<h3>Oxford, September 3, 2017</h3>
+
+<hr>
+
+<p>Linear Logic is not only a proof theoretical tool to analyse or
+control the use of ressources in logic and computation. It is also a
+corpus of tools, approaches, and methodologies (proof nets,
+exponential decomposition, geometry of interaction, coherent spaces,
+relational models, etc.) that, even if developed for studying Linear
+Logic syntax and semantics, have been applied in several other fields
+(analysis of &lambda;-calculus computations, game semantics,
+computational complexity, program verification, etc.).</p>
+
+<p>The TLLA international workshop aims at bringing together
+researchers working on Linear Logic or applying it or its tools. The
+main goal is to present and discuss trends in the research on Linear
+Logic and its applications by means of tutorials, invited talks, open
+discussions, and contributed talks.</p>
+
+<p>The purpose is to gather researchers interested in the connections
+between Linear Logic and various topics such as</p>
+
+<ul>
+	<li>theory of programming languages</li>
+	<li>implicit computational complexity</li>
+	<li>parallelism and concurrency</li>
+	<li>games and languages</li>
+	<li>proof theory</li>
+	<li>philosophy</li>
+	<li>categories and algebra</li>
+	<li>possible connections with combinatorics</li>
+	<li>linguistics</li>
+	<li>functional analysis and operator algebras</li>
+</ul>
+
+<h2>Program</h2>
+    
+    <h4>Invited Speakers</h4>
+    <ul>
+        <li>Jean-Yves Girard. <em>TBA</em></li>
+        <li>Paolo Pistone. <em>Polymorphism and Dinaturality from a Linear Logic Perspective</em></li>
+    </ul>
+    
+    <h4>Accepted submissions</h4>
+    <p>    
+        The list of the accepted talks is available at the url
+        <a href="accepted.html">http://lipn.univ-paris13.fr/TLLA17/accepted.html</a>
+    </p>
+
+<h2 name="registration">Registration and accommodation</h2>
+
+    <p>
+    Detailed instructions can be found on the
+    <a href="http://www.cs.ox.ac.uk/conferences/fscd2017/registration.html">
+        FSCD registration page</a>.
+    </p>
+    
+    <p>
+    To attend the workshop, you must register for the September 3 workshop day.
+    Please select TLLA as your principal workshop. This will also give you the right to attend any other workshop held on this day.
+    </p>
+    
+    <p>The registration fee is &pound;40, before August 6, and &pound;60 after.</p>
+    
+    <p>
+        You can register for college accommodation through the 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMh9EdIGIjYsJjo0FxetxaN-Pt4UjDmVPJrqScRqgQEsDQeA/viewform?c=0&w=1">ICFP accommodation site</a>.
+        Please give your email address rather than registration number when applying for accommodation.
+    </p>
+
+
+<h2>Young Researchers Grants</h2>      
+
+<p>A limited number of grants for students or young researches are
+available. Grants can full or partially cover registration fee,
+accommodation and transport. To apply for a grant send a message to <a
+href="mailto:stefano.guerrini@univ-paris13.fr">Stefano Guerrini
+&lt;stefano.guerrini@univ-paris13.fr&gt;</a> with:</p>
+
+<ul>
+  <li>Affiliation and contact details</li>
+  <li>A short CV</li>
+  <li>A letter of motivation explaining the interest of the applicant
+  on one or more topics on the workshop</li>
+  <li>If the applicant has submitted an abstract</li>
+  <li>(Facultatif) One or two support letters. A letter from the
+  supervisor is mandatory for PhD students.</li>
+</ul>
+
+<!-- Deadline for grant application: July -->
+    
+<h2>Submission Guidelines</h2>
+
+<p>Contributions are not restricted to talks presenting an original
+results, but open to tutorials, open discussions, and position
+papers. For this reason, we strongly encourage contributions
+presenting work in progress, open questions, and research
+projects. Contributions presenting the application of linear logic
+results, techniques, or tools to other fields, or vice versa, are most
+welcome.</p>
+
+<p>To submit a contributed talk submit a short abstract of at most
+two pages at</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="https://easychair.org/conferences/?conf=tlla17">https://easychair.org/conferences/?conf=tlla17</a>
+</p>
+
+<h2>Important dates</h2>
+<ul>
+    <li>Submission deadline: <strike>June 16, 2017</strike></li>
+    <li>Notification: <strike>July 8, 2017</strike></li>
+    <li>Final version: August 1, 2017</li>
+    <li>Early registration: August 6, 2017</li>
+</ul>
+
+<h2>Publication</h2>
+
+<p>The abstracts of the contributed and invited talks will be
+published on the site of the conference. A call for a special issue of
+a journal will be announced after the workshop.</p>
+    
+<h2>Committees</h2>
+
+<h3>Program Committee</h3>
+
+<ul>
+	<li>Richard Blute, University of Ottawa</li>
+	<li>Thomas Ehrhard, Univ. Paris Diderot</li>
+	<li>Delia Kesner, Univ. Paris Diderot</li>
+	<li>Dan Ghica, University of Birmingham</li>
+	<li>Stefano Guerrini, Univ. Paris 13 (PC Chair)</li>
+	<li>Ian Mackie, &Eacute;cole Polytechnique Univ. Paris-Saclay</li>
+	<li>Roberto Maieli, Univ. Roma Tre</li>
+	<li>Giulio Manzonetto, Univ. Paris 13</li>
+	<li>Laurent Regnier, Univ. Aix-Marseille</li>
+	<li>Claudio Sacerdoti Coen, Univ. Bologna</li>
+	<li>Alexis Saurin, Univ. Paris Diderot</li>
+	<li>Lorenzo Tortora de Falco, Univ. Roma Tre</li>
+</ul>
+
+<h3>Organizing committee</h3>
+
+<ul>
+	<li>Thomas Ehrhard (IRIF, Univ. Paris Diderot)</li>
+	<li>Stefano Guerrini (LIPN, Univ. Paris 13)</li>
+	<li>Lorenzo Tortora de Falco (Univ. Roma Tre)</li>
+</ul>
+
+
+<h2>Contact</h2>
+
+<p>All questions about submissions should be emailed to
+<a href="mailto:stefano.guerrini@univ-paris13.fr">Stefano Guerrini &lt;stefano.guerrini@univ-paris13.fr&gt;</a></p>
+
+<h2>Supporting Organisations</h2>
+
+<div>GDRI Linear Logic (CNRS-INDAM)</div>
+
+<div>Universit&eacute; Paris 13, Sorbonne Paris Cit&eacute;</div>
+
+<div>Universit&eacute; Paris Diderot, Sorbonne Paris Cit&eacute;</div>
+
+<!-- div>Universit&agrave; Roma Tre</div -->
+
+<img 
+    src="logocnrs.svg" 
+    alt="CNRS"
+    height="90" />
+
+<img 
+    src="Logo-UP13-noirS.png" 
+    alt="Paris 13"
+    height="100" />
+
+<img 
+    src="logop7.svg" 
+    alt="Paris Diderot"
+    height="100" />
+
+<hr>
+
+<address><a href="mailto:stefano.guerrini@univ-paris13.fr">Stefano Guerrini &lt;stefano.guerrini@univ-paris13.fr&gt;</a></address>
+</body> </html>

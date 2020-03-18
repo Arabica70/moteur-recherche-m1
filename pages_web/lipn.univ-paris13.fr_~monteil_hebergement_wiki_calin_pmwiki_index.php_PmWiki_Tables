@@ -1,0 +1,377 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Tables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.Tables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=search&amp;q=link=PmWiki.Tables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Tables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads'>Uploads</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>Table directives</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>authors (basic) </span>
+</div>
+<h2>Table basics</h2>
+<p>PmWiki has two types of table markup; the markup described in this page is useful for creating <em>simple</em> tables with lots of small cells, while <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>table directive</a> markups help with larger scale tables.  For more possibilities with table formatting see <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Rowspan%20in%20simple%20tables' rel='nofollow'>Cookbook:Rowspan in simple tables</a> and <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Formatting%20tables' rel='nofollow'>Cookbook:Formatting tables</a>.
+</p>
+<p class='vspace'>Tables are created via use of double pipe characters: <code>||</code>. Lines beginning with this markup denote rows in a table or a formatting line. Within table row lines the double-pipe is used to delimit cells.  In the examples below a border is added for illustration (the default is no border).
+</p>
+<p class='vspace'>The first line in the markup contains formatting commands for the table. It only has double pipe characters at the start of the line.
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Basic table</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1
+|| cell 1 || cell 2 || cell 3 ||
+|| cell 1 || cell 2 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' ><tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace'>Header cells can be created by placing ! as the first character of a cell.  Note that these are <em>table headers</em>, not <em>headings</em>, so it doesn&rsquo;t extend to !!, !!!, etc.
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Table headers</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1
+||! cell 1 ||! cell 2 ||! cell 3 ||
+|| cell 1  ||  cell 2 ||  cell 3 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' ><tr ><th  align='center'>cell 1</th><th  align='center'>cell 2</th><th  align='center'>cell 3</th></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace'>A table can have a caption, indicated by <code class='escaped'>||!caption!||</code>.  Any caption must appear prior to other rows of the table.
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Table caption</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1
+||! A special table !||
+||! cell 1 ||! cell 2 ||! cell 3 ||
+|| cell 1  ||  cell 2 ||  cell 3 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' ><caption >A special table</caption>
+<tr ><th  align='center'>cell 1</th><th  align='center'>cell 2</th><th  align='center'>cell 3</th></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<div class='vspace'></div><h2>Formatting cell contents</h2>
+<p>Cell contents may be aligned left, centered, or aligned right. 
+</p><ul><li>To left-align contents, place the cell contents next to the leading <code>||</code>.
+</li><li>To center contents, add a space before and after the cell contents.
+</li><li>To right-align contents, place a space before the cell contents and leave the cell contents next to the trailing <code>||</code>.
+</li></ul><div class='vspace'></div><table class='markup vert' align='center'><caption>Cell alignments</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 width=100%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' width='100%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table>
+</td></tr></table>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Default cell alignments</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 width=100%
+||!cell default||!cell left ||
+||default-aligned||left-aligned ||
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' width='100%' ><tr ><th >cell default</th><th  align='left'>cell left</th></tr>
+<tr ><td >default-aligned</td><td  align='left'>left-aligned</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace'>Note that header and detail cells have different default alignments.
+</p>
+<p class='vspace'>To get a cell to span multiple columns, follow the cell with empty cells.
+(At present there is no markup for spanning rows.)
+</p>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Column spanning</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 width=100%
+|| |||| right column ||
+|| || middle column ||||
+|| left column ||||||
+|| left column || middle column || right column ||
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' width='100%' ><tr ><td  colspan='2'>&nbsp;</td><td  align='center'>right column</td></tr>
+<tr ><td >&nbsp;</td><td  align='center' colspan='2'>middle column</td></tr>
+<tr ><td  align='center' colspan='3'>left column</td></tr>
+<tr ><td  align='center'>left column</td><td  align='center'>middle column</td><td  align='center'>right column</td></tr>
+</table>
+</td></tr></table>
+<div class='vspace'></div><h2>Table attributes</h2>
+<p>Any line that begins with <code class='escaped'>||</code> but doesn&rsquo;t have a closing <code class='escaped'>||</code> sets the <em>table attributes</em> for any tables that follow.  These attributes can control the size and position of the table, borders, background color, and cell spacing.  (In fact these are just standard HTML attributes that are placed in the &lt;table&gt; tag.)
+</p>
+<p class='vspace'>Use the <code class='escaped'>width=</code> attribute to set a table&rsquo;s width, using either a percentage value, an absolute size, or <strong>*</strong>.
+</p>
+<p class='vspace'>See also <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#SimpleTableDefaultClassName'><code class='varlink'>&#036;SimpleTableDefaultClassName</code></a>.
+</p>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Table width</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 width=100% 
+|| cell 1 || cell 2 || cell 3 ||
+|| c1 || cellcellcellcell2 || cell 3 ||
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' width='100%' ><tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+<tr ><td  align='center'>c1</td><td  align='center'>cellcellcellcell2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace'>The <code class='escaped'>border=</code> attribute sets the size of a table&rsquo;s borders.
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Bordered table</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=10 width=70%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+</pre></td><td 
+        class='markup2' valign='top'><table border='10' width='70%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table>
+</td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Borderless table</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=0 width=70%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+</pre></td><td 
+        class='markup2' valign='top'><table border='0' width='70%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace'>Use <code class='escaped'>align=center</code>, <code class='escaped'>align=left</code>, and <code class='escaped'>align=right</code> to center, left, or right align a table.  Note that <code class='escaped'>align=left</code> and <code class='escaped'>align=right</code> create a <em>floating table</em>, such that text wraps around the table.
+</p>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Table alignment: center</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 align=center width=50%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+Notice how text does not wrap with a table using "align=center".
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' align='center' width='50%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table><p>Notice how text does not wrap with a table using &ldquo;align=center&rdquo;.
+</p>
+</td></tr></table>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Table alignment: left</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 align=left width=50%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+Notice how text wraps to the right of a table using "align=left".
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' align='left' width='50%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table><p>Notice how text wraps to the right of a table using &ldquo;align=left&rdquo;.
+</p>
+</td></tr></table>
+<div class='vspace'></div><table class='markup vert' align='center'><caption>Table alignment: right</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 align=right width=50%
+||!cell 1      ||! cell 2  ||!       cell 3||
+||left-aligned || centered || right-aligned||
+Notice how text wraps to the left of a table using "align=right".
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><table border='1' align='right' width='50%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-aligned</td><td  align='center'>centered</td><td  align='right'>right-aligned</td></tr>
+</table><p>Notice how text wraps to the left of a table using &ldquo;align=right&rdquo;.
+</p>
+</td></tr></table>
+<p class='vspace'>Note: to get a table to align left (but not &ldquo;float left&rdquo;) requires CSS, as in
+</p><div class='indent'><code class='escaped'>||style="margin-left:0px;"</code>
+</div><p class='vspace'>The <code class='escaped'>bgcolor=</code> attribute sets the background color for a table.  At present there is no way to specify the color of individual rows or cells in this type of table (but see <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/FormattingTables' rel='nofollow'>Cookbook:FormattingTables</a>).
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 align=center bgcolor=yellow width=70%
+||!cell 1    ||! cell 2 ||!     cell 3||
+||left-align || center  || right-align||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' align='center' bgcolor='yellow' width='70%' ><tr ><th  align='left'>cell 1</th><th  align='center'>cell 2</th><th  align='right'>cell 3</th></tr>
+<tr ><td  align='left'>left-align</td><td  align='center'>center</td><td  align='right'>right-align</td></tr>
+</table>
+</td></tr></table>
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='question'>Q How do I create a basic table?  </p>
+<p> Tables are created via use of the double pipe character: <code>||</code>. Lines beginning with this markup denote rows in a table; within such lines the double-pipe is used to delimit cells.  In the examples below a border is added for illustration (the default is no border).
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Basic table</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 rules=rows frame=hsides
+|| cell 1 || cell 2 || cell 3 ||
+|| cell 1 || cell 2 || cell 3 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' rules='rows' frame='hsides' ><tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace question'>Q How do I create cell headers?</p>
+<p> Header cells can be created by placing ! as the first character of a cell.  Note that these are <em>table headers</em>, not <em>headings</em>, so it doesn&rsquo;t extend to !!, !!!, etc.
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Table headers</caption>
+      <tr><td class='markup1' valign='top'><pre>|| border=1 rules=cols frame=vsides
+||! cell 1 ||! cell 2 ||! cell 3 ||
+|| cell 1  ||  cell 2 ||  cell 3 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' rules='cols' frame='vsides' ><tr ><th  align='center'>cell 1</th><th  align='center'>cell 2</th><th  align='center'>cell 3</th></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace question'>Q How do I obtain a table with thin lines and more distance to the content?</p>
+<p> &ldquo;Thin lines&rdquo; is tricky and browser dependent, but the following works for Firefox and IE (Nov. 2009):
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Thin lines and cell padding</caption>
+      <tr><td class='markup1' valign='top'><pre>||border="1" style="border-collapse:collapse" cellpadding="5" width=66%
+||!Header ||! Header || '''Header'''||
+||cells   ||  with   ||      padding||
+||        ||         ||             ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' style='border-collapse:collapse' cellpadding='5' width='66%' ><tr ><th  align='left'>Header</th><th  align='center'>Header</th><td  align='right'><strong>Header</strong></td></tr>
+<tr ><td  align='left'>cells</td><td  align='center'>with</td><td  align='right'>padding</td></tr>
+<tr ><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+</table>
+</td></tr></table>
+<p class='vspace question'>Q How do I create an advanced table?  </p>
+<p> See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>table directives</a>
+</p>
+<p class='vspace question'>Q My tables are by default centered. When I try to use &lsquo;||align=left&rsquo; they don&rsquo;t align left as expected. </p>
+<p> Use ||style=&ldquo;margin-left:0px;&rdquo; instead. 
+</p>
+<p class='vspace question'>Q How can I specify the width of columns?</p>
+<p> You can define the widths via custom styles, see <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/FormattingTables' rel='nofollow'>Cookbook:FormattingTables</a> and <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#TableCellAttrFmt'><code class='varlink'>&#036;TableCellAttrFmt</code></a>. Add in config.php :
+<code class='escaped'>$TableCellAttrFmt = 'class=col$TableCellCount';</code>
+</p><div class='indent'>And add in pub/css/local.css : 
+</div><pre class='escaped'>
+table.column td.col1 { width: 120px; }
+table.column td.col3 { width: 40px; }
+</pre>
+<p class='vspace question'>Q How can I display a double pipe &ldquo;||&rdquo; in cell text using basic table markup?</p>
+<p> Escape it with <code class='escaped'>[=||=]</code> to display || unchanged.
+</p>
+<p class='vspace question'>Q How do I apply styles to the elements of the table, like an ID to the table row, or a class/style to the TD?</p>
+<p> See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles#WikiStyleApply'>&#036;WikiStyleApply</a>.
+ 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads'>Uploads</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>Table directives</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Tables' rel='nofollow'>PmWiki:Tables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Tables-Talk' rel='nofollow'>PmWiki:Tables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on July 02, 2016, at 04:58 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

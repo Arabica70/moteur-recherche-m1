@@ -1,0 +1,174 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | FalseBeliefs / False Beliefs </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='index,follow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='FalseBeliefs.FalseBeliefs' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><b class='selflink'>False Beliefs</b>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=print'>Print</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs'>FalseBeliefs</a> /</div>
+          <h1 class='pagetitle'>False Beliefs</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>Timothy Gowers a provoqué une avalanche de commentaires  intéressants avec son post sur MathOverflow :
+<a class='urllink' href='https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics' rel='nofollow'>false beliefs in mathematics</a>.
+</p>
+<p class='vspace'>Notre petite page de wiki est dédiée à nos discussions sur ces &ldquo;false beliefs in mathematics&rdquo;, 
+initiées lors des deux derniers thés combinatoires.
+</p>
+<p class='vspace'>Nous suggérons que chaque membre de l&rsquo;équipe choisisse une ou deux entrées de la liste, dont il aura préparé la présentation,
+pour la présenter à l&rsquo;impromptu lors d&rsquo;une prochaine séance ;-)
+</p>
+<p class='vspace'>Par ailleurs, chacun est le bienvenu pour proposer (demander) une entrée pour laquelle il est curieux,
+mais pense qu&rsquo;un autre membre de l&rsquo;équipe serait plus à même d&rsquo;en faire une présentation claire.
+</p>
+<div class='vspace'></div><h2>Sujets pour lesquels nous recherchons une bonne âme pour les expliquer :</h2>
+<div class='vspace'></div><ul><li>demande de Gérard : le message du 3/08/17 by Manuel Silva <a class='urllink' href='https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics/27301#27301' rel='nofollow'>Some people believe there is no &ldquo;formula&rdquo; for the nth prime number</a>
+<ul><li>Thierry s&rsquo;en charge !
+</li></ul></li><li>Propriétés de la trace, définition intrinsèque, amélioration de la <a class='urllink' href='https://fr.wikipedia.org/wiki/Trace_alg%C3%A8bre' rel='nofollow'>page wikipedia</a>.
+</li></ul><div class='vspace'></div><h3>Astuce !!! : pour obtenir le lien vers une question particulière, cliquer sur le lien &ldquo;share&rdquo; en gris en bas à gauche de la question.</h3>
+<h2>Sujets qu&rsquo;un membre de l&rsquo;équipe propose d&rsquo;expliquer</h2>
+<p class='vspace'>Gérard Duchamp propose d&rsquo;expliquer : 
+</p>
+<div class='vspace'></div><ul><li>(post de Gérard)  Heisenberg-Weyl and enveloping algebras
+</li><li>(post de Gérard)  Commutatively convergent series in a normed space
+</li><li>(post de Gérard) Taylor&rsquo;s Formula and displacement operator
+</li><li>(post de Max Horn) Let {$V$} be a vector space. Then the intersection of n hyperplanes (i.e. subspaces of codimension 1) is a subspace  of codimension at most {$n$}. So, naturally, the intersection of countably many hyperplanes is a subspace of countable codimension. Hence if {$V$} is of uncountable dimension, this intersection is non-trivial.
+</li></ul><p><strong>Un &ldquo;hint&rdquo; pour le post de Max Horn</strong> : considérer les séries {$\frac{1}{X-a}$} pour {$a\in K\setminus \{0\}$} qui sont linéairement indépendantes. 
+</p>
+<div class='vspace'></div><h2>Sujets que nous avons déjà traités :</h2>
+<div class='vspace'></div><ul><li><a class='urllink' href='https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics/23501#23501' rel='nofollow'>{$\dim(U +V + W) = \dim U + \dim V + \dim W - \dim (U \cap V) - \dim (U \cap W) - \dim (V \cap W) + \dim(U \cap V \cap W)$}</a>
+<ul><li>debunk : 3 droites dans {$\mathbb{R}^2$}
+</li></ul></li><li><a class='urllink' href='https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics/23481#23481' rel='nofollow'>la trace d&rsquo;un produit de matrices est invariante par permutation quelconque des matrices</a>
+<ul><li>debunk : y&rsquo;avait une interprétation physique.
+</li></ul></li><li>il existe une distance complète sur {$\mathbb{R}\setminus\mathbb{Q}$} qui donne sa topologie usuelle (faux pour {$\mathbb{Q}$})
+</li><li>Dans un espace métrique (X,d), une partie D qui est dense X et telle que pour tout point d dans D il existe un r&gt;0 tel que la boule B(d,r) est incluse dans une partie E de X, E n&rsquo;est pas nécessairement X tout entier.
+<ul><li>debunk : {$\mathbb{R}\setminus\{\sqrt{2}\}$} est un ouvert de {$\mathbb{R}$} qui contient {$\mathbb{Q}$}
+</li></ul></li><li><a class='urllink' href='https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics/23580#23580' rel='nofollow'>ouvert n&rsquo;est pas le contraire de fermé</a>, voir aussi la <a class='urllink' href='https://www.youtube.com/watch?v=SyD4p8_y8Kw' rel='nofollow'>vidéo youtube</a> projetée (sans le son!) lors du thé combinatoire
+</li><li>&hellip; (liste à compléter)
+</li></ul>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on March 05, 2018, at 05:18 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

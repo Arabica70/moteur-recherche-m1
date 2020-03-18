@@ -1,0 +1,1584 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-15">
+	<TITLE>Character Classes (Programming Perl)</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20040206;18464000">
+	<META NAME="CHANGEDBY" CONTENT="Christophe C&eacute;rin">
+	<META NAME="CHANGED" CONTENT="20040206;18492800">
+	<META NAME="DC.Creator" CONTENT="">
+	<META NAME="DC.Date" CONTENT="">
+	<META NAME="DC.Format" CONTENT="text/xml">
+	<META NAME="DC.Generator" CONTENT="XSLT stylesheet, xt by James Clark">
+	<!-- STYLESHEET -->
+	<!-- METADATA -->
+	<!--Dublin Core Metadata-->
+	<META NAME="DC.Identifier" CONTENT="">
+	<META NAME="DC.Language" CONTENT="en-US">
+	<META NAME="DC.Publisher" CONTENT="O'Reilly & Associates, Inc.">
+	<META NAME="DC.Source" CONTENT="">
+	<META NAME="DC.Subject.Keyword" CONTENT="">
+	<META NAME="DC.Title" CONTENT="Character Classes">
+	<META NAME="DC.Type" CONTENT="Text.Monograph">
+	<!-- START OF BODY -->
+	<!-- TOP BANNER -->
+	<STYLE>
+	<!--
+		TD P { color: #000000 }
+		P { color: #000000 }
+		PRE { color: #000000 }
+		TH P { color: #000000 }
+		H2 { color: #000000 }
+		H3 { color: #000000 }
+		H4 { color: #000000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" BGCOLOR="#ffffff" DIR="LTR">
+<P STYLE="margin-bottom: 0cm"><MAP NAME="banner-map"><AREA SHAPE=RECT COORDS="1,2,616,66" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/prog/index.htm" ALT="Programming Perl"><AREA SHAPE=RECT COORDS="629,11,726,25" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/prog/jobjects/fsearch.htm" ALT="Search this book"></MAP><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/gifs/smbanner.gif" NAME="Graphic1" ALT="Book Home" ALIGN=BOTTOM WIDTH=684 HEIGHT=55 BORDER=0 USEMAP="#banner-map"><!-- TOP NAV BAR -->
+</P>
+<TABLE WIDTH=684 BORDER=0 CELLPADDING=2 CELLSPACING=2>
+	<TR VALIGN=TOP>
+		<TD WIDTH=228>
+			<P ALIGN=LEFT><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_03.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/txtpreva.gif" NAME="Graphic2" ALT="Previous" ALIGN=BOTTOM WIDTH=70 HEIGHT=18 BORDER=0></A></P>
+		</TD>
+		<TD WIDTH=228></TD>
+		<TD WIDTH=228>
+			<P ALIGN=RIGHT><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_05.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/txtnexta.gif" NAME="Graphic3" ALT="Next" ALIGN=BOTTOM WIDTH=70 HEIGHT=18 BORDER=0></A></P>
+		</TD>
+	</TR>
+</TABLE>
+<H2>5.4. Character Classes</H2>
+<P><A NAME="INDEX-1525"></A><A NAME="INDEX-1526"></A><A NAME="INDEX-1527"></A><A NAME="INDEX-1528"></A><A NAME="INDEX-1529"></A><A NAME="INDEX-1530"></A>
+In a pattern match, you may match any character that has--or that
+does not have--a particular property. There are four ways to specify
+character classes. You may specify a character classes in the
+traditional way using square brackets and enumerating the possible
+characters, or you may use any of three mnemonic shortcuts: the
+classic Perl classes, the new Perl Unicode properties, or the
+standard POSIX classes. Each of these shortcuts matches only one
+character from its set. Quantify them to match larger expanses, such
+as <TT>\d+</TT> to match one or more digits. (An easy mistake is to
+think that <TT>\w</TT> matches a word. Use <TT>\w+</TT> to match a
+word.)</P>
+<H3>5.4.1. Custom Character Classes</H3>
+<P><A NAME="INDEX-1531"></A><A NAME="INDEX-1532"></A>An enumerated
+list of characters in square brackets is called a <EM>character class</EM>
+and matches any one of the characters in the list. For example,
+<TT>[aeiouy]</TT> matches a letter that can be a vowel in English.
+(For Welsh add a &quot;<TT>w</TT>&quot;, for Scottish an &quot;<TT>r</TT>&quot;.)
+To match a right square bracket, either backslash it or place it
+first in the list.</P>
+<P><A NAME="INDEX-1533"></A><A NAME="INDEX-1534"></A>Character ranges
+may be indicated using a hyphen and the <TT>a-z</TT> notation.
+Multiple ranges may be combined; for example, <TT>[0-9a-fA-F]</TT>
+matches one hex &quot;digit&quot;. You may use a backslash to protect
+a hyphen that would otherwise be interpreted as a range delimiter, or
+just put it at the beginning or end of the class (a practice which is
+arguably less readable but more traditional).</P>
+<P><A NAME="INDEX-1535"></A><A NAME="INDEX-1536"></A><A NAME="INDEX-1537"></A>
+A caret (or circumflex, or hat, or up arrow) at the front of the
+character class inverts the class, causing it to match any single
+character <EM>not</EM> in the list. (To match a caret, either <EM>don't</EM>
+put it first, or better, escape it with a backslash.) For example,
+<TT>[^aeiouy]</TT> matches any character that isn't a vowel. Be
+careful with character class negation, though, because the universe
+of characters is expanding. For example, that character class matches
+consonants--and also matches spaces, newlines, and anything
+(including vowels) in Cyrillic, Greek, or nearly any other script,
+not to mention every idiograph in Chinese, Japanese, and Korean. And
+someday maybe even Cirth, Tengwar, and Klingon. (Linear B and
+Etruscan, for sure.) So it might be better to specify your consonants
+explicitly, such as <TT>[cbdfghjklmnpqrstvwxyz]</TT>, or
+<TT>[b-df-hj-np-tv-z]</TT> for short. (This also solves the issue of
+&quot;y&quot; needing to be in two places at once, which a set
+complement would preclude.)</P>
+<P><A NAME="INDEX-1538"></A><A NAME="INDEX-1539"></A><A NAME="INDEX-1540"></A>
+Normal character metasymbols are supported inside a character class,
+(see &quot;Specific Characters&quot;), such as <TT>\n</TT>, <TT>\t</TT>,
+<TT>\c</TT><EM>X</EM>, <TT>\</TT><EM>NNN</EM>, and <TT>\N{</TT><EM>NAME</EM><TT>}</TT>.
+Additionally, you may use <TT>\b</TT> within a character class to
+mean a backspace, just as it does in a double-quoted string.
+Normally, in a pattern match, it means a word boundary. But
+zero-width assertions don't make any sense in character classes, so
+here <TT>\b</TT> returns to its normal meaning in strings. You may
+also use any predefined character class described later in the
+chapter (classic, Unicode, or POSIX), but don't try to use them as
+endpoints of a range--that doesn't make sense, so the &quot;<TT>-</TT>&quot;
+will be interpreted literally.</P>
+<P><A NAME="INDEX-1541"></A><A NAME="INDEX-1542"></A><A NAME="INDEX-1543"></A><A NAME="INDEX-1544"></A>
+All other metasymbols lose their special meaning inside square
+brackets. In particular, you can't use any of the three generic
+wildcards: &quot;<TT>.</TT>&quot;, <TT>\X</TT>, or <TT>\C</TT>. The
+first often surprises people, but it doesn't make much sense to use
+the universal character class within a restricted one, and you often
+want to match a literal dot as part of a character class--when you're
+matching filenames, for instance. It's also meaningless to specify
+quantifiers, assertions, or alternation inside a character class,
+since the characters are interpreted individually. For example,
+<TT>[fee|fie|foe|foo]</TT> means the same thing as <TT>[feio|]</TT>.</P>
+<H3>5.4.2. Classic Perl Character Class Shortcuts</H3>
+<P><A NAME="INDEX-1545"></A><A NAME="INDEX-1546"></A><A NAME="INDEX-1547"></A><A NAME="INDEX-1548"></A><A NAME="INDEX-1549"></A>
+Since the beginning, Perl has provided a number of character class
+shortcuts. These are listed in <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_04.htm#perl3-tab-classiccharclass">Table
+5-8</A>. All of them are backslashed alphabetic metasymbols, and in
+each case, the uppercase version is the negation of the lowercase
+version. The meanings of these are not quite as fixed as you might
+expect; the meanings can be influenced by locale settings. Even if
+you don't use locales, the meanings can change whenever a new Unicode
+standard comes out, adding scripts with new digits and letters. (To
+keep the old byte meanings, you can always <TT>use bytes</TT>. For
+explanations of the utf8 meanings, see &quot;Unicode Properties&quot;
+later in this chapter. In any case, the utf8 meanings are a superset
+of the byte meanings.)</P>
+<H4><A NAME="perl3-tab-classiccharclass"></A>Table 5.8. Classic
+Character Classes</H4>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Symbol</P>
+		</TH>
+		<TH>
+			<P>Meaning</P>
+		</TH>
+		<TH>
+			<P>As Bytes</P>
+		</TH>
+		<TH>
+			<P>As utf8</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\d</TT></P>
+		</TD>
+		<TD>
+			<P>Digit</P>
+		</TD>
+		<TD>
+			<P><TT>[0-9]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\p{IsDigit}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\D</TT></P>
+		</TD>
+		<TD>
+			<P>Nondigit</P>
+		</TD>
+		<TD>
+			<P><TT>[^0-9]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\P{IsDigit}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\s</TT></P>
+		</TD>
+		<TD>
+			<P>Whitespace</P>
+		</TD>
+		<TD>
+			<P><TT>[ \t\n\r\f]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\p{IsSpace}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\S</TT></P>
+		</TD>
+		<TD>
+			<P>Nonwhitespace</P>
+		</TD>
+		<TD>
+			<P><TT>[^ \t\n\r\f]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\P{IsSpace}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\w</TT></P>
+		</TD>
+		<TD>
+			<P>Word character</P>
+		</TD>
+		<TD>
+			<P><TT>[a-zA-Z0-9_]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\p{IsWord}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>\W</TT></P>
+		</TD>
+		<TD>
+			<P>Non-(word character)</P>
+		</TD>
+		<TD>
+			<P><TT>[^a-zA-Z0-9_]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\P{IsWord}</TT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P>(Yes, we know most words don't have numbers or underscores in
+them; <TT>\w</TT> is for matching &quot;words&quot; in the sense of
+tokens in a typical programming language. Or Perl, for that matter.)</P>
+<P>These metasymbols may be used either outside or inside square
+brackets, that is, either standalone or as part of a constructed
+character class: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">if ($var =~ /\D/)        { warn &quot;contains non-digit&quot; }
+if ($var =~ /[^\w\s.]/)  { warn &quot;contains non-(word, space, dot)&quot; }</PRE><H3>
+5.4.3. Unicode Properties</H3>
+<P><A NAME="INDEX-1550"></A><A NAME="INDEX-1551"></A>Unicode
+properties are available using <TT>\p{</TT><EM>PROP</EM><TT>}</TT>
+and its set complement, <TT>\P{</TT><EM>PROP</EM><TT>}</TT>. For the
+rare properties with one-character names, braces are optional, as in
+<TT>\pN</TT> to indicate a numeric character (not necessarily
+decimal--Roman numerals are numeric characters too). These property
+classes may be used by themselves or combined in a constructed
+character class: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">if ($var =~ /^\p{IsAlpha}+$/)      { print &quot;all alphabetic&quot; }
+if ($var =~ s/[\p{Zl}\p{Zp}]/\n/g) { print &quot;fixed newline wannabes&quot; }</PRE><P>
+Some properties are directly defined in the Unicode standard, and
+some properties are composites defined by Perl, based on the standard
+properties. <TT>Zl</TT> and <TT>Zp</TT> are standard Unicode
+properties representing line separators and paragraph separators,
+while <TT>IsAlpha</TT> is defined by Perl to be a property class
+combining the standard properties <TT>Ll</TT>, <TT>Lu</TT>, <TT>Lt</TT>,
+and <TT>Lo</TT>, (that is, letters that are lowercase, uppercase,
+titlecase, or other). As of version 5.6.0 of Perl, you need to <TT>use
+utf8</TT> for these properties to work. This restriction will be
+relaxed in the future.</P>
+<P>There are a great many properties. We'll list the ones we know
+about, but the list is necessarily incomplete. New properties are
+likely to be in new versions of Unicode, and you can even define your
+own properties. More about that later.</P>
+<P><A NAME="INDEX-1552"></A>The Unicode Consortium produces the
+online resources that turn into the various files Perl uses in its
+Unicode implementation. For more about these files, see <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch15_01.htm">Chapter
+15, &quot;Unicode&quot;</A>. You can get a nice overview of Unicode
+in the document <EM>PATH_TO_PERLLIB/unicode/Unicode3.html</EM> where
+<EM>PATH_TO_PERLLIB</EM> is what is printed out by: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">perl -MConfig -le 'print $Config{privlib}'</PRE><P>
+Most Unicode properties are of the form <TT>\p{Is</TT><EM>PROP</EM><TT>}</TT>.
+The <TT>Is</TT> is optional, since it's so common, but you may prefer
+to leave it in for readability.</P>
+<H3>5.4.3.1. Perl's Unicode properties</H3>
+<P><A NAME="INDEX-1553"></A><A NAME="INDEX-1554"></A>First, <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_04.htm#perl3-tab-prop-composite">Table
+5-9</A> lists Perl's composite properties. They're defined to be
+reasonably close to the standard POSIX definitions for character
+classes.</P>
+<H4><A NAME="perl3-tab-prop-composite"></A>Table 5.9. Composite
+Unicode Properties</H4>
+<TABLE WIDTH=554 BORDER=1 CELLPADDING=2 CELLSPACING=3>
+	<COL WIDTH=81>
+	<COL WIDTH=454>
+	<TR>
+		<TH WIDTH=81>
+			<P>Property</P>
+		</TH>
+		<TH WIDTH=454>
+			<P>Equivalent</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsASCII</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[\x00-\x7f]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsAlnum</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[\p{IsLl}\p{IsLu}\p{IsLt}\p{IsLo}\p{IsNd}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsAlpha</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[\p{IsLl}\p{IsLu}\p{IsLt}\p{IsLo}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsCntrl</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>\p{IsC}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsDigit</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>\p{Nd}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsGraph</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[^\pC\p{IsSpace}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsLower</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>\p{IsLl}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsPrint</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>\P{IsC}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsPunct</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>\p{IsP}</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsSpace</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[\t\n\f\r\p{IsZ}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsUpper</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[\p{IsLu}\p{IsLt}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsWord</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[_\p{IsLl}\p{IsLu}\p{IsLt}\p{IsLo}\p{IsNd}]</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=81>
+			<P><TT>IsXDigit</TT></P>
+		</TD>
+		<TD WIDTH=454>
+			<P><TT>[0-9a-fA-F]</TT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P>Perl also provides the following composites for each of main
+categories of standard Unicode properties (see the next section):</P>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Property</P>
+		</TH>
+		<TH>
+			<P>Meaning</P>
+		</TH>
+		<TH>
+			<P>Normative</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsC</TT></P>
+		</TD>
+		<TD>
+			<P>Crazy control codes and such</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsL</TT></P>
+		</TD>
+		<TD>
+			<P>Letters</P>
+		</TD>
+		<TD>
+			<P>Partly</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsM</TT></P>
+		</TD>
+		<TD>
+			<P>Marks</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsN</TT></P>
+		</TD>
+		<TD>
+			<P>Numbers</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsP</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsS</TT></P>
+		</TD>
+		<TD>
+			<P>Symbols</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsZ</TT></P>
+		</TD>
+		<TD>
+			<P>Separators (Zeparators?)</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+</TABLE>
+<H3>5.4.3.2. Standard Unicode properties</H3>
+<P><A NAME="INDEX-1555"></A><A NAME="INDEX-1556"></A><A NAME="INDEX-1557"></A>
+<A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_04.htm#perl3-tab-prop-basic">Table
+5-10</A> lists the most basic standard Unicode properties, derived
+from each character's category. No character is a member of more than
+one category. Some properties are normative; others are merely
+informative. See the Unicode Standard for the standard spiel on just
+how normative the normative information is, and just how informative
+the informative information isn't. 
+</P>
+<H4><A NAME="perl3-tab-prop-basic"></A>Table 5.10. Standard Unicode
+Properties</H4>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Property</P>
+		</TH>
+		<TH>
+			<P>Meaning</P>
+		</TH>
+		<TH>
+			<P>Normative</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsCc</TT></P>
+		</TD>
+		<TD>
+			<P>Other, Control</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsCf</TT></P>
+		</TD>
+		<TD>
+			<P>Other, Format</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsCn</TT></P>
+		</TD>
+		<TD>
+			<P>Other, Not assigned</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsCo</TT></P>
+		</TD>
+		<TD>
+			<P>Other, Private Use</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsCs</TT></P>
+		</TD>
+		<TD>
+			<P>Other, Surrogate</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsLl</TT></P>
+		</TD>
+		<TD>
+			<P>Letter, Lowercase</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsLm</TT></P>
+		</TD>
+		<TD>
+			<P>Letter, Modifier</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsLo</TT></P>
+		</TD>
+		<TD>
+			<P>Letter, Other</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsLt</TT></P>
+		</TD>
+		<TD>
+			<P>Letter, Titlecase</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsLu</TT></P>
+		</TD>
+		<TD>
+			<P>Letter, Uppercase</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsMc</TT></P>
+		</TD>
+		<TD>
+			<P>Mark, Combining</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsMe</TT></P>
+		</TD>
+		<TD>
+			<P>Mark, Enclosing</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsMn</TT></P>
+		</TD>
+		<TD>
+			<P>Mark, Nonspacing</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsNd</TT></P>
+		</TD>
+		<TD>
+			<P>Number, Decimal digit</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsNl</TT></P>
+		</TD>
+		<TD>
+			<P>Number, Letter</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsNo</TT></P>
+		</TD>
+		<TD>
+			<P>Number, Other</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPc</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Connector</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPd</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Dash</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPe</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Close</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPf</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Final quote</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPi</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Initial quote</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPo</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Other</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsPs</TT></P>
+		</TD>
+		<TD>
+			<P>Punctuation, Open</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsSc</TT></P>
+		</TD>
+		<TD>
+			<P>Symbol, Currency</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsSk</TT></P>
+		</TD>
+		<TD>
+			<P>Symbol, Modifier</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsSm</TT></P>
+		</TD>
+		<TD>
+			<P>Symbol, Math</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsSo</TT></P>
+		</TD>
+		<TD>
+			<P>Symbol, Other</P>
+		</TD>
+		<TD>
+			<P>No</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsZl</TT></P>
+		</TD>
+		<TD>
+			<P>Separator, Line</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsZp</TT></P>
+		</TD>
+		<TD>
+			<P>Separator, Paragraph</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsZs</TT></P>
+		</TD>
+		<TD>
+			<P>Separator, Space</P>
+		</TD>
+		<TD>
+			<P>Yes</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><A NAME="INDEX-1558"></A><A NAME="INDEX-1559"></A><A NAME="INDEX-1560"></A><A NAME="INDEX-1561"></A><A NAME="INDEX-1562"></A>
+Another useful set of properties has to do with whether a given
+character can be decomposed (either canonically or compatibly) into
+other simpler characters. Canonical decomposition doesn't lose any
+formatting information. Compatibility decomposition may lose
+formatting information such as whether a character is a superscript.</P><A NAME="perl3-tab-prop-comp"></A>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Property</P>
+		</TH>
+		<TH>
+			<P>Information Lost</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDecoCanon</TT></P>
+		</TD>
+		<TD>
+			<P>Nothing</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDecoCompat</TT></P>
+		</TD>
+		<TD>
+			<P>Something (one of the following)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCcircle</TT></P>
+		</TD>
+		<TD>
+			<P>Circle around character</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCfinal</TT></P>
+		</TD>
+		<TD>
+			<P>Final position preference (Arabic)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCfont</TT></P>
+		</TD>
+		<TD>
+			<P>Variant font preference</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCfraction</TT></P>
+		</TD>
+		<TD>
+			<P>Vulgar fraction characteristic</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCinitial</TT></P>
+		</TD>
+		<TD>
+			<P>Initial position preference (Arabic)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCisolated</TT></P>
+		</TD>
+		<TD>
+			<P>Isolated position preference (Arabic)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCmedial</TT></P>
+		</TD>
+		<TD>
+			<P>Medial position preference (Arabic)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCnarrow</TT></P>
+		</TD>
+		<TD>
+			<P>Narrow characteristic</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCnoBreak</TT></P>
+		</TD>
+		<TD>
+			<P>Nonbreaking preference on space or hyphen</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCsmall</TT></P>
+		</TD>
+		<TD>
+			<P>Small characteristic</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCsquare</TT></P>
+		</TD>
+		<TD>
+			<P>Square around CJK character</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCsub</TT></P>
+		</TD>
+		<TD>
+			<P>Subscription</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCsuper</TT></P>
+		</TD>
+		<TD>
+			<P>Superscription</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCvertical</TT></P>
+		</TD>
+		<TD>
+			<P>Rotation (horizontal to vertical)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCwide</TT></P>
+		</TD>
+		<TD>
+			<P>Wide characteristic</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsDCcompat</TT></P>
+		</TD>
+		<TD>
+			<P>Identity (miscellaneous)</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><A NAME="INDEX-1563"></A><A NAME="INDEX-1564"></A>Here are some
+properties of interest to people doing bidirectional rendering: 
+</P><A NAME="perl3-tab-prop-bidi"></A>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Property</P>
+		</TH>
+		<TH>
+			<P>Meaning</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiL</TT></P>
+		</TD>
+		<TD>
+			<P>Left-to-right (Arabic, Hebrew)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiLRE</TT></P>
+		</TD>
+		<TD>
+			<P>Left-to-right embedding</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiLRO</TT></P>
+		</TD>
+		<TD>
+			<P>Left-to-right override</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiR</TT></P>
+		</TD>
+		<TD>
+			<P>Right-to-left</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiAL</TT></P>
+		</TD>
+		<TD>
+			<P>Right-to-left Arabic</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiRLE</TT></P>
+		</TD>
+		<TD>
+			<P>Right-to-left embedding</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiRLO</TT></P>
+		</TD>
+		<TD>
+			<P>Right-to-left override</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiPDF</TT></P>
+		</TD>
+		<TD>
+			<P>Pop directional format</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiEN</TT></P>
+		</TD>
+		<TD>
+			<P>European number</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiES</TT></P>
+		</TD>
+		<TD>
+			<P>European number separator</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiET</TT></P>
+		</TD>
+		<TD>
+			<P>European number terminator</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiAN</TT></P>
+		</TD>
+		<TD>
+			<P>Arabic number</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiCS</TT></P>
+		</TD>
+		<TD>
+			<P>Common number separator</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiNSM</TT></P>
+		</TD>
+		<TD>
+			<P>Nonspacing mark</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiBN</TT></P>
+		</TD>
+		<TD>
+			<P>Boundary neutral</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiB</TT></P>
+		</TD>
+		<TD>
+			<P>Paragraph separator</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiS</TT></P>
+		</TD>
+		<TD>
+			<P>Segment separator</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiWS</TT></P>
+		</TD>
+		<TD>
+			<P>Whitespace</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsBidiON</TT></P>
+		</TD>
+		<TD>
+			<P>Other Neutrals</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>IsMirrored</TT></P>
+		</TD>
+		<TD>
+			<P>Reverse when used right-to-left</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><A NAME="INDEX-1565"></A><A NAME="INDEX-1566"></A>The following
+properties classify various syllabaries according to vowel sounds: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">IsSylA         IsSylE         IsSylO         IsSylWAA       IsSylWII
+IsSylAA        IsSylEE        IsSylOO        IsSylWC        IsSylWO
+IsSylAAI       IsSylI         IsSylU         IsSylWE        IsSylWOO
+IsSylAI        IsSylII        IsSylV         IsSylWEE       IsSylWU
+IsSylC         IsSylN         IsSylWA        IsSylWI        IsSylWV</PRE><P>
+For example, <TT>\p{IsSylA}</TT> would match <TT>\N{KATAKANA LETTER
+KA}</TT> but not <TT>\N{KATAKANA LETTER KU}</TT>.</P>
+<P>Now that we've basically told you all these Unicode 3.0
+properties, we should point out that a few of the more esoteric ones
+aren't implemented in version 5.6.0 of Perl because its
+implementation was based in part on Unicode 2.0, and things like the
+bidirectional algorithm were still being worked out. However, by the
+time you read this, the missing properties may well be implemented,
+so we listed them anyway.</P>
+<H3>5.4.3.3. Unicode block properties</H3>
+<P><A NAME="INDEX-1567"></A><A NAME="INDEX-1568"></A><A NAME="INDEX-1569"></A><A NAME="INDEX-1570"></A>
+Some Unicode properties are of the form <TT>\p{In</TT><EM>SCRIPT</EM><TT>}</TT>.
+(Note the distinction between <TT>Is</TT> and <TT>In</TT>.) The <TT>In</TT>
+properties are for testing block ranges of a particular <EM>SCRIPT</EM>.
+If you have a character, and you wonder whether it were written in
+Greek script, you could test with: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">print &quot;It's Greek to me!\n&quot; if chr(931) =~ /\p{InGreek}/;</PRE><P>
+That works by checking whether a character is &quot;in&quot; the
+valid range of that script type. This may be negated with
+<TT>\P{In</TT><EM>SCRIPT</EM><TT>}</TT> to find out whether something
+<EM>isn't</EM> in a particular script's block, such as <TT>\P{InDingbats}</TT>
+to test whether a string contains a non-dingbat. Block properties
+include the following: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">InArabic       InCyrillic     InHangulJamo   InMalayalam    InSyriac
+InArmenian     InDevanagari   InHebrew       InMongolian    InTamil
+InArrows       InDingbats     InHiragana     InMyanmar      InTelugu
+InBasicLatin   InEthiopic     InKanbun       InOgham        InThaana
+InBengali      InGeorgian     InKannada      InOriya        InThai
+InBopomofo     InGreek        InKatakana     InRunic        InTibetan
+InBoxDrawing   InGujarati     InKhmer        InSinhala      InYiRadicals
+InCherokee     InGurmukhi     InLao          InSpecials     InYiSyllables</PRE><P>
+Not to mention jawbreakers like these: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">InAlphabeticPresentationForms         InHalfwidthandFullwidthForms
+InArabicPresentationForms-A           InHangulCompatibilityJamo
+InArabicPresentationForms-B           InHangulSyllables
+InBlockElements                       InHighPrivateUseSurrogates
+InBopomofoExtended                    InHighSurrogates
+InBraillePatterns                     InIdeographicDescriptionCharacters
+InCJKCompatibility                    InIPAExtensions
+InCJKCompatibilityForms               InKangxiRadicals
+InCJKCompatibilityIdeographs          InLatin-1Supplement
+InCJKRadicalsSupplement               InLatinExtended-A
+InCJKSymbolsandPunctuation            InLatinExtended-B
+InCJKUnifiedIdeographs                InLatinExtendedAdditional
+InCJKUnifiedIdeographsExtensionA      InLetterlikeSymbols
+InCombiningDiacriticalMarks           InLowSurrogates
+InCombiningHalfMarks                  InMathematicalOperators
+InCombiningMarksforSymbols            InMiscellaneousSymbols
+InControlPictures                     InMiscellaneousTechnical
+InCurrencySymbols                     InNumberForms
+InEnclosedAlphanumerics               InOpticalCharacterRecognition
+InEnclosedCJKLettersandMonths         InPrivateUse
+InGeneralPunctuation                  InSuperscriptsandSubscripts
+InGeometricShapes                     InSmallFormVariants
+InGreekExtended                       InSpacingModifierLetters</PRE><P>
+And the winner is: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">InUnifiedCanadianAboriginalSyllabics</PRE><P>
+See <EM>PATH_TO_PERLLIB/unicode/In/*.pl</EM> to get an up-to-date
+listing of all of these character block properties. Note that these
+<TT>In</TT> properties are only testing to see if the character is in
+the block of characters allocated for that script. There is no
+guarantee that all characters in that range are defined; you also
+need to test against one of the <TT>Is</TT> properties discussed
+earlier to see if the character is defined. There is also no
+guarantee that a particular language doesn't use characters outside
+its assigned block. In particular, many European languages mix
+extended Latin characters with Latin-1 characters.</P>
+<P>But hey, if you need a particular property that isn't provided,
+that's not a big problem. Read on.</P>
+<H3>5.4.3.4. Defining your own character properties</H3>
+<P><A NAME="INDEX-1571"></A><A NAME="INDEX-1572"></A>To define your
+own property, you need to write a subroutine with the name of the
+property you want (see <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch06_01.htm">Chapter
+6, &quot;Subroutines&quot;</A>). The subroutine should be defined in
+the package that needs the property (see <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch10_01.htm">Chapter
+10, &quot;Packages&quot;</A>), which means that if you want to use it
+in multiple packages, you'll either have to import it from a module
+(see <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch11_01.htm">Chapter
+11, &quot;Modules&quot;</A>), or inherit it as a class method from
+the package in which it is defined (see <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch12_01.htm">Chapter
+12, &quot;Objects&quot;</A>).</P>
+<P>Once you've got that all settled, the subroutine should return
+data in the same format as the files in <EM>PATH_TO_PERLLIB/unicode/Is</EM>
+directory. That is, just return a list of characters or character
+ranges in hexadecimal, one per line. If there is a range, the two
+numbers are separated by a tab. Suppose you wanted a property that
+would be true if your character is in the range of either of the
+Japanese syllabaries, known as hiragana and katakana. (Together
+they're known as kana). You can just put in the two ranges like this:
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">sub InKana {
+    return &lt;&lt;'END';
+3040    309F
+30A0    30FF
+END
+}</PRE><P>
+Alternatively, you could define it in terms of existing property
+names: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">sub InKana {
+    return &lt;&lt;'END';
++utf8::InHiragana
++utf8::InKatakana
+END
+}</PRE><P>
+<A NAME="INDEX-1573"></A><A NAME="INDEX-1574"></A>You can also do set
+subtraction using a &quot;<TT>-</TT>&quot; prefix. Suppose you only
+wanted the actual characters, not just the block ranges of
+characters. You could weed out all the undefined ones like this: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">sub IsKana {
+    return &lt;&lt;'END';
++utf8::InHiragana
++utf8::InKatakana
+-utf8::IsCn
+END
+}</PRE><P>
+<A NAME="INDEX-1575"></A>You can also start with a complemented
+character set using the &quot;<TT>!</TT>&quot; prefix: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">sub IsNotKana {
+    return &lt;&lt;'END';
+!utf8::InHiragana
+-utf8::InKatakana
++utf8::IsCn
+END
+}</PRE><P>
+<A NAME="INDEX-1576"></A>Perl itself uses exactly the same tricks to
+define the meanings of its &quot;classic&quot; character classes
+(like <TT>\w</TT>) when you include them in your own custom character
+classes (like <TT>[-.\w\s]</TT>). You might think that the more
+complicated you get with your rules, the slower they will run, but in
+fact, once Perl has calculated the bit pattern for a particular
+64-bit swatch of your property, it caches it so it never has to
+recalculate the pattern again. (It does it in 64-bit swatches so that
+it doesn't even have to decode your utf8 to do its lookups.) Thus,
+all character classes, built-in or custom, run at essentially the
+same speed (fast) once they get going.</P>
+<H3><A NAME="INDEX-1577"></A><A NAME="INDEX-1578"></A>5.4.4.
+POSIX-Style Character Classes</H3>
+<P><A NAME="INDEX-1579"></A><A NAME="INDEX-1580"></A>Unlike Perl's
+other character class shortcuts, the POSIX-style character-class
+syntax notation, <TT>[:</TT><EM>CLASS</EM><TT>:]</TT>, is available
+for use <EM>only</EM> when constructing other character classes, that
+is, inside an additional pair of square brackets. For example,
+<TT>/[.,[:alpha:][:digit:]]/</TT> will search for one character that
+is either a literal dot (because it's in a character class), a comma,
+an alphabetic character, or a digit.</P>
+<P>The POSIX classes available as of revision 5.6 of Perl are shown
+in <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_04.htm#perl3-tab-posix-char-class">Table
+5-11</A>.</P>
+<H4><A NAME="perl3-tab-posix-char-class"></A>Table 5.11. POSIX
+Character Classes</H4>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>Class</P>
+		</TH>
+		<TH>
+			<P>Meaning</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>alnum</TT></P>
+		</TD>
+		<TD>
+			<P>Any alphanumeric, that is, an <TT>alpha</TT> or a <TT>digit</TT>.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>alpha</TT></P>
+		</TD>
+		<TD>
+			<P>Any letter. (That's a lot more letters than you think, unless
+			you're thinking Unicode, in which case it's still a lot.)</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>ascii</TT></P>
+		</TD>
+		<TD>
+			<P>Any character with an ordinal value between 0 and 127.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>cntrl</TT></P>
+		</TD>
+		<TD>
+			<P>Any control character. Usually characters that don't produce
+			output as such, but instead control the terminal somehow; for
+			example, newline, form feed, and backspace are all control
+			characters. Characters with an <TT>ord</TT> value less than 32 are
+			most often classified as control characters.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>digit</TT></P>
+		</TD>
+		<TD>
+			<P>A character representing a decimal digit, such as <TT>0</TT> to
+			<TT>9</TT>. (Includes other characters under Unicode.) Equivalent
+			to <TT>\d</TT>.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>graph</TT></P>
+		</TD>
+		<TD>
+			<P>Any alphanumeric or punctuation character.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>lower</TT></P>
+		</TD>
+		<TD>
+			<P>A lowercase letter.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>print</TT></P>
+		</TD>
+		<TD>
+			<P>Any alphanumeric or punctuation character or space.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>punct</TT></P>
+		</TD>
+		<TD>
+			<P>Any punctuation character.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>space</TT></P>
+		</TD>
+		<TD>
+			<P>Any space character. Includes tab, newline, form feed, and
+			carriage return (and a lot more under Unicode.) Equivalent to <TT>\s</TT>.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>upper</TT></P>
+		</TD>
+		<TD>
+			<P>Any uppercase (or titlecase) letter.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>word</TT></P>
+		</TD>
+		<TD>
+			<P>Any identifier character, either an <TT>alnum</TT> or
+			underline.</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>xdigit</TT></P>
+		</TD>
+		<TD>
+			<P>Any hexadecimal digit. Though this may seem silly (<TT>[0-9a-fA-F]</TT>
+			works just fine), it is included for completeness.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><A NAME="INDEX-1581"></A>You can negate the POSIX character
+classes by prefixing the class name with a <TT>^</TT> following the
+<TT>[:</TT>. (This is a Perl extension.) For example:</P><A NAME="perl3-tab-posixtrad"></A>
+<TABLE BORDER=1 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TH>
+			<P>POSIX</P>
+		</TH>
+		<TH>
+			<P>Classic</P>
+		</TH>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>[:^digit:]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\D</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>[:^space:]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\S</TT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><TT>[:^word:]</TT></P>
+		</TD>
+		<TD>
+			<P><TT>\W</TT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><A NAME="INDEX-1582"></A>If the <TT>use utf8</TT> pragma is not
+requested, but the <TT>use locale</TT> pragma is, the classes
+correlate directly with the equivalent functions in the C library's
+<EM>isalpha</EM>(3) interface (except for <TT>word</TT>, which is a
+Perl extension, mirroring <TT>\w</TT>). 
+</P>
+<P>If the <TT>utf8</TT> pragma is used, POSIX character classes are
+exactly equivalent to the corresponding <TT>Is</TT> properties listed
+in <A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_04.htm#perl3-tab-prop-composite">Table
+5-9</A>. For example <TT>[:lower:]</TT> and <TT>\p{Lower}</TT> are
+equivalent, except that the POSIX classes may only be used within
+constructed character classes, whereas Unicode properties have no
+such restriction and may be used in patterns wherever Perl shortcuts
+like <TT>\s</TT> and <TT>\w</TT> may be used.</P>
+<P>The brackets are part of the POSIX-style <TT>[::]</TT> construct,
+not part of the whole character class. This leads to writing patterns
+like <TT>/^[[:lower:][:digit:]]+$/</TT>, to match a string consisting
+entirely of lowercase letters or digits (plus an optional trailing
+newline). In particular, this does not work: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">42 =~ /^[:digit:]$/         # WRONG</PRE><P>
+That's because it's not inside a character class. Rather, it <EM>is</EM>
+a character class, the one representing the characters &quot;<TT>:</TT>&quot;,
+&quot;<TT>i</TT>&quot;, &quot;<TT>t</TT>&quot;, &quot;<TT>g</TT>&quot;,
+and &quot;<TT>d</TT>&quot;. Perl doesn't care that you specified &quot;<TT>:</TT>&quot;
+twice.</P>
+<P>Here's what you need instead: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">42 =~ /^[[:digit:]]+$/</PRE><P>
+The POSIX character classes <TT>[.cc.]</TT> and <TT>[=cc=]</TT> are
+recognized but produce an error indicating they are not supported.
+Trying to use <EM>any</EM> POSIX character class in older verions of
+Perl is likely to fail miserably, and perhaps even silently. If
+you're going to use POSIX character classes, it's best to require a
+new version of Perl by saying: 
+</P>
+<PRE CLASS="programlisting" STYLE="margin-left: 1cm; margin-right: 1cm; margin-bottom: 0.5cm">use 5.6.0;</PRE><P STYLE="border-top: none; border-bottom: 1.10pt double #808080; border-left: none; border-right: none; padding: 0cm">
+<A NAME="INDEX-1583"></A><A NAME="INDEX-1584"></A><A NAME="INDEX-1585"></A><A NAME="INDEX-1586"></A>
+<!-- BOTTOM NAV BAR --><BR><BR>
+</P>
+<TABLE WIDTH=684 BORDER=0 CELLPADDING=2 CELLSPACING=2>
+	<TR VALIGN=TOP>
+		<TD WIDTH=228>
+			<P ALIGN=LEFT><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_03.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/txtpreva.gif" NAME="Graphic4" ALT="Previous" ALIGN=BOTTOM WIDTH=70 HEIGHT=18 BORDER=0></A></P>
+		</TD>
+		<TD WIDTH=228>
+			<P ALIGN=CENTER><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/index.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/txthome.gif" NAME="Graphic5" ALT="Home" ALIGN=BOTTOM WIDTH=31 HEIGHT=14 BORDER=0></A></P>
+		</TD>
+		<TD WIDTH=228>
+			<P ALIGN=RIGHT><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/ch05_05.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/txtnexta.gif" NAME="Graphic6" ALT="Next" ALIGN=BOTTOM WIDTH=70 HEIGHT=18 BORDER=0></A></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=228>
+			<P ALIGN=LEFT>5.3. Metacharacters and Metasymbols</P>
+		</TD>
+		<TD WIDTH=228>
+			<P ALIGN=CENTER><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/index/index.htm"><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/index.gif" NAME="Graphic7" ALT="Book Index" ALIGN=BOTTOM WIDTH=71 HEIGHT=18 BORDER=0></A></P>
+		</TD>
+		<TD WIDTH=228>
+			<P ALIGN=RIGHT>5.5. Quantifiers</P>
+		</TD>
+	</TR>
+</TABLE>
+<HR>
+<P><!-- LIBRARY NAV BAR --><MAP NAME="library-map"><AREA SHAPE=RECT COORDS="1,0,85,94" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/index.htm"><AREA SHAPE=RECT COORDS="86,1,178,103" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/lwp/index.htm"><AREA SHAPE=RECT COORDS="180,0,265,103" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/lperl/index.htm"><AREA SHAPE=RECT COORDS="267,0,353,105" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/perlnut/index.htm"><AREA SHAPE=RECT COORDS="354,1,446,115" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/prog/index.htm"><AREA SHAPE=RECT COORDS="448,0,526,132" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/tk/index.htm"><AREA SHAPE=RECT COORDS="528,1,615,119" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/cookbook/index.htm"><AREA SHAPE=RECT COORDS="617,0,690,135" HREF="http://secu.zzu.edu.cn/book/Perl/Perl%20Bookshelf%20%5B3rd%20Ed%5D/pxml/index.htm"></MAP><IMG SRC="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/gifs/smnavbar.gif" NAME="Graphic8" ALT="Library Navigation Links" ALIGN=BOTTOM WIDTH=684 HEIGHT=93 BORDER=0 USEMAP="#library-map"></P>
+<P><FONT SIZE=2><A HREF="http://secu.zzu.edu.cn/book/Perl/Perl Bookshelf %5B3rd Ed%5D/prog/copyrght.htm">Copyright
+&copy; 2002</A> O'Reilly &amp; Associates. All rights reserved.</FONT>
+</P>
+<P><!-- END OF BODY --><BR><BR>
+</P>
+</BODY>
+</HTML>

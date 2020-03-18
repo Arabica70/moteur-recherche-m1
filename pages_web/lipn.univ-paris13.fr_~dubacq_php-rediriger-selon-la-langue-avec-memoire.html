@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>PHP: rediriger selon la langue avec mémoire</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="PHP: rediriger selon la langue avec mémoire"/>
+            <meta property="og:url" content="./php-rediriger-selon-la-langue-avec-memoire.html"/>
+            <meta property="og:description" content="L'un des prérequis pour un site de chercheur est d'être accessible en anglais. Et en français aussi, de préférence, surtout lorsqu'on l'est soi-même. À l'usage, je crois que le visiteur bilingue préfèrera toujours avoir tout en français ou tout en anglais (habillage du site et ..."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li class="active">
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./php-rediriger-selon-la-langue-avec-memoire.html"
+         rel="bookmark"
+         title="Permalink to PHP: rediriger selon la langue avec mémoire">
+        PHP: rediriger selon la langue avec mémoire
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>mar. 17 septembre 2013
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/php.html">php</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>L'un des prérequis pour un site de chercheur est d'être accessible en
+anglais. Et en français aussi, de préférence, surtout lorsqu'on l'est
+soi-même.</p>
+<p>À l'usage, je crois que le visiteur bilingue préfèrera toujours avoir
+tout en français ou tout en anglais (habillage du site et contenu). D'où
+la décision d'avoir deux sites séparés.</p>
+<p>À une époque, l'accueil de ce site se souvenait de si la dernière page
+consultée était en français ou en anglais. La racine de mon répertoire
+personnel redirige vers l'un ou l'autre des sites en fonction de ça.</p>
+<div class="includefile panel panel-primary"><div class="includefilename panel-heading">index.php <a href="src/index.php.txt"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$crawler</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nv">$bestlang</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nv">$existinglang</span><span class="o">=</span><span class="k">array</span><span class="p">(</span><span class="s2">&quot;fr&quot;</span><span class="p">,</span><span class="s2">&quot;en&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nb">preg_match</span><span class="p">(</span><span class="s1">&#39;/(bot|spider|yahoo)/i&#39;</span><span class="p">,</span> <span class="nv">$_SERVER</span><span class="p">[</span> <span class="s2">&quot;HTTP_USER_AGENT&quot;</span> <span class="p">]</span> <span class="p">))</span> <span class="nv">$bestlang</span> <span class="o">=</span> <span class="s1">&#39;fr&#39;</span> <span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s2">&quot;jcdubacqlang&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$bestlang</span><span class="o">=</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s2">&quot;jcdubacqlang&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="nv">$languages</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_ACCEPT_LANGUAGE&#39;</span><span class="p">]);</span>
+<span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nv">$bestlang</span> <span class="o">&amp;&amp;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nb">count</span><span class="p">(</span><span class="nv">$languages</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$lang</span> <span class="o">=</span> <span class="nb">strtolower</span><span class="p">(</span><span class="nb">substr</span><span class="p">(</span><span class="nb">chop</span><span class="p">(</span><span class="nv">$languages</span><span class="p">[</span><span class="nv">$i</span><span class="p">]),</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$lang</span><span class="p">,</span><span class="nv">$existinglang</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$bestlang</span><span class="o">=</span><span class="nv">$lang</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$bestlang</span><span class="p">,</span><span class="nv">$existinglang</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$bestlang</span><span class="o">=</span><span class="s1">&#39;en&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: http://lipn.fr/~dubacq/&#39;</span> <span class="o">.</span> <span class="nv">$bestlang</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+
+</div></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

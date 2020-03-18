@@ -1,0 +1,945 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | Séminaire / Listing Templates | History</title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.diff a { border-bottom: 1px dotted; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+  
+  .diffbox { width:570px; border-left:1px #999999 solid; margin-top:1.33em; }
+  .diffauthor { font-weight:bold; }
+  .diffchangesum { font-weight:bold; }
+  .difftime { font-family:verdana,sans-serif; font-size:66%; 
+    background-color:#dddddd; }
+  .difftype { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; font-weight:bold; }
+  .diffadd { border-left:5px #99ff99 solid; padding-left:5px; }
+  .diffdel { border-left:5px #ffff99 solid; padding-left:5px; }
+  .diffrestore { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; margin:1.5em 0px; }
+  .diffmarkup { font-family:monospace; } 
+  .diffmarkup del { background:#ffff99; text-decoration: none; }
+  .diffmarkup ins { background:#99ff99; text-decoration: none; } 
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='Séminaire.ListingTemplates' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <a accesskey=''  rel='nofollow'  class='selflink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates'>View</a>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=print'>Print</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire'>Séminaire</a> /</div>
+          <h1 class='pagetitle'>Listing Templates</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<h2 class='wikiaction'>Séminaire.ListingTemplates History</h2>
+  <p><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=diff&amp;source=y&amp;minor=n'>Hide minor edits</a> - <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=diff&amp;source=n&amp;minor=y'>Show changes to output</a></p>
+  <div id='wikidiff'>
+      <div class='diffbox'><div class='difftime'><a name='diff1445622915' href='#diff1445622915'>October 23, 2015, at 07:55 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 141 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>URL:{<del>Default</del>$<del>:URL</del>}{=$<del>Name</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>URL:{<ins></ins>$<ins>ScriptUrl</ins>}<ins>/</ins>{=$<ins>FullName</ins>}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445622915:1445622623:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445622623' href='#diff1445622623'>October 23, 2015, at 07:50 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 141 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>URL:<del>[=&quot;</del>{Default$:URL}<del>&quot;</del>{=$Name}<del>=]</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>URL:{Default$:URL}{=$Name}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445622623:1445622562:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445622562' href='#diff1445622562'>October 23, 2015, at 07:49 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 141 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>URL:&quot;{Default$:URL}&quot;{=$Name}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>URL:<ins>[=</ins>&quot;{Default$:URL}&quot;{=$Name}<ins>=]</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445622562:1445622465:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445622465' href='#diff1445622465'>October 23, 2015, at 07:47 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 141 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>URL:<del>[=https</del>:<del>//lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pmwiki.php/Séminaire/=]</del>{=$Name}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>URL:<ins>&quot;{Default$</ins>:<ins>URL}&quot;</ins>{=$Name}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445622465:1445621854:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621854' href='#diff1445621854'>October 23, 2015, at 07:37 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621854:1445621406:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621406' href='#diff1445621406'>October 23, 2015, at 07:30 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Deleted lines 133-139:</div>
+        <div class='diffdel'><div class='diffmarkup'><del><br /><br />{(ftime fmt=&quot;%Y%m%d&quot; when=&quot;{=$:Date}&quot;)}T{(ftime &quot;%H%M%S&quot; when=(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}<br /><br />{(ftime fmt=&quot;%Y%m%d&quot; when=&quot;{=$:Date}&quot;)}T{(ftime &quot;%H%M%S&quot; when=(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2))}<br /></del><br /></div></div>
+        <div class='difftype'>Changed lines 136-137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%<del>dT%H%M%S</del>&quot; when={=$:Date}<del>&nbsp;</del>{<del>=$:Time}:00)}plop{</del>(<del>substr</del> &quot;<del>{</del>=$:<del>Date</del>}&quot; 0 <del>4</del>)<del>}{</del>(substr &quot;{=$:<del>Date</del>}&quot; <del>5</del> 2)}{(<del>substr </del>&quot;<del>{</del>=<del>$:Date}</del>&quot;<del>&nbsp;8 2)}T</del>{<del>(substr &quot;{</del>=$:<del>Time</del>}&quot;<del>&nbsp;0 2</del>)}<del></del>{(<del>substr</del> &quot;<del>{</del>=$:Time}&quot; <del>3</del> 2)<del>}00<br />DTEND;TZID=Europe/Paris</del>:<del>{</del>(substr &quot;{=$:<del>Date</del>}&quot; <del>0 4</del>)}<del>{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=&quot;{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour&quot;)}00</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%<ins>d</ins>&quot; when=<ins>&quot;</ins>{=$:Date}<ins>&quot;)}T</ins>{(<ins>ftime</ins> &quot;<ins>%H%M%S&quot; when</ins>=<ins>(substr &quot;{=</ins>$:<ins>Time</ins>}&quot; 0 <ins>2</ins>)<ins>:</ins>(substr &quot;{=$:<ins>Time</ins>}&quot; <ins>3</ins> 2)<ins>)</ins>}<br /><ins>DTEND;TZID=Europe/Paris:</ins>{(<ins>ftime fmt=</ins>&quot;<ins>%Y%m%d&quot; when</ins>=&quot;{=$:<ins>Date</ins>}&quot;)}<ins>T</ins>{(<ins>ftime</ins> &quot;<ins>%H%M%S&quot; when</ins>=<ins>(substr &quot;{=</ins>$:Time}&quot; <ins>0</ins> 2):(substr &quot;{=$:<ins>Time</ins>}&quot; <ins>3 2</ins>)<ins>+1 hour)</ins>}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621406:1445621355:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621355' href='#diff1445621355'>October 23, 2015, at 07:29 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 137-138:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />{(ftime fmt=&quot;%Y%m%d&quot; when=&quot;{=$:Date}&quot;)}T{(ftime &quot;%H%M%S&quot; when=(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2))}</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621355:1445621337:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621337' href='#diff1445621337'>October 23, 2015, at 07:28 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%d&quot; when=&quot;{=$:Date}&quot;)}T{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%d&quot; when=&quot;{=$:Date}&quot;)}T{(ftime <ins>&quot;</ins>%H%M%S<ins>&quot; when=</ins>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621337:1445621318:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621318' href='#diff1445621318'>October 23, 2015, at 07:28 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%d when=&quot;{=$:Date}&quot;)}T{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%d<ins>&quot;</ins> when=&quot;{=$:Date}&quot;)}T{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621318:1445621295:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621295' href='#diff1445621295'>October 23, 2015, at 07:28 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%<del>dwhen</del>={=$:Date})}T{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%<ins>d when</ins>=<ins>&quot;</ins>{=$:Date}<ins>&quot;</ins>)}T{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621295:1445621270:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621270' href='#diff1445621270'>October 23, 2015, at 07:27 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed lines 136-138 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%<del>dT%H%M%S&quot; when</del>={=$:Date}<del>&nbsp;(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour))}<br /><br /></del>{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%Y%m%<ins>dwhen</ins>={=$:Date}<ins>)}T</ins>{(ftime %H%M%S (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621270:1445621234:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621234' href='#diff1445621234'>October 23, 2015, at 07:27 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed lines 135-142 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(<del>substr </del>&quot;{=$:<del>Time</del>}<del>&quot; 0 2):(substr </del>&quot;{=$:Time}&quot; <del>3</del> 2)<del>}<br /><br />{</del>(<del>ftime %H%M (substr </del>&quot;{=$:Time}&quot; <del>0</del> 2)<del>:(substr &quot;</del>{<del>=$:Time}&quot; 3 2)+1 hour)}<br /><br /><br /></del>{<del>(ftime %H%M when</del>=<del>14</del>:<del>00:00+1</del> hour)}<br /><br /></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'><br /><ins></ins>{(<ins>ftime fmt=</ins>&quot;<ins>%Y%m%dT%H%M%S&quot; when=</ins>{=$:<ins>Date</ins>} <ins>(substr </ins>&quot;{=$:Time}&quot; <ins>0</ins> 2)<ins>:</ins>(<ins>substr</ins> &quot;{=$:Time}&quot; <ins>3</ins> 2)<ins>+1 hour))}<br /><br /></ins>{<ins>(ftime %H%M%S (substr &quot;</ins>{=<ins>$</ins>:<ins>Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)</ins>+1 hour)}<br /><br /></div></div>
+        <div class='difftype'>Changed line 143 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%H%M%S&quot; when=<del>&quot;</del>{=$:Date} {=$:Time}:00<del>&quot;</del>)}plop{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%H%M%S&quot; when={=$:Date} {=$:Time}:00)}plop{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621234:1445621125:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621125' href='#diff1445621125'>October 23, 2015, at 07:25 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)<del>&nbsp;</del>+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621125:1445621113:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621113' href='#diff1445621113'>October 23, 2015, at 07:25 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M when=14:00:00<del>&nbsp;</del>+1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M when=14:00:00+1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621113:1445621100:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621100' href='#diff1445621100'>October 23, 2015, at 07:25 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M when=14:00:00 <del>&quot;</del>+1 hour<del>&quot;</del>)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M when=14:00:00 +1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621100:1445621086:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621086' href='#diff1445621086'>October 23, 2015, at 07:24 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M 14:00:00 &quot;+1 hour&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M <ins>when=</ins>14:00:00 &quot;+1 hour&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621086:1445621062:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621062' href='#diff1445621062'>October 23, 2015, at 07:24 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M 14:00 &quot;+1 hour&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M 14<ins>:00</ins>:00 &quot;+1 hour&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621062:1445621036:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621036' href='#diff1445621036'>October 23, 2015, at 07:23 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M <del>&quot;</del>14:00 +1 hour&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M 14:00 <ins>&quot;</ins>+1 hour&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621036:1445621010:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445621010' href='#diff1445621010'>October 23, 2015, at 07:23 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 140 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M 14:00 +1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M <ins>&quot;</ins>14:00 +1 hour<ins>&quot;</ins>)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445621010:1445620970:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620970' href='#diff1445620970'>October 23, 2015, at 07:22 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 138-141:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br /><br />{(ftime %H%M 14:00 +1 hour)}</ins><br /></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620970:1445620943:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620943' href='#diff1445620943'>October 23, 2015, at 07:22 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M (<del>(</del>substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +1 hour<del>)</del>)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620943:1445620844:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620844' href='#diff1445620844'>October 23, 2015, at 07:20 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M (<ins>(</ins>substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +1 hour<ins>)</ins>)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620844:1445620796:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620796' href='#diff1445620796'>October 23, 2015, at 07:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +<del>&nbsp;</del>1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %H%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) +1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620796:1445620784:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620784' href='#diff1445620784'>October 23, 2015, at 07:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime <del>&quot;</del>%<del>Hyy</del>%M<del>&quot;</del> (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime %<ins>H</ins>%M (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620784:1445620768:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620768' href='#diff1445620768'>October 23, 2015, at 07:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime &quot;%<del>H</del>%M&quot; (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime &quot;%<ins>Hyy</ins>%M&quot; (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620768:1445620750:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620750' href='#diff1445620750'>October 23, 2015, at 07:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime <del>fmt=</del>&quot;%H%M&quot; <del>when={</del>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)<del>}</del> + 1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime <ins></ins>&quot;%H%M&quot; <ins></ins>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620750:1445620699:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620699' href='#diff1445620699'>October 23, 2015, at 07:18 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=<ins>{</ins>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)<ins>}</ins> + 1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620699:1445620673:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620673' href='#diff1445620673'>October 23, 2015, at 07:17 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 135 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>&quot;</del>{(substr &quot;{=$:Time}&quot; 0 2)<del>}</del>:<del>{</del>(substr &quot;{=$:Time}&quot; 3 2)}<del>&quot;</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620673:1445620632:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620632' href='#diff1445620632'>October 23, 2015, at 07:17 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=<del>&quot;</del>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)<del>&quot;</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620632:1445620600:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620600' href='#diff1445620600'>October 23, 2015, at 07:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <del></del>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <ins>when=&quot;</ins>(substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2) + 1 hour)<ins>&quot;</ins>}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620600:1445620573:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620573' href='#diff1445620573'>October 23, 2015, at 07:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2))}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2)<ins>&nbsp;+ 1 hour</ins>)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620573:1445620554:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620554' href='#diff1445620554'>October 23, 2015, at 07:15 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <del>{</del>(substr &quot;{=$:Time}&quot; 0 2)<del>}</del>:<del>{</del>(substr &quot;{=$:Time}&quot; 3 2)<del>}</del>)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; (substr &quot;{=$:Time}&quot; 0 2):(substr &quot;{=$:Time}&quot; 3 2))}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620554:1445620533:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620533' href='#diff1445620533'>October 23, 2015, at 07:15 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <del>when=&quot;</del>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}<del>&quot;</del>)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <ins></ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)})}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620533:1445620470:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620470' href='#diff1445620470'>October 23, 2015, at 07:14 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}<del>&nbsp;+1 hour</del>&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620470:1445620402:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620402' href='#diff1445620402'>October 23, 2015, at 07:13 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;<del>14:00</del> +1 hour&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;<ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}</ins> +1 hour&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620402:1445620376:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620376' href='#diff1445620376'>October 23, 2015, at 07:12 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;<del>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}</del> +1 hour&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; when=&quot;<ins>14:00</ins> +1 hour&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620376:1445620337:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620337' href='#diff1445620337'>October 23, 2015, at 07:12 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 135 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>&quot;</ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}<ins>&quot;</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620337:1445620320:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620320' href='#diff1445620320'>October 23, 2015, at 07:12 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed lines 135-137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr {=$:Time} 3 2)}<br /><br />{(ftime fmt=&quot;%H%M&quot; when={(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr <ins>&quot;</ins>{=$:Time}<ins>&quot;</ins> 3 2)}<br /><br />{(ftime fmt=&quot;%H%M&quot; when=<ins>&quot;</ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour<ins>&quot;</ins>)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620320:1445620276:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620276' href='#diff1445620276'>October 23, 2015, at 07:11 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 135 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr <del>&quot;</del>{=$:Time}<del>&quot;</del> 3 2)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr {=$:Time} 3 2)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620276:1445620199:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620199' href='#diff1445620199'>October 23, 2015, at 07:09 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; {(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <ins>when=</ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620199:1445620146:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620146' href='#diff1445620146'>October 23, 2015, at 07:09 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <del>when=&quot;</del>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour<del>&quot;</del>)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%H%M&quot; <ins></ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620146:1445620105:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445620105' href='#diff1445620105'>October 23, 2015, at 07:08 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 136-137:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />{(ftime fmt=&quot;%H%M&quot; when=&quot;{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour&quot;)}</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445620105:1445618858:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618858' href='#diff1445618858'>October 23, 2015, at 06:47 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 134-136:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)}</ins><br /></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618858:1445618753:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618753' href='#diff1445618753'>October 23, 2015, at 06:45 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when={(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=<ins>&quot;</ins>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour<ins>&quot;</ins>)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618753:1445618657:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618657' href='#diff1445618657'>October 23, 2015, at 06:44 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=<del>&quot;</del>{(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour<del>&quot;</del>)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when={(substr &quot;{=$:Time}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)} +1 hour)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618657:1445618621:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618621' href='#diff1445618621'>October 23, 2015, at 06:43 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=&quot;{=$:Time} +1 hour&quot;)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=&quot;{<ins>(substr &quot;{</ins>=$:Time<ins>}&quot; 0 2)}:{(substr &quot;{=$:Time}&quot; 3 2)</ins>} +1 hour&quot;)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618621:1445618415:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618415' href='#diff1445618415'>October 23, 2015, at 06:40 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%H<del>:</del>%M<del>:</del>%S&quot; when=&quot;{=$:Date} {=$:Time}:00&quot;)}plop{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%H%M%S&quot; when=&quot;{=$:Date} {=$:Time}:00&quot;)}plop{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618415:1445618380:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618380' href='#diff1445618380'>October 23, 2015, at 06:39 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%<del>T</del>&quot; when=&quot;{=$:Date} {=$:Time}:00&quot;)}<del></del>{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%<ins>H:%M:%S</ins>&quot; when=&quot;{=$:Date} {=$:Time}:00&quot;)}<ins>plop</ins>{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618380:1445618330:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618330' href='#diff1445618330'>October 23, 2015, at 06:38 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%<del>H%M00</del>&quot; when=&quot;{=$:Date} {=$:Time}&quot;)}{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(ftime fmt=&quot;%Y%m%dT%<ins>T</ins>&quot; when=&quot;{=$:Date} {=$:Time}<ins>:00</ins>&quot;)}{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618330:1445618207:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618207' href='#diff1445618207'>October 23, 2015, at 06:36 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 136 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:<ins>{(ftime fmt=&quot;%Y%m%dT%H%M00&quot; when=&quot;{=$:Date} {=$:Time}&quot;)}</ins>{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(substr &quot;{=$:Time}&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618207:1445618018:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445618018' href='#diff1445618018'>October 23, 2015, at 06:33 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=&quot;{=$:Time}<del>&quot;</del> +1 hour)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=&quot;{=$:Time} +1 hour<ins>&quot;</ins>)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445618018:1445617992:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445617992' href='#diff1445617992'>October 23, 2015, at 06:33 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; <del>{</del>=$:Time} +1 hour)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; <ins>when</ins>=<ins>&quot;{=</ins>$:Time}<ins>&quot;</ins> +1 hour)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445617992:1445617960:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445617960' href='#diff1445617960'>October 23, 2015, at 06:32 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; <del>when=</del>{=$:Time}<del>)</del> +1 hour}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; <ins></ins>{=$:Time} +1 hour<ins>)</ins>}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445617960:1445617883:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445617883' href='#diff1445617883'>October 23, 2015, at 06:31 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when=<del>&quot;</del>{=$:Time}<del>&quot;</del>) +1 hour}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(ftime fmt=&quot;%H%M&quot; when={=$:Time}) +1 hour}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445617883:1445617830:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1445617830' href='#diff1445617830'>October 23, 2015, at 06:30 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 137 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(<del>substr </del>&quot;<del>{</del>=$:Time} +1 hour<del>&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)</del>}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(<ins>ftime fmt=</ins>&quot;<ins>%H%M&quot; when</ins>=<ins>&quot;{=</ins>$:Time}<ins>&quot;)</ins> +1 hour}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1445617830:1444236384:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444236384' href='#diff1444236384'>October 07, 2015, at 06:46 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 34-35:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />Début {(substr &quot;{=$:Abstract}&quot; 2 3)}</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444236384:1444235814:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444235814' href='#diff1444235814'>October 07, 2015, at 06:36 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Deleted lines 15-22:</div>
+        <div class='diffdel'><div class='diffmarkup'><del><br />Une ligne<br />{=$:Abstract1line}<br /><br />plein de lignes<br />{=$:Abstract}<br /></del><br /></div></div>
+        <div class='difftype'>Added lines 34-41:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />Une ligne<br />{=$:Abstract1line}<br /><br />plein de lignes<br />{=$:Abstract}<br /></ins><br /></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444235814:1444235791:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444235791' href='#diff1444235791'>October 07, 2015, at 06:36 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 16-23:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins><br />Une ligne<br />{=$:Abstract1line}<br /><br />plein de lignes<br />{=$:Abstract}<br /></ins><br /></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444235791:1444148046:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444148046' href='#diff1444148046'>October 06, 2015, at 06:14 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 127 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(<del>inc (substr </del>&quot;{=$:Time} +1 hour&quot; 0 2<del>)</del>)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTEND;TZID=Europe/Paris:{(substr &quot;{=$:Date}&quot; 0 4)}{(substr &quot;{=$:Date}&quot; 5 2)}{(substr &quot;{=$:Date}&quot; 8 2)}T{(<ins>substr</ins> &quot;{=$:Time} +1 hour&quot; 0 2)}{(substr &quot;{=$:Time}&quot; 3 2)}00</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444148046:1444058956:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444058956' href='#diff1444058956'>October 05, 2015, at 05:29 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 37 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>-&gt;</del>{=$:Abstract}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{=$:Abstract}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444058956:1444058922:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444058922' href='#diff1444058922'>October 05, 2015, at 05:28 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>(:section:)</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>&gt;&gt;indent&lt;&lt;</ins></div></div>
+        <div class='difftype'>Changed line 38 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>(:sectionend:)</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>&gt;&gt;&lt;&lt;</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444058922:1444058772:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444058772' href='#diff1444058772'>October 05, 2015, at 05:26 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:<del>article</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:<ins>section</ins>:)</div></div>
+        <div class='difftype'>Changed line 38 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:<del>articleend</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:<ins>sectionend</ins>:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444058772:1444058180:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444058180' href='#diff1444058180'>October 05, 2015, at 05:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 37 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{=$:Abstract}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>-&gt;</ins>{=$:Abstract}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444058180:1444058166:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444058166' href='#diff1444058166'>October 05, 2015, at 05:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added line 36:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>(:article:)</ins></div></div>
+        <div class='difftype'>Added line 38:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>(:articleend:)</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444058166:1444056398:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444056398' href='#diff1444056398'>October 05, 2015, at 04:46 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 16 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if <del>! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if <ins>true</ins>:)</div></div>
+        <div class='difftype'>Changed line 57 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if <del>! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if <ins>true</ins>:)</div></div>
+        <div class='difftype'>Changed line 87 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if <del>! equal &quot;0&quot; &quot;{(strlen &quot;{=$:Abstract}&quot;)}&quot;</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if <ins>true</ins>:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444056398:1444056319:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444056319' href='#diff1444056319'>October 05, 2015, at 04:45 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 57 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{<del>=</del>$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>Changed line 87 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{<ins>=</ins>$:Abstract}&quot;)}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444056319:1444056275:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444056275' href='#diff1444056275'>October 05, 2015, at 04:44 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 57 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{<ins>=</ins>$:Abstract}&quot;)}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444056275:1444056196:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444056196' href='#diff1444056196'>October 05, 2015, at 04:43 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed lines 34-35 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>{</del>(<del>strlen &quot;{$:Abstract}&quot;)}<br />(:if ! equal &quot;&quot; &quot;{(strlen &quot;{=$:Abstract}&quot;)}&quot;</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(<ins>:if true</ins>:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444056196:1444055919:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444055919' href='#diff1444055919'>October 05, 2015, at 04:38 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(strlen &quot;{<del>=</del>$:Abstract}&quot;)}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(strlen &quot;{$:Abstract}&quot;)}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444055919:1444055900:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444055900' href='#diff1444055900'>October 05, 2015, at 04:38 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 35 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del>0</del>&quot; &quot;{(strlen &quot;{=$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins></ins>&quot; &quot;{(strlen &quot;{=$:Abstract}&quot;)}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444055900:1444051996:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444051996' href='#diff1444051996'>October 05, 2015, at 03:33 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed lines 34-35 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(strlen &quot;{$:Abstract}&quot;)}<br />(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(strlen &quot;{<ins>=</ins>$:Abstract}&quot;)}<br />(:if ! equal &quot;0&quot; &quot;{(strlen &quot;{<ins>=</ins>$:Abstract}&quot;)}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444051996:1444051956:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444051956' href='#diff1444051956'>October 05, 2015, at 03:32 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added line 34:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>{(strlen &quot;{$:Abstract}&quot;)}</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444051956:1444051899:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444051899' href='#diff1444051899'>October 05, 2015, at 03:31 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 16 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del></del>&quot; &quot;{<del>=</del>$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins>0</ins>&quot; &quot;{<ins>(strlen &quot;{</ins>$:Abstract<ins>}&quot;)</ins>}&quot;:)</div></div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del></del>&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins>0</ins>&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>Changed line 57 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del></del>&quot; &quot;{<del>=</del>$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins>0</ins>&quot; &quot;{<ins>(strlen &quot;{</ins>$:Abstract<ins>}&quot;)</ins>}&quot;:)</div></div>
+        <div class='difftype'>Changed line 87 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del></del>&quot; &quot;{<del>=</del>$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins>0</ins>&quot; &quot;{<ins>(strlen &quot;{</ins>$:Abstract<ins>}&quot;)</ins>}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444051899:1444040506:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040506' href='#diff1444040506'>October 05, 2015, at 12:21 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>-&gt;</del>{=$:Abstract}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{=$:Abstract}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040506:1444040429:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040429' href='#diff1444040429'>October 05, 2015, at 12:20 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{<ins>(strlen &quot;{</ins>$:Abstract<ins>}&quot;)</ins>}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040429:1444040391:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040391' href='#diff1444040391'>October 05, 2015, at 12:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{<del>(strlen &quot;{</del>$:Abstract<del>}&quot;)</del>}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{$:Abstract}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040391:1444040363:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040363' href='#diff1444040363'>October 05, 2015, at 12:19 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{(strlen &quot;{<del>=</del>$:Abstract}&quot;)}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{(strlen &quot;{$:Abstract}&quot;)}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040363:1444040332:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040332' href='#diff1444040332'>October 05, 2015, at 12:18 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{<ins>(strlen &quot;{</ins>=$:Abstract<ins>}&quot;)</ins>}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040332:1444040209:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040209' href='#diff1444040209'>October 05, 2015, at 12:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;{=$:Abstract}<del>&quot; &quot;</del>&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;<ins>&quot; &quot;</ins>{=$:Abstract}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040209:1444040189:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444040189' href='#diff1444040189'>October 05, 2015, at 12:16 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;<del>&quot; &quot;</del>{=$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;{=$:Abstract}<ins>&quot; &quot;</ins>&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444040189:1444039791:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444039791' href='#diff1444039791'>October 05, 2015, at 12:09 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Deleted line 33:</div>
+        <div class='diffdel'><div class='diffmarkup'></div></div>
+        <div class='difftype'>Deleted line 39:</div>
+        <div class='diffdel'><div class='diffmarkup'></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444039791:1444039768:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444039768' href='#diff1444039768'>October 05, 2015, at 12:09 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added line 34:</div>
+        <div class='diffadd'><div class='diffmarkup'></div></div>
+        <div class='difftype'>Added line 41:</div>
+        <div class='diffadd'><div class='diffmarkup'></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444039768:1444039756:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444039756' href='#diff1444039756'>October 05, 2015, at 12:09 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Deleted line 15:</div>
+        <div class='diffdel'><div class='diffmarkup'></div></div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;<del>&nbsp;</del>:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444039756:1444039639:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444039639' href='#diff1444039639'>October 05, 2015, at 12:07 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added line 16:</div>
+        <div class='diffadd'><div class='diffmarkup'></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444039639:1444039608:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1444039608' href='#diff1444039608'>October 05, 2015, at 12:06 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;<ins>&nbsp;</ins>:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1444039608:1443976643:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443976643' href='#diff1443976643'>October 04, 2015, at 06:37 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 98 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>https://<del>www.</del>lipn.fr/<del>wiki</del>/Séminaire/</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>https://lipn.<ins>univ-paris13.</ins>fr/<ins>~monteil/hebergement/wiki_calin/pmwiki/pmwiki.php</ins>/Séminaire/</div></div>
+        <div class='difftype'>Changed line 129 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>URL:[=https://<del>www.</del>lipn.fr/<del>wiki</del>/Séminaire/=]{=$Name}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>URL:[=https://lipn.<ins>univ-paris13.</ins>fr/<ins>~monteil/hebergement/wiki_calin/pmwiki/pmwiki.php</ins>/Séminaire/=]{=$Name}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443976643:1443976139:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443976139' href='#diff1443976139'>October 04, 2015, at 06:28 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 33 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ( ! equal &quot;{Default$:Time}&quot; &quot;{=$:Time0}&quot; ) <del>||</del> ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) :) '''Attention : ''' nous commencerons à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ( ! equal &quot;{Default$:Time}&quot; &quot;{=$:Time0}&quot; ) <ins>&amp;&amp;</ins> ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) :) '''Attention : ''' nous commencerons à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>Changed line 85 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ( ! equal &quot;{Default$:Time}&quot; &quot;{=$:Time0}&quot; ) <del>||</del> ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) :) *Attention* :&nbsp; c'est à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if ( ! equal &quot;{Default$:Time}&quot; &quot;{=$:Time0}&quot; ) <ins>&amp;&amp;</ins> ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) :) *Attention* :&nbsp; c'est à {=$:Time}!\\(:ifend:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443976139:1443975274:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443975274' href='#diff1443975274'>October 04, 2015, at 06:14 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 33 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;{Default$:Time}&quot; &quot;{=$:<del>Time</del>}&quot;<del>:</del>)'''Attention : ''' nous commencerons à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if <ins>( </ins>! equal &quot;{Default$:Time}&quot; &quot;{=$:<ins>Time0</ins>}&quot;<ins>&nbsp;</ins>)<ins>&nbsp;|| ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) :) </ins>'''Attention : ''' nous commencerons à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>Changed line 85 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if ! equal &quot;{Default$:Time}&quot; &quot;{=$:<del>Time</del>}&quot;:) *Attention* :&nbsp; c'est à {=$:Time}!\\(:ifend:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if <ins>( </ins>! equal &quot;{Default$:Time}&quot; &quot;{=$:<ins>Time0</ins>}&quot;<ins>&nbsp;) || ( ! equal &quot;{Default$:Time1}&quot; &quot;{=$:Time}&quot; ) </ins>:) *Attention* :&nbsp; c'est à {=$:Time}!\\(:ifend:)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443975274:1443953438:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443953438' href='#diff1443953438'>October 04, 2015, at 12:10 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 95 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>crontab, python et pmwiki, pour les organisateurs du <del>Séminaire</del> Calin.</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>crontab, python et pmwiki, pour les organisateurs du <ins>séminaire</ins> Calin.</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443953438:1443880351:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443880351' href='#diff1443880351'>October 03, 2015, at 03:52 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>-&gt;{=<del>$</del>$:Abstract}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>-&gt;{=$:Abstract}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443880351:1443880334:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443880334' href='#diff1443880334'>October 03, 2015, at 03:52 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>-&gt;{=$:Abstract}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>-&gt;{=<ins>$</ins>$:Abstract}</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443880334:1443815438:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443815438' href='#diff1443815438'>October 02, 2015, at 09:50 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<del>PageWeb</del>}&quot;:) [[{=$:<del>PageWeb</del>}|{=$:<del>Orateur</del>}]] (:else:) {=$:<del>Orateur</del>} (:ifend:) - [[{=$FullName}|{=$:<del>Titre</del>}]]<del>&nbsp;- {=$:Résumé}</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot;:) [[{=$:<ins>WebPage</ins>}|{=$:<ins>Speaker</ins>}]] (:else:) {=$:<ins>Speaker</ins>} (:ifend:) - [[{=$FullName}|{=$:<ins>Title</ins>}]]</div></div>
+        <div class='difftype'>Changed lines 12-13 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>Next {(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})} ({=$:<del>date</del>}), ''(:if ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot;:) [[{=$:<del>webpage</del>}|{=$:<del>speaker</del>}]] (:else:) {=$:<del>speaker</del>} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>}&quot;:) ({=$:<del>affiliation</del>}) (:ifend:) will speak about ''[[{=$FullName}|{=$:<del>title</del>}]]''.\\<br /></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>Next {(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})} ({=$:<ins>Date</ins>}), ''(:if ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot;:) [[{=$:<ins>WebPage</ins>}|{=$:<ins>Speaker</ins>}]] (:else:) {=$:<ins>Speaker</ins>} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>}&quot;:) ({=$:<ins>Affiliation</ins>}) (:ifend:) will speak about ''[[{=$FullName}|{=$:<ins>Title</ins>}]]''.\\<br /></div></div>
+        <div class='difftype'>Changed line 18 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>-&gt;{=$:<del>abstract</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>-&gt;{=$:<ins>Abstract</ins>}</div></div>
+        <div class='difftype'>Changed lines 30-34 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})} prochain ({=$:<del>date</del>}), ''(:if ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot;:) [[{=$:<del>webpage</del>}|{=$:<del>speaker</del>}]] (:else:) {=$:<del>speaker</del>} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>}&quot;:) ({=$:<del>affiliation</del>}) (:ifend:) nous parlera de ''[[{=$FullName}|{=$:<del>title</del>}]]''.\\<br /><br />(:if ! equal &quot;{Default$:<del>room</del>}&quot; &quot;{=$:<del>room</del>}&quot;:)'''Attention : ''' c'est en salle {=$:<del>room</del>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<del>time</del>}&quot; &quot;{=$:<del>time</del>}&quot;:)'''Attention : ''' nous commencerons à {=$:<del>time</del>}!\\(:ifend:)<br />(:if ! equal &quot;&quot; &quot;{=$:<del>abstract</del>}&quot;:)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})} prochain ({=$:<ins>Date</ins>}), ''(:if ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot;:) [[{=$:<ins>WebPage</ins>}|{=$:<ins>Speaker</ins>}]] (:else:) {=$:<ins>Speaker</ins>} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>}&quot;:) ({=$:<ins>Affiliation</ins>}) (:ifend:) nous parlera de ''[[{=$FullName}|{=$:<ins>Title</ins>}]]''.\\<br /><br />(:if ! equal &quot;{Default$:<ins>Room</ins>}&quot; &quot;{=$:<ins>Room</ins>}&quot;:)'''Attention : ''' c'est en salle {=$:<ins>Room</ins>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<ins>Time</ins>}&quot; &quot;{=$:<ins>Time</ins>}&quot;:)'''Attention : ''' nous commencerons à {=$:<ins>Time</ins>}!\\(:ifend:)<br />(:if ! equal &quot;&quot; &quot;{=$:<ins>Abstract</ins>}&quot;:)</div></div>
+        <div class='difftype'>Changed line 36 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>-&gt;{=$:<del>abstract</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>-&gt;{=$:<ins>Abstract</ins>}</div></div>
+        <div class='difftype'>Changed line 41 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>[[#<del>fulldescriptionfrend</del>]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>[[#<ins>fulldescriptionend</ins>]]</div></div>
+        <div class='difftype'>Changed lines 53-58 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>next {(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})} ({=$:<del>date</del>}) à {=$:<del>time</del>}, we will have the pleasure to receive {=$:<del>speaker</del>} (:if [ ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>affiliation</del>} - {=$:<del>webpage</del>}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>webpage</del>}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>affiliation</del>}) (:ifend:) who will talk about &quot;{=$:<del>title</del>}&quot;.<br />(:if ! equal &quot;{Default$:<del>room</del>}&quot; &quot;{=$:<del>room</del>}&quot;:) *Warning* : it is in room {=$:<del>room</del>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<del>time</del>}&quot; &quot;{=$:<del>time</del>}&quot;:) *Warning* :&nbsp; we will meet at {=$:<del>time</del>}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:<del>abstract</del>}&quot;:)<br />Abstract : {=$:<del>abstract</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>next {(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})} ({=$:<ins>Date</ins>}) à {=$:<ins>Time</ins>}, we will have the pleasure to receive {=$:<ins>Speaker</ins>} (:if [ ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>Affiliation</ins>} - {=$:<ins>WebPage</ins>}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>WebPage</ins>}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>Affiliation</ins>}) (:ifend:) who will talk about &quot;{=$:<ins>Title</ins>}&quot;.<br />(:if ! equal &quot;{Default$:<ins>Room</ins>}&quot; &quot;{=$:<ins>Room</ins>}&quot;:) *Warning* : it is in room {=$:<ins>Room</ins>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<ins>Time</ins>}&quot; &quot;{=$:<ins>Time</ins>}&quot;:) *Warning* :&nbsp; we will meet at {=$:<ins>Time</ins>}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:<ins>Abstract</ins>}&quot;:)<br />Abstract : {=$:<ins>Abstract</ins>}</div></div>
+        <div class='difftype'>Changed line 64 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>See you on {(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})},</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>See you on {(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})},</div></div>
+        <div class='difftype'>Changed line 71 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>START-SUBJECT Seminar on {(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})} {=$:<del>date</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>START-SUBJECT Seminar on {(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})} {=$:<ins>Date</ins>}</div></div>
+        <div class='difftype'>Changed lines 83-88 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>{(ftime fmt=&quot;%A&quot; {=$:<del>date</del>})} prochain ({=$:<del>date</del>}) à {=$:<del>time</del>}, nous aurons le plaisir de recevoir {=$:<del>speaker</del>} (:if [ ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>affiliation</del>} - {=$:<del>webpage</del>}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>webpage</del>}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot; and ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>} ]:) ({=$:<del>affiliation</del>}) (:ifend:) qui présentera un exposé intitulé &quot;{=$:<del>title</del>}&quot;.<br />(:if ! equal &quot;{Default$:<del>room</del>}&quot; &quot;{=$:<del>room</del>}&quot;:) *Attention* : c'est en salle {=$:<del>room</del>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<del>time</del>}&quot; &quot;{=$:<del>time</del>}&quot;:) *Attention* :&nbsp; c'est à {=$:<del>time</del>}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:<del>abstract</del>}&quot;:)<br />Résumé : {=$:<del>abstract</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>{(ftime fmt=&quot;%A&quot; {=$:<ins>Date</ins>})} prochain ({=$:<ins>Date</ins>}) à {=$:<ins>Time</ins>}, nous aurons le plaisir de recevoir {=$:<ins>Speaker</ins>} (:if [ ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>Affiliation</ins>} - {=$:<ins>WebPage</ins>}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>WebPage</ins>}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:<ins>WebPage</ins>}&quot; and ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>} ]:) ({=$:<ins>Affiliation</ins>}) (:ifend:) qui présentera un exposé intitulé &quot;{=$:<ins>Title</ins>}&quot;.<br />(:if ! equal &quot;{Default$:<ins>Room</ins>}&quot; &quot;{=$:<ins>Room</ins>}&quot;:) *Attention* : c'est en salle {=$:<ins>Room</ins>}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:<ins>Time</ins>}&quot; &quot;{=$:<ins>Time</ins>}&quot;:) *Attention* :&nbsp; c'est à {=$:<ins>Time</ins>}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:<ins>Abstract</ins>}&quot;:)<br />Résumé : {=$:<ins>Abstract</ins>}</div></div>
+        <div class='difftype'>Changed line 95 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>crontab, python et pmwiki, pour les organisateurs du <del>GT Arith</del>.</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>crontab, python et pmwiki, pour les organisateurs du <ins>Séminaire Calin</ins>.</div></div>
+        <div class='difftype'>Changed line 98 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>https://www.<del>lirmm</del>.fr/<del>arith/</del>wiki/<del>GT</del>/<del>GroupeDeTravail</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>https://www.<ins>lipn</ins>.fr/wiki/<ins>Séminaire</ins>/</div></div>
+        <div class='difftype'>Changed line 103 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>START-SUBJECT Séminaire du {(ftime fmt=&quot;%A&quot; {=$:Date})} {=$:Date}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>START-SUBJECT Séminaire<ins>&nbsp;Calin</ins> du {(ftime fmt=&quot;%A&quot; {=$:Date})} {=$:Date}</div></div>
+        <div class='difftype'>Changed line 112 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>\item {=$:<del>date</del>} : {\bf {=$:<del>speaker</del>} ({=$:<del>affiliation</del>})} -- {=$:<del>title</del>}.</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>\item {=$:<ins>Date</ins>} : {\bf {=$:<ins>Speaker</ins>} ({=$:<ins>Affiliation</ins>})} -- {=$:<ins>Title</ins>}.</div></div>
+        <div class='difftype'>Changed line 120 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:if1 date 2000-01-01..{=$:<del>date</del>} :)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:if1 date 2000-01-01..{=$:<ins>Date</ins>} :)</div></div>
+        <div class='difftype'>Changed lines 124-129 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(substr &quot;{=$:<del>date</del>}&quot; 0 4)}{(substr &quot;{=$:<del>date</del>}&quot; 5 2)}{(substr &quot;{=$:<del>date</del>}&quot; 8 2)}T{(substr &quot;{=$:<del>time</del>}&quot; 0 2)}{(substr &quot;{=$:<del>time</del>}&quot; 3 2)}00<br />DTEND;TZID=Europe/Paris:{(substr &quot;{=$:<del>date</del>}&quot; 0 4)}{(substr &quot;{=$:<del>date</del>}&quot; 5 2)}{(substr &quot;{=$:<del>date</del>}&quot; 8 2)}T{(inc (substr &quot;{=$:<del>time</del>} +1 hour&quot; 0 2))}{(substr &quot;{=$:<del>time</del>}&quot; 3 2)}00<br />LOCATION:LIPN, salle {=$:<del>room</del>}<br />SUMMARY:Séminaire Calin - {=$:<del>speaker</del>} - {=$:<del>title</del>}<br />DESCRIPTION:{=$:<del>abstract</del>}<br />URL:[=https://www.<del>lirmm</del>.fr/<del>arith/</del>wiki/<del>GT</del>/=]{=$<del>name</del>}</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>DTSTART;TZID=Europe/Paris:{(substr &quot;{=$:<ins>Date</ins>}&quot; 0 4)}{(substr &quot;{=$:<ins>Date</ins>}&quot; 5 2)}{(substr &quot;{=$:<ins>Date</ins>}&quot; 8 2)}T{(substr &quot;{=$:<ins>Time</ins>}&quot; 0 2)}{(substr &quot;{=$:<ins>Time</ins>}&quot; 3 2)}00<br />DTEND;TZID=Europe/Paris:{(substr &quot;{=$:<ins>Date</ins>}&quot; 0 4)}{(substr &quot;{=$:<ins>Date</ins>}&quot; 5 2)}{(substr &quot;{=$:<ins>Date</ins>}&quot; 8 2)}T{(inc (substr &quot;{=$:<ins>Time</ins>} +1 hour&quot; 0 2))}{(substr &quot;{=$:<ins>Time</ins>}&quot; 3 2)}00<br />LOCATION:LIPN, salle {=$:<ins>Room</ins>}<br />SUMMARY:Séminaire Calin - {=$:<ins>Speaker</ins>} - {=$:<ins>Title</ins>}<br />DESCRIPTION:{=$:<ins>Abstract</ins>}<br />URL:[=https://www.<ins>lipn</ins>.fr/wiki/<ins>Séminaire</ins>/=]{=$<ins>Name</ins>}</div></div>
+        <div class='difftype'>Changed line 142 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>(:acm {=$:<del>date</del>} {=$:<del>time</del>} : {=$:<del>speaker</del>} (:if ! equal &quot;&quot; &quot;{=$:<del>affiliation</del>}&quot;:) ({=$:<del>affiliation</del>}) (:ifend:) : {=$:<del>title</del>} :)</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>(:acm {=$:<ins>Date</ins>} {=$:<ins>Time</ins>} : {=$:<ins>Speaker</ins>} (:if ! equal &quot;&quot; &quot;{=$:<ins>Affiliation</ins>}&quot;:) ({=$:<ins>Affiliation</ins>}) (:ifend:) : {=$:<ins>Title</ins>} :)</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443815438:1443815013:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443815013' href='#diff1443815013'>October 02, 2015, at 09:43 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:PageWeb}&quot;:) [[{=$:PageWeb}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]] - <del>Résumé</del></div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:PageWeb}&quot;:) [[{=$:PageWeb}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]] - <ins>{=$:Résumé}</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443815013:1443814992:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814992' href='#diff1443814992'>October 02, 2015, at 09:43 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:PageWeb}&quot;:) [[{=$:PageWeb}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:PageWeb}&quot;:) [[{=$:PageWeb}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]<ins>&nbsp;- Résumé</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814992:1443814955:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814955' href='#diff1443814955'>October 02, 2015, at 09:42 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<del>Page web</del>}&quot;:) [[{=$:<del>Page web</del>}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<ins>PageWeb</ins>}&quot;:) [[{=$:<ins>PageWeb</ins>}|{=$:Orateur}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814955:1443814932:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814932' href='#diff1443814932'>October 02, 2015, at 09:42 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:Page web}&quot;:) [[{=$:Page web}|{=$:<del>Speaker</del>}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:Page web}&quot;:) [[{=$:Page web}|{=$:<ins>Orateur</ins>}]] (:else:) {=$:Orateur} (:ifend:) - [[{=$FullName}|{=$:Titre}]]</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814932:1443814889:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814889' href='#diff1443814889'>October 02, 2015, at 09:41 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<del>Webpage</del>}&quot;:) [[{=$:<del>Webpage</del>}|{=$:Speaker}]] (:else:) {=$:<del>Speaker</del>} (:ifend:) - [[{=$FullName}|{=$:<del>Title</del>}]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:Date} - (:if ! equal &quot;&quot; &quot;{=$:<ins>Page web</ins>}&quot;:) [[{=$:<ins>Page web</ins>}|{=$:Speaker}]] (:else:) {=$:<ins>Orateur</ins>} (:ifend:) - [[{=$FullName}|{=$:<ins>Titre</ins>}]]</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814889:1443814822:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814822' href='#diff1443814822'>October 02, 2015, at 09:40 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Changed line 3 from:</div>
+        <div class='diffdel'><div class='diffmarkup'>* {=$:<del>date</del>} - (:if ! equal &quot;&quot; &quot;{=$:<del>webpage</del>}&quot;:) [[{=$:<del>webpage</del>}|{=$:<del>speaker</del>}]] (:else:) {=$:<del>speaker</del>} (:ifend:) - [[{=$FullName}|{=$:<del>title</del>}]]</div></div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><div class='diffmarkup'>* {=$:<ins>Date</ins>} - (:if ! equal &quot;&quot; &quot;{=$:<ins>Webpage</ins>}&quot;:) [[{=$:<ins>Webpage</ins>}|{=$:<ins>Speaker</ins>}]] (:else:) {=$:<ins>Speaker</ins>} (:ifend:) - [[{=$FullName}|{=$:<ins>Title</ins>}]]</div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814822:1443814779:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443814779' href='#diff1443814779'>October 02, 2015, at 09:39 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Deleted lines 0-11:</div>
+        <div class='diffdel'><div class='diffmarkup'><del>:Orateur:speaker (&quot;Prénom Nom&quot;)<br />:Affilitation:affiliation<br />:Page web:webpage<br />:Date:date (date)<br />:Heure:time (&quot;14h00&quot;)<br />:Salle:room (&quot;B107&quot;)<br />:Titre:title<br />:Résumé:abstract (text=10*50)<br />:Références:references<br />:Accueil:host<br /></del><br /></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443814779:1443813505:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'><a name='diff1443813505' href='#diff1443813505'>October 02, 2015, at 09:18 PM EST</a>
+        by <span class='diffauthor' title='anonymous'>anonymous</span> - </div>
+        <div class='difftype'>Added lines 1-157:</div>
+        <div class='diffadd'><div class='diffmarkup'><ins>:Orateur:speaker (&quot;Prénom Nom&quot;)<br />:Affilitation:affiliation<br />:Page web:webpage<br />:Date:date (date)<br />:Heure:time (&quot;14h00&quot;)<br />:Salle:room (&quot;B107&quot;)<br />:Titre:title<br />:Résumé:abstract (text=10*50)<br />:Références:references<br />:Accueil:host<br /><br /><br />(:if false:)<br />[[#listebase]]<br />* {=$:date} - (:if ! equal &quot;&quot; &quot;{=$:webpage}&quot;:) [[{=$:webpage}|{=$:speaker}]] (:else:) {=$:speaker} (:ifend:) - [[{=$FullName}|{=$:title}]]<br />[[#listebaseend]]<br />(:ifend:)<br /><br /><br /><br />(:if false:)<br />[[#fulldescription]]<br />\\<br />Next {(ftime fmt=&quot;%A&quot; {=$:date})} ({=$:date}), ''(:if ! equal &quot;&quot; &quot;{=$:webpage}&quot;:) [[{=$:webpage}|{=$:speaker}]] (:else:) {=$:speaker} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:affiliation}&quot;:) ({=$:affiliation}) (:ifend:) will speak about ''[[{=$FullName}|{=$:title}]]''.\\<br /><br />(:if ! equal &quot;{Default$:Room}&quot; &quot;{=$:Room}&quot;:)'''Warning: ''' it will be in room {=$:Room}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:Time}&quot; &quot;{=$:Time}&quot;:)'''Warning: ''' we will start at {=$:Time}!\\(:ifend:)<br />(:if ! equal &quot;&quot; &quot;{=$:Abstract}&quot;:)<br />Abstract:<br />-&gt;{=$:abstract}<br />(:else:)<br />No abstract yet.<br />(:ifend:)<br />\\<br />[[#fulldescriptionend]]<br />(:ifend:)<br /><br /><br />(:if false:)<br />[[#fulldescriptionfr]]<br />\\<br />{(ftime fmt=&quot;%A&quot; {=$:date})} prochain ({=$:date}), ''(:if ! equal &quot;&quot; &quot;{=$:webpage}&quot;:) [[{=$:webpage}|{=$:speaker}]] (:else:) {=$:speaker} (:ifend:)'' (:if ! equal &quot;&quot; &quot;{=$:affiliation}&quot;:) ({=$:affiliation}) (:ifend:) nous parlera de ''[[{=$FullName}|{=$:title}]]''.\\<br /><br />(:if ! equal &quot;{Default$:room}&quot; &quot;{=$:room}&quot;:)'''Attention : ''' c'est en salle {=$:room}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:time}&quot; &quot;{=$:time}&quot;:)'''Attention : ''' nous commencerons à {=$:time}!\\(:ifend:)<br />(:if ! equal &quot;&quot; &quot;{=$:abstract}&quot;:)<br />Résumé : <br />-&gt;{=$:abstract}<br />(:else:)<br />Pas de résumé pour l'instant.<br />(:ifend:)<br />\\<br />[[#fulldescriptionfrend]]<br />(:ifend:)<br /><br /><br /><br />(:if false:)<br />[[#mailing]]<br />\\<br />START-MAILING<br />Hello,<br />\\<br />\\<br />next {(ftime fmt=&quot;%A&quot; {=$:date})} ({=$:date}) à {=$:time}, we will have the pleasure to receive {=$:speaker} (:if [ ! equal &quot;&quot; &quot;{=$:webpage}&quot; and ! equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:affiliation} - {=$:webpage}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:webpage}&quot; and equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:webpage}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:webpage}&quot; and ! equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:affiliation}) (:ifend:) who will talk about &quot;{=$:title}&quot;.<br />(:if ! equal &quot;{Default$:room}&quot; &quot;{=$:room}&quot;:) *Warning* : it is in room {=$:room}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:time}&quot; &quot;{=$:time}&quot;:) *Warning* :&nbsp; we will meet at {=$:time}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:abstract}&quot;:)<br />Abstract : {=$:abstract}<br />(:else:)<br />No abstract yet.<br />(:ifend:)<br />\\<br />\\<br />See you on {(ftime fmt=&quot;%A&quot; {=$:date})},<br />crontab, python and pmwiki, for the organizers.<br />\\<br />\\<br />STOP-MAILING<br />\\<br />\\<br />START-SUBJECT Seminar on {(ftime fmt=&quot;%A&quot; {=$:date})} {=$:date}<br />[[#mailingend]]<br />(:ifend:)<br /><br /><br />(:if false:)<br />[[#mailingfr]]<br />\\<br />START-MAILING<br />Bonjour,<br />\\<br />\\<br />{(ftime fmt=&quot;%A&quot; {=$:date})} prochain ({=$:date}) à {=$:time}, nous aurons le plaisir de recevoir {=$:speaker} (:if [ ! equal &quot;&quot; &quot;{=$:webpage}&quot; and ! equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:affiliation} - {=$:webpage}) (:ifend:) (:if [ ! equal &quot;&quot; &quot;{=$:webpage}&quot; and equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:webpage}) (:ifend:) (:if [ equal &quot;&quot; &quot;{=$:webpage}&quot; and ! equal &quot;&quot; &quot;{=$:affiliation} ]:) ({=$:affiliation}) (:ifend:) qui présentera un exposé intitulé &quot;{=$:title}&quot;.<br />(:if ! equal &quot;{Default$:room}&quot; &quot;{=$:room}&quot;:) *Attention* : c'est en salle {=$:room}!\\(:ifend:)<br />(:if ! equal &quot;{Default$:time}&quot; &quot;{=$:time}&quot;:) *Attention* :&nbsp; c'est à {=$:time}!\\(:ifend:)<br /><br />(:if ! equal &quot;&quot; &quot;{=$:abstract}&quot;:)<br />Résumé : {=$:abstract}<br />(:else:)<br />Pas de résumé pour l'instant.<br />(:ifend:)<br />\\<br />\\<br />A {(ftime fmt=&quot;%A&quot; {=$:Date})},<br />crontab, python et pmwiki, pour les organisateurs du GT Arith.<br />\\<br />\\<br />https://www.lirmm.fr/arith/wiki/GT/GroupeDeTravail<br />\\<br />STOP-MAILING<br />\\<br />\\<br />START-SUBJECT Séminaire du {(ftime fmt=&quot;%A&quot; {=$:Date})} {=$:Date}<br />[[#mailingfrend]]<br />(:ifend:)<br /><br /><br /><br /><br />(:if false:)<br />[[#listelatex]]<br />\item {=$:date} : {\bf {=$:speaker} ({=$:affiliation})} -- {=$:title}.<br />[[#listelatex]]<br />(:ifend:)<br /><br /><br /><br />(:if false:)<br />[[#listeical]]<br />(:if1 date 2000-01-01..{=$:date} :)<br />\\<br />START-ICAL<br />BEGIN:VEVENT<br />DTSTART;TZID=Europe/Paris:{(substr &quot;{=$:date}&quot; 0 4)}{(substr &quot;{=$:date}&quot; 5 2)}{(substr &quot;{=$:date}&quot; 8 2)}T{(substr &quot;{=$:time}&quot; 0 2)}{(substr &quot;{=$:time}&quot; 3 2)}00<br />DTEND;TZID=Europe/Paris:{(substr &quot;{=$:date}&quot; 0 4)}{(substr &quot;{=$:date}&quot; 5 2)}{(substr &quot;{=$:date}&quot; 8 2)}T{(inc (substr &quot;{=$:time} +1 hour&quot; 0 2))}{(substr &quot;{=$:time}&quot; 3 2)}00<br />LOCATION:LIPN, salle {=$:room}<br />SUMMARY:Séminaire Calin - {=$:speaker} - {=$:title}<br />DESCRIPTION:{=$:abstract}<br />URL:[=https://www.lirmm.fr/arith/wiki/GT/=]{=$name}<br />END:VEVENT<br />STOP-ICAL<br />\\<br />(:if1end:)<br />[[#listeicalend]]<br />(:ifend:)<br /><br /><br /><br /><br />(:if false:)<br />[[#acm]]<br />(:acm {=$:date} {=$:time} : {=$:speaker} (:if ! equal &quot;&quot; &quot;{=$:affiliation}&quot;:) ({=$:affiliation}) (:ifend:) : {=$:title} :)<br />\\<br />[[#acmend]]<br />(:ifend:)</ins></div></div></div>
+      <div class='diffrestore'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit&amp;restore=diff:1443813505:1443813505:&amp;preview=y'>Restore</a></div></div></div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/ListingTemplates?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on October 23, 2015, at 07:55 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

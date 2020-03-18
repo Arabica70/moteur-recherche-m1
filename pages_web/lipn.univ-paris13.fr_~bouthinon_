@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+   		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   		<meta name="GENERATOR" content="Mozilla/4.6 [en] (X11; I; SunOS 5.6 sun4u) [Netscape]">
+   		<title>Dominique BOUTHINON</title>
+	</head>
+	<body bgcolor="#FFFFFF">
+
+		<h1 align="center">Dominique Bouthinon</h1>
+		 
+								<!-- COORDONNEES -->
+		<p align="center">
+			Laboratoire d'Informatique de l'université Paris Nord (LIPN)<br>
+			Institut Galilée<br>
+			99, Avenue J.B. Clement<br>
+			93430 Villetaneuse<br>
+			FRANCE<br>
+			tel	: 01 49 40 36 17<br>
+			fax	: 01 48 26 07 12<br>
+			<a href="mailto:db@lipn.univ-paris13.fr">db@lipn.univ-paris13.fr</a><br>
+		</p>	
+	
+		<hr>	
+								<!-- RECHERCHE -->
+		<h1>Research</h1>
+		<blockquote>
+			<h2>Symbolic machine learning</h2>
+			<ul>
+				<li>Inductive logic programming</li>
+				<li>Study of the information involved in the learning process</li>
+				<li>Learning from ambiguous examples</li>
+			</ul>
+			<h2>Download programs</h2>
+			<ul>
+				<li><a href="./softwares/lear/lear.html">Learning first order clauses from ambiguous examples</a></li>
+				<li><a href="./softwares/rnaHomedb/index.html">Rna consensus secondary structure prediction</a></li>
+				<li><a href="./softwares/paraminerLC/paraminerLC.zip">ParaminerLC (paraminer with local closures)</a></li>
+			</ul>
+		</blockquote>	
+</body></html>

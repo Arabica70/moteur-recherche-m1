@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Hanen Ochi</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Hanen Ochi">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/LCR/?lang=fr">LCR</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Hanen Ochi</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 960px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="ochi.jpg" height="250"  alt="Hanen Ochi"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Hanen Ochi<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   B307<br>
+Tél :    +33 1 49 40 28 26<br>
+Fax :   +33 1 48 26 07 12<br>
+Courriel :   Hanen.Ochi<i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<P>
+<h2>Ma formation</h2>
+<P>
+
+Je suis actuellement en thèse au sein de l'équipe <a HREF="/LCR/?lang=fr">LCR</a> du <A HREF="/">LIPN</A> (axe de recherche <A HREF="http://www-lipn.univ-paris13.fr/specif/">Spécification et Vérification</A> ;
+mon sujet de thèse porte sur la <em>Modélisation Abstraction et Vérification de Procédés Inter-Entreprises</em>, sous la direction de <a href="/~klai">Kais Klai</a>.
+
+<P>
+<ul>
+  <LI>2015-2016 : ATER à l'université Paris Nord
+  <LI>2011-2014 : Allocataire de recherche/moniteur à l'université Paris Nord
+<LI>2010-2011 : Master de recherche génie logiciel à l'Institut supérieur d'informatique(ISI) à Tunis
+<li>2010 : Ingéniorat en informatique à l'Institut Supérieur d'Informatique à Tunis
+</ul>
+
+
+<hr>
+<p>
+<h2>Publications</h2>
+<FONT COLOR="#000080"><FONT FACE="Arial, sans-serif"><FONT SIZE=3><I><B>Journaux</B></I></FONT></FONT></FONT></P>
+<ol>
+  <li>Kais Klai, Samir Tata and <U>Hanen Ochi</U>. Generic and Specific Compatibility Criteria for Web Service Compatibility: Formal Abstraction and Modular Verification. International Journal of Web Services Research 9(4) 45-68, 2012
+</ol>
+<FONT COLOR="#000080"><FONT FACE="Arial, sans-serif"><FONT SIZE=3><I><B>Conférences internationales</B></I></FONT></FONT></FONT></P>
+<ol>
+  <li>Kais Klai, <U>Hanen Ochi</U> and  Samir Tata.  Formal Abstraction and Compatibility Checking of Web Services. In 20th International Conference on Web Services, IEEE ICWS, 163-170, 2013.
+  <li>Kais Klai, <U>Hanen Ochi</U>.  Checking Compatibility of Web Services Behaviorally. Fondamentals of Software Engineering FSEN 2013, Lecture Notes in Computer Science, Springer-Verlag, 267-282, 2013.
+  <li>Kais Klai, <U>Hanen Ochi</U>. Checking Compatibility of Web Services Using SOGs. In Proceedings 2012 IEEE 19th International Conference on Web Services, pp 670-671, Honolulu, HI, USA, June 24-29, 2012.
+  <li>Kais Klai, <U>Hanen Ochi</U>. Modular verification of inter-enterprise Business Processes. In The IEEE Fourth International Conference on Information, Process, and Knowledge Management, eKNOW 2012, pp- 155-161, January 30 - February 4, 2012 - Valencia, Spain.
+
+  <li>Kais Klai, <U>Hanen Ochi</U>. A Bottom-Up Approach To Check The Correctness of Interorganisational Workflows. To appear in Proceeding 2015 The 9th International Symposium on Theoretical Aspects of Software Engineering, Nanjing, China
+</ol>
+<FONT COLOR="#000080"><FONT FACE="Arial, sans-serif"><FONT SIZE=3><I><B>Workshop internationaux</B></I></FONT></FONT></FONT></P>
+<ol>
+  <li>Kais Klai, <U>Hanen Ochi</U>. LTL Model Cheking of Service-Based Business Processes in the Cloud. COMPSAC Workshops 2015: The 4th IEEE International Workshop on Modeling and Veryifying Distributed Applications, 398-403
+  <li>Etienne André, Kais Klai, <U>Hanen Ochi</U> and Laure Petrucci. A Counterexample-Based Incremental and Modular Verification Approach. Large-Scale Complex IT Systems. Development, Operation and Management - 17th Monterey Workshop, Oxford, UK, March 19-21, 2012, Revised Selected Papers. Lecture Notes in Computer Science,Springer volume, 2012
+
+</ol>
+<p>
+
+<HR>
+<p>
+<h2>Enseignements</h2>
+<p>
+
+<ul>
+  <li>
+</ul>
+
+
+
+</BODY>
+</HTML>
+

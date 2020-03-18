@@ -1,0 +1,3878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Cours Elements d'Informatique 2017</title>
+  </head>
+  <body>
+    <meta name="Titre" content="">
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR"><b><font size="+1">Cours
+            Elements d'Informatique de Licence 1ere année,&nbsp;&nbsp;
+            Catherine Recanati (année 2016)</font></b><br>
+      </span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR"><br>
+        Ce cours de 1ère année de Licence en section B
+        (Physique/Chimie-Sciences pour l'Ingénieur) présente des notions
+        de bases sur l'architecture des ordinateurs et les systèmes
+        d'exploitation pour permettre la compréhension, l'écriture et la
+        compilation de programmes. L'essentiel du cours sera consacré au
+        langage C, langage de programmation impératif qui a servi de
+        base à la programmation sous Unix. On y introduira les notions
+        de variables, types, tableaux, fonctions, ainsi que la notion de
+        pointeur.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Le cours se déroule sur 6
+        semaines contenant chacune 2 séances de cours et 2 séances de TD
+        d'une heure et demie, plus une séance de TP de 3h en salle
+        machine.<o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l10 level1 lfo1;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="../L1-fichiers/tp-prerentree.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+      o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+      stroked="f">
+      <v:stroke joinstyle="miter"/>
+      <v:formulas>
+       <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+       <v:f eqn="sum @0 1 0"/>
+       <v:f eqn="sum 0 0 @1"/>
+       <v:f eqn="prod @2 1 2"/>
+       <v:f eqn="prod @3 21600 pixelWidth"/>
+       <v:f eqn="prod @3 21600 pixelHeight"/>
+       <v:f eqn="sum @0 0 1"/>
+       <v:f eqn="prod @6 1 2"/>
+       <v:f eqn="prod @7 21600 pixelWidth"/>
+       <v:f eqn="sum @8 21600 0"/>
+       <v:f eqn="prod @7 21600 pixelHeight"/>
+       <v:f eqn="sum @10 21600 0"/>
+      </v:formulas>
+      <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+      <o:lock v:ext="edit" aspectratio="t"/>
+     </v:shapetype><v:shape id="Image_x0020_1" o:spid="_x0000_i1100" type="#_x0000_t75"
+      alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41254"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image001.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--></span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> <a
+            href="docs/L1-2016/tp-prerentree.pdf">tp-prerentree.pdf</a>
+          50.4Ko Document PDF</span></li>
+    </ul>
+    <span style="font-size:10.0pt;font-family:Times;
+      mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"><br>
+    </span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+      mso-outline-level:3"><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">Représentations de nombres &amp;
+          Programmation (7 novembre - 13 novembre)<o:p></o:p></span></b></p>
+    <ol start="1" type="1">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l9 level1 lfo2;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Le cours CM1 est consacré à
+          la représentation des nombres et introduit la notion de
+          variable. Le cours CM2 introduit la structure d'un programme C
+          et la syntaxe BNF des expressions.<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l9 level1 lfo2;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Le fichier PresentationProg
+          contient les règles de présentation et d'indentation de
+          programmes que vous devrez utiliser en TP.<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l9 level1 lfo2;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">En complément, les 5
+          premières minutes de la vidéo "Pointeurs et adresses"
+          illustrent la notion <i style="mso-bidi-font-style:normal">d'affectation</i>
+          et introduisent la notion de pointeur comme <i
+            style="mso-bidi-font-style: normal">adresse</i>. (Ceux qui
+          veulent anticiper sur la suite peuvent regarder au delà des 5
+          premières minutes, mais la fin ne fait pas partie du cours de
+          la semaine).<o:p></o:p></span></li>
+    </ol>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a
+href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43399"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_4" o:spid="_x0000_i1099"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43399"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image003.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--></span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"><a href="docs/L1-2016/CM1.pdf">CM1.pdf</a>
+          1.9Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a
+href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43422"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_5" o:spid="_x0000_i1098"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43422"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image005.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--></span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"><a href="docs/L1-2016/CM2.pdf">CM2.pdf</a>
+          1.8Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/Pr%C3%A9sentationProg.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_6" o:spid="_x0000_i1097"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=40999"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image007.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">PrésentationProg.pdf
+
+
+            </span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">74.3Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD1.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_7" o:spid="_x0000_i1096"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41575"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image009.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD1.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 38.8Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD1corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_8" o:spid="_x0000_i1095"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41576"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image011.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD1corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 58Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD2.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_9" o:spid="_x0000_i1094"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43445"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image013.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD2.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 52.7Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD2corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_10" o:spid="_x0000_i1093"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43446"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image015.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD2corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 74.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP1.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_11" o:spid="_x0000_i1092"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41579"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image017.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP1.pdf
+
+
+            </span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">63.9Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP1corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_12" o:spid="_x0000_i1091"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41580"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image019.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP1corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 78.6Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><a
+          href="docs/L1-ProgC/Pointeurs%20et%20adresses.mp4"><span
+            lang="EN-GB"><!--[if mso & !supportInlineShapes & supportFields]><span
+     style='color:windowtext;text-decoration:none;text-underline:none'><span
+     style='mso-element:field-begin;mso-field-lock:yes'></span><span
+     style="mso-spacerun:yes"> </span>SHAPE <span
+     style="mso-spacerun:yes"> </span>\* MERGEFORMAT <span style='mso-element:
+     field-separator'></span></span><![endif]--><span
+              style="color:windowtext;
+              text-decoration:none;text-underline:none"><!--[if gte vml 1]><v:rect id="AutoShape_x0020_13"
+      o:spid="_x0000_s1032" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/url/1487845946/icon"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/url/view.php?id=43370"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square;
+      mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+      mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+      mso-position-vertical-relative:line;mso-left-percent:-10001;
+      mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+" o:button="t" filled="f" stroked="f">
+      <v:fill o:detectmouseclick="t"/>
+      <o:lock v:ext="edit" aspectratio="t"/>
+      <w:wrap type="none"/>
+      <w:anchorlock/>
+     </v:rect><![endif]--><!--[if !vml]--></span><!--[endif]--></span><span
+            style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+            &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times
+            New Roman&quot;;color:blue; mso-ansi-language:FR" lang="FR">Video</span></a><!--[if mso & !supportInlineShapes & supportFields]><span
+     style='color:windowtext;text-decoration:none;text-underline:none'><v:shape
+      id="_x0000_i1090" type="#_x0000_t75" style='width:24pt;height:24pt'>
+      <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+     </v:shape><span style='mso-element:field-end'></span></span><![endif]--></li>
+    </ul>
+    <span
+      style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+      &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+      Roman&quot;;color:blue; mso-ansi-language:FR" lang="FR"><br>
+    </span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_15" o:spid="_x0000_i1089"
+ type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+ style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image022.gif"
+  o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+</v:shape><![endif]--><!--[if !vml]--></span><b><span
+          style="font-size:13.5pt;
+          font-family:Times;mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family: &quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Notions d'architecture de
+          machines (14 novembre - 20 novembre)</span></b><span
+        style="font-size:10.0pt;font-family:
+        Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"><o:p></o:p></span></p>
+    <ol start="1" type="1">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l1 level1 lfo4;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Le cours CM3 présente
+          quelques notions d'architecture des ordinateurs: langage
+          machine, langage assembleur, et mini-assembleur AMIL. La vidéo
+          de Pierre Boudes en est le résumé et sera passée à la fin du
+          cours. Le cours CM4 présente quelques éléments des systèmes
+          d’exploitation : fichiers, processus, programmes et
+          compilation.<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l1 level1 lfo4;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Le TD4 est en fait un
+          cours/TD car la notion de condition de vérité et celle de
+          boucle while et d'instruction if y sont introduites, alors
+          qu'elles n'ont pas été encore introduites en cours.<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l1 level1 lfo4;tab-stops:list 36.0pt"><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">Le lien suivant contient un
+          tutoriel (réalisé par John Chaussard) pour installer une
+          machine virtuelle, et programmer en C sous Linux depuis un PC
+          Windows:
+          http://www.math.univ-paris13.fr/~chaussar/Divers/Didacticiel/UbuntuVirtuel/installer_xubuntu.htm.
+
+
+
+
+
+          Il vous est fortement conseillé d'installer ce logiciel si
+          vous disposez d'un ordinateur personnel pour revoir et finir
+          vos TP chez vous.<o:p></o:p></span></li>
+    </ol>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM3.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_16" o:spid="_x0000_i1088"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43529"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image024.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM3.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 1.7Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM4.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_17" o:spid="_x0000_i1087"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43566"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image026.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM4.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 1.9Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-ProgC/videoPierreBoudes.mp4"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_18" o:spid="_x0000_i1086"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/mpeg-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=40706"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image028.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/mpeg-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">Architecture
+
+
+
+
+
+              (video de Pierre Boudes)</span></a></span><span
+          style="font-size:
+          10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR"> 26.2Mo video/mp4<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD3.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_19" o:spid="_x0000_i1085"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41583"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image030.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD3.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 77.6Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD3corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_20" o:spid="_x0000_i1084"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43740"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image032.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD3corrige.pdf
+
+
+            </span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">93Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC3.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_21" o:spid="_x0000_i1083"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43524"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image034.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC3.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 34.9Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC3corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_22" o:spid="_x0000_i1082"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43572"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image036.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC3.corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 46.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD4.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_23" o:spid="_x0000_i1081"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41585"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image038.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD4.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 48.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC4.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_24" o:spid="_x0000_i1080"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43506"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image040.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC4.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 40.1Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC4corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_25" o:spid="_x0000_i1079"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43507"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image042.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC4.corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 44.2Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD4corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_26" o:spid="_x0000_i1078"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41586"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image044.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD4corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 69.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP2.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_27" o:spid="_x0000_i1077"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41587"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image046.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP2.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 74.5Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l6 level1 lfo5;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP2corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_28" o:spid="_x0000_i1076"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=41588"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image048.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP2corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 83.8Ko Document PDF</span></li>
+    </ul>
+    <span style="font-size:10.0pt;font-family:Times;
+      mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"><br>
+    </span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+      mso-outline-level:3"><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">Le contrôle en programmation impérative
+          (21 novembre - 27 novembre)<o:p></o:p></span></b></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Le cours CM5 porte sur
+        les structures de contrôle: boucles while, for, et branchements.
+        Le cours CM6 aborde la définition des fonctions et leurs appels.
+        La vidéo passée en fin de cours est le début (1mn:50) de la
+        vidéo de la semaine du 5 décembre.<o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM5.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_31" o:spid="_x0000_i1075"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43819"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image050.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM5.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 1.8Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM6.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_32" o:spid="_x0000_i1074"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43822"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image052.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM6.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 1.4Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD5.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_33" o:spid="_x0000_i1073"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43776"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image054.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD5.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 71.8Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD5corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_34" o:spid="_x0000_i1072"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43777"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image056.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD5corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 80Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD6.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_35" o:spid="_x0000_i1071"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43778"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image058.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD6.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 56.8Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD6corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_36" o:spid="_x0000_i1070"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43779"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image060.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD6corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 60.3Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC6.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_37" o:spid="_x0000_i1069"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43802"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image062.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC6.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 61.1Ko Document PDF<o:p></o:p></span></li>
+    </ul>
+    <span style="font-size:
+      10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times New
+      Roman&quot;; mso-bidi-font-family:&quot;Times New
+      Roman&quot;;mso-ansi-language:FR"><o:p>&nbsp;</o:p></span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+      margin-left:18.0pt"><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">Préparation à l'examen partiel P2 (21
+          novembre - 4 décembre)</span></b><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR"><o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/QCC6corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_38" o:spid="_x0000_i1068"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43804"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image064.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">QCC6.corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 53.2Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP3.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_39" o:spid="_x0000_i1067"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43654"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image066.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP3.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 83.3Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l5 level1 lfo6;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP3corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_40" o:spid="_x0000_i1066"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44164"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image068.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP3corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 89.3Ko Document PDF <span
+            style="mso-no-proof:yes"><!--[if gte vml 1]><v:shape
+      id="Image_x0020_41" o:spid="_x0000_i1065" type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+      style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image070.gif"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+     </v:shape><![endif]--><!--[if !vml]--></span></span></li>
+    </ul>
+    <span style="font-size:10.0pt;font-family:Times;
+      mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"><span style="mso-no-proof:yes"><br>
+      </span></span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_42" o:spid="_x0000_i1064"
+ type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+ style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image072.gif"
+  o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+</v:shape><![endif]--><!--[if !vml]--></span><b><span
+          style="mso-bidi-font-size:
+          10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language: FR">Examen partiel le mardi 29
+          novembre de 12h à 13h</span></b><span
+        style="mso-bidi-font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR"> </span><span
+        style="font-size:10.0pt;font-family:Times;
+        mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language:FR">(documents, calculettes, et
+        appareils téléphoniques non autorisés). Au programme, les 3
+        premières semaines de cours.</span><span
+        style="font-size:10.0pt;font-family:
+        Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"><o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Plus précisément, il faut
+        vous assurer d'avoir compris les notions de:&nbsp; codage d'un
+        entier ou d'un réel, variable, type de variable, identificateur
+        de variable, valeur, adresse de variable et affectation. Vous
+        devez aussi être familier avec la notation BNF et, en C,
+        reconnaître ce qu'est une expression, une définition ou
+        déclaration de fonction et un appel de fonction. Vous devrez
+        aussi maîtriser le sens des instructions de contrôle (en
+        particulier des boucles), et la structure syntaxique d'un
+        programme. Vous devez aussi comprendre dans les grandes lignes
+        ce que fait le compilateur, et être capable de distinguer entre
+        les différentes sortes d'erreurs détectées par le compilateur.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Pour réviser, relisez le
+        cours, regardez les videos et le glossaire (dernière section),
+        et revoyez attentivement la correction des TD et et des TP (ils
+        sont en ligne ici, avec les corrigés).<br>
+      </span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><br>
+      <span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR"><o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span
+          style="font-size:13.5pt;font-family:Times;mso-fareast-font-family:&quot;Times
+
+
+
+
+          New Roman&quot;; mso-bidi-font-family:&quot;Times New
+          Roman&quot;;mso-ansi-language:FR">28 novembre - 4 décembre</span></b><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:
+        &quot;Times New Roman&quot;;mso-ansi-language:FR">
+        -----------------------------------------------<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Le cours CM7 introduit le
+        type tableau et considère des fonctions ayant pour argument une
+        variable de type tableau. La fin du cours CM7 et le cours CM8
+        portent sur le sens d'un programme, la compilation et
+        l'exécution des programmes (portée des variables, pile d'appels
+        de fonctions, éditeur de liens et compilation séparée).<o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM7.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_43" o:spid="_x0000_i1063"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43087"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image074.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM7.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 2.6Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM8.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_44" o:spid="_x0000_i1062"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43088"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image076.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM8.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 2.5Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD7.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_45" o:spid="_x0000_i1061"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43920"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image078.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD7.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 54Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD7corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_46" o:spid="_x0000_i1060"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43921"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image080.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD7corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 64Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD8.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_47" o:spid="_x0000_i1059"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43856"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image082.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD8.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 51.5Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD8corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_48" o:spid="_x0000_i1058"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43857"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image084.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD8corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 60.9Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l4 level1 lfo7;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP4.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_49" o:spid="_x0000_i1057"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43860"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image086.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP4.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 54.1Ko Document PDF <span
+            style="mso-no-proof:yes"><!--[if gte vml 1]><v:shape
+      id="Image_x0020_50" o:spid="_x0000_i1056" type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+      style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image088.gif"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+     </v:shape><![endif]--><!--[if !vml]--></span></span></li>
+    </ul>
+    <span style="font-size:10.0pt;font-family:Times;
+      mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"><span style="mso-no-proof:yes"><br>
+      </span></span>
+    <ul type="disc">
+    </ul>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+      mso-outline-level:3"><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">5 décembre - 11 décembre<o:p></o:p></span></b></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">1. Le cours CM9 porte sur
+        les pointeurs et les tableaux. Le cours CM10 sur les chaînes de
+        caractères et la bibliothèque standard &lt;string.h&gt;.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">2. Les deux premières
+        vidéos illustrent le cours CM9. La première introduit la notion
+        de "passage d'une variable par référence" (c'est-à-dire par
+        adresse). La seconde traite l'exemple d'une procédure qui
+        échange les valeurs de deux variables, puis celui d'une
+        procédure qui trie les valeurs figurant dans un tableau en
+        utilisant la procédure d'échange précédente.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">3. La troisième vidéo
+        illustre en partie le cours CM10.<o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM9.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_52" o:spid="_x0000_i1055"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43105"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image090.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM9.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 2Mo Document PDF</span></li>
+      <ul>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+            style="font-size:10.0pt;font-family:Times;
+            mso-fareast-font-family:&quot;Times New
+            Roman&quot;;mso-bidi-font-family:&quot;Times New
+            Roman&quot;; mso-ansi-language:FR"><a
+              href="docs/L1-ProgC/Passage%20par%20reference.mp4">Passage
+              par référence</a> video</span></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><a
+href="docs/L1-ProgC/Passage%20par%20valeur%20et%20par%20reference.V2.mp4"><font
+              size="-1">Passage par valeur et par référence</font><font
+              size="-1"><br>
+            </font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><font size="-1"><a
+              href="docs/L1-ProcC/Pointeurs%20et%20adresses.mp4">Pointeurs
+
+              et adresses</a> video<br>
+          </font></li>
+      </ul>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM10.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_53" o:spid="_x0000_i1054"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43361"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image092.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM10.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 1.9Mo Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD9.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_54" o:spid="_x0000_i1053"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44081"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image094.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD9.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 56.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD9corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_55" o:spid="_x0000_i1052"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44080"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image096.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD9corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 63.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD10.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_56" o:spid="_x0000_i1051"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44155"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image098.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD10.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 64.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD10corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_57" o:spid="_x0000_i1050"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44154"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image100.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD10corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 64.4Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP5.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_58" o:spid="_x0000_i1049"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44166"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image102.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP5.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 64Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l2 level1 lfo8;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TP5corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_59" o:spid="_x0000_i1048"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44165"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image104.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TP5corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 67.3Ko Document PDF<o:p></o:p></span></li>
+    </ul>
+    <span
+      style="font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+      Times;mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"></span><span
+      style="font-size:10.0pt;font-family:Times;
+      mso-fareast-font-family:&quot;Times New
+      Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+      mso-ansi-language:FR"><span style="mso-spacerun:yes"><br>
+      </span><span style="mso-no-proof:yes"><!--[endif]--></span><o:p></o:p></span>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_64" o:spid="_x0000_i1043"
+ type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+ style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image111.gif"
+  o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+</v:shape><![endif]--><!--[if !vml]--></span><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">12 décembre - 18 décembre<o:p></o:p></span></b>
+    </p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">1. Le cours CM11
+        introduira les structures et les listes chaînées en C. Le
+        dernier cours sera consacré aux révisions.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">2. La vidéo "Liste
+        chainées en C" illustre le cours CM11 sur les listes chaînées..<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">3. Le TD12 est un TD de
+        révisions. Il n'y a pas de sujet de TP cette semaine, car le
+        dernier TP sera consacré aux révisions et à l'implémentation
+        d'exercices de la feuille de TD12.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span
+          style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+          New Roman&quot;; mso-ansi-language:FR">Programme du partiel
+          P2:</span></b><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR"> celui du premier
+        partiel, en ajoutant les fonctions et les tableaux (statiques à
+        une seule dimension), soient les cours jusqu'à CM9 . Il y aura
+        des exercices avec des fonctions prenant en argument des
+        variables de type tableau. Ceux qui traiteront ces exercices en
+        utilisant des pointeurs auront des points de bonus
+        supplémentaires, mais les exercices pourront être traités sans
+        les pointeurs,&nbsp; avec des variables de boucles i de type
+        int. (Un programme légèrement plus détaillé du partiel figure au
+        début du cours CM11).<o:p></o:p></span></p>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/CM11.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_65" o:spid="_x0000_i1042"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44603"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image113.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">CM11.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 2Mo Document PDF<o:p></o:p></span></li>
+      <ul>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><a
+            href="docs/L1-ProgC/5%20-%20Listes%20chainees.mp4"><span
+              lang="EN-GB"><!--[if mso & !supportInlineShapes & supportFields]><span
+     style='color:windowtext;text-decoration:none;text-underline:none'><span
+     style='mso-element:field-begin;mso-field-lock:yes'></span><span
+     style="mso-spacerun:yes"> </span>SHAPE <span
+     style="mso-spacerun:yes"> </span>\* MERGEFORMAT <span style='mso-element:
+     field-separator'></span></span><![endif]--><span
+                style="color:windowtext;
+                text-decoration:none;text-underline:none"><!--[if gte vml 1]><v:rect id="AutoShape_x0020_66"
+      o:spid="_x0000_s1028" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/url/1487845946/icon"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/url/view.php?id=43363"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square;
+      mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+      mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+      mso-position-vertical-relative:line;mso-left-percent:-10001;
+      mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+" o:button="t" filled="f" stroked="f">
+      <v:fill o:detectmouseclick="t"/>
+      <o:lock v:ext="edit" aspectratio="t"/>
+      <w:wrap type="none"/>
+      <w:anchorlock/>
+     </v:rect><![endif]--><!--[if !vml]--></span><!--[endif]--></span><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+
+
+
+
+
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue; mso-ansi-language:FR" lang="FR"></span><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+
+
+
+
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;mso-ansi-language:FR"><o:p></o:p></span>Listes
+            chainées (video)</a><!--[if mso & !supportInlineShapes & supportFields]><span
+     style='color:windowtext;text-decoration:none;text-underline:none'><v:shape
+      id="_x0000_i1041" type="#_x0000_t75" style='width:24pt;height:24pt'>
+      <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+     </v:shape><span style='mso-element:field-end'></span></span><![endif]--><br>
+        </li>
+      </ul>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD11.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_67" o:spid="_x0000_i1040"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44584"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image116.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD11.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 60.1Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD11corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_68" o:spid="_x0000_i1039"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44585"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image118.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD11corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 63Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD12corrige.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_69" o:spid="_x0000_i1038"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44742"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image120.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD12corrige.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 68.5Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l7 level1 lfo9;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-2016/TD12.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_70" o:spid="_x0000_i1037"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=44744"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image122.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">TD12.pdf</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 55.1Ko Document PDF<o:p></o:p></span></li>
+    </ul>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+        Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR">·</span><span
+        style="font-size:10.0pt;font-family:Times;
+        mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"><span style="mso-spacerun:yes">&nbsp; </span><span
+          style="mso-no-proof:yes"><!--[endif]--></span><o:p></o:p></span></p>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_72" o:spid="_x0000_i1035"
+ type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+ style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image126.gif"
+  o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+</v:shape><![endif]--><!--[if !vml]--><br>
+        <!--[endif]--></span><span style="font-size:10.0pt;
+        font-family:Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family: &quot;Times New
+        Roman&quot;;mso-ansi-language:FR"><o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+      mso-outline-level:3"><b><span
+          style="font-size:13.5pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR">Vacances de Noël<o:p></o:p></span></b></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">Pour vous aider à réviser
+        :<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">1. L'album des vidéos,
+        accessible ici en ligne (et sur internet à l'adresse
+        https://vimeo.com/album/4018284)<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">2. Un glossaire sur les
+        notions de programmation impérative abordées dans ce cours.<o:p></o:p></span></p>
+    <p class="MsoNormal"
+      style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+        style="font-size:10.0pt;font-family:Times;mso-bidi-font-family:&quot;Times
+
+
+
+
+        New Roman&quot;; mso-ansi-language:FR">3. Un ancien polycopié de
+        cours qui couvre globalement le même programme que ce cours. Il
+        est en 3 parties : Partie 1 (premières notions de programmation;
+        éléments de base du langage C; types, opérateurs et expressions;
+        instructions du langage), Partie 2 (fonctions; tableaux;
+        structures et unions), Partie 3 (structure d'un programme;
+        pointeurs; pointeurs et tableaux à une dimension; pointeurs et
+        tableaux à plusieurs dimensions).<o:p></o:p></span><span
+        lang="EN-GB"><a
+href="https://ent.univ-paris13.fr/applications/moodle/mod/glossary/view.php?id=43372"><!--[if mso & !supportInlineShapes & supportFields]><span
+     style='color:windowtext;text-decoration:none;text-underline:none'><span
+     style='mso-element:field-begin;mso-field-lock:yes'></span><span
+     style="mso-spacerun:yes"> </span>SHAPE <span
+     style="mso-spacerun:yes"> </span>\* MERGEFORMAT <span style='mso-element:
+     field-separator'></span></span><![endif]--><span
+            style="color:windowtext;
+            text-decoration:none;text-underline:none"><!--[if gte vml 1]><v:rect id="AutoShape_x0020_74"
+      o:spid="_x0000_s1026" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/glossary/1487845946/icon"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/glossary/view.php?id=43372"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square;
+      mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+      mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+      mso-position-vertical-relative:line;mso-left-percent:-10001;
+      mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+AA==
+" o:button="t" filled="f" stroked="f">
+      <v:fill o:detectmouseclick="t"/>
+      <o:lock v:ext="edit" aspectratio="t"/>
+      <w:wrap type="none"/>
+      <w:anchorlock/>
+     </v:rect><![endif]--><!--[if !vml]--></span></a><!--[endif]--></span><br>
+    </p>
+    <ul type="disc">
+    </ul>
+    Videos: <br>
+    <blockquote>
+      <ul type="disc">
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><a
+            href="docs/L1-ProgC/1%20-%20Pointeurs%20et%20adresses.mp4"><font
+              size="-1">1 - Pointeurs et adresses</font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><a
+href="docs/L1-ProgC/2%20-%20Passage%20de%20variable%20par%20valeur%20et%20par%20reference.mp4"><font
+              size="-1">2 - Passage de variable par valeur et par
+              référence</font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><a
+            href="docs/L1-ProgC/3%20-%20Passage%20par%20reference%20exemples.mp4"><font
+              size="-1">3 - Passage par référence exemples</font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><a
+            href="docs/L1-ProgC/4%20-%20Chaines%20de%20caracteres%20en%20C.mp4"><font
+              size="-1">4 - Chaînes de caractères en C</font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><a
+            href="docs/L1-ProgC/5%20-%20Listes%20Chainees.mp4"><font
+              size="-1">5 - Listes chainées</font></a></li>
+        <li class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+          mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><font
+            size="-1"><a href="docs/L1-ProgC/videoPierreBoudes.mp4">Architecture</a><br>
+          </font></li>
+      </ul>
+    </blockquote>
+    <br>
+    Ancien cours de programmation impérative:<br>
+    <ul type="disc">
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-ProgC/Partie1.pdf"><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">Partie1</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 805.6Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-ProgC/Partie2.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_76" o:spid="_x0000_i1031"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43377"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image132.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">Partie2</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 478.9Ko Document PDF<o:p></o:p></span></li>
+      <li class="MsoNormal"
+        style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+        mso-list:l0 level1 lfo10;tab-stops:list 36.0pt"><span
+          lang="EN-GB"><a href="docs/L1-ProgC/Partie3.pdf"><span
+              style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+              &quot;Times New
+              Roman&quot;;mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;
+              mso-ansi-language:FR;mso-no-proof:yes;text-decoration:none;text-underline:
+
+
+
+
+
+              none" lang="FR"><!--[if gte vml 1]><v:shape id="Image_x0020_77" o:spid="_x0000_i1030"
+      type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"
+      href="https://ent.univ-paris13.fr/applications/moodle/mod/resource/view.php?id=43378"
+      style='width:24pt;height:24pt;visibility:visible;mso-wrap-style:square'
+      o:button="t">
+      <v:fill o:detectmouseclick="t"/>
+      <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image134.png"
+       o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/f/pdf-24"/>
+     </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+              style="font-size:
+              10.0pt;font-family:Times;mso-fareast-font-family:&quot;Times
+              New Roman&quot;; mso-bidi-font-family:&quot;Times New
+              Roman&quot;;color:blue;mso-ansi-language:FR" lang="FR">Partie3</span></a></span><span
+          style="font-size:10.0pt;font-family:Times;
+          mso-fareast-font-family:&quot;Times New
+          Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+          mso-ansi-language:FR"> 458Ko Document PDF<o:p></o:p></span></li>
+    </ul>
+    <p class="MsoNormal"><span
+        style="font-size:10.0pt;font-family:Times;mso-fareast-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New
+        Roman&quot;;mso-ansi-language: FR;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Image_x0020_79" o:spid="_x0000_i1028"
+ type="#_x0000_t75" alt="Description : https://ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"
+ style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_image138.gif"
+  o:title="//ent.univ-paris13.fr/applications/moodle/theme/image.php/clean/core/1487845946/spacer"/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span><span
+        style="font-size:10.0pt;
+        font-family:Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family: &quot;Times New
+        Roman&quot;;mso-ansi-language:FR"><o:p></o:p></span><span
+        style="font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+        Times;mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"></span><span
+        style="font-size:10.0pt;font-family:Times;
+        mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"><span style="mso-spacerun:yes"></span></span><br>
+      <span style="font-size:10.0pt;font-family:Times;
+        mso-fareast-font-family:&quot;Times New
+        Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-ansi-language:FR"><span style="mso-spacerun:yes"></span></span></p>
+    <p class="MsoNormal"><span lang="EN-GB"><o:p>&nbsp;</o:p></span></p>
+    <meta name="Mots clés" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 14">
+    <meta name="Originator" content="Microsoft Word 14">
+    <link rel="File-List"
+href="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_filelist.xml">
+    <link rel="Edit-Time-Data"
+href="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_editdata.mso">
+    <!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Revision>0</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Pages>1</o:Pages>
+  <o:Words>2314</o:Words>
+  <o:Characters>12732</o:Characters>
+  <o:Company>Université Paris 13</o:Company>
+  <o:Lines>106</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>15016</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+    <link rel="themeData"
+href="file://localhost/Users/Catherine/Library/Caches/TemporaryItems/msoclip/0clip_themedata.xml">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-GB</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+    <style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 0 5 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"En-tête Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+span.En-tteCar
+	{mso-style-name:"En-tête Car";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:En-tête;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:70.85pt 77.6pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:20475956;
+	mso-list-template-ids:-2032787554;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:137768557;
+	mso-list-template-ids:-1849781044;}
+@list l2
+	{mso-list-id:236983177;
+	mso-list-template-ids:1182183076;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:304820603;
+	mso-list-template-ids:-653603330;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:387459635;
+	mso-list-template-ids:537794396;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:906692510;
+	mso-list-template-ids:-161844814;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1108083734;
+	mso-list-template-ids:-447309782;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:1266957875;
+	mso-list-template-ids:-516146898;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l7:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:1284534008;
+	mso-list-template-ids:-1154817346;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l8:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l8:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:2010980881;
+	mso-list-template-ids:1387455214;}
+@list l10
+	{mso-list-id:2089619590;
+	mso-list-template-ids:1091990934;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l10:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l10:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-GB;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1033"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--><!--StartFragment--><!--EndFragment-->
+  </body>
+</html>

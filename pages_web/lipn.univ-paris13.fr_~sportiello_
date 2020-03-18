@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh">
+        <script type="text/javascript">
+            window.location.href = "index_eng.html"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow
+        the <a href='index_eng.html'>link to the English main page.</a>
+<p>
+Si vous preferez le francais, vous
+pouvez <a href='index_fra.html'>aller ici.</a>
+<p>
+Se cercate la pagina in italiano,
+<a href="index_ita.html">si trova qui.</a>
+    </body>
+</html>

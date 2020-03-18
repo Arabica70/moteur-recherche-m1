@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/x-mathjax-config">
+      var w = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+      if(w > 800){
+      MathJax.Hub.Config({
+      jax: ["input/TeX","output/SVG"],
+      tex2jax: { inlineMath: [['$','$'],['\\(','\\)']],
+      },
+      });
+
+      } else {
+
+      MathJax.Hub.Config({
+      jax: ["input/TeX","output/SVG"],
+      tex2jax: { inlineMath: [['$','$'],['\\(','\\)']]},
+
+      "HTML-CSS": {
+      scale: "70",
+      linebreaks: {  automatic: true}
+      },
+      noReflows: false
+      });
+
+      }
+    </script>
+    <script type="text/javascript"
+	    src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+    </script>
+    
+    <title>Python vs Go vs Scala Object Oriented Programming</title>
+  </head>
+  <body>
+
+<h1>Python vs Go vs Scala Object Oriented Programming</h1>
+
+<h2>Introduction</h2>
+
+<p>In this lecture we will learn how to put in place programs that
+implement the Multiset abstract notion (i.e. a set with multiple
+occurences of the same element) according to
+the <a href="https://www.python.org">Python</a>, <a href="https://golang.org">Go</a>
+and <a href="https://www.scala-lang.org/">Scala</a> programming languages.</p>
+
+<p>We assume that students have basic knowledge for these
+languages. For that, refer to the home pages of the languages to find
+some tutorials on how to manage built-in data types (ex.: List, Tuple,
+Dict for Python -- The Go home page contains a very good interactive
+tutorial with online demo), how to put instructions in sequence, how
+to choose and how to iterate. This mainly refers to the control of the
+execution of a program. The lecture is about 'how to structure
+programs and data' for organizing and solving a concrete problem.</p>
+
+<p>To be short with the aims of the 3 languages, we can paraphrase as
+follows:
+  <ol>
+    <li>Python is a programming language that lets you work quickly
+    and integrate systems more effectively. Python is a
+    general-purpose interpreted, interactive, object-oriented, and
+    high-level programming language.</li>
+    <li>Go language is a programming language initially developed at
+    Google in the year 2007 by Robert Griesemer, Rob Pike, and Ken
+    Thompson. It is a statically-typed language having syntax similar
+    to that of C. It provides garbage collection, type safety,
+    dynamic-typing capability, many advanced built-in types such as
+    variable length arrays and key-value maps. It also provides a rich
+    standard library.</li>
+    <li>Scala combines object-oriented and functional programming in
+    one concise, high-level language. Scala's static types help avoid
+    bugs in complex applications, and its JVM and JavaScript runtimes
+    let you build high-performance systems with easy access to huge
+    ecosystems of libraries.</li>
+  </ol>
+</p>
+
+     
+<p>For the lecture we explore mainly the following online documents,
+related to the object orientations of the 3 languages:
+  <ol>
+<li>Python and OOP: an
+<a href="https://www.tutorialspoint.com/python/python_classes_objects.htm">easy
+and complete</a> description of the idioms; The lesson starts with an
+overview of OOP terminology;</li>
+    <li>Go and OOP: <a href="https://code.tutsplus.com/tutorials/lets-go-object-oriented-programming-in-golang--cms-26540">low</a>
+  level of difficulty
+  ; <a href="https://flaviocopes.com/golang-is-go-object-oriented/">medium</a>
+  level of difficulty;</li>
+  <li>Scala and OOP: <a href="https://www.scala-exercises.org/scala_tutorial/object_oriented_programming">low</a>
+  difficulty to read
+  ; <a href="https://www.techfak.uni-bielefeld.de/ags/pi/lehre/ProgSem13/oopScalaPrint.pdf">medium/high</a>
+  difficulty to read... but incomparable;</li>
+  </ol>
+</p>
+
+<h2>Working with examples</h2>
+
+<p>We introduce now the 3 implementations of the (almost) same
+interface for the multiset abstract notion. One difference is in the
+choice of the built-in type that serves to store the element of the
+multiset. In one implementation it is through a list, for another one
+it is with a dictionary...</p>
+
+<p>Beyond insertion, deletion...we aim at implementing the basic
+    operations on multisets that are defined as follows.</p>
+
+<p>The <b>union</b> of two multisets is a set containing all elements that
+  are in $A$ <u>or</u> in $B$ (possibly both). For example,
+  $\{1,2\}\cup\{2,3\}=\{1,2,2,3\}$. Thus, we can write $x\in(A\cup B)$
+  if and only if $(x\in A)$ or $(x\in B)$. 
+</p>
+
+<p>The <b>intersection</b> of two multisets $A$ and $B$, denoted by $A \cap
+  B$, consists of all elements that are both in $A$
+  $\underline{\textrm{and}}$ $B$. For example,
+  $\{1,2\}\cap\{2,3\}=\{2,2\}$. 
+</p>
+
+<p>The <b>difference (subtraction)</b> is defined as follows. The multiset
+  $A-B$ consists of elements that are in $A$ but not in $B$. For
+  example if $A=\{1,2,2,3\}$ and $B=\{3,5\}$, then $A-B=\{1,2,2\}$.
+</p>
+
+<h2>Propositions for the implementations</h2>
+
+<h3>A Python implementation</h3>
+
+<pre>
+from random import *
+
+#
+# A multiset (bag) implemented with list
+#
+# The internal data structure implementing the
+# multiset is self.ens of type List
+#
+
+class MultiSet:
+        def __init__(self,l):
+                r = Random()
+                if l == []:
+                     self.ens = [r.randint(0, 100) for i in range(5)]
+                else:
+                     self.ens = l
+	def ajout(self,x):
+                if x != None:
+                     self.ens = self.ens + [x]
+		return self.ens
+        def app(self,x,l):
+		if(l == [] or x == None):
+			return False
+		elif (l[0] == x):
+			return True
+		else:
+			return MultiSet(self.ens).app(x,l[1:])
+        def app2(self,x):
+                if(self.ens == [] or x == None):
+                        return False
+                elif (self.ens[0] == x):
+                        return True
+                elif (len(self.ens) == 1 and self.ens[0] != x):
+                        return False
+                else:
+                        #print x, self.ens, self.ens[1:]
+                        #j = self.ens[1:]
+                        #nb = input('Choose a number: ')
+                        return MultiSet(self.ens[1:]).app2(x)
+	def sup(self,x,l):
+		if(l == [] or x == None):
+			return [];
+		else:
+			if(l[0] == x):
+				self.ens = l[1:]
+				return self.ens
+			else:
+				self.ens = [l[0]] + MultiSet(self.ens).sup(x,l[1:])
+				return self.ens
+	def supt(self,x,l):
+		if(l == [] or x == None):
+			return [];
+		else:
+			if(l[0] == x):
+				self.ens = MultiSet(self.ens).supt(x,l[1:])
+				return self.ens
+			else:
+				self.ens = [l[0]] + MultiSet(self.ens).supt(x,l[1:])
+				return self.ens
+	def card(self,l):
+		if(l == []):
+			return 0
+                else:
+			return 1 + MultiSet(self.ens).card(l[1:])
+	def nb_occ(self,x,l):
+		if(l == [] or x == None):
+			return 0
+		else:
+			if(l[0] == x):
+				return 1 + MultiSet(self.ens).nb_occ(x,l[1:])
+			else:
+				return MultiSet(self.ens).nb_occ(x,l[1:])
+        def __str__(self):
+                return 'MultiSet('+repr(self.ens)+')'
+        def __add__(self,other):
+                #l = self.ens + other.ens
+                #print self.ens, other.ens, l
+                #j = MultiSet(l)
+                #print j.ens
+                return MultiSet(self.ens + other.ens)
+        def __sub__(self,other):
+                res = []
+                for i in self.ens:
+                        #print set([i])
+                        res = res + list(set([i]) - set(other.ens))
+                        #print res
+                return MultiSet(res)
+        def __div__(self,other):
+                res = []
+                for i in self.ens:
+                        res = res + list(set([i]) & set(other.ens))
+                for i in other.ens:
+                        res = res + list(set([i]) & set(self.ens))
+                return MultiSet(res)
+
+print "MultiSet.__doc__:", MultiSet.__doc__
+print "MultiSet.__name__:", MultiSet.__name__
+print "MultiSet.__module__:", MultiSet.__module__
+print "MultiSet.__bases__:", MultiSet.__bases__
+print "MultiSet.__dict__:", MultiSet.__dict__
+l = MultiSet([])
+m = MultiSet([])
+print "Type of l: ",type(l)
+l.ajout(5)
+l.ajout(5)
+print "Does 5 belongs to l? ",l.app(5,l.ens)
+print "Does 5 belongs to l? ",l.app2(5)
+print "Does -1 belongs to l? ",l.app2(-1)
+print "Multiset l: ",l.ens
+print "Multiset m: ",m.ens
+#
+# Union of 2 multisets
+#
+n = l + m
+print "Multiset l + m: ",n.ens
+print "Multiset l + m: ",n
+
+#
+# difference of 2 multiset
+#
+l = MultiSet([1,2,2,3])
+m = MultiSet([3,5])
+print l
+print m
+n = l - m
+print n
+
+#
+# intersection of 2 multisets
+#
+l = MultiSet([1,2])
+m = MultiSet([2,3])
+print l
+print m
+n = l / m
+print n
+
+</pre>
+
+<p>The program execution:</p>
+
+<pre>
+MacBook-de-Christophe:~ christophecerin$ python multiset.py
+MultiSet.__doc__: None
+MultiSet.__name__: MultiSet
+MultiSet.__module__: __main__
+MultiSet.__bases__: ()
+MultiSet.__dict__: {'__module__': '__main__', 'app': <function app at 0x10d6d67d0>, 'supt': <function supt at 0x10d6e5230>, 'app2': <function app2 at 0x10d6e51b8>, '__doc__': None, '__div__': <function __div__ at 0x10d6e5500>, '__str__': <function __str__ at 0x10d6e5398>, 'card': <function card at 0x10d6e52a8>, '__add__': <function __add__ at 0x10d6e5410>, 'sup': <function sup at 0x10d6e5140>, 'nb_occ': <function nb_occ at 0x10d6e5320>, 'ajout': <function ajout at 0x10d6d6578>, '__init__': <function __init__ at 0x10d6d61b8>, '__sub__': <function __sub__ at 0x10d6e5488>}
+Type of l:  <type 'instance'>
+Does 5 belongs to l?  True
+Does 5 belongs to l?  True
+Does -1 belongs to l?  False
+Multiset l:  [70, 94, 79, 98, 55, 5, 5]
+Multiset m:  [26, 72, 52, 85, 70]
+Multiset l + m:  [70, 94, 79, 98, 55, 5, 5, 26, 72, 52, 85, 70]
+Multiset l + m:  MultiSet([70, 94, 79, 98, 55, 5, 5, 26, 72, 52, 85, 70])
+MultiSet([1, 2, 2, 3])
+MultiSet([3, 5])
+MultiSet([1, 2, 2])
+MultiSet([1, 2])
+MultiSet([2, 3])
+MultiSet([2, 2])
+MacBook-de-Christophe:~ christophecerin$ 
+</pre>
+
+<h3>A Scala implementation</a>
+
+<pre>
+import scala.collection.mutable.ArrayBuffer
+
+//
+// Multiset (Bag) implementation with ArrayBuffer
+// of tuples (first component = the item ; second
+// component = the number of occurences)
+// Notes that we can put any sort/type of objects
+// into the multiset, thanks to the (_,Int) definition
+//
+// Author: christophe.cerin@univ-paris13.fr
+// May 7, 2019
+//
+
+class Multiset() {
+    var ens = ArrayBuffer[(Any,Int)]();
+
+    // add a new entry in the multiset
+    def add(mm: Any) {
+        if (ens.size == 0) { ens.append((mm,1)); return; }
+        val m = ArrayBuffer[(Any,Int)]();
+	var ok: Boolean = true;
+        for (x <- ens) {
+            if (x._1 == mm) {
+	       val v = (x._1,x._2 + 1);
+	       ok = false;
+	       m += v;
+	    } else {
+	      m += x;
+	    }
+        }
+	// In other cases
+	if (ok == true) {
+	   val vv = (mm,1);
+	   m += vv;
+           //println("After loop:",m);
+	   ens = m;
+	} else
+	   ens = m;
+    }
+
+    // cancel a occurence of item in the multiset
+    def sup(mm: Any) {
+        if (ens.size == 0) { return; }
+        val m = ArrayBuffer[(Any,Int)]();
+        //var ok: Boolean = true;
+        for (x <- ens) {
+            if (x._1 == mm) {
+	       if (x._2 - 1 != 0) {
+	       	 val v = (x._1,x._2 - 1);
+                 //ok = false;
+                 m += v;
+		}
+            } else {
+                 m += x;
+            }
+        }
+        // In other cases
+        ens = m;
+    }
+ 
+    // testing if an element is present in the multiset
+    def present(mm: Any): Boolean = {
+        if (ens.size == 0) return false;
+        for (x <- ens) {
+            if (x._1 == mm) {
+	       return true;
+            }
+        }
+        // In other cases
+        return false;
+    }
+
+    // number of occurence of an element
+    def nb_occ(mm: Any): Int = {
+        for (x <- ens) {
+            if (x._1 == mm) {
+               return x._2;
+            }
+        }
+        // In other cases
+        return 0;
+    }
+
+    // number of elements in the multiset
+    def card(): Int = {
+        return ens.size;
+    }
+
+    // add a new entry in the multiset
+    def add2(mm: (Any,Int)) {
+        if (ens.size == 0) { ens.append(mm); return; }
+        val m = ArrayBuffer[(Any,Int)]();
+        var ok: Boolean = true;
+        for (x <- ens) {
+            if (x._1 == mm._1) {
+               val v = (x._1,x._2 + mm._2);
+               ok = false;
+               m += v;
+            } else {
+              m += x;
+            }
+        }
+        // In other cases
+        if (ok == true) {
+           val vv = mm;
+           m += vv;
+           //println("After loop:",m);
+           ens = m;
+        } else
+           ens = m;
+	//println("End of add2: "+ens)
+    }
+
+    // union of two multisets
+    def +(that: Multiset): Multiset = {
+       if (this.ens.size == 0) return that;
+       if (that.ens.size == 0) return this;
+       val m = that;
+       for (x <- this.ens) {
+       	   m.add2(x);
+       }
+       return m;
+    }
+
+    def sup2(mm: (Any,_)) {
+        if (ens.size == 0) { return; }
+        val m = ArrayBuffer[(Any,Int)]();
+        //var ok: Boolean = true;
+        for (x <- ens) {
+            if (x._1 != mm._1) {
+                 val v = (x._1,x._2);
+                 m += v;
+            }
+        }
+        // In other cases
+        //println("End of sup2 :"+m)
+        this.ens = m;
+    }
+
+    // The difference (subtraction) of two multisets
+    def -(that: Multiset): Multiset = {
+       if (this.ens.size == 0) return new Multiset();
+       if (that.ens.size == 0) return this;
+       val m = this;
+       for (x <- this.ens) {
+           if (true == that.present(x._1)) {
+	      m.sup2(x);
+	   }
+       }
+       //println("end of -: "+this.ens)
+       return m;
+    }
+
+    // The intersection of two multisets
+    def /(that: Multiset): Multiset = {
+       if (this.ens.size == 0) return new Multiset();
+       if (that.ens.size == 0) return new Multiset();
+       val m = new Multiset();
+       for (x <- this.ens) {
+           if (true == that.present(x._1)) {
+              m.add2(x);
+           }
+       }
+       //println("end of -: "+this.ens)
+       return m;
+    }
+}
+
+object Multiset {
+   def main(args: Array[String]) {
+      val m = new Multiset();
+
+      // Add new items
+      m.add(1);
+      m.add(2);
+      m.add(10);
+      m.add(10);
+      m.add(4);
+      m.add(5);
+      m.add(10);
+      m.add(5);
+      println ("multiset after insertions: " + m.ens);
+
+      // Cancel items
+      m.sup(1);
+      m.sup(10);
+      m.sup(5);
+      println ("multiset after deletions: " + m.ens);
+
+      // Testing is some elements are present inside de multiset
+      if (m.present(10) == true) println("10 is present")
+      else println("10 is not present!");
+      if (m.present(5) == true) println("5 is present")
+      else println("5 is not present!");
+      if (m.present(999) == true) println("999 is present")
+      else println("999 is not present!");
+
+      // Number of occurence of one element inside de multiset
+      println("Nb occ of 10: "+m.nb_occ(10));
+      println("Nb occ of 5: "+m.nb_occ(5));
+      println("Nb occ of 2: "+m.nb_occ(2));
+      println("Nb occ of 999: "+m.nb_occ(999));
+
+      // Number of elements in the multiset
+      println("Number of elements in the mutiset: "+m.card());
+
+      // Union of 2 multiset
+      val mm = new Multiset();
+      // First, add new items to mm
+      mm.add(1);
+      mm.add(2);
+      mm.add(10);
+      mm.add(10);
+      mm.add(4);
+      // Second, compute the union
+      println("The two multisets for the union are:");
+      println("    "+m.ens);println("    "+mm.ens);
+      val res: Multiset = m + mm;
+      println("The union: "+res.ens);
+
+      // Difference (subtraction) of two multisets
+      println("The two multisets for the difference are:");
+      println("    "+m.ens);println("    "+mm.ens);
+      val ress: Multiset = (m - mm);// parenthesis are IMPORTANT
+      println("The difference: "+ress.ens);
+      println("The two multisets for the difference are:");
+      val mmm = new Multiset();
+      // First, add new items to mm
+      mmm.add(11);
+      mmm.add(24);
+      mmm.add(10);
+      mmm.add(10);
+      mmm.add(4);println("    "+res.ens);println("    "+mmm.ens);
+      val resss: Multiset = (res - mmm);// parenthesis ARE IMPORTANT
+      println("The difference: "+resss.ens);
+
+      val aa = new Multiset();
+      val bb = new Multiset();
+      // First, add new items to aa, bb
+      aa.add(11);
+      aa.add(24);
+      aa.add(10);
+      aa.add(10);
+      aa.add(4);
+      bb.add(11);
+      bb.add(0);
+      bb.add(10);
+      bb.add(10);
+      bb.add(40);
+      bb.add(11);
+      println("    "+bb.ens);println("    "+aa.ens);
+      val r: Multiset = (bb / aa);// parenthesis ARE IMPORTANT
+      println("The intersection: "+r.ens);
+  }
+}
+</pre>
+
+<p>The program execution:</p>
+
+<pre>
+  MacBook-de-Christophe:~ christophecerin$ scalac multiset.scala
+  MacBook-de-Christophe:~ christophecerin$ scala multiset.scala
+  multiset after insertions: ArrayBuffer((1,1), (2,1), (10,3), (4,1), (5,2))
+  multiset after deletions: ArrayBuffer((2,1), (10,2), (4,1), (5,1))
+  10 is present
+  5 is present
+  999 is not present!
+  Nb occ of 10: 2
+  Nb occ of 5: 1
+  Nb occ of 2: 1
+  Nb occ of 999: 0
+  Number of elements in the mutiset: 4
+  The two multisets for the union are:
+  ArrayBuffer((2,1), (10,2), (4,1), (5,1))
+  ArrayBuffer((1,1), (2,1), (10,2), (4,1))
+  The union: ArrayBuffer((1,1), (2,2), (10,4), (4,2), (5,1))
+  The two multisets for the difference are:
+  ArrayBuffer((2,1), (10,2), (4,1), (5,1))
+  ArrayBuffer((1,1), (2,2), (10,4), (4,2), (5,1))
+  The difference: ArrayBuffer()
+  The two multisets for the difference are:
+  ArrayBuffer((1,1), (2,2), (10,4), (4,2), (5,1))
+  ArrayBuffer((11,1), (24,1), (10,2), (4,1))
+  The difference: ArrayBuffer((1,1), (2,2), (5,1))
+  ArrayBuffer((11,2), (0,1), (10,2), (40,1))
+  ArrayBuffer((11,1), (24,1), (10,2), (4,1))
+  The intersection: ArrayBuffer((11,2), (10,2))
+</pre>
+
+<h3>A Go implementation</a>
+
+<p>Go is not a typical OOP language, it has no class and inheritance
+concept syntactically. But it doesn't mean that there cannot be
+polymorphism in GoLang. Although Go doesn't have concept of class, it
+allows different data types to have its own methods. Indeed the
+so-called methods are just functions, in contrast to normal functions,
+this kind of functions are applied on specific data types. In the
+signature of these functions, there would be a <i>receiver</i> which
+defines that the function would be applied on the receiver.
+</p>
+
+<p>The program below serves to answer to the following question. Why
+interface is needed? There might be three main reasons.</p>
+
+<ol>
+  <li>Writing generic algorithm: in the code, the </code>do_*</code>
+  funcfions play the role of masking some details about the
+  concrete type.</li>
+  <li>Hiding implementation detail: in the example below, the
+  description of the concrete types is delayed. The union, diff and
+  intersect functions are good examples. They are tailored for the
+  concrete data type.</li>
+  <li>Providing interception points: since <code>do_diff</code> (for
+  instance) calls <code>diff</code> we have the possibility to do some
+  control before/after the call, in a separate way regarding the
+  'useful work' i.e. computing the difference with our example.</li>
+</ol>
+
+<pre>
+//
+// Multiset (Bag) data type implemented with dictionaries (maps)
+//
+// We implement an interface to demonstrate the ability to mask
+// the type of keys and to simulate a dictionary with any kind of
+// keys and values. The dictionary with the map[int]int declaration
+// has only one method (add). This is just to illustrate the concept
+// of interface. The dictionary with the map[string]int declaration
+// contains all the necessary definitions for the multiset.
+//
+// The union, intersect and diff functions use also the concept
+// of interface because the do_union, do_intersect and do_diff
+// function have only one parameter of type my_interface over the
+// three parameters.
+// (ex: do_union(g my_interface, h multiset_string, i multiset_string))
+// You cannot say:
+// do_union(g my_interface, h multiset_string, i my_interface)
+// You will get the message:
+// "cannot use i (type my_interface) as type multiset_string in argument
+// to g.diff: need type assertion"
+//
+// The search according to a key is (almost) always implemented
+// with a linear search. This could be improve with the following
+// trick: value, ok := o.m[o.mykey] In this case the complexity is
+// O(1) rather than O(n)
+//
+// christophe.cerin@univ-paris13.fr
+// May 9, 2019
+//
+
+package main
+
+import "fmt"
+
+type dummy struct {
+    a int
+    s string
+}
+
+type Multiset struct {
+	ens map[*dummy]int
+}
+
+type my_interface interface{
+     add()
+     cancel()
+     cancel_one_occurence()
+     present() bool
+     union(multiset_string,multiset_string) multiset_string
+     intersect(multiset_string,multiset_string) multiset_string
+     diff(multiset_string,multiset_string) multiset_string
+}
+
+type multiset_int struct {
+         m map[int]int
+	 mykey int
+	 myval int
+	 action string
+}
+
+type multiset_string struct {
+         m map[string]int
+	 mykey string
+	 myval int
+	 action string
+}
+
+func (o multiset_int) add() {
+     o.m[o.mykey]=o.myval
+     fmt.Println(o.m)
+}
+
+//
+// Add one entry, specified by its key
+//
+func (o multiset_string) add() {
+     for key,_ := range o.m {
+         //fmt.Print(key)
+	 if key == o.mykey { o.m[o.mykey]=o.m[o.mykey] + o.myval ; return ;}
+     }
+     // Not present => we insert a new (key,val)
+     o.m[o.mykey]=o.myval
+     //fmt.Println(o.m)
+}
+
+//
+// Cancel one entry, specified by its key
+//
+func (o multiset_string) cancel() {
+     for key,_ := range o.m {
+         if key == o.mykey { delete(o.m,o.mykey) ; return ;}
+     }
+     // Not present => we do nothing
+}
+
+//
+// Cancel one occurence of an entry, specified by its key
+//
+func (o multiset_string) cancel_one_occurence() {
+     _ , ok := o.m[o.mykey]
+     if ok == true {
+        if o.m[o.mykey] == 1 {
+               delete(o.m,o.mykey)
+        } else {
+              o.m[o.mykey]=o.m[o.mykey] - 1
+        }
+     }
+}
+
+//
+// test is a key is present in the dictionary
+//
+func (o multiset_string) present() bool {
+     _ , ok := o.m[o.mykey]
+     return ok
+}
+
+//
+// Union of two multisets
+//
+func (r multiset_string) union (p multiset_string, q multiset_string) multiset_string {
+     //_ , ok := o.m[o.mykey]
+     //var inter = multiset_string{};//make(map[string]int)
+     for key,value := range p.m {
+         r.m[key]=value
+     }
+     for key,_ := range q.m {
+         _ , ok := r.m[key]
+        if ok == true {
+              r.m[key]= q.m[key] + r.m[key]
+        } else {
+              r.m[key]=q.m[key]
+	}
+     }
+     return r
+}
+
+//
+// Intersect of two multisets
+//
+func (r multiset_string) intersect (p multiset_string, q multiset_string) multiset_string {
+     for key,_ := range p.m {
+         _ , ok := q.m[key]
+	 if (ok == true) {
+            r.m[key]= p.m[key] + q.m[key]
+	 }
+     }
+     return r
+}
+
+//
+// Difference of two multisets
+//
+func (r multiset_string) diff (p multiset_string, q multiset_string) multiset_string {
+     for key,_ := range p.m {
+         _ , ok := q.m[key]
+         if (ok == false) {
+            r.m[key]= p.m[key]
+         }
+     }
+     return r
+}
+
+func do_add(g my_interface) {
+    g.add()
+}
+
+func do_cancel(g my_interface) {
+    g.cancel()
+}
+
+func do_cancel_one_occurence(g my_interface) {
+    g.cancel_one_occurence()
+}
+
+func do_present(g my_interface) {
+    g.present()
+}
+
+func do_union(g my_interface, h multiset_string, i multiset_string) {
+    g.union(h,i)
+}
+
+func do_intersect(g my_interface, h multiset_string, i multiset_string) {
+    g.intersect(h,i)
+}
+
+func do_diff(g my_interface, h multiset_string, i multiset_string) {
+     g.diff(h,i)
+}
+
+func main() {
+
+    //
+    x := make(map[dummy]int)
+    x[dummy{a:1,s:""}] = 1
+    x[dummy{a:2,s:""}] = 2
+    x[dummy{a:2,s:"cc"}] = 1
+    fmt.Println("map:", x)
+    // map[{2 cc}:1 {1 }:1 {2 }:2]
+
+    r := multiset_string{}
+    r.m = make(map[string]int)
+    r.mykey="Paris"
+    r.myval=1
+    r.action = "add"
+    do_add(r)
+    r.mykey="Vichy"
+    r.myval=2
+    do_add(r)
+    r.mykey="Vichy"
+    r.myval=2
+    do_add(r)
+    r.mykey="Hangzhou"
+    r.myval=20
+    do_add(r)
+    r.mykey="Jinan"
+    r.myval=8
+    do_add(r)
+    fmt.Println(r.m)
+
+    // Test of cancel operation
+    r.mykey="Jinan"
+    do_cancel(r)
+    r.mykey="Hangzhou"
+    do_cancel_one_occurence(r)
+    r.mykey="Paris"
+    do_cancel_one_occurence(r)
+    fmt.Println(r.m)
+
+    // Test of union of two multiset
+    g := multiset_string{}
+    g.m = make(map[string]int)
+    g.mykey="Paris"
+    g.myval=1
+    g.action = "add"
+    do_add(g)
+    do_add(g)
+    g.mykey="Hangzhou"
+    g.myval=12
+    do_add(g)
+    g.mykey="Jinan"
+    g.myval=6
+    do_add(g)
+
+    h := multiset_string{}
+    h.m = make(map[string]int)
+    h.mykey="Vichy"
+    h.myval=1
+    h.action = "add"
+    do_add(h)
+    do_add(h)
+    h.mykey="Hangzhou"
+    h.myval=12
+    do_add(h)
+    h.mykey="Beijing"
+    h.myval=6
+    do_add(h)
+
+    i := multiset_string{}
+    i.m = make(map[string]int)
+    do_union(i,g,h)
+    fmt.Println("Multiset g: ",g.m)
+    fmt.Println("Multiset h: ",h.m)
+    fmt.Println("Union g and h: ",i.m)
+
+    // intersect
+    j := multiset_string{}
+    j.m = make(map[string]int)
+    do_intersect(j,i,g)
+    fmt.Println("Intersect of union(g, h) and g: ",j.m)
+    k := multiset_string{}
+    k.m = make(map[string]int)
+    do_intersect(k,g,h)
+    fmt.Println("Intersect g and h: ",k.m)
+
+    // Difference
+    l := multiset_string{}
+    l.m = make(map[string]int)
+    do_diff(l,g,h)
+    fmt.Println("Difference g and h: ",l.m)
+    m := multiset_string{}
+    m.m = make(map[string]int)
+    do_diff(m,h,g)
+    fmt.Println("Difference h and g: ",m.m)
+}
+
+</pre>
+
+<p>The program execution:</p>
+
+<pre>
+  $ go run multiset.go
+  map: map[{1 }:1 {2 }:2 {2 cc}:1]
+  map[Paris:1 Vichy:4 Hangzhou:20 Jinan:8]
+  map[Vichy:4 Hangzhou:19]
+  Multiset g:  map[Paris:2 Hangzhou:12 Jinan:6]
+  Multiset h:  map[Vichy:2 Hangzhou:12 Beijing:6]
+  Union g and h:  map[Beijing:6 Paris:2 Hangzhou:24 Jinan:6 Vichy:2]
+  Intersect of union(g, h) and g:  map[Paris:4 Hangzhou:36 Jinan:12]
+  Intersect g and h:  map[Hangzhou:24]
+  Difference g and h:  map[Paris:2 Jinan:6]
+  Difference h and g:  map[Beijing:6 Vichy:2]
+</pre>
+
+<h2>Home work / exercices</h2>
+
+<p><b>Complexity analysis.</b> Give an estimate about the time
+  complexity of each method of the abovementioned programs.</p>
+
+<p><b>Polymorphish.</b> Explain why (or why not) the abovementioned
+classes are polymorph in order to capture any types of information
+(Multiset composed of Float, Int, Tuble, List...). We mean that the
+multiset would be able to include any types and not only one sole type
+of object.</p>
+
+<p><b>Reservoir sampling.</b> To retrieve k random numbers from an
+  array of undetermined size we use a technique called reservoir
+  sampling. The goal is to efficiently return a random sample of k
+  elements evenly distributed from the original stream of n>>k
+  elements . The mathematics are also explained in
+  this <a href="https://gregable.com/2007/10/reservoir-sampling.html">blog</a>.
+</p>
+
+<p>Following <a href="https://github.com/djtrack16/thyme/blob/master/computer%20science/Donald.E.Knuth.The.Art.of.Computer.Programming.Volume.2.pdf">Knuth's</a>
+  (1981) description more closely, Reservoir Sampling (Algorithm R)
+  could be implemented as follows:</p>
+
+<pre>
+  import random
+
+  def sample(iterable, n):
+    """
+    Returns @param n random items from @param iterable.
+    """
+    reservoir = []
+    for t, item in enumerate(iterable):
+       if t < n:
+	  reservoir.append(item)
+       else:
+	 m = random.randint(0,t)
+	 if m < n:
+	    reservoir[m] = item
+    return reservoir
+</pre>
+  
+<p>Your work is to implement the reservoir with a bag in Go to keep
+the number of hits (as the value of the key). Then print the reservoir
+as well as the hits for each keys.
+<br>
+
+<hr>
+  </body>
+
+</html>

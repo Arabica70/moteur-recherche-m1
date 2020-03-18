@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 1</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 1: Bases: Terminal, g++</h2>
+
+<h3 id="Outils">Outils</h3>
+<ul>
+  <li><a href="../cours">Page du Cours</a>
+    <br/><br/>
+  </li>
+  <li>Le terminal (et le shell <tt>bash</tt>):
+    <ul>
+      <li>Lancer le terminal: <b>Ctrl+Alt+T</b></li>
+      <li><tt>pwd </tt> : afficher le répertoire courant</li>
+      <li><tt>ls </tt> : afficher le contenu du dossier courant (<tt>ls -l</tt> donne les détails)</li>
+      <li><tt>cd <span class="red">dossier</span> </tt> : aller dans le dossier <tt class="red">dossier</tt> du dossier courant</li>
+      <li><tt>cd .. </tt> : remonter dans le dossier parent</li>
+      <li><tt>cp <span class="red">fichier1</span> <span class="pink">fichier2</span> </tt> : Copie le fichier <tt class="red">fichier1</tt> dans un nouveau fichier  <tt class="pink">fichier2</tt></li>
+      <li><tt>rm <span class="red">fichier</span> </tt> : Supprime le fichier <tt class="red">fichier</tt></li>
+      <li><tt>gedit <span class="red">fichier.cc</span> </tt> : ouvrir (ou créer) le fichier <tt class="red">fichier.cc</tt> avec l'éditeur de texte gedit. Ajouter une esperluette permet au terminal d'effectuer une autre tâche en parallèle (<tt>gedit <span class="red">fichier.cc</span> &</tt>)</li>
+      <li><tt>man <span class="red">commande</span> </tt> : obtenir de l'aide à propos de <tt class="red">commande</tt></li>
+      <li><b>Ctrl</b>+<b>C</b> : interrompre/annuler la commande en cours (bien utile quand votre programme plante)</li>
+      <li>Copier-coller dans ou depuis le terminal: utiliser <b>Ctrl+Shift+C</b> (copier) et <b>Ctrl+Shift+V</b> (coller), ou la selection de la souris (copier) et le bouton du milieu de la souris (coller).</li>
+    </ul>
+    <br/>
+  </li>
+  <li>Le compilateur <tt>g++</tt> (depuis le terminal):
+    <ul>
+      <li><b>Compiler</b> <tt>g++ -std=c++11 -Wall -Wextra -Werror -Wno-sign-compare -O2 <span class="red">mon_code.cc</span></tt></li>
+      <li><b>Éxécuter</b> <tt>./a.out</tt>   <b>Seulement si la compilation a bien marché</b>!!!</li>
+    </ul>
+    <br/>
+  </li>
+    <li>Pour ne pas taper ça a chaque fois, éxécuter cette commande (copier-coller dans le terminal):
+<pre><code>alias g++="g++ -std=c++11 -Wall -Wextra -Werror -Wno-sign-compare -O2"</code></pre>
+    </li>
+  </li>
+</ul>
+<br/>
+
+<h3>Exercice 1: Premier programme. Boucle <tt>for</tt></h3>
+
+<ol>
+  <li>Ouvrir un fichier <tt>1.cc</tt> et coller le contenu suivant:
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  cout &lt;&lt; "Hello\n";
+  int result = 1;
+  for (int i = 1; i &lt;= 10; i++) {
+    result *= i;
+  }
+  cout &lt;&lt; "Result: " &lt;&lt; result &lt;&lt; endl;
+}
+</code></pre>
+  </li>
+  <li>Faites-le tourner! cf instructions ci-dessus.
+    <br/>
+    Avant de passer à la suite, vous devez <b>tout</b> comprendre de cet exemple (je vous expliquerai au besoin).
+  </li>
+</ol>
+<br/>
+
+<h3>Exercice 2: Erreurs de compilation et d'éxecution</h3>
+
+<ol>
+  <li>
+    Voilà un programme avec quelques erreurs. Copiez-le dans un fichier <tt>2.cc</tt>:
+    <pre><code class="c">#include &lt;iostream&gt;
+#include &lt;cmath
+using namespace std
+
+int main() {
+  cout &lt;&lt; "Hello\n";
+  double sum;
+  int N = 100000000;
+  for (int i = 1; i &lt; n; i+++) {
+    sum = sum + 1 / i;
+  }
+  ccout &lt;&lt; "Harmonic sum: " &lt;&lt; sum &lt;&lt; endl;
+  cout &lt;&lt; "Log(N):       " &lt;&lt; log(N) &lt;&lt; endl;
+}
+</code></pre>
+    Et tentez de le compiler:
+<pre>g++ 2.cc</pre>
+  Vous devriez voir pas mal d'erreurs de compilation.
+  <br/><br/>
+  <b>Réparez</b> <i>toutes</i> les erreurs de compilation en modifiant <tt>2.cc</tt> avec votre
+    editeur de texte, et en relançant <tt>g++ 2.cc</tt>, jusqu'à ce que ça marche.
+    <ul>
+      <li>Votre éditeur de texte doit montrer les numéros de ligne, sinon, demandez-moi comment les ajouter!</li>
+      <li>Le plus facile est de garder les 2 fenêtres (editeur et terminal) visibles en même temps</li>
+    </ul>
+    <br/>
+  </li>
+  <li>Le résultat n'est pas celui escompté. Pourquoi? Indice: <i>division entière</i>.
+    <br/><b>Réparez</b> le programme pour qu'il calcule bien la somme de la série harmonique de 1 à
+    9999999
+    <br/><br/>
+  </li>
+  <li>Modifiez votre programme pour qu'il affiche la valeur (approchée) de la constante d'Euler, sur une quatrième ligne, après un caractère <tt>':'</tt>.
+    <br/>Voir la page wikipedia sur la <a href="https://fr.wikipedia.org/wiki/S%C3%A9rie_harmonique#Termes_suivants_du_d.C3.A9veloppement_asymptotique">Série Harmonique</a>.
+    <br/><br/>
+  </li>
+  <li>Modifiez votre programme pour qu'il calcule le coefficient du prochain terme dans le dévelopement limité (utilisez la valeur de la constante d'Euler donnée sur Wikipedia), et l'affiche sur une cinquième ligne après un caractère <tt>':'</tt>.
+  </li>
+</ol>
+<b class="orange">RENDU:</b> <tt>2.cc</tt>
+<br/><br/>
+
+<h3>Exercice 3: <tt>cin</tt>; Primalité</h3>
+
+<ol>
+  <li>Sauvez ce programme dans <tt>3.1.cc</tt> et faites-le tourner:
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int x;
+  cout &lt;&lt; "Entrez un nombre et appuyez sur [Enter]: ";
+  cin &gt;&gt; x;
+  cout &lt;&lt; "Ce nombre est ";
+  if (x % 2 == 0) {
+    cout &lt;&lt; "pair";
+  } else {
+    cout &lt;&lt; "impair";
+  }
+  cout &lt;&lt; "\n";
+}
+</code></pre>
+  </li>
+  <li><b>Copiez</b> le code dans un autre fichier <tt>3.2.cc</tt> et <b>Modifiez</b>-le pour qu'il demande 2 entiers <tt>a</tt> et <tt>b</tt> à l'utilisateur (l'un après l'autre), et qu'il teste la <i>divisibilité</i> de <tt>a</tt> par <tt>b</tt>. Il devra afficher "est divisible" si b divise a, et "n'est pas divisible" sinon.
+  <br/>
+  <br/><b class="orange">RENDU:</b> <tt>3.2.cc</tt>
+  <br/><br/>
+
+  </li>
+  <li><b>Copiez</b> le code dans un autre fichier <tt>3.3.cc</tt> et <b>Modifiez</b>-le avec une boucle <tt>for</tt> pour qu'il teste la <i>primalité</i> d'un nombre <tt>n</tt> donné par l'utilisateur (i.e. le nombre <tt>n</tt> est-il premier?). Il devra afficher "premier" si le nombre est premier, et "composite" si le nombre n'est pas premier.
+    <br/>Indications:
+    <ul>
+      <li>Créez une variable booléenne avant votre boucle: <tt>bool is_prime = true;</tt>. Cette variable peut se faire affecter d'autres valeurs plus tard dans le programme (<tt>is_prime = false</tt> par exemple), et on peut l'utiliser dans un test: <tt>if (is_prime) { ... }</tt>.</li>
+      <li>[Facultatif] L'instruction <tt>break</tt> interrompt une boucle <tt>for</tt>.</li>
+    </ul>
+  <br/><b class="orange">RENDU:</b> <tt>3.3.cc</tt>
+  <br/><br/>
+  </li>
+  <li>Faites tourner votre programme pour n = 2 milliards + 11: <tt>2000000011</tt>.
+    <br/><b>Optimisez</b> votre programme pour qu'il tourne instantanément.
+    <br/><b>Vérifiez-le</b> sur: 9, 11, 14, 25, 2000000011, 2000000017. Lesquel(s) sont premiers?
+    <br/><br/>
+  </li>
+  <li>Utilisez le type <tt>long long</tt> au lieu de <tt>int</tt> pour utiliser des entiers 64 bits, qui vont jusqu'à 8 milliards de milliards (en gros). Essayer votre programme sur <tt>1000000000000000001</tt> et sur <tt>1000000000000000003</tt>.
+    <br/><b class="orange">RENDU:</b> toujours <tt>3.3.cc</tt>, amélioré.
+    <br/><br/>
+  </li>
+  <li>Modifiez-le pour afficher la décomposition en facteurs premiers du nombre (un facteur premier par ligne, dans l'ordre croissant).
+    <br/>Essayez-le sur <tt>6</tt>, <tt>7</tt>, <tt>60</tt>, <tt>81</tt> et <tt>152415790094497781</tt>.
+    <br/><b class="orange">RENDU:</b> <tt>3.6.cc</tt>.
+    <br/><br/>
+  </li>
+</ol>
+
+<footer>
+Auto-évaluation: clic droit sur <a href="g.tar.xz" download>g.tar.xz</a>, "Sauvegardez sous". Puis, dans un terminal:<pre><code>
+tar xf g.tar.xz
+cd grade
+bash grade.sh ../td1.tar
+</code></pre>
+
+
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<html>
+<head>
+<link rel="canonical" href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/">
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+  <meta name="description" content="Page of the 2018 conference on Graphs, Trees and Random Walks, Birzeit">
+  <meta http-equiv="content-language" content="fr">
+  <meta name="keywords" lang="fr" content="Birzeit18RAND, Random Graphs, Walks and Trees", Statistics>
+  <meta name="robots" content="all">
+  <meta name="rating" content="general">
+
+  <title>Applied Mathematics and Random Structures - Birzeit 2018, Palestine</title>
+
+
+
+<!-- ====================================================================== -->
+<!-- Corps de la page                                                       -->
+<!-- ====================================================================== -->
+
+
+
+    <link
+      rel="stylesheet"
+      href="../style/skin.css">
+
+<style>
+    h3 { 
+        background-color: #aaaaff;
+        padding: 10px 100px 10px 100px;
+        text-align: center;
+        color: white;
+    }
+</style>
+
+</head>
+
+<body>
+    <table width="100%" height="100%">
+        <tr>
+    <td valign=top width=25% class="droite">
+    <div align="center">
+    <br><br>
+    </div>
+
+    <br><br>
+
+<ul class="listemenu">
+<li><a class=menu href="#description">Description</a><br><br>
+<li><a class=menu href="#register">Registration</a><br><br>
+<li><a class=menu href="#practical">Practical Informations</a><br><br>
+<li><a class=menu href="#accomodat">Accommodation</a><br><br>
+<li><a class=menu href="#orgacom">Organizing Committee</a><br><br>
+<li><a class=menu href="#sciecommittee">Scientific Committee</a><br><br>
+<li><a class=menu href="#talks">List of the courses</a><br><br>
+<li><a class=menu href="#program">Program</a><br><br>
+<li><a class=menu href="#supports">Sponsors</a><br><br>
+<li><a class=menu href="#report">Scientific Report</a><br><br>
+<br><br>
+</ul>
+</HEAD>
+
+
+<P>
+
+    </td>
+    <td valign=top width=75% class="gauche">
+<a name="top"></a>
+
+<br><br><br><br>
+
+<div align="center"><font color="blue" size="+3">
+Birzeit 2018 Conference <br> "Applied Mathematics and Random Structures"</font>
+
+<br><br>
+<font color="red" size="+2">
+Location:<br> Birzeit University, Palestine<br>
+Dates: August 27 to 30, 2018<br>
+</font>
+
+<!- Planning : PDF ou HTML - Actes : PDF ->
+</div>
+<font face="Verdana">
+
+<h3>Pratical Informations</h3>
+<font face="Verdana">
+<font color="red" size="+1.5">
+The Organizing Committee will offer transportation from the Royal Court Hotel to the university during the days of the conference (go and back).
+<br> 
+The conference will take place in the Faculty of Science, Room S240 during the four days.
+<br>
+You will find a helping boards in the main entrances of the university indicating the place of the conference.
+<br>
+The registration desk will be in-front of the Faculty of Science available in every day morning. You can register and get the final program.
+<br>
+Each participant will be given a certificate of participation.
+</font>
+<a name="report"></a>
+<h3>Scientific Report</h3>
+<html lang="en">
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/rbrzreport.pdf">Scientific Report</a>
+</html>
+
+<a name="program"></a>
+<h3>Program</h3>
+<html lang="en">
+<img src = "bifiles/SchedBRZ1608.png" alt = "Program"/>
+</html>
+
+<h3>Detailed program and summaries</h3>
+<ul>
+<li>
+<html>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/ProgramBRZ.pdf">Detailed program</a>
+</html>
+<li>
+<html>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/SummaryTalks.pdf">Summaries of the Talks</a>
+</html>
+</ul>
+<a name="description"></a>
+<h3>Description</h3>
+<font face="Verdana">
+Birzeit 2018 Conference is mainly intended to foster future collaborations between Palestinian and French universities or research centres; enhancing collaborations with US or European Institutions is also hoped for. Birzeit 2018 Conference provides an opportunity for dissemination of important and recent results in the field of Applied Mathematics and Statistics with Applications to Economy, Industry, and Science.
+</br></br>
+Regarding Applied Mathematics, we will consider as a non-exhaustive list of topics: Ordinary and Partial Differential Equations; Stochastic Applications to Mathematical Finance and Life Insurance, Non-linear Recurrences.
+We will address researches in randomness, probability or statistics, with a special focus on random graphs and trees, and random walks. Contributions related to algorithms on graphs and trees are also welcomed. Besides their great theoretical interest, random graphs and trees have numerous applications: world-wide web, biological networks, statistical criteria of decision, software and hardware programming and architecture. Random walks have been the subjects of intensive research during the last years; the methods used go from combinatorics and singularity analysis to large scale computer algebra. Very often, discrete structures have continuous limits, by instance Brownian motions for discrete random walks; this allows some fruitful interplay between discrete mathematics and probability theory.
+</br></br>
+A tutorial for the freeware computer algebra system SAGE will be scheduled during the conference.
+</br></br>
+Master Students and Faculty Members are welcome to attend, interact, exchange ideas and discuss the trends and prospects of future research.  
+<a name="practical"></a>
+
+
+
+
+<a name="accomodat"></a> 
+<h3>Accommodation</h3>
+The participants who asked for accomodation will stay at the Royal Court Hotel of Ramallah:
+<ul>
+<li>
+<a href="http://www.rcshotel.com/">Royal Court Hotel</a>
+</li>
+</ul>
+
+<a name="orgacom"></a>
+<h3>Organizing committee :</h3>
+<ul>
+<li>
+<a href="http://lipn.univ-paris13.fr/~bassino/?lang=uk">Fr&eacute;d&eacute;rique Bassino</a>
+</li>
+<li>
+<a href="http://chauvin.perso.math.cnrs.fr">Brigitte Chauvin</a>
+</li>
+<li>
+									     <a href="http://www.birzeit.edu/people/hani-kabajah/">Hani Kabajah</a>, Department of Mathematics - Birzeit University
+</li>
+<li>
+<a href="https://sites.google.com/a/ritaj.ps/abdelrahim-mousa/">Abdelrahim Mousa</a>, Department of Mathematics - Birzeit University
+</li>
+<li>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/">Pierre Nicod&egrave;me</a>
+</li>
+
+</ul>
+
+<a name="sciecommittee"></a>
+<h3>Scientific committee</h3>
+
+<ul>
+
+<li>
+<a href="http://lipn.univ-paris13.fr/~bassino/?lang=uk">Fr&eacute;d&eacute;rique Bassino</a>, LIPN, University Paris13
+</li>
+<li>
+<a href="http://chauvin.perso.math.cnrs.fr">Brigitte Chauvin</a>, LMV, University of Versailles
+</li>
+<li>
+<a href="http://www.birzeit.edu/people/hani-kabajah/">Hani Kabajah</a>, Department of Mathematics, Birzeit University, 
+</li>
+<li>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/">Pierre Nicod&egrave;me</a>, LIPN, University Paris13
+</li>
+
+</ul>
+
+
+</br></br>
+<a name="register"></a> 
+																																																																																	 <h3>Registration (closed)</h3>
+<CENTER>
+There will be a mix of 1H30 hours courses, 1 hour talks and 1/2 hour talks.
+</br>
+
+<a href="mailto:brz18rand.organisers@lipn.fr">mail to the organizers</a>.
+</CENTER>
+</br>
+<a name="program"></a>
+<CENTER>
+<style type="text/css">
+<!--
+a.type1 { color: red; fontweight : bold}
+a.type1:hover { color: magenta; fontweight : bold}
+</style>
+<span style="font-size:2.2em;color=red;font-weight:bold">
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/pprog.html">PROVISIONAL SCHEDULE</a>
+</span>
+</CENTER>
+</br>
+<a name="talks"></a>
+<h3>Provisional list of courses</h3>
+</br>
+</font face>
+<font size=3>
+<ul>
+<li>
+   <a href="http://lipn.univ-paris13.fr/~bassino/?lang=uk">Fr&eacute;d&eacute;rique Bassino</a>
+<font face="Verdana"> - Random generation of graphs and trees - </font>
+										  <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/bassino.html">summary</a>,</br>
+</li>
+<li>
+<a href="http://chauvin.perso.math.cnrs.fr">Brigitte Chauvin</a>
+<font face="Verdana"> - Binary Search Trees - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/chauvin.html">summary</a>,
+</li>
+<li>
+<a href="http://gerin.perso.math.cnrs.fr">Lucas Gerin</a>
+<font face="Verdana"> - Uniform random permutations - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/gerin.html">summary</a>,
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/lucascours.pdf">Notes of the course</a>,
+</li>
+<li>
+<a href="https://www.researchgate.net/profile/Hanene_Mohamed">Hanene Mohamed</a>
+<font face="Verdana"> - Mean field analysis for inhomogeneous bike sharing systems - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/mohamed.html">summary</a>,
+</li>
+
+<li>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/?lang=uk">Pierre Nicod&egrave;me</a>
+<font face="Verdana"> - Height of discrete bridges and excursions - </font>
+										  <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/nicodeme.html">summary</a>,</br>
+</li>
+<li>
+<a href="https://lipn.univ-paris13.fr/index.php/fr/?option=com_content&view=article&id=3064&nom=Monteil">Thierry Monteil</a>
+<font face="Verdana"> - Introduction to the computer algebra system SAGE - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/monteil.html">summary</a>,</br>
+</li>
+<li>
+<a href="https://www.alquds.edu/en/staff-profiles/faculty-of-science-technology/177-department-of-mathematics/690-abdulhakeem-abdulhay-eideh.html">Abdulhakeem Eideh</a>
+<font face="Verdana"> - Analysis of survey data under informative sampling - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/eideh.html">summary</a>,
+</li>
+
+<li>
+<a href="http://www.lamfa.u-picardie.fr/paccaut/?lang=uk">Fr&eacute;d&eacute;ric Paccaut</a>
+<font face="Verdana"> - An introduction to dynamical systems: basic definitions and examples - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/paccaut.html">summary</a>,</br>
+</li>
+
+<li>
+<a href="https://www.researchgate.net/profile/Elie_Panafieu2/">Elie de Panafieu</a>
+<font face="Verdana"> - Analytic combinatorics of graphs - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/panafieu.html">summary</a>,
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/eliecours.pdf">Notes of the course</a>,
+</li>
+<li>
+<a href="http://pouyanne.perso.math.cnrs.fr">Nicolas Pouyanne</a>
+<font face="Verdana"> - Enumeration of planar graphs - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/pouyanne.html">summary</a>,
+</li>
+</ul>
+</font>
+<h3>Provisional list of one hour talks</h3>
+<font size=3>
+<ul>
+<li>
+<a href="http://staff.ppu.edu/moh_95">Mohammad Adm</a>
+<font face="Verdana"> - On the zero forcing game and maximum nullity of matrices whose graph is acyclic or unicyclic with q negative eigenvalues  - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/adm.html">summary</a>
+</li> 
+<li>
+<a href="http://www.birzeit.edu/en/faculty-staff/abdelrahim-mousa">Abdelrahim Mousa</a>
+<font face="Verdana"> - Geometric approaches and bifurcations in the dichotomous decision model  - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/mousa.html">summary</a>
+</li>     
+    
+</ul>
+</font>
+<h3>Provisional list of 1/2 hour talks</h3>
+<font size=3>
+<ul>
+<li>
+Sima Abualrub
+<font face="Verdana"> -  Determinants of Student’s Success at Birzeit University - </font>
+ <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/abualrub.html">summary</a>
+</li>
+<li>
+Farida Ghazawneh
+<font face="Verdana"> - Dynamics of piecewise isometries  - </font>
+ <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/ghazawneh.html">summary</a>
+</li>
+<li>
+Sondos Khalil
+<font face="Verdana"> - Numerical results with economic implications of a continuous time model  - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/khalil.html">summary</a>
+</li>
+<li>
+Mai Mismar
+<font face="Verdana"> -  Finding The Optimal Solution of The Assignment Problems Using probabilities and without Any Iteration  - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/mismar.html">summary</a>
+</li>
+<li>
+Khalid Salah
+<font face="Verdana"> - An approximation of a longitudinal stochastic model - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/salah.html">summary</a>
+</li>
+
+<li>
+Wisam Samarah
+<font face="Verdana"> - A Mathematical Solutions to an Unstable Economic Environment: A Case Study of the Palestinian Economy - </font>
+ <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/samarah.html">summary</a>
+</li>
+<li>
+Asma Shareef
+<font face="Verdana"> -  Neimark Sacker Bifurcation of higher order
+rational difference equations - </font>
+ <a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/shareef.html">summary</a>
+</li>
+<li>
+Feda Shoman
+<font face="Verdana"> -  A discrete game theoretical Model - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/shoman.html">summary</a>
+</li>
+<li>
+Hind Sweis
+<font face="Verdana"> - Solving Local Fractional Fredholm Integral Equation of the Second Kind with Separable Kernel - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/sweis.html">summary</a>
+</li>
+<li>
+Walaa Yassen
+<font face="Verdana"> - Using Symmetries To Solve Some Difference Equations - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/birzeit18RAND/bifiles/yassen.html">summary</a>
+</li>
+
+</ul>
+</font>
+
+ 
+
+
+
+
+
+<br><br> 
+<a name="supports"></a>
+<h3><font face=verdana>Sponsors</font></h3>
+<ul>
+<li><a href="http://www.mathunion.org/">IMU-CDC</a>
+<li><a href="https://compositio.nl/#foundation">Foundation Compositio Mathematica</a>
+<li><a href="http://www.cnrs.fr">CNRS</a>
+<li><a href="http://www.univ-paris13.fr/">University Paris13</a>
+<li><a href="http://www.uvsq.fr/">University of Versailles Saclay</a>
+<li><a href="https://www.birzeit.edu/en/">University of Birzeit</a>
+<li><a href="https://jerusalem.consulfrance.org/">French Consulate, Jerusalem</a>
+<li><a href="http://opendreamkit.org">EU Project - Open Digital Research Environment Toolkit</a>
+</ul>
+<font face=verdana>
+
+
+<BR>
+
+
+</body>
+</html>

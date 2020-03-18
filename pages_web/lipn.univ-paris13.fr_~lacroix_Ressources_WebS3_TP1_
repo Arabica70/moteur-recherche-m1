@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/main.css" />    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <title>M3104 - TP 1</title>
+  </head>
+  <body>
+        <header id="banner">
+            <div class="only_title">
+                <span class="menu_logo open_menu"><i class="fa fa-bars fa-3x"></i></span>
+                <h2> Programmation Web Serveur</h2>
+                <h3> M3104 - TP 1</h3>
+            </div>
+        </header>        
+
+        <main>
+
+
+            
+
+            
+
+            <section  class="boite exercice" >
+                <div class="no-grille">
+
+            <p>Les exercices suivants sont les exercices du premier chapitre de cours de PHP. Pour tous les exercices, nous allons utiliser le serveur local. Pour cela, il suffit de mettre ces documents dans le répertoire <code class="highlighter-rouge">public_html</code> qui se trouve dans votre répertoire personnel. Pour accéder à ces documents à travers un navigateur, il faut alors taper l’adresse Web :</p><p><a href="http://localhost/~VOTRE_NUMERO_ETUDIANT/chemin/nom_du_fichier">http://localhost/~VOTRE_NUMERO_ETUDIANT/chemin/nom_du_fichier</a></p><p>où <code class="highlighter-rouge">chemin</code> correspond au chemin où se trouve votre fichier à partir du répertoire <code class="highlighter-rouge">public_html</code>. Par exemple, si votre numéro d’étudiant est le 001 et si vous créez un dossier <code class="highlighter-rouge">TP1</code> dans votre répertoire <code class="highlighter-rouge">public_html</code> et un fichier <code class="highlighter-rouge">exercice1.php</code> dans <code class="highlighter-rouge">TP1</code>, pour accéder à ce fichier, vous devez spécifier l’adresse Web :</p><p><a href="http://localhost/~001/TP1/exercice1.php">http://localhost/~001/TP1/exercice1.php</a></p><p><strong>Attention : Les données écrites dans votre répertoire personnel sont supprimées à chaque redémarrage de l’ordinateur. Les fichiers que vous souhaitez garder doivent être copiés dans le répertoire <em class="tt">/iutv/Mes_Montages/login</em></strong></p><p><strong>Remarque :</strong> Le moyen le plus simple pour avoir accès à ses documents est d’utiliser un compte gitHub puis de créer un dépôt. Il faut ensuite cloner ce dépôt en début de TP et le mettre à jour à la fin. Pour les utilisateurs de gitHub ayant un compte avec double authentification, le plus simple est de créer un deuxième compte github pour passer en simple authentification (la configuration actuelle à l’iut ne permet pas d’utiliser facilement une authentification par ssh).</p><p>Comme l’ensemble des réponses aux exercices contiennent du code PHP, il n’est pas possible d’ouvrir le fichier directement à l’aide du navigateur. Il est donc impératif de passer par le serveur local.</p><p>Pour tous les exercices, nous utiliserons le navigateur Mozilla Firefox.</p><p><strong>Remarque :</strong> Les exercices notés par une astérisque proviennent du site <em class="code">openclassroom</em>.</p>
+                </div>
+            </section>
+            
+
+
+          
+
+          
+          
+          
+
+          
+          <section  class="boite exercice" id="exercice1" >
+              <div class="no-grille">
+                  <h2 id="exercice-1--premiers-pas-en-php">Exercice 1 : Premiers pas en PHP</h2>
+<p>Voici un code php.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;title&gt;</span> <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s1">'Premiers pas en PHP'</span><span class="p">;</span> <span class="cp">?&gt;</span> <span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;h1&gt;</span> Mes premiers pas en PHP <span class="nt">&lt;/h1&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$tps</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="k">echo</span> <span class="s1">'&lt;p&gt; Je débute depuis '</span><span class="p">;</span> <span class="k">echo</span> <span class="nv">$tps</span><span class="p">;</span> <span class="k">echo</span> <span class="s1">' heures... &lt;/p&gt;'</span><span class="p">;</span><span class="cp">?&gt;</span>
+<span class="nt">&lt;p&gt;</span> Mais cela a l'air intéressant <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s1">'!'</span> <span class="cp">?&gt;</span> <span class="nt">&lt;/p&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s1">'
+&lt;h2&gt; Vive le PHP &lt;/h2&gt;
+&lt;p&gt; Les pages vont pouvoir être dynamiques! &lt;/p&gt;
+'</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;p&gt;</span> Encore quelques paragraphes <span class="nt">&lt;/p&gt;</span>
+echo '<span class="nt">&lt;p&gt;</span> Avant dernier paragraphe <span class="nt">&lt;/p&gt;</span>';
+<span class="nt">&lt;p&gt;</span> Voilà, c'est terminé! <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Répondre aux questions suivantes :</p>
+
+<ol>
+  <li>
+    <p>Donner dans ce fichier les parties correspondant à du code PHP et à du code HTML.</p>
+  </li>
+  <li>
+    <p>Si ce fichier s’appelle <code class="highlighter-rouge">exo1.php</code>, et s’il est stocké sur le site Web <code class="highlighter-rouge">www.exemple.org</code> dans le répertoire <code class="highlighter-rouge">PremierTP</code>, comment “exécuter” ce fichier ? Que donne son exécution ? Ceci est-il valide ? Pourquoi ? Corriger alors le problème.</p>
+  </li>
+  <li>
+    <p>Remplacer les trois instructions <code class="highlighter-rouge">echo</code> de la ligne 9 par une seule.</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice2" >
+              <div class="no-grille">
+                  <h2 id="exercice-2--inclusion-den-tête-et-pied-de-page">Exercice 2 : Inclusion d’en-tête et pied de page</h2>
+
+<p>Le langage PHP permet d’inclure des fichiers dans d’autres. Ceci permet alors de décomposer un code HTML ou PHP en plusieurs parties logiques et d’insérer ensuite ces différentes parties dans un fichier PHP.</p>
+
+<ol>
+  <li>
+    <p>Créer un fichier <code class="highlighter-rouge">debut_code_html.php</code> contenant tout le code HTML jusqu’à la balise <code class="highlighter-rouge">&lt;body&gt;</code> incluse.</p>
+  </li>
+  <li>
+    <p>Créer un fichier <code class="highlighter-rouge">fin_code_html.php</code> contenant les balises <code class="highlighter-rouge">&lt;/body&gt;&lt;/html&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Créer un fichier <code class="highlighter-rouge">code.php</code> contenant un titre et un paragraphe et incluant les fichiers <code class="highlighter-rouge">debut_code_html.php</code> et <code class="highlighter-rouge">fin_code_html.php</code>.</p>
+  </li>
+  <li>
+    <p>Modifier le fichier <code class="highlighter-rouge">debut_code_html.php</code> pour que le titre de l’onglet (balise <code class="highlighter-rouge">&lt;title&gt;</code>) dépende de la valeur de la variable <code class="highlighter-rouge">$title</code> définie dans le fichier <code class="highlighter-rouge">code.php</code>.</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice3" >
+              <div class="no-grille">
+                  <h2 id="exercice-3--initiation-aux-tableaux">Exercice 3 : Initiation aux tableaux</h2>
+
+<p>Voici un tableau contenant les différents mois de l’année :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$mois</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"janvier"</span><span class="p">,</span>
+    <span class="s2">"février"</span><span class="p">,</span>
+    <span class="s2">"mars"</span><span class="p">,</span>
+    <span class="s2">"avril"</span><span class="p">,</span>
+    <span class="s2">"mai"</span><span class="p">,</span>
+    <span class="s2">"juin"</span><span class="p">,</span>
+    <span class="s2">"juillet"</span><span class="p">,</span>
+    <span class="s2">"août"</span><span class="p">,</span>
+    <span class="s2">"septembre"</span><span class="p">,</span>
+    <span class="s2">"octobre"</span><span class="p">,</span>
+    <span class="s2">"novembre"</span><span class="p">,</span>
+    <span class="s2">"décembre"</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Quelles sont les clés ? Parcourir ce tableau pour afficher les mois de l’année sous la forme d’une liste ordonnée.</li>
+</ol>
+
+<p>On considère maintenant le tableau suivant donnant pour chaque mois de l’année, le nombre de jours qu’il contient (On suppose que l’année n’est pas bissextile.) :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$mois</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">"janvier"</span>   <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"février"</span>   <span class="o">=&gt;</span> <span class="mi">28</span><span class="p">,</span>
+   <span class="s2">"mars"</span>      <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"avril"</span>     <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="s2">"mai"</span>       <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"juin"</span>      <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="s2">"juillet"</span>   <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"août"</span>      <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"septembre"</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="s2">"octobre"</span>   <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+   <span class="s2">"novembre"</span>  <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="s2">"décembre"</span>  <span class="o">=&gt;</span> <span class="mi">31</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<ol start="2">
+  <li>
+    <p>Quelles sont les clés du tableau ? Les valeurs ? Parcourir ce tableau pour afficher les mois de l’année sous la forme d’une liste ordonnée (comme dans la question précédente).</p>
+  </li>
+  <li>
+    <p>Modifier le code pour afficher dans la liste après le nom de chaque mois le nombre de jours qu’il contient.</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice4" >
+              <div class="no-grille">
+                  <h2 id="exercice-4--tableau-à-deux-dimensions">Exercice 4 : Tableau à deux dimensions</h2>
+
+<p>On définit le tableau suivant :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$personnes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">'mdupond'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Martin'</span><span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Dupond'</span><span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Paris'</span>       <span class="p">],</span>
+  <span class="s1">'jm'</span>      <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Jean'</span>  <span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Martin'</span><span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Villetaneuse'</span><span class="p">],</span>
+  <span class="s1">'toto'</span>    <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Tom'</span>   <span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Tonge'</span> <span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Epinay'</span>      <span class="p">],</span>
+  <span class="s1">'arn'</span>     <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Arnaud'</span><span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Dupond'</span><span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">33</span><span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Paris'</span>       <span class="p">],</span>
+  <span class="s1">'email'</span>   <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Emilie'</span><span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Ailta'</span> <span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">46</span><span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Villetaneuse'</span><span class="p">],</span>
+  <span class="s1">'dask'</span>    <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'Prénom'</span> <span class="o">=&gt;</span> <span class="s1">'Damien'</span><span class="p">,</span> <span class="s1">'Nom'</span> <span class="o">=&gt;</span> <span class="s1">'Askier'</span><span class="p">,</span> <span class="s1">'Age'</span> <span class="o">=&gt;</span> <span class="mi">7</span> <span class="p">,</span> <span class="s1">'Ville'</span> <span class="o">=&gt;</span> <span class="s1">'Villetaneuse'</span><span class="p">]</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Quelles sont les clés du tableau <code>$personnes</code> et leur type ? De quel type sont les valeurs de ce tableau ? Quelle est la valeur associée à <em class="str">‘toto’</em> ?</p>
+  </li>
+  <li>
+    <p>Comment accéder à la valeur <em class="str">33</em> dans le tableau ? À la valeur <em class="str">‘Epinay’</em> ? Au tableau contenant les valeurs <em class="str">‘Damien’, ‘Askier’, 7, ‘Villetaneuse’</em> ?</p>
+  </li>
+  <li>
+    <p>Écrire une fonction prenant en paramètre un tableau (avec une structure similaire à <code>$personnes</code>) et l’affichant sous forme d’une table HTML. Le code HTML obtenu avec le tableau <code>$personnes</code> doit être :</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;table&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Martin<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Dupond<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>25<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Paris<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Jean<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Martin<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>20<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Villetaneuse<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Tom<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Tonge<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Epinay<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Arnaud<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Dupond<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>33<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Paris<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Emilie<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Ailta<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>46<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Villetaneuse<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+     <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Damien<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Askier<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>7<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>Villetaneuse<span class="nt">&lt;/td&gt;</span>
+     <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/table&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Modifier la fonction précédente pour ajouter une ligne d’en-têtes. Les en-têtes seront les clés du tableau contenu dans la première case. Dans le cas de <code>$personnes</code>, les en-têtes seront <em class="tt">Prénom, Nom, Age, Ville</em>.
+<br /> <strong>Indice :</strong> Utiliser <code>array_keys($personnes)[0]</code> pour récupérer la première clé du tableau <code>$personnes</code>.</li>
+  <li>Vérifier que l’affichage obtenu est correct lorsque la fonction prend en paramètre le tableau suivant :
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$scores</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Camille'</span>  <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">156</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Guillaume'</span><span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">254</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Julien'</span>   <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">192</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Nabila'</span>   <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">317</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Lorianne'</span> <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">235</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Tom'</span>      <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">83</span>  <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Michael'</span>  <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">325</span> <span class="p">],</span>
+  <span class="p">[</span><span class="s1">'Joueur'</span> <span class="o">=&gt;</span> <span class="s1">'Eddy'</span>     <span class="p">,</span> <span class="s1">'score'</span> <span class="o">=&gt;</span> <span class="mi">299</span> <span class="p">]</span>
+<span class="p">];</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice5" >
+              <div class="no-grille">
+                  <h2 id="exercice-5--tableau-à-deux-dimensions">Exercice 5 : Tableau à deux dimensions</h2>
+
+<p>On considère les deux tableaux suivants :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$tabMagazines</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">'le monde'</span>              <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'frequence'</span> <span class="o">=&gt;</span> <span class="s1">'quotidien'</span><span class="p">,</span> <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'actualité'</span><span class="p">,</span> <span class="s1">'prix'</span> <span class="o">=&gt;</span> <span class="mi">220</span><span class="p">],</span>
+  <span class="s1">'le point'</span>              <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'frequence'</span> <span class="o">=&gt;</span> <span class="s1">'hebdo'</span>    <span class="p">,</span> <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'actualité'</span><span class="p">,</span> <span class="s1">'prix'</span> <span class="o">=&gt;</span> <span class="mi">80</span> <span class="p">],</span>
+  <span class="s1">'causette'</span>              <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'frequence'</span> <span class="o">=&gt;</span> <span class="s1">'mensuel'</span>  <span class="p">,</span> <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'féministe'</span><span class="p">,</span> <span class="s1">'prix'</span> <span class="o">=&gt;</span> <span class="mi">180</span><span class="p">],</span>
+  <span class="s1">'politis'</span>               <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'frequence'</span> <span class="o">=&gt;</span> <span class="s1">'hebdo'</span>    <span class="p">,</span> <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'opinion'</span>  <span class="p">,</span> <span class="s1">'prix'</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">],</span>
+  <span class="s1">'le monde diplomatique'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'frequence'</span> <span class="o">=&gt;</span> <span class="s1">'mensuel'</span>  <span class="p">,</span> <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'analyse'</span>  <span class="p">,</span> <span class="s1">'prix'</span> <span class="o">=&gt;</span> <span class="mi">60</span> <span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$tabMagazinesAbonne</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'le monde'</span><span class="p">,</span> <span class="s1">'le monde diplomatique'</span><span class="p">];</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Afficher sur une ligne le nom de tous les magazines triés par ordre alphabétique et séparés par des virgules, sans faire de boucle. Vous utiliserez des fonctions déjà existantes telles que <a href="http://php.net/manual/fr/function.implode.php"><em class="php">implode</em></a>, <a href="http://php.net/manual/fr/function.sort.php"><em class="php">sort</em></a> et <a href="http://php.net/manual/fr/function.array-keys.php"><em class="php">array_keys</em></a> que vous trouverez dans le <a href="http://php.net/manual/fr/index.php">manuel php</a>.</p>
+  </li>
+  <li>Afficher les magazines exactement de la façon suivante en supposant qu’il peut y avoir beaucoup de magazines et beaucoup de propriétés associées :
+    <ul>
+      <li>le monde (quotidien, actualité, 220)</li>
+      <li>le point (hebdo, actualité, 80)</li>
+      <li>causette (mensuel, féministe, 180)</li>
+      <li>politis (hebdo, opinion, 100)</li>
+      <li>le monde diplomatique (mensuel, analyse, 60)</li>
+    </ul>
+  </li>
+  <li>En utilisant le tableau tabMagazinesAbonne contenant le nom des magazines d’un abonné, calculer le prix total de son abonnement.</li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice6" >
+              <div class="no-grille">
+                  <h2 id="exercice-6--objets">Exercice 6 : Objets</h2>
+
+<p>L’objectif de cet exercice est de développer une classe permettant la gestion d’une TODO liste (liste de tâches à réaliser).</p>
+
+<ol>
+  <li>
+    <p>Créer la classe <code class="highlighter-rouge">TODOList</code> contenant un attribut privé <code class="highlighter-rouge">$to_dos</code>, correspondant à un tableau contenant la liste des tâches à réaliser (chaque case correspond à une tâche qui est une chaîne de caractères). Les clés correspondront aux indices. Cette classe sera définie dans le fichier <code class="highlighter-rouge">TODOlist.php</code>.</p>
+  </li>
+  <li>
+    <p>Définir un constructeur ne prenant pas d’argument et initialisant une TODO liste vide.</p>
+  </li>
+  <li>
+    <p>Définir la méthode <code class="highlighter-rouge">add_to_do</code> prenant en paramètre une chaîne de caractères (correspondant à une tâche). Si cette chaîne n’est pas vide vide et n’est pas constituée uniquement d’espaces, la méthode ajoute cette tâche à la fin de la TODO liste.</p>
+  </li>
+  <li>
+    <p>Définir la méthode <code class="highlighter-rouge">remove_to_do</code> prenant en paramètre un indice et supprimant la tâche associée à cet indice dans la TODO liste.</p>
+  </li>
+  <li>
+    <p>Définir la méthode <code class="highlighter-rouge">is_empty</code> retournant <code class="highlighter-rouge">true</code> s’il n’y a aucune tâche, et <code class="highlighter-rouge">false</code> sinon.</p>
+  </li>
+  <li>
+    <p>Définir la méthode <code class="highlighter-rouge">get_html</code> retournant une chaîne de caractères correspondant au code HTML d’une liste non ordonnée où chaque item correspond à une tâche. Dans le cas où la TO DO liste est vide, <code class="highlighter-rouge">get_html</code> doit renvoyer le paragraphe “Aucune tâche à faire !”.</p>
+  </li>
+  <li>
+    <p>Créer un script <code class="highlighter-rouge">testTDL.php</code> créant une TODO liste avec 4 tâches, l’affichant, supprimant une des tâches puis l’affichant à nouveau. Ajouter des tests pour vérifier que la méthode <code class="highlighter-rouge">is_empty</code> fonctionne correctement et qu’une tâche vide ou constituée uniquement d’espaces n’est pas ajoutée à la liste.</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice7" >
+              <div class="no-grille">
+                  <h2 id="exercice-7--paramètres-dans-lurl">Exercice 7 : Paramètres dans l’url</h2>
+
+<ol>
+  <li>
+    <p>Appeler une page PHP en passant dans l’url un paramètre de nom <code class="highlighter-rouge">pseudo</code>. Le script devra vérifier si la valeur du paramètre correspond à un pseudonyme (c’est-à-dire une clé) du tableau <code class="highlighter-rouge">$personnes</code> défini dans l’exercice 4. Si c’est le cas, le script doit afficher le pseudo et les informations associées contenues dans le tableau <code class="highlighter-rouge">$personnes</code>. Il doit sinon afficher <code class="highlighter-rouge">Désolé, votre pseudonyme n'apparaît pas dans la liste</code>.</p>
+  </li>
+  <li>
+    <p>Créer un formulaire permettant à l’utilisateur de saisir le pseudonyme à rechercher afin de faciliter la saisie pour l’utilisateur. Mettre ensuite directement le formulaire dans le script PHP créé précédemment afin de pouvoir effectuer facilement plusieurs recherches. Faire en sorte que le champ de saisie du pseudonyme contienne la dernière valeur saisie.</p>
+  </li>
+  <li>
+    <p>Créer un deuxième formulaire demandant un pseudonyme, un prénom, un nom, un âge et une ville, et ajoutant dans le tableau <code class="highlighter-rouge">$personnes</code> une nouvelle personne dont les valeurs sont celles données par le formulaire. Ajouter plusieurs personnes et expliquer alors le problème. (Afficher le tableau en entier pour mieux voir le problème.) Comment remédier à ceci (réponse sans code car les connaissances nécessaires à la réponse n’ont pas encore été vues en cours) ?</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice8" >
+              <div class="no-grille">
+                  <h2 id="exercice-8--contenu-html-protégé-par-mot-de-passe">Exercice 8 : Contenu HTML protégé par mot de passe<sup>*</sup></h2>
+
+<p>Le but de cet exercice est de créer du contenu protégé par un mot de passe.</p>
+
+<ol>
+  <li>
+    <p>On suppose dans un premier temps qu’il n’y a qu’une seule page Web dont le contenu est protégé. Pour cela, choisir un mot de passe (par exemple : kangourou). Créer un formulaire permettant de saisir un mot de passe. Le contenu protégé doit alors s’afficher uniquement si le mot de passe est correct. Dans le cas contraire, le formulaire doit de nouveau s’afficher.</p>
+  </li>
+  <li>
+    <p>On suppose maintenant qu’il y a plusieurs pages (site Web) dont le contenu doit être protégé par un mot de passe. Télécharger <a href="../docs/TP1/Site_web_a_proteger.zip">l’archive</a>. Les 3 fichiers de cette archive doivent être protégés par un mot de passe. De plus, l’utilisateur doit se connecter une seule fois. Dès qu’il est connecté, il peut avoir accès à toutes les pages.</p>
+
+    <p><strong>Indication :</strong> Il est nécessaire d’utiliser les sessions. Créer le fichier <code class="highlighter-rouge">securite.php</code> et l’inclure en début de chaque fichier à protéger. Le fichier <code class="highlighter-rouge">securite.php</code> doit activer les sessions. Il doit ensuite tester si la variable <code class="highlighter-rouge">$_SESSION</code> contient une clé <code class="highlighter-rouge">connecte</code>. Si ce n’est pas le cas, le formulaire doit être affiché puis le script terminé. Dans le cas contraire, la page doit s’afficher normalement. Le fichier <code class="highlighter-rouge">securite.php</code> doit également tester si le formulaire a été soumis avec le bon mot de passe pour mettre à jour la variable <code class="highlighter-rouge">$_SESSION</code>.&lt;/p&gt;</p>
+
+    <p><strong>Notes :</strong></p>
+    <ul>
+      <li>Pour terminer un script, il est possible d’utiliser la fonction <a href="http://php.net/manual/fr/function.exit.php"><code class="highlighter-rouge">exit</code></a>.</li>
+      <li>La variable <code class="highlighter-rouge">$_SERVER["PHP_SELF"]</code> contient le nom du fichier appelé dans l’url. Il peut être utilisé comme valeur du paramètre <code class="highlighter-rouge">action</code> de la balise <code class="highlighter-rouge">form</code> pour que le même fichier soit appelé lors de la soumission du formulaire.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Donner la possibilité à l’utilisateur de se déconnecter sur n’importe quelle page. Pour cela, créer un fichier <code class="highlighter-rouge">deconnexion.php</code>. Ce script affchera un lien hypertexte sur le fichier appelé avec le paramètre <code class="highlighter-rouge">action</code> de valeur <code class="highlighter-rouge">deconnexion</code>. Inclure ce fichier dans <code class="highlighter-rouge">page1.php</code>, <code class="highlighter-rouge">page2.php</code> et <code class="highlighter-rouge">page3.php</code>. Dans le fichier <code class="highlighter-rouge">securite.php</code>, faire en sorte que lors d’un clic sur ce lien hypertexte, l’utilisateur soit déconnecté (il doit saisir à nouveau son mot de passe).</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice9" >
+              <div class="no-grille">
+                  <h2 id="exercice-9--todo-liste">Exercice 9 : TODO liste</h2>
+
+<p>L’objectif de cet exercice est de programmer une page Web (<code class="highlighter-rouge">tdl.php</code>) permettant de gérer une TODO liste (liste de tâches à réaliser). Chaque utilisateur se connectant sur la page Web doit pouvoir gérer sa propre TODO liste : créer des tâches, en supprimer et les sauvegarder. L’ajout d’une tâche se fera à l’aide d’un formulaire et la suppression d’une tâche se fera grâce à un lien hypertexte. La sauvegarde de la TODO liste se fera grâce aux cookies. La TODO liste doit être sauvegardée dans les sessions pour être accessible à chaque appel du script. L’instance de la classe <code class="highlighter-rouge">TODOList</code> sera stockée dans la variable <code class="highlighter-rouge">$_SESSION["tdl"]</code>.</p>
+
+<p><strong>Important :</strong> Cet exercice utilise la classe <code class="highlighter-rouge">TODOList</code> définie dans l’exercice 6. Il faut donc avoir terminé cet exercice avant de commencer celui-ci.</p>
+
+<p><strong>Important :</strong> Comme l’objet <code class="highlighter-rouge">TODOList</code> est sauvegardé dans la session, il est impératif d’inclure la définition de la classe avant d’activer les sessions. Le fichier  <code class="highlighter-rouge">tdl.php</code> doit commencer par :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span><span class="p">(</span><span class="s2">"TODOList.php"</span><span class="p">);</span> <span class="c1">// avant session_start car on stocke un objet TODOList dans la session</span>
+<span class="nb">session_start</span><span class="p">();</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Créer le script <code class="highlighter-rouge">tdl.php</code>. Celui-ci doit :
+    <ul>
+      <li>vérifier que la TODO liste est existe dans la session. Si ce n’est pas le cas, il initialise une TODO liste vide qu’il sauvegarde dans la session ;</li>
+      <li>vérifier s’il existe dans l’url un paramètre <code class="highlighter-rouge">task</code>. Si ce paramètre existe, alors le script ajoute à la TODO liste une tâche correspondant à la valeur du paramètre <code class="highlighter-rouge">task</code> ;</li>
+      <li>afficher la TODO liste.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Créer un formulaire facilitant l’ajout d’une tâche dans la TODO liste.</p>
+  </li>
+  <li>
+    <p>Modifier la méthode <code class="highlighter-rouge">get_html</code> de la classe TODO liste pour que chaque item soit un hyperlien sur le script <code class="highlighter-rouge">tdl.php</code> avec le numéro de la tâche comme valeur du paramètre <code class="highlighter-rouge">rm</code>.</p>
+  </li>
+  <li>
+    <p>Modifier le script <code class="highlighter-rouge">tdl.php</code> pour permettre la suppression des tâches dans la TODO liste lors d’un clic sur un hyperlien d’une tâche.</p>
+  </li>
+  <li>Définir les méthodes <code class="highlighter-rouge">get_representation</code> et <code class="highlighter-rouge">set_representation</code> dans la classe <code class="highlighter-rouge">TODOList</code>. La première méthode retournera une chaîne de caractères contenant les différentes tâches séparées par <code class="highlighter-rouge">"///"</code> (on suppose qu’aucune tâche contient <code class="highlighter-rouge">"///"</code>). La deuxième méthode chargera la liste des tâches (ie, modifiera le tableau <code class="highlighter-rouge">to_dos</code>) en fonction de la représentation passée en paramètre.</li>
+  <li>Modifier le script <code class="highlighter-rouge">tdl.php</code> pour permettre de sauvegarder la représentation de la TODO liste dans un cookie lors d’un clic sur un hyperlien (à ajouter dans le script). Modifier l’initialisation de la TODO liste (lorsqu’elle n’est pas dans la session) pour que celle-ci charge la représentation dans le cookie si celui-ci existe. Ajouter un lien supprimant <code class="highlighter-rouge">$_SESSION["tdl"]</code> pour vérifier que la sauvegarde via le cookie fonctionne.</li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          <section  class="boite exercice" id="exercice10" >
+              <div class="no-grille">
+                  <h2 id="exercice-10--questionnaire-à-choix-multiples">Exercice 10 : Questionnaire à choix multiples</h2>
+
+<ol>
+  <li>
+    <p>Le but de cet exercice est de faire une première page Web contenant des énigmes ou questions avec plusieurs réponses possibles (une seule d’entre elles étant correcte). L’utilisateur doit alors répondre aux différentes questions et le site affiche alors le score obtenu par l’utilisateur.</p>
+  </li>
+  <li>
+    <p>Ajouter sur la page d’accueil un formulaire pour que l’utilisateur puisse saisir son nom. Cette donnée sera utilisée par la suite pour personnaliser l’affichage du site.</p>
+  </li>
+  <li>
+    <p>Stocker, à l’aide d’un cookie le meilleur score obtenu par l’utilisateur. Dans la page du score, afficher ce meilleur score en plus du score obtenu à l’instant par l’utilisateur.</p>
+  </li>
+</ol>
+        
+              </div>
+          </section>	
+          
+          
+          
+          
+          
+          
+          </main>
+
+          <nav id="menu_side">
+
+            <div class="titre_menu">
+              <h3> NAVIGATION</h3>
+              <i class="fa fa-remove fa-3x close_menu"></i>
+            </div>
+            <ul>
+              <li> <a href="../../../index.html" class="close_menu">ACCUEIL</a></li>
+              <li> <a href="../../../recherche.html" class="close_menu">RECHERCHE</a></li>
+              <li> <a href="../../../enseignement.html" class="close_menu">ENSEIGNEMENT</a></li>
+            </ul>
+    
+            <div class="titre_menu">
+              <h3>EXERCICES DE TP</h3>
+            </div>
+
+
+            <ul>  
+
+              <li><a href="#exercice1" class="close_menu">Exercice 1</a></li>
+
+              <li><a href="#exercice2" class="close_menu">Exercice 2</a></li>
+
+              <li><a href="#exercice3" class="close_menu">Exercice 3</a></li>
+
+              <li><a href="#exercice4" class="close_menu">Exercice 4</a></li>
+
+              <li><a href="#exercice5" class="close_menu">Exercice 5</a></li>
+
+              <li><a href="#exercice6" class="close_menu">Exercice 6</a></li>
+
+              <li><a href="#exercice7" class="close_menu">Exercice 7</a></li>
+
+              <li><a href="#exercice8" class="close_menu">Exercice 8</a></li>
+
+              <li><a href="#exercice9" class="close_menu">Exercice 9</a></li>
+
+              <li><a href="#exercice10" class="close_menu">Exercice 10</a></li>
+
+            </ul>
+          </nav>
+
+          
+          
+    
+    <!-- Return to Top -->
+    <i id="return-to-top" class="fa fa-arrow-circle-up fa-3x"></i>
+    
+      <script src="../assets/js/menu.js"></script>      
+    </body>
+</html>

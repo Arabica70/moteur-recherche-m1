@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///users/barbarossa/Bureau/MyWebPage/MyWebPage.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Davide Barbarossa</title>
+</head>
+<body>
+
+<table style="text-align: center; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+<center>
+      <td>
+      <h2>Who am I?</h2>
+      My name is Davide Barbarossa</br>
+      <br>Born on 12/10/1994 in Rome (Italy)</br>
+      <br>Spoken languages: Italian (native tongue), french (fluent), english (fluent)</br>
+      <br>Programming languages: C, C++, Java, Coq</br>
+      </td>
+      <td style="width: 276px;"><img src="./MontPuget.jpeg" style="width:320px;height:185px" alt="Marseille, top of the Mont Puget, 2018" />
+      </td>
+      <td>
+      <h2>Where am I?</h2>
+      Institut Galilée, Université Paris 13</br>
+      <br>99, avenue Jean-Baptiste Clément</br>
+      <br>93430, Villetaneuse (France)</br>
+      <br>Office: B311</br>
+      <br>Telephone: +33 1 49 40 36 60</br>
+      <br>Email = <a href="mailto:barbarossa@lipn.univ-paris13.fr">(&lambda;<i>x</i>.barbarossa<i>x</i>lipn.univ-paris13.fr)@</a></br>
+      </td>
+</center>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+<hr>
+
+<center><p>
+</br><strong>Currently</strong> I am a <strong>PhD</strong> student in <strong>Theoretical Computer Science</strong> at the <a href="https://lipn.univ-paris13.fr/">Laboratoire d'Informatique de Paris Nord</a> of Université de Paris13, Sorbonne Paris Cité and the <a href="http://dmf.matfis.uniroma3.it/matematica/mat_home.php">Dipartimento di Matematica</a> of Università di Roma Tre.
+<br>Supervisors: <a href="https://lipn.univ-paris13.fr/~gmanzonetto/">G. Manzonetto</a> and <a href="http://logica.uniroma3.it/~tortora/">L. Tortora de Falco</a> <!--- and <a href="https://lipn.univ-paris13.fr/~guerrini/new-site/#/">S. Guerrini</a> --->.
+</p></center>
+
+<hr>
+
+<center>
+<h2>Academic Interests</h2>
+My main interests are <strong> Theoretical Computer Science</strong> and <strong>Foundations of Mathematics</strong> and of <strong>Physics </strong>.
+<p> My point of view is that of the Curry-Howard correspondence, inspired by the <a href="http://girard.perso.math.cnrs.fr/syntran.pdf">Transcendental Syntax</a> program of J.-Y. Girard.
+<br>To a computer scientist, I'd say that I'm doing Abstract Theory (and practice!) of Programming Languages.
+<br>To a mathematician, I'd say that I'm usually dealing with something in the following areas:
+<p>
+<strong> &#955;-calculus</strong> (Untyped, Typed, Differential, with Continuations, ... )
+<br><strong>Linear Logic</strong> (Proof-Nets, Geometry of Interaction, Ludics, ... )
+<br><strong>Krivine's Classical Realizability </strong> and<strong> Set Theory
+<br><strong>Category theory
+<br>...</strong>
+</strong>
+</p>
+
+<h2>Education</h2>
+- a.y. 2017/18: Laurea Magistrale (Master's degree) in Mathematics at Università Roma Tre.  Mark: 110/110 cum laude.
+<br>Specialization: Logica Matematica ed Informatica Teorica.
+<br>Supervisor: L. Tortora de Falco.
+<br>Thesis: <a href="TesiBarbarossaMagistrale.pdf">On the computational content of proofs</a>.</br>
+<br>- a.y. 2017/18: Master II (Master's degree) in Mathematics at Université d'Aix-Marseille. Mark: Très bien (16,11/20).
+<br>Specialization: Mathématiques Discrètes et Fondements de l'Informatique.
+<br>Supervisor: <a href="https://www.i2m.univ-amu.fr/perso/laurent.regnier/">L. Regnier</a>.</br>
+<br>- a.y. 2015/16: Laurea triennale (Bachelor's degree) in Mathematics at Università di Roma La Sapienza. Mark: 110/110 cum Laude.
+<br>Supervisors: C. Bernardi and L. Tortora de Falco.</br>
+<br>- a.y. 2012/13: Maturità scientifica (High school graduation) at Liceo Scientifico G. Peano in Monterotondo (Roma). Mark: 100/100.<br>
+</center>
+
+<hr>
+
+<table cellspacing="3" cellpadding="2" border="0" align="center">
+   <tr>
+     <td align="center"><br><h3><a href="research.html">Research</a></h3></td>
+     <td align="center"><br><h3><a href="teaching.html">Teaching</a></h3></td>
+     <td align="center"><br><h3><a href="curriculum.html">Curriculum</a></h3></td>
+   </tr>
+</table>
+
+<hr>
+
+<p align="center">
+<i>
+Page maintained by Davide Barbarossa
+</i>
+</p>
+
+</body></html>

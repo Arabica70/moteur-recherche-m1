@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Un test de primalit&#233;</TITLE>
+<META NAME="description" CONTENT="Un test de primalit&#233;">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node33.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html530"
+ HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html527"
+ HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html523"
+ HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html529"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html531"
+ HREF="node37.html">R&#233;ciprocit&#233; et nombres premiers</A>
+<B> Up:</B> <A NAME="tex2html528"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<B> Previous:</B> <A NAME="tex2html524"
+ HREF="node35.html">Crit&#232;re de P&#233;pin sur</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00730000000000000000">
+Un test de primalit&#233;</A>
+</H1>
+Si, pour <I>x</I> non multiple de <I>p</I>, <IMG WIDTH="93" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img274.gif"
+ ALT="$x^{p-1}\not \equiv 1 \ [p]$">, alors <I>p</I> n'est
+ pas premier (contrapos&#233;e du petit th&#233;or&#232;me de Fermat).
+On a la ``r&#233;ciproque ''&nbsp;: si
+ <IMG WIDTH="128" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img275.gif"
+ ALT="$x^{n-1} \ {\bmod} \ n =1$"> et <IMG WIDTH="152" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img276.gif"
+ ALT="$x^{(n-1)/p} \ {\bmod} \ n \not = 1$"> 
+pour tout facteur premier <I>p</I> de <I>n</I>-1 alors <I>n</I> est premier.
+C'est la base m&#234;me du test de primalit&#233; par descente-remont&#233;e 
+(ou downrun) dont voici un exemple tir&#233; de [Knuth]&nbsp;:
+<BR>
+<I>n<SUB>0</SUB></I>=37866809061660057264219253397&nbsp;;
+<BR>
+puisque <IMG WIDTH="141" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img277.gif"
+ ALT="$3^{n_0-1} \ {\bmod} \ n_0=1$">, 
+<I>n<SUB>0</SUB></I> est s&#251;rement premier.
+<BR>
+<I>n<SUB>0</SUB></I>-1=2.2.19.107.353.<I>n<SUB>1</SUB></I> avec <I>n<SUB>1</SUB></I>=13191270754108226049301&nbsp;;
+<BR>
+puisque 
+<IMG WIDTH="141" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img278.gif"
+ ALT="$3^{n_1-1} \ {\bmod} \ n_1 \not =1$">, <I>n<SUB>1</SUB></I> est compos&#233;.
+<BR>
+En effet <I>n<SUB>1</SUB></I>=91813.<I>n<SUB>2</SUB></I> o&#249; <I>n<SUB>2</SUB></I>=143675413657196977&nbsp;;
+<BR>
+puisque 
+<IMG WIDTH="141" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.gif"
+ ALT="$3^{n_2-1} \ {\bmod} \ n_2=1$">, <I>n<SUB>2</SUB></I> est s&#251;rement premier.
+<BR>
+<I>n<SUB>2</SUB></I>-1=2<SUP>4</SUP>.3<SUP>2</SUP>.547.<I>n<SUB>3</SUB></I> et <I>n<SUB>3</SUB></I>=1103.<I>n<SUB>4</SUB></I> o&#249; <I>n<SUB>4</SUB></I>=1653701519&nbsp;; <BR>
+puisque <IMG WIDTH="141" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.gif"
+ ALT="$3^{n_4-1} \ {\bmod} \ n_4=1$">, <I>n<SUB>4</SUB></I> est s&#251;rement premier.
+<BR>
+<I>n<SUB>4</SUB></I>-1=2.7.19.23.137.1973 est compl&#232;tement factoris&#233; donc on peut 
+commencer notre test&nbsp;:
+<P>
+<DIV ALIGN="CENTER">
+ <SMALL><TABLE CELLPADDING=3 BORDER="1">
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP><I>x</I></TD>
+<TD ALIGN="RIGHT" NOWRAP><I>p</I></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG WIDTH="134" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.gif"
+ ALT="$x^{(n_4-1)/p} \ {\bmod} \ n_4$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG WIDTH="110" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img282.gif"
+ ALT="$x^{n_4-1} \ {\bmod} \ n_4$"></TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>7</TD>
+<TD ALIGN="CENTER" NOWRAP>766408626</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>19</TD>
+<TD ALIGN="CENTER" NOWRAP>332952683</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>23</TD>
+<TD ALIGN="CENTER" NOWRAP>1154237810</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>137</TD>
+<TD ALIGN="CENTER" NOWRAP>373782186</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="RIGHT" NOWRAP>1973</TD>
+<TD ALIGN="CENTER" NOWRAP>490790919</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>7</TD>
+<TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>1653701518</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+</TR>
+</TABLE></SMALL>
+</DIV>
+<P>
+Pour <I>p</I>=2, on a essay&#233; <I>x</I>=2, 3, 5 avant de trouver <I>x</I>=7 pour
+ conclure. Donc <I>n<SUB>4</SUB></I> est premier d'o&#249; <I>n<SUB>2</SUB></I> est compl&#232;tement factoris&#233;.
+Et ainsi, en faisant un tableau similaire pour <I>n<SUB>0</SUB></I> (car on a compl&#232;tement 
+factoris&#233; <I>n<SUB>0</SUB></I>-1), on obtient que <I>n<SUB>0</SUB></I> est premier. Mais bien s&#251;r, on 
+peut encore gagner du temps en utilisant la loi de r&#233;ciprocit&#233; quadratique
+ qui nous aurait indiqu&#233;, par le simple calcul de <I>n<SUB>4</SUB></I> mod 10,
+que <IMG WIDTH="45" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img283.gif"
+ ALT="$5^\frac{n_4-1}{2} $"> mod <I>n<SUB>4</SUB></I>=1.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html530"
+ HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html527"
+ HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html523"
+ HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html529"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html531"
+ HREF="node37.html">R&#233;ciprocit&#233; et nombres premiers</A>
+<B> Up:</B> <A NAME="tex2html528"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<B> Previous:</B> <A NAME="tex2html524"
+ HREF="node35.html">Crit&#232;re de P&#233;pin sur</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="fr">
+	<head>
+		<title>Céline Rouveirol</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+	<!-- Main -->
+	<div id="main">
+	<div class="inner">
+
+	<!-- Header -->
+	<header id="header">
+	<div class="logo">
+				<h2>Céline Rouveirol</h2><span class="image avatar"><a href="#header"><img src="img/CelineRouveirol3.png" align="right"></a></span><br/><br/>
+				Professeur au <a href="http://lipn.univ-paris13.fr">LIPN</a>, <a href="http://www.cnrs.fr">CNRS</a> UMR 7030<br/>
+				Enseignante à  <a href="https://galilee.univ-paris13.fr/">l'Institut Galilée</a>, <a href="http://www.univ-paris13.fr/">Université Paris 13</a><br/>
+	</div>
+	<ul class="icons">
+				<li><a href="http://dblp.uni-trier.de/pers/hd/r/Rouveirol:C=eacute=line"><i class="icon fa-th-list"></i><span class="label">&nbsp;DBLP</span></a></li>
+				<li><a href="https://www.researchgate.net/profile/Celine_Rouveirol"><i class="icon fa-users"></i><span class="label">&nbsp;ResearchGate</span></a></li>
+			<!--	<li><a hreflang="en-uk" lang="en-uk" xml:lang="en-uk" href="index_uk.html">🇬🇧<</a></li -->
+	</ul>
+	</header>
+	<!-- Section Contact ---------------------------------------------------------------------->
+	<section>
+	<header class="major" id="contacts">
+	<h2><i class="fa fa-vcard" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;  Contact</h2>
+	</header>
+    <ul class="contact">
+    <li class="fa-university"></i>
+		    LIPN, CNRS UMR 7030<br/>
+            Université Paris 13<br/>
+		    99 avenue Jean-Baptiste Clément<br/>
+		    93430 Villetaneuse</li>
+	<li class="fa-envelope-o">  celine.rouveirol AT lipn.univ-paris13.fr</li>
+	<li class="fa-phone">       +33 (0)1 49 40  40 79</li>
+	<li class="fa-map-marker">  Bureau B306, Institut Galilée<li/>
+    </section>
+
+	<!-- Section Recherche -------------------------------------------------------------------------->
+	<section>
+	<header class="major" id="recherche">
+		<h2><i class="fa fa-flask" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Recherche</h2>
+	</header>
+	<div class="content">
+	<p>Je suis membre de l’<a href="https://lipn.univ-paris13.fr/accueil/equipe/a3/">équipe A3 
+	(Apprentissage Artificiel et Applications)</a> 
+				    du <a href="https://lipn.univ-paris13.fr/">Laboratoire d’informatique de Paris Nord (LIPN)</a>.</br>
+	Mes thématiques de recherche portent sur la Programmation Logique Inductive, l'inférence et la révision de graphes, notamment biologiques. </p>
+	</div>
+	</section>
+
+    <!-- Section Encadrement doctoral ---------------------------------------------------------------------->
+	<section>
+	<header class="major" id="encadrements">
+		<h2><i class="fa fa-handshake-o" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Encadrement doctoral</h2>
+	</header>
+				<div class="content">
+				<div class="table-wrapper">
+				<table>
+					<thead>
+					<tr>
+						<th>Période</th>
+						<th>Doctorant</th>
+						<th>Sujet</th>
+					</tr>
+					</thead>
+					<tbody>				
+					<tr>
+					<td>2011--2014</td>
+					<td>Ines Chebil</td>
+					<td>"Méthodes d'ensemble pour l'inférence de réseaux de régulation coopératifs", thèse Université Paris 13</td>
+					</tr>
+                <tr>
+                    <td>2009--2013</td>
+                    <td>Moez Essaidi</td>
+					<td>"Model-Driven Data Warehouse and its Automation using Machine Learning Techniques", co-encadré avec A. Osmani), 
+                    thèse Université Paris 13</td>
+                </tr>
+                <tr>
+					<td>2009--2013</td>
+                    <td>Karima Mouhoubi</td>
+					<td>"Extraction de motifs dans des données bruitées", co-encadrée avec L. Létocart, thèse Université Paris 13</td>
+                </tr>
+               <tr>
+					<td>2007--2013</td>
+                    <td><a href="https://www.devinci.fr/enseignant-chercheur/christophe-rodrigues/">Christophe Rodrigues</a> </td>
+					<td>"Apprentissage incrémental de modèles d'action relationnels", co-encadré avec P. Gérard, thèse Université Paris 13</td>
+                </tr>
+                <tr>
+					<td>2007--2011</td>
+                    <td>Nesrine Benchettara</td>
+					<td>"Prévision de nouveaux liens dans les réseaux d'interactions bipartis : Application au calcul de recommandation", co-encadrée avec 
+                    R. Kanawati, thèse Université Paris 13</td>
+                </tr>
+                <tr>
+					<td>2004-2008</td>
+                    <td><a href="https://pro.univ-lille.fr/mohamed-elati/">Mohamed Elati</a> </td>
+					<td>"Apprentissage de réseaux de régulation génétique à partir de données d'expression", thèse Université Paris 13</td>
+                </tr>
+					</tbody>
+				</table>
+				</div>
+				</div>
+    </section>
+	<!-- Section Responsabilités ---------------------------------------------------------------------->
+	<section>
+	<header class="major" id="responsabilites">
+		<h2><i class="fa fa-refresh" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Responsabilités</h2>
+	</header>
+				<div class="content">
+				<div class="table-wrapper">
+				<table>
+					<thead>
+					<tr>
+						<th>Période</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>2011-2015 et 2018 - </td>
+						<td>Responsable de l'équipe A3</td>
+					</tr>
+					<tr>
+						<td>2011 - </td>
+                        <td>Directrice adjointe de l'Institut Galilée, en charge de l'école d'ingénieurs 
+                        <a href="http://www.sup-galilee.univ-paris13.fr/">Sup Galilée </a></td>
+					</tr>
+					<tr>
+						<td>2008 - </td>
+						<td>Membre  au conseil de l'institut Galilée (comme élue de 2008 à 2011, et depuis 2017 ou comme 
+						invitée de 2011 à 2017)</td>
+					</tr>
+					<tr>
+						<td>2008-2015 et 2018-</td>
+						<td>Membre élue du comité d'experts de la section 27 de l'Université Paris 13</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+				</div>
+    </section>
+
+	<!-- Section Publications ---------------------------------------------------------------------->
+	<section>
+	<header class="major" id="publications">
+		<h2><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Principales publications (depuis 2007)</h2>
+    </header> 
+
+
+<h3>Chapitres de livres</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='Rodrigues:2016aa'>1</a>]</td>
+                <td><b>Collaborative Online Learning of an Action Model</b><br>Christophe Rodrigues and Henry Soldano and Gauvain Bourgne and Céline Rouveirol<br>300--319, Springer, Lecture Notes in Computer Science, 9580, Solving Large Scale Learning Tasks. Challenges and Algorithms, 2016</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:ElatiR11'>2</a>]</td>
+                <td><b>Unsupervised Learning for Gene Regulation Network Inference from Expression Data: A Review</b><br>Mohamed Elati and Rouveirol Céline<br>Wiley, Elati, Algorithms in Computational Molecular Biology: Techniques, Approaches and Applications, 41, M. Elloumi and A. Y. Zomaya, 2011</td>
+            </tr>
+         </table>
+
+<h3>Edition  d'ouvrages collectifs</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='RouveirolPK17'>3</a>]</td>
+                <td><b>Special issue on Dynamic Networks and Knowledge Discovery</b><br>8, 1131--1132, Machine Learning Journal, 106, Céline Rouveirol and Ruggero G. Pensa and Rushed Kanawati, 2017</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:KanawatiPR2014dynak'>4</a>]</td>
+                <td><b><a href='http://ceur-ws.org/Vol-1229'>Proceedings of the 2nd International Workshop on Dynamic Networks and Knowledge Discovery (DyNaK 2014)</a></b><br>co-located with the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2014), Nancy, CEUR-WS.org, CEUR Workshop Proceedings, 1229, Kanawati Rushed  and Ruggero G. Pensa and Rouveirol Céline, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='DBLP:conf/pkdd/2014dynak'>5</a>]</td>
+                <td><b>Proceedings of the 2nd International Workshop on Dynamic Networks and Knowledge Discovery, DyNaK 2014, co-located with the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2014), Nancy</b><br>CEUR-WS.org, CEUR Workshop Proceedings, 1229, Rushed Kanawati and Ruggero G. Pensa and Céline Rouveirol, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:PensaCRK13ida'>6</a>]</td>
+                <td><b>Special issue on Dynamic Networks and Knowledge Discovery</b><br>1, IOS Press, Intelligent Data Analysis, 17, 10.3233/IDA-120564, Pensa, Ruggero G. and Cordero, Francesca and Rouveirol, Céline and Kanawati, Rushed, https://doi.org/10.3233/IDA-120564, 2013</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:RuggeroCRKTR10dynak'>7</a>]</td>
+                <td><b>Proceedings of the 1st Workshop on Dynamic Networks and Knowledge Discovery (DyNaK 2010), Barcelona, Spain</b><br>CEUR-WS, Vol-655, urn:nbn:de:0074-655-4, Ruggero G. Pensa and Cordero Francesca and Rouveirol Céline and Kanawati Rushed and José A. Troyano and Paolo Rosso, 2010</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:BennaniR09cap'>8</a>]</td>
+                <td><b>Actes de la 11e Conférence d'Apprentissage, Plateforme AFIA (CAp 2009)</b><br>Plate-forme AFIA, Hammamet-Tunisie, Presses universitaires de Grenoble, Bennani, Younès and Rouveirol, Céline, Mai 2009</td>
+            </tr>
+         </table>
+
+<h3>Articles dans des revues internationales avec comité de lecture</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:ChebilNSRE2014transnano'>9</a>]</td>
+                <td><b><a href='https://doi.org/10.1109/TNB.2014.2316920'>Hybrid method inference for the construction of cooperative regulatory network in human</a></b><br>Ines Chebil and Rémi Nicolle and Guillaume  Santini and Céline Rouveirol and  Mohamed Elati<br>2, 97--103, 13, IEEE Transactions on NanoBioscience, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:ElatiNBBRR07bioinfo'>10</a>]</td>
+                <td><b>LICORN: learning cooperative regulation networks from gene expression data</b><br>Mohamed Elati and Pierre Neuvial and Monique Bolotin-Fukuhara and Emmanuel Barillot and François Radvanyi and Rouveirol Céline<br>18, ant, 2407-2414, 23, Elati,Rouveirol, Bioinformatics, 2007</td>
+            </tr>
+         </table>
+
+<h3>Articles dans d'autres revues</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:BirmeleERA08mlsb'>11</a>]</td>
+                <td><b><a href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2654972/pdf/1753-6561-2-S4-S4.pdf'>Identification of functional modules based on transcriptional regulation structure</a></b><br>Etienne Birmelé and  Elati Mohamed and Rouveirol Céline and Christophe Ambroise<br>Suppl 4, Selected papers of Machine Learning in Systems Biology: MLSB 2007, 6 pages, S4, 2, BMC Proceedings, 2008</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:ElatiRR07tsi'>12</a>]</td>
+                <td><b>Fouille de données pour l'extraction de grands réseaux de régulation génétique</b><br>Mohamed Elati and François Radvanyi and Rouveirol Céline<br>1-2, 173-196, 26, Technique et Science Informatiques, 2007</td>
+            </tr>
+         </table>
+
+<h3>Communications dans des conférences internationales avec comité de lecture</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='Rodrigues:2016ab'>13</a>]</td>
+                <td><b>Collaborative Decision in Multi-Agent Learning of Action Models</b><br>Christophe Rodrigues and Henry Soldano and Gauvain Bourgne and Céline Rouveirol<br>640--647, rodrigues, 28th IEEE International Conference on Tools with Artificial Intelligence (ICTAI 2016), San Jose, California, USA, 10.1109/ICTAI.2016.0103, 2016</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:RodriguesSBR2014ecai'>14</a>]</td>
+                <td><b><a href='http://dx.doi.org/10.3233/978-1-61499-419-0-1087'>Multi Agent Learning of Relational Action Models</a></b><br>Christophe Rodrigues and Henry Soldano and Gauvain Bourgne and Céline Rouveirol<br>1087--1088, ECAI 2014 - 21st European Conference on Artificial Intelligence, 18-22 August 2014, Prague, Czech Republic - Including Prestigious Applications of Intelligent Systems (PAIS 2014), DBLP:conf/ecai/2014, 10.3233/978-1-61499-419-0-1087, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='Rodrigues:2014aa'>15</a>]</td>
+                <td><b>Multi Agent Learning of Relational Action Models</b><br>Christophe Rodrigues and Henry Soldano and Gauvain Bourgne and Céline Rouveirol<br>1087--1088, IOS Press, Frontiers in Artificial Intelligence and Applications, 263, rodrigues, 21st European Conference on Artificial Intelligence (ECAI 2014), Prague, Czech Republic, Torsten Schaub and Gerhard Friedrich and Barry O'Sullivan, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:ChebilERS13icmla'>16</a>]</td>
+                <td><b><a href='http://dx.doi.org/10.1109/ICMLA.2013.14'>SetNet: Ensemble Method Techniques for Learning Regulatory Networks</a></b><br>Chebil Inès and Elati Mohamed and Rouveirol Céline and Santini Guillaume<br>34--39, 12th International Conference on Machine Learning and Applications, ICMLA 2013, Miami, FL, USA, December 4-7, 2013, Volume 1, DBLP:conf/icmla/2013-1, 10.1109/ICMLA.2013.14, 2013</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='ChebilNSRE13'>18</a>]</td>
+                <td><b>Hybrid method inference for the construction of cooperative regulatory network in human</b><br>Ines Chebil and Rémy Nicolle and Guillaume Santini and Céline Rouveirol and Mohamed Elati<br>121--126, 2013 IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2013), Shanghai, China, 10.1109/BIBM.2013.6732474, 2013</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:MouhoubiLR2012iconip'>19</a>]</td>
+                <td><b><a href='http://dx.doi.org/10.1007/978-3-642-34487-9_71'>A Knowledge-Driven Bi-clustering Method for Mining Noisy Datasets</a></b><br>Mouhoubi Karima  and Létocart Lucas  and Rouveirol Céline<br>585--593, Neural Information Processing - 19th International Conference, ICONIP 2012, Doha, Qatar, November 12-15, 2012, Proceedings, Part III, DBLP:conf/iconip/2012-3, 10.1007/978-3-642-34487-9_71, 2012</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='RodriguesGRS12'>20</a>]</td>
+                <td><b>Active Learning of Relational Action Models</b><br>Rodrigues, Christophe and Gérard, Pierre  and Rouveirol, Céline and Soldano, Henry<br>302--316, Springer, Lecture Notes in Computer Science, 7207, 21st International Conference on Inductive Logic Programming (ILP 2011), Windsor Great Park, UK, 10.1007/978-3-642-31951-8_26, Muggleton, Stephen and Tamaddoni-Nezhad, Alireza and Lisi, Francesca, 978-3-642-31950-1, 2012</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:EssaidiOR11ictai'>21</a>]</td>
+                <td><b>Transformation Learning in the Context of Model-Driven Data Warehouse: An Experimental Design Based on Inductive Logic Programming</b><br>Essaidi Moez and Osmani Aomar and Rouveirol Céline <br>693--700, IEEE, Proceedings of the 23rd IEEE International Conference on Tools with Artificial Intelligence (ICTAI 2011), http://doi.ieeecomputersociety.org/10.1109/ICTAI.2011.110, 978-1-4577-2068-0, 2011</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:MouhoubiLR11ictai'>22</a>]</td>
+                <td><b>Itemset Mining in Noisy Contexts: A Hybrid Approach</b><br>Mouhoubi Karima and Létocart Lucas and Rouveirol Céline<br>33--40, IEEE, Proceedings of the 23rd IEEE International Conference on Tools with Artificial Intelligence (ICTAI 2011), http://doi.ieeecomputersociety.org/10.1109/ICTAI.2011.14, 978-1-4577-2068-0, 2011</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:PradelSDGRUFD11sigkdd'>23</a>]</td>
+                <td><b>A case study in a recommender system based on purchase data</b><br>Bruno Pradel and Savaneary Sean and Julien Delporte and Guérif Sébastien and Rouveirol  Céline and Nicolas Usunier and Françoise Fogelman-Soulié and Frédéric Dufau-Jo<br>377-385, ACM Press, Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (SIGKDD 2011), 2011</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:BenchettaraKR10recsys'>24</a>]</td>
+                <td><b>A supervised machine learning link prediction approach for academic collaboration recommendation</b><br>Benchettara, Nesserine and Kanawati, Rushed and Rouveirol, Céline<br>253-256, ACM Press, Proceedings of the 2010 ACM Conference on Recommender Systems, (RecSys 2010), 2010</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:RodriguesGR10ilp'>25</a>]</td>
+                <td><b>Incremental Learning of Relational Action Models in Noisy Environments</b><br>Christophe Rodrigues and Pierre Gérard and Céline Rouveirol<br>Revised Papers, 206--213, Springer, Lecture Notes in Computer Science, 6489, 20th International Conference on Inductive Logic Programming (ILP 2010), 2010</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:RodriguesGRS10icmla'>26</a>]</td>
+                <td><b>Incremental Learning of Relational Action Rules</b><br>Rodrigues Christophe and  Gérard Pierre and Rouveirol Céline and Soldano Henry<br>451--458, IEEE Computer Society, Washington, DC, USA, Proceedings of the International Conference on Machine Learning and Applications (ICMLA'10), Sorin Draghici and Taghi M. Khoshgoftaar and Vasile Palade and Witold Pedrycz and M. Arif Wani and Xingquan Zhu, 978-0-7695-4300-0, 2010</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:AlphonseR07ilp'>27</a>]</td>
+                <td><b>Extension of the Top-Down Data-Driven Strategy to ILP</b><br>Alphonse Erick and Rouveirol Céline<br>49-63, Springer, Lecture Notes in Computer Science, 4455, Inductive Logic Programming, 16th International Conference, ILP 2006, Revised Selected Papers, http://dx.doi.org/10.1007/978-3-540-73847-3_13, 2007</td>
+            </tr>
+         </table>
+
+<h3>Autres conférences</h3>
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='CoutantR2017'>28</a>]</td>
+                <td><b>Network Inference of Dynamic Models by the Combination of Spanning Arborescences</b><br>Anthony Coutant and Céline Rouveirol<br>Journées Ouvertes en Biologie, Informatique et Mathématiques (JOBIM 2017), Lille, France, 2017</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='Rodrigues:2014cr'>29</a>]</td>
+                <td><b>A Consistency Based Approach of Action Model Learning in a Community of Agents</b><br>Rodrigues, Christophe and Soldano, Henry and Bourgne, Gauvain and Rouveirol, Céline<br>(ext. abstract), 1557--1558, International Foundation for Autonomous Agents and Multiagent Systems, 2014 International Conference on Autonomous Agents and Multi-agent Systems (AAMAS '14), Paris, France, 2014</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='a3-aoc:MLR11-roadef'>30</a>]</td>
+                <td><b>Heuristique pour l'extraction de motifs ensemblistes bruités</b><br>Mouhoubi Karima  and Létocart Lucas  and  Rouveirol Céline<br>Saint-Etienne, France, 12ème congrès de la Société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF'2011), 2011</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:BenchettaraKR10asonam'>31</a>]</td>
+                <td><b>Supervised Machine Learning Applied to Link Prediction in Bipartite Social Networks</b><br>Benchettara, Nesserine and Kanawati, Rushed and Rouveirol, Céline<br>326-330, IEEE Computer Society, International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2010), 2010</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:AzeGTNLGBRPF07mlsb'>32</a>]</td>
+                <td><b>Towards a semi-automatic functional annotation tool based on decision tree techniques</b><br>Jérôme Azé and Lucie Gentils and Claire Toffano-Nioche and Valentin Loux and Jean-François Gibrat and Philippe Bessières and Céline Rouveirol and Anne Poupon and Christine Froidevaux<br>International Workshop on Machine Learning in Systems Biology (MLSB 2007), 2007</td>
+            </tr>
+         </table>
+
+<table style='color:#000'>
+            <tr>
+                <td valign='top'>[<a id='A3:BirmeleERA07mlsb'>33</a>]</td>
+                <td><b>Identification of functional modules based on transcriptional regulation structure</b><br>Etienne Birmelé and Mohamed Elati and Rouveirol Céline and Christophe Ambroise<br>International Workshop on Machine Learning in Systems Biology (MLSB 2007), 2007</td>
+            </tr>
+         </table>
+
+
+	</section>
+	</div>
+	</div>
+
+<!-- Sidebar -------------------------------------------------------------------------------------->
+<div id="sidebar">
+<div class="inner">
+
+	<!-- Menu -->
+	<nav id="menu">
+	<header class="major">
+	<h2>Menu</h2>
+	</header>
+
+	<ul>
+		<li><a href="#contacts"><i class="fa fa-vcard" aria-hidden="true"></i> Contacts</a></li>
+		<li><a href="#recherches"><i class="fa fa-flask" aria-hidden="true"></i> Recherches</a></li>
+		<li><a href="#encadrements"><i class="fa fa-handshake-o" aria-hidden="true"></i> Encadrements</a></li>
+		<li><a href="#responsabilites"><i class="fa fa-refresh" aria-hidden="true"></i> Responsabilités</a></li>
+		<li><a href="#publications"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Publications</a></li>
+	</ul>
+	</nav>
+
+	<div class="logo">
+				<a href="http://lipn.univ-paris13.fr/"><img src="img/lipn.png" alt="LIPN logo" width="60"></a>
+                <a href="http://www.univ-paris13.fr/"><img src="img/up13-web.png" alt="LIPN logo" width="90"></a>
+				<a href="http://www.cnrs.fr/"><img src="img/logocnrs.jpg" alt="LIPN logo" width="50"></a>
+				<a href="http://www.sorbonne-paris-cite.fr/"><img src="img/uspc-footer.jpg" alt="LIPN logo" width="100"></a>
+    </div>
+<!-- Footer -->
+	<footer id="footer">
+	<p class="copyright">&copy; LIPN. All rights reserved.<br>
+	Design: <a href="https://html5up.net">HTML5 UP</a> (CCA 3.0).</p>
+	</footer>
+</div>
+</div>
+
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+</body>
+</html>

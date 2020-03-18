@@ -1,0 +1,521 @@
+<html>
+	<head>
+		<!-- CHANGE TITLE AND META ACCORDINGLY -->
+		<title>Rado Rakotonarivo - Université Paris 13</title>
+		<meta name="theme-color" content="#ffffff">
+		<meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../css/code.css">
+	</head>
+	<body>
+
+		<div class="container" style="width: 100%">
+
+			<div class="wow fadeInUp content-card" style="margin-top: 10;">
+			  <span class="text-subtitle" style="font-size: 2em; font-weight: 300; color: #333">Correction du TD/TP 2 et du TD/TP 3</span><br>
+        Les énoncés sont ici:
+        <ul>
+          <li>
+            <a href="https://lipn.univ-paris13.fr/~fernique/info/algo_TD_TP_2.pdf" style="color: blue; text-decoration: underline blue">TD/TP 2</a>
+          </li>
+          <li>
+            <a href="https://lipn.univ-paris13.fr/~fernique/info/algo_TD_TP_3.pdf" style="color: blue; text-decoration: underline blue">TD/TP 3</a>
+          </li>
+        </ul>
+			</div>
+
+      <div class="wow fadeInUp content-card" style="margin-top: 10;">
+			  <span class="text-description" style="font-size: 2em; font-weight: 300; color: #333">gauss.c</span><br>
+        Ce code vous permettra d'appeler la méthode de gauss sur un problème avec l lignes et c colonnes. L'exemple est celui du TD.
+
+
+      <!-- HTML generated using hilite.me --><div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #009999">#include&lt;stdio.h&gt;</span>
+<span style="color: #009999">#include&lt;stdlib.h&gt;</span>
+<span style="color: #009999">#include&lt;math.h&gt;</span>
+
+<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_matrice</span> (<span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">afficher</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c);
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">colonne_pivot</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp);
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">ligne_pivot</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">echange</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> lp);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">annule</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">annule_normalise</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">descente</span>(<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c);
+
+
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">main</span>(<span style="color: #007788; font-weight: bold">int</span> argc, <span style="color: #007788; font-weight: bold">char</span> <span style="color: #006699; font-weight: bold">const</span> <span style="color: #555555">*</span>argv[]) {
+  <span style="color: #007788; font-weight: bold">int</span> l <span style="color: #555555">=</span> <span style="color: #FF6600">3</span>, c <span style="color: #555555">=</span> <span style="color: #FF6600">5</span>;
+  <span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m <span style="color: #555555">=</span> creer_matrice(l,c);
+  <span style="color: #0099FF; font-style: italic">// initialisation</span>
+  m[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>;m[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;m[<span style="color: #FF6600">2</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">7</span>;m[<span style="color: #FF6600">3</span>] <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">3</span>; m[<span style="color: #FF6600">4</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">5</span>;
+  m[<span style="color: #FF6600">5</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;m[<span style="color: #FF6600">6</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">3</span>;m[<span style="color: #FF6600">7</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">6</span>;m[<span style="color: #FF6600">8</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; m[<span style="color: #FF6600">9</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">3</span>;
+  m[<span style="color: #FF6600">10</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>;m[<span style="color: #FF6600">11</span>] <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">2</span>;m[<span style="color: #FF6600">12</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;m[<span style="color: #FF6600">13</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>;m[<span style="color: #FF6600">14</span>] <span style="color: #555555">=</span> <span style="color: #FF6600">8</span>;
+
+  afficher(m,l,c);
+
+  descente(m,l,c);
+
+  <span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">0</span>;
+}
+
+<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_matrice</span> (<span style="color: #007788; font-weight: bold">int</span> l,<span style="color: #007788; font-weight: bold">int</span> c){
+  <span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m <span style="color: #555555">=</span> malloc(l<span style="color: #555555">*</span>c<span style="color: #555555">*</span><span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">float</span>));
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> l; i<span style="color: #555555">++</span>) {
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> j <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; j <span style="color: #555555">&lt;</span> c; j<span style="color: #555555">++</span>) {
+      m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;
+    }
+  }
+  <span style="color: #006699; font-weight: bold">return</span> m;
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">afficher</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c){
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> l; i<span style="color: #555555">++</span>) {
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> j <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; j <span style="color: #555555">&lt;</span> c; j<span style="color: #555555">++</span>) {
+      printf(<span style="color: #CC3300">&quot;%f</span><span style="color: #CC3300; font-weight: bold">\t</span><span style="color: #CC3300">&quot;</span>, m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j]);
+    }
+    printf(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+  }
+}
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">colonne_pivot</span> (<span style="color: #007788; font-weight: bold">float</span> <span style="color: #555555">*</span>m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp){
+  <span style="color: #006699; font-weight: bold">if</span> (c <span style="color: #555555">==</span> cp){
+    <span style="color: #006699; font-weight: bold">return</span> c;
+  } <span style="color: #006699; font-weight: bold">else</span> {
+    <span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> lc;
+    <span style="color: #006699; font-weight: bold">while</span> (m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp]<span style="color: #555555">==</span><span style="color: #FF6600">0</span> <span style="color: #555555">&amp;&amp;</span> i<span style="color: #555555">&lt;</span>l<span style="color: #555555">-</span><span style="color: #FF6600">1</span>){
+      i<span style="color: #555555">++</span>;
+    }
+    <span style="color: #006699; font-weight: bold">if</span> (m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp] <span style="color: #555555">!=</span> <span style="color: #FF6600">0</span>)
+      <span style="color: #006699; font-weight: bold">return</span> cp;
+    <span style="color: #006699; font-weight: bold">else</span>
+      <span style="color: #006699; font-weight: bold">return</span> colonne_pivot(m,l,c,lc,cp<span style="color: #555555">+</span><span style="color: #FF6600">1</span>);
+  }
+}
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">ligne_pivot</span> (<span style="color: #007788; font-weight: bold">float</span> <span style="color: #555555">*</span>m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp){
+  <span style="color: #007788; font-weight: bold">int</span> i;
+  <span style="color: #007788; font-weight: bold">int</span> lp <span style="color: #555555">=</span> lc;
+  <span style="color: #007788; font-weight: bold">float</span> max <span style="color: #555555">=</span> fabsf(m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp]);
+  <span style="color: #006699; font-weight: bold">for</span> (i <span style="color: #555555">=</span> lc<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; i <span style="color: #555555">&lt;</span> l; i<span style="color: #555555">++</span>) {
+    <span style="color: #006699; font-weight: bold">if</span> (m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp] <span style="color: #555555">&gt;</span> max){
+      lp <span style="color: #555555">=</span> i;
+    }
+  }
+  <span style="color: #006699; font-weight: bold">return</span> lp;
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">echange</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> lp){
+  <span style="color: #007788; font-weight: bold">float</span> temp <span style="color: #555555">=</span> <span style="color: #FF6600">0.</span>;
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> c; i<span style="color: #555555">++</span>) {
+    temp <span style="color: #555555">=</span> m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>i];
+    m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>i] <span style="color: #555555">=</span> m[lp<span style="color: #555555">*</span>c<span style="color: #555555">+</span>i];
+    m[lp<span style="color: #555555">*</span>c<span style="color: #555555">+</span>i] <span style="color: #555555">=</span> temp;
+  }
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">annule</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp){
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> lc<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; i <span style="color: #555555">&lt;</span> l; i<span style="color: #555555">++</span>) {
+    <span style="color: #007788; font-weight: bold">float</span> k <span style="color: #555555">=</span> m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp]<span style="color: #555555">/</span>m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp];
+    m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> j <span style="color: #555555">=</span> cp<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; j <span style="color: #555555">&lt;</span> c; j<span style="color: #555555">++</span>) {
+      m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">=</span> m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">-</span> k<span style="color: #555555">*</span>m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j];
+    }
+  }
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">annule_normalise</span> (<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c, <span style="color: #007788; font-weight: bold">int</span> lc, <span style="color: #007788; font-weight: bold">int</span> cp){
+  <span style="color: #007788; font-weight: bold">float</span> pivot <span style="color: #555555">=</span> m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp];
+  <span style="color: #006699; font-weight: bold">if</span>(pivot<span style="color: #555555">!=</span><span style="color: #FF6600">0</span>){
+    m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp] <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>;
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> j <span style="color: #555555">=</span> cp<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; j <span style="color: #555555">&lt;</span> c; j<span style="color: #555555">++</span>){
+      m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">/=</span> pivot;
+    }
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> l; i<span style="color: #555555">++</span>){
+      <span style="color: #006699; font-weight: bold">if</span> (i <span style="color: #555555">!=</span> lc){
+        <span style="color: #007788; font-weight: bold">float</span> k <span style="color: #555555">=</span> m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp];
+        m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>cp] <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;
+        <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> j <span style="color: #555555">=</span> cp<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; j <span style="color: #555555">&lt;</span> c; j<span style="color: #555555">++</span>){
+          m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">=</span> m[i<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j] <span style="color: #555555">-</span> k<span style="color: #555555">*</span>m[lc<span style="color: #555555">*</span>c<span style="color: #555555">+</span>j];
+        }
+      }
+    }
+  }
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">descente</span>(<span style="color: #007788; font-weight: bold">float</span><span style="color: #555555">*</span> m, <span style="color: #007788; font-weight: bold">int</span> l, <span style="color: #007788; font-weight: bold">int</span> c){
+  <span style="color: #007788; font-weight: bold">int</span> lc <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; <span style="color: #007788; font-weight: bold">int</span> cp <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; <span style="color: #007788; font-weight: bold">int</span> lp <span style="color: #555555">=</span><span style="color: #FF6600">0</span>;
+  printf(<span style="color: #CC3300">&quot;ligne courante = %d</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>, lc);
+  <span style="color: #006699; font-weight: bold">while</span> (lc <span style="color: #555555">&lt;</span> l){
+    cp <span style="color: #555555">=</span> colonne_pivot(m,l,c,lc,cp);
+    <span style="color: #006699; font-weight: bold">if</span> (cp <span style="color: #555555">==</span> c<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)
+      <span style="color: #006699; font-weight: bold">break</span>;
+    lp <span style="color: #555555">=</span> ligne_pivot(m,l,c,lc,cp);
+    <span style="color: #006699; font-weight: bold">if</span> (lp <span style="color: #555555">!=</span> lc)
+      echange(m,l,c,lc,lp);
+    <span style="color: #0099FF; font-style: italic">//annule(m,l,c,lc,cp);</span>
+    annule_normalise(m,l,c,lc,cp);
+    lc<span style="color: #555555">++</span>;
+    printf(<span style="color: #CC3300">&quot;ligne courante = %d</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>, lc);
+    afficher(m,l,c);
+  }
+}
+</pre></td></tr></table></div>
+
+</div>
+
+<div class="wow fadeInUp content-card" style="margin-top: 10;">
+  <span class="text-description" style="font-size: 2em; font-weight: 300; color: #333">produit_min.c</span><br>
+  Ce programme vous permettra de déterminer le nombre de produits élémentaire minimal pour effectuer le produit d'une chaîne de n matrice (la taille est donnée en argument au programme). L'exemple est celui du TD là ou le tableau d'indice vaut 1 2 ... n+1.
+<!-- HTML generated using hilite.me --><div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #009999">#include &lt;stdio.h&gt;</span>
+<span style="color: #009999">#include &lt;stdlib.h&gt;</span>
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_tab</span>(<span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> tab,<span style="color: #007788; font-weight: bold">int</span> n);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_matrice</span>(<span style="color: #007788; font-weight: bold">int</span> <span style="color: #555555">*</span>M, <span style="color: #007788; font-weight: bold">int</span> n);
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">produit_min</span>(<span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> indices, <span style="color: #007788; font-weight: bold">int</span> taille, <span style="color: #007788; font-weight: bold">int</span> j, <span style="color: #007788; font-weight: bold">int</span> k, <span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> memoire);
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">main</span>(<span style="color: #007788; font-weight: bold">int</span> argc, <span style="color: #007788; font-weight: bold">char</span> <span style="color: #006699; font-weight: bold">const</span> <span style="color: #555555">*</span>argv[]) {
+  <span style="color: #006699; font-weight: bold">if</span> (argc <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2</span>)
+    printf(<span style="color: #CC3300">&quot;Trop peu d&#39;arguments: mettre en argument la taille de la chaine de matrices</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+  <span style="color: #006699; font-weight: bold">else</span> {
+
+    <span style="color: #0099FF; font-style: italic">// On récupère la longueur de la chaine de matrice</span>
+    <span style="color: #007788; font-weight: bold">int</span> n <span style="color: #555555">=</span> atoi(argv[<span style="color: #FF6600">1</span>]);
+    <span style="color: #0099FF; font-style: italic">// La taille du tableau d&#39;indices</span>
+    <span style="color: #007788; font-weight: bold">int</span> taille <span style="color: #555555">=</span> n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>;
+
+    <span style="color: #0099FF; font-style: italic">// Le tableau d&#39;indices i_0 ... i_n contient donc n+1 elements</span>
+    <span style="color: #0099FF; font-style: italic">// Si on veut que la suite soit 1 2 3 .... n</span>
+    <span style="color: #0099FF; font-style: italic">// Pour une chaine de n matrice on aura comme suite d&#39;indices</span>
+    <span style="color: #0099FF; font-style: italic">// 1 2 3 4 ... n+1</span>
+    <span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> indices <span style="color: #555555">=</span> malloc((n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>)<span style="color: #555555">*</span><span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">int</span>));
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;=</span> n; i<span style="color: #555555">++</span>) {
+      indices[i] <span style="color: #555555">=</span> i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>;
+    }
+    printf(<span style="color: #CC3300">&quot;La suite d&#39;indices vaut:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+    affiche_tab(indices,n);
+
+    <span style="color: #0099FF; font-style: italic">// On alloue la matrice où on stockera les valeurs de calul intermédiaire</span>
+    <span style="color: #0099FF; font-style: italic">// Elle est de taille (n+1) * (n+1)</span>
+    <span style="color: #0099FF; font-style: italic">// Et sera initialisé à 0</span>
+    <span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> memoire <span style="color: #555555">=</span> calloc((n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>)<span style="color: #555555">*</span>(n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>),<span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">int</span>));
+
+    <span style="color: #0099FF; font-style: italic">// On calcule ensuite le nombre de produit minimal pour le sous-problème mu_0n</span>
+    <span style="color: #0099FF; font-style: italic">// C&#39;est à dire pour mu[i_0][i_n] qui valent ici mu[1][n+1]</span>
+    <span style="color: #007788; font-weight: bold">int</span> mu <span style="color: #555555">=</span> produit_min(indices,taille,<span style="color: #FF6600">0</span>,n,memoire);
+    printf(<span style="color: #CC3300">&quot;--</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+    printf(<span style="color: #CC3300">&quot;La matrice memoire:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+    affiche_matrice(memoire,n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>);
+    printf(<span style="color: #CC3300">&quot;--</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+    printf(<span style="color: #CC3300">&quot;Le nombre de produits minimal pour une chaine de matrice de longueur %d est %d</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>,n,mu);
+  }
+
+  <span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">0</span>;
+}
+
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">produit_min</span>(<span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> indices, <span style="color: #007788; font-weight: bold">int</span> taille, <span style="color: #007788; font-weight: bold">int</span> j, <span style="color: #007788; font-weight: bold">int</span> k, <span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> memoire) {
+  <span style="color: #0099FF; font-style: italic">// cas terminal</span>
+  <span style="color: #006699; font-weight: bold">if</span> (j<span style="color: #555555">+</span><span style="color: #FF6600">1</span> <span style="color: #555555">==</span> k) <span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">0</span>;
+
+  <span style="color: #0099FF; font-style: italic">// Variables temporaires</span>
+  <span style="color: #007788; font-weight: bold">int</span> mu_jk, mu_jc, mu_ck;
+  <span style="color: #0099FF; font-style: italic">// L&#39;indice c où on effectue le découpage</span>
+  <span style="color: #007788; font-weight: bold">int</span> c;
+  <span style="color: #0099FF; font-style: italic">// On initialise la valeur de mu_jk à -1</span>
+  mu_jk <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">1</span>;
+  <span style="color: #0099FF; font-style: italic">// Pour j&lt;c&lt;k on résoud les sous-problème si ce n&#39;est pas encore fait</span>
+  <span style="color: #006699; font-weight: bold">for</span> (c <span style="color: #555555">=</span> j<span style="color: #555555">+</span><span style="color: #FF6600">1</span>; c <span style="color: #555555">&lt;</span> k; c<span style="color: #555555">++</span>) {
+    <span style="color: #006699; font-weight: bold">if</span> (memoire[j<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>c] <span style="color: #555555">==</span> <span style="color: #FF6600">0</span>) {
+      memoire[j<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>c] <span style="color: #555555">=</span> produit_min(indices,taille,j,c,memoire);
+    }
+    mu_jc <span style="color: #555555">=</span> memoire[j<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>c];
+    <span style="color: #006699; font-weight: bold">if</span> (memoire[c<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>k] <span style="color: #555555">==</span> <span style="color: #FF6600">0</span>) {
+      memoire[c<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>k] <span style="color: #555555">=</span> produit_min(indices,taille,c,k,memoire);
+    }
+    mu_ck <span style="color: #555555">=</span> memoire[c<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>k];
+
+    <span style="color: #0099FF; font-style: italic">// On stocke temporairement la valeur de la solution optimale mu_jk</span>
+    <span style="color: #007788; font-weight: bold">int</span> min_temp <span style="color: #555555">=</span> mu_jc <span style="color: #555555">+</span> mu_ck <span style="color: #555555">+</span> indices[j]<span style="color: #555555">*</span>indices[c]<span style="color: #555555">*</span>indices[k];
+    <span style="color: #0099FF; font-style: italic">// Si elle n&#39;a pas été modifiée ou si l&#39;on trouve une meilleure solution</span>
+    <span style="color: #0099FF; font-style: italic">// On la met à jour</span>
+    <span style="color: #006699; font-weight: bold">if</span> (mu_jk<span style="color: #555555">&lt;</span><span style="color: #FF6600">0</span> <span style="color: #555555">||</span> min_temp <span style="color: #555555">&lt;</span> mu_jk) {
+      mu_jk <span style="color: #555555">=</span> min_temp;
+    }
+  }
+  memoire[j<span style="color: #555555">*</span>taille<span style="color: #555555">+</span>k] <span style="color: #555555">=</span> mu_jk;
+  <span style="color: #006699; font-weight: bold">return</span> mu_jk;
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_tab</span>(<span style="color: #007788; font-weight: bold">int</span><span style="color: #555555">*</span> tab,<span style="color: #007788; font-weight: bold">int</span> n) {
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">int</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;=</span> n; i<span style="color: #555555">++</span>) {
+    printf(<span style="color: #CC3300">&quot;%d &quot;</span>,tab[i]);
+  }
+  printf(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_matrice</span>(<span style="color: #007788; font-weight: bold">int</span> <span style="color: #555555">*</span>M, <span style="color: #007788; font-weight: bold">int</span> n) {
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> n; i<span style="color: #555555">++</span>) {
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> j <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; j <span style="color: #555555">&lt;</span> n; j<span style="color: #555555">++</span>) {
+      printf(<span style="color: #CC3300">&quot;%d &quot;</span>, M[i<span style="color: #555555">*</span>n<span style="color: #555555">+</span>j]);
+    }
+    printf(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+  }
+}
+</pre></td></tr></table></div>
+
+</div>
+
+<div class="wow fadeInUp content-card" style="margin-top: 10;">
+  <span class="text-description" style="font-size: 2em; font-weight: 300; color: #333">Exemple d'execution</span><br/>
+  N'oubilez pas de passer en argument du programme la longueur de la chaîne de matrices :)<br/>
+  <!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em; margin-top=2pt"><pre style="margin: 0; line-height: 125%"><span style="color: #d0d0d0">./run</span> <span style="color: #3677a9">10</span>
+<span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">suite</span> <span style="color: #d0d0d0">d</span><span style="color: #d0d0d0">&#39;</span><span style="color: #d0d0d0">indices</span> <span style="color: #d0d0d0">vaut:</span>
+<span style="color: #3677a9">1</span> <span style="color: #3677a9">2</span> <span style="color: #3677a9">3</span> <span style="color: #3677a9">4</span> <span style="color: #3677a9">5</span> <span style="color: #3677a9">6</span> <span style="color: #3677a9">7</span> <span style="color: #3677a9">8</span> <span style="color: #3677a9">9</span> <span style="color: #3677a9">10</span> <span style="color: #3677a9">11</span>
+<span style="color: #d0d0d0">--</span>
+<span style="color: #d0d0d0">La</span> <span style="color: #d0d0d0">matrice</span> <span style="color: #d0d0d0">memoire:</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">6</span> <span style="color: #3677a9">18</span> <span style="color: #3677a9">38</span> <span style="color: #3677a9">68</span> <span style="color: #3677a9">110</span> <span style="color: #3677a9">166</span> <span style="color: #3677a9">238</span> <span style="color: #3677a9">328</span> <span style="color: #3677a9">438</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">24</span> <span style="color: #3677a9">64</span> <span style="color: #3677a9">124</span> <span style="color: #3677a9">208</span> <span style="color: #3677a9">320</span> <span style="color: #3677a9">464</span> <span style="color: #3677a9">644</span> <span style="color: #3677a9">864</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">60</span> <span style="color: #3677a9">150</span> <span style="color: #3677a9">276</span> <span style="color: #3677a9">444</span> <span style="color: #3677a9">660</span> <span style="color: #3677a9">930</span> <span style="color: #3677a9">1260</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">120</span> <span style="color: #3677a9">288</span> <span style="color: #3677a9">512</span> <span style="color: #3677a9">800</span> <span style="color: #3677a9">1160</span> <span style="color: #3677a9">1600</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">210</span> <span style="color: #3677a9">490</span> <span style="color: #3677a9">850</span> <span style="color: #3677a9">1300</span> <span style="color: #3677a9">1850</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">336</span> <span style="color: #3677a9">768</span> <span style="color: #3677a9">1308</span> <span style="color: #3677a9">1968</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">504</span> <span style="color: #3677a9">1134</span> <span style="color: #3677a9">1904</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">720</span> <span style="color: #3677a9">1600</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">990</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span>
+<span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span> <span style="color: #3677a9">0</span>
+<span style="color: #d0d0d0">--</span>
+<span style="color: #d0d0d0">Le</span> <span style="color: #d0d0d0">nombre</span> <span style="color: #d0d0d0">de</span> <span style="color: #d0d0d0">produits</span> <span style="color: #d0d0d0"> élémentaires minimal</span> <span style="color: #d0d0d0">pour</span> <span style="color: #d0d0d0">une</span> <span style="color: #d0d0d0">chaine</span> <span style="color: #d0d0d0">de</span> <span style="color: #d0d0d0">matrices</span> <span style="color: #d0d0d0">de</span> <span style="color: #d0d0d0">longueur</span> <span style="color: #3677a9">10</span> <span style="color: #d0d0d0">est</span> <span style="color: #3677a9">438</span>
+</pre></div>
+</div>
+<!-- SPACE BELOW DETAILS -->
+<div class="empty-space">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>page du cours "compilation"</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=../index.php?lang=fr>Index</a></li>
+	  <li><a href=../publications.php?lang=fr>Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Projets <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href=../Projets.php?lang=fr>Propositions</a></li>
+            <li><a href=../CoGITARe/?lang=fr>ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=../stages.php?lang=fr>Stage/thèses</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Enseignement <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li class="active"><a href="#">Compilation</a></li>
+	         <li><a href=../principes_de_programmation/?lang=fr>Principes de Prog (old)</a></li>
+             <li><a href=../prog_fonctionnelle/?lang=fr>Prog. fonctionnelle (old)</a></li>
+             <li><a href=../LEE/?lang=fr>LEE</a></li>
+             <li><a href=../Architecture_systeme/?lang=fr>Architecture et Systeme (old)</a></li>
+             <li><a href=../DIU-EIL/?lang=fr>DIU-EIL</a></li>
+             <li><a href=../misa/?lang=fr>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+    <header>
+	  Cours "Compilation" </br>
+	  en M1 Galilée
+    </header>
+
+    <div class="publications">
+	<h2> <a href="syllabus.pdf"> À lire (cliquez ici !) </h2>
+    </div>
+
+      <div class="publications">
+	<h2> TPs sur les générateurs de lexeurs et parseurs (un au choix)</h2>
+	<UL TYPE=square>
+       <LI> <a href="TP_C.pdf">  En C : Utilisation de Flex et Bison et le TP associé</a> 
+       <LI> <a href="TP_Java.pdf"> En Java : Utilisation de JavaCC et le TP associé</a>, vous pouvez aussi essayer d'utiliser <a href="https://cenotelie.fr/projects/hime/index.html">Hime</a> qui semble être un bonne alternative et est un parseur LR (contrairement à JavaCC), comme ceux que l'on va voir en cours.
+       <LI> <a href="TP_OCaml.pdf"> En OCaml : Utilisation de OCamlLex et OCamlYacc  et le TP associé</a>, vous pouvez aussi utiliser  <a href="http://gallium.inria.fr/~fpottier/menhir/menhir.html.fr">Menhir</a> qui est plus difficile à installer, mais donne de bien meilleurs messages d'erreur (il est aussi un peu plus puissant).
+       <LI> <a href="TP_Haskell.pdf"> En Haskell : Utilisation de Alex et Happy et le TP associé</a>,
+       <LI> En C# ou Rust  </a>: Vous pouvez essayer d'utiliser <a href="https://cenotelie.fr/projects/hime/index.html">Hime</a>.
+	</UL>
+      </div>
+
+      <div class="publications">
+	<h2> Cours </h2>
+	<UL TYPE=square>
+	  <LI> <a href="diagramme90s.svg"> La compilation dans les 90's </a>: Transparents (sous forme de diagramme navigable) des schémas classiques de compilation/interprétation dans les années 90. Cela a un peu évolué de nos jours.
+	  <LI> <a href="Structures_du_compilateur.pdf"> Structure de compilateur </a>: Description globale de la compilation.
+	  <LI> <a href="frontend.pdf"> Frontend </a>: Analyses lexicale, syntaxique et sémantique 
+	  <LI> (obsolète, lié au projet de 2019) <a href="mini-Py-Machine.pdf"> Machines abstraites de mini-Python </a> : Définition de la mini-Py-machine, du mini-Py-code. 
+	  <LI> (obsolète, lié au projet de 2018) <a href="P-Machine.pdf">  Machines abstraites de Pascal </a>: Définition de la P-machine, du P-code et de l'encodage depuis le pascal</a>
+	</UL>
+      </div>
+
+
+      <div class="publications">
+	<h2> <a href="Proj_JS.pdf"> Projet </a> à consulter régulièrement pour avoir plus d'informations.  </h2>
+	  <UL TYPE=square> 
+        <LI> <a href="Proj_JS.pdf"> Énoncé du projet </a>
+	    <LI> (obsolète, lié au projet de 2019) <a href="interpreteur_mini_py_machine.tar.gz">L'interprèteur de la mini_py_machine</a> codé en OCaml
+	    <LI> (obsolète, lié au projet de 2018) <a href="interpreteur_P_machine.tar.gz">L'interprèteur de la P-machine</a> codé en C
+      </UL>
+      </div>
+
+
+      <div class="publications">
+	<h2> TD / Exercices</h2>
+        <UL TYPE=square>
+          <LI> <a href="TD1.pdf"> TD1</a> </a>
+          <LI> <a href="TD2.pdf"> TD2</a> </a>
+        </UL>
+      </div>
+      
+      <div class="publications">
+	<h2> Examens passés</h2>
+        <UL TYPE=square>
+          <LI> <a href="exam2019.pdf"> Examen 2019</a> </a>
+          <LI> <a href="examen2018.pdf"> Examen 2018</a> </a>
+        </UL>
+      </div>
+
+      <div class="publications">
+	<h2> Liste de références </h2>
+	<UL TYPE=square>
+      <LI> <a href="https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/"> Cours de compilation de Standford</a>: Le meilleurs cours de compilation que j'ai pu trouver sur internet. Le cours s'en inspire très largement, même si on ne fait qu'une petite partie de leur programme et que l'on met plus l'accent sur les clôtures, présentes dans la grande majorité des langages "modernes".
+	  <LI> <a href="https://fr.wikipedia.org/wiki/Dragon_book"> Le Dragon </a>: De son vrais nom "Compilers: Principles, Techniques and Tools", c'est la "Bible" de la compilation. Il est maintenant très vieux, mais il passe sur les concepts de base de la compilation, surtout pour l'écriture d'un compilateur en C (certaines parties sont beaucoup plus simple dans des langages plus haut niveau). Une traduction française existe, mais vous n'en trouverez peut-être pas de scan sur internet contrairement à l'anglaise.
+      <LI> <a href="https://www.bookdepository.com/Compiler-Design-Reinhard-Wilhelm/9780201422900"> Compiler Design </a>: Livre de référence, en particulier sur la P-machine (la machine abstraite du langage Pascal). Un peu moins vieux que le Dragon, mais tout même loin des préoccupations modernes de la compilation.
+      <LI> <a href="http://webassembly.org/roadmap/"> WebAssembly </a> et <a href="https://webassembly.github.io/spec/core/index.html"> ses specs </a>: Un peu complexe, mais très bon pour avoir une idée de la forme que prend la compilation plus moderne. 
+      <LI> Quelques générateurs de lexers: <a href="https://www.haskell.org/alex"> Alex pour Haskell</a>, <a href="https://www.irit.fr/~Armelle.Bonenfant/Enseignement/Doc/tutoOcamlLexYacc.pdf"> OCamellex pour OCaml</a>,  <a href="https://github.com/westes/flex"> Flex pour C/C++</a> avec <a href="http://bayledes.free.fr/systeme/bisonflex.phtml"> un tutoriel</a>, <a href="https://javacc.org/"> JavaCC pour Java<a>, <a href="http://www.dabeaz.com/ply/"> PLY-lex pour Python</a>, <a "https://github.com/scala/scala-parser-combinators"> parser-combinators pour Scala</a> avec un <a href="http://enear.github.io/2016/03/31/parser-combinators/"> tutoriel</a>.
+      <LI> Quelques générateurs de parsers: <a href="https://www.haskell.org/happy/"> Happy pour Haskell</a>, <a href="https://www.irit.fr/~Armelle.Bonenfant/Enseignement/Doc/tutoOcamlLexYacc.pdf"> OCamelYacc pour OCaml</a>, <a href="https://github.com/westes/flex"> Bison pour C/C++</a> avec <a href="http://bayledes.free.fr/systeme/bisonflex.phtml"> un tutoriel</a>,  <a href="https://javacc.org/"> JavaCC pour Java<a>, <a href="http://www.dabeaz.com/ply/"> PLY-parser pour Python</a>, <a "https://github.com/scala/scala-parser-combinators"> parser-combinators pour Scala</a> avec un <a href="http://enear.github.io/2016/03/31/parser-combinators/"> tutoriel</a>.
+      <LI> <a href="http://h.garreta.free.fr/polys/PolyCompil.pdf"> Le cours d'Henri Garreta</a>: Cours en français très bien écrit. Point de vu pratique, voire "cambouis", pour vous heurter à des problèmes concrets.  Sections sur l'analyse lexical et syntaxique conseillés pour ceux qui comptent coder en C.
+    </UL>
+    </div>
+
+    <div class="publications">
+	  <h2> À destination des visiteurs </h2>
+      <p>
+         Ce cours est loin d'être parfait et en constante évolution. Si vous souhaitez néanmoins l'utiliser pour vous former ou pour former des étudiants, vous êtes les bienvenu. 
+      </p>
+	<UL TYPE=square>
+      <LI> Usage privé : allez y (vous pouvez même me contacter si vous avez des questions, j'essaierais d'y répondre). 
+      <LI> Utilisation comme inspiration : Allez-y, citez simplement la page dans vos sources.
+      <LI> Utilisation des ressources telles quelles pour un cours : Je le déconseille car le cours s'articule avec une présentation oratoire spécifique. Mais si vous y tenez, veuillez simplement me tenir au courant et ne pas enlever la licence CC.
+      <LI> Modification : Toute utilisation avec modification doit avoir mon accord, mais c'est faisable. Je peux fournir les sources des documents si besoin.  
+    </UL>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

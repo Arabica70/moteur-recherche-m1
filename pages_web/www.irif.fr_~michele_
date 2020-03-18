@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Michele Pagani - Home Page</title>
+  <meta name="keywords" content="Linear Logic, Lambda calculus, Denonational Semantics, Normalization and Confluence, Proof Nets">
+  <meta name="description" content="Michele Pagani's Home Page">
+  <link rel="stylesheet" type="text/css" href="stile.css">
+  <script language="JavaScript" src="AntiSpambotMailto.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	function toggle(id)
+	{
+		var item = document.getElementById(id);
+		if (item.className == 'hidden') item.className = 'visible';
+		else item.className = 'hidden';
+	}
+	function hide(id)
+	{
+		var item = document.getElementById(id);
+		item.className = 'hidden';
+	}
+	</script>
+</head>
+
+
+<body bgcolor="#ffffff" background="images/sandston.gif" text="#383838" link="#3366CC" vlink="#3366CC" alink="#3366CC">
+<CENTER>
+<TABLE cellspacing=20>
+<TR>
+	<TD align="center" valign="middle">
+	<img src="meweb.png" height="200" alt="Photo" border="0">
+	</TD>
+	<TD>
+		<TABLE>
+		<TR>
+			<TD>
+			<TABLE align="right" cellspacing=20>
+			<TR><TD align="right" valign="middle">
+					<p>
+			  <a href="http://www.irif.fr">
+			  Institut de Recherche en Informatique Fondamentale</a><BR>
+					<a
+			  href="https://u-paris.fr/">Universit&eacute;
+			  de Paris</a>
+					</p>
+			</TD>
+			<TD>
+			  <a
+			  href="http://www.irif.fr"><img
+			  style="border:20" src="IRIF.jpg" alt="IRIF
+			  logo" height="80" width="130">
+			  </a>
+			  <a
+			  href="https://u-paris.fr/"><img
+			  style="border:0;margin-left:10px"
+			  src="logo_Universite_Paris.png" alt="logo UP"
+			  height="80" width="80">
+			  </a>
+			</TD>			
+			</TR>
+			</TABLE>
+			</TD>
+		</TR>
+		<TR valign="top">
+			<TD valign="top">
+				<HR>
+				<h1>Michele Pagani </h1>
+				<p>
+				<b>Professeur de l'<a
+			  href="http://www.informatique.univ-paris-diderot.fr/wiki/doku.php?id=accueil">UFR
+			  Informatique - Universit&eacute; de Paris</a></b><BR>
+				</p>
+			</TD>
+		</TR>
+		</TABLE>
+	</TD>
+</TR>
+</TABLE>
+</CENTER>
+<BR>
+<CENTER>
+<TABLE CELLPADDING=20>
+<TR>
+<TD>
+<h1><a href="index.html">Home</a></h1>
+</TD>
+<TD>
+<h3><a href="contact.html">Contact</a></h3>
+</TD>
+<TD>
+<h3><a href="research.html">Research</a></h3>
+</TD>
+<TD>
+<h3><a href="teaching.html">Teaching</a></h3>
+</TD>
+</TABLE>
+</CENTER>
+<HR>
+<TABLE width="100%">
+    <TR>
+    <TD>
+    </TD>
+    <TD style="float: right; text-align: right; margin: 0 auto;">
+      <STRONG>Conferences</STRONG>:
+    </TD>
+    <TD>
+            <A
+      HREF="https://fscd2020.org/index.html">
+      FSCD2020 (PC) </A>, 
+      <A
+      HREF="http://www.cs.le.ac.uk/events/fscd2018/">
+      FSCD2018 </A>, 
+            <A
+      HREF="https://www.irif.fr/~michele/itrs2018">
+      ITRS2018 (PC Chair) </A>, 
+      <A
+      HREF="http://conf.researchr.org/home/POPL-2017">
+      POPL2017 (PC) </A>, 
+      <A
+      HREF="http://lics.rwth-aachen.de/lics16/">
+      LICS2016 (PC) </A>, 
+      CIE2016 (OC) </A>.
+    </TD>
+  </TR>
+  </TR>
+    <TR>
+    <TD>
+    </TD>
+    <TD style="float: right; text-align: right; margin: 0 auto;">
+      <STRONG>Rencontres mensuelles</STRONG>:
+    </TD>
+    <TD>
+      <A
+      HREF="http://chocola.ens-lyon.fr">
+      CHoCoLa </A>.
+    </TD>
+  </TR>
+
+  </TABLE>
+  <HR>
+  <TABLE width="100%">
+    <TR>
+
+<TD align="left">
+<B>Page maintained by Michele Pagani</B>
+</TD>
+
+<TD align="right">
+
+<B>Last update</B>: 06/02/2020
+
+
+</TD>
+</TR>
+</TABLE>
+
+</body>
+</html>

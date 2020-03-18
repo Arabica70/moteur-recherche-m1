@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Issam Falih</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Issam falih">
+
+        <link rel="shortcut icon" href="../favicon.ico">
+
+        <!--CSS styles-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">  
+        <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
+        <link rel="stylesheet" href="academicons-1.8.6/css/academicons.css">
+        <link rel="stylesheet" href="academicons-1.8.6/css/academicons.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link id="theme-style" rel="stylesheet" href="css/styles/default.css">
+
+        
+        <!--/CSS styles-->
+        <!--Javascript files-->
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+        
+        <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
+        <script type="text/javascript" src="js/jquery.dropdownit.js"></script>
+
+        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+        <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+        <script type="text/javascript" src="js/masonry.min.js"></script>
+
+        <script type="text/javascript" src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
+
+        <script type="text/javascript" src="js/magnific-popup.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+
+        <script type="text/javascript" src="academicons-1.8.6/bower.json"></script>
+	<script> 
+		function resizeIframe(obj) {
+		 obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+	}	
+	</script>
+        <!--/Javascript files-->
+
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+
+            <div id="sidebar">
+                <div id="main-nav">
+                    <div id="nav-container">
+                        <div id="profile" class="clearfix">
+                        
+
+                            <div class="portrate hidden-xs">  </div> 
+                            <div class="title">
+                                <h2>Issam Falih	</h2>
+                                <h3> Ph.D. </h3>
+                            </div>
+                            
+                        </div>
+                        <ul id="navigation">
+                            <li class="currentmenu">
+                              <a href="index.html">
+                                <div class="icon icon-user"></div>
+                                <div class="text">About Me</div>
+                              </a>
+                            </li>  
+                            
+                            
+                            <li>
+                              <a href="education.html">
+                                <div class="icon icon-book"></div>
+                                <div class="text">Education</div>
+                              </a>
+                            </li>
+                            
+                            <li>
+                              <a href="teaching.html">
+                                <div class="icon icon-time"></div>
+                                <div class="text">Teaching</div>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="publication.html">
+                                <div class="icon icon-leaf"></div>
+                                <div class="text">Publications</div>
+                              </a>
+                            </li> 
+                            
+                            <li>
+                              <a href="software.html">
+                                <div class="icon icon-code"></div>
+                                <div class="text">Software</div>
+                              </a>
+                            </li> 
+
+                            <li>
+                              <a href="datasets.html">
+                                <div class="icon icon-search"></div>
+                                <div class="text">Data</div>
+                              </a>
+                            </li> 
+
+                            <li>
+                              <a href="contact.html">
+                                  <div class="icon icon-calendar"></div>
+                                  <div class="text">Contact & Meet Me</div>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href=#>
+                                  <div class="icon icon-download-alt"></div>
+                                  <div class="text">CVitae</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+                
+                <div class="social-icons">
+                    <ul>
+			<li><a href="https://www.linkedin.com/in/issamfalih/"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="https://www.researchgate.net/profile/Issam_Falih"><i class="ai ai-researchgate"></i></a></li>
+                        <li><a href="https://dblp.uni-trier.de/pers/hd/f/Falih:Issam"><i class="ai ai-dblp"></i></a></li>
+                    </ul>
+                </div>    
+            </div>
+
+            <div id="main">
+            
+                <div id="biography" class="page home" data-pos="home">
+                    <div class="pageheader">
+                        <div class="headercontent">
+                            <div class="section-container">
+                                
+                                <div class="row">
+                                    <div class="col-sm-2 visible-sm"></div>
+                                    <div class="col-sm-8 col-md-4">
+                                        <div class="biothumb">
+                                            <img alt="image" src="img/personal/Photo.jpg" class="img-responsive">
+
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="clearfix visible-sm visible-xs"></div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <h3 class="title">Issam Falih</h3>
+I did my Ph.D. at the <a href="http://lipn.univ-paris13.fr"> LIPN </a> Laboratory at  <a href="https://www.univ-paris13.fr/"> Paris 13 University </a>.
+I worked under the supervision of Prof. <a  href="http://lipn.univ-paris13.fr/~bennani/"> Younès Bennani</a>, <a href="http://lipn.univ-paris13.fr/~kanawati/">Rushed Kanawati</a> and <a  href="https://lipn.univ-paris13.fr/~grozavu/"> Nistor Grozavu</a>. It focused on Clustering Attributed Network with an application to recommender system.
+ 				</div> 
+ 
+                                    
+                                </div>
+           			<div class="row">
+				<div class="col-sm-12 col-md-7">
+                 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;   
+				<a href="https://www.linkedin.com/in/issamfalih"><i class="icon-linkedin"></i></a> &nbsp;&nbsp;
+		                <a href="https://www.researchgate.net/profile/Issam_Falih"><i class="ai ai-researchgate"></i></a> &nbsp;&nbsp;
+		                <a href="https://dblp.uni-trier.de/pers/hd/f/Falih:Issam"><i class="ai ai-dblp"></i></a> &nbsp;&nbsp;
+                    		<a href="https://twitter.com/issamfalih"><i class="icon-twitter"></i></a> &nbsp;&nbsp;
+		                <a href="https://github.com/Issamfalih"><i class="icon-github"></i></a> &nbsp;&nbsp;
+		                <a href="https://scholar.google.fr/citations?user=_TsK_EUAAAAJ&hl=fr"><i class="ai ai-google-scholar"></i></a> &nbsp;&nbsp;
+
+                                </div> 
+			    </div>
+                            </div>        
+                        </div>
+                    </div>
+		
+
+		    
+		
+
+
+                
+            </div>
+        </div>
+    </body>
+</html>
+

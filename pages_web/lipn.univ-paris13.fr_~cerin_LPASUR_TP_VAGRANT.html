@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Introduction Syst&egrave;me : TP virtualisation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="Christophe C&eacute;rin">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=latin-ext" rel="stylesheet">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<h1 class="header-heading">TP
+		Déploiement de VM/conteneurs avec Vagrant, LP ASUR 2018 -
+		2019</h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="main">
+				<!-- Paragraphs -->
+				<h1 id="one">Introduction à Vagrant</h1>
+				<p style="text-align:justify"><a href="https://www.vagrantup.com/">Vagrant</a>
+				est un un outil de la chaine DevOps
+				pour la création et la configuration
+				d'environnements virtualisés. Il peut
+				être considéré comme une couche au
+				dessus de logiciels de virtualisation
+				comme VirtualBox, VMware, voire Amazon
+				EC2... afin de fournir la
+				configuration, le provisioning et le
+				déploiement d'une VM. Depuis la version
+				1.6, Vagrant fournit un support pour
+				l'exécution de conteneurs Docker.
+				</p>
+				<p style="text-align:justify">Vagrant s'utilise via une interface
+				en ligne de commande. Le concept
+				central est la <tt>box</tt> qu'il faut
+				voir comme une machine virtuelle
+				préconfigurée
+				(template). <a href="https://app.vagrantup.com/boxes/search">Vagrant
+				Cloud</a> sert de plateforme d'échange
+				pour trouver des boîtes et y déposer
+				ses propres boîtes.
+				</p>
+				<p style="text-align:justify">Ensuite, Vagrant s'utilise à
+				  travers un cycle de vie qui se résume en trois étapes :
+				  <ul>
+				    <li>Configuration (il faut détailler ici le rôle du fichier <tt>Vagrantfile</tt>).
+				    <li>Provisioning : c'est en gros
+				    l'importation de données dans la
+				    VM. Avec Vagrant il est possible
+				    d'utiliser les outils de
+				    provisioning suivants : File,
+				    Shell, Ansible, CFEngine, Chef
+				    Solo, Chef Client, Docker, Puppet
+				    Apply, Puppet Agent et Salt.
+				      <li>Déploiement : il vise à
+				      transférer votre image de VM sur
+				      un noeud (serveur). Le
+				      déploiement se réalise en
+				      utilisant la
+				      commande <tt>vagrant push</tt>
+				      par Heroku, SFTP et FTP, en
+				      écrivant vos propres scripts de
+				      ligne de commande.
+				  </ul>
+				  
+				</p>
+				<p style="text-align:justify">Comme vous le voyez, l'ensemble de
+				l'architecture Vagrant repose sur la
+				notion de recettes (receipes en
+				Anglais), c'est à dire la description
+				d'étapes à réaliser pour atteindre un
+				but. Il ne s'agit pas à proprement
+				parler de programmation (il n'y a pas
+				de boucle ici).</p>
+				<p style="text-align:justify">Pour aller encore plus loin, par
+				rapport à notre travail de TP, dans
+				l'utilisation de Vagrant, vous pouvez
+				aussi, par vous même, réaliser le TP
+				en
+				ligne <a href="http://www.jmrenouard.fr/programmation/mini-guide-pour-vagrant">suivant</a>. C'est
+				un travail en plus !</p>
+				<h1 id="two">&Eacute;noncé du TP</h1>
+				<h4>Partie facile</h4>
+				<p style="text-align:justify">Veuillez suivre les étapes décrites
+				dans le texte ci-dessous. Nous suposons que vous avez lancé une VM à partir de RosettaHub. Cela signifie que toutes les manipulations proposées ou à faire le sont à partir d'une VM AWS/RosettaHub.
+				</p>
+<pre>
+  # Installer vagrant et autres outils
+  $ sudo apt-get install vagrant \
+  > golang-github-hashicorp-atlas-go-dev
+
+  # Ajouter une image/box ubuntu de votre choix
+  # Pour cela remplacez XXX par une distribution.
+  $ vagrant box add ubuntu/XXX
+
+  # Lister les images/box de votre machine virtuelle
+  $ vagrant box list
+
+  # Le fichier Vagrantfile contient la specification du type
+  # de machine virtuelle et comment elle est configurée
+  # et provisionnée. Commencez par créer un fichier Vagrantfile :
+  $ vagrant init
+
+  # La partie interessante du Vagrantfile doit ressembler à
+  Vagrant.configure(2) do |config|
+      config.vm.box = "base"
+  end
+
+  Editer le fichier Vagrantfile pour remplacer "base" par
+  config.vm.box = "ubuntu/XXX"
+  
+  # Lancez la machine virtuelle/box :
+  $ vagrant up
+  
+  # Connectez vous en SSH dans la machine virtuelle :
+  $ vagrant ssh
+
+  # Tapez une commande Linux une fois connecté, par exemple :
+  ubuntu@ubuntu-xenial:˜$ uname -nor
+  ubuntu-xenial 4.4.0-87-generic GNU/Linux
+
+  # Sortez de la VM
+  ubuntu@ubuntu-xenial:˜$ exit
+  logout
+  Connection to 127.0.0.1 closed.
+  $
+
+  # N'oubliez pas d'arréter la machine virtuelle :
+  $ vagrant halt
+</pre>
+
+<h4>Intermède</h4>
+<p style="text-align:justify">Voici un exemple complet de déploiement,
+avec les logs, à partir d'un Macbook Pro, de Ansible/tower. Je
+mentionne également les versions de Vagrant et Virtualbox utilisées.
+</p>
+<pre>
+  christophe:~ christophecerin$ mkdir vagrant-project
+  christophe:~ christophecerin$ cd vagrant-project/
+  christophe:vagrant-project christophecerin$ vagrant --version
+  Vagrant 2.2.3
+  christophe:vagrant-project christophecerin$ VBoxManage --version
+  6.0.4r128413
+  christophe:vagrant-project christophecerin$ vagrant init ansible/tower
+  A `Vagrantfile` has been placed in this directory. You are now
+  ready to `vagrant up` your first virtual environment! Please read
+  the comments in the Vagrantfile as well as documentation on
+  `vagrantup.com` for more information on using Vagrant.
+  christophe:vagrant-project christophecerin$ vagrant up --provider virtualbox
+  Bringing machine 'default' up with 'virtualbox' provider...
+  ==> default: Box 'ansible/tower' could not be found. Attempting to find and install...
+  default: Box Provider: virtualbox
+  default: Box Version: >= 0
+  ==> default: Loading metadata for box 'ansible/tower'
+  default: URL: https://vagrantcloud.com/ansible/tower
+  ==> default: Adding box 'ansible/tower' (v3.4.1) for provider: virtualbox
+  default: Downloading: https://vagrantcloud.com/ansible/boxes/tower/versions/3.4.1/providers/virtualbox.box
+  default: Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com
+  ==> default: Successfully added box 'ansible/tower' (v3.4.1) for 'virtualbox'!
+  ==> default: Importing base box 'ansible/tower'...
+  ==> default: Matching MAC address for NAT networking...
+  ==> default: Checking if box 'ansible/tower' version '3.4.1' is up to date...
+  ==> default: Setting the name of the VM: vagrant-project_default_1550261517485_18390
+  Vagrant is currently configured to create VirtualBox synced folders with
+  the `SharedFoldersEnableSymlinksCreate` option enabled. If the Vagrant
+  guest is not trusted, you may want to disable this option. For more
+  information on this option, please refer to the VirtualBox manual:
+
+  https://www.virtualbox.org/manual/ch04.html#sharedfolders
+
+  This option can be disabled globally with an environment variable:
+
+  VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
+
+  or on a per folder basis within the Vagrantfile:
+
+  config.vm.synced_folder '/host/path', '/guest/path', SharedFoldersEnableSymlinksCreate: false
+  ==> default: Clearing any previously set network interfaces...
+  ==> default: Preparing network interfaces based on configuration...
+  default: Adapter 1: nat
+  default: Adapter 2: hostonly
+  ==> default: Forwarding ports...
+  default: 22 (guest) => 2222 (host) (adapter 1)
+  ==> default: Running 'pre-boot' VM customizations...
+  ==> default: Booting VM...
+  ==> default: Waiting for machine to boot. This may take a few minutes...
+  default: SSH address: 127.0.0.1:2222
+  default: SSH username: vagrant
+  default: SSH auth method: private key
+  default: Warning: Connection reset. Retrying...
+  default: Warning: Remote connection disconnect. Retrying...
+  default: Warning: Connection reset. Retrying...
+  default: Warning: Remote connection disconnect. Retrying...
+  default: Warning: Connection reset. Retrying...
+  default: Warning: Remote connection disconnect. Retrying...
+  default:
+  default: Vagrant insecure key detected. Vagrant will automatically replace
+  default: this with a newly generated keypair for better security.
+  default:
+  default: Inserting generated public key within guest...
+  default: Removing insecure key from the guest if it's present...
+  default: Key inserted! Disconnecting and reconnecting using new SSH key...
+  ==> default: Machine booted and ready!
+  ==> default: Checking for guest additions in VM...
+  default: The guest additions on this VM do not match the installed version of
+  default: VirtualBox! In most cases this is fine, but in rare cases it can
+  default: prevent things such as shared folders from working properly. If you see
+  default: shared folder errors, please make sure the guest additions within the
+  default: virtual machine match the version of VirtualBox you have installed on
+  default: your host and reload your VM.
+  default:
+  default: Guest Additions Version: 5.2.22
+  default: VirtualBox Version: 6.0
+  ==> default: Setting hostname...
+  ==> default: Configuring and enabling network interfaces...
+  ==> default: Mounting shared folders...
+  default: /vagrant => /Users/christophecerin/vagrant-project
+  christophe:vagrant-project christophecerin$ vagrant ssh
+
+  Welcome to Ansible Tower!
+
+  Log into the web interface here:
+
+  https://10.42.0.42/
+
+  Username: admin
+  Password: FYQRPYCeeVSe
+
+  The documentation for Ansible Tower is available here:
+
+  http://www.ansible.com/tower/
+
+  For help, visit  http://support.ansible.com/
+  [vagrant@ansible-tower ~]$ ls
+  [vagrant@ansible-tower ~]$ pwd
+  /home/vagrant
+  [vagrant@ansible-tower ~]$ cd /
+  [vagrant@ansible-tower /]$ ls
+  bin   dev  home  lib64  mnt  proc  run   srv  tmp  vagrant
+  boot  etc  lib   media  opt  root  sbin  sys  usr  var
+  [vagrant@ansible-tower /]$ exit
+  déconnexion
+  Connection to 127.0.0.1 closed.
+  christophe:vagrant-project christophecerin$
+</pre>
+
+<p style="text-align:justify">Il vous reste à ouvrir un navigateur et
+à vous connecter à l'adresse qui sera donnée, ainsi qu'avec le loggin
+et le mot de passe fournis. Vous pourrez alors découvrir Ansible /
+tower : <i> Red Hat® Ansible® Tower helps you scale IT automation,
+manage complex deployments and speed productivity. Centralize and
+control your IT infrastructure with a visual dashboard, role-based
+access control, job scheduling, integrated notifications and graphical
+inventory management. And Ansible Tower's REST API and CLI make it
+easy to embed Ansible Tower into existing tools and processes.</i>
+</p>				  
+
+<p style="text-align:justify">Si vous voulez faire un peu de ménage
+  avant de repartir sur une autre image/box (ici une ubuntu/trusty32)
+  vous pouvez procéder en suivant le cycle <tt>vagrant
+  halt; vagrant destroy; vagrant init <...>; vagrant up; vagrant
+  ssh</tt>, comme suit :
+</p>
+
+<pre>
+  christophe:vagrant-project christophecerin$ vagrant halt
+  ==> default: Attempting graceful shutdown of VM...
+  christophe:vagrant-project christophecerin$ vagrant destroy
+  default: Are you sure you want to destroy the 'default' VM? [y/N] y
+  ==> default: Destroying VM and associated drives...
+
+  Il faut modifier ici votre Vagrantfile ou refaire un
+  vagrant init ubuntu/trusty32 pour recréer un nouveau Vagrantfile
+  
+  christophe:vagrant-project christophecerin$ vagrant up
+  Bringing machine 'default' up with 'virtualbox' provider...
+  ==> default: Importing base box 'ubuntu/trusty32'...
+  ==> default: Matching MAC address for NAT networking...
+  ==> default: Checking if box 'ubuntu/trusty32' version '20190206.0.0' is up to date...
+  ==> default: Setting the name of the VM: vagrant-project_default_1550315983820_82799
+  ==> default: Clearing any previously set forwarded ports...
+  ==> default: Clearing any previously set network interfaces...
+  ==> default: Preparing network interfaces based on configuration...
+  default: Adapter 1: nat
+  ==> default: Forwarding ports...
+  default: 22 (guest) => 2222 (host) (adapter 1)
+  ==> default: Booting VM...
+  ==> default: Waiting for machine to boot. This may take a few minutes...
+  default: SSH address: 127.0.0.1:2222
+  default: SSH username: vagrant
+  default: SSH auth method: private key
+  default:
+  default: Vagrant insecure key detected. Vagrant will automatically replace
+  default: this with a newly generated keypair for better security.
+  default:
+  default: Inserting generated public key within guest...
+  default: Removing insecure key from the guest if it's present...
+  default: Key inserted! Disconnecting and reconnecting using new SSH key...
+  ==> default: Machine booted and ready!
+  ==> default: Checking for guest additions in VM...
+  default: The guest additions on this VM do not match the installed version of
+  default: VirtualBox! In most cases this is fine, but in rare cases it can
+  default: prevent things such as shared folders from working properly. If you see
+  default: shared folder errors, please make sure the guest additions within the
+  default: virtual machine match the version of VirtualBox you have installed on
+  default: your host and reload your VM.
+  default:
+  default: Guest Additions Version: 4.3.36
+  default: VirtualBox Version: 6.0
+  ==> default: Mounting shared folders...
+  default: /vagrant => /Users/christophecerin/vagrant-project
+  christophe:vagrant-project christophecerin$ vagrant ssh
+  Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-165-generic i686)
+
+  * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Feb 16 11:20:06 UTC 2019
+
+  System load:  0.9               Processes:           79
+  Usage of /:   3.4% of 39.34GB   Users logged in:     0
+  Memory usage: 15%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+  https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+  http://www.ubuntu.com/business/services/cloud
+
+  0 packages can be updated.
+  0 updates are security updates.
+
+  New release '16.04.5 LTS' available.
+  Run 'do-release-upgrade' to upgrade to it.
+
+
+  vagrant@vagrant-ubuntu-trusty-32:~$ pwd
+  /home/vagrant
+  vagrant@vagrant-ubuntu-trusty-32:~$ ls /
+  bin   dev  home        lib         media  opt   root  sbin  sys  usr      var
+  boot  etc  initrd.img  lost+found  mnt    proc  run   srv   tmp  vagrant  vmlinuz
+  vagrant@vagrant-ubuntu-trusty-32:~$ exit
+  logout
+  Connection to 127.0.0.1 closed.
+  christophe:vagrant-project christophecerin$
+  christophe:vagrant-project christophecerin$ vagrant halt
+  ==> default: Attempting graceful shutdown of VM...
+  christophe:vagrant-project christophecerin$
+</pre>
+
+<p style="text-align:justify"><b>ATTENTION :</b> si votre noyau est en
+  32 bits, vous ne pouvez pas lancer une box 64 bits. Veuillez
+  également vérifier si Virbualbox est un executable 32 bits ou 64
+  bits. Il pourrait y avoir des incompatibilités entre le/les
+  provisionners et les box.
+</p>
+				  
+<h4>Partie un peu plus dure : provisionner avec le shell</h4>
+<p style="text-align:justify">Commencer par modifier votre Vagrantfile précédent pour créer un
+  script qui sera lancé par la méthode
+  inline. Le script installera un paquet de votre choix.
+</p>
+
+<pre>
+$script = <<-SCRIPT
+echo I am provisioning...
+apt get install "paquet_de_votre_choix"
+date > /etc/vagrant_provisioned_at
+SCRIPT
+
+Vagrant.configure("2") do |config|
+       config.vm.provision "shell", inline: $script
+end
+</pre>
+				<p style="text-align:justify">Modifiez maintenant le Vagrantfile
+				de sorte que le script d'installation
+				du paquet se télécharge
+				automatiquement depuis Internet et
+				s'exécute.
+				</p>
+<pre>
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", path: "https://example.com/provisioner.sh"
+end
+</pre>
+				<p style="text-align:justify">Modifier encore une fois comme suit
+				  votre fichier Vagrantfile de sorte
+				  que le script soit paramétré par le
+				  nom de deux paquets à installer
+				  automatiquement <tt>paquet1,
+				  paquet2</tt> :</p>
+<pre>
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell" do |s|
+     s.inline = "echo $1 $2;apt get install $1; apt get install $2"
+     s.args   = ["paquet1, paquet2"]
+  end
+end
+</pre>
+				<p style="text-align:justify">Pour terminer, on voudrait que le
+				nom des deux paquets précédents à
+				installer soient en paramètre de la
+				commande <tt>vagrant up</tt>. Inspirez
+				vous du code suivant pour réaliser
+				cette demande :
+				</p>
+<pre>
+# Vagrantfile should be similar to:
+
+require 'getoptlong'
+
+opts = GetoptLong.new(
+       [ '--custom-option', GetoptLong::OPTIONAL_ARGUMENT ]
+)
+
+customParameter=''
+
+opts.each do |opt, arg|
+    case opt
+         when '--custom-option'
+              customParameter=arg
+    end
+end
+
+Vagrant.configure("2") do |config|
+     ...
+     config.vm.provision :shell do |s|
+          ...
+          s.args = "#{customParameter}"
+     end
+end
+
+# Then, you can run:
+
+$ vagrant --custom-option="paquet1 paquet2" up
+$ vagrant --custom-option="paquet1 paquet2" provision
+</pre>
+
+<h4>Pour aller plus loin</h4>
+
+<p style="text-align:justify">Supposons maintenant que nous avons un
+PC/Mac à la maison sur lequel nous avons installé Vagrant. Pour
+utiliser de la ressource disponible chez RosettaHub/AWS, nous devons
+installer le plugin AWS de vagrant sur le PC/Mac, puis il s'agit de
+créer une instance à distance au-lieu d'utiliser le web console de
+AWS.  Tous les détails de cette technique visant à piloter une prise de
+resource chez AWS à distance, de manière automatique, se trouvent ici
+:
+<a href="https://github.com/mitchellh/vagrant-aws">https://github.com/mitchellh/vagrant-aws</a>.
+</p>				  
+			</div>
+		</div>
+		  
+		<div class="footer">
+			<div class="container">
+				&copy; Copyright 2018, Christophe C&eacute;rin
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 6</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 6 C++: références, <tt>static</tt>, Arithmétique 2048 bits</h2>
+
+<!--
+<h2 class="red">Notes du TD5: <a href="http://tinyurl.com/notec2017">http://tinyurl.com/notec2017</a></h2>
+-->
+
+<h3>Rappels</h3>
+<ul>
+  <li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: </h3>
+<ol>
+  <li>
+    <b>Complétez</b> le fichier <a href="1.1.cc" download>1.1.cc</a> avec l'implémentation des <b>constructeurs</b> de la classe <tt>Uint2048</tt> ci-dessous (télécharger: <a href="1.1.h" download>1.1.h</a>) :
+<pre><code class="c++">using uint64 = unsigned long long;
+
+class Uint2048 {
+ public:
+  Uint2048();
+  Uint2048(int x);
+
+  bool operator&lt;(Uint2048 other);
+  Uint2048 operator+(Uint2048 other);
+
+  void Print();
+
+ private:
+  uint64 u_[32];
+};</code></pre>
+    <b>Vérifiez</b> avec:
+    <pre>rm 1.tar.gz; wget --no-cache https://lipn.univ-paris13.fr/~pellissier/cpp-m2mo/td6/1.tar.gz
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU:</b> <tt>1.1.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Copiez <tt>1.1.h</tt> et <tt>1.1.cc</tt> dans
+    <tt>1.2.h</tt> et <tt>1.2.cc</tt> (n'<b>oubliez pas</b> de changer le <tt>#include "1.1.h"</tt>), et <b>ajoutez</b>
+    un <i>opérateur de comparaison</i> <tt><b>&lt;</b></tt>.
+    <br/>Vous pourrez notamment vous inspirer de l'opérateur <tt><b>+</b></tt> déjà fourni dans la classe.
+    <br/><br/><b>Test:</b> <tt>make 1.2</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.2.h</tt> et <tt>1.2.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    Copiez <tt>1.2.h</tt> et <tt>1.2.cc</tt> dans
+    <tt>1.3.h</tt> et <tt>1.3.cc</tt> et
+    <b>ajoutez <i>tous</i></b> les mot-clés
+    <tt>const</tt> qui sont <b>sensés</b>.
+    <br/><br/><b>Test</b>: <tt>make 1.3</tt>
+
+    <br/><br/><b>Ensuite</b>, essayez de passer des
+    arguments par <i>référence</i> au lieu de <i>copie</i>. Quel est l'impact sur le temps de calcul (quand on fait <tt>make 1.3</tt>)?
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.3.h</tt>, <tt>1.3.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>
+    On veut maintenant comptabiliser le nombre total d'additions efféctuées dans l'ensemble des classes <tt>Uint2048</tt> par notre programme (pour debugger, par exemple).
+    <br/>Comment faire? Copiez <tt>1.3.h</tt> et <tt>1.3.cc</tt> dans
+    <tt>1.4.h</tt> et <tt>1.4.cc</tt> et
+    <b>ajoutez</b> une fonction <tt>NumAdditions</tt> qui renverra ce nombre.
+    <br/><i>Indice:</i> <tt>static</tt>
+    <br/><br/>Cette fonction peut-elle être <tt>const</tt>?  Pourquoi?
+    <br/><br/><b>Test</b>: <tt>make 1.4</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.4.h</tt>, <tt>1.4.cc</tt>
+    <br/>
+    <br/>
+  </li>
+  <li>Copiez tout dans <tt>1.5.h</tt> et <tt>1.5.cc</tt> et ajoutez et implémentez l'opérateur <tt><b>-</b></tt> (soustraction).
+    <br/>Vous pourrez vous inspirer du <tt><b>+</b></tt>, mais attention c'est un peu plus compliqué.
+    <br/><br/><b>Test</b>: <tt>make 1.5</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.5.h</tt>, <tt>1.5.cc</tt>
+    <br/><br/>
+  </li>
+  <li><b>(*)</b> Copiez tout dans <tt>1.6.h</tt> et <tt>1.6.cc</tt> et ajoutez et implémentez l'opérateur <tt><b>*</b></tt> (multiplication), qui devra marcher en O(2048<sup>2</sup>).
+  <br/>Notamment, l'algo naïf suivant est beaucoup <b class="red">trop lent</b> pour calculer a * b. Trouvez mieux!
+    <pre><code class="c++">Uint2048 result(0);
+Uint2048 one(1);
+Uint2048 counter(0);
+while (counter &lt; a) {
+  result = result + b;
+  counter = counter + one;
+}
+return result;</code></pre>
+    <b>Test</b>: <tt>make 1.6</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.6.h</tt>, <tt>1.6.cc</tt>
+    <br/><br/>
+  </li>
+  <li><b>(***)</b> Copiez tout dans <tt>1.7.h</tt> et <tt>1.7.cc</tt> et ajoutez et implémentez l'opérateur <tt><b>/</b></tt> (division entière). En O(2048<sup>2</sup>) également.
+    <br/><br/><b>Test</b>: <tt>make 1.7</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.7.h</tt>, <tt>1.7.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<!--
+1.1 implementer les constructeurs
+1.2 implementer <
+1.3 const puis ref.
+1.4 static NumAdditions().
+...
+1.5 * soustraction
+1.6 * décalage à gauche.
+1.7 ** multiplication
+
+2.1 ref: comportement (av screenshot)
+2.2 ref / const ref a commenter.
+
+3.1 sort struct by size.
+-->
+
+<hr/>
+<h3>Exercice 2: </h3>
+<ol>
+  <li><b>Simulez</b> l'execution du code suivant dans votre tête. Quel sera l'affichage?
+  <br/>
+  <br/>
+  <img src="2.1.png" alt="Code C++ à simuler">
+  <br/><br/><b class="orange">RENDU:</b> <tt>2.1.txt</tt> qui contiendra 3 lignes, suivant le format:
+  <pre>5,6,7
+8,9,10
+11,12,13</pre>en remplaçant, bien sûr, les valeurs des entiers!
+  <br/>
+  <br/>
+  <b>Vérifiez</b> avec:
+  <pre>rm 2.1.test.sh; wget --no-cache https://lipn.univ-paris13.fr/~pellissier/cpp-m2mo/td6/2.1.test.sh
+bash 2.1.test.sh</pre>
+  <br/>
+  <br/>
+</li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Internationalizations </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.Internationalizations' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=search&amp;q=link=PmWiki.Internationalizations'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Internationalizations</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomWikiStyles'>Custom wiki styles</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>Local customizations</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p><a name='include' id='include'></a>
+PmWiki supports internationalization (internationalisation) of web pages, allowing accented characters to appear in page names and almost complete customization of PmWiki&rsquo;s prompts.  
+<a name='includeend' id='includeend'></a>
+Most customization is provided via the XLPage() function in PmWiki, which loads a set of translation variables from a wiki page (typically named XLPage, but it can be named anything you wish).
+</p>
+<p class='vspace'>The rest of this page is devoted to the installation, configuration and usage of other language(s) support. If you are looking for tools and help to <em>localize</em> PmWiki in your language, or how you can improve the existing translations, start on pmwiki.org with the page <a class='urllink' href='http://www.pmwiki.org/wiki/Localization/Localization' rel='nofollow'>Localization</a> - The Translation Portal.
+</p>
+<div class='vspace'></div><div class='frame rfloat' style='font-size: smaller; clear: right;' > 
+<div class='fpltemplate'></div>
+</div>
+<h2><a name='LoadingTranslationPages' id='LoadingTranslationPages'></a> Loading Translation Pages</h2>
+<p>Pages for many <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/other%20languages' rel='nofollow'>other languages</a> have already been created and maintained at the pmichaud.com site.  You can download an archive of these translations from <a class='urllink' href='http://www.pmwiki.org/pub/pmwiki/i18n/' rel='nofollow'>http://www.pmwiki.org/pub/pmwiki/i18n/</a> .  Simply download the appropriate language archive(s), and unpack the archive(s) into the directory containing your <em>pmwiki.php</em> installation.  Each archive contains a number of page files that are placed in your <em>wikilib.d/</em> directory, and some special scripts for translations that use a character set other than iso-8859&ndash;1 (PmWiki&rsquo;s default). You can also use <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8'>UTF-8</a> charset.
+</p>
+<p class='vspace'>Once the translation pages are installed, you enable a language by adding a call to XLPage() in your <em>config.php</em> file.  For example, to select French language prompts, one would specify
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+include_once("scripts/xlpage-utf-8.php"); # optional
+XLPage('fr','PmWikiFr.XLPage');</pre>
+</div><p class='vspace'>which says to load the translations for French (&lsquo;fr&rsquo;) from the page <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWikiFr/XLPage?action=edit' title='Create page'>PmWikiFr.XLPage</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWikiFr/XLPage?action=edit'>?</a>. The include_once line is recommended if you start a new wiki, and it should be placed <em>before</em> the XLPage line (for languages with alphabets other than the Latin, the include_once line is required). These lines should be placed near the beginning of config.php, <em>but after any {$WikiDir and $}WikiLibDirs setting (if you have such setting)</em>.
+</p>
+<p class='vspace'>It&rsquo;s possible to load multiple pages; so if you want to create your own local translations without changing the ones you got from an i18n archive, just create another page (see below) and load it first. Be sure that you load first the page with your local changes:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+XLPage('fr','PmWikiFr.XLPageLocal');  # my local translations
+XLPage('fr','PmWikiFr.XLPage');       # from i18n.tgz
+</pre>
+</div><p class='vspace'>If your intention is to offer multiple languages on your site, and use <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Wiki Groups</a> as language selectors, you may want to place this code in local customizations files (see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations'>Group Customizations</a>). For example, if your site is published in French and English, and the French pages are in a group called Fr, you could create a file named Fr.php in the <em>local/</em> directory which contains:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+&lt;?php if (!defined('PmWiki')) exit();
+##change to French language
+XLPage('fr','PmWikiFr.XLPage');
+</pre>
+</div><p class='vspace'>You may wish to create a page called <em>PmwikiFr.php</em> with the same content to access the French documentation in the PmwikiFr group.  <em>En.php</em> is not necessary in this case since English is the default language.
+</p>
+<p class='vspace'>An alternative to the above would be to add to <em>config.php</em> the following, which tests if there is an XLPage in a group, and if it finds one it gets loaded (any language):
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>    
+$xlpage = FmtPageName('$Group.XLPage', $pagename);
+if (PageExists($xlpage)) XLPage($xlpage, $xlpage); 
+</pre>
+</div><p class='vspace'>With this method you would need to copy any relevant XLPage into any group which needs the different language support.
+</p>
+<p class='vspace'>Another way (advanced) would be insert into config.php this script, it asks to the web server the headers  received from the user&rsquo;s browser and select a language; example with spanish and english:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>    
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+switch ($lang){
+   case "es":
+      XLPage('es','PmWikiEs.XLPage');
+      break;
+   case "en":
+      XLPage('en','PmWikiEn.XLPage');
+      break;
+   default:
+      XLPage('en','PmWikiEn.XLPage');
+      break;
+}
+</pre>
+</div><p class='vspace'>See also 
+</p><ul><li><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/MultiLanguage' rel='nofollow'>Cookbook:MultiLanguage</a> 
+</li><li><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/MultiLanguageViews' rel='nofollow'>Cookbook:MultiLanguageViews</a> 
+</li></ul><div class='vspace'></div><h2><a name='CreatingNewTranslations' id='CreatingNewTranslations'></a>Creating New Translations</h2>
+<p>If language pages don&rsquo;t exist for your desired language, it&rsquo;s easy to create one!  An XLPage translation file simply contains lines of the form
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>'phrase' =&gt; 'translated phrase',</code>
+</div><p class='vspace'>where &ldquo;phrase&rdquo; is an internationalized phrase (denoted by <code class='escaped'>$[phrase]</code>) in PmWiki&rsquo;s $&hellip;Fmt variables, and &ldquo;translated phrase&rdquo; is what should be printed in your particular language.  For example, the line (in <code class='escaped'>PmWikiFr.XLPage</code>)
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>'Search' =&gt; 'Rechercher',</code>
+</div><p class='vspace'>converts &ldquo;<code class='escaped'>$[Search]</code>&rdquo; to &ldquo;Rechercher&rdquo; on output.  The file <a class='urllink' href='http://www.pmwiki.org/wiki/Localization/XLPageTemplate' rel='nofollow'>Localization:XLPageTemplate</a> is a good starting point for creating a new XLPage and has most of PmWiki&rsquo;s key phrases already listed in it.  
+</p>
+<p class='vspace'>If you create new versions of PmWiki pages in other languages, please consider adding them to the <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PmWiki' rel='nofollow'>main PmWiki site</a> so that they can be made available to others in the i18n archives!  (Be sure to check out <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Localization/Localization?action=edit' title='Create page'>The Localization Portal</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Localization/Localization?action=edit'>?</a> for further information on effectively internationalizing PmWiki.)
+</p>
+<div class='vspace'></div><div class='indent'><span  style='font-style: italic; color: green;'> The term &ldquo;i18n&rdquo; is commonly used as an abbreviation for the English word &ldquo;internationalization&rdquo;.  The abbreviation is derived from the fact that there are 18 letters between the &ldquo;i&rdquo; and the final &ldquo;n&rdquo; and few people want to type them all out.</span>
+</div><div class='vspace'></div><h2>Enabling &ldquo;Special&rdquo; Characters in WikiLinks</h2>
+<p>To enable &ldquo;special&rdquo; characters like for example German umlauts in WikiLinks, it is necessary to configure the server locale to ensure that PmWiki uses the proper character set definition.
+</p>
+<p class='vspace'>If this is not possible due to limited access to the server configuration, PmWiki can be configured to use a specific locale by using the XLPage options (see <a class='urllink' href='http://www.pmwiki.org/wiki/Localization/XLPageTemplate' rel='nofollow'>XLPageTemplate</a>).
+</p>
+<p class='vspace'>For German umlauts, you&rsquo;d need for example:
+</p>
+<div class='vspace'></div><ul><li><code class='escaped'>'Locale' =&gt; 'deu',</code> &larr; for Windows servers, see <a class='urllink' href='http://msdn.microsoft.com/en-us/library/39cwe7zf.aspx' rel='nofollow'>MSDN List of locale identifiers</a>
+</li><li><code class='escaped'>'Locale' =&gt; 'de_DE',</code> &larr; for Linux servers; for the UTF-8 encoding, on some installations you may need to set <code> &lsquo;de_DE.utf8&rsquo; </code> or <code> &lsquo;de_DE.UTF-8&rsquo;</code>.
+</li></ul><p class='vspace'>Note that the locale identifier depends on the operation system and perhaps on the specific installation.
+</p>
+<p class='vspace'><a name='notes' id='notes'></a>
+</p><h2>Notes</h2>
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='vspace question'>Q If my wiki is internationalized by <em>config.php</em>, how do I revert a specific group to English?</p>
+<p class='vspace'> Use <code class='escaped'>$XLLangs = array('en');</code> in the group&rsquo;s <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations'>group customization</a> file.
+</p>
+<p class='vspace question'>Q If my wiki is in English and I want just one page, or group, in Spanish do I say <code class='escaped'>XLPage('es','PmWikiEs.XLPage');</code> in the group or page configuration file?</p>
+<p class='vspace'> Yes, that is usually the best method. If you were doing this with many scattered pages, or with several languages, you might find it easier to maintain if you load the translations all in config.php like this:
+</p>
+<div class='vspace'></div><pre>  XLPage(&lsquo;es&rsquo;,&rsquo;PmWikiEs.XLPage&rsquo;);
+  XLPage(&lsquo;fr&rsquo;,&rsquo;PmWikiFr.XLPage&rsquo;);
+  XLPage(&lsquo;ru&rsquo;,&rsquo;PmWikiRu.XLPage&rsquo;);
+  <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#XLLangs'><code class='varlink'>&#036;XLLangs</code></a> = array(&lsquo;en&rsquo;);
+</pre><p class='vspace'> Then in each group or page configuration file, you&rsquo;d just use <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#XLLangs'><code class='varlink'>&#036;XLLangs</code></a> = array(&lsquo;es&rsquo;); to set the language to use (in this case, Spanish). Note that though this method is easier to maintain, its somewhat slower because it loads all the dictionaries for each page view, even if they won&rsquo;t be used.
+</p>
+<p class='vspace question'>Q What does the first parameter of this function stand for? How can it be used?</p>
+<p class='vspace'> The XLPage mechanism allows multiple sets of translations to be loaded,
+and the first parameter is used to distinguish them.  
+</p>
+<p class='vspace'>For example, suppose I want to have translations for both normal French
+and &ldquo;Canadian&rdquo; French.  Rather than maintain two entirely separate sets
+of pages, I could do:
+</p>
+<div class='vspace'></div><pre>   XLPage(&lsquo;fr-ca&rsquo;, &lsquo;PmWikiFrCa.XLPage&rsquo;);
+   XLPage(&lsquo;fr&rsquo;, &lsquo;PmWikiFr.XLPage&rsquo;);
+</pre><p class='vspace'>PmWikiFr.XLPage would contain all of the standard French translations,
+while PmWikiFrCA.XLPage would only need to contain &ldquo;Canada-specific&rdquo;
+translations &mdash; i.e., those that are different from the ones in the
+French page.
+</p>
+<p class='vspace'>The first parameter distinguishes the two sets of translations.
+In addition, a <em>config.php</em> script can use the <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#XLLangs'><code class='varlink'>&#036;XLLangs</code></a> variable
+to adjust the order of translation, so if there was a group or
+page where I only wanted the standard French translation, I
+can set
+</p>
+<div class='vspace'></div><pre>   <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#XLLangs'><code class='varlink'>&#036;XLLangs</code></a> = array(&lsquo;fr&rsquo;, &lsquo;en&rsquo;);
+</pre><p class='vspace'>and PmWiki will use only the &lsquo;fr&rsquo; and &lsquo;en&rsquo; translations (in that order),
+no matter how many translations have been loaded with XLPage().
+</p>
+<p class='vspace'><a name='xlsdv' id='xlsdv'></a>
+</p><p class='question'>Q How can I add a translation for an individual string in a PHP file?</p>
+<p class='vspace'> Use the XLSDV() function to provide a translation for a specific (English) string. For instance, with this in config.php
+</p>
+<div class='vspace'></div><pre>   XLSDV(&lsquo;nl&rsquo;, array(&lsquo;my English expression&rsquo;=&gt;&rsquo;mijn Nederlandse uitdrukking&rsquo;));
+</pre><p class='vspace'>any instance of the variable expression <code class='escaped'>$[my English expression]</code> in wiki mark-up will be displayed as <em>my English expression</em> in default (English) context, but as <em>mijn Nederlandse uitdrukking</em> in Dutch (nl) context, i.e. when <code class='escaped'>XLPage('nl',...)</code> has been called for that page in config.php or a cookbook recipe.
+</p>
+<p class='vspace'>If you need to get a translation in a PHP file, use the <code class='escaped'>XL()</code> function:
+</p><pre> $local_string = XL(&ldquo;my English expression&rdquo;);
+</pre><p class='vspace'>But beware: XLPage() uses XLSDV() internally for its translation pairs, too, and only the first definition is accepted! Thus, if the Dutch XLPage already contains a translation and you want to override that, you need to use your XLSDV(&lsquo;nl&rsquo;,&hellip;) <em>before</em> calling the correspondent XLPage(&lsquo;nl&rsquo;,&hellip;). Otherwise, by using  XLSDV() <em>after</em> XLPage() - e.g. within a recipe that is included later in config.php - your translation will only work as long nobody defines &lsquo;my English expression&rsquo; in that XLPage.
+</p>
+<p class='vspace'> 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomWikiStyles'>Custom wiki styles</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>Local customizations</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Internationalizations' rel='nofollow'>PmWiki:Internationalizations</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Internationalizations-Talk' rel='nofollow'>PmWiki:Internationalizations-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on June 13, 2017, at 10:03 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

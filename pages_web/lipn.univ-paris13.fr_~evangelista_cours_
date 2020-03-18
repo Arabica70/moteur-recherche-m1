@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Sami Evangelista - Page de cours</title>
+  <meta name="author" content="Sami Evangelista">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+</head>
+<body>
+  Modules enseignés au département R&amp;T de l'IUT de Villetaneuse en
+  2018-2019 :
+  <lu>
+    <li><a href="M3108">M3108 - Supervision des réseaux</a></li>
+    <li><a href="M4205">M4205 - Téléphonie sur IP</a></li>
+  </lu>
+  Commandes CISCO : <a href="cisco.pdf">lien</a>.
+</body>
+</html>

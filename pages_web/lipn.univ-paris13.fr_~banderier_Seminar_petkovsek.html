@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Solving Discrete Initial- and Boundary-Value Problems</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea -v petkovsek -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Solving Discrete Initial- and Boundary-Value Problems</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Marko Petkov</FONT></I></FONT><FONT SIZE=4><I><FONT COLOR=maroon>s</FONT></I></FONT><FONT SIZE=4><I><FONT COLOR=maroon>ek</FONT></I></FONT><BR>
+<BR>
+
+ University of Ljubljana<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+October 4, 1999<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="petkovsek.ps">postscript</A> and in <A HREF="http://algo.inria.fr/seminars/sem99-00/petkovsek.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+Multivariate linear recurrences appear in such diverse fields of
+mathematics as combinatorics, probability theory, and numerical
+resolution of partial differential equations. Whereas in the
+univariate case the solution of a constant-coefficient recurrence
+always has a rational generating function, this is no longer true in
+the multivariate case where this generating function can be
+non-rational, non-algebraic, and even non-D-finite. Nevertheless,
+there are important cases where the solution can be computed exactly
+in terms of algebraic functions. Examples include many lattice-path
+problems such as the enumerations of Dyck, Motzkin, and Schroeder
+paths, determining the cardinality of various free algebras, and (in
+some cases) the enumeration of permutations with a forbidden pattern.
+This is joint work by Marko Petkovsek and Mireille Bousquet-Mélou
+(CNRS, Université de Bordeaux&nbsp;I).
+</BLOCKQUOTE><BR><BR>
+<BR>
+<!--TOC section Multivariate Linear Recurrences-->
+
+<H2>1&nbsp;&nbsp; Multivariate Linear Recurrences</H2><!--SEC END -->
+Combinatorics are often synonymous of recurrences; whereas a quite
+impressive apparatus is available for univariate recurrences,
+multivariate recurrences are always a strange and mysterious world.
+Whereas a linear recurrence with constant coefficients necessarily
+leads to a rational generating function in one variable, this is no
+longer true in several variables (even with very regular boundary
+conditions). In fact, the set of multivariate generating functions
+with such a recurrence intersects almost all of the well-known classes
+of functions. Here are two examples leading to two kinds of
+generating functions.<BR>
+<BR>
+<!--TOC subsection A rational generating function: the chess king
+recurrence-->
+
+<H3>A rational generating function: the chess king
+recurrence</H3><!--SEC END -->
+
+On the square lattice, one performs a walk, beginning at (0,0),
+made of a sequence of jumps (1,0), (1,1) or (0,1).
+Let <I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB> be the number of ways to reach (<I>n</I>,<I>k</I>).
+Thus, one has the relation
+<I>a</I><SUB><FONT SIZE=2><I>n</I>,0</FONT></SUB>=<I>a</I><SUB><FONT SIZE=2>0,<I>k</I></FONT></SUB>=1 (for <I>n</I>,<I>k</I><FONT FACE=symbol>³</FONT> 0) and the recurrence
+<I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>=<I>a</I><SUB><FONT SIZE=2><I>n</I>-1,<I>k</I></FONT></SUB>+<I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I>-1</FONT></SUB>+<I>a</I><SUB><FONT SIZE=2><I>n</I>-1,<I>k</I>-1</FONT></SUB> &nbsp;&nbsp; (for 
+<I>n</I>,<I>k</I><FONT FACE=symbol>³</FONT>1). Then, the generating function is 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I>(<I>x</I>,<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>,<I>k</I>=0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB> <I>x</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> <I>y</I><SUP><FONT SIZE=2><I>k</I></FONT></SUP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-(<I>x</I>+<I>y</I>+<I>xy</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Of course there is an explicit formula for the coefficients (often
+referred to as Delannoy numbers<A NAME="text1" HREF="#note1"><SUP><FONT SIZE=2>1</FONT></SUP></A>), namely <I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>i</I>=0</FONT></SUB><SUP><FONT SIZE=2><I>n</I></FONT></SUP> (<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>n</I></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>i</I></TD>
+</TR></TABLE>) (<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>n</I>+<I>k</I>-<I>i</I></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>n</I></TD>
+</TR></TABLE>)
+which translates all the possible choices to perform <I>i</I> moves of the
+type (1,1),  <I>n</I>-<I>i</I> moves of the type (1,0) and <I>k</I>-<I>i</I> moves of the
+type&nbsp;(0,1).<BR>
+<BR>
+<!--TOC subsection An irrational generating function: the chess knight
+recurrence-->
+
+<H3>An irrational generating function: the chess knight
+recurrence</H3><!--SEC END -->
+
+This time, one performs jumps (1,2) or (2,1) and the <I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>'s
+are known for <I>n</I><FONT FACE=symbol>£</FONT> 1 or <I>k</I><FONT FACE=symbol>£</FONT> 1. Petkovsek proved that
+<I>F</I>(<I>x</I>,<I>y</I>)=<FONT FACE=symbol>å</FONT> <I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB><I>x</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> <I>y</I><SUP><FONT SIZE=2><I>k</I></FONT></SUP> is irrational&nbsp;[<A HREF="#Petkovsek98"><CITE>10</CITE></A>] and a
+forthcoming article by Bousquet-Mélou and Petkovsek should show
+that <I>F</I>&nbsp;is in fact non D-finite.<BR>
+<BR>
+A first problem which can arise in several variables is that initial
+conditions have to be correctly set in order to establish the
+uniqueness of the solution to a linear recurrence with constant
+coefficients. The second problem is what the nature of the solutions
+is, and how to compute them.<BR>
+<BR>
+<!--TOC section Existence and Uniqueness of the Solution-->
+
+<H2>2&nbsp;&nbsp; Existence and Uniqueness of the Solution</H2><!--SEC END -->
+
+Henceforth, we view all the indices (and variables) as tuples of
+<B><I>Z</I></B><SUP><FONT SIZE=2><I>d</I></FONT></SUP> or <B><I>C</I></B><SUP><FONT SIZE=2><I>d</I></FONT></SUP>, that is <B><I>n</I></B>=(<I>n</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>n</I><SUB><FONT SIZE=2><I>d</I></FONT></SUB>) and <B><I>x</I></B>=(<I>x</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>x</I><SUB><FONT SIZE=2><I>d</I></FONT></SUB>). Let <I>H</I>={<B><I>h</I></B><SUB><B><FONT SIZE=2>1</FONT></B></SUB>,...,<B><I>h</I></B><SUB><B><FONT SIZE=2><I>k</I></FONT></B></SUB>} be the set
+of allowed jumps. Let <B><I>s</I></B> be the ``true'' <EM>starting
+point</EM> of the walk, that is the point after which all jumps are
+possible and where one does not care about the side conditions
+anymore. The kind of recurrence under study is formalized by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><A NAME="(R)"></A></TD>
+<TD NOWRAP>
+<I>a</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><B><I>n</I></B></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT FACE=symbol>f</FONT>(<B><I>n</I></B>)</TD>
+<TD ALIGN=left NOWRAP>	for <B><I>n</I></B><FONT FACE=symbol>³</FONT>0 and <B><I>n</I></B>¬ <FONT FACE=symbol>³</FONT><B><I>s</I></B>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>c</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><B><I>h</I></B></FONT><SUB><FONT SIZE=2><B>1</B></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>a</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><B><I>n</I>+<I>h</I></B></FONT><SUB><FONT SIZE=2><B>1</B></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+...+<I>c</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><B><I>h</I></B></FONT><SUB><FONT SIZE=2><B><I>k</I></B></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>a</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><B><I>n</I>+<I>h</I></B></FONT><SUB><FONT SIZE=2><B><I>k</I></B></FONT></SUB></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD ALIGN=left NOWRAP>	for <B><I>n</I></B><FONT FACE=symbol>³</FONT><B><I>s</I></B>.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+&nbsp;&nbsp;&nbsp;&nbsp;(1)</TD>
+</TR></TABLE></DIV>
+The first part of the recurrence stands for the ``initial'' conditions
+(that is, the boundary values) and the second part reflects the
+different shifts (or jumps) allowed.<BR>
+<BR>
+<DIV ALIGN=left><B>Definition&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Dependency relation]&nbsp;&nbsp;</FONT><EM>
+Define </EM><EM><FONT FACE=symbol>®</FONT></EM><EM> by
+</EM><EM><I>p</I><FONT FACE=symbol>®</FONT><I>q</I><FONT FACE=symbol>ÜÞ</FONT>(<I>p</I>-<I>q</I> <FONT FACE=symbol>Î</FONT> <I>H</I></EM><EM> and </EM><EM><I>q</I> <FONT FACE=symbol>³</FONT> <I>s</I></EM><EM>).
+Note </EM><EM><FONT FACE=symbol>®</FONT></EM><SUP><EM><FONT SIZE=2>+</FONT></EM></SUP><EM> the transitive closure of </EM><EM><FONT FACE=symbol>®</FONT></EM><EM>.
+</EM></DIV>
+Thus, <I>p</I><FONT FACE=symbol>®</FONT><I>q</I> simply means that there is a ``step'' from <I>p</I>
+to&nbsp;<I>q</I>, with <I>q</I> outside of the ``boundary value'' area, 
+and <I>p</I><FONT FACE=symbol>®</FONT><SUP><FONT SIZE=2>+</FONT></SUP><I>q</I> means that there is a sequence of steps from <I>p</I> to&nbsp;<I>q</I>.<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<EM>
+The following are equivalent:
+</EM><OL type=1>
+<LI><EM>
+</EM><EM> the transitive closure </EM><EM><FONT FACE=symbol>®</FONT></EM><SUP><EM><FONT SIZE=2>+</FONT></EM></SUP><EM> of the
+dependency relation </EM><EM><FONT FACE=symbol>®</FONT></EM><EM> is well-founded in </EM><EM><B><I>N</I></B></EM><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>;
+</EM>
+<LI><EM> there exists </EM><EM><B><I>u</I></B></EM><EM>&gt;0</EM><EM> such that </EM><EM><B><I>u</I></B></EM><EM><B><FONT SIZE=5>·</FONT></B></EM><EM><B> <I>h</I></B></EM><EM>&lt;0</EM><EM>
+for any ``jump vector'' </EM><EM><B><I>h</I></B></EM><EM><FONT FACE=symbol>Î</FONT> <I>H</I></EM><EM>;
+</EM>
+<LI><EM> the convex hull of </EM><EM><I>H</I></EM><EM> does not intersect </EM><EM><B><I>R</I></B></EM><SUB><EM><FONT SIZE=2>+</FONT></EM></SUB><SUP><EM><FONT SIZE=2><I>d</I></FONT></EM></SUP><EM>.
+</EM></OL><EM>
+</EM></DIV>
+The last point is the most efficient for proving uniqueness of the
+solution of recurrence&nbsp;(<A HREF="#(R)">1</A>) as it is easy to check.
+For example, for the chess king problem, one has a recurrence 
+with starting point <B><I>s</I></B>=(1,1) and the set of allowed jumps is
+<I>H</I>={(-1,0),(-1,-1),(0,-1)},
+the intersection of 
+the convex hull of <I>H</I> (a triangle in the lower left quarter)
+and of <B><I>R</I></B><SUB><FONT SIZE=2>+</FONT></SUB><SUP><FONT SIZE=2>2</FONT></SUP> is clearly the empty set; thus there is a unique
+solution to the recurrence.
+Considering now the recurrence 
+<I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>=<I>a</I><SUB><FONT SIZE=2><I>n</I>-1,<I>k</I>+2</FONT></SUB>+<I>a</I><SUB><FONT SIZE=2><I>n</I>+2,<I>k</I>-1</FONT></SUB> &nbsp;&nbsp; (for  <I>n</I>,<I>k</I><FONT FACE=symbol>³</FONT> 1),
+where the <I>a</I><SUB><FONT SIZE=2><I>n</I>,<I>k</I></FONT></SUB>'s are known (for <I>n</I>=0 or <I>k</I>=0),
+where the starting point is <B><I>s</I></B>=(1,1) and where the set of allowed jumps
+<I>H</I>={(-1,2),(2,-1)}, gives an example for which the convex hull
+intersects <B><I>R</I></B><SUB><FONT SIZE=2>+</FONT></SUB><SUP><FONT SIZE=2>2</FONT></SUP>; thus uniqueness does not hold.
+As a last example, one shows that 
+the chess knight problem has a unique solution:
+the starting point is <B><I>s</I></B>=(2,2) and the set of allowed jumps is
+<I>H</I>={(-2,1),(1,-2)},
+whose convex hull does not intersect&nbsp;<B><I>R</I></B><SUB><FONT SIZE=2>+</FONT></SUB><SUP><FONT SIZE=2>2</FONT></SUP>.<BR>
+<BR>
+<!--TOC section Nature of the Solution-->
+
+<H2>3&nbsp;&nbsp; Nature of the Solution</H2><!--SEC END -->
+
+Let <B><I>K</I></B> be a field of characteristic zero. Consider <I>F</I>(<B><I>x</I></B>)=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> 0</FONT></SUB> <I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> <I>x</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> with <I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> <FONT FACE=symbol>Î</FONT> <B><I>K</I></B> and <B><I>x</I></B><SUP><FONT SIZE=2><I>n</I></FONT></SUP>=<I>x</I><SUB><FONT SIZE=2>1</FONT></SUB><SUP><FONT SIZE=2><I>n</I></FONT></SUP>··· <I>x</I><SUB><FONT SIZE=2><I>d</I></FONT></SUB><SUP><FONT SIZE=2><I>n</I></FONT></SUP>. A function <I>F</I>(<B><I>x</I></B>) is called rational
+if there exist two polynomials <I>P</I> and <I>Q</I> in <B><I>K</I></B>[<B><I>x</I></B>]\{0} such that <I>QF</I>-<I>P</I>=0. The function <I>F</I> is called
+algebraic if there exists <I>P</I><FONT FACE=symbol>Î</FONT> <B><I>K</I></B>[<B><I>x</I></B>,<I>t</I>]\{0} such
+that <I>P</I>(<B><I>x</I></B>,<I>F</I>(<B><I>x</I></B>))=0. The function <I>F</I> is called D-finite
+if there exist polynomials <I>P</I><SUB><FONT SIZE=2><I>i</I>,<I>j</I></FONT></SUB> in <B><I>K</I></B>[<B><I>x</I></B>] such that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+<I>P</I><SUB><FONT SIZE=2><I>i</I>,<I>k</I></FONT></SUB>(<B><I>x</I></B>) </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT><SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>F</I>(<B><I>x</I></B>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT>
+<I>x</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB><SUP><FONT SIZE=2><I>k</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+...+<I>P</I><SUB><FONT SIZE=2><I>i</I>,0</FONT></SUB>(<B><I>x</I></B>)
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT><SUP><FONT SIZE=2><I>k</I></FONT></SUP><I>F</I>(<B><I>x</I></B>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>¶</FONT> <I>x</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB><SUP><FONT SIZE=2><I>k</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=0
+</TD>
+</TR></TABLE></DIV>
+with <I>P</I><SUB><FONT SIZE=2><I>i</I>,<I>j</I></FONT></SUB><FONT FACE=symbol>¹</FONT>0 for at least one&nbsp;<I>j</I> for each <I>i</I>=1,2,...,<I>d</I>. An
+equivalent definition states that the space spanned by all the
+derivatives of <I>F</I> is finite-dimensional over <B><I>K</I></B>(<B><I>x</I></B>).
+D-finite functions have nice closure properties and are related to a
+lot of combinatorial problems (see Stanley's article&nbsp;[<A HREF="#Stanley80"><CITE>12</CITE></A>]
+and Lipshitz's article&nbsp;[<A HREF="#Lipshitz89"><CITE>7</CITE></A>]).<BR>
+<BR>
+<DIV ALIGN=left><B>Definition&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[Apex]&nbsp;&nbsp;</FONT><EM> The apex of </EM><EM><I>H</I></EM><EM> is the componentwise maximum
+of </EM><EM><I>H</I> <FONT FACE=symbol>È</FONT> {0}</EM><EM>.
+</EM></DIV>
+For example, for the chess knight problem, one has
+<I>H</I>={(-2,1),(1,-2)} so the apex is (1,1) (and the starting
+point is (2,2)). If <I>H</I>={(-2,-1),(-1,2)}, then the apex is (0,2).<BR>
+<BR>
+An important ingredient in the proof of the two theorems stated
+hereafter is the <EM>kernel method</EM>. Let us detail this point:
+one wants to make explicit the solution <I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> of the
+recurrence&nbsp;(<A HREF="#(R)">1</A>), 
+which rewrites
+<I>Q</I>(<B><I>x</I></B>) <I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<B><I>x</I></B>)=<I>K</I>(<B><I>x</I></B>)-<I>U</I>(<B><I>x</I></B>)
+where <I>K</I> stands for the <EM>known</EM> initial conditions
+and <I>U</I> stands for the <EM>unknown</EM> initial conditions.
+<I>Q</I> is called the kernel. 
+The <EM>kernel method</EM> consists in cancelling the kernel
+<I>Q</I>(<B><I>x</I></B>) by a choice of algebraic values <B><I>a</I></B> of <B><I>x</I></B>, 
+thus one gets a system of equations <I>K</I>(<B><I>a</I></B>)-<I>U</I>(<B><I>a</I></B>)=0. Solving
+this system generally allows to make <I>U</I> explicit.
+This provides <I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB> for generic <B><I>x</I></B>:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<B><I>x</I></B>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>K</I>(<B><I>x</I></B>)-<I>U</I>(<B><I>x</I></B>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I>(<B><I>x</I></B>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Typically, the function <I>U</I>(<B><I>x</I></B>) is the sum of <I>m</I> unknown
+multivariate functions <I>F</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>(<I>x</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>x</I><SUB><FONT SIZE=2><I>d</I>-1</FONT></SUB>); thus cancelling the
+kernel with <I>m</I> different values for <I>x</I><SUB><FONT SIZE=2><I>d</I></FONT></SUB> (which then become
+functions of (<I>x</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>x</I><SUB><FONT SIZE=2><I>d</I>-1</FONT></SUB>)) yields a system which allows to
+make explicit the <I>F</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>'s. The kernel method has belonged to
+mathematical folklore since the 1970's; e.g., it has been used by
+combinatorialists [<A HREF="#CoRi72"><CITE>3</CITE></A>][<A HREF="#Knuth68a"><CITE>6</CITE></A><CITE>, Sec.&nbsp;2.2.1, Ex. 4
+and&nbsp;11</CITE>] and probabilists&nbsp;[<A HREF="#FaIa79"><CITE>4</CITE></A>]. There is also some
+recent work which makes a deep use of
+it&nbsp;[<A HREF="#BaBoDeFlGaGo??"><CITE>1</CITE></A><CITE>, </CITE><A HREF="#Bousquet98"><CITE>2</CITE></A><CITE>, </CITE><A HREF="#Petkovsek98"><CITE>10</CITE></A><CITE>, </CITE><A HREF="#PeBo00"><CITE>11</CITE></A>].<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<EM>
+Assume the apex of </EM><EM><I>H</I></EM><EM> is 0. Then the generating function </EM><EM><I>F</I></EM><SUB><EM><FONT SIZE=2><I>s</I></FONT></EM></SUB><EM>(</EM><EM><B><I>x</I></B></EM><EM>)</EM><EM> 
+of the unique solution of recurrence&nbsp;(</EM><A HREF="#(R)"><EM>1</EM></A><EM>)
+is rational if and only if the known initial function </EM><EM><I>K</I>(</EM><EM><B><I>x</I></B></EM><EM>)</EM><EM> itself
+is rational.
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Theorem&nbsp;3</B>&nbsp;&nbsp;<EM>
+Take </EM><EM><B><I>K</I></B></EM><EM>=</EM><EM><B><I>C</I></B></EM><EM>. Assume the apex of </EM><EM><I>H</I></EM><EM> has at most one positive
+coordinate. Then the generating function </EM><EM><I>F</I></EM><SUB><EM><FONT SIZE=2><I>s</I></FONT></EM></SUB><EM>(</EM><EM><B><I>x</I></B></EM><EM>)</EM><EM> of the unique
+solution to the recurrence&nbsp;(</EM><A HREF="#(R)"><EM>1</EM></A><EM>) is algebraic if and only if the
+known initial function </EM><EM><I>K</I>(</EM><EM><B><I>x</I></B></EM><EM>)</EM><EM> itself is algebraic.
+</EM></DIV><BR>
+<!--TOC subsection An algebraic example: Dyck paths-->
+
+<H3>An algebraic example: Dyck paths</H3><!--SEC END -->
+
+One performs steps (1,1) or (1,-1), the numbers <I>a</I><SUB><FONT SIZE=2><I>i</I>,<I>j</I></FONT></SUB> of paths
+from (0,0) to (<I>i</I>,<I>j</I>) satisfy the recurrence
+<I>a</I><SUB><FONT SIZE=2><I>i</I>,<I>j</I></FONT></SUB>=<I>a</I><SUB><FONT SIZE=2><I>i</I>-1,<I>j</I>-1</FONT></SUB>+<I>a</I><SUB><FONT SIZE=2><I>i</I>-1,<I>j</I>+1</FONT></SUB> (for <I>m</I>,<I>n</I><FONT FACE=symbol>³</FONT> 1), <I>a</I><SUB><FONT SIZE=2>0,0</FONT></SUB>=1 and
+<I>a</I><SUB><FONT SIZE=2><I>i</I>,<I>j</I></FONT></SUB>=0 elsewhere. This leads to the functional equation
+(<I>y</I>-<I>x</I>-<I>xy</I><SUP><FONT SIZE=2>2</FONT></SUP>)<I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<I>x</I>,<I>y</I>)=<I>y</I>-<I>U</I>(<I>x</I>). Applying the kernel method yields
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<I>x</I>,<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>y</I>-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1-(1-4<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2<I>x</I></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>y</I>-<I>x</I>-<I>xy</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+<!--TOC subsection A transcendental and D-finite example: Young tableaux-->
+
+<H3>A transcendental and D-finite example: Young tableaux</H3><!--SEC END -->
+
+The generating function of 
+Young tableaux of height at most <I>d</I>
+is related to the numbers
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+<I>a</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2>1,...,1,<I>n</I>+1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>d</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>i</I><SUP><FONT SIZE=2><I>d</I>-1</FONT></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>(<I>dn</I>)!</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>d</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>n</I>+<I>i</I>)!</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>~</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>d</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>i</I><SUP><FONT SIZE=2><I>d</I>-1</FONT></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>(<I>d</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(2<FONT FACE=symbol>p</FONT>)<SUP><FONT SIZE=2>(<I>d</I>-1)/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>d</I><SUP><FONT SIZE=2><I>dn</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>n</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>(<I>d</I></FONT><SUP><FONT SIZE=2>2</FONT></SUP><FONT SIZE=2>-1)/2</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV>
+Algebraicity would imply asymptotics of the type <I>C</I><FONT SIZE=5>·</FONT>
+<I>A</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>/(<FONT FACE=symbol>G</FONT>(1-<I>r</I>)<I>n</I><SUP><FONT SIZE=2><I>r</I></FONT></SUP>) with <I>C</I> and&nbsp;<I>A</I> algebraic numbers and
+<I>r</I> a rational number not in {1,2,3,...} (classical result from
+singularity analysis&nbsp;[<A HREF="#Flajolet87"><CITE>5</CITE></A>]). In our case, for odd <I>d</I>&gt;1,
+ <I>r</I> is an integer and for even <I>d</I>&gt;2, 
+<FONT FACE=symbol>G</FONT>(1-(<I>d</I><SUP><FONT SIZE=2>2</FONT></SUP>-1)/2) is in <B><I>Q</I></B>((<FONT FACE=symbol>p</FONT>)<SUP><FONT SIZE=2>1/2</FONT></SUP>&nbsp;) but not in <B><I>Q</I></B>(<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>(<I>d</I>-1)/2</FONT></SUP>). Thus, the generating function of Young
+tableaux of height at most <I>d</I> is transcendental (for <I>d</I><FONT FACE=symbol>³</FONT> 3) and
+D-finite. Due to well-known one-to-one correspondences, this result
+extends from Young tableaux to ballot problems and involutions
+avoiding long increasing subsequences.<BR>
+<BR>
+<!--TOC subsection A non-D-finite and hypertranscendental example-->
+
+<H3>A non-D-finite and hypertranscendental example</H3><!--SEC END -->
+
+The numbers <I>a</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB> defined by
+<DIV ALIGN=center><I>a</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB>=<I>a</I><SUB><FONT SIZE=2><I>m</I>+1,<I>n</I>-2</FONT></SUB>+<I>a</I><SUB><FONT SIZE=2><I>m</I>-2,<I>n</I>+1</FONT></SUB>-<I>a</I><SUB><FONT SIZE=2><I>m</I>-1,<I>n</I>-1</FONT></SUB>,&nbsp;&nbsp;&nbsp;&nbsp;if <I>m</I>,<I>n</I><FONT FACE=symbol>³</FONT> 2,</DIV>
+<I>a</I><SUB><FONT SIZE=2>1,1</FONT></SUB>=-1, and <I>a</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB>=0 elsewhere, actually belong
+to&nbsp;{0,1,-1} and correspond to a nice ``fractal'' lozenge pattern
+(see the ``diamond figure'' in&nbsp;[<A HREF="#PeBo00"><CITE>11</CITE></A>]). Let <I>G</I>(<I>x</I>)=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>m</I><FONT FACE=symbol>³</FONT>
+2</FONT></SUB> <I>a</I><SUB><FONT SIZE=2><I>m</I>,2</FONT></SUB> &nbsp;<I>x</I><SUP><FONT SIZE=2><I>m</I>+1</FONT></SUP>; one then has
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>F</I><SUB><FONT SIZE=2><I>s</I></FONT></SUB>(<I>x</I>,<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>,<I>n</I><FONT FACE=symbol>³</FONT> 2</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>a</I><SUB><FONT SIZE=2><I>m</I>,<I>n</I></FONT></SUB><I>x</I><SUP><FONT SIZE=2><I>m</I>-2</FONT></SUP><I>y</I><SUP><FONT SIZE=2><I>n</I>-2</FONT></SUP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>xy</I>-<I>G</I>(<I>x</I>)<I>G</I>(<I>y</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(<I>x</I>-<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)(<I>y</I>-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+This equation gives <I>x</I><SUP><FONT SIZE=2>3</FONT></SUP>-<I>G</I>(<I>x</I>)-<I>G</I>(<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)=0 which leads by iteration
+to <I>G</I>(<I>x</I>)=<I>x</I><SUP><FONT SIZE=2>3</FONT></SUP><FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>i</I><FONT FACE=symbol>³</FONT> 0</FONT></SUB> (-<I>i</I>)<SUP><FONT SIZE=2><I>i</I></FONT></SUP> <I>x</I><SUP><FONT SIZE=2>2</FONT></SUP><SUP><SUP><FONT SIZE=2><I>i</I></FONT></SUP></SUP>.
+This kind of <EM>lacunary</EM> series cannot be D-finite.
+A stronger result gives that <I>G</I> is in fact
+hypertranscendental&nbsp;[<A HREF="#LoPo77"><CITE>8</CITE></A>],
+which means that there exists no algebraic differential equation
+<I>P</I>(<I>z</I>,<I>G</I>,<I>G</I>',...,<I>G</I><SUP><FONT SIZE=2>(<I>n</I>)</FONT></SUP>)=0.<BR>
+<BR>
+<!--TOC section Conclusion-->
+
+<H2>4&nbsp;&nbsp; Conclusion</H2><!--SEC END -->
+
+This talk gave a bestiary of solutions for linear multivariate
+recurrences with constant coefficients. In two dimensions, it covers
+the theory of Riordan arrays&nbsp;[<A HREF="#MeVe00"><CITE>9</CITE></A>] (objects related to the
+Lagrange inversion formula). Even in two dimensions, it can be
+difficult to get the status of the generating function (algebraic?,
+D-finite?,&nbsp;...). The main possible proofs are: in the algebraic
+case, the key point is the kernel method, note that this method also
+appears in two other summaries in these proceedings (see Schaeffer's
+and Banderier's talks); in the transcendental case, asymptotics allow
+to detect the nonalgebraicity, and for non D-finite functions, one
+generally tries bootstrapping and then obtaining an infinite number of
+singular points.<BR>
+<BR>
+Marko Petkovsek has implemented some of the methods presented here
+in a Mathematica package <FONT COLOR=navy>multivar</FONT>, available, as several
+author's articles, at <CODE>http://www.fmf.uni-lj.si/~petkovsek/</CODE>.<BR>
+<BR>
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="BaBoDeFlGaGo??"><FONT COLOR=purple>[1]</FONT></A><DD>
+Banderier (C.), Bousquet-Mélou (M.), Denise (A.), Flajolet (P.), Gardy
+ (D.), and Gouyou-Beauchamps (D.).&nbsp;--
+Generating functions for generating trees. <EM>Discrete
+ Mathematics</EM>.&nbsp;--
+25 pages. To appear.<BR>
+<BR>
+
+<DT><A NAME="Bousquet98"><FONT COLOR=purple>[2]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+Multi-statistic enumeration of two-stack sortable permutations. <EM>Electronic Journal of Combinatorics</EM>, vol.&nbsp;5, n&deg;1,
+ 1998.&nbsp;--
+Research Paper 21, 12 pp. (electronic).<BR>
+<BR>
+
+<DT><A NAME="CoRi72"><FONT COLOR=purple>[3]</FONT></A><DD>
+Cori (Robert) and Richard (Jean).&nbsp;--
+Énumération des graphes planaires à l'aide des séries
+ formelles en variables non commutatives. <EM>Discrete Mathematics</EM>, vol.&nbsp;2,
+ 1972, pp.&nbsp;115--162.<BR>
+<BR>
+
+<DT><A NAME="FaIa79"><FONT COLOR=purple>[4]</FONT></A><DD>
+Fayolle (G.) and Iasnogorodski (R.).&nbsp;--
+Solutions of functional equations arising in the analysis of
+ two-server queueing models. In <EM>Performance of computer systems (Proc.
+ Fourth Internat. Sympos. Modelling Performance Evaluation Comput. Systems,
+ Vienna, 1979)</EM>, pp.&nbsp;289--303.&nbsp;--
+North-Holland, Amsterdam, 1979.<BR>
+<BR>
+
+<DT><A NAME="Flajolet87"><FONT COLOR=purple>[5]</FONT></A><DD>
+Flajolet (Philippe).&nbsp;--
+Analytic models and ambiguity of context-free languages. <EM>Theoretical Computer Science</EM>, vol.&nbsp;49, n&deg;2-3, 1987,
+ pp.&nbsp;283--309.&nbsp;--
+Twelfth international colloquium on automata, languages and
+ programming (Nafplion, 1985).<BR>
+<BR>
+
+<DT><A NAME="Knuth68a"><FONT COLOR=purple>[6]</FONT></A><DD>
+Knuth (Donald&nbsp;E.).&nbsp;--
+<EM>The art of computer programming. </EM><EM>V</EM><EM>ol. 1: </EM><EM>F</EM><EM>undamental
+ algorithms</EM>.&nbsp;--
+Addison-Wesley, 1968.<BR>
+<BR>
+
+<DT><A NAME="Lipshitz89"><FONT COLOR=purple>[7]</FONT></A><DD>
+Lipshitz (L.).&nbsp;--
+<I>D</I>-finite power series. <EM>Journal of Algebra</EM>, vol.&nbsp;122,
+ n&deg;2, 1989, pp.&nbsp;353--373.<BR>
+<BR>
+
+<DT><A NAME="LoPo77"><FONT COLOR=purple>[8]</FONT></A><DD>
+Loxton (J.&nbsp;H.) and Van&nbsp;der Poorten (A.&nbsp;J.).&nbsp;--
+A class of hypertranscendental functions. <EM>Aequationes
+ Mathematicae</EM>, vol.&nbsp;16, n&deg;1-2, 1977, pp.&nbsp;93--106.<BR>
+<BR>
+
+<DT><A NAME="MeVe00"><FONT COLOR=purple>[9]</FONT></A><DD>
+Merlini (Donatella) and Verri (M.&nbsp;Cecilia).&nbsp;--
+Generating trees and proper Riordan arrays. <EM>Discrete
+ Mathematics</EM>, vol.&nbsp;218, n&deg;1-3, 2000, pp.&nbsp;167--183.<BR>
+<BR>
+
+<DT><A NAME="Petkovsek98"><FONT COLOR=purple>[10]</FONT></A><DD>
+Petkovsek (M.).&nbsp;--
+The irrational chess knight. In <EM>Formal Power Series and
+ Algebraic Combinatorics</EM>, pp.&nbsp;513--522.&nbsp;--
+1998. Proceedings of FPSAC'98, June 1998, Toronto.<BR>
+<BR>
+
+<DT><A NAME="PeBo00"><FONT COLOR=purple>[11]</FONT></A><DD>
+Petkovsek (Marko) and Bousquet-Mélou (Mireille).&nbsp;--
+Linear recurrences with constant coefficients: the multivariate case.
+ <EM>Discrete Mathematics</EM>, vol.&nbsp;225, n&deg;1-3, 2000,
+ pp.&nbsp;51--75.<BR>
+<BR>
+
+<DT><A NAME="Stanley80"><FONT COLOR=purple>[12]</FONT></A><DD>
+Stanley (R.&nbsp;P.).&nbsp;--
+Differentiably finite power series. <EM>European Journal of
+ Combinatorics</EM>, vol.&nbsp;1, n&deg;2, 1980, pp.&nbsp;175--188.</DL>
+
+<!--BEGIN NOTES document-->
+<HR WIDTH="50%" SIZE=1><DL>
+<DT><A NAME="note1" HREF="#text1"><FONT SIZE=5>1</FONT></A><DD> Henry Auguste Delannoy was
+born in 1833, graduated from the École polytechnique in 1853 and
+became a military intendant in the city of Orléans. He wrote a lot
+of contributions in recreative mathematics and combinatorics until
+1898, the most remarkable being <EM>How to use a chessboard in order
+to solve some probability problems</EM>. After the death of his friend
+Lucas, he took in charge the publication of Lucas's last unachieved
+books.
+</DL>
+<!--END NOTES-->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+</HTML>
+

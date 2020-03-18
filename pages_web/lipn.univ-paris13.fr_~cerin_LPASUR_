@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Introduction Syst&egrave;me</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="Christophe C&eacute;rin">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=latin-ext" rel="stylesheet">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<h1
+		class="header-heading">Introduction Syst&egrave;me, LP
+		ASUR 2019 - 2020</h1>
+			</div>
+		</div>
+		<div class="nav-bar">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="#one">Shell</a></li>
+					<li><a href="#two">RosettaHub</a></li>
+					<li><a href="#trois">Installation paquets</a></li>
+					<li><a href="#four">Conteneurs</a></li>
+					<li><a href="#five">DevOps</a></li>
+<li><a href="#six">Blockchain</a></li>
+				      </ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="main">
+					<h1>Plan du cours</h1>
+					<hr>
+
+					<!-- Heading levels -->
+					<h3>Programmation shell</h3>
+					<h3>D&eacute;marrer avec RosettaHub</h3>
+					<h3>Quelques outils pour
+					installer des paquets : la problématique des dépendances</h3>
+					<h3>Conteneurs et composants
+					d'isolation (LXC, cgroup, namespace) : environnements virtualisés</h3>
+					<h3>Introduction aux
+					  technologies DevOps</h3>
+					<h3>Introduction aux blockchains<h3>
+					<hr>
+
+					<h3 id="preamble">Pr&eacute;ambule</h3>
+<p style="text-align:justify">
+L'&eacute;valuation du module consiste &agrave; r&eacute;diger un
+compte rendu de TP reprenant l'ensemble des manipulations que vous
+allez faire. Il ne s'agit pas de vouloir traiter l'ensemble des
+questions propos&eacute;ses, mais d'en s&eacute;lectionner un sous
+ensemble, que vous jugerez int&eacute;ressant. Pour &eacute;diger un
+compte rendu de TP, il est opportun de suivre les recommandations
+suivantes :
+<ul>
+  <li><a href="https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-practicalreportinscience.pdf">Lecture 1</a></li>
+  <li><a href="https://www.monash.edu/rlo/assignment-samples/science/science-writing-a-lab-report">Lecture 2</a></li>
+  <li><a href="https://iubmb.onlinelibrary.wiley.com/doi/full/10.1002/bmb.20571">Lecture 3</a></li>
+  <li><a href="https://sites.google.com/a/meadeschools.org/mr-waider-s-computer-lab/labs-5">Lecture 4</a></li>
+  </ul>
+</p>
+
+<hr>
+					<!-- Paragraphs -->
+					<h3 id="one">Programmation shell</h3>
+<p style="text-align:justify">Le shell est un interpr&eacute;teur de commandes et aussi un langage
+					de programmation. Il existe de
+					nombreux shell
+					(interpr&eacute;teurs de
+					commandes), parmi lesquels sh,
+					bash, tcsh, zsh... Sur un
+					syst&egrave;me d'exploitation
+					Unix, il est utilis&eacute;
+					pour programmer des
+					enchainements de t&acirc;ches
+					visant par exemple le
+					d&eacute;ploiement,
+					l'installation et la
+					configuration d'un Service.
+				  Sur ma machine personnelle, je
+					trouve par exemple les scripts
+				  suivants :
+				  <pre>
+MBPdeChristophe:local christophecerin$ cd /
+MBPdeChristophe:/ christophecerin$ find . -iname "*.sh"
+./usr/bin/power_report.sh
+./usr/libexec/feedback/sleepwake.sh
+./usr/libexec/postfix/mk_postfix_spool.sh
+./usr/libexec/postfix/set_credentials.sh
+find: ./usr/sbin/authserver: Permission denied
+./usr/local/go/misc/ios/clangwrap.sh
+./usr/local/go/src/cmd/go/mkalldocs.sh
+./usr/local/go/src/cmd/vendor/github.com/google/pprof/test.sh
+./usr/local/go/src/runtime/mknacl.sh
+./usr/local/go/src/syscall/mkall.sh
+./usr/local/go/src/syscall/mkerrors.sh
+./usr/local/go/src/syscall/mksysnum_plan9.sh
+./usr/local/bin/pv.sh
+./usr/local/bin/unix-lpr.sh
+./usr/local/bin/gvmap.sh
+./usr/local/bin/lprsetup.sh
+</pre>
+				  </p>
+				  
+            <p style="text-align:justify"><b>Remise en forme / R&eacute;visions</b> Relire les
+                  chapitres d'un cours de système du semestre 1 : <a
+                  href="https://lipn.univ-paris13.fr/~cerin/SE/intro-systeme-S1-2005-cours-4.pdf">Chapitre
+                  4</a> et <a
+                  href="https://lipn.univ-paris13.fr/~cerin/SE/intro-systeme-S1-2005-cours-5.pdf">
+                  Chapitre 5</a>. Pour continuer &agrave; réviser les
+                  notions vues au r&eacute;alable voir le <a
+                  href="http://www.idris.fr/data/cours/unix/user/unix_u_cours.html">lien
+                  suivant</a> à l'Idris. Vous pouvez aussi consulter
+                  <a
+                  href="http://fr.wikipedia.org/wiki/Commandes_Unix">Wikipedia</a>
+                  pour un résumé des principales commandes
+                  Unix. <blink><font color="blue"> Encore mieux :
+                  </font> </blink> le <a
+                  href="https://lipn.univ-paris13.fr/~cerin/SE/S2SE_01_GuideCommandesShellv4.pdf">super
+                  résumé</a> des commandes Bash. Il y a aussi un <a
+                  href="S2SE_01_LectureFichiersShell2.html">point
+                  spécial</a> pour lire des fichiers texte.  </p>
+                  <p style="text-align:justify">Ecriture de <a
+                  href="https://lipn.univ-paris13.fr/~cerin/SE/shellIUT.pdf">scripts</a>.
+                  Les objectifs de ce polycopié sont d'introduire la
+                  syntaxe du langage de commande bash et de faire du
+                  lien avec les notions fondamentales de tout langage
+                  de programmation : <i>mise en séquence</i>,
+                  <i>choix</i> et <i>itération</i>. Par ailleurs on
+                  remarquera que bash est un langage beaucoup moins
+                  <i>typé</i> que C par exemple : on peut ranger dans
+                  <i>i</i> un entier puis, plus loin dans le code
+                  source, une chaine. Par ailleurs, bash possède un
+                  mécanisme d'évaluation d'expressions un peu
+                  particulier et ne permet pas de faire directement de
+                  l'arithmétique sur les réels. Cela constitue
+                  également deux points de discussion du cours. En un
+                  mot, <font face="Courier New, monospace">bash</font>
+                  est replacé dans un contexte permettant de le situer
+                  entre les langages «à la C» et les langages dits de
+                  <i>script</i> (Perl, Python...).</p>
+
+            <p style="text-align:justify">Introduction aux <a
+              href="https://lipn.univ-paris13.fr/~cerin/SE/regexIUT.pdf">expressions
+              régulières</a>. Il s'agit de décrire des <i>motifs</i>
+              au moyen de <i>classes prédéfinies</i>
+              <i>normalisées</i>. Ces classes prédéfinies sont des
+              raccourcis pour faciliter la tâche du
+              programmeur. Différents exemples de description de
+              motifs via des classes sont présentés dans différents
+              outils/langages.  Par ailleurs et bien que non étudiées,
+              voir aussi les pages sur la norme </font><a
+              href="http://www-lipn.univ-paris13.fr/%7Ecerin/BD/unicode.html">UNICODE</a>
+              pour exprimer des motifs.</p>
+
+            <p style="text-align:justify">Unix tools et <a
+                href="https://lipn.univ-paris13.fr/~cerin/SE/unixIUT.pdf">REGEX</a>
+                (introduction à sed, cut, tail, head et notions de
+                awk). Bash peut être utilisé pour l'administration
+                d'un système : des fichiers en langage <font
+                face="Courier New, monospace">bash</font> permettent
+                l'activation de services, la vérification qu'un
+                service est actif... Pour réaliser ces tâches, les
+                outils sed, tail, head et awk sont introduits pour
+                <i>filtrer</i> le résultat de commandes Unix (<font
+                face="Courier New, monospace">cp, ls, ps, cut
+                ...</font>) ou de scripts bash (un script bash est un
+                programme dans la syntaxe du langage bash qui peut
+                faire des appels à des commandes Unix externes au
+                langage). On en profite pour compléter la description
+                de motifs qui sont mis en correspondance avec un texte
+                à vérifier (notion d'expression réguli&egrave;re).</p>
+
+            <p style="text-align:justify">Le cours sur le langage C et les <a
+                href="https://lipn.univ-paris13.fr/~cerin/SE/SeETlangC.pdf">appels
+                système</a>. Les objectifs sont d'&ecirc;tre
+                sensibilis&eacute; &agrave; la hi&eacute;rarchie des
+                droits entre utilisateurs et d'apprendre à programmer
+                des appels aux fonctions internes du système
+                d'exploitation. Les appels systèmes renvoient aux
+                structures de données du noyau Unix. Les appels
+                systèmes peuvent être effectués en <i>mode
+                utilisateur</i> (un utilisateur ayant des droits
+                minimaux peut les appeler) ou en <i>mode noyau</i> (le
+                super utilisateur seul peut les effectuer – par
+                exemple, reprogrammer l'ordonnanceur des
+                processus). Ensuite nous passerons à la présentation
+                des <a
+                href="https://lipn.univ-paris13.fr/~cerin/SE/CompilOrgaIUT.pdf">
+                outils</a> make et des outils d'archivage ... Il
+                s'agit ici d'aspects organisationnels visant à
+                structurer les différentes phases permettant de passer
+                d'un code source à un code exécutable. A cette
+                occasion nous parlerons aussi des fichiers objets, des
+                librairies partagées, des librairies statiques.</p>
+				  
+	  <p style="text-align:justify">Les exercices sont <a
+	href="https://lipn.univ-paris13.fr/~cerin/SE/ExercicesShell.html">ici</a>
+	ou encore <a
+	href="https://lipn.univ-paris13.fr/~cerin/SE/supBash.html">l&agrave;</a>. Il
+	y a &eacute;galement des exercices pour <a
+	href="https://lipn.univ-paris13.fr/~cerin/SE/sed.html">SED</a>. Enfin
+	vous pouvez consulter les <a
+	href="https://lipn.univ-paris13.fr/~cerin/SE/ExoBashNew.txt">questions
+	et r&eacute;ponses</a> &agrave; certains probl&egrave;mes
+	r&eacute;currents.</p>
+
+
+					<hr>
+
+					<!-- Responsive images -->
+					<h3 id="two">D&eacute;marrer avec
+					RosettaHub</h3> <p style="text-align:justify"> La
+					ressource informatique (CPU,
+					disque, r&eacute;seau) est
+					abondante... et parfois
+					gratuite. Nous allons utiliser
+					la plateforme RosettaHub pour
+					prendre des machines viruelles
+					chez Amazon. Le point
+					d'entr&eacute;e et la
+					documentation &agrave; lire
+					est le <a href="https://www.rosettahub.com/welcome">suivant</a>.
+					</p> <p style="text-align:justify">
+Je vais commenter toute la documentation et nous allons
+					r&eacute;aliser la
+					r&eacute;servation d'instances
+					chez Amazon.
+</p>
+<p style="text-align:justify">
+Il y a un point technique qui heurte souvent les &eacute;tudiants : la
+					notion de cl&eacute;s
+					publiques / cl&eacute;s
+					priv&eacute;es. Ces notions
+					sont utiles pour les questions
+					d'authentification qui
+					reposent sur les certificats
+					de confiance. Pour se
+					familiariser avec ces notions,
+					voir le cours de crypto ou
+					encore, de mani&egrave;re
+					pratique &agrave; ce <a
+					href="http://lig-membres.imag.fr/sicard/crRES/cours%2011%20securite.pdf">document</a>
+					&agrave; la partie SSH. La
+					g&eacute;n&eacute;ration de
+					cl&eacute;s est
+					d&eacute;taill&eacute;e <a
+					href="https://www.it-connect.fr/chapitres/authentification-ssh-par-cles/">ici</a>. C'est
+					tr&egrave;s important pour
+					nous puisqu'il va falloir
+					s'authentifier aupr&egrave;s
+					d'Amazon/RosettaHub. En fait
+					il y a deux façons de voir les
+					choses. Soit vous
+					g&eacute;n&eacute;rez des
+					cl&eacute;s et vous devez les
+					d&eacute;poser sur le
+					"serveur", soit c'est le
+					serveur qui vous donne des
+					cl&eacute;s que vous devez
+					d&eacute;poser dans un
+					r&eacute;pertoire .ssh de
+					votre arborescence.
+</p>
+
+<hr>
+
+<h3 id="trois">Quelques outils pour installer des paquets sous Linux : la problématique des dépendances</h3>
+
+<p style="text-align:justify"> Historiquement il y avait plusieurs formats pour les applications
+packag&eacute;es pour une distribution Linux : rpm, deb... De même, il
+y a plusieurs outils pour automatiser l'installation et la
+configuration d'une application que vous souhaitez installer. Vous
+pouvez prendre comme point d'entr&eacute;e la documentation Ubuntu <a
+href="https://doc.ubuntu-fr.org/tutoriel/comment_installer_un_paquet">suivante</a>.
+</p> <p style="text-align:justify"> Comme exercice d'application, vous
+pouvez prendre une machine virtuelle chez Amazon et demander
+l'installation de <a href="https://doc.ubuntu-fr.org/lamp">LAMP</a>
+(Apache, PHP, Mysql).</p> <p style="text-align:justify"> Attention,
+Python par exemple a une gestion propre des paquets. Veuillez par
+exemple
+installer <a href="http://libcloud.apache.org">libcloud</a>. Pour
+faire les exemples de la home page de libcloud, en utilisant EC2 comme
+provider, vous allez avoir besoin d'informations pour
+l'authentification auprès de AWS alors que nous utilisons la
+passerelle RosettaHub.
+<pre>
+  Yep, un utilisateur RosettaHUB dispose d'un compte AWS (donc EC2)
+  qui est lui est dedié. Il y accède a travers la console et une
+  session STS (en cliquant sur "Go To Aws Console") ou bien
+  programmatiquement a travers les clefs fournies en bas de la
+  premiere colonne du dashboard RosettaHUB (section "Advanced
+  Settings"). Pour les administrateurs, "advanced settings" apparait
+  puis on sélectionne "My Details" en haut de la première colonne.
+</pre>
+Le langage de
+programmation <a href="https://golang.org">Go</a> a aussi un
+m&eacute;canisme de gestion sp&eacute;cifique des librairies qui lui
+est propre. Voir <a href="https://github.com/mpraski/clusters">ici</a>
+pour installer une librairie de clustering (rassembler des objets
+identiques). A titre d'exercice, vous pouvez installer Go, puis cette
+librairie, puis vous pouvez faire tourner un des exemples propos&eacute;.</p> <hr>
+
+<h3 id="four">Conteneurs et composants d'isolation : environnements virtualisés</h3>
+
+<p style="text-align:justify">Les conteneurs offent des m&eacute;canismes de virtualisation des
+ressources du syst&egrave;me d'exploitation. Ils sont en train de
+supplanter les m&eacute;canismes de machines virtuelles (VM) pour de
+nombreuses raisons. Ils sont par exemples moins gourmands en terme de
+m&eacute;moire consomm&eacute;e.  </p> <p style="text-align:justify"> Un point d'entr&eacute;e
+possible pour les notions de virtualisation est tout simplement la
+page <a
+href="https://fr.wikipedia.org/wiki/Virtualisation">Wikipedia</a>. Je
+vais bien entendu commenter chacune des techniques. Nous allons plus
+particuli&egrave;rement commenter les notions de <a
+href="https://www.kernel.org/doc/Documentation/cgroup-v2.txt">cgroups</a>
+et les <a href="https://en.wikipedia.org/wiki/Linux_namespaces">name
+spaces</a> qui regroupent les concepts (voir en bas de la page
+Wikipedia pour des tutoriels / documentation). Ces notions sont au coeur des
+projets orient&eacute;s conteneurs comme <a
+					    href="https://www.docker.com">Docker</a>.</p>
+<p style="text-align:justify">Pour jouer avec les
+  conteneurs :
+  <ul>
+    <li>nous allons utiliser l'interface de programmation <a
+href="https://linuxcontainers.org/lxc/security/">LXC</a>. Je vous
+invite &agrave; suivre l'exemple <a
+href="https://linuxcontainers.org/lxc/getting-started/">Getting
+Started</a>. Si nous &eacute;tions plus ambitieux, nous pourrions nous servir de
+cet exemple pour concevoir un outil "&agrave; la Docker" c.&agrave;.d
+capable d'allouer, &agrave; partir d'une file de requêtes, des
+      conteneurs sur diff&eacute;rentes machines du cloud Amazon.
+      <li>nous allons faire
+      le <a href="https://lipn.univ-paris13.fr/~cerin/LPASUR/TP_VM.html">TP
+	  suivant</a> qui concerne les machines virtuelles (VMs) et les conteneurs.
+	</ul>
+</p>
+<hr>
+
+<h3 id="five">Introduction aux technologies DevOps</h3>
+
+<p style="text-align:justify"> Le devops est un mouvement en ingénierie informatique et une
+pratique technique visant à l'unification du développement logiciel
+(dev) et de l'administration des infrastructures informatiques (ops),
+notamment l'administration système. Nous allons nous contenter ici
+d'examiner un outil de
+la <a href"https://fr.wikipedia.org/wiki/Cha%C3%AEne_d%27outils_Devops">cha&icirc;ne
+des outils</a> de DevOps. </p> <p style="text-align:justify"> Nous pouvons effectivement suivre
+pas &agrave; pas l'utilisation
+de <a href="https://linuxfr.org/users/skhaen/journaux/deploiement-et-automatisation-avec-ansible-partie-1">Ansible</a>. Nous
+pouvons d&eacute;ployer 3 machines dans Amazon et automatiser le
+d&eacute;ploiement d'applications sur ces machines. Ansible est fait
+pour cela ! Enfin, pour nous qui sommes des grands d&eacute;buttants
+avec ces technologies, c'est sur le papier. Nous allons voir ce que
+l'on peut vraiment faire en pratique. La clef du succ&egrave;s est
+d'être au clair sur les
+concepts <a href="https://fr.wikipedia.org/wiki/Ansible_(logiciel)">d'Ansible</a>,
+par exemple en lisant la
+page <a href="https://www.ansible.com/overview/how-ansible-works">suivante</a>
+issue du site du projet. Nous y verrons qu'Ansible est un outil "that
+automates cloud provisioning, configuration management, application
+deployment, intra-service orchestration, and many other IT needs." Un
+couteau Suisse ?
+</p>
+
+<p style="text-align:justify">Pour votre information et concernant les
+outils DevOps pour configuration, provisionning et deploiement,
+l'univers de la distribution
+Linux <a href="https://www.ubuntu.com/">Ubuntu</a> utilise
+l'outil <a href="https://conjure-up.io/">conjure-up</a> qui est
+construit sur les technologies Juju, MAAS et LXD (voir
+le <a href="https://docs.conjure-up.io/stable/en/user-manual">User
+manual</a>). <tt>Conjure-up</tt> va vous permettre d'installer
+simplement des frameworks complexes tels que OpenStack ou Kubernetes.
+
+  </p>
+<p style="text-align:justify">Mais pour le TP, nous allons utiliser un autre outil dans la
+  famille des outils DevOps : le <a href="TP_VAGRANT.html">sujet</a> de
+votre travail est <a href="TP_VAGRANT.html">ici</a>. Patience,
+patience !
+</p>
+<p style="text-align:justify">Pour une discussion sur "Ansible et Vagrant", je vous recommande
+cette <a href="https://docs.ansible.com/ansible/latest/scenario_guides/guide_vagrant.html">page</a>
+et si nous avons du temps nous pourrions examiner ces
+ <a href="https://github.com/geerlingguy/ansible-vagrant-examples">exemples</a>
+ de couplage Ansible-Vagrant pour installer et configurer différentes
+ VMs. Ce sont des exemple d'utilisation du provisionner Ansible dans Vagrant.
+</p>
+
+
+<hr>
+<!--
+					<h3>Blockquotes</h3>
+					<p style="text-align:justify">The blockquote element is used to markup long quotations. Ideally, content inside should be wrapped in paragraph elements.</p>
+					<blockquote>
+						<p style="text-align:justify">The real names of our people were destroyed during slavery. The last name of my forefathers was taken from them when they were brought to America and made slaves, and then the name of the slave master was given, which we refuse, we reject that name today and refuse it. I never acknowledge it whatsoever.</p>
+						<footer><a href="http://en.wikipedia.org/wiki/Malcolm_X">Malcolm X</a></footer>
+					</blockquote>
+					<hr>
+
+					<h3>Buttons</h3>
+					<p style="text-align:justify">You can apply the <code>btn</code> class to any element that requires a button style.</p>
+					<p style="text-align:justify"><a href="#" class="btn">Submit</a></p>
+					<hr>
+-->
+
+<h3 id="six">Introduction aux blockchains</h3>
+
+<p style="text-align:justify">Tout le mat&eacute;riel du cours et des TP se trouve sous ce <a href="http://lipn.univ-paris13.fr/~cerin/HDU/vocabulary.html">premier onglet</a> puis sous ce <a href="http://lipn.univ-paris13.fr/~cerin/HDU/ethereum.html">deuxi&egrave;me onglet</a>. Le premier onglet pr&eacute;sente des &eacute;l&eacute;ments de vocabulaire pour aborder les technologies de blockchains. Le deuxi&egrave;me onglet est la partie TP. Il est demand&eacute; de r&eacute;diger un compte rendu de TP.
+  </p>
+
+<div class="footer">
+			<div class="container">
+				&copy; Copyright 2019, Christophe C&eacute;rin
+			</div>
+		</div>
+	</body>
+</html>

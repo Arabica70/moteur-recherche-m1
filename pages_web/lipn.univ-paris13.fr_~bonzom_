@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="Keywords" content="Valentin, Bonzom, lipn, tensors, tensor models, spin networks, spin foams, quantum gravity"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<title>ValentinBonzomHomePage</title>
+</head>
+<body>
+<div style="display: inline-block; width: 300px;"><img src="up13.png" alt="" style="width: 150px; height: 50px; float: left;">
+<!-- <img src="LogoSPC.gif" alt="" style="width: 100px; height: 100px; position: absolute; right: 30px;"> -->
+</div>
+<div style="border: 2px solid #f36e4b; padding:20px; height: 90px; margin: 0;"> <!-- background-color:#ffffe0;-->
+<div style="display: inline-block; vertical-align: middle;">
+<h1>Valentin Bonzom</h1>
+</div>
+<div style="display: inline-block; float: right;">
+<div style="display: inline-block;">
+<img src="valentinbonzom.png" alt="" style="width: 70px; height: 80px;">
+</div>
+<div style="display: inline-block; width:10px;">
+</div>
+<div style="display: inline-block; float: right;"> 
+LIPN, Institut Galil&eacutee, UMR CNRS 7030
+<br>Universit&eacute Paris 13, Sorbonne Paris Cit&eacute
+<br>99, avenue Jean-Baptiste Cl&eacutement
+<br>93430 Villetaneuse
+</div>
+</div>
+</div>
+
+<!--<div id="adminfo">
+<div style="display: inline-block;">
+<img src="valentinbonzom.png" alt="" style="width: 70px; height: 80px;">
+</div>
+<div style="display: inline-block;"> 
+LIPN, Institut Galil&eacutee, UMR CNRS 7030
+<br>Universit&eacute Paris 13, Sorbonne Paris Cit&eacute
+<br>99, avenue Jean-Baptiste Cl&eacutement
+<br>93430 Villetaneuse
+</div>
+</div>
+-->
+
+<div id="maintext">
+<dl>
+<dt><div class="box"></div><b>My Research interests</b></dt>
+<br>
+<dd>Mostly combinatorial problems from high-energy physics and a bit of statistical physics, and from low-dimensional topology and geometry on the mathematical side.
+<br>
+<em>Combinatorial physics is one of the two axes of the <a href="https://lipn.univ-paris13.fr/en/calin"> CALIN</a> team in <a href="https://lipn.univ-paris13.fr/en/">LIPN</a>!</em>
+<br>
+<div style="width: 400px; display: inline-block;">
+<ul>
+<li>Combinatorial methods in quantum gravity</li>
+<li>Combinatorics of graphs, trees, maps and higher dimensional structures</li>
+<li>Random matrix models and random tensor models</li>
+<li>Topological gauge theories, quantum invariants of manifolds</li>
+<li>Spin networks and spin foam models</li>
+<li>Combinatorics of low-dimensional topology and geometry</li>
+</ul>
+</div>
+<div style="width: 300px; display:inline-block;">
+</div>
+<div style="width:320px; height:220px; display:inline-block;"> <img src="NonMelonicGraphColors.png" alt="" style="width:300px;height:220px;">
+</div>
+</dd>
+
+<br>
+<dt><div class="box"></div><b>Publications</b></dt>
+<br>
+<div style="width: 700px; display: inline-block; vertical-align: top;">
+<dd>All preprints available <a href="http://arxiv.org/find/all/1/au:+bonzom/0/1/0/all/0/1">here on the arxiv!</a> You can find my Ph.D. manuscript, in French, <a href="http://arxiv.org/abs/1009.5100">here</a>.
+</dd>
+<br>
+<br>
+<dd>I have had 20 co-authors, including 7 Master or Ph.D. students.
+</dd>
+<dd><em>More stats</em> from the high energy physics database <a href="http://inspirehep.net/author/profile/V.Bonzom.1">here</a>!
+</dd>
+</div>
+<div style="width: 200px; display:inline-block;">
+</div>
+<div style="width:320px; height:150px; display:inline-block;"> <img src="CollageTet.png" alt="" style="width:350px;height:140px;">
+</div>
+
+
+<br>
+<dd>Recent preprints: the stuff I am excited about in these days!
+<ul>
+<li>"Duality between Spin networks and the 2D Ising model,'' VB, Francesco Costantino and Etera R. Livine. <a href="http://arxiv.org/abs/1504.02822">arxiv:1504.02822</a>
+</li>
+<li>"Enhancing non-melonic triangulations: A tensor model mixing melonic and planar maps,'' VB, Thibault Delepouve and Vincent Rivasseau. Accepted in <em>Nucl. Phys. B</em>. <a href="http://arxiv.org/abs/1502.01365">arxiv:1502.01365</a>
+</li>
+<li>"Deformed phase space for 3d loop gravity and hyperbolic discrete geometries," VB, Mait&eacute Dupuis, Florian Girelli, Etera R. Livine. <a href="http://arxiv.org/abs/1402.2323">arXiv:1402.2323</a>
+</li>
+</ul>
+</dd>
+
+<br>
+<dd>More accessible, introductory/survey articles
+<ul>
+<li>"Tensor models from the viewpoint of matrix models: the case of loop models on random surfaces," VB and Fr&eacuted&eacuteric Combes. <em>Annales Henri Poincar&eacute D</em> 2, 1 (2015). <a href="http://arxiv.org/abs/1304.4152">arXiv:1304.4152</a>
+</li>
+<li>"Random tensor models in the large N limit: Uncoloring the colored tensor models," VB, Razvan Gurau and Vincent Rivasseau. <em>Phys. Rev. D</em> 85, 084037 (2012). <a href="http://arxiv.org/abs/1202.3637">arXiv:1202.3637</a>
+</li>
+<li>"Gauge symmetries in spinfoam gravity: the case for "cellular quantization"," VB and Matteo Smerlak. <em>Phys. Rev. Lett.</em> 108, 241303 (2012). <a href="http://arxiv.org/abs/1201.4996">arXiv:1201.4996</a>
+</li>
+<li>"Lessons from Toy-Models for the Dynamics of Loop Quantum Gravity," VB and Alok Laddha. <em>SIGMA</em> 8 (2012), 009. <a href="http://arxiv.org/abs/1110.2157">arXiv:1110.2157</a>
+</li>
+<li>"Bubble divergences: sorting out topology from cell structure," VB and Matteo Smerlak. <em>Annales Henri Poincar&eacute</em> 13 (2012) 185. <a href="http://arxiv.org/abs/1103.3961">arXiv:1103.3961</a>
+</ul>
+</dd>
+
+<br>
+<dd>Selected publications
+<ul>
+<li>"The calculation of expectation values in Gaussian random tensor theory via meanders," VB and Fr&eacuted&eacuteric Combes, <em>Annales Henri Poincar&eacute D</em> 1, 443<!--485--> (2015). <a href="http://arxiv.org/abs/1310.3606">arXiv:1310.3606</a>
+</li>
+<li>"Critical behavior of colored tensor models in the large N limit," VB, Razvan Gurau, Aldo Riello and Vincent Rivasseau, <em>Nucl. Phys. B</em> 853, 174 (2011). <a href="http://arxiv.org/abs/1105.3122">arXiv:1105.3122</a>
+</li>
+<li>"Dirac's discrete hypersurface deformation algebras," VB and Bianca Dittrich, <em>Class. Quant. Grav.</em> 30 (2013) 205013. <a href="http://arxiv.org/abs/1304.5983">arXiv:1304.5983</a> 
+<li>"Bubble divergences from twisted cohomology," VB and Matteo Smerlak, <em> Commun. Math. Phys.</em> 312, 399 (2012). <a href="http://arxiv.org/abs/1008.1476">arXiv:1008.1476</a>
+</li>
+</ul>
+
+<br>
+<dt><div class="box"></div><b>CV</b></dt>
+<br>
+<dd>I am an Assistant Professor at IUT Saint-Denis, France, and a member of the Laboratoire d'Informatique de Paris Nord (<a href="https://lipn.univ-paris13.fr/en/">LIPN</a>) in the team <em>Combinatoire, ALgorithmique et INteractions</em> (<a href="https://lipn.univ-paris13.fr/en/calin">CALIN</a>). I was offered that position in 2013. 
+</dd>
+<br>
+<dd>Before that, I was a postdoctoral fellow at Perimeter Institute for Theoretical Physics, Waterloo, Ontario, Canada, from 2010 to 2013. I was supported by a MRI grant from the Government of Ontario. In 2013 I was a recipient of the Banting Fellowship, which I declined in favor of my present position.
+</dd>
+</dl>
+
+<br>
+<dt><div class="box"></div><b>Research project supervision</b></dt>
+<!-- <div class="emptybox">Jan Feb 2014</div> <div class="studentbox">Luca Lionni</div>
+<div class="emptybox">Jan Feb 2014</div> Luca Lionni -->
+<br>
+
+<div style="width: 720px; display: inline-block;">
+
+<div>
+    <div style="display: inline-block; vertical-align: text-top; width: 120px;">Jan&#45Feb 2014</div>
+    <div style="display: inline-block; vertical-align: text-top; width:500px;">Luca Lionni (M2 ENS Paris)</div>
+</div>
+<br>
+<div>
+    <div style="display: inline-block; vertical-align: text-top; width: 120px;">Jan&#45July 2013</div>
+    <div style="display: inline-block; vertical-align: text-top; width:500px;">Fr&eacuted&eacuteric Combes (M1 ENS Lyon)</div>
+</div>
+<br>
+<div>
+    <div style="display: inline-block; vertical-align: text-top; width: 120px;">Summer 2012</div>
+    <div style="display: inline-block; vertical-align: text-top; width:500px;">Yechao Elton Zhu (Queens' college, Cambridge)</div>
+</div>
+<br>
+<div>
+    <div style="display: inline-block; vertical-align: text-top; width: 120px;">Winter 2012</div>
+    <div style="display: inline-block; vertical-align: text-top; width:500px;">Harold Erbin (M2 ENS Paris)</div>
+</div>
+<br>
+<div>
+    <div style="display: inline-block; vertical-align: text-top; width: 120px;">Summer 2011</div>
+    <div style="display: inline-block; vertical-align: text-top; width:500px;">Pierre Fleury (M1 ENS Lyon)</div>
+</div>
+</div>
+<div style="width: 30px; display:inline-block;">
+</div>
+<div style="width:400px; height:240px; display:inline-block;"> <img src="ConnBlocksPlanarPermShuffle.png" alt="" style="width:400px;height:160px;">
+</div>
+
+
+</div>
+</body>
+</html>

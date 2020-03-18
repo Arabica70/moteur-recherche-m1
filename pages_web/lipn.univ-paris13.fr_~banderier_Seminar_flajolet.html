@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Continued Fractions, Comparison Algorithms and Fine Structure
+Constants</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea -v flajolet.tex -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Continued Fractions, Comparison Algorithms and Fine Structure
+Constants</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Philippe Flajolet</FONT></I></FONT><BR>
+<BR>
+
+ Algorithms Project, INRIA Rocquencourt<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+November 8, 1999<BR>
+<BR>
+[summary by <A HREF="../>Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="flajolet.ps">postscript</A> and in <A HREF="flajolet.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+The simple problems of comparing fractions (Gosper's algorithms for
+continued fractions from the Hacker's Memorandum) and of deciding the
+orientation of triangles in computational geometry lead to a
+complexity analysis with an incursion into a surprising variety of
+domains: dynamical systems (symbolic dynamics), number theory
+(continued fractions), special functions (multiple zeta values),
+functional analysis (transfer operators), numerical analysis (series
+acceleration), and complex analysis (Riemann hypothesis). These
+domains all eventually contribute to a detailed characterization of
+the complexity of comparison and sorting algorithms, either on average
+or in probability. (Joint work with Brigitte Vallée.)
+</BLOCKQUOTE><BR><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+To compare two rational numbers (or similarly, to determine the sign
+of a 2×2 determinant, a relevant problem in computational
+geometry) is a delicate problem when you have to work with a numerical
+calculator limited to a given number of digits. For example, since
+312689/99532-833719/265381<FONT FACE=symbol>»</FONT> 3× 10<SUP><FONT SIZE=2>-11</FONT></SUP>,
+a computer with 10-digit accuracy cannot compare ``naively'' the two
+rational numbers.<BR>
+<BR>
+In the ``Hacker's Memorandum''&nbsp;[<A HREF="#BeGoSc72"><CITE>2</CITE></A>], it is showed that it
+is always possible to solve this comparison problem without exceeding
+the accuracy of the calculator. The algorithm consists in expanding
+both rational numbers in continued fractions, but stopping as soon as
+one gets two different coefficients. This algorithm is easily
+generalized to any number representation system (binary,
+<I>d</I>-ary, centered or classical continued fraction, etc.) and
+also to the comparison of <I>n</I> rational numbers.<BR>
+<BR>
+<!--TOC section Results-->
+
+<H2>2&nbsp;&nbsp; Results</H2><!--SEC END -->
+The functions <I>U</I><SUP><FONT SIZE=2>_</FONT></SUP>(<I>x</I>)={1/<I>x</I>} and <I>U</I><SUP><FONT SIZE=2>^</FONT></SUP>(<I>x</I>)={{1/<I>x</I>}} (where
+{{<I>y</I>}} stands for the distance to the nearest integer from <I>y</I>)
+are the maps of 
+classical continued fractions and centred continued fractions
+respectively.
+Under a uniform probabilistic model (over the set of legal inputs,
+that is, an interval of the shape [&nbsp;0,<FONT FACE=symbol>a</FONT>&nbsp;]), the number <I>L</I> of
+iterations needed to compare two numbers satisfies 
+<B><I>P</I></B>(<I>L</I><FONT FACE=symbol>³</FONT> <I>k</I>+1)=
+<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2>|<I>h</I>|=<I>k</I></FONT></SUB> |<I>h</I>(0)-<I>h</I>(<FONT FACE=symbol>a</FONT>)/<FONT FACE=symbol>a</FONT>|<SUP><FONT SIZE=2>2</FONT></SUP> 
+and the moment sums of order <I>l</I> satisfy <FONT FACE=symbol>r</FONT><SUP><FONT SIZE=2>(<I>l</I>)</FONT></SUP>=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>h</I></FONT></SUB>
+|<I>h</I>(0)-<I>h</I>(<FONT FACE=symbol>a</FONT>)/<FONT FACE=symbol>a</FONT>|<SUP><FONT SIZE=2><I>l</I></FONT></SUP>. These sums are over the inverse
+branches of <I>U</I>, which appear to be 
+linear fraction operators of a specific shape&nbsp;[<A HREF="#FlVa??"><CITE>6</CITE></A>], thus: <BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<EM>
+The expected cost of the basic (</EM><EM><FONT FACE=symbol>r</FONT></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><EM>) and centred (</EM><EM><FONT FACE=symbol>r</FONT></EM><SUP><EM><FONT SIZE=2>^</FONT></EM></SUP><EM>)
+comparison algorithms are expressible as sums over lattice points
+in&nbsp;</EM><EM><B><I>N</I></B></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT FACE=symbol>r</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2>(<I>l</I>)</FONT></EM></SUP><EM>=1+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>z</FONT>(2<I>l</I>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I>&lt;<I>c</I>&lt;2<I>d</I></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>c</I></EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP><EM><I>d</I></EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+&nbsp;&nbsp;</EM><EM>and</EM></TD>
+<TD NOWRAP><EM>&nbsp;&nbsp;
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>^</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT FACE=symbol>r</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2>(<I>l</I>)</FONT></EM></SUP><EM>=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>z</FONT>(2<I>l</I>)</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>d</I><FONT FACE=symbol>f</FONT>&lt;<I>c</I>&lt;<I>d</I><FONT FACE=symbol>f</FONT></FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>c</I></EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP><EM><I>d</I></EM><SUP><EM><FONT SIZE=2><I>l</I></FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 
+&nbsp;&nbsp;&nbsp;&nbsp;</EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>f</FONT>=</EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>1+(5)</EM><SUP><EM><FONT SIZE=2>1/2</FONT></EM></SUP><EM>&nbsp;</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>/2</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>.
+</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+With the help of double zeta values (also known as Euler--Zagier
+sums), defined as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+<FONT FACE=symbol>z</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>+&nbsp;+</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>,<I>t</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>q</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP><I>q</I><SUP><FONT SIZE=2><I>t</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+&nbsp;&nbsp;and</TD>
+<TD NOWRAP>&nbsp;&nbsp;
+<FONT FACE=symbol>z</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-&nbsp;+</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>s</I>,<I>t</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>q</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>(-1)<SUP><FONT SIZE=2><I>n</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP><I>q</I><SUP><FONT SIZE=2><I>t</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+</TD>
+</TR></TABLE></DIV>
+it is possible to rewrite <FONT FACE=symbol>r</FONT><SUP><FONT SIZE=2>_</FONT></SUP><SUP><FONT SIZE=2>(2)</FONT></SUP> as a peculiar value of these
+multiple zeta values (this implies that <FONT FACE=symbol>r</FONT><SUP><FONT SIZE=2>_</FONT></SUP><SUP><FONT SIZE=2>(2)</FONT></SUP> can be
+computed to any precision in polynomial time):
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<EM>
+The mean number </EM><EM><FONT FACE=symbol>r</FONT></EM><SUP><EM><FONT SIZE=2>_</FONT></EM></SUP><SUP><EM><FONT SIZE=2>(2)</FONT></EM></SUP><EM> of comparisons in the classical
+continued fraction can be expressed in terms of double zeta values as
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT FACE=symbol>r</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2>(2)</FONT></EM></SUP><EM>
+=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>3</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>4</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>360</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>4</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>z</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2>-&nbsp;+</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(2,2)
+=17-</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>60</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>4</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>24</EM><EM>Li</EM><SUB><EM><FONT SIZE=2>4</FONT></EM></SUB></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>1/2</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>-<FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>(</EM><EM>ln</EM><EM>2)</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP><EM>+21<FONT FACE=symbol>z</FONT>(3)</EM><EM>ln</EM><EM>
+2+(</EM><EM>ln</EM><EM> 2)</EM><SUP><EM><FONT SIZE=2>4</FONT></EM></SUP></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>=1.35113157...</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+There exists a lot of alternative expressions, due to intriguing
+relations between multiple zeta values, which is a topic of active
+research&nbsp;(see&nbsp;[<A HREF="#BaBoGi94"><CITE>1</CITE></A><CITE>, </CITE><A HREF="#FlSa98"><CITE>5</CITE></A><CITE>, </CITE><A HREF="#Zagier94"><CITE>7</CITE></A>]), nowadays relevant to
+knot invariants, Feynman diagrams and even the theory of perverse
+sheaves. For all the other moment sums, polynomial time computations
+are also possible, via some nice series/integral
+representations&nbsp;[<A HREF="#FlVa??"><CITE>6</CITE></A>].<BR>
+<BR>
+For the comparison of <I>n</I> real numbers, the cost of sorting <I>n</I>
+numbers depends on the position of the nontrivial zeroes of the
+Riemann zeta function (see&nbsp;[<A HREF="#ClFlVa??"><CITE>3</CITE></A>] for an approach by
+Dirichlet depoissonization and Mellin transform, using the Vallée
+secant operator or&nbsp;[<A HREF="#FlVa??"><CITE>6</CITE></A>] for an approach by Nörlund--Rice
+integrals, via a complex lifting of the moment sums):
+<DIV ALIGN=left><B>Theorem&nbsp;3</B>&nbsp;&nbsp;<EM>
+The expected cost of sorting </EM><EM><I>n</I></EM><EM> uniform real numbers given by their
+classical continued fraction representations satisfies 
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><I>P</I></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(<I>n</I>)=<I>n</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>n</I>-1</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>l</I>-1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(-1)</EM><SUP><EM><FONT SIZE=2><I>l</I>-1</FONT></EM></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><FONT FACE=symbol>
+æ<BR>è</FONT></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><EM><I>n</I>-1</EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM><I>l</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>ø</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>_</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT FACE=symbol>r</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><SUP><EM><FONT SIZE=2>(<I>l</I>+1)</FONT></EM></SUP><EM>=<I>K</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM><I>n</I></EM><EM>ln</EM><EM> <I>n</I>+<I>K</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM> <I>n</I> +<I>Q</I>(</EM><EM>ln</EM><EM> <I>n</I>)+<I>O</I>(1),</EM></TD>
+</TR></TABLE></DIV><EM>
+ where </EM><EM><I>K</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM> is Lévy's entropy
+constant and </EM><EM><I>K</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM> is a Porter-like constant (see&nbsp;[</EM><A HREF="#Finch"><CITE><EM>4</EM></CITE></A><EM>]):
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>
+<I>K</I></EM><SUB><EM><FONT SIZE=2>0</FONT></EM></SUB><EM>=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>6</EM><EM>ln</EM><EM> 2</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+&nbsp;&nbsp;</EM><EM>and</EM><EM>&nbsp;&nbsp;
+<I>K</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM>=18</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>g</FONT></EM><EM>ln</EM><EM>2</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>+9</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>(</EM><EM>ln</EM><EM> 2)</EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>-72</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>ln</EM><EM> 2&nbsp;
+<FONT FACE=symbol>z</FONT>'(2)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>p</FONT></EM><SUP><EM><FONT SIZE=2>4</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>-</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>2</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.
+</EM></TD>
+</TR></TABLE></DIV><EM>
+The function </EM><EM><I>Q</I>(<I>u</I>)</EM><EM> is an oscillating function with mean value 0 that
+satisfies </EM><EM><I>Q</I>(<I>n</I>)=<I>O</I>(<I>u</I></EM><SUP><EM><FONT SIZE=2><FONT FACE=symbol>d</FONT>/2</FONT></EM></SUP><EM>),</EM><EM>
+where </EM><EM><FONT FACE=symbol>d</FONT></EM><EM> is any number such that </EM><EM><FONT FACE=symbol>d</FONT>&gt;</EM><EM>sup</EM><EM> &nbsp;{&nbsp;<FONT FACE=symbol>Â</FONT>(<I>s</I>) | <FONT FACE=symbol>z</FONT>(<I>s</I>)=0&nbsp;}</EM><EM>.
+</EM></DIV><BR>
+For more details, we refer to Flajolet and Vallée's articles,
+available on their web pages:
+<DIV ALIGN=center>
+<CODE>http://algo.inria.fr/flajolet</CODE>&nbsp;&nbsp;and&nbsp;&nbsp;<CODE>http://www.info.unicaen.fr/~brigitte</CODE>.
+</DIV><BR>
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="BaBoGi94"><FONT COLOR=purple>[1]</FONT></A><DD>
+Bailey (David&nbsp;H.), Borwein (Jonathan&nbsp;M.), and Girgensohn (Roland).&nbsp;--
+Experimental evaluation of Euler sums. <EM>Experimental
+ Mathematics</EM>, vol.&nbsp;3, n&deg;1, 1994, pp.&nbsp;17--30.<BR>
+<BR>
+
+<DT><A NAME="BeGoSc72"><FONT COLOR=purple>[2]</FONT></A><DD>
+Beeler (M.), Gosper (R.&nbsp;W.), and Schroeppel (R.).&nbsp;--
+<EM>HAKMEM</EM>.&nbsp;--
+Artificial Intelligence Memorandum n&deg;239, Massachusetts Institute
+ of Technology, A.&nbsp;I. Laboratory, February 1972. Retyped
+ version available from
+ <CODE>http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html</CODE>.<BR>
+<BR>
+
+<DT><A NAME="ClFlVa??"><FONT COLOR=purple>[3]</FONT></A><DD>
+Clément (J.), Flajolet (P.), and Vallée (B.).&nbsp;--
+Dynamical sources in information theory: A general analysis of trie
+ structures. <EM>Algorithmica</EM>.&nbsp;--
+61&nbsp;pages. To appear.<BR>
+<BR>
+
+<DT><A NAME="Finch"><FONT COLOR=purple>[4]</FONT></A><DD>
+Finch (S.).&nbsp;--
+Favorite mathematical constants.&nbsp;--
+<CODE>http://www.mathsoft.com/asolve/constant/constant.html</CODE>.<BR>
+<BR>
+
+<DT><A NAME="FlSa98"><FONT COLOR=purple>[5]</FONT></A><DD>
+Flajolet (Philippe) and Salvy (Bruno).&nbsp;--
+Euler sums and contour integral representations. <EM>Experimental
+ Mathematics</EM>, vol.&nbsp;7, n&deg;1, 1998, pp.&nbsp;15--35.<BR>
+<BR>
+
+<DT><A NAME="FlVa??"><FONT COLOR=purple>[6]</FONT></A><DD>
+Flajolet (Philippe) and Vallée (Brigitte).&nbsp;--
+Continued fractions, comparison algorithms, and fine structure
+ constants. In Théra (M.) (editor), <EM>Analysis and Applications</EM>,
+ <EM>Canadian Mathematical Society</EM>.&nbsp;--
+To appear.<BR>
+<BR>
+
+<DT><A NAME="Zagier94"><FONT COLOR=purple>[7]</FONT></A><DD>
+Zagier (Don).&nbsp;--
+Values of zeta functions and their applications. In <EM>First
+ European Congress of Mathematics, Vol. II (Paris, 1992)</EM>, pp.&nbsp;497--512.&nbsp;--
+Birkhäuser, Basel, 1994.</DL>
+
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="0" height="0"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+
+</HTML>
+

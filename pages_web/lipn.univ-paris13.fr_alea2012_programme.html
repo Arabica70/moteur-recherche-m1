@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Journées ALÉA 2012</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen, tv, projection" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  <script type='text/javascript' src='js/jquery-1.2.3.min.js'></script>
+
+</head>
+
+<body>
+
+   <div id="menu">
+
+
+  <!-- Menu -->
+  
+   <!-- <object type="text/html" data="menu.php"> -->
+
+   <!--   </div> -->
+
+   <script type="text/javascript" >
+<!--
+    var ic = 42;     // Number of alternative images
+    
+    function pickRandom(range) {
+    if (Math.random)
+    return Math.round(Math.random() * (range-1));
+    else {
+    var now = new Date();
+    return (now.getTime() / 1000) % range;
+    }
+    }
+    var choice = pickRandom(ic);
+
+    function changePortrait()
+    {
+    var newchoice = pickRandom(ic);
+    $('portrait').innerHTML = '<IMG BORDER=0 SRC="images/pics/image'+$newchoice+'.jpg" WIDTH=110 >';
+    timeoutID = window.setTimeout("changePortrait()",5000);
+    }
+    timer = window.setTimeout("changePortrait()",5000);
+
+    // -->
+</script>
+
+   <span id="cirm"><script type="text/javascript" >document.writeln('<img src="images/pics/image'+choice+'.jpg" width="110" alt="CIRM"/>');</script></span>
+
+
+
+    <ul>
+            <li><a href="index.html">Accueil</a></li>
+    </ul>
+
+    <div class="spacer"></div>
+    <ul>
+      <li>Programme</li>
+<!--      <li><a href="idee.html">Boîte à idée</a></li> -->
+<li><a href="http://www.cirm.univ-mrs.fr/index.html/spip.php?rubrique2&EX=liste_participants&annee=2012&id_renc=787&num_semaine=0">Participants</a></li>
+      <li><a href="inscription.html">Inscriptions (closes !)</a></li>
+	      <li><a href="planning.php">Planning</a></li>
+      <!--<li><a href="propositions.php">Appel à contributions</a></li>-->
+     <!--<li><a href="programme.php">Programme</a></li>-->
+      <!--<li><a href="problemes.php">Problèmes ouverts</a></li>-->
+      <!--<li><a href="inscriptions.php">Inscriptions</a></li>-->
+
+    </ul>
+      
+    <div class="spacer"></div>
+    <ul>
+      <li><a href="http://algo.inria.fr/pfac/PFAC/Tributes.html">Hommage à Philippe Flajolet</a></li>
+      </ul>
+
+    
+    <div class="spacer"></div>
+    <ul>
+      <li><a href="http://www.cirm.univ-mrs.fr/Site_test/spip.php?rubrique2&EX=info_rencontre&annee=2012&id_renc=787">CIRM</a> </li>
+    </ul>
+  </div>
+
+
+  <div id="main">
+  <!-- Main -->
+  <h1> Les cours :</h1>
+
+  La semaine sera structurée autour de trois cours avancés de 2h30 (deux séances de 1h15), chacun étant complété par une 
+  scéance d'exercices de 1h :
+  <ul>
+    <li> <h3>Probabilités libres   (<a href="http://igm.univ-mlv.fr/~biane/">Philippe Biane</a>, CNRS, LIGM) </h3></li>
+    <p>
+    Les probabilités libres permettent de modéliser le comportement des matrices
+    aléatoires de grandes tailles, en particulier leurs propriétés spectrales.<br>
+    J'expliquerai les bases de la théorie et de ses applications aux matrices
+    aléatoires, ainsi que les outils combinatoires qui ont été développés à cet
+    effet.<br>
+    </p>
+    <u>Références</u>:
+    <ul>
+      <li>Philippe Biane.  <a href="http://arxiv.org/pdf/math/9809193"> Free probability for probabilists. </a><br>
+	  Quantum probability communications, Vol. XI (Grenoble, 1998), 55-71, QP-PQ, XI, 
+	  World Sci. Publ., River Edge, NJ, 2003.
+	<li>
+	  Alexandru Nica et Roland Speicher.
+	  Lectures on the combinatorics of free probability. <br>
+	  London Mathematical Society Lecture Note Series, 335. Cambridge University Press, Cambridge, 2006.
+	  <li>
+	    Greg W. Anderson, Alice Guionnet et Ofer Zeitouni.
+	      An introduction to random matrices. <br>
+	      Cambridge Studies in Advanced Mathematics, 118. Cambridge University
+Press, Cambridge, 2010.
+
+    </ul>
+	  <br>
+
+    <li> <h3>Calcul Formel pour la combinatoire (<a href="http://algo.inria.fr/bostan/">Alin Bostan</a> et <a href="http://algo.inria.fr/salvy/">Bruno Salvy</a>, INRIA, Rocquencourt) </h3></li>
+          <p>Le calcul formel étudie la manipulation informatique d'objets
+mathématiques exacts. Dans ce cours, les objets mathématiques de prédilection
+seront les fonctions génératrices d'énumération en combinatoire. Le point de
+vue promu sera l'utilisation d'approximations à grande précision (séries
+formelles tronquées) comme structure de données intermédiaire pour représenter
+des objets exacts (fonctions génératrices).<br><br>
+
+Nous présenterons les principaux outils permettant de passer d'équations,
+sommes ou intégrales à de bonnes approximations (des centaines, voire des
+milliers, de coefficients), principalement grâce à l'itération de Newton
+symbolique. À l'inverse, à partir d'approximations, nous expliquerons comment
+reconstruire des équations qu'elles résolvent de manière approchée ou des
+``formules exactes'' qu'elles approchent. L'outil de base est l'approximation
+de Padé et de Padé-Hermite. Les approximations à grande précision sont souvent
+suffisantes pour que les expressions reconstruites soient exactes. Nous
+exposerons pour conclure des algorithmes permettant de prouver des identités
+entre séries hypergéométriques ou plus généralement D-finies. Au delà de la
+présentation des outils algorithmiques théoriques, le cours mettra l'accent
+sur leur pratique, et c'est pourquoi il se déroulera en partie sur machine.<br>
+</p>
+
+    <li> <h3>Pseudo-aléa: objets et génération (<a href="http://www.cs.princeton.edu/~dxiao/">David Xiao</a>, CNRS, LIAFA) </h3></li>
+      <p><a href="resume_xiao.pdf">Cliquez ici pour voir le résumé </a></p>
+      
+      <u>Références</u>:
+      <ul>
+	<li> Ben Green et Terence Tao.
+	    <a href="http://arxiv.org/pdf/math/0404188v6">The primes contain arbitrarily long arithmetic progressions</a><br>
+	      Annals of Mathematics, 167(2):481–547, 2008.
+	<li>Noam Nisan et Avi Wigderson.
+	    <a href="http://citeseer.ist.psu.edu/viewdoc/download;jsessionid=F72E07046491F924D929501C63EE86FF?doi=10.1.1.83.8416&rep=rep1&type=pdf">Hardness vs randomness.</a><br>
+	      J. of Comp. and Sys. Sci.,49(2):149–167, 1994. Preliminary version in FOCS’ 88.
+	  <li>David Xiao.
+	    <a href="http://www.liafa.jussieu.fr/~dxiao/docs/pseudoalea.pdf">Le pseudo-aléa: objets et génération</a>
+      </ul>
+      
+
+  </ul>
+  
+
+	  <h1> Exposés longs :</h1>
+
+    <ul>
+    <li><h3>Construction de peignes, mélange de peignes et marches aléatoires</h3> 
+      (<a href ="http://math.u-bourgogne.fr/IMB/cenac/"> Peggy Cénac-Guesdon</a>, Institut de Mathématiques de Bourgogne)</li>
+
+    <p>Les séquences aléatoires de lettres peuvent être vues comme des chaînes au sens probabiliste ou comme des sources au sens de la théorie de l’information. 
+      La manière dont les mots sont produits a une grande influence sur le comportement probabiliste des algorithmes ou des principales structures de données associées 
+      (arbre binaire de recherche, arbre digital, arbre des suffixes, pour la compression). <br>
+      Les chaînes de Markov à mémoire de longueur variable (en anglais VLMC) constituent une classe de sources probabilistes, suffisamment générale pour pouvoir représenter des sources diverses, 
+      et unifier le traitement de sources naturelles (sources sans mémoire et chaînes de Markov), suffisamment structurée pour pouvoir être précisément étudiée.<br>
+      Il sera question dans cet exposé d'une construction explicite d'une VLMC en tant que source dynamique, puis d'existence et de convergence vers la mesure stationnaire pour des exemples, 
+      dont le "peigne". Nous verrons ensuite que le peigne peut plus ou moins bien mélanger et être à l'origine de la construction d'arbres de suffixes dont les paramètres ne convergent pas 
+      à vitesse logarithmique. Enfin, nous regarderons quelques propriétés de marches aléatoires construites à partir du peigne.
+    </p>
+
+    <li><h3>Techniques probabilistes et combinatoires pour l'analyse des flux de données.</h3> 
+      (<a href ="http://www.lsi.upc.edu/~conrado/">Conrado Martinez</a>, Universitat Politècnica de Catalunya )</li>
+
+    <p> Il y a près de 30 ans, Philippe Flajolet, dans un de ses papiers les plus cités, a montré que l'on pouvait concevoir des algorithmes pour estimer extrêmement précisément le nombre d'éléments différents dans un multi-ensemble, en utilisant peu de mémoire auxiliaire, en un seul passage sur les données et avec une simplicité et une élégance extraordinaires. C'est un cas particulier, mais assez important, de ce que l'on appelle "streaming analysis". Mais pour que les algorithmes d'estimation fonctionnent, on a besoin d'une analyse très précise de ses propriétés probabilistes : il faut trouver des paramètres qui sont au coeur de ce type d'algorithmes, et c'est l'analyse qui les fournit. À la suite de ce travail, beaucoup de chercheurs, Philippe lui-même avec autres coauteurs, ont proposé de nouveaux algorithmes et ont étudié leurs performances. Les outils mathématiques (combinatoire, proba, ...) qu'il faut mettre en jeu sont très intéressants et nous trouvons dans ce domaine des défis mathématiques et informatiques très attrayants. Sans doute, le domaine des algorithmes de streaming est l'un des meilleurs exemples d'interaction parfaite entre mathématiques et informatique.    </p>
+
+
+
+    <li><h3>Modèles de surfaces aléatoires</h3>
+      (<a href="http://www.lix.polytechnique.fr/Labo/Gilles.Schaeffer/">Gilles Schaeffer</a>, LIX)</li>
+    <p>Les cartes combinatoires permettent de décrire naturellement des
+surfaces aléatoires discrètes. En particulier la distribution uniforme
+sur les quadrangulations planaires formées par recollement de n
+quadrangles a été étudiée très en détail ces dernières années: loi de
+paramètres (degré max des sommets, diamètre) lorsque n tends l'infini,
+limite infinie discrète, limite d'échelle et carte Brownienne à la Le
+Gall et Miermont...  Je m'intéresserai dans cet exposé à des définitions
+alternatives de surfaces aléatoires à base de cartes (décorées,
+étiquetées, coloriées ou pondérées) pour tenter de tracer une
+frontière entre celles qui ressemblent aux quadrangulations, et les
+autres.</p>
+
+
+
+	      <li> <h3>Hauteur maximale de ponts Browniens et d'excursions Browniennes
+		  conditionnés à ne pas se croiser</h3> (<a href="http://www.th.u-psud.fr/lpt/annuaire2.php3?fiche=gregory.schehr">Gregory Schehr</a>, Laboratoire de Physique Théorique d'Orsay) </li>
+
+	  <p>
+	    Les marcheurs Browniens conditionnés à ne pas se croiser ont suscité
+	    beaucoup d'intérêt ces dernières années, tant en mathématique (pour leurs
+	    aspects probabilistes et combinatoires) qu'en physique (comme des modèles
+	    de polymères ou de transition de mouillage ou de fusion). Dans cet exposé
+	    je présenterai un calcul exact de la distribution de la hauteur maximale
+	    d'une collection de N ponts Browniens (appelés 'watermelons without wall')
+	    et de N excursions Browniennes (appelées 'watermelons with a wall')
+	    conditionnés à ne pas se croiser. Je montrerai que dans la limite
+	    asymptotique où N tend vers l'infini cette distribution converge vers la
+	    distribution de Tracy-Widom qui décrit les fluctuations de la plus grande
+	    valeur propre de matrices aléatoires de l'ensemble gaussien orthogonal
+	    (GOE pour 'Gaussian Orthogonal Ensemble'). Je discuterai enfin une
+	    application de ces résultats asymptotiques à des modèles de croissance
+	    stochastique.
+	  </p>
+
+	  </li>
+
+
+        <li><h3>Dynamique des vues ego-centrées de la topologie de l'internet : analyse et modélisation</h3>
+	  (<a href="http://www-rp.lip6.fr/~magnien/">Clémence Magnien</a>, Université Paris 6)
+	    <p>
+	      Dans de nombreux contextes, les objets étudiés peuvent être modélisés
+	      par des graphes, appelés graphes de terrain : topologie de l'internet,
+	      graphes du web, réseaux sociaux, réseaux biologiques, ...
+	      La plupart de ces graphes sont dynamiques, c'est-à-dire qu'ils
+	      évoluent au fil du temps par l'apparition et la disparition de nœuds
+	      et de liens. L'étude de cette dynamique soulève de nombreuses
+	      questions importantes.<br>
+	      
+	      Je m'intéresserai dans cet exposé à un cas particulier : la topologie
+	      de l'internet (constituée de routeurs et de liens de communication
+	      au niveau IP). On peut capturer une partie de sa dynamique en
+	      s'intéressant à ce qu'une machine donnée peut voir de cette topologie,
+	      qu'on appelle vue ego-centrée, et en répétant périodiquement la mesure
+	      de ces vues ego-centrées.<br>
+	      
+	      Je présenterai une analyse de la dynamique observée sur de telles mesures.
+	      On verra en particulier que ces vues ego-centrées évoluent à un rythme
+	      beaucoup plus élevé que ce à quoi on aurait pu s'attendre.
+	      On verra également que deux phénomènes jouent un rôle clé dans la
+	      dynamique observée : le load-balancing ou équilibrage de charge,
+	      et l'évolution du routage.<br>
+	      
+	      Enfin, je présenterai des pistes pour la modélisation de la topologie
+	      de l'internet et sa dynamique. On verra que des approches basées sur
+	      des graphes aléatoires permettent de reproduire fidèlement les
+	      observations.
+	      Ces approches ont le double avantage de permettre d'expliquer les
+	      comportements observés, et de permettre, par une étude détaillée de l'impact
+	      des différents paramètres, d'espérer quantifier de manière rigoureuse la
+	      dynamique réelle de la topologie.
+	    </p>
+
+  </li>
+
+
+
+	  </ul>
+
+
+
+
+    <h1> Exposés courts :</h1>
+    Retrouvez la liste des exposés court sur le <a href="planning.php">planning</a>.
+<br><br>
+
+    
+
+  <div id="pied-de-page">
+  <!-- Pied de page -->
+
+<!--  Dernière modification le lundi 14 mars 2011 à 12:15:23.<br />-->
+  <!--<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="XHTML 1.0 Strict Valide !" /></a>
+     <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" /></a>-->
+  </div>
+</div>
+    <script type='text/javascript'>
+      <!--
+      var pre = 'mai' + 'lto';
+      var a = new Array();
+      a.push('alea2012' + '@' + 'lipn');
+      a.push('univ-paris13');
+      a.push('fr');
+      var b = a.join('.');
+      $("#emailAddress").empty().append('<a href=\'' + pre + ':' + b + '\'>' + b + '<\/a>');
+      //-->
+    </script>
+
+</body>
+</html>

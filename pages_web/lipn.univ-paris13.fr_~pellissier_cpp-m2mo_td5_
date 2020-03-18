@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 5</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 5 C++: Portée des noms, <tt>const</tt>, classes et listes doublement chaînées</h2>
+
+<h3>Rappels</h3>
+<ul>
+  <li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: Portée des noms; surcharge</h3>
+<ol>
+  <li>
+    <b>Simulez l'éxécution</b> de <a href="1.1.png">ce programme</a> dans votre tête. <b>Qu'affichera-t'il?</b>
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.1.txt</tt> contenant la réponse (juste un nombre, rien d'autre!)
+    <br/>
+    <br/>
+  </li>
+  <li>
+    <b>Que se passera-t'il</b> si dans la classe <b><tt>A</tt></b> on ajoute une valeur par défaut à la fonction <tt>int a(int a)</tt>, comme cela:
+    <pre><code class="c++">int a(int a = 77) {
+  ...
+}</code></pre>
+    <b class="orange">RENDU:</b> <tt>1.2.txt</tt> contenant la réponse avec une explication brève.
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Déclarations/Définition et <tt>const</tt></h3>
+<ol>
+  <li><b>Écrivez</b> un fichier <tt>2.1.cc</tt> qui <i>implémente</i> la classe
+    <tt>Pixel</tt> déclarée dans le fichier <a href="2.1.h" download>2.1.h</a>.
+    <br/>
+    <b>Vérifiez</b> en faisant:
+    <pre>wget --no-cache https://lipn.univ-paris13.fr/~pellissier/cpp-m2mo/td5/2.tar.gz
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b class="orange">RENDU:</b> <tt>2.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>Copiez <tt>2.1.h</tt> dans <tt>2.2.h</tt> et modifiez-le <b>uniquement en ajoutant</b> le mot-clé <tt>const</tt> <b>le plus de fois possible</b>.
+    <br/>Écrivez aussi l'implémentation <tt>2.2.cc</tt> (qui pourra elle aussi partir de <tt>2.1.cc</tt> comme modèle).
+    <br/><b>Vérifiez</b> avec: <tt>make 2.2</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>2.2.h</tt> et <tt>2.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>Faites de même</b> avec les fichiers <a href="2.3.h" download>2.3.h</a> et <a href="2.3.cc" download>2.3.cc</a>:
+    <ul>
+      <li>Ajoutez tout les <tt>const</tt> que vous pouvez dans <tt>2.3.h</tt> (en ne faisant aucune autre modification!)</li>
+      <li>Complétez <tt>2.3.cc</tt>
+    </ul>
+    <b>Vérifiez</b> avec: <tt>make 2.3</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>2.3.h</tt> et <tt>2.3.cc</tt>, <b>modifiés</b>.
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 3: Listes doublement chainée</h3>
+Dans cet exercice on va aborder une structure de données: les <a href="https://en.wikipedia.org/wiki/Doubly_linked_list">listes doublement chainées</a>.
+<br/>Le contenu pourrait être arbitraire; ici pour simplifier on prendra un contenu de type <tt>double</tt>.
+<br/>On fera ça a l'aide d'une classe <i>encapsulant</i> une <tt>struct</tt>:
+<ul>
+  <li>La class <tt>List</tt> aura les méthodes:
+    <ul>
+      <li><tt>NumElements()</tt> renvoyant le nombre d'éléments</li>
+      <li>
+        <tt>Head()</tt> renvoyant un <b>pointeur</b> vers le premier élément
+        de la liste (de type <tt>Element</tt>, cf plus bas), ou <tt>nullptr</tt>
+        si la liste est vide.
+      </li>
+      <li><tt>void Remove(Element* element)</tt> qui supprime un élément de la liste.
+      </li>
+      <li>
+        <tt>Element* InsertNewElementAfter(double value, Element* position)</tt> qui crée un
+        nouvel élément de la valeur donnée, et l'ajoute après un élément existant (<tt>position</tt>)
+        de la liste, ou au début de la liste si <tt>position = nullptr</tt>.
+        Elle renverra un pointeur vers l'élément crée.
+      </li>
+    </ul>
+  </li>
+  <li>La <i>structure</i> (<tt>struct</tt>) <tt>Element</tt> sera définie <b>a l'intérieur</b> de <tt>List</tt> et aura les champs:
+    <ul>
+      <li><tt>value</tt> contenant le <tt>double</tt> stocké dans cet élément.</li>
+      <li><tt>prev</tt> contenant un pointeur vers l'élément précédent, ou <tt>nullptr</tt>
+      s'il n'y en a pas (i.e. si cet élément est le premier de la liste)</li>
+      <li><tt>next</tt> contenant un pointeur vers l'élément suvant,  ou <tt>nullptr</tt>
+      s'il n'y en a pas (i.e. si cet élément est le dernier de la liste)</li>
+    </ul>
+  </li>
+</ul>
+<b>Toutes les opérations ci-dessus doivent fonctionner en <span class="red">temps constant!</span></b>
+<ol>
+  <li>
+    <b>Écrivez</b> le prototype dans un fichier <tt>3.1.h</tt>
+    et l'implémentation dans un fichier <tt>3.1.cc</tt>
+    <b>Vérifiez</b> avec:
+    <pre>wget --no-cache http://fabien.viger.free.fr/cpp/td5/3.tar.gz
+tar xf 3.tar.gz
+make 3.1</pre>
+    <b class="orange">RENDUS:</b> <tt>3.1.h</tt> et <tt>3.1.cc</tt> (Note: un rendu <i>partiel</i> pourra être pris en compte
+        mais vous devrez quand même définir <b>toutes</b> les méthodes, en les faisant renvoyer <tt>nullptr</tt> ou autre valeur
+        "défaut" si besoin)
+    <br/><br/>
+  </li>
+  <li>
+    <b>Ajoutez</b> la fonction <tt>Find(double d)</tt> (dans la classe <tt>List</tt>) qui renvoie
+     un pointeur vers le premier élément de la liste dont la valeur est égale à <tt>d</tt>,
+     ou <tt>nullptr</tt> si aucun élément n'est égal à <tt>d</tt>.
+     <br/>
+     <br/><b>Vérifiez</b> avec: <tt>make 3.2</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>3.1.h</tt> et <tt>3.1.cc</tt>, avec la fonction en plus.
+    <br/>
+    <br/>
+  </li>
+  <li>
+    <b>(*) Ajoutez</b> une fonction <tt>void List::InsertListAfter(const List* other, Element* position)</tt>
+    qui insère tout le contenu d'une autre liste après un élément donné de la liste courante (ou <tt>nullptr</tt> pour l'insérer au début).
+    <br/>Par exemple, si on insère (1,2,3) après l'élément "4" de (3,4,5) on obtiendra (3,4,1,2,3,5).
+    <br/>
+    <br/>Comment faire pour que cette fonction marche en <b class="red">temps constant</b>?
+    <br/>Indice: n'hésitez pas à ajouter des champs dans votre class <tt>Liste</tt>.
+    <br/><br/><b>Vérifiez</b> avec: <tt>make 3.3</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>3.1.h</tt> et <tt>3.1.cc</tt>, avec la fonction en plus.
+    <br/>
+    <br/>
+  </li>
+</ol>
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

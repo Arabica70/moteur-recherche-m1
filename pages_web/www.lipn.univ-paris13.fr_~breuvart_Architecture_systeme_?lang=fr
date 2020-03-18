@@ -1,0 +1,99 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flavien Breuvart</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=../index.php?lang=fr>Index</a></li>
+	  <li><a href=../publications.php?lang=fr>Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Projets <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href=../Projets.php?lang=fr>Propositions</a></li>
+            <li><a href=../CoGITARe/?lang=fr>ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=../stages.php?lang=fr>Stage/thèses</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Enseignement <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=../compilation/?lang=fr>Compilation</a></li>
+	         <li><a href=../principes_de_programmation/?lang=fr>Principes de Prog (old)</a></li>
+             <li><a href=../prog_fonctionnelle/?lang=fr>Prog. fonctionnelle (old)</a></li>
+             <li><a href=../LEE/?lang=fr>LEE</a></li>
+             <li class="active"><a href="#">Architecture et Systeme (old)</a></li>
+             <li><a href=../DIU-EIL/?lang=fr>DIU-EIL</a></li>
+             <li><a href=../misa/?lang=fr>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+    <header>
+	  Cours "Architecture et Système" </br>
+	  par Stefano Guerini </br>
+	  en L2 Galilée 2018-2019
+    </header>
+
+
+      <div class="publications">
+	<h2> Énoncés de TD </h2>
+	<UL TYPE=square>
+	  <LI> <a href="td01.pdf"> TD1</a>: Encodage binaires et complément à 2
+       <LI> <a href="td02.pdf"> TD2</a>: Architecture LC3  et sa <a href="td02-corr.zip"> Correction</a> (pour des raison de décalage avec le cours, certains exercices étaient infaisable ou plus dificile au moment du TD)
+       <LI> <a href="td03.pdf"> TD3</a>: Architecture LC3 avancée  et sa <a href="td03-corr.zip"> Correction</a> 
+	</UL>
+      </div>
+
+      <div class="publications">
+	<h2> Énoncés de TP </h2>
+	<UL TYPE=square>
+	  <LI> <a href="tp01.pdf"> TP1</a>
+	  <LI> <a href="tp02.pdf"> TP2</a>
+      <LI> <a href="tp03-note.pdf"> TP3</a>:Attention, TP noté
+	</UL>
+      </div>
+
+
+      <div class="publications">
+	<h2> Référence </h2>
+	<UL TYPE=square>
+       <LI> <a href="Carton.pdf"> doc LC3</a> : Cours de circuit et architecture de Olivier Carton (M1 de Paris 7), contien une description détaillée de l'architecture LC3.
+       <LI> <a href="http://highered.mheducation.com/sites/0072467509/student_view0/lc-3_simulator.html"> LC3sim</a> : simulateur LC3 a télécharger et compiler.
+       <LI> <a href="https://wchargin.github.io/lc3web/"> simulateur LC3 en ligne</a> : autre simulateur, cette fois sur browser.
+	</UL>
+      </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

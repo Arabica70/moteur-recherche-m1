@@ -1,0 +1,20 @@
+<B>SSMAL: similarity searching with alignment graphs</B>
+Pierre Nicod&egrave;me
+(1998).
+<P>
+We want to provide biologists with a fast and sensitive scanning tool for
+searching local alignments of  a protein query sequence
+against  databases of protein multiple alignments
+ such as ProDom. Reversely, we want to provide
+ a tool for locally aligning  a protein 
+multiple alignment query against  a protein database such as SWISSPROT.
+We developed the program SSMAL (Shuffling Similarities with Multiple Alignments)
+that utilizes features of the Blast (<CITE>Altschul et al. 1990</CITE>)
+ algorithm and part of the Blast code.
+Our software allows both scanning multiple alignments and searching
+with a multiple alignment. Deletions in the multiple alignment only are handled and a SSMAL
+search may miss some similarities found by a profile search. However
+a SSMAL scan of a database as ProDom would be 20 to 30 times faster
+that a profile scan.
+ In the
+worst case a SSMAL search is about 9 times faster that a profile search.

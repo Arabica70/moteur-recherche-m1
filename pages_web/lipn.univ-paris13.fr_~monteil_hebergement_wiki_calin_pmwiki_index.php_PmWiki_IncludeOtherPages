@@ -1,0 +1,369 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Include Other Pages </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.IncludeOtherPages' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=search&amp;q=link=PmWiki.IncludeOtherPages'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Include Other Pages</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageDirectives'>Page directives</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/InterMap'>InterMap</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>authors (intermediate) </span>
+</div>
+<p>The <code class='escaped'>(:include:)</code> directive makes it possible to insert (or <a class='urllink' href='https://en.wikipedia.org/wiki/Transclusion' rel='nofollow'>&ldquo;transclude&rdquo;</a>) the contents of other pages into the current wiki page.  All of the include directives below perform a straight text inclusion.  In particular, any page <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Links'>links</a> in the included text are assumed to link to pages in the current <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'> group</a> if not otherwise qualified.
+</p>
+<div class='vspace'></div><h2>Syntax</h2>
+<p>The basic syntax is
+</p><ul><li>(:include PageName:) <br />with pagename includes the full page from the same group.
+</li><li>{Group/PageName$:<a href='#includeptv'>PTVar</a>}:<br />includes a <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables'>named variable</a> from a page, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Group</a> and PageName are options
+</li></ul><p class='vspace'>The full syntax is
+</p><ul><li>(:include
+<a href='#includefullname'>FullName</a>#<a href='#includeanchor'>fromanchor</a>#<a href='#includeanchor'>toanchor</a>   <a href='#includelines'>lines</a>=<em>12..34</em>   <a href='#includeself'>self</a>=<em>0</em>    <a href='#includebasepage'>basepage</a>=<em>abc</em>   <a href='#includevariable'>variable</a>=<em>value</em>   :)<br />  includes a page according to the parameters supplied. Parameters are optional.
+</li></ul><p><a name='firstanchor' id='firstanchor'></a>
+</p>
+<div class='vspace'></div><h2>Parameters</h2>
+<p>The directive can have multiple Name parameters with or without anchors, and multiple <a href='#includevariable'>template variable</a> parameters.
+</p>
+<p class='vspace'><a name='includefullname' id='includefullname'></a>
+</p><h3>Named pages</h3>
+<pre class='escaped'>(:include PageName:)
+(:include Group.PageName:)
+(:include Page1 Page2 Group1.Page3 Group2.Page4:)</pre>
+<p>Includes the entire text of another page into the current page. Multiple pages may be specified, but only the first available is included.
+</p>
+<p class='vspace'><a name='errormessage' id='errormessage'></a>
+You can use the above feature to <em>display an error message if an include fails</em>. Create a page, eg. Site.IncludeFailed containing the error message. You can use any page name. Then, in your include markup, append this page at the end of the page list:
+</p><pre>(:include Page1 Page2 Page3 Site.IncludeFailed:)
+</pre><p>A slightly more complex approach is outlined at <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/IncludeOtherPages-Talk' rel='nofollow'>the talk page</a>.
+</p>
+<p class='vspace'><a name='includeanchor' id='includeanchor'></a>
+</p><h3>#From#To anchors</h3>
+<table width='*' ><tr ><td  align='left'><code class='escaped'>(:include PageName#from#to:)</code></td><td >include lines from <em>PageName</em> between the <code class='escaped'>[[#from]]</code> and <code class='escaped'>[[#to]]</code> <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Links#anchors' title="Links to specific locations within a page -- &quot;anchors&quot;">anchors</a></td></tr>
+<tr ><td  align='left'><code class='escaped'>(:include PageName#from#:)</code></td><td >include all lines after <code class='escaped'>[[#from]]</code> to the end of the page</td></tr>
+<tr ><td  align='left'><code class='escaped'>(:include PageName##to:)</code></td><td >include all lines from the start of the page to <code class='escaped'>[[#to]]</code></td></tr>
+<tr ><td  align='left'><code class='escaped'>(:include PageName#from:)</code></td><td >include everything between <code class='escaped'>[[#from]]</code> and the next anchor</td></tr>
+<tr ><td  align='left'><code class='escaped'>(:include PageName#:)</code></td><td >include everything from the top of the page to the first anchor</td></tr>
+</table><p><span  style='font-style: italic; color: green;'> Note: do not put whitespace between &ldquo;#from&rdquo; &ldquo;#to&rdquo;</span>
+</p>
+<p class='vspace'><span  style='font-style: italic; color: green;'> Note: text on the same line as a closing anchor but preceding the closing anchor will <strong>NOT</strong> be included in the text.  Example Below:</span>
+</p><pre class='escaped'>[[#start]]some text on the first line
+some text on the last line [[#end]]</pre>
+<p><span  style='font-style: italic; color: green;'>The above, when included via <code class='escaped'>(:include PageName#start:)</code> will have the text on the first line but not the text on the last line.</span>
+</p>
+<p class='vspace'><code class='escaped'>(:include Page1 Page2 #from#to:)</code>
+</p><div class='indent'>Include from the first available of Page1, Page2 between the <code class='escaped'>[[#from]]</code> and <code class='escaped'>[[#to]]</code>  
+</div><p><br /><span  style='font-style: italic; color: green;'> Note: put whitespace between &ldquo;Page2&rdquo; and &ldquo;#from#to&rdquo;. The same anchors &ldquo;#from#to&rdquo; should be in both pages. If proper anchors are missing in the first available of Page1, Page2 the whole contents of the page is included.<br />This does not seem to work in 2.2 betas. See <a style='color: green' class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/IncludeSection' rel='nofollow'>Cookbook:IncludeSection</a> for a fix.</span>
+</p>
+<p class='vspace'><code class='escaped'>(:include Page1#from1#to1 Page2#from2#to2:)</code>
+</p><div class='indent'>Include the first from the first available of Page1 (between the <code class='escaped'>[[#from1]]</code> and <code class='escaped'>[[#to1]]</code>) or Page2 (between the <code class='escaped'>[[#from2]]</code> and <code class='escaped'>[[#to2]]</code> ) 
+</div><p class='vspace'><span  style='color: green;'>Note</span>: Previous versions of PmWiki allowed whitespace between <code class='escaped'>#from</code> and <code class='escaped'>#to</code> anchors even though it was not designed to.  Newer versions do not allow whitespace anymore.  To re-enable this &ldquo;exploited misbehavior&rdquo; put this into your config.php or farmconfig.php
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>Markup('includeanchors', '&lt;include', '/(\\(:include.*?#\\w+)\\s+(#\\w+)/', '$1$2');</code>
+</div><p class='vspace'><a name='includelines' id='includelines'></a>
+</p><h3>Lines=from..to</h3>
+<p><code class='escaped'>(:include PageName lines=10:)</code>
+<code class='escaped'>(:include PageName lines=5..10:)</code>
+<code class='escaped'>(:include PageName lines=5..:)</code>
+</p><div class='indent'>Include the first 10 lines, lines 5&ndash;10, or lines 5 and up from <em>PageName</em>. A &ldquo;line&rdquo; in this context refers to a line of source. <em>Thus a line may be a paragraph that wraps over several lines on the screen, or a completely blank line.</em>
+</div><p class='vspace'><code class='escaped'>(:include Page1 Page2 Page3 lines=1..5:)</code>
+</p><div class='indent'>Include the first five lines from the first available of Page1, Page2, or Page3.  (To include lines from a list of pages, use a separate include for each.)
+</div><p class='vspace'><a name='includeself' id='includeself'></a>
+</p><h3>Self=</h3>
+<p><code class='escaped'>(:include PageName self=0:)</code>
+</p><div class='indent'>The parameter <code>self</code> can be <code>0</code> or <code>1</code>. It tells the include directive if it is allowed to include the current page. This is useful if PageName is a variable like <code class='escaped'>{$Name}</code> and you want to prevent the directive from including the current page.
+</div><p class='vspace'><a name='includeptv' id='includeptv'></a>
+</p><h3><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables'>Page text variables</a></h3>
+<p><code class='escaped'>{Group/PageName$:Var}</code>
+</p><div class='indent'>Includes definition list values from an (optional) page as <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables'>page text variables</a>. These are defined using a definition list (<code class='escaped'>:item:description</code>), simple colon delimiter (<code class='escaped'>item:description</code>), or special markup (<code class='escaped'>(:item:description:)</code>).
+</div><p class='vspace'><a name='includebasepage' id='includebasepage'></a>
+</p><h3> Basepage=</h3>
+<p><code class='escaped'>(:include PageName basepage=BasePageName:)</code>
+</p><div class='indent'>Include PageName, but treat all relative links and page variables on <em>PageName`</em> as relative to <em>BasePageName</em>.
+</div><p>If <code>basepage=</code> is provided all relative links and page variables are interpreted relative to basepage.
+So, if one creates <code class='escaped'>TemplateName</code> as
+</p><div class='indent'><pre class='escaped'>Name: {$:Name}
+Address: {$:Address}</pre>
+</div><p>then the directive
+</p><div class='indent'><code class='escaped'>(:include TemplateName basepage=PageName:)</code>
+</div><p>will retrieve the contents of <code class='escaped'>TemplateName</code>, treating any page variables and links as being relative to <code class='escaped'>PageName</code>.  
+In particular, the values for <code class='escaped'>{$:Name}</code> and <code class='escaped'>{$:Address}</code> will be taken from <code class='escaped'>PageName</code>, but things like <code class='escaped'>{$Title}</code> and <code class='escaped'>{$LastModifiedBy}</code> would also work here.
+</p>
+<div class='vspace'></div><h4>Basepage usage</h4>
+<p>The primary purpose of basepage is to allow the inclusion of pages in a way that mimics the 2.1.x behavior where page variables 
+and links are interpreted relative to the currently displayed page.
+This is done with:
+</p><div class='indent'><code class='escaped'>(:include SomeOtherPage basepage='' :)</code>
+</div><pre> -or-
+</pre><div class='indent'><code class='escaped'>(:include SomeOtherPage basepage={*$FullName} :)</code>
+</div><p class='vspace'>It also allows GroupHeader and GroupFooter to have their page variables and links be relative to the currently displayed page 
+(instead of GroupHeader and GroupFooter):
+</p><div  style='white-space: pre;' > 
+<pre> ## PmWiki default <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupHeaderFmt'><code class='varlink'>&#036;GroupHeaderFmt</code></a> setting
+ <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupHeaderFmt'><code class='varlink'>&#036;GroupHeaderFmt</code></a> = 
+   '(:include {$Group}.GroupHeader self=0 basepage={*$FullName}:)(:nl:)';
+</pre></div>
+<p class='vspace'>Otherwise, using IncludeOtherPages inside of a GroupHeader would display &lsquo;GroupHeader&rsquo; and not the name of the currently displayed page.
+</p>
+<p class='vspace'>The basepage= parameter is general enough that it can also be used as a templating engine, so that
+we can grab a template page containing variables that are then filled in with values from another page:
+</p><div class='indent'><code class='escaped'>(:include TemplatePage basepage=DataPage :)</code>
+</div><p class='vspace'>And, of course, a single TemplatePage can actually contain multiple templates delimited by anchors, so that we end up with a syntax eerily similar<sup><a href='#footnote'>[1]</a></sup> to pagelist-templates:
+</p><div  style='white-space: pre;' > 
+<pre>   <code class='escaped'>(:include TemplatePage#abc basepage=DataPage :)</code>
+</pre></div>
+<p class='vspace'>So then TemplatePage can use a syntax like:
+</p><div  style='white-space: pre;' > 
+<pre>   
+    [[#abc]]
+    ...template stuff here...
+    [[#abcend]]
+
+</pre></div>
+<p class='vspace'>and it&rsquo;s possible to display TemplatePage as a template without it being interpreted&hellip; same as we do for <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/PageListTemplates'>Site.PageListTemplates</a>.
+</p>
+<div class='vspace'></div><div class='outdent'><a name='footnote' id='footnote'></a> <span style='font-size:83%'> <sup>[1]</sup>Okay, maybe it&rsquo;s not so eerie, given that the pagelist template code actually uses the same function as (:include:) to grab its templates.  But it&rsquo;s still a useful parallel. </span>
+</div><p class='vspace'><a name='includevariable' id='includevariable'></a>
+</p><h3>Specifying variables as parameters: Use sections as templates</h3>
+<p>You can also specify variable values inline with the include statement, and refer to the variables in the template using the <code class='escaped'>{$$variable1}</code> format:
+</p><div class='indent'><code class='escaped'>(:include TemplatePage variable1="value" variable2="value2":)</code>
+</div><p class='vspace'>This assumes that a site has <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#EnableRelativePageVars'><code class='varlink'>&#036;EnableRelativePageVars</code></a> enabled, which is recommended in PmWiki 2.2.0 &mdash; but was disabled by default in version 2.2.8 and earlier.
+</p>
+<p class='vspace'>For example, on my included page (&ldquo;template&rdquo;) I might have this:
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>[[#ivars]]
+Hi, {$$Name}, how are you today?
+[[#ivarsend]]
+</pre></td><td 
+        class='markup2' valign='top'><p><a name='ivars' id='ivars'></a>
+Hi, {{$$}Name}, how are you today?
+<a name='ivarsend' id='ivarsend'></a>
+</p>
+</td></tr></table>
+<p class='vspace'>Then, including that section above (that section is available via the section <code><code class='escaped'>{$FullName}#ivars</code></code>) you get this type of behavior:
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>(:include {$FullName}#ivars Name=Sam:)
+</pre></td><td 
+        class='markup2' valign='top'><p>
+Hi, Sam, how are you today?
+</p>
+</td></tr></table>
+<p class='vspace'>If a value contains spaces, quote it:
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>(:include {$FullName}#ivars Name="my friend":)
+</pre></td><td 
+        class='markup2' valign='top'><p>
+Hi, my friend, how are you today?
+</p>
+</td></tr></table>
+<p class='vspace'><em>See also <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PagelistVariables#EnableUndefinedTemplateVars'><code class='varlink'>&#036;EnableUndefinedTemplateVars</code></a>.</em>
+</p>
+<div class='vspace'></div><h3>Specific markup</h3>
+<p><code class='escaped'>(:nl:)</code> acts like a new line in the <em>markup</em>, only if there isn&rsquo;t one already.
+</p>
+<p class='vspace'>The purpose of <code class='escaped'>(:nl:)</code> is to be able to write things like &ldquo;<code class='escaped'>(:include Page1:)(:nl:)(:include Page2:)</code>&rdquo; which guarantees that the first line of Page2 is treated as a separate line from the last line of Page1, but without inadvertently generating a blank line between them.
+</p>
+<p class='vspace'>See <a class='urllink' href='http://thread.gmane.org/gmane.comp.web.wiki.pmwiki.user/15031/focus=15079' rel='nofollow'>this thread</a> and <a class='urllink' href='http://thread.gmane.org/gmane.comp.web.wiki.pmwiki.user/58609/focus=58633/' rel='nofollow'>this thread</a> for more info.
+</p>
+<p class='vspace'><code class='escaped'>(:nl:)</code> is not intended to put a newline character in the output!
+</p>
+<div class='vspace'></div><h2>See Also</h2>
+<ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables'>Page text variables</a> Page variables automatically made available through natural or explicit page markup
+</li><li><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/IncludeUrl' rel='nofollow'>Cookbook:IncludeUrl</a> 
+</li></ul><div class='vspace'></div><h2>Styling Note</h2>
+<p>By default, Included pages or lines cannot be distinguished from other text on the page. To provide a visual indication that this text is special, you can apply <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles'>Wiki Styles</a>. For example:
+</p>
+<div class='vspace'></div><table class='markup vert' align='center'>
+      <tr><td class='markup1' valign='top'><pre>%define=leftborder border-left="2px solid #88f" margin-left="2px" padding="1px 0 3px 10px"%
+What is PmWiki?
+&gt;&gt;leftborder&lt;&lt; (:include PmWiki.PmWiki lines=1..4:) 
+&gt;&gt;&lt;&lt;
+''Have a very nice day!''
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><p>What is PmWiki?
+</p><div  style='border-left: 2px solid #88f; margin-left: 2px; padding: 1px 0 3px 10px;' > PmWiki is a <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiWikiWeb'>wiki-based</a> content-management system (CMS) for collaborative creation and maintenance of websites. 
+<p class='vspace'>PmWiki pages look and act like normal web pages, except they have an &ldquo;<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Main/WikiSandbox?action=edit'>Edit</a>&rdquo; link that makes it easy to modify existing pages and add new pages into the website, using <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing'>basic editing</a> rules. You do not need to know or use any HTML or CSS. Page editing can be left open to the public or restricted to small groups of authors.
+</p>
+<div class='vspace'></div></div>
+<p><em>Have a very nice day!</em>
+</p>
+</td></tr></table>
+<div class='vspace'></div><h3>Parameter References</h3>
+<p>Any parameters supplied to an include statement (whether they are keywords or not) are accessible inside the included page as a special <code class='escaped'>{$$...}</code> variable of the same name. This feature can be used to provide extra information to use when displaying the included page.
+</p>
+<div class='vspace'></div><h3>Notes</h3>
+<ul><li>You can also say <code class='escaped'>(:include My/Page#myanchor lines=4:)</code> which starts from, and includes, the line with the anchor <code class='escaped'>[[#myanchor]]</code> for four lines.
+</li></ul><div class='vspace'></div><h2>Notes about use with <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ConditionalMarkup'>conditional markup</a></h2>
+<p>The <code class='escaped'>(:include ...:)</code> markup is processed after conditional markup is evaluated.<br />Therefor you can include a page or page section as part of a condition, like
+</p><div class='indent'><code class='escaped'>(:if some condition:)(:include SomePage#section:)(:if:) </code> 
+</div><p>But <code class='escaped'>(:include SomePage#section:)</code> doesn&rsquo;t look to see if <code class='escaped'>[[#section]]</code> is part of a conditional, like 
+</p><div class='indent'><code class='escaped'>(:if some condition:)[[#section]]...[[#sectionend]](:ifend:)</code>
+</div><p><code class='escaped'>(:include SomePage#section:)</code> will ignore such a condition. 
+</p>
+<p class='vspace'>When <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ConditionalMarkup'>testing variables</a> in included pages the context of the page (source or target) can be useful.
+See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables#specialreferences'>special references</a> for details.
+</p>
+<div class='vspace'></div><hr />
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='vspace question'>Q <a name='maxincludes' id='maxincludes'></a> What&rsquo;s the maximum number of includes that can exist in a page? </p>
+<div class='indent'>My site seems to stop including after 48 includes. (<a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MaxIncludes'><code class='varlink'>&#036;MaxIncludes</code></a>)
+</div><p class='vspace'> By default, PmWiki places a limit of 50 include directives for any given page, to prevent runaway infinite loops and other situations that might eat up server resources. (Two of these are GroupHeader and GroupFooter.) The limit can be modified by the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>wiki administrator</a> via the <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MaxIncludes'><code class='varlink'>&#036;MaxIncludes</code></a> variable.
+</p>
+<p class='vspace question'>Q Is there any way to include from a group of pages without specifying by exact name, e.g. between Anchor X and Y from all pages named IFClass-* ?</p>
+<p> This can be achieved using <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>page lists</a>.
+</p>
+<p class='vspace question'>Q There appears to be a viewing issue when the included page contains the (:title:) directive.</p>
+<p> In a default installation, the <em>last</em> title in the page overrides previous ones so you can place your (:title :) directive at the bottom of the page, after any includes. See also <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnablePageTitlePriority'><code class='varlink'>&#036;EnablePageTitlePriority</code></a>.
+</p>
+<p class='vspace question'>Q How to test to see if the page is part of another page?</p>
+<p> <table class='markup vert' align='center'>
+      <tr><td class='markup1' valign='top'><pre>(:if ! name {$FullName}:) 
+%comment% name of this page is not the same as the page this text was sourced from
+-&gt;[[{$FullName}#anchor | more ...]]
+(:ifend:)
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'></td></tr></table>
+ 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageDirectives'>Page directives</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/InterMap'>InterMap</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/IncludeOtherPages' rel='nofollow'>PmWiki:IncludeOtherPages</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/IncludeOtherPages-Talk' rel='nofollow'>PmWiki:IncludeOtherPages-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on June 25, 2017, at 03:52 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

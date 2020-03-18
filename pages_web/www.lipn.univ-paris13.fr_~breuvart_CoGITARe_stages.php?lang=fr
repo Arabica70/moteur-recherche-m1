@@ -1,0 +1,155 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CoGITARe ANRJCJC</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=indexCogitare.php?lang=fr>Index</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Membres et associés <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=membres.php?lang=fr>liste des membres</a></li>
+	         <li><a href=../?lang=fr>Flavien Breuvart</a></li>
+             <li><a href=http://www.jaime-arias.fr/pages/talks.html>Jaime Arias</a></li>
+             <li><a href=https://www.di.ens.fr/~feret/>Jérôme Feret</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~manzonetto>Giulio Manzonetto</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mazza>Damiano Mazza</a></li>
+             <li><a href=http://yann.regis-gianas.org>Yann Régis-Gianas</a></li>
+             <li><a href=https://www.seiller.org/>Thomas Seiller</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~loddo>Jean-Vincent Loddo</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mayero>Micaela Mayero</a></li>
+            </ul>
+	  <li class="active"><a href="#">Positions</a></li>
+	  <li><a href=../articles/Cogitare.pdf?lang=fr>Proposition</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Évènements <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+    	     <li><a href=kickoff.php?lang=fr>Kickoff</a></li>
+	         <li><a href=journee_inferencing_subtypes.php?lang=fr>journee1</a></li>
+           </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+
+
+
+
+ <div class="publications">
+       <h2> Bourses de thèse </h2>
+	<p>
+    
+        Nous cherchons <a href="../Stage/PhDCoGITARe.pdf">un thésard</a> pour septembre, avec une bourse fournie par le projet. Si vous êtes intéressés, veuillez contacter <a href="..">Flavien Breuvart></a.
+        <a href="PhDCoGITARe.pdf" > Plus d'informations</a>"
+        	</p>
+  </div>
+
+
+
+
+
+ <div class="publications">
+       <h2> Bourses de PostDoc</h2>
+	<p>
+    
+        Nous avons une bourse pour un postdoc de 1an (malheureusement non extensible). Si vous êtes intéressés, veuillez contacter <a href=".."><Flavien Breuvart>.
+        	</p>
+  </div>
+
+
+
+
+      <div class="publications">
+	<h2> ../Stages et mémoires  </h2>
+       Voici une liste non-exostive de sujets potentiels de stages. Si vous êtes intéressés, veuillez contacter <a href="..">Flavien Breuvart</a>.  </h2> 
+	<UL TYPE=square>
+	  <LI> <B> <a href="../Stage/GradedProfunctor.pdf">Grader les "arrows" et les profoncteurs</a> </B>: </br>
+	    <p>
+	      <em>Keywords</em>: théories des catégories, sémantique dénotationelle, programmation fonctionelle, (co)monades, analyse quantitative, analyse statique </br>
+       <em>Collaboration</em>: <a href="https://www.seiller.org/">Thomas Seiller</a>, Exequiel Rivas </br>
+	      <em>Level</em>: M2 </br>
+          <em>Prérequis</em>:
+            Un goût prononcé pour la sémantique dénotationnelle est requis. De bonnes notions en ligique linéaire, systèmes de types, programmations, catégories et/ou analyse statique sont aussi les bienvenues	    </p>
+          The dual notions of parameterised monads and comonads are emerging structures with both a potential for poweful static annalysis, and an extremly clean semantics. However, this apparent "duality" is less obvious when inspected in details. In this intership, we aim at clarifying a bit this duality.
+	    <p>
+          For this, we are interested in arrows, and their categorical interpretations as profunctors. Arrows (and profunctors) can be seen as generalisation of both (non-graded) monads and comonads, giving one of the numerous way to expose their duality. In this internship, we are looking for a graded version which could subsums both graded monads and graded comonads.
+	    </p>
+	  <LI> <B> <a href="../Stage/DependentRessourceSemantics.pdf">Mémoire sur la sémentique des systèmes de types linéaires dépedant</a> </B>: </br>
+	    <p>
+	      <em>Keywords</em>: programmation fonctionnelle, sémantique dénotationelle, types dépendant, analyse statiquen logique linéaire, analyse quantitative </br>
+	      <em>Collaboration</em>: <a href="https://https://lipn.univ-paris13.fr/~mazza">Damiano Mazza</a> </br>
+	      <em>Level</em>: Mémoire M2 </br>
+          <em>Prérequis</em>:
+            Un goût prononcé pour la sémantique dénotationnelle est requis. De bonnes notions en ligique linéaire, systèmes de types, programmations, catégories et/ou analyse statique sont aussi les bienvenues	    </p>
+          The so called Dependent Linear type systems are various type systems [GSS92,BucciarelliE01,DLG11,AmorimGHKC17] of similar structures which can be seen as specific but more expressive extensions of what we now call systems with graded comonads [GhicaS11,BrunelGMZ14] and can statically specify strong extensional properties at type level.
+	    <p>
+          Your objective will be to dissect those different systems and extract similitudes and differences, with a particular attention given to the denotational semantics. 
+	    </p>
+	    <p>
+          The ultimate objective is not required for the internship, but may be part of a PhD thesis (already funded, see below). We are aiming at a unification of those article toward two directions : a parameterised semantics that can be plugged on each of these systems and that contains both flavours of linear logic an dependent type semantics; and a parameterised type system in the style of [GhicaS11,BrunelGMZ14], but with the expressiveness of dependency.
+	    </p>
+	  <LI> <B> <a href="../Stage/ScheduleTypes.pdf">Formalisation, en coq, des types ordonnanceurs </a> </B>: </br>
+	    <p>
+	      <em>Keywords</em>: types dépendant, formalisation, coq, assistant de preuve, types gradés </br>
+          <em>Collaboration</em>: Micaela Mayero (LIPN), Dan Ghica (Birmingham)</br>
+	      <em>Level</em>: M1-M2 </br>
+          <em>Prérequis</em>:
+            Bases de programmation fonctionnelle, logique et assistant de preuves. Expertise dans un sujet plus avancé: coq, types dépendant, annalyse statique.	    </p>
+	    <p>
+	      This internship aims at formalising, in Coq proof assistant, an ongoing research project by Breuvart and Ghicca called
+	      Scheduled Types.
+	    </p>
+	    <p>
+	      A schedule type is a type of the form l1·A1 → l2·A2 → J•B where A1 , A2 and B are scheduled types, where l1 and l2
+	      are labels, and where J is an abstract object called schedule that “represent” the extensional behaviour of the execution of
+	      the programme once given its arguments. A basic example of schedule is a rational expression over the alphabet {l1 , l2 , e}
+	      where e represent an effect, in this case, if J = l2·((e+l2)·l1)<sup>*</sup> this means that the second argument is always called at the
+	      beginning, then there s an alternation of events with the first being either an effect or a call over the second argument,
+	      and where the second is a call over the first argument. In call-by-name evaluation, these kind of information is crucial for
+	      static analysis. Notice that the schedules can be more complex, but have to respect a certain algebraic structure.
+	    </p>
+	    <p>
+	      Such type systems are endowed with a complex notion of scope and composition. The associated proofs of subject
+	      reduction and realizability semantics are then extremely intricated. In such situation, making mistakes is quite frequent
+	      and the assistance of a computer is required to verify our proofs: this leads to the need of Coq. Such proofs tend to be
+	      especially smooth in Coq due to their syntactical nature.
+	    </p>
+	</UL>
+      </div>
+
+
+
+
+
+     
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

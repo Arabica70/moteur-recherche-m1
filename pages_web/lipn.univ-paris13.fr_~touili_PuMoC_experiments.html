@@ -1,0 +1,756 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LIAFA -- PuMoC</title>
+</head>
+
+<body>
+<blockquote>
+  <h1><strong><font color="#0000A0" size="7">PuMoC</font></strong></h1>
+  <h1><strong><font size="5">A CTL Model Checker for Sequential Program</font></strong><font size="5">s</font></h1>
+</blockquote>
+<table width="866" height="40" border="0" align="left" bordercolor="#FFFFFF" summary="main-menu">
+  <tr>
+    <td width="140" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="index.html"><font size="5">Home</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="download.html"><font size="5">Download</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="quick start.html"><font size="5">Quick Start</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="references.html"><font size="5">References</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="experiments.html"><font color="#FF0000" size="5"><strong>Experiments</strong></font></a></p>    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr size="3" noshade>
+<p>Experiments on an extensive set of benchmarks are given below. The benchmarks are: </p>
+<ol>
+  <li>Verifying Random Pushdown Systems;</li>
+  <li>Verifying 1461 versions of 30 real-world Windows Drivers taken from    <A href="http://research.microsoft.com/slam">SLAM</A> benchmarks;</li>
+  <li>Model checking C and Java Programs where C source codes taken from a bounded model checkers <a href="http://lcs.ios.ac.cn/~zwh/verds/index.html">verds</a>, Java source codes of <a href="http://www.cs.ox.ac.uk/matthew.hague/pdsolver.html">JimpleToPDSolver</a>, <a href="http://math.nist.gov/scimark2">SciMark2</a> and <a href="http://javaddlib.sourceforge.net">JBDD</a>;</li>
+  <li>Data flow analysis of Java Programs taken from <a href="http://www.cs.ox.ac.uk/matthew.hague/pdsolver.html">PDSolver</a>.</li>
+</ol>
+<p>All the tests were run on a Fedora 13 with a 2.4GHz CPU and 2GB of memory. </p>
+<p>&nbsp;</p>
+<p><font color="#0000FF" size="4"><strong>1. Verifying Random Pushdown Systems.</strong></font></p>
+<p>We randomly generated 500 PDSs each of them equipped with a random CTL formula. 
+  The number n of control locations and stack alphabet ranges from 10 to 510. The number 
+  of transition rules ranges from n2 to 2n2. The size of the CTL formulas ranges from 2 
+  to 15. Figure (a) depicts the time consumption w.r.t. the size n. Only 5:2% (i.e., 26) of the 
+  cases run out of time (30 minutes) while the majority of cases terminated in a few seconds. 
+  Figure (b) depicts the memory consumption w.r.t. the size n. Only 6:6% (i.e., 33) of tests 
+run out of memory with 2GB limitation. The majority of tests finished in a few MB. This benchmark includes 500 pushdown systems can be download [<a href="download.html">here</a>]. </p>
+<p>&nbsp;</p>
+<table width="1009" border="0" align="center">
+  <tr>
+    <td><img src="PDS-Experiment-time.png" width="517" height="448" align="middle"></td>
+    <td><img src="PDS-Experiment-memory.png" width="473" height="484" align="middle"></td>
+  </tr>
+  <tr>
+    <td align="center"> Figure (a): On Time Performance </td>
+    <td align="center">Figure (b): On Memory Performance </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong><font color="#0000FF" size="4">2.  VerifyingWindows Drivers.</font></strong></p>
+<p>We tested 1461 versions of 30 real-world drivers. All these versions are taken from SLAM 
+  benchmarks. SLAM provides the boolean programs corresponding to these drivers.We 
+  checked 2 CTL formulas that are relevant for these drivers. The first formula r1 ensures 
+  that the programmer uses the API functions in the good order. This formula uses regular 
+  valuations to ensure that whenever a function named DeviceAdd is called, the function 
+  DeviceCreate will be called eventually before DeviceAdd returns. The second CTL formula 
+  r2 describes a locking property. Our results are described in Table 1. Column No. 
+  Versions gives the number of versions we considered of the corresponding driver. Column 
+  Avg. #LOC denotes the average size of the programs’ versions. Column Avg. Time(s)  
+and Avg. Mem(MB) give the average time and memory in seconds and MB. </p>
+<blockquote> 
+  <p><strong><font size="3"> </font></strong></p>
+</blockquote>
+<table border="1" align="center" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td width="162" rowspan="2"><font size="4"><strong>Program</strong></font></td>
+    <td width="106" rowspan="2"><font size="4"><strong>No. Versions </strong></font></td>
+    <td width="101" rowspan="2" align="center"><font size="4"><strong>Avg. #LOC</strong></font></td>
+    <td colspan="2" align="center"><font size="4"><strong>r 1 </strong></font></td>
+    <td colspan="2" align="center"><font size="4"><strong>r 2 </strong></font></td>
+  </tr>
+  <tr>
+    <td width="135" align="center"><font size="4"><strong>Avg. Time(s)</strong></font></td>
+    <td width="117" align="center"><font size="4"><strong>Avg. Memory(Mb)</strong></font></td>
+    <td width="79" align="center"><font size="4"><strong>Avg. Time(s)</strong></font></td>
+    <td width="127" align="center"><font size="4"><strong>Avg. Memory(Mb)</strong></font></td>
+  </tr>
+  <tr>
+    <td><strong>1394             </strong></td>
+    <td><div align="center"><strong>10</strong></div></td>
+    <td height="19" align="center"><strong> 7.9k  </strong></td>
+    <td align="center"><strong>48.8</strong></td>
+    <td align="center"><strong>30.45</strong></td>
+    <td align="center"><strong>27.82</strong></td>
+    <td align="center"><strong>9.8</strong></td>
+  </tr>
+  <tr>
+    <td><strong>bluetooth          </strong></td>
+    <td><div align="center"><strong>37</strong></div></td>
+    <td height="19" align="center"><strong> 10.32k </strong></td>
+    <td align="center"><strong>67.83</strong></td>
+    <td align="center"><strong>34.38</strong></td>
+    <td align="center"><strong>28.11</strong></td>
+    <td align="center"><strong>10.43</strong></td>
+  </tr>
+  <tr>
+    <td><strong>SD           </strong></td>
+    <td><div align="center"><strong>14</strong></div></td>
+    <td height="19" align="center"><strong> 6.9k   </strong></td>
+    <td align="center"><strong>27.42</strong></td>
+    <td align="center"><strong>19.57</strong></td>
+    <td align="center"><strong>7.1</strong></td>
+    <td align="center"><strong>5.93</strong></td>
+  </tr>
+  <tr>
+    <td><strong>PLX9x5x            </strong></td>
+    <td><div align="center"><strong>16</strong></div></td>
+    <td height="19" align="center"><strong> 13.2k  </strong></td>
+    <td align="center"><strong>119.14</strong></td>
+    <td align="center"><strong>45.72</strong></td>
+    <td align="center"><strong>40.53</strong></td>
+    <td align="center"><strong>14.01</strong></td>
+  </tr>
+  <tr>
+    <td><strong>amcc5933       </strong></td>
+    <td><div align="center"><strong>14</strong></div></td>
+    <td height="19" align="center"><strong> 10.0k  </strong></td>
+    <td align="center"><strong>54.5</strong></td>
+    <td align="center"><strong>32.26</strong></td>
+    <td align="center"><strong>16.84</strong></td>
+    <td align="center"><strong>9.4</strong></td>
+  </tr>
+  <tr>
+    <td><strong>cancel              </strong></td>
+    <td><div align="center"><strong>69</strong></div></td>
+    <td height="19" align="center"><strong> 3.4k   </strong></td>
+    <td align="center"><strong>20.95</strong></td>
+    <td align="center"><strong>12.43</strong></td>
+    <td align="center"><strong>4.01</strong></td>
+    <td align="center"><strong>4.34</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Echo               </strong></td>
+    <td><div align="center"><strong>68</strong></div></td>
+    <td height="19" align="center"><strong> 5.4k   </strong></td>
+    <td align="center"><strong>28.34</strong></td>
+    <td align="center"><strong>19.1</strong></td>
+    <td align="center"><strong>7.46</strong></td>
+    <td align="center"><strong>5.66</strong></td>
+  </tr>
+  <tr>
+    <td><strong>event            </strong></td>
+    <td><div align="center"><strong>20</strong></div></td>
+    <td height="19" align="center"><strong> 4.8k   </strong></td>
+    <td align="center"><strong>32.04</strong></td>
+    <td align="center"><strong>18.24</strong></td>
+    <td align="center"><strong>7.22</strong></td>
+    <td align="center"><strong>5.35</strong></td>
+  </tr>
+  <tr>
+    <td><strong>pcidrv         </strong></td>
+    <td><div align="center"><strong>72</strong></div></td>
+    <td height="19" align="center"><strong> 29.1k  </strong></td>
+    <td align="center"><strong>422.58</strong></td>
+    <td align="center"><strong>115.56</strong></td>
+    <td align="center"><strong>181.52</strong></td>
+    <td align="center"><strong>36.58</strong></td>
+  </tr>
+  <tr>
+    <td><strong>perfcounters       </strong></td>
+    <td><div align="center"><strong>16</strong></div></td>
+    <td height="19" align="center"><strong> 2.2k   </strong></td>
+    <td align="center"><strong>11.84</strong></td>
+    <td align="center"><strong>8.58</strong></td>
+    <td align="center"><strong>2.57</strong></td>
+    <td align="center"><strong>2.82</strong></td>
+  </tr>
+  <tr>
+    <td><strong>portio           </strong></td>
+    <td><div align="center"><strong>26</strong></div></td>
+    <td height="19" align="center"><strong> 4.9k   </strong></td>
+    <td align="center"><strong>23.17</strong></td>
+    <td align="center"><strong>15.17</strong></td>
+    <td align="center"><strong>6</strong></td>
+    <td align="center"><strong>4.96</strong></td>
+  </tr>
+  <tr>
+    <td><strong>registry        </strong></td>
+    <td><div align="center"><strong>35</strong></div></td>
+    <td height="19" align="center"><strong> 11.4k  </strong></td>
+    <td align="center"><strong>150.85</strong></td>
+    <td align="center"><strong>46.36</strong></td>
+    <td align="center"><strong>56.83</strong></td>
+    <td align="center"><strong>14.91</strong></td>
+  </tr>
+  <tr>
+    <td><strong>toaster_wdm_bus      </strong></td>
+    <td><div align="center"><strong>43</strong></div></td>
+    <td height="19" align="center"><strong> 9.6k   </strong></td>
+    <td align="center"><strong>91.19</strong></td>
+    <td align="center"><strong>37.93</strong></td>
+    <td align="center"><strong>31.91</strong></td>
+    <td align="center"><strong>12.15</strong></td>
+  </tr>
+  <tr>
+    <td><strong>toaster_wdm_func     </strong></td>
+    <td><div align="center"><strong>183</strong></div></td>
+    <td height="19" align="center"><strong> 10.1k  </strong></td>
+    <td align="center"><strong>90.05</strong></td>
+    <td align="center"><strong>40.44</strong></td>
+    <td align="center"><strong>32.97</strong></td>
+    <td align="center"><strong>12.99</strong></td>
+  </tr>
+  <tr>
+    <td><strong>toaster_wdm_toastmon  </strong></td>
+    <td><div align="center"><strong>41</strong></div></td>
+    <td height="19" align="center"><strong> 4.5k   </strong></td>
+    <td align="center"><strong>32.15</strong></td>
+    <td align="center"><strong>17.58</strong></td>
+    <td align="center"><strong>8.24</strong></td>
+    <td align="center"><strong>5.7</strong></td>
+  </tr>
+  <tr>
+    <td><strong>toaster_wdm_filter  </strong></td>
+    <td><div align="center"><strong>231</strong></div></td>
+    <td height="19" align="center"><strong> 4.0k   </strong></td>
+    <td align="center"><strong>26.36</strong></td>
+    <td align="center"><strong>15.58</strong></td>
+    <td align="center"><strong>6.65</strong></td>
+    <td align="center"><strong>5.11</strong></td>
+  </tr>
+  <tr>
+    <td><strong>toaster_kmdf        </strong></td>
+    <td><div align="center"><strong>165</strong></div></td>
+    <td height="19" align="center"><strong> 5.0k   </strong></td>
+    <td align="center"><strong>19.45</strong></td>
+    <td align="center"><strong>15.13</strong></td>
+    <td align="center"><strong>5.19</strong></td>
+    <td align="center"><strong>4.89</strong></td>
+  </tr>
+  <tr>
+    <td><strong>tracing            </strong></td>
+    <td><div align="center"><strong>62</strong></div></td>
+    <td height="19" align="center"><strong> 2.8k   </strong></td>
+    <td align="center"><strong>15.9</strong></td>
+    <td align="center"><strong>10.54</strong></td>
+    <td align="center"><strong>3.64</strong></td>
+    <td align="center"><strong>3.54</strong></td>
+  </tr>
+  <tr>
+    <td><strong>firefly            </strong></td>
+    <td><div align="center"><strong>17 </strong></div></td>
+    <td height="19" align="center"><strong> 4.2k   </strong></td>
+    <td align="center"><strong>12.96</strong></td>
+    <td align="center"><strong>10.21</strong></td>
+    <td align="center"><strong>3.14</strong></td>
+    <td align="center"><strong>3.45</strong></td>
+  </tr>
+  <tr>
+    <td><strong>hidmapper            </strong></td>
+    <td><div align="center"><strong>29</strong></div></td>
+    <td height="19" align="center"><strong> 2.5k   </strong></td>
+    <td align="center"><strong>13.65</strong></td>
+    <td align="center"><strong>9.33</strong></td>
+    <td align="center"><strong>2.71</strong></td>
+    <td align="center"><strong>3.14</strong></td>
+  </tr>
+  <tr>
+    <td><strong>hidusbfx2         </strong></td>
+    <td><div align="center"><strong>17</strong></div></td>
+    <td height="19" align="center"><strong> 4.4k   </strong></td>
+    <td align="center"><strong>24.83</strong></td>
+    <td align="center"><strong>16.62</strong></td>
+    <td align="center"><strong>4.48</strong></td>
+    <td align="center"><strong>3.95</strong></td>
+  </tr>
+  <tr>
+    <td><strong>HBtnKey           </strong></td>
+    <td><div align="center"><strong>34 </strong></div></td>
+    <td height="19" align="center"><strong> 5.5k   </strong></td>
+    <td align="center"><strong>48.06</strong></td>
+    <td align="center"><strong>21.76</strong></td>
+    <td align="center"><strong>13.29</strong></td>
+    <td align="center"><strong>6.98</strong></td>
+  </tr>
+  <tr>
+    <td><strong>hiddigi               </strong></td>
+    <td><div align="center"><strong>65</strong></div></td>
+    <td height="19" align="center"><strong> 9.2k   </strong></td>
+    <td align="center"><strong>84</strong></td>
+    <td align="center"><strong>35.46</strong></td>
+    <td align="center"><strong>28.9</strong></td>
+    <td align="center"><strong>11.25</strong></td>
+  </tr>
+  <tr>
+    <td><strong>kbfiltr              </strong></td>
+    <td><div align="center"><strong>15</strong></div></td>
+    <td height="19" align="center"><strong> 6.5k   </strong></td>
+    <td align="center"><strong>25.28</strong></td>
+    <td align="center"><strong>19.3</strong></td>
+    <td align="center"><strong>6.86</strong></td>
+    <td align="center"><strong>6.2</strong></td>
+  </tr>
+  <tr>
+    <td><strong>moufiltr           </strong></td>
+    <td><div align="center"><strong>14</strong></div></td>
+    <td height="19" align="center"><strong> 5.0k   </strong></td>
+    <td align="center"><strong>13.04</strong></td>
+    <td align="center"><strong>11.79</strong></td>
+    <td align="center"><strong>3.15</strong></td>
+    <td align="center"><strong>3.88</strong></td>
+  </tr>
+  <tr>
+    <td><strong>vserial              </strong></td>
+    <td><div align="center"><strong>9</strong></div></td>
+    <td height="19" align="center"><strong> 4.2k   </strong></td>
+    <td align="center"><strong>17.33</strong></td>
+    <td align="center"><strong>14.77</strong></td>
+    <td align="center"><strong>4.65</strong></td>
+    <td align="center"><strong>4.81</strong></td>
+  </tr>
+  <tr>
+    <td><strong>smscir             </strong></td>
+    <td><div align="center"><strong>10</strong></div></td>
+    <td height="19" align="center"><strong> 14.8k  </strong></td>
+    <td align="center"><strong>293.78</strong></td>
+    <td align="center"><strong>57.25</strong></td>
+    <td align="center"><strong>117.33</strong></td>
+    <td align="center"><strong>18.5</strong></td>
+  </tr>
+  <tr>
+    <td><strong>network            </strong></td>
+    <td><div align="center"><strong>59</strong></div></td>
+    <td height="19" align="center"><strong> 43.8k  </strong></td>
+    <td align="center"><strong>1283.84</strong></td>
+    <td align="center"><strong>171.42</strong></td>
+    <td align="center"><strong>594.93</strong></td>
+    <td align="center"><strong>52.95</strong></td>
+  </tr>
+  <tr>
+    <td><strong>serial             </strong></td>
+    <td><div align="center"><strong>46</strong></div></td>
+    <td height="19" align="center"><strong> 16.1k  </strong></td>
+    <td align="center"><strong>174.61</strong></td>
+    <td align="center"><strong>63.55</strong></td>
+    <td align="center"><strong>69.19</strong></td>
+    <td align="center"><strong>20.56</strong></td>
+  </tr>
+  <tr>
+    <td><strong>storage           </strong></td>
+    <td><div align="center"><strong>84</strong></div></td>
+    <td height="19" align="center"><strong> 57.3k  </strong></td>
+    <td align="center"><strong>923.24</strong></td>
+    <td align="center"><strong>224.42</strong></td>
+    <td align="center"><strong>401.03</strong></td>
+    <td align="center"><strong>69.38</strong></td>
+  </tr>
+</table>
+<p align="center">	  <strong>Table 1. Model-Checking Drivers with PuMoC</strong></p>
+<p><strong><font color="#0000FF" size="4">3.   Model checking C and Java Programs.</font></strong></p>
+<p>We also were able to check several CTL properties of several C and Java programs. We 
+  checked the C source code of a bounded model checker (verds). We also checked 4 
+  real-world Java programs taken from JimpleToPDSolver, 4 real-world Java programs 
+  taken from a Java benchmark SciMark2 , and 7 real-world Java programs taken from 
+JBDD . The experimental results are summarized in Table 2.</p>
+<table border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000">
+  <col width="173">
+  <col width="66">
+  <col width="63">
+  <col width="85">
+  <col width="107">
+  <col width="71">
+  <col width="112">
+  <tr height="19">
+    <td height="19" colspan="2"><div align="center"><font size="4"><strong>Program</strong></font></div></td>
+    <td width="86" align="center"><font size="4"><strong>#LOC</strong></font></td>
+    <td width="106" align="center"><font size="4"><strong>Time(s) </strong></font></td>
+    <td width="146" align="right"><div align="center"><font size="4"><strong>Memory(MB)</strong></font></div></td>
+  </tr>
+  <tr height="19">
+    <td width="83" rowspan="30"><p><strong><font size="4">Java</font></strong></p>
+      <p><strong><font size="4">Program</font><br>
+      </strong></p></td>
+    <td width="143"><div align="left"><strong>Namer       </strong></div></td>
+    <td><div align="center"><strong>60</strong></div></td>
+    <td><div align="center"><strong>0.03</strong></div></td>
+    <td><div align="center"><strong>0.62</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>cmdline     </strong></div></td>
+    <td><div align="center"><strong>3k </strong> </div></td>
+    <td><div align="center"><strong>5.72</strong></div></td>
+    <td><div align="center"><strong>32.14</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>readCmdLine </strong></div></td>
+    <td><div align="center"><strong>78k</strong></div></td>
+    <td><div align="center"><strong>525.32</strong></div></td>
+    <td><div align="center"><strong>149.62</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>usage       </strong></div></td>
+    <td><div align="center"><strong>95k</strong></div></td>
+    <td><div align="center"><strong>3009.5</strong> </div></td>
+    <td><div align="center"><strong>581.28</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>FFT     </strong></div></td>
+    <td><div align="center"><strong>1k  </strong></div></td>
+    <td><div align="center"><strong>11.33</strong></div></td>
+    <td><div align="center"><strong>8.74</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>Bench   </strong></div></td>
+    <td><div align="center"><strong>3k   </strong></div></td>
+    <td><div align="center"><strong>13.69</strong></div></td>
+    <td><div align="center"><strong>21.76</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>HTTPPost</strong></div></td>
+    <td><div align="center"><strong>26k </strong></div></td>
+    <td><div align="center"><strong>17.95</strong></div></td>
+    <td><div align="center"><strong>100.28</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><div align="left"><strong>Applet  </strong></div></td>
+    <td><div align="center"><strong>159k </strong></div></td>
+    <td><div align="center"><strong>4148.21</strong></div></td>
+    <td><div align="center"><strong>35.35</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Equivalence    </strong></td>
+    <td><div align="center"><strong>335</strong> </div></td>
+    <td><div align="center"><strong>0.04</strong></div></td>
+    <td><div align="center"><strong>1.82</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Queens         </strong></td>
+    <td><div align="center"><strong>665</strong></div></td>
+    <td><div align="center"><strong>2.87</strong></div></td>
+    <td><div align="center"><strong>5.03</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Queens2        </strong></td>
+    <td><div align="center"><strong>885</strong></div></td>
+    <td><div align="center"><strong>2.33</strong></div></td>
+    <td><div align="center"><strong>9.01</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Knight         </strong></td>
+    <td><div align="center"><strong>1k    </strong></div></td>
+    <td><div align="center"><strong>0.38</strong></div></td>
+    <td><div align="center"><strong>9.4</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>DimacsSlover   </strong></td>
+    <td><div align="center"><strong>1k    </strong></div></td>
+    <td><div align="center"><strong>0.33</strong></div></td>
+    <td><div align="center"><strong>7.87</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>interface      </strong></td>
+    <td><div align="center"><strong>1k    </strong></div></td>
+    <td><div align="center"><strong>23.86</strong></div></td>
+    <td><div align="center"><strong>26.17</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>IQueens        </strong></td>
+    <td><div align="center"><strong>109k  </strong></div></td>
+    <td><div align="center"><strong>2440.32</strong></div></td>
+    <td><div align="center"><strong>411.67</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>jlink  </strong></td>
+    <td><div align="center"><strong>37k </strong></div></td>
+    <td><div align="center"><strong>2092.60</strong></div></td>
+    <td><div align="center"><strong>281.77</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>JUnitTestRunner</strong></td>
+    <td><div align="center"><strong>26k</strong></div></td>
+    <td><div align="center"><strong>32.24</strong></div></td>
+    <td><div align="center"><strong>141.46</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>DefanltDepDes</strong></td>
+    <td><div align="center"><strong>28k</strong></div></td>
+    <td><div align="center"><strong>1390.64</strong></div></td>
+    <td><div align="center"><strong>198.45</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>IBiblioHelper</strong></td>
+    <td><div align="center"><strong>89k</strong></div></td>
+    <td><div align="center"><strong>4648.64</strong></div></td>
+    <td><div align="center"><strong>348.58</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>EntryPoint</strong></td>
+    <td><div align="center"><strong>11k</strong></div></td>
+    <td><div align="center"><strong>20.14</strong></div></td>
+    <td><div align="center"><strong>66.39</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>ProcessDestroyer</strong></td>
+    <td><div align="center"><strong>11k</strong></div></td>
+    <td><div align="center"><strong>128.22</strong></div></td>
+    <td><div align="center"><strong>87.06</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>TestProcess</strong></td>
+    <td><div align="center"><strong>1k</strong></div></td>
+    <td><div align="center"><strong>0.19</strong></div></td>
+    <td><div align="center"><strong>5.89</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>IvyAuthenticator</strong></td>
+    <td><div align="center"><strong>3k</strong></div></td>
+    <td><div align="center"><strong>40.81</strong></div></td>
+    <td><div align="center"><strong>27.91</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>JunitTestRunnerTest</strong></td>
+    <td><div align="center"><strong>28k</strong></div></td>
+    <td><div align="center"><strong>1427.90</strong></div></td>
+    <td><div align="center"><strong>179.40</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Diagnostics</strong></td>
+    <td><div align="center"><strong>59k</strong></div></td>
+    <td><div align="center"><strong>1353.17</strong></div></td>
+    <td><div align="center"><strong>238.09</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>DirectoryScanner</strong></td>
+    <td><div align="center"><strong>17k</strong></div></td>
+    <td><div align="center"><strong>626.41</strong></div></td>
+    <td><div align="center"><strong>113.68</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>IntrospectionHelper</strong></td>
+    <td><div align="center"><strong>5k</strong></div></td>
+    <td><div align="center"><strong>3.92</strong></div></td>
+    <td><div align="center"><strong>36.03</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>Launcher</strong></td>
+    <td><div align="center"><strong>18k</strong></div></td>
+    <td><div align="center"><strong>1341.98</strong></div></td>
+    <td><div align="center"><strong>185.55</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>KeySubst</strong></td>
+    <td><div align="center"><strong>3k</strong></div></td>
+    <td><div align="center"><strong>7.40</strong></div></td>
+    <td><div align="center"><strong>15.60</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>IPlanetEjbc</strong></td>
+    <td><div align="center"><strong>22k</strong></div></td>
+    <td><div align="center"><strong>703.68</strong></div></td>
+    <td><div align="center"><strong>175.50</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td width="83" rowspan="8"><strong>C Program </strong></td>
+    <td><strong>progreconstruct</strong></td>
+    <td><div align="center"><strong>4k</strong></div></td>
+    <td><div align="center"><strong>0.01</strong></div></td>
+    <td><div align="center"><strong>0.07</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>cs2bool</strong></td>
+    <td><div align="center"><strong>4k</strong></div></td>
+    <td><div align="center"><strong>0.01</strong></div></td>
+    <td><div align="center"><strong>0.07</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>specs</strong></td>
+    <td><div align="center"><strong>4k</strong></div></td>
+    <td><div align="center"><strong>0.01</strong></div></td>
+    <td><div align="center"><strong>0.08</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>cnfsat</strong></td>
+    <td><div align="center"><strong>4k</strong></div></td>
+    <td><div align="center"><strong>0.01</strong></div></td>
+    <td><div align="center"><strong>0.07</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>qmdwritecnf</strong></td>
+    <td><div align="center"><strong>8k</strong></div></td>
+    <td><div align="center"><strong>0.01</strong></div></td>
+    <td><div align="center"><strong>0.11</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>treedopost</strong></td>
+    <td><div align="center"><strong>8k</strong></div></td>
+    <td><div align="center"><strong>128.22</strong></div></td>
+    <td><div align="center"><strong>87.06</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>CNFspec2model</strong></td>
+    <td><div align="center"><strong>8k</strong></div></td>
+    <td><div align="center"><strong>0.19</strong></div></td>
+    <td><div align="center"><strong>5.89</strong></div></td>
+  </tr>
+  <tr height="19">
+    <td><strong>qmd2model</strong></td>
+    <td><div align="center"><strong>8k</strong></div></td>
+    <td><div align="center"><strong>40.81</strong></div></td>
+    <td><div align="center"><strong>27.91</strong></div></td>
+  </tr>
+</table>
+<p align="center"><strong>Table 2. Checking C and Java programs with PuMoC</strong></p>
+<p><strong><font color="#0000FF" size="4">4.  Data flow analysis of Java Programs.</font></strong></p>
+<p>PuMoC can also perform Data Flow Analysis of Java programs. Given a Java program, 
+  JimpletoPDSolver translates it into a PDS with def/use informations, where the atomic 
+  proposition de f (x) (resp. use(x)) of a variable x holds at a control point if its corresponding 
+  statement is an assignment (resp. a use) of the variable x. Using these informations, 
+  we can write CTL formulas that can solve some data flow analysis problems 
+  like reaching definitions, live variables, very busy expressions, and available expressions. 
+  For example the formula   E[!de f (x)U use(x)] checks whether the variable x is used 
+  ithout being defined. This allows to do live variables analysis. Similarly, the formula 
+ AG(de f (x) =&gt; EF use(x)) states that whenever the variable x is defined, it should 
+be used in some path. Checking such property allows to optimize programs. Indeed, the 
+variable x does not need to be defined if x will not is used. Table 3 summarizes the results 
+of our experiments. We made a comparision with PDSolver, a mu-calculus modelchecker 
+for PDSs and Java programs (CTL formulas can be translated to mu-calculus). Our 
+tool is more efficient. </p>
+<table width="819" border="1" align="center" bordercolor="#000000">
+  <tr>
+    <td width="161" rowspan="3"><div align="left"><strong><font size="4">Example</font></strong></div></td>
+    <td width="66" rowspan="3"><strong><font size="4">#LOC</font></strong></td>
+    <td width="339"><div align="center"><strong>nu Y. ([]Y &amp; (!def(x) | mu X. (&lt;&gt;X | use(x))))</strong></div></td>
+    <td colspan="2"><div align="center"><strong>AG(def(x)-&gt;EF use(x)) </strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong><font size="4">PDSolver</font></strong></div></td>
+    <td colspan="2"><div align="center"><strong><font size="4">PuMoC</font></strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong><font size="4">Time(s) </font></strong></div></td>
+    <td width="116" align="center" bordercolor="#000000"><strong><font size="4">Time(s)</font></strong></td>
+    <td width="103" align="center" bordercolor="#000000"><strong><font size="4">Memory(M)</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">RegisterTestAction </font></td>
+    <td align="center" bordercolor="#000000"><font size="4">3k</font></td>
+    <td align="center"><strong><font size="4">5.14</font></strong></td>
+    <td align="right"><div align="center"><strong>0.71</strong></div></td>
+    <td align="center"><strong><font size="4">5.23</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ELFDumpAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">6k</font></td>
+    <td align="center"><strong><font size="4">7.63</font></strong></td>
+    <td align="right"><div align="center"><strong>1.43</strong></div></td>
+    <td align="center"><strong><font size="4">9.19</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ExampleFO2PDF</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">17k</font></td>
+    <td align="center"><strong><font size="4">108.4</font></strong></td>
+    <td align="right"><div align="center"><strong>10.33</strong></div></td>
+    <td align="center"><strong><font size="4">24.12</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ExampleDOM2PDF</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">18k</font></td>
+    <td align="center"><strong><font size="4">54.53</font></strong></td>
+    <td align="right"><div align="center"><strong>11.92</strong></div></td>
+    <td align="center"><strong><font size="4">29.21</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">DisassembleAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">54k</font></td>
+    <td align="center"><strong><font size="4">458.77</font></strong></td>
+    <td align="right"><div align="center"><strong>134.18</strong></div></td>
+    <td align="center"><strong><font size="4">87.09</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">CFGAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">90k</font></td>
+    <td align="center"><strong><font size="4">1129.99</font></strong></td>
+    <td align="right"><div align="center"><strong>544.45</strong></div></td>
+    <td align="center"><strong><font size="4">143.39</font></strong></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="819" border="1" align="center" bordercolor="#000000">
+  <tr>
+    <td width="161" rowspan="3"><div align="left"><strong><font size="4">Example</font></strong></div></td>
+    <td width="66" rowspan="3"><strong><font size="4">#LOC</font></strong></td>
+    <td width="339"><div align="center"><strong>nu Y. ([]Y &amp; (!def(x) | mu X. (&lt;&gt;X | use(x))))</strong></div></td>
+    <td colspan="2"><div align="center"><strong>AG(def(x)-&gt;EF use(x)) </strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong><font size="4">PDSolver</font></strong></div></td>
+    <td colspan="2"><div align="center"><strong><font size="4">PuMoC</font></strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong><font size="4">Time(s) </font></strong></div></td>
+    <td width="116" align="center" bordercolor="#000000"><strong><font size="4">Time(s)</font></strong></td>
+    <td width="103" align="center" bordercolor="#000000"><strong><font size="4">Memory(M)</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">RegisterTestAction </font></td>
+    <td align="center" bordercolor="#000000"><font size="4">3k</font></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">5.72</font></strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>1.04</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">11.71</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ELFDumpAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">6k</font></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">76.59</font></strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>12.10</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">28.83</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ExampleFO2PDF</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">17k</font></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">45.16</font></strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>12.36</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">61.11</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">ExampleDOM2PDF</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">18k</font></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">62.77</font></strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>13.96</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">66.17</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">DisassembleAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">54k</font></td>
+    <td align="center" bordercolor="#000000"><strong>&gt;2000</strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>138.19</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">150.48</font></strong></td>
+  </tr>
+  <tr>
+    <td bordercolor="#000000"><font size="4">CFGAction</font></td>
+    <td align="center" bordercolor="#000000"><font size="4">90k</font></td>
+    <td align="center" bordercolor="#000000"><strong>&gt;2000</strong></td>
+    <td align="right" bordercolor="#000000"><div align="center"><strong>308.96</strong></div></td>
+    <td align="center" bordercolor="#000000"><strong><font size="4">317.49</font></strong></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center"><strong>Table 3. Data flow analysis of Java Programs with PuMoC</strong></p>
+<hr noshade>
+<p align="center">Copyright © 2011-2012 LIAFA, University of Paris Diderot and CNRS.</p>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Mario Valencia-Pabon's Home Page</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Mario Valencia-Pabon's Home Page">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=uk">LIPN</a>:  <a href="/CALIN/?lang=uk">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Mario Valencia-Pabon's Home Page</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 960px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="valencia-2015.JPG" alt="MarioValencia-Pabon"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Mario Valencia-Pabon<br>
+Maître de Conférences - HDR<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Office:  A 112<br>
+Phone:   +33 1 49 40 35 73<br>
+Fax: &nbsp;&nbsp;&nbsp;   +33 1 48 26 07 12<br>
+E-mail:   valencia<i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<P>
+<H2>Research interest</H2>
+<P>
+<UL>
+<LI>Graph Theory, Algorithmic and Algebraic Graph Theory, Approximation Algorithms, Combinatorial Optimization, Computational Complexity and Combinatorics.
+</UL>
+
+<!-- <P>
+<H2><A  HREF="teaching.html">Some teaching stuff</A></H2>
+<P>-->
+
+<P>
+<H2><A  HREF="publis.html">List of publications</A> (with online papers), <A HREF = "http://www.informatik.uni-trier.de/~ley/pers/hd/v/Valencia=Pabon:Mario">DBPL</A></H2>
+<P>
+
+<!-- <P>
+<H2><A HREF="cv11in.pdf">CV</A></H2>
+<P>-->
+
+<P>
+<H2>NEWS !</H2>
+<P>
+<UL>
+<!--<LI> Since September 1th 2013 till August 31th 2015, I'm in "D&eacute;l&eacute;gation" at the <A HREF = "http://www.inria.fr/centre/nancy">INRIA Nancy - Grand Est</A> in the <A HREF = "http://orpailleur.loria.fr/index.php/Main_Page">Orpailleur team.</A>-->
+
+<LI><A HREF="http://www.lagos2019.dcc.ufmg.br/">LAGOS'19 - X Latin and American Algorithms, Graphs and Optimization Symposium.</A> Belo Horizonte, Brazil, June 2nd - 7th, 2019.
+
+<LI><A HREF="https://impa.br/en_US/eventos-do-impa/eventos-2019/1st-joint-meeting-brazil-france-in-mathematics/">1st Joint Meeting Brazil-France in Mathematics.</A> IMPA, Rio de Janeiro, Brazil, July 15 - 19, 2019. <A HREF="https://impa.br/en_US/eventos-do-impa/eventos-2019/1st-joint-meeting-brazil-france-in-mathematics/special-sessions/">Special Sessions</A>: Session 12 <A HREF = "https://impa.br/wp-content/uploads/2018/12/BR-FR_GraphTheory.pdf">Graph Theory</A>.
+
+<LI><A HREF="http://eventos.cmm.uchile.cl/flacam2019/">French Latin-American Conference on New Trends in Applied Mathematics.</A> On the occassion of the 80th anniversary of CNRS. University of Chile, Chile, November 5 - 8, 2019.
+</UL>
+
+<P>
+<H2><A  HREF="pastevents.html">Past events</A></H2>
+<P>
+
+
+<!--<P>
+<H2>Past Events</H2>
+<P>
+<UL>
+
+<LI><A HREF="http://www.lia.ufc.br/lagos2015/">LAGOS'15 - VIII Latin-American Algorithms, Graphs and Optimization Symposium.</A> Beberibe, Cear&aacute; - Brazil, May 11-15, 2015.
+
+<LI><A HREF="http://xamanek.izt.uam.mx/LAGOS2013//">LAGOS'13 - VII Latin-American Algorithms, Graphs and Optimization Symposium.</A> Playa del Carmen - Mexico, April 22-26, 2013.
+
+<LI><A HREF="http://www-2.dc.uba.ar/lagos2011/">LAGOS'11 - VI Latin-American Algorithms, Graphs and Optimization Symposium.</A> Bariloche - Argentina, March 28 - April 1, 2011.
+
+<LI><A HREF="http://cliques.dcc.ufrj.br/">LAWCliques'10 - Latin-American Workshop on Cliques in Graphs.</A> Itaipava, Rio de Janeiro - Brazil, November 16 - 19, 2010.
+
+<LI><A HREF="http://www.dii.uchile.cl/~lagos07/">LAGOS'07 - IV Latin-American Algorithms, Graphs and Optimization Symposium.</A> Puerto Varas - Chile, November 25 - 29, 2007.
+</UL>-->
+
+
+</BODY>
+</HTML>
+

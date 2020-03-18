@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>The prefix notion in Kolmogorov complexity and computational models</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="The prefix notion in Kolmogorov complexity and computational models"/>
+            <meta property="og:url" content="./these.html"/>
+            <meta property="og:description" content="Kolmogorov complexity theory gives a definition of randomness for words on a finite alphabet. The notions involved led to the description of a subclass of computable machines: the prefix computable machines, whose domain is a prefix code (no word in the domain is prefix of another one).Beyond the matter of defining randomness for infinite words, this subclass has remarkable properties regarding computability theory. Three different definitions are given and compared. The case of comma free codes is also examined, but it doesn't yield anymore an additively optimal machine.The notion of prefix also interacts with the computational models. An examination of machines with no blank characters or of finite models with an infinite calculus space (such as the Turing machine, which uses an infinite tape) reveals a strong influence of the prefix notion on computational processes."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./../theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./../theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./..
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Who?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/~dubacq">Français</a></li>
+            <li class="active"><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./these.html"
+         rel="bookmark"
+         title="Permalink to The prefix notion in Kolmogorov complexity and computational models">
+        The prefix notion in Kolmogorov complexity and computational models
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>lun. 07 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/kolmogorov-complexity.html">Kolmogorov complexity</a>
+        /
+	<a href="./tag/computation-models.html">computation models</a>
+        /
+	<a href="./tag/prefix-codes.html">prefix codes</a>
+        /
+	<a href="./tag/randomness.html">randomness</a>
+        /
+	<a href="./tag/cellular-automata.html">cellular automata</a>
+        /
+	<a href="./tag/phd.html">PhD</a>
+<span class="label label-default">Other languages</span>
+	<a href="./../these.html">Français</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>My PhD (French <em>thèse de doctorat</em>) was received on the 9<sup>th</sup> of October, 2000, at École normale supérieure de Lyon. The topic of the PhD was the <em><strong>notion of prefix in Kolmogorov complexity and computational models</strong></em>, under the direction of Jacques Mazoyer and Bruno Durand.</p>
+<p>Kolmogorov complexity theory gives a definition of randomness for
+words on a finite alphabet. The notions involved led to the
+description of a subclass of computable machines: the prefix
+computable machines, whose domain is a prefix code (no word in the
+domain is prefix of another one).</p>
+<p>Beyond the matter of defining randomness for infinite words,
+this subclass has remarkable properties regarding computability
+theory. Three different definitions are given and compared. The case
+of comma free codes is also examined, but it doesn''t yield anymore
+an additively optimal machine.</p>
+<p>The notion of prefix also interacts with the computational
+models. An examination of machines with no blank characters or of
+finite models with an infinite calculus space (such as the Turing
+machine, which uses an infinite tape) reveals a strong influence of
+the prefix notion on computational processes.</p>
+<h2>A few words on my thesis</h2>
+<p>I passed the PhD examination successfully (this making me Dr Dubacq) in presence of my examiners: Serge Grigorieff (president of the comittee and reviewer of the report), Jean-Yves Marion (in stead of Adam Cichon, also reviewer), both of my PhD advisors, François Denis and Véronique Terrier.</p>
+<p>The report expores first  <a href="./../dubacq98.html">the
+basics</a> of Kolmogorov complexity, the goes on defining several kinds of prefix (Turing) machines. The idea is to capture what is the computation when some constraints are laid on the input tapes, such as all the words belonging to a prefix code. One can distinguish the <strong>empty</strong> machines that reject anything not in the code, the <strong>full</strong> machines that accept anything that is a continuation of (begins with) a word of the code (and gives it the same value as if it was the word of the code). One can easily define <strong>mixed</strong> machines, that do either accept with the same value or reject continuations of words in the code, and double-prefix machines (where double-prefix codes are used, continuations on both sides).</p>
+<p>The main result is that (most of) all computability theory theorems hold for these subclasses of machines, even an internal version of the <em>s-m-n</em> theorem (except for the double prefix machines). Moreover, those classes are shown to be distinct (I construct an example of an empty machine whose frontier can not be the frontier of a full machine, for some simple definition of frontier).</p>
+<p>The last part uses these considerations to describe the computation as something that happens in an infinitely large space, not an arbitrary large one. This modelisation fits quite well to three parts, a computing engine that acts on an infinite medium and a couple of encoding/decoding functions that transport the inputs (resp. outputs) from the world of finite words to the infinite medium (resp. the converse). Some properties of this modelisation are explored, especially with respect to what can be inferred from the encoding function (it can encode oracles in the infinite part of the medium).</p>
+<p>This last part was one of the driving force between this PhD, especially with respect to the difference between cellular automata and Turing machines. I had spotted that cellular automata could be (somehow) more powerful than Turing machines, given the right initial condition, and this always bothered me. I am a bit more clear about that now.</p>
+<h2>The documents</h2>
+<ul>
+<li><a href="./../pdf/publications/these.pdf">The PhD</a></li>
+<li><a href="./../pdf/publications/soutenance_these.pdf">The slides</a></li>
+</ul>
+<h2>Citing this publication</h2>
+<div class="highlight"><pre>@PhdThesis{dubacq00,
+  author =   {Jean-Christophe Dubacq},
+  title =    {Notion de pr{\&#39;e}fixe dans la complexit{\&#39;e} de Kolmogorov et les mod\`{e}les de calcul},
+  school =   {\&#39;Ecole normale sup\&#39;erieure de Lyon},
+  year =     {2000},
+  type =     {Th\`ese de doctorat},
+  month =    oct
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./../theme/js/respond.min.js"></script>
+    <script src="./../theme/js/local.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+# Un fichier 'Makefile' est un ensemble de cibles
+# Pour chque cible, il faut donner les regles (commande(s)) de generation de la cible
+# Pour chque cible, on indique ses dependances fichiers sources ou autres cibles qui, si elles ont ete mises a jour, necessitent de regenerer la cible)
+
+# ____________________________________________________
+#
+# ____ Elements de syntaxe :
+#
+# Marque de commentaires : caractere # precedant la ligne a commenter
+#
+# Macros :
+# 	definition :		MACRO = valeur
+# 	utilisation :		$(MACRO)
+#
+# Cibles :
+#
+# cible: dependances			#liste des dependances separees par un caractere d'espacement
+#	regle1 de generation		#/!\ chaque commande necessite 1 passage a la ligne suivi d'une tabulation /!\
+#	regle2 de generation
+#	...
+#
+# ____ Variables generiques :
+#
+# $@		:	cible courante
+# $<		:	premiere dependance de la cible courante
+# $^		:	toutes les dependances de la cible courante
+#
+# ____________________________________________________
+
+# ____ general
+# macros : variable CFLAGS pour les options de compilation
+CFLAGS = -Wall	#options de compilation
+
+# regles generiques : 1 regle pour la generation des objets (.o) a partir des sources (.c)
+.SUFFIXES: .c
+.c.o:
+	gcc $(CFLAGS) -c  $<
+
+# ____ liste des executables
+
+tests: bateau_type_test.exe placement_test.exe flotte_test.exe case_grille_test.exe grille_test.exe joueur_test.exe client_serveur_test.exe jeu_main.exe
+
+# ____ generation des executables
+bateau_type_test.exe: bateau_type.o bateau_type_test.o
+	gcc $^ -o $@
+
+placement_test.exe: placement.o placement_test.o
+	gcc $^ -o $@
+
+flotte_test.exe: bateau_type.o placement.o flotte.o flotte_test.o
+	gcc $^ -o $@
+
+case_grille_test.exe: bateau_type.o case_grille.o case_grille_test.o
+	gcc $^ -o $@
+
+grille_test.exe: bateau_type.o case_grille.o grille.o grille_test.o
+	gcc $^ -o $@
+
+joueur_test.exe: bateau_type.o placement.o flotte.o case_grille.o grille.o joueur.o joueur_test.o
+	gcc $^ -o $@
+
+client_serveur_test.exe: client_serveur.o client_serveur_test.o
+	gcc $^ -o $@
+
+jeu_main.exe: bateau_type.o placement.o flotte.o case_grille.o grille.o joueur.o client_serveur.o jeu.o jeu_main.o
+	gcc $^ -o $@
+
+# ____ dependances pour la mise a jour des objets
+bateau_type.o: bateau_type.c bateau_type.h global.h
+placement.o: placement.c placement.h global.h
+flotte.o: flotte.c flotte.h bateau_type.h placement.h global.h
+case_grille.o: case_grille.c case_grille.h bateau_type.h global.h
+grille.o: grille.c grille.h case_grille.h placement.h bateau_type.h global.h
+joueur.o: joueur.c joueur.h bateau_type.h placement.h flotte.h case_grille.h grille.h global.h
+client_serveur.o: client_serveur.c client_serveur.h global.h
+jeu.o: jeu.c jeu.h client_serveur.h joueur.h bateau_type.h placement.h flotte.h case_grille.h grille.h global.h
+
+bateau_type_test.o: bateau_type_test.c bateau_type.h
+placement_test.o: placement_test.c placement.h
+flotte_test.o: flotte_test.c flotte.h bateau_type.h placement.h
+case_grille_test.o: case_grille_test.c case_grille.h bateau_type.h
+grille_test.o: grille_test.c grille.h case_grille.h bateau_type.h placement.h
+joueur_test.o: joueur_test.c joueur.h bateau_type.h placement.h flotte.h case_grille.h grille.h
+client_serveur_test.o: client_serveur_test.c client_serveur.h
+jeu_main.o: jeu_main.c jeu.h client_serveur.h joueur.h bateau_type.h placement.h flotte.h case_grille.h grille.h
+
+# ____ cibles speciales : nettoyage
+clean:
+	rm *~ *.o *.exe
+

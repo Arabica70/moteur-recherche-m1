@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Introduction à la théorie algorithmique de l''information</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Introduction à la théorie algorithmique de l''information"/>
+            <meta property="og:url" content="./dubacq98.html"/>
+            <meta property="og:description" content="Nous expliquons les bases de la théorie de la complexité de Kolmogorov ou théorie algorithmique de l'information. On analyse en particulier les différences et les ressemblances entre la complexité de Kolmogorov et sa variante dite complexité préfixe. Ensuite, nous introduisons une définition d'un mot aléatoire (finie ou infinie), celle de Per Martin-Löf et montrons qu'elle est équivalente à la notion d'incompressibilité définie via la complexité de Kolmogorov."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dubacq98.html"
+         rel="bookmark"
+         title="Permalink to Introduction à la théorie algorithmique de l''information">
+        Introduction à la théorie algorithmique de l''information
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>dim. 06 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/complexite-de-kolmogorov.html">Complexité de Kolmogorov</a>
+        /
+	<a href="./tag/modele-de-calcul.html">modèle de calcul</a>
+        /
+	<a href="./tag/codes-prefixes.html">codes préfixes</a>
+        /
+	<a href="./tag/aleatoire.html">aléatoire</a>
+        /
+	<a href="./tag/rapport.html">rapport</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/dubacq98.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Nous expliquons les bases de la théorie de la <em>complexité de Kolmogorov</em>
+ou <em>théorie algorithmique de l'information</em>. On analyse en particulier
+les différences et les ressemblances entre la complexité de Kolmogorov
+et sa variante dite complexité préfixe. Ensuite, nous introduisons une
+définition d'un mot aléatoire (finie ou infinie), celle de
+Per&nbsp;Martin-Löf et montrons qu'elle est équivalente à la notion
+d'incompressibilité définie via la complexité de Kolmogorov.</p>
+<h2>Le contenu de ce rapport de recherche</h2>
+<p>Ce rapport de recherche est en fait la première partie de ma thèse —
+écrit quelques mois avant que je ne sois appelé de façon irrévocable
+sous les drapeaux, ce qui a un peu cassé le rythme —, et a été écrit
+afin de fixer les bases de la complexité de Kolmogorov. Il a également
+servi de support à un cours en création à l'École normale supérieure de
+Lyon. Il a été recompilé pour fournir un PDF qui s'imprime et se lit
+correctement (des différences de mise en page existent donc avec
+<a href="http://www.ens-lyon.fr/LIP/web/index.php?option=com_content&amp;amp;task=view&amp;amp;id=52&amp;amp;Itemid=50">l'original</a>).</p>
+<p>La <a href="http://fr.wikipedia.org/wiki/Complexit%C3%A9_de_Kolmogorov">complexité de
+Kolmogorov</a>
+est une idée importante introduite par <a href="http://fr.wikipedia.org/wiki/Andre%C3%AF_Kolmogorov">Andreï
+Kolmogorov</a> qui
+essaye de formaliser l'idée qui est derrière la «&nbsp;complexité
+intrinsèque d'une chaîne de caractères&nbsp;». Il paraît naturel qu'une
+répétition de 100 fois la lettre A est <em>plus simple</em> qu'une suite de 100
+lettres plus ou moins au hasard. Certains essais ont été fait dès le
+début du XX<sup>e</sup> siècle pour définir cette notion, mais aucune
+(jusqu'à Kolmogorov) n'a résisté de façon suffisamment solides aux
+transformations diverses qu'on s'attend à pouvoir faire dans le cadre
+d'une telle théorie.</p>
+<p>La définition de base est qu'étant donné deux mots <em>x</em> et <em>y</em> et une
+machine de Turing <span class="math">\(\psi\)</span>, la complexité conditionnelle de <em>x</em> sachant
+<em>y</em> est définie par <span class="math">\(\mathbf{KS}_\psi(x|y)=\min\{l(p),\psi\langle
+p,y\rangle=x\}\)</span>. Le plus important théorème est celui de
+Solomonoff-Kolmogorov&nbsp;:</p>
+<blockquote>
+<p>Une machine additivement optimale <span class="math">\(\psi\)</span> est une machine telle que la
+complexité de n'importe quel objet avec cette machine est aussi bonne
+que la complexité avec n'importe quelle autre machine, à une constante
+additive près :
+<span class="math">\(\forall\psi'\in C,\exists c_{{\psi'}},\forall x,y,\mathbf{KS}_\psi(x|y)\leqslant\mathbf{KS}_{{\psi'}}(x|y)+c_{{\psi'}}\)</span>.
+Dans tout système acceptable de programmation, il existe une telle
+machine <span class="math">\(\psi\)</span>.</p>
+</blockquote>
+<p>On retiendra que la complexité de Kolmogorov définit assez bien l'idée
+d'aléatoire, puisqu'il peut être démontré qu'un chaîne <em>c-</em>aléatoire is
+équivalente à être une chaîne <em>c-</em>compressible (<em>c-</em>compressible
+signifie que la complexité de Kolmogorov est plus petite que la longueur
+d'origine d'au moins <em>c</em>).</p>
+<p>Le second théorème très important est que <span class="math">\(\mathbf{KS}_{\psi}(x|y)\)</span> est
+une fonction non-calculable, ce qui signifie qu'il n'est pas possible
+d'avoir un programme (au sens de Turing) de compression sans perte
+parfait. Pour être complet, je me dois de mentionner que Gregory Chaitin
+(aux États-Unis) a eu les mêmes idées à peu près au même moment (et je
+<em>sais</em>, par expérience personnelle, que les deux écoles de pensées se
+sont affrontées souterrainement pendant des décennies).</p>
+<p>Comme vous pouvez le déduire de ce résumé très rapide, toutes ces
+notions doivent être parfaitement définies, et je donne des preuves
+simples des bases de la théorie de l'information algorithmique.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/rrlip9805.pdf">Rapport de recherche du LIP 98-05</a></li>
+<li><a href="http://www.ens-lyon.fr/LIP/web/index.php?option=com_content&amp;amp;task=view&amp;amp;id=52&amp;amp;Itemid=50">Le document original</a></li>
+</ul>
+<h2>Citer ce document</h2>
+<div class="highlight"><pre>@TechReport{dubacq98,
+  author =   {Jean-Christophe Dubacq},
+  title =    {Introduction \`{a} la th{\&#39;e}orie algorithmique de l&#39;information},
+  institution =  {\&#39;Ecole normale sup\&#39;erieure de {L}yon},
+  year =     {1998},
+  type =     {Rapport de recherche / Research Report},
+  number =   {05},
+  month =    may
+}
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

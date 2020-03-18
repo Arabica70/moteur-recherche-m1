@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Christophe Rodrigues</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Christophe Rodrigues">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/A3/?lang=fr">A3</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Christophe Rodrigues</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 960px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="christophe.jpg" alt="Christophe Rodrigues"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Christophe Rodrigues<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   B305<br>
+Tél :    +33 1 49 40 35 78<br>
+Fax :   +33 1 48 26 07 12<br>
+Courriel :   christophe.rodrigues<i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<P>
+<h2>Ma formation</h2>
+<P>
+
+J'ai effectué ma thèse au sein de l'équipe <a HREF="/A3/">A3</a> du <A HREF="/">LIPN</A> ;
+mon sujet de thèse porte sur l'<a href="these_christophe_rodrigues.pdf">apprentissage incrémental de modèles d'action relationnels</a>, sous la direction de <a href="/~rouveirol">Céline Rouveirol</a> et <a href="/~gerard">Pierre Gérard</a>.
+
+<P>
+<ul>
+</ul>
+
+
+<hr>
+<p>
+<h2>Articles</h2>
+<p>
+
+
+<UL> 
+
+<LI> Rodrigues, C., Soldano, H., Bourgne, G. and Rouveirol, C. (2014) <a href="Rodrigues_ECAI2014.pdf">Multi-agent learning of relational action models</a>. In Proceedings of the 21th European Conference on Artificial Intelligence (ECAI 2014)
+<LI> Rodrigues, C., Soldano, H., Bourgne, G. and Rouveirol, C. (2014) <a href="Rodrigues_AAMAS2014">A Consistency Based Approach of Action Model Learning in a Community of Agents</a>. In Proceedings of the 13th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2014)
+<LI> Rodrigues, C., Gérard, P., Rouveirol, C. and Soldano, H. (2012) <a href="Rodrigues_ilp2011.pdf">Active learning of relational action models</a>. In International Conference on Inductive Logic Programming (ILP 2011).
+<LI> Chebil, I., Elati, M., Rodrigues, C., Nicolle, R. and  Rouveirol, C. (2012) Licorn* : construction de réseaux de régulation chez l'homme. In Conférence francophone sur l'Apprentissage automatique (CAp'2012).
+<LI> Rodrigues, C., Gérard, P., Rouveirol, C. and Soldano, H. (2011) Relational action model learning and planning integration. In Actes de la Conférence Francophone d'Apprentissage (CAp 2011), pages 361-376, Chambéry, France, may 2011. Éditions Publibook, Presses Universitaires des Antilles et de la Guyane (PUAG). 7e Plateforme AFIA.
+<LI>
+Bossard, A. and Rodrigues, C. (2011) <a href="bossard_rodrigues_cima_livre_springer.pdf">Combining a Multi-document Summarization System -- CBSEAS -- with a Genetic Algorithm</a>. Smart Innovation, Systems and Technologies vol. 8 - Springer - isbn 978-3-642-19617-1
+<LI> Rodrigues, C., Gérard, P., Rouveirol, C. and Soldano, H. (2010) <A HREF="icmla2010PP.pdf">Incremental learning of relational action rules.</A> International Conference on Machine Learning and Applications (ICMLA-10), Draghici,S. and T. Khoshgoftaar and V. Palade and W. Pedrycz and X. Zhu (Ed), 12-14 Dec, Washington DC, USA, pp 451-458, IEEE Computer Society.
+<LI> Bossard, A. and Rodrigues, C. (2010) Combining a Multi-document Summarization System with a Genetic Algorithm. CIMA'10
+<LI> Rodrigues, C., Gérard, P. and Rouveirol, C. (2010) <A HREF="Rodrigues_ilp2010.pdf">Incremental learning of relational action models in noisy environments.</A> In International Conference on Inductive Logic Programming (ILP 2010)
+<LI> Rodrigues, C., Gérard, P. and Rouveirol, C. (2010) Incremental learning of relational action models in noisy environments. 5èmes Journées Francophones de
+Planification, Décision et Apprentissage
+pour la conduite de systèmes
+Fort Griffon, Besançon, 1er et 2 juin 2010 (JFPDA 2010)
+<LI> Rodrigues, C., Gérard, P. and Rouveirol, C. (2010) Apprentissage incrémental de règles d'actions relationnelles. RFIA'10
+<LI> Rodrigues, C., Gérard, P. and Rouveirol, C. (2008) On and Off-Policy Relational Reinforcement Learning. Late-breaking papers, ILP'08.
+<LI> Rodrigues, C., Gérard, P. and Rouveirol, C. (2008) Relational TD Reinforcement Learning. EWRL'08.  
+
+<!--
+<LI> mon mémoire de Master 2 :  <A HREF="/~tafat/memoire_tafat.pdf">Combinatoire du modèle de Schelling</a>  [.pdf]
+<LI> les <A HREF="/~tafat/slide_tafat.pdf"> transparents de ma soutenance</a> [.pdf]
+<LI> les programmes / figures / résultats de mes <A HREF="/~tafat/Schelling/">simulations</A>
+-->
+</UL>
+
+<!--
+<HR>
+<p>
+<h2>Conférences</h2>
+<p>
+-->
+
+<UL>
+<!--
+<LI> Cours d'analyse combinatoire. Voir<A HREF="http://ipht.cea.fr/statcomb2009/lectures.html#flajolet"> ici</a> (11,18,25 septembre et 2octobre 2009)(IHP, Paris).
+<LI><A HREF="http://www.gdr-im.fr/?q=node/77">Journ&eacute;es GDR IM</a> (Paris 6) (21-22 janvier 2010)
+<LI><A HREF="http://www.labri.fr/perso/marckert/JCB-2010.html">Journ&eacute;es de Combinatoire</A> 27-29 janvier 2010) (Bordeaux). 
+<LI> ALEA 2010 (22-26 mars 2010) (CIRM, Marseilles). 
+<LI>Ecole Jeunes Chercheurs en Informatique Mathématique (29 mars-2 avril 2010) (Chambéry, sur le campus du Bourget-du-Lac). 
+<LI>Numbers, Sequences, Lattices: Dynamical Analysis of Algorithms (3-4 juin 2010) (Caen). 
+<LI>Journées Combinatoire et Probabililités (18-20 octobre 2010) (Monastir).
+<LI> <A HREF="http://www.lix.polytechnique.fr/alea11/">ALEA 2011</a> (07-11 mars 2011) (CIRM, Marseilles). 
+<LI><A HREF="http://mis.u-picardie.fr/ejc2011/Accueil.html"/>Ecole Jeunes Chercheurs en Informatique Mathématique </a>( 28 mars-1 avril 2011) (Amiens, sur le pôle scientifique Saint-Leu de l’Université de Picardie Jules Verne). 
+-->
+</UL>
+
+<HR>
+<p>
+<h2>Enseignements</h2>
+
+<UL>
+<LI> 2010-2011
+	<UL>
+	<LI>Résolutions des problèmes en intelligence artificiel en Master1 (18h TD)
+	<LI>Projets systèmes des ingénieurs en 1ère année (20h TD)
+	<LI>Client pour les Projets de Master1 (8h TD)
+	</UL>
+<LI> 2009-2010
+	<UL>
+	<LI>Résolutions des problèmes en intelligence artificiel en Master1 (18h TD)
+	<LI>Projets systèmes des ingénieurs en 1ère année (20h TD)
+	<LI>Programmation web IUT Informatique (18h TP)
+	<LI>Introduction systèmes IUT Informatique (12h TP)
+	</UL>
+<LI> 2008-2009
+	<UL>
+	<LI>Projets systèmes des ingénieurs en 1ère année (20h TD)
+	<LI>réseaux IUT GEII (12h TD)
+	<LI>réseaux IUT GEII (30h cours/TD/TP)
+	<LI>Introduction systèmes IUT Informatique (15h TP)
+	</UL>
+<LI> 2007-2008
+	<UL>
+	<LI>Base de données IUT Informatique Licence SIL formation Continue (28h cours/TD/TP)
+	<LI>Programmation impérative Licence 2 (8h TP)
+	<LI>Base de données IUT Informatique (18h TD/TP)
+	</UL>
+</UL>
+
+<!--
+<p>
+<UL>
+<LI> 2009-2010:
+<UL>
+<LI>TP <B><A HREF=""></a> Réalisation multimédia</b> (DUT 2ième année).
+<LI>TP <B><A HREF=""></a> Interface et Système Interactif</b> (DUT 2ième année).
+<LI>TD/TP <B><A HREF=""></a> Base de données</b> (DUT 1ère année).
+</UL>
+<LI> 2010-2011:
+<UL>
+<LI>TD/TP <B><A HREF=""></a> Signal réseaux</b> (DUT 2ième année).
+<LI>TD <B><A HREF=""></a> Algorithme</b> (DUT 2ième année).
+<LI>TP <B><A HREF=""></a> Réseaux</b> (DUT 2ième année).
+-->
+</UL>
+</UL>
+<HR>
+
+<p><h2>Programmes</h2>
+<p>
+<UL>
+<LI>
+<a href="https://lipn.univ-paris13.fr/~rodrigues/colam/">Implantation</a> IRALe et environnements 
+
+</LI>
+</UL>
+
+<p><h2>Divers</h2>
+<p>
+<UL>
+<LI> Membre de la Société Astronomique de France.
+	Projet en cours:
+	<UL>
+	<LI>réalisation d'un télescope à la <A HREF="miroir.jpg">main</a>
+	</UL>
+
+
+
+</UL>
+<!--
+<UL>
+<LI>jardinage
+<LI>lecture
+</UL>
+-->
+
+
+</BODY>
+</HTML>
+

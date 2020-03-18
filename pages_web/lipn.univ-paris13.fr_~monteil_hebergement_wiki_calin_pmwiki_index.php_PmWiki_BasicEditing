@@ -1,0 +1,502 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Basic PmWiki editing rules </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+<meta name='description' content='PmWiki&#039;s basic edit syntax' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.BasicEditing' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=search&amp;q=link=PmWiki.BasicEditing'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Basic PmWiki editing rules</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Introduction'>Introduction</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CreatingNewPages'>Creating new pages</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>authors (basic) </span>
+</div>
+<p>The pages on this site are <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiWikiWeb'>wiki-based</a> pages, which means that pages can be created and edited by multiple authors. To edit a page, click the <strong>Edit</strong> link that exists <strong>somewhere</strong> on the page, usually in the header or footer. Some pages may be <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Passwords'>password-protected</a>, depending on the system&rsquo;s security policies, but many systems allow open editing of pages.
+</p>
+<p class='vspace'>PmWiki is not <a class='urllink' href='https://en.wikipedia.org/wiki/WYSIWYG' rel='nofollow'>WYSIWYG</a> - When editing a page, you see the <em>markup text</em> that describes the content of the page.  The basic rules for page markup are simple:
+</p><ol><li>Use a blank line to start a new paragraph <span style='font-size:83%'><a href='#Paragraphs'>more</a></span>.
+</li><li>To make a list, start each line with # for numbered (ordered) lists or * for bulleted (unordered) lists <span style='font-size:83%'><a href='#lists'>more</a></span>.
+</li><li>To make a heading, start a line with two or more ! marks; !! is a subheading, and !!! is a sub-subheading <span style='font-size:83%'><a href='#headings'>more</a></span>.
+</li><li>To emphasize text, enclose it in 2 or 3 <em>single quotes</em>; <code class='escaped'>''text''</code> for italics or <code class='escaped'>'''text'''</code> for bold <span style='font-size:83%'><a href='#emphasis'>more</a></span>.
+</li><li>To make a <a href='#links'>link to another page</a>, enclose the page&rsquo;s name in double brackets; for example <code class='escaped'>[[basic editing]]</code> links to this page.
+</li><li>To make a <a href='#links'>link to another site</a>, type its address, such as <a class='urllink' href='http://example.com/' rel='nofollow'>[[http://example.com/]]</a>. Email links must have &ldquo;mailto:&rdquo; before such as <a class='urllink' href='mailto:xyz@example.com' rel='nofollow'>mailto:xyz@example.com</a>
+</li></ol><p class='vspace'><strong>If you want to experiment with editing a page, try it on the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Main/WikiSandbox'>Wiki Sandbox</a>.</strong> You can <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Main/WikiSandbox?action=edit'>edit the Wiki Sandbox</a> without affecting anything important on this site. On talk pages and discussions, it&rsquo;s courteous to <strong>sign</strong> your contribution; using ~~~ effectively &lsquo;signs&rsquo; the name that you provide in the Author field on the Page Edit form.
+</p>
+<div class='vspace'></div><h2>Examples of common markups</h2>
+<p>The tables below demonstrate many of the common markups used to format pages.  The left column shows what to write to achieve the effect, the right column shows the effect of the markup.  More details are available from the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TextFormattingRules'>text formatting rules</a> and other documentation pages. An exhaustive list of default markup is available as the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupMasterIndex'>markup master index</a>.
+</p>
+<div class='vspace'></div><h3><a name='Paragraphs' id='Paragraphs'></a>Paragraphs and line breaks</h3>
+<p><a name='markupheaders' id='markupheaders'></a>
+</p>
+<table class='markup horiz' align='center' ><tr><td class='markup1'  valign='top'>
+<p><span style='font-size:83%'><strong>What to type</strong></span>
+</p></td><td class='markup2'  valign='top'>
+<p><span style='font-size:83%'><strong>What it looks like</strong></span>
+</p></td></tr></table>
+<p><a name='markupheadersend' id='markupheadersend'></a>
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>Consecutive lines
+will be merged together
+as part of the same paragraph.
+
+One or more empty lines will start a new paragraph.
+</pre></td><td 
+        class='markup2' valign='top'><p>Consecutive lines
+will be merged together
+as part of the same paragraph.
+</p>
+<p class='vspace'>One or more empty lines will start a new paragraph.
+</p>
+</td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>Two backslashes at the end of a line \\
+force a line break.
+
+Or use this markup: [[&lt;&lt;]] to force a break.
+</pre></td><td 
+        class='markup2' valign='top'><p>Two backslashes at the end of a line <br />force a line break.
+</p>
+<p class='vspace'>Or use this markup: <br clear='all' /> to force a break.
+</p>
+</td></tr></table>
+<p>Further reading:
+</p><ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TextFormattingRules'>text formatting rules</a> for more information on linebreaks, indented or hanging paragraphs.
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles'>wiki styles</a> for centered or right justified paragraphs and &ldquo;floating&rdquo; text (boxes), borders and much more.
+</li></ul><div class='vspace'></div><h3><a name='lists' id='lists'></a>Lists</h3>
+<p>Start each line with # for numbered (ordered) lists or * for bulleted (unordered) lists:
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>* Bullet list
+* Another item
+** More asterisks produce sub-items
+** etc.
+</pre></td><td 
+        class='markup2' valign='top'><ul><li>Bullet list
+</li><li>Another item
+<ul><li>More asterisks produce sub-items
+</li><li>etc.
+</li></ul></li></ul>
+</td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre># Numbered lists
+# Another item
+## more hashes produce sub-items
+</pre></td><td 
+        class='markup2' valign='top'><ol><li>Numbered lists
+</li><li>Another item
+<ol><li>more hashes produce sub-items
+</li></ol></li></ol>
+</td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre># List types
+# can be mixed
+** numbered list with unordered sub-list
+</pre></td><td 
+        class='markup2' valign='top'><ol><li>List types
+</li><li>can be mixed
+<ul><li>numbered list with unordered sub-list
+</li></ul></li></ol>
+</td></tr></table>
+<p class='vspace'>Learn more about <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TextFormattingRules#BulletedLists' title=" Bulleted and Numbered Lists">lists</a> (including <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TextFormattingRules#DefinitionLists' title=" Definition Lists">definition lists</a>) and <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/list%20styles' rel='nofollow'>list styles</a>.
+</p>
+<div class='vspace'></div><h3><a name='headings' id='headings'></a> Headings</h3>
+<p>Headings are useful for creating a &ldquo;well-structured&rdquo; page. They&rsquo;re not just for making big text.
+</p>
+<p class='vspace'>
+</p>
+<table class='markup horiz' align='center' ><tr><td class='markup1'  valign='top'>
+<p><span style='font-size:83%'><strong>What to type</strong></span>
+</p></td><td class='markup2'  valign='top'>
+<p><span style='font-size:83%'><strong>What it looks like</strong></span>
+</p></td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>!! Major Subheading
+!!! Minor Subheading
+!!!! And More
+!!!!! Subheadings
+</pre></td><td 
+        class='markup2' valign='top'><h2>Major Subheading</h2>
+<h3>Minor Subheading</h3>
+<h4>And More</h4>
+<h5>Subheadings</h5>
+</td></tr></table>
+<div class='vspace'></div><h3><a name='emphasis' id='emphasis'></a> Text Emphasis</h3>
+<p>To emphasize, enclose text in apostrophes (single-quote marks), not double-quotes.
+</p>
+<p class='vspace'>
+</p>
+<table class='markup horiz' align='center' ><tr><td class='markup1'  valign='top'>
+<p><span style='font-size:83%'><strong>What to type</strong></span>
+</p></td><td class='markup2'  valign='top'>
+<p><span style='font-size:83%'><strong>What it looks like</strong></span>
+</p></td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>''Emphasize'' (italics),
+'''strong''' (bold), 
+'''''very strong''''' (bold italics).
+</pre></td><td 
+        class='markup2' valign='top'><p><em>Emphasize</em> (italics),
+<strong>strong</strong> (bold), 
+<strong><em>very strong</em></strong> (bold italics).
+</p>
+</td></tr></table>
+<div class='vspace'></div><h3><a name='links' id='links'></a> Links</h3>
+<p>To make a link to another page, enclose the page&rsquo;s name in double square brackets.
+</p>
+<p class='vspace'>
+</p>
+<table class='markup horiz' align='center' ><tr><td class='markup1'  valign='top'>
+<p><span style='font-size:83%'><strong>What to type</strong></span>
+</p></td><td class='markup2'  valign='top'>
+<p><span style='font-size:83%'><strong>What it looks like</strong></span>
+</p></td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>Practice editing in the [[wiki sandbox]]
+</pre></td><td 
+        class='markup2' valign='top'><p>Practice editing in the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'>wiki sandbox</a>
+</p>
+</td></tr></table>
+<p>Note that words are automatically <em>capitalized</em> in page titles. The link above links to the page WikiSandbox.
+</p>
+<p class='vspace'>Text after a pipe (|) is used as the link text:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>Practice editing in the
+[[WikiSandbox | practice area]].
+</pre></td><td 
+        class='markup2' valign='top'><p>Practice editing in the
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'>practice area</a>.
+</p>
+</td></tr></table>
+<p class='vspace'>Endings become part of the link text, parentheses hide parts of the link name:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>[[wiki sandbox]]es.
+
+[[(wiki) sandbox]].
+</pre></td><td 
+        class='markup2' valign='top'><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'>wiki sandboxes</a>.
+</p>
+<p class='vspace'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'> sandbox</a>.
+</p>
+</td></tr></table>
+<p class='vspace'>When linking to a page in a different <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>WikiGroup</a>, provide the group name, followed by a separator, and then the page name:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>[[Main.Wiki Sandbox]] shows group + name
+
+[[Main/Wiki Sandbox]] shows only name
+</pre></td><td 
+        class='markup2' valign='top'><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Main/WikiSandbox'>Main.Wiki Sandbox</a> shows group + name
+</p>
+<p class='vspace'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Main/WikiSandbox'>Wiki Sandbox</a> shows only name
+</p>
+</td></tr></table>
+<p class='vspace'>Links to external sites
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>bare url:  http://www.pmwiki.org
+
+link text: [[http://www.pmwiki.org | PmWiki home]]
+</pre></td><td 
+        class='markup2' valign='top'><p>bare url:  <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>http://www.pmwiki.org</a>
+</p>
+<p class='vspace'>link text: <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>PmWiki home</a>
+</p>
+</td></tr></table>
+<p class='vspace'>Links as reference to external sites
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>bare url: http://www.pmwiki.org
+
+link text: [[http://www.pmwiki.org | #]]
+</pre></td><td 
+        class='markup2' valign='top'><p>bare url: <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>http://www.pmwiki.org</a>
+</p>
+<p class='vspace'>link text: <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>[1]</a>
+</p>
+</td></tr></table>
+<p class='vspace'>Colons make <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/InterMap'>InterMap</a> (also called InterWiki) links to other wikis:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>What's an [[Wikipedia:aardvark]], anyway?
+</pre></td><td 
+        class='markup2' valign='top'><p>What&rsquo;s an <a class='urllink' href='https://en.wikipedia.org/wiki/aardvark' rel='nofollow'>Wikipedia:aardvark</a>, anyway?
+</p>
+</td></tr></table>
+<p class='vspace'>Links to <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/NonexistentPages?action=edit' title='Create page'>nonexistent pages</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/NonexistentPages?action=edit'>?</a> are displayed specially, to invite others to create the page.
+</p>
+<p class='vspace'>PmWiki supports more link types and a lot of display options, see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Links'>Links</a> to learn more.
+</p>
+<div class='vspace'></div><h3>Preformatted text</h3>
+<p>Preformatted text is displayed using a monospace font and not generating linebreaks except where explicitly indicated in the markup.
+</p>
+<p class='vspace'>Note that very long lines of preformatted text can cause the whole page to be wide.
+</p>
+<p class='vspace'>For preformatted text with markup (e.g. emphasis) being processed, start each line with a space:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre> Lines that begin with a space
+ are formatted exactly as typed
+ in a '''fixed-width''' font.
+</pre></td><td 
+        class='markup2' valign='top'><pre>Lines that begin with a space
+are formatted exactly as typed
+in a <strong>fixed-width</strong> font.
+</pre>
+</td></tr></table>
+<p class='vspace'>If you don&rsquo;t want Wiki markup to be processed, use [@ @]. Can also be used inline.
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>[@
+Text escaped this way has
+the HTML ''code'' style
+@]
+</pre></td><td 
+        class='markup2' valign='top'><pre class='escaped'>
+Text escaped this way has
+the HTML ''code'' style
+</pre>
+</td></tr></table>
+<div class='vspace'></div><h3>Escape sequence</h3>
+<p>If you don&rsquo;t want Wiki markup to be processed, but lines reformatted use <code class='escaped'>[= =]</code>. Can also be used inline.
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>[=
+markup is ''not'' processed
+but lines are reformatted
+=]
+</pre></td><td 
+        class='markup2' valign='top'><p>
+markup is ''not'' processed
+but lines are reformatted
+
+</p>
+</td></tr></table>
+<div class='vspace'></div><h3>Horizontal line</h3>
+<table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>Four or more dashes at
+the beginning of a line
+----
+produce a "horizontal rule"
+</pre></td><td 
+        class='markup2' valign='top'><p>Four or more dashes at
+the beginning of a line
+</p><hr />
+<p>produce a &ldquo;horizontal rule&rdquo;
+</p>
+</td></tr></table>
+<div class='vspace'></div><h3>Tables</h3>
+<p>Simple tables use double pipe characters to separate cells:
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>|| border=1
+||! head 1 ||! head 2 ||! head 3 ||
+|| cell 1  ||  cell 2 ||  cell 3 ||
+</pre></td><td 
+        class='markup2' valign='top'><table border='1' ><tr ><th  align='center'>head 1</th><th  align='center'>head 2</th><th  align='center'>head 3</th></tr>
+<tr ><td  align='center'>cell 1</td><td  align='center'>cell 2</td><td  align='center'>cell 3</td></tr>
+</table>
+</td></tr></table>
+<p>See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables'>simple tables</a> and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>advanced tables</a> to learn more about the rich feature set of PmWiki tables.
+</p>
+<div class='vspace'></div><h3>Images</h3>
+<p>See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Images'>Images</a>
+</p>
+<div class='vspace'></div><h3>Character formatting</h3>
+<p>
+</p>
+<table class='markup horiz' align='center' ><tr><td class='markup1'  valign='top'>
+<p><span style='font-size:83%'><strong>What to type</strong></span>
+</p></td><td class='markup2'  valign='top'>
+<p><span style='font-size:83%'><strong>What it looks like</strong></span>
+</p></td></tr></table>
+<div class='vspace'></div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>* @@Monospaced text@@
+* Text with '^superscripts^'
+* Text with '_subscripts_'
+* deleted {-strikethrough-} text
+* inserted {+underline+} text
+* [+big+], [++bigger++] text
+* [-small-], [--smaller--] text
+</pre></td><td 
+        class='markup2' valign='top'><ul><li><code>Monospaced text</code>
+</li><li>Text with <sup>superscripts</sup>
+</li><li>Text with <sub>subscripts</sub>
+</li><li>deleted <del>strikethrough</del> text
+</li><li>inserted <ins>underline</ins> text
+</li><li><span style='font-size:120%'>big</span>, <span style='font-size:144%'>bigger</span> text
+</li><li><span style='font-size:83%'>small</span>, <span style='font-size:69%'>smaller</span> text
+</li></ul>
+</td></tr></table>
+<p class='vspace'>Use <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles'>WikiStyles</a> to change <span  style='color: red;'> the </span><span  style='color: blue;'> text </span><span  style='color: green;'> </span><span  style='color: #ff7f00;'> color </span>.
+</p>
+<p class='vspace'><a name='pagetitles' id='pagetitles'></a>
+</p><h3>Page titles</h3>
+<p>The <code class='escaped'>(:title:)</code> directive sets the page&rsquo;s title to something other than its page name.
+</p><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>(:Title Basic PmWiki editing rules:)
+The name of this page is "{$Name}", and its title is "{$Title}".
+</pre></td><td 
+        class='markup2' valign='top'><p>The name of this page is &ldquo;BasicEditing&rdquo;, and its title is &ldquo;Basic PmWiki editing rules&rdquo;.
+</p>
+</td></tr></table>
+<p class='vspace'><a name='pagesummary' id='pagesummary'></a>
+</p><h3>Page Description</h3>
+<ul><li>The <code class='escaped'>(:Description Page summary here:)</code> directive sets the page description. The description is used by search engines, and can be displayed in search results and in <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>page lists</a>.
+</li></ul><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>(:Description PmWiki's basic edit syntax:)
+The summary description of this page is {$Description}.
+</pre></td><td 
+        class='markup2' valign='top'><p>The summary description of this page is PmWiki&rsquo;s basic edit syntax.
+</p>
+</td></tr></table>
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p><a name='beginning' id='beginning'></a>
+</p><p class='question'>Q I&rsquo;m new to PmWiki, where can I find some basic help for getting started?</p>
+<p> The <b class='selflink'>Basic Editing</b> page is a good start.  From there, you can just follow the navigational links at the top or the bottom of the page (they are called <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiTrails'>Wiki Trails</a>) to the next pages, or to the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex'>Documentation Index</a> page, which provides an outline style index of essential documentation pages, organized from basic to advanced.
+</p>
+<p class='vspace question'>Q How do I include special characters such as Copyright (&#169;) and Trademark (&#174; or &#8482;) on my wiki pages?</p>
+<p>  See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SpecialCharacters'>special characters</a> on how to insert special characters that don&rsquo;t appear on your keyboard.
+</p>
+<p class='vspace question'>Q How can I preserve line-breaks from the source text?</p>
+<p> PmWiki normally treats consecutive lines of text as being a paragraph, and merges and wraps lines together on output. This is consistent with most other wiki packages. An author can use the <code class='escaped'>(:linebreaks:)</code> directive to cause the following lines of markup text in the page to be kept as separate lines in the output. Or a wiki administrator can set in <em>config.php</em> <code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLPNewline'><code class='varlink'>&#036;HTMLPNewline</code></a> = &lsquo;&lt;br/&gt;&rsquo;;</code> to force literal new lines for the whole site.
+</p>
+<p class='vspace question'>Q Can I just enter HTML directly?</p>
+<p> By default (and by design), PmWiki does not support the use of HTML elements in the editable markup for wiki pages. There are a number of reasons for this described in the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWikiPhilosophy'>PmWiki Philosophy</a> and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Audiences'>Audiences</a>. Enabling HTML markup within wiki pages in a collaborative environment may exclude some potential authors from being able to edit pages, and pose a number of display and security issues. However, a site administrator can use the <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Enable%20HTML' rel='nofollow'>Cookbook:Enable HTML</a> recipe to enable the use of HTML markup directly in pages.
+</p>
+<p class='vspace question'>Q Where can I find more documentation?</p>
+<p> See the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex'>documentation index</a> and the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupMasterIndex'>markup master index</a> pages.
+ 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Introduction'>Introduction</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CreatingNewPages'>Creating new pages</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/BasicEditing' rel='nofollow'>PmWiki:BasicEditing</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/BasicEditing-Talk' rel='nofollow'>PmWiki:BasicEditing-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicEditing?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on October 21, 2015, at 07:05 AM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

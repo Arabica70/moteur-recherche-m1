@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Performance Analysis of Publish/Subscribe Systems</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Performance Analysis of Publish/Subscribe Systems"/>
+            <meta property="og:url" content="./ad08.html"/>
+            <meta property="og:description" content="The Desktop Grid offers solutions to overcome several challenges and to answer increasingly needs of scientific computing. This technology consists mainly in exploiting PC resources, geographically dispersed, to treat time consuming applications and/or important storage capacity requiring applications. However, as resources number increases, the need for scalability, self-organisation, dynamic reconfiguration, decentralization and performance becomes more and more essential. Since such properties are exhibited by P2P systems, the convergence of grid computing and P2P computing seems natural. In this context, this paper evaluates the scalability and performance of P2P tools for registering and discovering services (Publish/Subscribe systems). Three protocols are used in this purpose: Bonjour, Avahi and Pastry. We have studied the behaviour of these protocols related to two criteria: the elapsed time for registrations services and the needed time to discover new services. Our aim is to analyse these results in order to choose the most adequate protocol for creating a decentralized middleware for Desktop Grid."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./../theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./../theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./..
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Who?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/~dubacq">Français</a></li>
+            <li class="active"><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./ad08.html"
+         rel="bookmark"
+         title="Permalink to Performance Analysis of Publish/Subscribe Systems">
+        Performance Analysis of Publish/Subscribe Systems
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>sam. 26 avril 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/tunisia.html">Tunisia</a>
+        /
+	<a href="./tag/zeroconf.html">Zeroconf</a>
+        /
+	<a href="./tag/grid-computing.html">grid computing</a>
+        /
+	<a href="./tag/proceedings.html">proceedings</a>
+        /
+	<a href="./tag/report.html">report</a>
+<span class="label label-default">Other languages</span>
+	<a href="./../ad08.html">Français</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>The Desktop Grid offers solutions to overcome several challenges and to
+answer increasingly needs of scientific computing. This technology
+consists mainly in exploiting PC resources, geographically dispersed, to
+treat time consuming applications and/or important storage capacity
+requiring applications. However, as resources number increases, the need
+for scalability, self-organisation, dynamic reconfiguration,
+decentralization and performance becomes more and more essential. Since
+such properties are exhibited by P2P systems, the convergence of grid
+computing and P2P computing seems natural.  In this context, this paper
+evaluates the scalability and performance of P2P tools for registering
+and discovering services (Publish/Subscribe systems). Three protocols
+are used in this purpose:
+<a href="http://en.wikipedia.org/wiki/Bonjour_%28software%29">Bonjour</a>,
+<a href="http://en.wikipedia.org/wiki/Avahi_%28software%29">Avahi</a> and
+<a href="http://research.microsoft.com/%7Eantr/Pastry/">Pastry</a>. We have studied
+the behaviour of these protocols related to two criteria: the elapsed
+time for registrations services and the needed time to discover new
+services.  Our aim is to analyse these results in order to choose the
+most adequate protocol for creating a decentralized middleware for
+Desktop Grid.</p>
+<h2>A few words about this set of articles</h2>
+<p>This is really a set of articles. The work was done mainly by Heithem Abbes, a Tunisian phD student advised jointly by Christophe Cérin and Mohamed Jemni at UTIC). I collaborated from afar as much as I could given the distance. Among other things, I wrote <a href="./../pdf/publications/eumedgrid.pdf">the slides presented to EUMEDGrid 2007</a>. They were also presented at <a href="./renpar18-fr.html">Renpar 18</a> by Heithem.</p>
+<p>This article is more of a position and investigation article. We try to
+analyse whether classic services discovery protocols are fit for the
+desktop Grid (at least local desktop grids). FreePastry was not in the
+initial project. The result is bad news, except maybe for Bonjour.</p>
+<p>An abridged version was finally published for <a href="http://www.springer.com/computer/communications/book/978-3-642-00954-9">SGS
+2008</a>
+(a satellite conference of Europar 2008). The
+<a href="http://dx.doi.org/10.1007/978-3-642-00955-6_28">presentation</a> was
+performed by Heithem.</p>
+<h2>The documents</h2>
+<ul>
+<li><a class="icon-eur" href="http://dx.doi.org/10.1007/978-3-642-00955-6_28">The proceedings of Europar/SGS 2008</a></li>
+<li><a href="./../pdf/publications/acdj-renpar18.pdf">The proceedings article</a></li>
+<li><a href="./../pdf/publications/acdj.pdf">The research report</a></li>
+<li><a href="./../pdf/publications/eumedgrid.pdf">The EUMedGrid 2007 slides</a></li>
+</ul>
+<h2>Citing these documents</h2>
+<p>To cite these documents, according to the version, pick your favourite... For those without any hardcopy publication, the URL are included as HAL references.</p>
+<div class="highlight"><pre>@InProceedings{ad08,
+  author =    {Heithem Abbes and Jean-Christophe Dubacq},
+  title =      {Analysis of Peer-to-Peer Protocols Performance for Establishing a Decentralized Desktop Grid Middleware},
+  booktitle =   {Euro-Par 2008 Workshops - Parallel Processing},
+  pages =     {235-246},
+  year =    {2009},
+  editor =     {Eduardo C{\&#39;e}sar and Michael Alexander and Achim Streit and Jesper Larsson Träff and Christophe C{\&#39;e}rin and Andreas Kn{\&quot;u}pfer and Dieter Kranzlmüller and Shantenu Jha},
+  volume =      {5415},
+  series =     {Lecture Notes in Computer Science},
+  month =     apr,
+  publisher =      {Springer},
+  isbn =           {978-3-642-00954-9}
+}
+@TechReport{acdj07RR,
+  author =      {Heithem Abbes and Christophe C\&#39;erin and Jean-Christophe Dubacq and Mohamed Jemni},
+  title =     {Performance Analysis of Publish/Subscribe Systems},
+  institution =  {Laboratoire d&#39;informatique de Paris Nord},
+  year =    {2007},
+  type =   {Rapport de recherche / Research Report},
+  number =   {XX},
+  month =    jul
+  url =          {http://hal.archives-ouvertes.fr/hal-00159388/fr/},
+}
+@InProceedings{acdj08,
+  author =    {Heithem Abbes and Christophe C{\&#39;e}rin and Jean-Christophe Dubacq and Mohamed Jemni},
+  title =   {{\&#39;E}tude de performance des syst{\`e}mes de d{\&#39;e}couverte de ressources},
+  booktitle = {{A}ctes de {F}ribourg&#39;2008 : {R}enpar&#39;18 / {S}ymp{A}&#39;2008 / {CFSE}&#39;6 },
+  address =   {{F}ribourg, {S}witzerland},
+  year =      {2008},
+  month =      feb,
+  note =         {{P}ublication on {CDROM} only },
+  url =          {http://hal.archives-ouvertes.fr/hal-00276323/en/},
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./../theme/js/respond.min.js"></script>
+    <script src="./../theme/js/local.js"></script>
+
+  </body>
+</html>

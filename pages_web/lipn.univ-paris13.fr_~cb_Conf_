@@ -1,0 +1,774 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+  <TITLE> Cyril Banderier's list of conferences</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content="Cyril Banderier's list of conferences">
+<meta name="keywords" content="Cyril Banderier, combinatoire analytique, analyse d'algorithmes, paris 13, CNRS, LIPN">
+<link rel="canonical" href="http://www-lipn.univ-paris13.fr/~banderier/Conf/">
+<STYLE type="text/css">
+BODY {
+  color: black;
+  text-align: justify;
+  background: white url(/common/LIPNbg12.GIF);
+  margin: 1em;
+}
+
+FONT.redblink { 
+	color: red; 
+	text-decoration: blink;
+}
+
+TABLE.two-column {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+TD.title {
+  border: 0px;
+  text-align: center;
+}
+
+TD.buttonb{
+	  background-color: rgb(0,230,255); 
+	    color: black;
+	      border: solid 1px black;
+		  font-size: 85%;
+		    text-align: center;
+		      width: 8%;
+	      }
+	      
+TD.button {
+  background-color: rgb(0,230,255); 
+  color: black;
+  border: solid 1px black;
+  font-size: 85%;
+  text-align: center;
+  width: 8%;
+}
+TD.inactive {
+  background-color: rgb(245,245,245); /* white smoke */
+  border: solid 1px black;
+  color: black;
+}
+A.button {
+  color: black;
+  display : block;
+  text-decoration: none;
+}
+A.buttonb {
+	  color: black;
+	    display : block;
+	      text-decoration: none;
+      }
+
+
+TD.current {
+  background-color: rgb(255,204,51); 
+  border: solid 1px rgb(0,0,128); /* navy blue */
+}
+
+DIV.centered {
+  text-align: center;
+}
+DIV.footer {
+  font-size: small;
+  font-style: oblique;
+}
+HR.no-banner {
+  background-color: rgb(0,230,255); 
+  border: solid 1px black;
+  height: 8px;
+}
+HR.yellow {
+  background-color: rgb(255,204,51); 
+  border: none;
+  height: 1px;
+}
+
+.background-blue {
+  background-color: rgb(0,230,255); 
+}
+.background-smoke {
+  background-color: rgb(245,245,245); 
+}
+.background-yellow {
+  background-color: rgb(255,204,51); 
+}
+
+a:hover, a:active {
+        color: #cc33cc;
+        }
+div.header div.Paris13 {
+  position:static;
+  left:10px;
+  top:80px;
+  margin-left:10px;
+  width: 142px;
+  height: 37px;
+  background: transparent url(/common/logoP13Petit.GIF) no-repeat top left;
+}
+div.header div.Paris13 span {
+  display:none ;
+}
+div.header div.CNRS {
+  position:static;
+  right:0px;
+  top:50px;
+  margin-right:10px;
+  width: 207px;
+  height: 99px;
+  background: transparent url(/common/LogoCNRS.gif) no-repeat top right;
+}
+div.header div.CNRS span {
+  display:none ;
+}
+div.header {
+text-align:center;
+height:40px;
+margin-top:30px;
+margin-bottom:0px;
+}
+
+div.header2 {
+text-align:center;
+height:45px;
+margin-top:10px;
+margin-bottom:0px;
+}
+
+div.header span.HeaderWhere span{
+font-size: 200%;
+font-weight: bold;
+}
+
+h1 {
+  margin: 20px 20px 10px 10px;
+}
+div.container {
+  margin-left:20px;
+  margin-right:20px;
+}
+
+div.container div.summary {
+  background: #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 1pt;
+  font-size: 10pt;
+  font-family: sans;
+  margin:0px;
+  text-align:justify;
+}
+div.intro {
+  background: #ffc0c0;
+  padding: 10px;
+  margin:10px 50px;
+  text-align:justify;
+  border: solid;
+}
+
+h2 {
+font-size: 150%;
+background:transparent url(/common/degrade.png) repeat-y;
+padding-left: 30px;
+}
+
+h2 {
+font-size: 150%;
+background:transparent repeat-y;
+padding-left: 30px;
+}
+
+h3 {
+font-size: 105%;
+}
+
+h4 {
+font-size: 100%;
+}
+
+
+
+a.info span
+{
+margin-top: 1em;
+display:none;
+}
+
+a.info:hover
+{
+text-decoration:none;
+background:#ffffff;
+}
+
+a.info
+{
+}
+
+a.info:hover span
+{
+display:inline;
+position:relative;
+margin-top: 1em;
+left:0px;
+}
+
+div.abstract
+{
+padding:1em;
+color:#505560;
+margin-bottom: .7em;
+background:#f4f5f6;
+border: #aaaaaa 1px solid;
+}
+</STYLE>
+<link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute; left:5%; top:20px; margin-left:10px; width: 142px; height: 37px;
+ background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%; top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="../?lang=uk">Cyril Banderier</a>: list of conferences</H1>
+<p><BR><p>
+<a style="position:absolute; right:20%; top:45px; margin-right:10px; width: 20px; height: 20px;
+ background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%; top:25px; margin-right:10px; width: 20px; height: 20px;
+ background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+<div>
+<img  style="width: 15%;" src="cities.png" alt="">
+<img  style="width: 15%;" src="valises.gif" alt="">
+<IMG  style="width: 15%;" src="preche.jpg" alt="">
+<IMG  style="width: 15%;" src="pfbook.jpg" alt="">
+<IMG  style="width: 15%;" src="hall.jpg" alt="">
+<IMG  style="width: 15%;" src="fkv.jpg" alt="">
+</div>
+
+<div style="text-align:center; font-style: italic;color: black;">   &#127925;&nbsp; Il faut que j'aille au bout du monde pour savoir si la terre est ronde. &nbsp;&#127925;</div>
+<div style="text-align:center;">   <a href="#past">Past</a>  &nbsp; &nbsp; &nbsp;<a href="#future">Future</a></div>
+
+<p><a name="past"></a></p>
+<p>
+<ul>
+<li>*<b>DEA talk (Paris)</b> (July 1998). <a href="../Talks/dea.ps">slides ps</a>
+<li>*<b>Infinite Automata. <a href="http://www.univ-rouen.fr/LIFAR/">LIFAR</a> (Rouen)</b> (January 7, 1999). <a href="../Talks/LIFAR.html">html</a> | <a href="../Talks/lifar.ps">slides ps</a>
+<li><b>*An Analysis of an Algorithm. CIES (Jussieu)</b> (March 11, 1999). <a href="../Talks/cies1.pdf">pdf</a>
+<li><b>Journées <a href="http://algo.inria.fr/AofA/Alea/">Aléa</a> &amp; <a href="http://www.lri.fr/~denise/gascompresentation.html">Gascom</a> (Bordeaux)</b> (March 15-19, 1999). 
+<li>*<b>An Introduction to Analytic Combinatorics. &Eacute;cole jeunes chercheurs (Bordeaux)</b> (March 25, 1999)<a href="../Talks/EJC.html">html</a> | <a href="../Talks/ejc.ps">ps</a>
+<li>*<b>Idem. CIES (Jussieu)</b> (April 1, 1999). 
+<li>*<b>Analytic Combinatorics for Juniors. <a href="../CJ/">Colloquium Junior</a> (Rocquencourt)</b> (May 11, 1999). <a href="../CJ/banderier.ps">slides ps</a>
+<li>*<b>On Generating Functions of Generating Trees. <a href="http://www-igm.univ-mlv.fr/~fpsac/FPSAC99/fpsac99.html">FPSAC 99</a> (Barcelona)</b> (June 8, 1999). <a href="../Talks/fpsac99talk.ps">slides ps</a>
+<li><b>Analysis of Algorithms (Barcelona)</b> (June 14-18, 1999).
+<li>*<b>Algebraicity and asymptotics of unidimensional ramdom walks. <a href="http://algo.inria.fr/seminars/">Algorithms Seminars</a> (INRIA Rocquencourt)</b> (September 27, 1999). <a href="../Talks/algo99.ps">slides ps</a>
+<li>*<b>A Panomara of Theoretical Computer Science. Semaine de la Science (Trappes)</b> (18, October 1999). 
+<li>*<b>The Time in Mathematics and Computer Science. Jours de Sciences (Les Mureaux)</b> (March 7, 2000). <a href="../Talks/mureaux.ps">slides ps</a>
+<li>*<b>Airy Distribution &amp; Planar Graphs. <a href="http://www.cmi.univ-mrs.fr/~alea2000/">Aléa 2000</a> (CIRM, Marseille)</b> (March 14, 2000). 
+<li>*<b>Coalescent Saddle Points and Airy Distribution: the Case of Planar Graphs. <a href="http://algo.inria.fr/seminars/">Algorithms Seminars</a> (INRIA Rocquencourt)</b> (March 20, 2000). <a href="../Talks/algo00.ps"></a>
+<li>*<b>Down with Gauss, long live Airy! &Eacute;cole jeunes chercheurs (Caen)</b> (March 27, 2000). <a href="../Talks/algo00.ps"></a>
+<li>*<b>Marking time for Random Walks on Graphs. <a href="http://igm.univ-mlv.fr/~fpsac/FPSAC00/SITE00/information.html">FPSAC 00</a> (Moscow)</b> (June 27, 2000). <a href="../Talks/fpsac00talk.ps">slides ps</a>
+<li>*<b>The Kernel Method. <a href="http://www.cs.purdue.edu/homes/spa/gdansk/aofa.html">Analysis of Algorithms</a> (Gdansk)</b> (July 5, 2000). <a href="../Talks/aofa00.ps">slides ps</a> (<a href="http://www.cs.purdue.edu/homes/spa/gdansk/konferencja01.jpg">photo</a>)
+<li>*<b><a href="http://www.math.u-bordeaux.fr/~stan/Colloque/mmfenglish.html">Colloquium in honor of Professor Michel Mendès France</a> (Bordeaux)</b> (September 11-14, 2000). (<a href="http://www.cs.uwaterloo.ca/~shallit/mmf.html">photos</a>)
+<li>*<b>Colloque Informatique et Mathématiques (Versailles)</b> (September 18-20, 2000).
+<li>*<b>Analytic Combinatorics and Computer Science. <a href="http://www.ufr-mi.u-bordeaux.fr/~stan/0001.html">Analytic Number Theory Seminar</a> (Bordeaux)</b> (November 9, 2000)
+<li>*<b>Research in Mathematics and Computer Science <a href="http://www.salon-education.org/">Salon de l&rsquo;éducation</a> (Paris)</b> Intervenant à l&rsquo;atelier "Physique nucléaire, mathématiques, modélisation" (November 22, 2000).
+<li>*<b>Trees, Paths, Maps... &Eacute;cole jeunes chercheurs (Lyon)</b> (January 29-2, 2001). <a href="../Talks/"></a>
+<li>*<b>Walks on N: generating functions and asymptotics. Aléa 2001 (CIRM, Marseille)</b> (March 26-30, 2001). <a href="../Talks/"></a>
+<li>*<b>Kernel method and generating trees. <a href="http://www.dsi.unifi.it/">Dipartimento di Sistemi e Informatica</a> (Florence)</b> (June 7, 2001) [invitation June 6-13, 2001]. <a href="../Talks/"></a>
+<li>*<b>Analytic combinatorics of paths and maps. <a href="../Divers/defense.html">PhD defense</a>,Jussieu (Paris)</b> (June 25, 2001). <a href="../Talks/"></a>
+<li><b><a href="http://www.math.unicaen.fr/Colloques/renc_arith.htm">Douzièmes Rencontres Arithmétiques</a> (Caen)</b> (June 28-29, 2001). <a href="../Talks/"></a>
+<li>*<b>Combinatorial and analytic properties of lattice paths. AofA 2001 (Tatihou)</b> (July 1-7, 2001). <a href="../Talks/"></a>
+<li>*<b>Factors&rsquo; paradox <a href="http://www.liafa.jussieu.fr/~ddm/DM-CCG/prog.html">Discrete Models</a> (IHP, Paris)</b> (July 4, 2001). <a href="../Talks/"></a>
+<li>*<b> <a href="http://main2.amu.edu.pl/~rsa2001/">RSA 2001</a> (Poznań) </b> (August 6-11, 2001).
+<li><b> School on Algorithm Engineering (Alcom-FT) (Roma) </b> (September 10-12, 2001).
+<li><b> <a href="http://www.dis.uniroma1.it/~demetres/ALCOM-FT/">First Annual Review Meeting and Workshop (Alcom-FT)</a> (Roma) </b> (September 13-15, 2001).
+<li>*<b>Future of the Research in Europ, <a href="http://www.palais-decouverte.fr/index.php">Palais de la découverte</a> (Paris) </b> (October 19, 2001) [intervenant dans le cadre de la Fête de la Science].
+<li>*<b>Analytic combinatorics: a surveychen.
+<a href="http://www.mpi-inf.mpg.de/">Max-Planck-Institut</a> (Saarbrücken) </b> (November 14, 2001).
+<li><b> GASCom 2001 (Sienna) </b> (November 18-20, 2001).
+<li>*<b>Coupon collector problems and random walks on graphs. <a href="http://www.dsi.unifi.it/">Dipartimento di Sistemi e Informatica</a> (Florence)</b> (November 21, 2001). <a href="../Talks/firenze01.ps">slides ps</a>
+<li>*<b>Seminar Algorithmic Aspects in Network Communication. <a href="http://www.mpi-inf.mpg.de/">Max-Planck-Institut</a> (Saarbrücken) </b> (December 12, 2001).
+<li>*<b>The Game of Go, from ancient Asia to modern computers. <a href="http://www.mpi-inf.mpg.de/">Max-Planck-Institut</a> (Saarbrücken) </b> (December 13, 2001). <a href="../Talks/mpigo.ps">slides ps</a>
+<li>*<b>Average time for Trivial-Pursuit like games. <a href="http://www.dagstuhl.de/programm/kalender/?dag_type=12&amp;dag_year=2002">Algorithmic Combinatorial Game Theory</a> (<a href="http://www.dagstuhl.de/">Dagstuhl</a>)</b> (February 17-22, 2002).
+<li>*<b>On a model of walks with multiplicities. <a href="http://algo.inria.fr/AofA/Alea/">Aléa 2002</a> (CIRM, Marseille)</b> (18-22 March, 2002) 
+<li>*<b>Random generation of combinatorial structures. &Eacute;cole jeunes chercheurs (Lille)</b> (25-30 March, 2002). 
+<li>*<b>Why Delannoy&rsquo;s numbers? 5th Lattice Path Combinatorics and Discrete Distributions (Athens)</b> (June 5-7, 2002). <a href="../Talks/lattice.ps">slides ps</a>
+<li>*<b>Discrete smoothed analysis. <a href="http://www.geometrie.tuwien.ac.at/AofA2002/">AofA 2002</a> (Strobl)</b> (June 23-29, 2002). <a href="http://www.geometrie.tuwien.ac.at/AofA2002/pictures/IMG_0282_Med.jpg.17.html">photos</a>
+<li>*<b>Annual Review Meeting and Workshop (Alcom-FT) (Warwick)</b> (July 5-6, 2002).
+<li>*<b>A class of walks with unbounded jumps. <a href="http://www.fpsac.ms.unimelb.edu.au/">Formal Power Series and Algebraic Combinatorics 2002</a> (Melbourne)</b> (July 8-12, 2002). <a href="../Papers/posterfpsac02.ps">poster ps</a>
+<li>*<b>The Airy phenomena in analytic combinatorics. Workshop on Combinatorics and Integrable Models (Canberra) </b> (July 15-19, 2002).<a href="../Talks/canberra.ps">slides ps</a>
+<li>*<b>Discrete smoothed analysis. <a href="http://www.newton.cam.ac.uk/programmes/CMP/cmpw01.html">Randomised Algorithms Euroworkshop</a> Isaac Newton Institute (Cambridge)</b> (August 5-16, 2002).
+<li><b><a href="http://www.mpi-inf.mpg.de/conferences/adfocs02/index.html">ADFOCS 2002</a> Max-Planck-Institut (Saarbrücken)</b> (September 9-13, 2002).
+<li>*<b>Limit laws for walks with unbounded jumps. Colloquium on Mathematics and Computer Science (Versailles)</b> (September 16-19, 2002).
+<li>*<b>Computational aspects of multi-dimensional partitions. <a href="http://www.mat.univie.ac.at/~slc/">Séminaire Lotharingien de Combinatoire</a> (Ellwangen)</b> (October 20-23, 2002).
+<li>*<b>Smoothed Complexity. New computational models: algorithms and complexity. (IHP, Paris)</b> (November 28-29, 2002). 
+<li>*<b> <a href="http://www.labri.fr/perso/duchon/J3A/">Journées Arbres</a> (Bordeaux)</b> (December 12-13, 2002).
+<li>*<b>IHP (Paris)</b> (January, 2003).
+<li>*<b>Journées Aléa. (CIRM, Marseille)</b> (February 3-7, 2003). 
+<li><b>Geometry and statistics of random growth. (IHP, Paris)</b> (March 17-22, 2003).
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/">Séminaire Lotharingien de Combinatoire</a> (Ottrott)</b> (March 23-27, 2003). <a href="http://www-igm.univ-mlv.fr/~ejc2003/"></a>
+<li>*<b>Analytic computations &amp; symbolic combinatorics. Seminar "Combinatoire, informatique et physique" (Villetaneuse)</b> (April 30, 2003)
+<li><b> <a href="http://www.iecn.u-nancy.fr/~chassain/g3a/g3a.html">Journées arbres</a> (Nancy) </b> (May 15-16, 2003)
+<li><b> Dynamical systems and modelization in algorithmics (Paris)</b> (May 19, 2003)
+<li>*<b> Seminar "Combinatorial optimization and distributed analysis" (Villetaneuse)</b> (May 22, 2003)
+<li>*<b> <a href="http://www-lipn.univ-paris13.fr/~tollu/jlipn-prog.html">Journées du LIPN</a> (Villetaneuse)</b> (May 26-27, 2003)
+<li>*<b><a href="http://www.univ-rouen.fr/LMRS/RMR03/rmr03-e.html">Rencontres mathématiques de Rouen in honor of Claude Dellacherie</a> (Rouen)</b> (June 18-20, 2003).
+<li>*<b>AofA 2003 (San Miniato, Pisa)</b> (June 22-28, 2003). 
+<li>*<b><a href="http://main2.amu.edu.pl/~rsa2003/">RSA 2003</a> (Poznań)</b> (August 9-13, 2003).
+<li>*<b>Smoothed Analysis of Three Combinatorial Problems. <a href="http://www.mfcs.sk/mfcs2003/">Mathematical Foundations of Computer Science 2003</a> (Bratislava)</b> (August 25-29, 2003).
+<li>*<b><a href="../DRW2003/">Discrete Random Walks</a> (Paris)</b> (September 1-5, 2003).
+<li>*<b><a href="http://savantebanlieue.univ-paris13.fr/">Savante Banlieue</a> (Villetaneuse)</b> (16-17 October 2003) 
+<li>*<b>Journées <a href="http://www.cirm.univ-mrs.fr/liste_rencontre/archives/Rencontres2004/Vallee04/Vallee04.html">Aléa</a> (CIRM, Marseille)</b> (January 19-23, 2004). 
+<li>*<b><a href="http://www.mjc-andre.org/pages/amej/evenements/cong_04/annon04.html">Journées MATh.en.JEANS 2004</a> (Villetaneuse) </b> (March 26-28, 2004)
+<li>*<b>Analysis of Algorithms (AofA&rsquo;04) (Berkeley)</b> (June 14-18, 2004)
+<li><b><a href="http://www.math.ucsd.edu/~stanfest/index.php">Retrospective in Combinatorics Honoring Stanley&rsquo;s 60th birthday</a> (MIT)</b> (June 22-26, 2004) 
+<li>*<b>Formal Power Series and Algebraic Combinatorics (FPSAC&rsquo;04) (Vancouver)</b> (June 28-2, 2004) 
+<li>*<b><a href="http://www.viu.ca/math/pp/">Conference on Permutation Patterns&rsquo;04</a> (Namaimo)</b> (July 5-9, 2004)
+<li>*<b><a href="http://www.jmit.ulg.ac.be/jm2004/">Journées Montoises 2004</a> (Liège)</b> (8-11 September 2004)
+<li>*<b><a href="http://www.geometrie.tuwien.ac.at/MathInfo2004/">Colloquium on Mathematics and Computer Science</a> (Vienna)</b> (13-17 September 2004) 
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/">Séminaire Lotharingien de Combinatoire</a> (Ellwangen)</b> (10-13 October 2004) 
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue</a> (Villetaneuse)</b> (14-15 October 2004) 
+<li>*<b>Séminaire d&rsquo;algorithmique du GREYC (Caen)</b> (26 October 2004)
+<li><b><a href="http://www-calfor.lip6.fr/ICPSS/">International Conference on Polynomial System Solving</a> (Paris)</b> (24-26 November 2004) 
+<li>*<b>Journées Aléa (CIRM, Marseille)</b> (March 7-11, 2005). 
+<li>*<b>Congrès MATh.en.JEANS (Paris) </b> (April 3-5, 2005).
+<li><b><a href="http://www.math.ens.fr/~baladi/ecole"> Resonances and periodic orbits: spectrum and zeta functions in quantum and classical chaos</a> (IHP, Paris)</b> (June 27-July 5 2005)
+<li>*<b>RSA 2005 (Poznań)</b> (August, 1-5 2005)
+<li>*<b>Amadeus Project: Bernhard Gittenberger (Villetaneuse)</b> (September 4-11, 2005)
+<li><b><a href="http://isfa.univ-lyon1.fr/vmaume/sites/default/files/documents/dynamical.pdf">Journées de l&rsquo;aci DynamicAl: interface mathematiques et informatique, dynamique et algorithmique</a> (Dijon)</b> (September 14-16, 2005) 
+<li>*<b><a href="http://www.dm.unibo.it/CombinatoricsJointSession/">SLC&rsquo;55</a> (Bertinoro)</b> (September, 25-28 2005).
+<li>*<b>Journées <a href="http://savantebanlieue.univ-paris13.fr/">Savante Banlieue</a> (Villetaneuse) </b> (October 13-14, 2005)
+<li>*<b><a href="http://www2.cnrs.fr/jeunes/120.htm">XVe Rencontres CNRS Jeunes "Sciences et Citoyens"</a> (Futuroscope de Poitiers) </b> (October 21-23, 2005)
+<li>*<b>Journée séminaire de la filière Math-Info de Paris XIII (Villetaneuse) </b> (November 4, 2005)
+<li>*<b>Amadeus Project (Wien)</b> (November 9-20, 2005)
+<li>*<b>Joint Seminar TU Wien/U Wien.</b> (November 15, 2005)
+<li><b><a href="http://www.lix.polytechnique.fr/~schaeffe/PagesWeb/AOC/">Journees AOC</a> (Bordeaux) </b> (November 29-December 2, 2005)
+<li><b><a href="http://math.univ-lyon1.fr/~jouhet/journeesqseries.html">Workshop of Combinatorics on q-series and Partitions</a> (Lyon)</b> (January 5-6, 2006)
+<Li>*<b>Amadeus Project: Markus Kuba (Villetaneuse)</b> (Jan 16-22, 2006)
+<li>*<b>Amadeus Project: Bernhard Gittenberger (Villetaneuse)</b> (Feb 12-19 2006)
+<li><b><a href="http://www.lif.univ-mrs.fr/STACS06/">STACS&rsquo;06</a> (Marseille) </b> (February 23-25, 2006)
+<li>*<b>Journées Alea (CIRM, Marseille)</b> (March 6-10 2006)
+<li>*<b>Amadeus Project: Cyril Banderier (Wien)</b> (Mar 12-25 2006)
+<li>*<b><a href="http://www.math.tugraz.at/mathc/esi2006/">Educational Workshop on Discrete Probability</a> Erwin Schrödinger Institute (Wien)</b> (Mar 12-25 2006)
+<li>*<b><a href=""></a>Congrès MATh.en.JEANS (Cité des Sciences, Paris)</b> (March 31 - April 2, 2006)
+<li>*<b>Amadeus Project: Alois Panholzer (Villetaneuse)</b> (April 10-14, 2006)
+<li>*<b> Rencontres CNRS Jeunes (Drancy) </b> (May 5-6, 2006)
+<li>*<b> <a href="http://www.cijm.org/">Salon 2006 de la culture et des jeux mathématiques</a> (Paris)</b> (May 25-27, 2006)
+<li><b><a href="http://ipht.cea.fr/colloques/jb60/">Jean-Bernard Zuber&rsquo;s 60th birthday</a> (Saclay)</b> (June 1-2, 2006)
+<li>*<b><a href="http://www.cs.otago.ac.nz/staffpriv/mike/PP2006/Accommodation.html">Permutation Patterns 2006</a> (Reykjavik) </b> (June 12-16, 2006)
+<li>* <b>Projet Animath sur Pi/ F.Gaudel</b> (June 19-23, 2006)
+<li>* <b>Palais de la découverte</b> (June 22, 2006)
+<li>*<b><a href="http://cg.scs.carleton.ca/~luc/aofa2006/">AofA 2006</a> (Alden Biesen)</b> (July 2-8, 2006)
+<li>*<b>University Project: Hsien Kuei Hwang (Villetaneuse)</b> (July 7-29, 2006)
+<li><b><a HREF="http://www.proba.jussieu.fr/spa06/">Stochastic Processes and their Applications</a> (Paris)</b> (July 17-21, 2006)
+<li>*<b><a HREF="http://www.irisa.fr/JM06/"> Journées Montoises d&rsquo;Informatique Théorique</a> (Rennes)</b> (August 30-September 2, 2006)
+<li><b><a href="http://v.vincent.u-bourgogne.fr/Gascom/">Gascom&rsquo;06</a> (Dijon)</b> (September 11-15, 2006)
+<li>*<b><a href="http://mathinfo06.iecn.u-nancy.fr/">Fourth Colloquium on Mathematics and Computer Science Algorithms, Trees, Combinatorics and Probabilities</a> (Nancy)</b> (September 18-22, 2006)
+<li>*<b>Combinatoire analytique des chemins : l&rsquo;aire moyenne <a href="http://math.univ-lyon1.fr/%7Eadamczew/ctn.html">Séminaire de théorie des nombres et de combinatoire</a> (Lyon) </b> (October 3, 2006)
+<li>*<b><a href="http://igm.univ-mlv.fr/~slc57/">SLC57: Séminaire Lotharingien de Combinatoire </a> (Ottrott) </b> (October 8-11, 2006)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/index.php">Savante Banlieue</a> (Villetaneuse) </b> (October 12-13, 2006)
+<li>*<b><a href="http://archives.universcience.fr/francais/ala_cite/evenemen/fete-sciences-2006/animation-niveau1.htm">Fête de la science (Maths pour tous/Cité des Sciences)</a> (Paris) </b> (October 13-15, 2006)
+<li>*<b><a href="http://www2.cnrs.fr/jeunes/120.htm">Rencontres CNRS Jeunes Sciences &amp; Citoyens</a> (Poitiers)</b> (October 27-29, 2006)
+<li>*<b><a href="">Analytic Combinatorics courses</a> (Antananarivo)</b> (November 4-11, 2006)
+<li>*<b>Cours MMI2 de combinatoire analytique (Villetaneuse)</b> (27/11, 4/12, 11/12)
+<li>*<b><a href="http://www-lipn.univ-paris13.fr/seminaires/Approx/">Exposé groupe de travail Approx</a> (Villetaneuse) </b> (December 6, 2006)
+<li>*<b>Amadeus Project (Wien)</b> (December 11-16, 2006)
+<li><b><a href="http://www.liafa.jussieu.fr/~alp/Coll_IM.html">Journées du GDR IM</a> (Paris)</b> (February 1-2, 2007)
+<li>*<b>La combinatoire : des mathématiques à l&rsquo;informatique, et réciproquement. (Lycée Jean Vilar de Plaisir)</b> (March 12 2007)
+<li>*<b>3000 ans d&rsquo;histoire de la combinatoire. (<a href="http://www.bnf.fr/">BNF</a>, Paris)</b> (March 14, 2007)
+<li>*<b>Kernels of simple families of graphs : it&rsquo;s normal. <a href="http://igm.univ-mlv.fr/alea2007/">Journées Aléa</a> (CIRM, Marseille)</b> (March 19-23, 2007)
+<li>*<b><a href="http://www.mathenjeans.fr">Congrès MATh.en.JEANS</a> (Cergy)</b> (23-25 March, 2007)
+<li>*<b><a href="http://www.scienceacademie.org/presentation/">Stages Science Académie</a> (Villetaneuse)</b> (10-13 April, 2007)
+<li>*<b>Vulgarisation scientifique avec <a href="http://www.maths-pour-tous.org/">Maths pour tous</a> (Agora des Sciences, Marseille, au Centre de Culture Scientifique (CCSTI))</b> (26-27 April, 2007)
+<li>*<b><a href="http://www.scienceacademie.org/presentation/">Exposition Science Académie</a> (Paris)</b> (May 12, 2007)
+<li><b>Leonhard Euler, mathématicien universel (IH&Eacute;S) </b> (May 24, 2007)
+<li>*<b>soutenances projets (Villetaneuse)</b> (June 8, 2007)
+<li>*<b><a href="http://www-circa.mcs.st-and.ac.uk/PermutationPatterns2007/">Permutation Patterns</a> (St Andrews) </b> (June 11-15, 2007)
+<li>*<b>soutenances TER</b> (June 18, 2007)
+<li>*<b><a HREF=""></a>Stages science ouverte (Villetaneuse)</b> (June 25-28, 2007)
+<li>*<b>6th International conference on Lattice Path Combinatorics and applications (Johnson City)</b> (July 12-14, 2007)
+<li>*<b><a href="http://www.dmg.tuwien.ac.at/nfn/guests.html">National Research Network S9600 Analytic Combinatorics and Probabilistic Number Theory </a> TU Wien (Wien)</b> (July 22-29, 2007)
+<li><b><a href="http://lipn.fr/jyg60/">Conference in honour of Jean-Yves Girard 60th birthday</a> (IHP, Paris) </b> (September 10-11, 2007)
+<li><b><a href="http://www.sciencesmaths-paris.fr/">Journées de la Fondation Mathématique de Paris</a> (Paris) </b> (September 28, 2007)
+<li><b><a href="http://www.liafa.jussieu.fr/~steiner/sda2.html">Journées Systèmes dynamiques, automates et algorithmes</a> (Paris) </b> (October 4-5, 2007)
+<li><b>Avancées en sciences de l'information présentées par leurs auteurs (<a href="http://www.academie-sciences.fr/">Académie des Sciences</a>)</b> (October 9, 2007)
+<li>*<b><a href="http://www.palais-decouverte.fr/index.php?id=846">Fête de la Science (Palais de la découverte)</a> (Paris) </b> (October 9-10, 2007)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue</a> (Villetaneuse) </b> (October 11-12, 2007)
+<li>*<b><a href="http://archives.universcience.fr/francais/ala_cite/evenements/fete-sciences-2007/animation-niveau1.htm">Fête de la Science (La Villette)</a> (Paris) </b> (October 13-14, 2007)
+<li><b><a href="http://knuth07.labri.fr/">Journées en l&rsquo;honneur de D.E. Knuth</a> (Bordeaux)</b> (October 29-31, 2007)
+<li>*<b><a href="">Analytic Combinatorics courses</a> (Antananarivo)</b> (November 19-23, 2007)
+<li>*<b><a href=""></a>HK Hwang (Villetaneuse)</b> (December 9-14, 2007)
+<li><b><a href="http://www.gdr-im.fr/?q=node/39">Journées du GDR d&rsquo;Informatique mathématique</a> (Paris)</b> (Jan 24-25, 2008)
+<li>*<b><a href="http://www-lipn.univ-paris13.fr/seminaires/Approx/">Airy &ne; Airy: a tale of two limit laws. (Exposé groupe de travail Approx)</a> (Villetaneuse) </b> (March 5,7, 2008)
+<li>*<b><a href="http://www.labri.fr/perso/marckert/ALEA2008.html">Journées Aléa</a> (CIRM, Marseille)</b> (March 10-14, 2008)
+<li>*<b><a href="http://www.dmg.tuwien.ac.at/nfn/guests.html">National Research Network S9600 Analytic Combinatorics and Probabilistic Number Theory</a>TU Wien (Wien)</b> (March 15-26, 2008)
+<li>*<b><a href="http://www.scienceouverte.com/rencontres_CNRS_programme.php">Rencontres CNRS Jeunes</a> (Drancy) </b> (April 4-5, 2008)
+<li>*<b><a href="http://www.newton.cam.ac.uk/programmes/CSM/csmw03.html">Combinatorics and Statistical Mechanics</a> (Isaac Newton Institute, Cambridge)</b> (April 7-12, 2008)
+<li>*<b><a href=""></a>Pawel Hitczenko (Villetaneuse)</b> (Jan 23-Feb 23, April 1-15, May 6-16, June 2008)
+<li>*<b><a href="http://www.scienceacademie.org/presentation/">Stages Science Académie</a> (Villetaneuse)</b> (3j, April 21- May 2, 2008)
+<li>*<b>3ièmes journées "Probabilité et applications" Monastir (Tunisie)</b> (May 26-30, 2008)
+<li>*<b>Groupe de travail zêta (Villetaneuse)</b> (July 2,11, 2008)
+<li>*<b><a href="http://www.lmac.utc.fr/IWAP2008/index.php?page=p_invi">IWAP 2008</a> (Compiègne)</b> (July 7-10, 2008)
+<li>*<b><a href="http://www.cite-sciences.fr/fr/cite-des-sciences/">Fête de la Science (La Villette)</a> (Paris)</b> (October 10-12, 2008)
+<li>*<b><a href="http://www.sinica.edu.tw/main_e.shtml">Academica Sinica</a> (Taipei)</b>, (18 Oct-15 November 2008)
+<li>*<b>Working group (Taipei)</b>, (23 Oct 2008)
+<li>*<b>Seminar of the Institute of Statistical Sciences (Taipei)</b>, (October 31, 2008)
+<li>*<b><a HREF="http://www.math.nctu.edu.tw/E6/E6_1_lecture_content.php?N_ID=91">Seminar of the Department of Applied Mathematics, National Chiao Tung University</a> (Hsin Chu)</b> (November 10, 2008)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue 2008</a> Villetaneuse</b> (November 20-21, 2008)
+<li>*<b><a href="http://algo.inria.fr/pf60/pf60.html">Colloquium for Philippe Flajolet's 60th Birthday</a> (Paris) </b> (December 1-2, 2008)
+<li>*<b>Monastir (Tunisie)</b> (December 16-23, 2008)
+<li><b><a href="http://www.labri.fr/perso/marckert/JCB.html">Journées de Combinatoire de Bordeaux</a> </b> (February 4-6, 2009)
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/"> Séminaire Lotharingien de Combinatoire</a> (Heilsbronn)</b> (February 22-25, 2009)
+<li>*<b><a href="">Journées Aléa</a> (CIRM, Marseille)</b> (March 16-20, 2009)
+<li>*<b> (Wien)</b> (March 22-April 1, 2009)
+<li>*<b>Stages Science académie/Animath/Science ouverte. (IHP, Paris)</b> (April 20-24, 2009)
+<li><b><a href="http://www.math.univ-toulouse.fr/~gamboa/Colloque_A._Rouault/">Colloque en l&rsquo;honneur d&rsquo;Alain Rouault</a> (IHP, Paris)</b> (April 27-28, 2009)
+<li>*<b>10e Salon de la culture et des jeux mathématiques (St Sulpice, Paris)</b> (28-31 May, 2009)
+<li><b><a href="http://cori09.labri.fr/">Journées en l&rsquo;honneur de Robert Cori</a> (Bordeaux) </b> (June 10-12, 2009)
+<li>*<b></b> Pawel Hitczenko (June-July, 2009)
+<li>*<b><a href="https://aofa2009.greyc.fr/">AofA 2009</a> (Fréjus)</b> (June 14-19, 2009)
+<li>*<b><a href="http://www-lih.univ-lehavre.fr/~bertelle/iccsa2009/iccsa2009.html">Complex Systems and Applications</a> (Le Havre) </b> (June 29-July 2, 2009)
+<li>*<b><a href="http://ja2009.univ-st-etienne.fr/">Journées arithmétiques</a> (Saint-Étienne)</b> (July 6-10, 2009)
+<li>*<b><a href="http://rsa2009.amu.edu.pl/">Random Structures and Algorithms 2009</a> (Poznań)</b> (August 3-7, 2009)
+<li><b>Colloque pour les 60 ans de Jacques Stern (Paris)</b> (September 4, 2009)
+<li><b><a href="http://ipht.cea.fr/statcomb2009/">Statistical physics, combinatorics and probability: from discrete to continuous models</a> (IHP, Paris)</b> (Sept 7 - Dec 18, 2009)
+<li><b><a href="http://ipht.cea.fr/statcomb2009/">Two-dimensional lattice models</a> (IHP, Paris)</b> (October 5-10, 2009)
+<li>*<b>Projet DGRSRT/CNRS (Paris 13) </b> (Oct 27-Nov 27, 2009)
+<li><b><a href="http://ipht.cea.fr/statcomb2009/">Random planar graphs and maps</a> (IHP, Paris)</b> (Nov 2-6, 2009)
+<li>*<b><a href="http://www.lirmm.fr/jga09/">Journées Graphes et Algorithmes</a> (Montpellier)</b> (Nov 5-6, 2009)
+<li>*<b>Quantum and Combinatorics (Zakopane)</b> (Nov 12-14, 2009)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue 2009</a> Villetaneuse</b> (November 19-20, 2009)
+<li>*<b><a href="http://www.cite-sciences.fr/fr/cite-des-sciences/">Fête de la science 2009</a> Cité des Sciences</b> (November 21-22, 2009)
+<li>*<b>Projet DGRSRT/CNRS: Cyril Banderier (Monastir) </b> (Dec 1-12, 2009)
+<li>*<b><a href="http://www.univ-k.rnu.tn/ar/recherche/page2.html">Séminaire de l'ISMAI Kairouan</a> (Kairouan) </b> (Dec 9, 2009)
+<li>*<b>Projet DGRSRT/CNRS: Rafik Aguech </b> (Dec 12-Jan 8, 2009)
+<li>*<b>Projet DGRSRT/CNRS: Kamel Mazhouda </b> (Dec 12-25, 2009)
+<li>*séminaire Mellin
+<li><b><a href="http://www.gdr-im.fr/?q=node/77">Journées GDR IM</a> (Paris 6)</b> (January 21-22, 2010)
+<li><b><a href="http://www.labri.fr/perso/marckert/JCB-2010.html">Journées de Combinatoire</a> (Bordeaux) </b> (January 27-29, 2010)
+<li>*<b>Alois Panholzer (Villetaneuse) </b> (Jan 31-Feb 27, 2010)
+<!-- <li><b><a href="https://www.lirmm.fr/arith/wiki/MathInfo2010/MathInfo2010">mathinfo</a> (CIRM, Marseille)</b> (February, 2010)-->
+<li>*<b><a href="http://www-apr.lip6.fr/alea2010/">Journées Aléa 2010</a> (CIRM, Marseille)</b> (March 22-26, 2010)
+<li>*<b><a href="/CALIN/Seminaire/">Séminaire CIP</a> (Villetaneuse)</b> (March 2, 2010)
+<li>*<b><a href="http://www-fourier.ujf-grenoble.fr/spip.php?page=Affessai&amp;theme=7">Séminaire de théorie des nombres de l'institut Fourier</a> (Grenoble)</b> (March 3, 2010) 
+<li>*<b><a href="/CALIN/Seminaire/">séminaire CIP</a> (Villetaneuse)</b> (April 13, 2010)
+<li>*<b><a href="http://scienceouverte.fr/spip/spip.php?article178">Stage de mathématiques "Danse avec l’erreur"</a> (Science Ouverte/Science Académie/Animath) (IHP, Paris) </b> (April 26-30, 2010)
+<li><b><a href="http://www-fourier.ujf-grenoble.fr/~rivoal/journeehyp.html">Journées hypergéométriques </a> (Grenoble)</b> (April 27-29, 2010)
+<li><b><a href="http://www.liafa.jussieu.fr/~corteel/dgb.html">Journée en l'honneur de Dominique Gouyou-Beauchamps</a> (Orsay)</b> (May 7, 2010) 
+<li>*<b><a href="/journee_calin/">Journée CALIN</a> : petite fête pour la création de la nouvelle équipe de combinatoire (Villetaneuse)</b> (May 11, 2010)
+<li>*<b><a href="http://www.cijm.org/">11e Salon Culture &amp; Jeux Mathématiques</a></b> (May 27-30, 2010)
+<li><b><a href="https://bv2010.greyc.fr/">Colloque pour les 60 ans de Brigitte Vallée. Numbers, Sequences, Lattices: Dynamical Analysis of Algorithms</a> (Caen)</b> (June 3-4, 2010)
+<li>*<b><a href=""></a>Mathématiques, informatique et magie (Collège)</b> (June, 2010)
+<li>*<b><a href=""></a> (Wien)</b> (June 15-27, 2010)
+<li>*<b><a href="http://www.aofa10.at">AofA 2010</a> (Vienna)</b> (June 28-July 2, 2010)
+<li>*<b><a href="http://www.unisi.it/eventi/lattice_path_2010/">Lattice Path Combinatorics and Applications 2010</a> (Siena) </b> (July 4-7, 2010)
+<li>*<b><a href=""></a>Pawel Hitczenko (Villetaneuse)</b> (June 30 - July 30, 2010)
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/wpapers/s65.html">SLC 65</a> (Strobl) </b> (September 12-15, 2010) 
+<li>*<b>Projet DGRST/CNRS : Cyril Banderier (Monastir)</b> (October 13-20, 2010)
+<li>*<b>Journées Combinatoire et Probabililités (Monastir) </b> (October 18-20, 2010)
+<!-- <li><b><a href="">Savante Banlieue</a> (Villetaneuse) </b> (October 21-22, 2010) -->
+<li>*<b>Projet DGRST/CNRS : Rafik Aguech</b> (November 5-19, 2010)
+<li>*<b><a href="http://www.ville-bondy.fr/culture/universite-populaire-averroes/">Université populaire de Bondy</a>Promenades mathématiques. (Bondy) </b> (December 9, 2010)
+<li>*<b>Jury de thèse de Réda Sahnoun (Versailles)</b> (December 14, 2010)
+<li>*<b>Projet DGRST/CNRS : Chouaïd Souissi</b> (December 10-24, 2010)
+<!-- first lego league -->
+<li><b><a href="http://wiki.sagemath.org/days28">Sage Math days #28</a> (Orsay) </b> (January 17-19, 2011)
+<li><b><a href="http://www.math.ens.fr/metric2011/">Metric geometry, algorithms and groups</a> (IHP)</b> (2011)
+<li><b><a href="http://www.gdr-im.fr/?q=node/92">Journées nationales d'informatique mathématique</a> (Jussieu) </b> (Jan 20-21, 2011)
+<li><b><a HREF="http://www.labri.fr/perso/marckert/JCB-2011.html">Journées de combinatoire de Bordeaux</a> (Bordeaux) </b> (Jan 26-28, 2011)
+<li>*<b><a href="http://www.lix.polytechnique.fr/alea11/">Journées Aléa 2011</a> (CIRM, Marseille) </b> (Mar 7-11, 2011)
+<li>*<b>Comité de sélection P13</b> (April 13 &amp; May 13, 2011)
+<li>*<b><a href=""></a>Science académie</b> (April 18-22, 2011)
+<li><b><a href="http://aofa2011.im.pwr.wroc.pl/">AofA 2011</a> (Poland)</b> (June 12-18, 2011)
+<li>*<b><a href="http://old-lipn.univ-paris13.fr/recherche/distinctions/?lang=fr#lavault">Journée en l'honneur de l'éméritat de Christian Lavault</a> (Villetaneuse)</b> (July 5, 2011)
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/wpapers/s67preface.html">SLC</a> (Bertinoro) </b> (September 18-21, 2011)
+<li>*<b><a href="http://www.univ-paris13.fr/details/272-la-nuit-des-chercheurs.html">Nuit des chercheurs</a> (Bobigny) </b> (September 23, 2011)
+<li>*<b><a href="http://www.siam.org/meetings/ag11/">SIAM Conference on Applied Algebraic Geometry</a> (Raleigh) </b> (October 6-9, 2011)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue</a> (Villetaneuse) </b>  (October 13-14, 2011)
+<li><b><a href="http://jncf.math.cnrs.fr/2011/index.html">Journées nationales de calcul formel</a> (CIRM, Marseille) </b> (November 14-18, 2011)
+<li>*<b><a href=""></a>Combinatorial physics (Krakow) </b> (November 23-27, 2011)
+<li>*<b><a href=""></a>Projet CNRS-DGRSRT  (Monastir/Sfax) </b> (December 4-11, 2011)
+<li>*<b><a href=""></a>Projet CNRS-DGRSRT (Villetaneuse) </b> (December 11-18, 2011)
+<li>*<b><a HREF="http://algo.inria.fr/pfac/PFAC/PFAC.html">Philippe Flajolet and Analytic Combinatorics</a> (Paris) </b> (December 14-16, 2011)
+<li>*<b><a href="http://www.siam.org/meetings/analco12/">ANALCO 2012</A> (Kyoto) </b> (January 16, 2012)
+<li><b><a href="http://www.siam.org/meetings/da12/index.php">SODA 2012</a> (Kyoto) </b> (January 17-19, 2012)
+<li><b><a href="">Journées du GDR-IM</a> </b> (January 25-26, 2012)
+<li><b><a href="http://www.labri.fr/perso/marckert/JCB-2012.html">Journées de Combinatoire</a> (Bordeaux) </b> (February 1-3, 2012)
+<!-- <li><b>Hsien-Kuei Hwang  (Villetaneuse)</b> (February 28-9, 2012)
+<li><b>Mark Ward  (Villetaneuse)</b> (February 1-15, 2012) -->
+<li><b><a href="http://igm.univ-mlv.fr/AlgoB/algoperm2012/">Algorithms and Permutations</a> (Paris)</b> (February 20-21, 2012)
+<!-- Ecole Jeunes Chercheurs GDR IM, Rennes du 19 au 23 mars 2012 -->
+<li><b><a href="http://www.cirm.univ-mrs.fr/Site_test/spip.php?rubrique2&amp;EX=info_rencontre&amp;annee=2012&amp;id_renc=787">Journées Aléa 2012</a> (CIRM, Marseille) </b> (March 5-9, 2012)
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/wpapers/s68.html">Séminaire Lotharingien</a> (Ottrott) </b> (March 25-28, 2012)
+<li>*<b><a href="http://www.scienceouverte.fr/Stage-Sur-les-traces-de-Galois">Sur les traces de Galois</a> (IHP, Paris)</b> (April 16-20, 2012)
+<li><b>B. Gittenberger (Villetaneuse) </b>(May 1-30, 2012)
+<li><b><a href="http://www.liafa.jussieu.fr/~lovejoy/hypergeometric.html">Hypergeometric series and their generalizations in algebra, geometry, number theory and physics</a> (IHP) </b> (May 29-June 1, 2012)
+<li><b><a href="http://luc.devroye.org/AofA2012.html">AofA 2012</a> (Montréal)</b> (June 17-22, 2012)
+<li>*<b><a href="http://gascom2012.labri.fr/">GASCom 2012</a> (Bordeaux) </b> (June 25-27, 2012)
+<li><b><a href="http://gascom2012.labri.fr/?page_id=491">Journées X. G. Viennot</a> (Bordeaux) </b> (June 28-29, 2012)
+<li><b><a href="http://www.issac-conference.org/2012/">ISSAC</a> (Grenoble) </b> (July 22-25, 2012)
+<li><b><a href="http://www.math.nagoya-u.ac.jp/fpsac12/">FPSAC 2012</a> (Nagoya) </b> (30 July-3 August 2012)
+<li>*<b><a href="http://www.cnrs.fr/ins2i/spip.php?article143">Journées du PEPS Holonomix</a> (Lyon) </b> (September 10-14, 2012)
+<li>*<b><a href="http://www.nuitdeschercheurs-france.eu/ville/bobigny/">Nuit des chercheurs</a> (Bobigny) </b> (September 28, 2012)
+<li>*<b><a href="">PHC Amadeus (B. Gittenberger, M. Drmota)</a> (Villeteneuse) </b> (September 17-30, 2012)
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue</a> (Villetaneuse) </b> (Octobre 11-12, 2012)
+<li>*<b><a href="http://lipn.univ-paris13.fr/~aguech/ecole/">ADAMA : École d'automne en analyse d'algorithmes et modèles aléatoires</a> (Mahdia, Tunisie)</b> (October 16-21, 2012)
+<li>*<b><a href="">PHC Amadeus</a> (Wien) </b> (November 4-9, 2012)
+<li><b><a href="http://www.poincare.fr/100ans/le-colloque-scientifique-a-l-ihp/programme">Colloque Henri Poincaré</a> (IHP, Paris)</b> (November 19-23, 2012)
+<li><b><a href="">Journées du LIPN pour l'évaluation AERES</a> (Villetaneuse)</b> (December 11-12, 2012)
+<li>*<b>Jury de thèse d'Hanane Tafat Bouzid (Paris 13)</b> (December 12, 2012)
+<li><b><a href="">Journées du GDR-IM</a> (Lyon) </b> (January 21-22, 2013)
+<li>*<b>Christian Krattenthaler (Villetaneuse) (February 10-28, 2013)</b>
+<li>*<b><a href="http://www.labri.fr/perso/marckert/JCB-2013.html">Journées Combinatoires de Bordeaux</a> (Bordeaux)</b> (February 13-15, 2013)
+<li>*<b><a href="http://www.maths.qmul.ac.uk/combinatorial-probability-and-statistical-mechanics-workshop">Combinatorial Probability and Statistical Mechanics Workshop</a> (London) </b> (February 21-23, 2013)
+<li>*<b>Université populaire des Hauts-de-Seine / Université pour tous (Médiathèque de Bagneux) </b>   (5 février 2013)
+<li>*<b>Université populaire des Hauts-de-Seine / Université pour tous (Médiathèque de Bagneux) </b>   (19 février 2013)
+<li>*<b><a href="http://alea2013.labri.fr/">Journées Aléa</a> (Marseille) </b> (March 18-22, 2013)
+<li>*<b><a href="">Que disent les mathématiques sur notre environnement ?</a>  (Marseille) </b> (March 20, 2013)  [<a href="Talks/cirm.pdf">pdf</a>, <a href="http://www.youtube.com/watch?v=opoPJAfzvVs">video</a>]
+<li>*<b><a href="http://www.cnrs.fr/ins2i/spip.php?article143">Journées PEPS Holonomix</a> (Lyon)</b> (March 25-27, 2013)
+<li><b><a href="http://jpa.sciencesconf.org/"></a>Journées ANR Magnum (Caen) </b> (April 3-4, 2013)
+<li>*<b><a href="">ANR Magnum: Quelques problèmes ouverts liés à Magnum</a> (Paris)</b> (date 2011?)
+<li>*<b><a href="">ANR Magnum: Smoothed Analysis</a> (Paris)</b> (date 2011?)
+<li><b><a href="http://liafa.fr">Journées d'informatique fondamentale</a> (Paris) </b> (April 22-26, 2013)
+<li>*<b><a href="http://scienceouverte.org/">Science Ouverte</a> (IHP, Paris) </b> (April 29-May 4, 2013)
+<li><b><a href="http://jpa.sciencesconf.org/">Journée P-automatique</a> (IHP, Paris) </b> (April 30, 2013)
+<li>*<b><a href=""></a>PHC Amadeus &amp; FWF project SFB Algorithmic and Enumerative Combinatorics (F50) (Wien) </b> (May 10-21, 2013)
+<li>*<b><a href="http://aofa2013.lsi.upc.edu/">AofA 2013</a> (Menorca) </b> (May 27-31, 2013)
+<li>*<b><a href="http://www.liafa.jussieu.fr/fpsac13/">FPSAC 2013</a> (Paris) </b> (June 24-28, 2013)
+<li><b><a href="http://www.lix.polytechnique.fr/pp2013/index.php">Permutation Pattern 2013</a> (Paris) </b> (July 1-5, 2013)
+<li>*<b><a href="http://rsa2013.amu.edu.pl/">RSA 2013</a> (Poznań) </b> (August 5-9, 2013)
+<!-- <li><SMALL>[list of CFP for <a href="http://www.dcs.kcl.ac.uk/staff/jchan/conference.htm">conferences</a> and 
+<a href="http://www.diku.dk/topps/conf-deadline.html">workshops</a>]</Small> -->
+<li>*<b><a href="http://savantebanlieue.plainecommune.fr/page.php?id=214">Savante Banlieue</a> (Villetaneuse)</b> (October 10-11, 2013) [<a href="../Talks/savantebanlieue.html">transparents.pdf</a>]
+<li><b><a href="http://dmg.tuwien.ac.at/AleaInEurope17/">Aléa in Europe</a> (Marseille) </b> (October 20-25, 2013)
+<li>*<b><a href=""></a>PHC Amadeus: Bernhard Gittenberger (Villetaneuse) </b> (October 25-31, 2013)
+<li>*<b><a href="">PHC Orchid</a> (Taipei)</b> (31 Oct-12 Nov, 2013)
+<li><b><a href="http://raim2013.lip6.fr/index.php?id=programme">Rencontres Arithmétiques de l'Informatique Mathématique</a> (Paris) </b>(November 18-20, 2013)
+<li>*<b><a href=""></a>PHC Amadeus: Marie-Louise Bruner (Villetaneuse) </b> (November 21-28, 2013)
+<li>*<b><a href=""></a>Remise du Grand Prix à l'Académie des Sciences</b> (November 26, 2013)
+<li>*<b><a href=""></a>Cérémonie à l'Ambassade</b> (November 27, 2014)
+<li>*<b><a href="http://www.cnrs.fr/ins2i/spip.php?article143">Journées PEPS Holonomix</a> (Lyon)</b> December 2-4, 2013) 
+<li>*<b><a href="https://www.sfb050.risc.jku.at/">FWF Project Algorithmic and Enumerative Combinatorics</a> (Linz, Wien) </b> (December 10-20, 2013)
+<!--<li><b><a href="http://www.siam.org/meetings/da14/">SODA 2014 &amp; ANALCO 2014</a> (Portland) </b> (Jan 5-7, 2014)-->
+<li><b><a href="https://sites.google.com/site/geowalks2014/">Random Walks and Asymptotic Geometry of Groups</a> (Marseille) </b> (6-17 January 2014)
+<li>*<b>Jury de thèse d'<a href="http://arxiv.org/find/math/1/au:+Aksenov_A/0/1/0/all/0/1">Alexandre Aksenov</a> (Grenoble)</b> (January 16, 2014)
+<li><b><a href="http://lmv.math.cnrs.fr/seminaires-et-groupes-de-travail/seminaire-differentiel/">Combinatoire et équations fonctionnelles</a> (Versailles)</b> (January 21, 2014)
+<li><b><a href="http://www.ihp.fr/en/ceb/geowalks/workshop2">Random Walks on Groups</a> (IHP) </b> (27-31 January 2014)
+<li>*<b><a href="http://www.cirm.univ-mrs.fr/index.html/spip.php?rubrique2&amp;EX=info_semaine&amp;id_renc=1059&amp;annee=2014&amp;num_semaine=2">Prime numbers: new perspectives</a> (Marseille) </b> (10-11 February 2014)
+<li>*<b><a href="http://www-fourier.ujf-grenoble.fr/~jroques/journeesholonomes.html">Journées holonomes</a> (Grenoble) </b> (12-14 February 2014)
+<!--<li>-<b><a href="http://www.ihp.fr/en/ceb/geowalks/workshop3">Groups Acting on Rooted Trees</a> (IHP) </b>(24-28 February 2014)-->
+<li><b><a href="http://www.cirm.univ-mrs.fr/Site_test/spip.php?rubrique2&amp;EX=info_rencontre&amp;annee=2014&amp;id_renc=1051">Journées Aléa</a> (Marseille) </b> (March 17-21, 2014)
+<!--<li>-<b><a href="http://www.ihp.fr/en/ceb/geowalks/workshop4">Asymptotic Properties of Infinite Groups</a> (IHP)</b> (24-28 March 2014)-->
+<li>*<b><a href="http://www.ensil.unilim.fr/~cluzeau/felim2014/FELIM2014.html">FELIM</a> (Limoges) </b> (31 March-2 April 2014)
+<li>*<b><a href="http://portail.univ-st-etienne.fr/bienvenue/actualites/atelier-stephanois-de-combinatoire-additive-487303.kjsp?RH=actu">Atelier stéphanois de combinatoire additive</a> (Saint-&Eacute;tienne) </b> (5-7 May 2014)
+<!--<li>?<b><a href="http://www.mat.univie.ac.at/~kratt/esi3/">Combinatorics, Geometry, and Physics</a> (Wien) (2-13 June 2014)-->
+<li>*<b>Séminaire <a href="http://dpt-info-sciences.univ-rouen.fr/index.php/la-recherche/seminaires">Combinatoire &amp; Algorithmes au LITIS</a> (Rouen)</b> (12 June 2014)
+<li>*<b><a href="http://www.aofa14.upmc.fr/">AofA 2014</a> (Jussieu) </b> (16-20 June 2014)
+<li><b>Journée math-info proba : diffusion models (Villetaneuse) </b> (24 June 2014)
+<li>*<b><a href="http://iccsa2014.univ-lehavre.fr/iccsa2014-fullProgram.pdf">Combinatorial Physics and Complexity</a> (satellite workshop of <a href="http://iccsa2014.univ-lehavre.fr/">ICCSA 2014</a>) (Le Havre) </b> (25 June 2014)
+<!--<li>-<b><a href="https://sites.google.com/site/fpsac2014/home">FPSAC 2014</a> (Chicago) </b> (June 29-July 3, 2014)-->
+<li><b>Journée ANR Magnum (Marne-La-Vallée) </b> (1 July 2014)
+<li><b>Journée Combinatoire et théorie des langages (Villetaneuse) </b> (2 July 2014)
+<!--<li>-<b><a href="http://www.etsu.edu/cas/math/pp2014/default.aspx">Permutation patterns</a> (Johnson City) </b> (7-11 July 2014)-->
+<li><b>Collaboration with TU Wien: Michael Wallner (Villetaneuse)</b> (14-27 July 2014)
+<!--<li>-<b><a href="http://www.icm2014.org/en/about/welcome">ICM</a> (Seoul) </b> (13-21 August 2014)-->
+<li>*<b><a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/Nablus14.php">CIMPA Summer School 2014: "Random structures, Analytic and Probabilistic Approaches"</a> (Nablus) </b> (August 18-28, 2014)
+<!--<li>?<b><a href="http://www.mfo.de/occasion/1445a/www_view">Probability, Trees and Algorithms</a>  (Mathematisches Forschungsinstitut Oberwolfach) </b> (2-8 November 2014)-->
+<li><b><a href="http://mbm2014.labri.fr/index.php?n=Main.Programme">Médaille d'argent du CNRS de Mireille Bousquet-Mélou</a> (Bordeaux) </b> (2 October 2014)
+<li>*<b><a href="">PHC Taiwan</a> (Taipei) </b> (8-30 October 2014)
+<li><b><a href="http://www.lifl.fr/jncf2014/">JNCF 2014</a> (Marseille) </b> (3-7 November 2014)
+<li>*<b><a href="http://www.christianboyer.com/jumieges/index.htm">Cercle Pierre de Jumièges</a> (<a href="https://www.box.com/shared/b1y7o7488p">CNAM</a>) </b> (18 November 2014) 
+<li>*<b><a href="">PHC Taiwan</a> (Villetaneuse) </b> (24-30 November 2014)
+<li>*<b><a href="">PHC Taiwan</a> (Caen+Villetaneuse) </b> (8-20 December 2014)
+<li><b><a href="http://gdrim2015.labri.fr">Journées du GDR IM</a> (Bordeaux) </b> (2-3 February 2015)
+<li><b><a href="http://www.labri.fr/perso/marckert/JCB-2015.html">Journées de combinatoire de Bordeaux</a> (Bordeaux) </b> (4-6 February 2015)
+<li><b><a href="http://alea15.math.cnrs.fr/">Journées Aléa</a> (Marseille) </b>  (16-20 March 2015)
+<li>*<b><a href="http://www.mat.univie.ac.at/~slc/wpapers/s74.html">SLC</a> (Ellwangen) </b> (22-25 March 2015)
+<li>*<b>FWF project SFB Algorithmic and Enumerative Combinatorics (F50)(Linz)</b>  (26-29 March 2015)
+<li>*<b>Tu Wien cooperation (Wien)</b>  (30 March-2 April 2015)
+<li>*<b> <a href="http://hauser-rond.weebly.com/approximation-and-combinatorics.html">Approximation and combinatorics</a> (Marseille) </b> (April  2015)
+<li><b><a href="http://lipn.univ-paris13.fr/~ngocminh/CAP2.html">Combinatorics and Arithmetic for Physics : special days</a> (Bures-sur-Yvette) </b> (11-12 May 2015)
+<li><b><a href="http://w3.impa.br/~cmateus/journee.html">Journée LAGA surfaces plates</a> (Villetaneuse) </b> (20 May 2015)
+<!-- <li>-<b><a href="http://www.cant.ulg.ac.be/automatic2015/">Automatic Sequences</a> (Liège) </b> (25-29 May 2015) -->
+<li><b><a href="http://www.cijm.org/salon">Salon Culture &amp; Jeux Mathématiques</a> (Paris) </b> (28-31 May 2015) 
+<li><b><a href="http://www.math.ens.fr/groupdyn/">Growth, Symbolic Dynamics and Combinatorics of Words in Groups</a> (ENS) </b> (1-5 June 2015)
+<li><b><a href="http://proba.jussieu.fr/~jmyor/programme.html">Journées à la mémoire de Marc Yor</a> (Jussieu) </b> (3-5 June 2015)
+<li>*<b><a href="http://dmg.tuwien.ac.at/aofa15/">AofA 2015</A> (Strobl) </b> (8-12 June 2015)
+<li>*<b><a href="https://sites.google.com/site/pp2015london/">Permutation Patterns</a> (London) </b> (15-19 June 2015)
+<li>*<b><a href="http://combinatoires.imj-prg.fr/">Summer School "CombinatoireS"</a> (Paris) </b> (29 June-3 July 2015)
+<!-- <li>-<b><a href="http://fpsac.combinatorics.kr/">FPSAC</a> (Daejeon) </b> (6-10 July 2015)
+<li>-<b><a href="http://www.issac-symposium.org/2015/">ISSAC</a> (Bath) </b> (6-9 July 2015)
+<li>-<b><a href="http://ja2015.math.unideb.hu/">Journées arithmétiques</a> (Debrecen) </b> (6-10 July 2015) -->
+<li><b><a href="http://ja2015.math.unideb.hu/"> Kálmán Győry 75 Symposium</a> (Debrecen) </b>(10-11 July 2015)
+<!-- <li>-<b><a href="http://www.mate.polimi.it/RART2015/">Riordan arrays and related topics</a> (Milan) </b> (14-16 July 2015)
+<li>-<a href="http://www.singacom.uva.es/ACA2015">Applications of Computer Algebra</a> (Kalamata) </b> (20-23 July 2015)
+<li>-<b><a href="http://rsa2015.amu.edu.pl/">RSA 2015</a> (Pittsburgh) </b> (27-31 July 2015) -->
+<li>*<b><a href="http://www.siam.org/meetings/ag15/">SIAM Conference on Applied Algebraic Geometry</a> (Daejeon) </b> (3-7 August 2015)
+<li>*<b><a href=" http://www.cpp.edu/~sci/mathematics-statistics/lattice-path-combinatorics/index.shtml">Lattice Paths 2015</a> (California) </b> (17-20 August 2015)
+<!-- <li>-<b><a href="http://www.emis.de/journals/SLC/wpapers/s75.html">SLC</a> (Bertinoro) </b> (6-9 September 2015)-->
+<li>*<b><a href="https://www.fields.utoronto.ca/programs/scientific/15-16/computeralgebra/combinatorics/index.html">Workshop on Symbolic Combinatorics and Computational Differential Algebra</a> (Toronto) </b> (14-19 September 2015)
+<!-- <li>-<b><a href="http://lmrs.univ-rouen.fr/GRRMidi/rencontres.html">Rencontres structures discrètes</a> (Rouen)</b> 14-17 September 2015)-->
+<li>*<b><a href="http://math.unice.fr/~dmitsche/Fallschool/Fallschool.html">Random Graphs</a> (Cargèse) </b> (20-25 September 2015)
+<!-- <li>-<b><a href="http://colloqueliardet.sciencesconf.org/">Number theory, numeration systems, ergodic theory</a> (Le Bourget) </b> (28-29 September 2015)-->
+<!-- <li><b><a href="http://www.gdr-bim.cnrs.fr/coll-2015/tentative-programme-programme-previsionnel/">Colloque de bioinformatique moléculaire</a> (Institut Pasteur) </b> (7-8 October 2015) -->
+<li>*<b><a href="http://le2i.cnrs.fr/">Séminaire Le2i, Université de Bourgogne</a> (Dijon) </b> (9 October 2015)
+<li>*<b><a href="https://www.sinica.edu.tw/main_e.shtml">Académie des Sciences/Academia Sinica program</a> (Taipei) </b> (12-24 October 2015)
+<li>*<b><a href="http://www.dmg.tuwien.ac.at/">Institute of Discrete Mathematics and Geometry, TU Wien</a> (Wien) </b> (25 October - 1 November 2015)
+<li><b><a href="http://www.lifl.fr/jncf2015/">Journées nationales de calcul formel</a> (Cluny) </b> (2-6 November 2015)
+<li><b><a href="https://lipn.univ-paris13.fr/~banderier/Seminaires/">Journées pour le doctorat Honoris Causa de Christian Krattenthaler</a> (Villetaneuse) </b> (14-15 December 2015)
+<!-- <li>-<b><a href="http://www.siam.org/meetings/analco16/">SODA / ANALCO</a> (Arlington) </b> (10-12 January 2016) 
+<li>-<b><a href="https://www.gdr-im.fr/?q=les-journ-es-nationales">Journées du GDR-IM</a> (Villetaneuse) </b>  (18-20 January 2016) -->
+<li><b><a href="http://www.labri.fr/perso/borgne/JCB/JCB-2016.html">Journées de combinatoire de Bordeaux</a> (Bordeaux)</b> (27-29 January 2016)
+<!-- <li>-<b><a href="http://www.univ-orleans.fr/lifo/events/STACS2016/">STACS</a> (Orléans) </b> (17-20 February 2016) -->
+<li><b><a href="http://alea2016.gforge.inria.fr/">Journées Aléa</a> (Marseille) </b> (7-11 March 2016)
+<li><b><a href="http://mps2016.labri.fr/">Colloque en l'honneur de Marcel-Paul Schützenberger</a> (Bordeaux) </b> (21-25 March 2016)
+<li>*<b><a href="http://www.fdpoisson.fr/?q=agenda/index&amp;type=38">Séminaire de Probabilités et Théorie Ergodique</a> (Tours) </b> (1 April 2016)
+<li>*<b><a href="http://www.i3s.unice.fr/Gascom16/">GASCom</a> (Bastia) </b> (1-4 June 2016)
+<!-- <li><b><a href="http://smf2016.sciencesconf.org/">Congrès de la SMF</a> (Tours) </b> (6-10 juin 2016)-->
+<li>*<b><a href="http://www.fdpoisson.fr/madaca/conference.html">Conférence Madaca</a> (Sologne)</b> (20-24 June 2016)
+<li><b><a href="http://www.math.unicaen.fr/fibonacci/">Seventeenth International Conference on Fibonacci Numbers and Their Applications</a> (Caen) </b> (27 June-2 Jul 2016)
+<!-- <li>-<b><a href="https://permutationpatterns2016.wordpress.com/">Permutation Patterns </a> (Washington)</b> (June 27-July 1, 2016)-->
+<!-- <li>-<b><a href="https://sites.google.com/site/fpsac2016/">FPSAC</a> (Vancouver) </b> (4-8 July 2016)-->
+<li><b><a href="http://www.aofa2016.meetings.pl/">AofA 2016</a> (Kraków) </b> (4-8 July 2016)
+<li>*<b><a href="http://metaconc.stat.sinica.edu.tw/index.php/2016/03/02/members/">ANR France-Taiwan</a>  (Paris) </b> (28 August-2 September 2016)
+<li><b> <a href="https://indico.in2p3.fr/event/12461/">Quantum integrable systems, conformal field theories and stochastic processes</a> (Cargèse) </b> 
+(12-25 September 2016)
+<li><b><a href="http://www.birs.ca/events/2016/5-day-workshops/16w5048">Workshop in Analytic and Probabilistic Combinatorics</a> (Banff) </b> (23-28 October, 2016)
+<!--<li>-<b><a href="">Fractional transforms</a> (Krakow) </b> (6-11 November 2016)-->
+<li>*<b><a href="http://scd.docinsa.insa-lyon.fr/calendrier_animations/2016-11">Conférences de mathématiques de l'INSA Lyon</a> (Lyon) </b> (15 November 2016) 
+<a href="../Papers/insa.pdf">[slides]</a>
+<li>*<b><a href="http://metaconc.stat.sinica.edu.tw/index.php/2016/03/02/members/">ANR France-Taiwan</a>  (Taipei) </b> (16-27 November 2016)
+<li>*<b>Colloquium of the Department of Applied Mathematics, <a href="http://www.math.nctu.edu.tw/event/e_index.php?LECTURE_NC_ID=1&amp;L_start=15#Colloquium">National Chiao Tung University</a>  (Hsinchu) </b> (22 November 2016)
+<li><b><a href="http://www.cant.ulg.ac.be/cant2016/">Combinatorics, Automata and Number Theory</a> (CIRM, Marseille) </b> (28 November-2 December 2016)
+<li><b><a href="http://www.fdpoisson.fr/tours-a-grands-pas/">Marches aléatoires à grands pas dans des cônes</a> (Tours)</b> (14-16 December 2016)
+<!-- <li>-<b><a href="">ANALCO 2017 (SODA)</a> (Barcelona) </b> (January 2017)-->
+<li><b><a href="http://combi17.math.cnrs.fr/">Combinatorics and Interactions</a> (IHP)</b> (9 January-31 March 2017)
+<li><b><a href="http://jcb2017.labri.fr/index.php/Site/Programme">Journées Combinatoires</a> (Bordeaux)</b> (25-27 January 2017)
+<!-- <li>-<b><a href="https://stacs2017.thi.uni-hannover.de/">STACS 2017</a> (Hannover) </b> (8-11 March 2017)-->
+<li><b><a href="https://edate2017.sciencesconf.org/">&Eacute;quations différentielles : aspects théoriques et effectifs</a> (Grenoble) </b> (13-15 March 2017)
+<li><b><a href="http://alea2016.gforge.inria.fr/">Journées Aléa</a> (CIRM, Marseille) </b> (20-24 March 2017)
+<li><b><a href="https://www-apr.lip6.fr/~genitrini/journeeMS/">Journée en l'honneur de Michèle Soria</a> (Paris) </b>(12 May 2017)
+<li><b><a href="https://cla.tcs.uj.edu.pl/">Computational Logic and Applications</a> (Göteborg) </b> (18-19 May 2017)
+<li><b><a href="http://programme-scientifique.weebly.com/1595.html">Prime Numbers and automatic sequences</a> (CIRM, Marseille) </b> (22-26 May 2017)
+<li>*<b><a href="http://aofa2017.cs.princeton.edu/">AofA 2017</a> (Princeton) </b>  (19-23 June 2017)
+<li>*<b><a href=""></a>Nils Haug's PhD Defense (London) </b> (7 July 2017)
+<li><b><a href="https://sites.google.com/site/fpsac2017/">FPSAC 2017</a> (London) </b> (9-13 July 2017)
+<!-- <li>-<b><a href="http://rsa2017.amu.edu.pl/">RSA 2017</a> (Gniezno/Poznań) </b> (7-11 August 2017)-->
+<li><b><a href="https://indico.in2p3.fr/event/14720/">Exceptional and ubiquitous Painlevé equations for Physics</a> (Paris) </b> (16-18 August 2017) <a href="2017/LPTENS Painlevé 2017 Program.pdf">[.pdf]</a>
+<li><b><a href="http://www.dmg.tuwien.ac.at/eurocomb2017/">Eurocomb</a> (Wien) </b> (28 August-1 September 2017)
+<li><b><a href=""></a>*FWF project SFB Algorithmic and Enumerative Combinatorics (F50) (Wien) </b> (2-9 September 2017)
+<li><b><a href="http://www.birs.ca/events/2017/5-day-workshops/17w5090">Lattice walks at the Interface of Algebra, Analysis and Combinatorics</a> (Banff) </b> (17-22 September 2017)
+<!-- <li>-<b><a href="http://www.litislab.fr/conference-structure-discrete-2017/">Structures discrètes</a> (Rouen) </b>(27-29 Septembre 2017)-->
+<li>*<b><a href="http://dmg.tuwien.ac.at/AleaInEurope17/">Alea in Europe</a> (Wien) </b> (9-13 October 2017)
+<li><b><a href="http://www.mat.univie.ac.at/~kratt/esi4/">Algorithmic and Enumerative Combinatorics</a> (Wien) </b> (16-20 October 2017)
+<!-- <li>-<b><a href="http://conferences.cirm-math.fr/1672.html">Dynamics on Random Graphs and Random Maps</a> (CIRM, Marseille) </b> (23-27 October 2017)-->
+<li>*<b><a href=""></A>Workshop, National Chiao Tung University (Hsinchu) </b> (26-30 October 2017)
+<li>*<b><a href=""></a>Academia Sinica (Taipei) </b> (31 October-12 November 2017)
+<li><b><a href="https://jncf2018.lip6.fr/">Journées Nationales de Calcul Formel</a> (CIRM, Marseille) </b> (22-26 January 2018)
+<li><b><a href="http://jcb2018.labri.fr/index.php/Site/Programme">Journées Combinatoires</a> (Bordeaux)</b> (12-14 February 2018)
+<li>*<b><a href="https://conferences.cirm-math.fr/1776.html">Journées Aléa</a> (CIRM, Marseille) </b> (12-16 March 2018)
+<li><b><a href="https://cla.tcs.uj.edu.pl/">Computational Logic and Applications</a> (Paris) </b> (24-25 May 2018)
+<li><b><a href="https://conferences.cirm-math.fr/1761.html">Algebra, Arithmetic and Combinatorics of Differential and Difference Equations</a> (CIRM, Marseille) </b> (28 May-1 June 2018)
+<li>*<b><a href="http://gascom2018.hua.gr/">Gascom 2018</a> (Athens) </b> (18-20 June 2018)
+<li>*<b><a href="http://math.uu.se/aofa2018">AofA 2018</a> (Uppsala)</b> (25-29 June 2018)
+<li><b><a href="https://www.mat.univie.ac.at/~mfulmek/slc81/">KrattenthalerFest</a> (Strobl)</b> (9-12 September 2018)
+<li><b>*FWF project SFB Algorithmic and Enumerative Combinatorics (F50) (Wien) </b>(5-20 September 2018)
+<li><b>*Journée de la recherche inter-labos de l'institut Galilée (Villetaneuse) </b> (22 November 2018)
+<li><b><a href="https://statmech2018.sciencesconf.org/">États de la recherche SMF : mécanique statistique</a> (Paris) </b>(10-14 December 2018)
+<li><b><a href="http://metaconc.stat.sinica.edu.tw/">Journées ANR MetaConc</a> (Caen) </b> (31-1 January/February  2019)
+<li><b><a href="http://jncf.math.cnrs.fr/2011/index.html">Journées nationales de calcul formel</a> (CIRM, Marseille) </b> (4-8 February 2019)
+<li><b><a href="http://jcb2019.labri.fr/">Journées de Combinatoire de Bordeaux</a> (Bordeaux) </b>  (11-13 February 2019)
+<li>*<b><a href="https://www.birs.ca/events/2019/5-day-workshops/19w5220">Asymptotic Algebraic Combinatorics</a>  (Banff)</b> (11-15 March 2019)
+<li><b><a href="http://gt-alea.math.cnrs.fr/alea2019/">Journées Aléa</a> (CIRM, Marseille)</b> (18-22 March 2019)
+<li>*<b><a href="https://indico.math.cnrs.fr/event/4208/page/321-overview">FELIM 2019</a> (Limoges)</b> (25-27 March 2019)
+<li>*<b>Séminaire du Le2i (Dijon)</b>  (6 May 2019)
+<li><b>*<a href="https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/ANTEE/2019_1/0211237F/FOPC_0211237F_4447.pdf">Fiche Galaxie du poste MDC</a>, Comité de sélection (<a href="http://le2i.cnrs.fr/-Combinatoire-">Dijon</a>) </b> (7 &amp; 17 May 2019)
+<li>*<b><a href="https://www.irif.fr/seminaires/combi/index">Séminaire de combinatoire énumérative et analytique</a> (IRIF, Paris)</b>  (23 May 2019)
+<li><b><a href="https://www.math.u-psud.fr/~jf60/">Walking through the Brownian zoo (Jean-François Le Gall's 60th birthday)</a> (Paris)</b> (3-7 June 2019)
+<li>*<b><a href="https://sites.google.com/view/permutation-patterns-2019/home?authuser=0">Permutation Patterns</a>  (Zurich) </b> (17-21 June 2019)
+<li><b><a href="http://aofa2019.gforge.inria.fr/">AofA 2019</a> (Marseille) </b> (24-28 June 2019)
+<li><b><a href="http://fpsac2019.fmf.uni-lj.si/">FPSAC 2019</a> (Ljubljana) </b> (1-5 July 2019)
+<li><b><a href="https://www3.risc.jku.at/conferences/opsfa2019/">Orthogonal Polynomials, Special Functions and Applications (OPSFA'19)</a> (Linz) </b> (22-26 July 2019) 
+<li>*<b><a href="https://www.aau.at/en/">Alpen-Adria-Universität Klagenfurt</a> (Klagenfurt) </b> (27-31 July 2019)
+<li>*-<b><a href="http://eurocomb2019.uniba.sk/">Eurocomb 2019</a> (Bratislava) </b> (26-30 August 2019)
+<li>*<b><a href=""></a>Journées ANR MétaConc (Caen) </b> (30-31 August 2019)
+<li>*<b><a href="https://www.aau.at/en/">Alpen-Adria-Universität Klagenfurt</a> (Klagenfurt) </b> (17-24 September 2019)
+<li><b><a href="https://conferences.cirm-math.fr/2077.html">Prime numbers, determinism and pseudo-randomness</a> (CIRM, Marseille) </b> (4-8 November 2019)
+<a name="future"></a><li>Perhaps I will go there:
+<li>For sure, I attend with pleasure  the <a href="http://lipn.univ-paris13.fr/~banderier/Seminaires/">CALIN seminar</a>,
+the other <a href="https://lipn.univ-paris13.fr/fr/laboratoire/seminaires">LIPN</a> seminars,
+<a href="https://www.math.univ-paris13.fr/laga/index.php/fr/laboratoire/seminaires">LAGA</a> seminars,   <a href="http://semflajolet.math.cnrs.fr">Philippe Flajolet</a> seminar,
+the <a href="http://specfun.inria.fr/seminar/">Specfun</A> seminar (and in the good old days, the <a href="http://algo.inria.fr/seminars/">algorithms project</a> seminar).
+<li><b><a href="http://jcb2020.labri.fr/">Journées de Combinatoire de Bordeaux</a> (Bordeaux) </b>  (5-7 February 2020)
+<li>*<b><a href="http://www.iecl.univ-lorraine.fr/Les-Seminaires/Theorie-Des-Nombres/wolfcms/seminaire.html">Séminaire de théorie des nombres</a> (IECL, Nancy) </b> (13 February 2020)
+<li><b><a href="https://conferences.cirm-math.fr/2326.html">Journées nationales de calcul formel</a> (CIRM, Marseille) </b> (2-6 March 2020)
+<li><b><a href="http://gt-alea.math.cnrs.fr/alea2020/">Journées Aléa</a> (CIRM, Marseille)</b> (16-20 March 2020)
+<li><b><a href="https://www-igm.univ-mlv.fr/~slc/">SLC</A> (Joyeuse) </b> (22-26 March 2020)
+<li><b><a href="https://periodes.sciencesconf.org/">Périodes (Yves Andrée'60)</a> (IHP) </b> (6-10 April 2020)
+<li><b><a href="https://www.math.aau.at/AofA2020/">AofA 2020</a> (Klagenfurt) </b> (15-19 June 2020)
+<li><b><a href="https://gascom2020.dista.uninsubria.it/">Gascom 2020</a> (Varese) </b> (22-24 June 2020)
+<li><b><a href="http://fpsac.org/confs/fpsac-2020/">FPSAC 2020</a> (Ramat-Gan) </b> (13-17 July 2020)
+<!--
+<li><b><a href="">Lattice Path Combinatorics and Interactions</a>  (CIRM, Marseille) </b> (21-25 June 2021)
+-->
+</ul>
+<div style="font-size: smaller;">
+Legend:
+<div><ul>
+<li>"*" marks conferences/events to which I had a presentation, or an article accepted, or a specific role in the organisation
+<li>"-" marks conferences which are interesting me but to which I will/did not go,
+<li>"no mark" for conferences to which I was just attending ;-)
+</ul>
+</div>
+</div>
+<HR class="yellow">
+
+<table class=CENTERED width="100%">
+<TR><td><SMALL><i>Last modified: </i> Monday 15 April 2019  </SMALL> </td>
+
+<td>
+<A href="https://validator.w3.org/check?uri=referer">
+
+<IMG style="border:0"
+          src="https://lipn.fr/~banderier/common/valid-html401.png"
+          alt="Valid HTML 4.01!" height="15" width="45"></A>
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+                     <img style="border:0;width:45px;height:15px"
+  src="https://lipn.fr/~banderier/common/vcss.png"
+                  alt="Valid CSS!">
+              </a></TD>
+<td><SMALL>
+Contact for this webpage: Cyril.Banderier <i>at</i> lipn.univ-paris13.fr</SMALL></TD>
+
+
+
+<td>
+<form method="GET" action="https://www.google.fr/search">
+<div><input maxlength=20 name=q value=""  size=20>
+<input type=hidden name=sitesearch value="lipn.univ-paris13.fr">
+<input type=SUBMIT value="Search in this site">
+</div>
+</form>
+</td>
+</tr>
+</table>
+
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3376402-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>
+

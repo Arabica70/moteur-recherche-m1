@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Sidi Mohamed Sedjelmaci</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Sidi Mohamed Sedjelmaci">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/CALIN/?lang=fr">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Sidi Mohamed Sedjelmaci</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 860px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="/~sedjelmaci/sms.jpg" height="240" width="320" alt="SidiMohamedSedjelmaci"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Sidi Mohamed Sedjelmaci<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   A110<br>
+Tél :    +33 1 49 40 35 95<br>
+Fax :   +33 1 48 26 07 12<br>
+Courriel :   sms<i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+<P>
+J'ai une double formation en mathématique (thèse de Doctorat en EDP, à Lille 1) et en informatique 
+(thèse de Doctorat sur la complexité du calcul de PGCD en parallèle, à Paris 13). J'ai enseigné  en 
+mathématiques pures et appliquées pendant plus d'une dizaine d'années à Oran en Algérie. 
+Depuis, j'ai été ATER à l'UTC de Compiègne, Paris 13, Cergy et à l'IUT de Vitry (où j'ai enseigné de l'algorithmique, de la programmation C et du parallélisme).  J'enseigne actuellement en mathématiques à l'école d'ingénieurs ESILV, Centre Léonard de Vinci, Paris La Défense.
+
+<H2>Thèmes de recherche:</H2> 
+<P>
+Algorithmes parallèles, analyse de complexité, calcul scientifique, arithmétique des ordinateurs, calcul formel,  plus grand commun diviseur (pgcd).
+
+
+<H2>Quelques publications</H2>
+<P>
+Don't hesitate to contact me if you would like a reprint. 
+<P>
+<UL> 
+
+<LI><B><A HREF="/~sedjelmaci/ants2018.pdf"> Worst case analysis of a subtractive like GCD algorithm</a></B>, S. M. Sedjelmaci, LIPN Report, updated version, May  (2018).
+
+<LI><B><A HREF="/~sedjelmaci/sed-issac-17.pdf"> Slides of the paper Two fast parallel GCD algorithm for many integers</a></B>, S. M. Sedjelmaci, ISSAC 2017, July 25-28, 2017, Kaiserslautern, Germany. 
+
+<LI><B><A HREF="/~sedjelmaci/Sed17.pdf">Two fast parallel GCD algorithm for many integers</a></B>, S. M. Sedjelmaci, in proceedings of ISSAC 2017, ACM Press, pp. 397-404, July 25-28, 2017, Kaiserslautern, Germany. 
+
+<LI><B><A HREF="/~sedjelmaci/JSC-12-Sed-Roy.pdf">New Fast  Euclidean Algorithms</a></B>,
+ M-F. Roy, S. M. Sedjelmaci, Journal of Symbolic Computation, 50 (2013) 208-226.
+
+<LI><B><A HREF="/~sedjelmaci/lipn13.pdf">Fast parallel GCD algorithm for many integers</a></B>, S. M. Sedjelmaci, accepted as Poster at ISSAC 2013, Boston, USA (2013) and in ACM Communications in Computer Algebra, Vol 47, No. 3, Issue 185, September 2013, pp. 92-93. 
+
+<LI><B><A HREF="/~sedjelmaci/Hankel-2-2.pdf">Parallel Hankel-based Integer GCD</a></B>, S. M. Sedjelmaci, LIPN Report, January  (2013).
+
+<LI><B><A HREF="/~sedjelmaci/coMI2.pdf">Some Related Functions to Integer GCD and Coprimality</a></B>,
+S. M. Sedjelmaci, Latin American Graph and Algorithms Symposium, LAGOS'2011, Bariloche, Argentina, Electronic Notes in Discrete Mathematics, 37 (2011), 135-140.
+
+
+<LI><B><A HREF="/~sedjelmaci/ENDM1006.pdf">The Mixed Binary Euclid Algorithm</a></B>,
+S. M. Sedjelmaci, Electronic Notes in Discrete Mathematics, 35 (2009), 169-176.
+
+<LI><B> Worst Case Analysis of Purdy Algorithm </B>,
+S. M. Sedjelmaci, submitted, 2010. 
+
+<LI><B><A HREF="/~sedjelmaci/MBE.pdf">The Mixed Binary Euclid Algorithm</a></B>,
+S. M. Sedjelmaci, Latin American Graph and Algorithms Symposium, LAGOS'09, Gramado, Brasil, 2009.
+
+<LI><B><A HREF="/~sedjelmaci/PARgcd.pdf">A Staight Line Program for computing Integer GCD</a></B>,
+ S. M. Sedjelmaci, 2008, Poster talk  at ANTS VIII, May 17-22, Banff (Alberta), Canada, also available in ACM SIGSAM Bulletin, Issue 164, Vol. 42, No. 2, June 2008.
+
+
+<LI><B><A HREF="/~sedjelmaci/JDA08.pdf">A Parallel Extended GCD Algorithm</a></B>,
+ S. M. Sedjelmaci, 2008, Journal of Discrete Algorithms, 6, (2008) 526-538.
+
+
+<LI><B> <A HREF="/~sedjelmaci/ipl07.pdf">A Jebelean-Weber like  Algorithm without Spurious Factors</a></B>,
+S. M. Sedjelmaci, Information Processing Letters, vol.102, no.6, North-Holland, pp.247-252,  June 2007.
+
+<LI><B>Note on the Parallel Complexity of Integer Coprimality and The Modular Inversion</B>,
+S. M. Sedjelmaci, LIPN Report 2005-03, September, 2005. 
+ 
+<LI><B><A HREF="/~sedjelmaci/abstract27.pdf">The Accelerated  Euclidean Algorithm</a></B>,
+S.M. Sedjelmaci, Poster talk presented at ISSAC 2004, July 3-7, University of
+Cantabria, Santander, Spain, also available 
+ in Proceedings of the EACA, Laureano Gonzales-Vega and Thomas Recio Eds., 
+pp. 283-287, July 1-3, 2004, Santander, Spain.
+  
+<LI><B><A HREF="/~sedjelmaci/JCAM-04.pdf">A modular reduction for GCD computation</a></B>,
+S.M. Sedjelmaci,
+ Journal of Computational and Applied Mathematics, Volume 162, Issue 1, 1
+ January 2004, Pages 17-31.
+
+<LI><B><A HREF="/~sedjelmaci/sedjelmaci.pdf">On a parallel Lehmer-Euclid GCD algorithm</a></B>,
+S.M Sedjelmaci, ISSAC 2001, ACM Press, 303-308, July 22-25, 2001, London, Canada.
+
+<LI><B><A HREF="/~sedjelmaci/LibanIEEE.pdf">On a parallel extended Euclidean algorithm</a></B>,
+S.M Sedjelmaci, in ACS/IEEE International Conference on Computer Systems and Applications 
+AICCSA'2001, 235-241, June 26-29, 2001, Beyrouth, Liban.
+
+<LI><B><A HREF="/~sedjelmaci/IPL-99.pdf">Worst-Case Analysis of Weber's Algorithm</a></b>, 
+C. Lavault, S. M. Sedjelmaci,  
+Information Processing Letters, vol. 72, n 3-4, North-Holland, p. 125-130, 1999.
+
+<LI><B><a HREF="/~sedjelmaci/IPL-97">Improvements on the Accelerated Integer GCD Algorithm</a></B>
+S.M. Sedjelmaci, C. Lavault, 
+Information Processing Letters, Vol. 61, no 1, North-Holland, 1997, p. 31-36.
+
+<LI><B><A HREF="/~sedjelmaci/NewModular.ps">A New Modular Division Algorithm and
+Applications</a></B>, 
+S. M. Sedjelmaci, C. Lavault, in the Proceedings of the 6th International 
+Conference on Theoretical Computer Science (ICTCS'98), 
+eds. P. Degano, U. Vaccaro, G. Pirillo, World Scientific, p. 65-76, 
+Nov. 1998, Prato,
+Italy.
+
+
+<LI><B>Convergence acceleration 
+of monotone sequences using synchronous subsequences</B>, M.N. Senhadji and 
+S. M. Sedjelmaci, in the Proceedings of Colloque sur 
+les mathématiques appliquées, Avril 1993, Oujda, Marocco.
+
+
+<LI><B>Expémentation d'un noyau 
+graphique basé sur une arithmétique exacte</B>, 
+S. M. Sedjelmaci and Y. Slimani, in the Proceedings of les 1ères 
+ journées de mathématiques appliquées, Vol. 2,  p. 524, 15-17   
+Juillet 1992, EMI Rabat, Marocco. 
+
+
+<LI><B>Expériences numériques sur diverses arithmétiques</B>, 
+S. M. Sedjelmaci, in the Proceedings of Colloque national sur les Micro-ordinateurs 
+et Systèmes, Feb. 1988, Arzew, Algeria.
+
+<LI><B>The B-ary equivalent of Hensel Code</B>, 
+S. M. Sedjelmaci, ERSIG Preprint  89-03, Univerisity of Es-Sénia Oran,  
+ 1989, Algeria.
+
+<LI><B><A HREF="/~sedjelmaci/Lav-ret-11.pdf">Talk in honnor of Prof. Christian Lavault's  retirement (in French)</a></B>, Jully 5th, 2011.
+
+</UL>
+
+<H2>Mon CV détaillé en anglais</H2>
+
+<P><BR><a HREF="Eng2.pdf">Curriculum Vitae (English version)</a>
+
+
+
+
+
+<H2>Mon CV cours (une page) en français</H2>
+
+<P><BR><a HREF="cvCOURT-09.pdf">Curriculum Vitae (version française)</a>
+
+
+<H2>Articles en préparation</H2>
+<P>
+<UL>
+<LI><B> A New Staight Line Program for computing Integer GCD</B>.
+<LI><B> Some properties of Collatz sequences</B>.
+</UL>
+<H2>Loisirs: Guitare:</H2> 
+<LI><B> Je passe beaucoup de temps à jouer de la guitare,... ça me sert à préparer mes cours et a faire un peu de recherche (ce qui pourrait expliquer mon faible rendement !)<B>.
+
+<P>
+
+<UL>
+
+<P>
+
+<P>
+<H2>My publications are in the french version of my home page.</H2> 
+<P>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /~cerin/GUI-1/java</title>
+ </head>
+ <body>
+<h1>Index of /~cerin/GUI-1/java</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/~cerin/GUI-1/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="EnsValMeteo.class">EnsValMeteo.class</a></td><td align="right">2018-03-30 16:32  </td><td align="right">334 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="EnsValMeteo.java">EnsValMeteo.java</a></td><td align="right">2018-03-23 16:52  </td><td align="right">105 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FenSimpleFive.java">FenSimpleFive.java</a></td><td align="right">2018-03-12 10:08  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FenSimpleFour.java">FenSimpleFour.java</a></td><td align="right">2018-03-12 09:35  </td><td align="right">2.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FenSimpleFourBIS.java">FenSimpleFourBIS.java</a></td><td align="right">2018-03-12 13:54  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FenSimpleTer.java">FenSimpleTer.java</a></td><td align="right">2018-03-05 18:57  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FenSimplebis.java">FenSimplebis.java</a></td><td align="right">2018-03-05 12:05  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Fenetre.java">Fenetre.java</a></td><td align="right">2018-03-12 11:57  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="GloubiBoulga.java">GloubiBoulga.java</a></td><td align="right">2018-06-15 08:09  </td><td align="right">3.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Lexique.txt">Lexique.txt</a></td><td align="right">2018-05-29 09:58  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="LnFListener.java">LnFListener.java</a></td><td align="right">2018-05-27 13:48  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Sample.java">Sample.java</a></td><td align="right">2018-05-25 08:14  </td><td align="right">965 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Sample.txt">Sample.txt</a></td><td align="right">2018-05-26 08:50  </td><td align="right">4.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SampleBis.java">SampleBis.java</a></td><td align="right">2018-05-25 08:14  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SwingPaintDemo4.java">SwingPaintDemo4.java</a></td><td align="right">2018-05-27 12:24  </td><td align="right">5.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Takuzu.java">Takuzu.java</a></td><td align="right">2018-04-25 20:39  </td><td align="right"> 21K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="VueStationMeteo.java">VueStationMeteo.java</a></td><td align="right">2018-03-12 12:21  </td><td align="right">2.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="VueStationMeteoBis.java">VueStationMeteoBis.java</a></td><td align="right">2018-03-23 16:52  </td><td align="right">5.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="VueStationMeteoQuatre$StationMeteoConstantes.class">VueStationMeteoQuatre$StationMeteoConstantes.class</a></td><td align="right">2018-03-30 16:32  </td><td align="right">733 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="VueStationMeteoQuatre.class">VueStationMeteoQuatre.class</a></td><td align="right">2018-03-30 16:32  </td><td align="right">5.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="VueStationMeteoQuatre.java">VueStationMeteoQuatre.java</a></td><td align="right">2018-03-30 18:58  </td><td align="right">6.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="VueStationMeteoTer.java">VueStationMeteoTer.java</a></td><td align="right">2018-03-30 10:42  </td><td align="right">6.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="all.tar.bz2">all.tar.bz2</a></td><td align="right">2018-06-20 18:32  </td><td align="right"> 16K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fichier.txt">fichier.txt</a></td><td align="right">2018-03-23 16:52  </td><td align="right">114 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fichier_sauv.txt">fichier_sauv.txt</a></td><td align="right">2018-03-30 18:58  </td><td align="right">101 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/layout.gif" alt="[   ]"></td><td><a href="projetSwingTakuzu.pdf">projetSwingTakuzu.pdf</a></td><td align="right">2018-05-27 14:07  </td><td align="right">276K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="swingset2/">swingset2/</a></td><td align="right">2018-05-25 08:26  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

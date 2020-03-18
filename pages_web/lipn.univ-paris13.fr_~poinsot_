@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Laurent Poinsot index</title>
+
+
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+<!-- INSERTION FEUILLE DE STYLE CSS -->
+  <link rel="stylesheet" href="New.css" type="text/css" media="screen">
+
+<!-- INSERTION COMPTEUR GOOGLE-ANALYTICS -->
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-19715163-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+  </script>
+</head>
+
+
+<body>
+
+<!-- DEBUT DU FOND -->
+<div class="photo"><img src="Images/fond1.jpg" alt="Lorenzo" width="170"></div>
+
+<!-- FIN DU FOND -->
+<!-- DEBUT DU MENU -->
+<div class="menu">
+<ul>
+
+  <li><a href="index.html">Accueil
+/ <span class="en">Home</span></a></li>
+
+
+  <li><a href="papers.html">Articles
+de recherche / <span class="en">Research articles</span></a></li>
+
+  <li><a href="manuscrits.html">HDR,
+Th&egrave;se / <span class="en">HDR, PhD</span></a></li>
+
+  <li><a href="preprints.html">Pr&eacute;publications
+et notes / <span class="en">Preprints and notes</span></a></li>
+
+  <li><a href="books.html">Livre, et chapitres de
+livres
+/ <span class="en">Book, and books chapters</span></a></li>
+
+  <li><a href="talks.html">Expos&eacute;s
+/ <span class="en">Talks</span></a></li>
+
+</ul>
+
+</div>
+
+<!-- FIN DU MENU -->
+<!-- DEBUT DE L'ENTETE -->
+<div class="entete">
+<h1>Laurent Poinsot</h1>
+
+<h2>Accueil / <span class="en">Home</span></h2>
+
+</div>
+
+<!-- FIN DE L'ENTETE -->
+<!-- DEBUT DU CONTENU -->
+<div class="contenu">
+<h3>Ma&icirc;tre de conf&eacute;rences en
+Math&eacute;matiques / <span class="en">Associate
+professor in Mathematics</span></h3>
+
+<div class="retrait">
+<a href="http://www-lipn.univ-paris13.fr/" target="blank">LIPN
+</a> - UMR CNRS 7030<br>
+
+<a href="http://ecole-air.fr/" target="blank">&Eacute;cole
+de l'Air</a> <br>
+
+Base
+a&eacute;rienne 701<br>
+
+Salon-de-Provence<br>
+
+France
+<br>
+
+<b>E-mail :</b> laurent [dot] poinsot [at]
+lipn [dot] univ [hyphen] paris13 [dot] fr<br>
+
+<!-- <b>Bureau / <span class="en">Office</span> :</b>
+A 108 <br> -->
+</div>
+
+</div>
+
+</body>
+</html>

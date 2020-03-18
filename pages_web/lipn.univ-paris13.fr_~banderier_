@@ -1,0 +1,904 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+  <TITLE> Cyril Banderier's Home Page</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- meta name="robots" content="noimageindex" -->
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta name="language" content="English">  
+<meta http-equiv="Content-Language" content="en">
+<META name="DESCRIPTION" content="Cyril Banderier's Home Page">
+<meta name="keywords" content="Cyril Banderier, combinatoire analytique, analyse d'algorithmes, paris 13, CNRS, LIPN">
+<link rel="canonical" href="http://lipn.univ-paris13.fr/~banderier/">
+<link rel="alternate" hreflang="en" href="http://lipn.univ-paris13.fr/~banderier/?lang=uk">
+<link rel="alternate" hreflang="fr" href="http://lipn.univ-paris13.fr/~banderier/?lang=fr">
+<STYLE type="text/css">
+BODY {
+  color: black;
+  text-align: justify;
+  background: white url(/common/LIPNbg12.GIF);
+  margin: 1em;
+}
+
+FONT.redblink { 
+	color: red; 
+	text-decoration: blink;
+}
+
+TABLE.two-column {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+TD.title {
+  border: 0px;
+  text-align: center;
+}
+
+TD.buttonb{
+	  background-color: rgb(0,230,255); 
+	    color: black;
+	      border: solid 1px black;
+		  font-size: 85%;
+		    text-align: center;
+		      width: 8%;
+	      }
+	      
+TD.button {
+  background-color: rgb(0,230,255); 
+  color: black;
+  border: solid 1px black;
+  font-size: 85%;
+  text-align: center;
+  width: 8%;
+}
+TD.inactive {
+  background-color: rgb(245,245,245); /* white smoke */
+  border: solid 1px black;
+  color: black;
+}
+A.button {
+  color: black;
+  display : block;
+  text-decoration: none;
+}
+A.buttonb {
+	  color: black;
+	    display : block;
+	      text-decoration: none;
+      }
+
+
+TD.current {
+  background-color: rgb(255,204,51); 
+  border: solid 1px rgb(0,0,128); /* navy blue */
+}
+
+DIV.centered {
+  text-align: center;
+}
+DIV.footer {
+  font-size: small;
+  font-style: oblique;
+}
+HR.no-banner {
+  background-color: rgb(0,230,255); 
+  border: solid 1px black;
+  height: 8px;
+}
+HR.yellow {
+  background-color: rgb(255,204,51); 
+  border: none;
+  height: 1px;
+}
+
+.background-blue {
+  background-color: rgb(0,230,255); 
+}
+.background-smoke {
+  background-color: rgb(245,245,245); 
+}
+.background-yellow {
+  background-color: rgb(255,204,51); 
+}
+
+a:hover, a:active {
+        color: #cc33cc;
+        }
+div.header div.Paris13 {
+  position:static;
+  left:10px;
+  top:80px;
+  margin-left:10px;
+  width: 142px;
+  height: 37px;
+  background: transparent url(/common/logoP13Petit.GIF) no-repeat top left;
+}
+div.header div.Paris13 span {
+  display:none ;
+}
+div.header div.CNRS {
+  position:static;
+  right:0px;
+  top:50px;
+  margin-right:10px;
+  width: 207px;
+  height: 99px;
+  background: transparent url(/common/LogoCNRS.gif) no-repeat top right;
+}
+div.header div.CNRS span {
+  display:none ;
+}
+div.header {
+text-align:center;
+height:40px;
+margin-top:30px;
+margin-bottom:0px;
+}
+
+div.header2 {
+text-align:center;
+height:45px;
+margin-top:10px;
+margin-bottom:0px;
+}
+
+div.header span.HeaderWhere span{
+font-size: 200%;
+font-weight: bold;
+}
+
+h1 {
+  margin: 20px 20px 10px 10px;
+}
+div.container {
+  margin-left:20px;
+  margin-right:20px;
+}
+
+div.container div.summary {
+  background: #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 1pt;
+  font-size: 10pt;
+  font-family: sans;
+  margin:0px;
+  text-align:justify;
+}
+div.intro {
+  background: #ffc0c0;
+  padding: 10px;
+  margin:10px 50px;
+  text-align:justify;
+  border: solid;
+}
+
+h2 {
+font-size: 150%;
+background:transparent url(/common/degrade.png) repeat-y;
+padding-left: 30px;
+}
+
+h2 {
+font-size: 150%;
+background:transparent repeat-y;
+padding-left: 30px;
+}
+
+h3 {
+font-size: 105%;
+}
+
+h4 {
+font-size: 100%;
+}
+
+
+
+a.info span
+{
+margin-top: 1em;
+display:none;
+}
+
+a.info:hover
+{
+text-decoration:none;
+background:#ffffff;
+}
+
+a.info
+{
+}
+
+a.info:hover span
+{
+display:inline;
+position:relative;
+margin-top: 1em;
+left:0px;
+}
+
+div.abstract
+{
+padding:1em;
+color:#505560;
+margin-bottom: .7em;
+background:#f4f5f6;
+border: #aaaaaa 1px solid;
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute; left:5%; top:20px; margin-left:10px; width: 142px; height: 37px;
+ background: url(/users/cb/public_html/old-lipn/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%; top:20px; width: 70px; height: 70px;
+ background: url(/common/cb/public_html/old-lipn/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=uk">LIPN</a>: <a href="/CALIN/?lang=uk">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%; top:45px; margin-right:10px; width: 20px; height: 20px;
+ background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%; top:25px; margin-right:10px; width: 20px; height: 20px;
+ background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+<P>
+<H1 style="text-align:center"> Cyril Banderier's Home Page</H1>
+<P><br>
+
+<div style="text-align: left;">
+   <table style="margin-left: auto; margin-right: auto;"><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="cyril_banderier.jpg" alt="Cyril Banderier" height="260"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Cyril Banderier<br>
+Laboratoire d&#39;Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris-Nord<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+
+Office: A106<br>
+Phone:  +33 1 49 40 40 69<br>
+Fax: &nbsp;&nbsp;&nbsp;  +33 1 48 26 07 12<br>
+E-mail:  Cyril.Banderier<i> at </i>lipn.univ-paris13.fr<br><br>
+<a href="https://orcid.org/0000-0003-0755-3022"  rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0003-0755-3022</a>
+</td>
+</tr>
+
+
+</table>
+</div>
+
+<P>
+
+<!--
+<span style="color:red;">
+   My bag (containing my laptop, phone, papers) was stolen. I  offer (without any question...) a big reward 
+to who will send me by email some data which are in the computer.
+That's a lot of mathematical articles/computations
+which are of interest just for me, and represent a big amount of work/time.
+Contact me by email and 
+I will then send you several ways to get payed without being identifiable.
+</span>
+-->
+</P>
+
+
+<TABLE style="margin-left:auto;margin-right:auto;">
+<TR>
+<TD style="padding-left: 40px;"><A href="#CV">CV</A></TD>
+<TD style="padding-left: 40px;"><A href="#Research">Research</A></TD>
+<TD style="padding-left: 40px;"><A href="#Articles">Articles</A></TD>
+<TD style="padding-left: 40px;"><A href="Conf/?lang=uk">Conferences</A></TD>
+<TD style="padding-left: 40px;"><A href="P13/">Teaching</A></TD>
+<TD style="padding-left: 40px;"><A href="Bets/">Bets</A></TD>
+</TR>
+</TABLE>
+
+<P>
+<BR><BR>
+<P>
+<HR class="yellow">
+
+<P>
+<BR><BR>
+<P>
+
+<H2><A NAME="CV">Curriculum vitae</a></H2>
+<TABLE CELLPADDING=4 >
+<TR>
+<TD><A HREF="/~banderier/Divers/cyril_pull.jpg"><IMG SRC="/~banderier/Divers/cyril_pull.jpg" WIDTH=320 HEIGHT=240 ALT="Cyril"></a></TD>
+<TD>
+<UL>
+<LI> <1995 Censored, but <A HREF="Divers/matern.jpg">here is a (controversial) proof</a> I went to school. 
+<LI>1995-1996 Licence de mathématiques, université de Rouen
+<LI>1996-1997 Maîtrise de mathématiques 
+ and maîtrise d'ingénierie mathématique
+<LI>1997-1998 <A HREF="https://wikimpri.dptinfo.ens-cachan.fr/doku.php">DEA algorithmique</A>, Paris
+<LI>April-June 98 Training period in the 
+<A HREF="http://algo.inria.fr/">Algorithms project</A>, 
+ in the French national institute for computer science <A HREF="http://www.inria.fr/">Inria</A>.
+   <LI>October 98-Oct 01 <A HREF="PetitNicolas/LittleNick.html">Thesis</a> in the same team (thesis <A HREF="Divers/defense.html">defended</a>on June 25, 2001).
+   <LI> October 01-Oct 02 Postdoc in the <em><A HREF="http://www.mpi-inf.mpg.de/departments/algorithms-complexity/">Algorithms and Complexity
+	 Group</a></em>
+	 of the <A HREf="http://www.mpi-inf.mpg.de/">Max-Planck-Institut für Informatik</a>, Saarbrücken 
+<LI> October 2002-...: <A HREF="http://www.cnrs.fr/">CNRS</a> researcher, 
+in the University of Paris Nord.</UL>
+</TD>
+</TR>
+</TABLE>
+
+<P>From 1998 to 2001, I have taught 
+Theoretical and Practical Computer Science in <A
+HREF="http://lipn.univ-paris13.fr/">University of Paris
+Nord</A>. Here are the <A HREF="P13/index.html">courses</A>.
+<P>
+My PhD was registered in Univ. Paris 6 and was financed by the French 
+<A HREF="http://www.education.gouv.fr/">Research Ministry</a>.
+<P>
+I was the organizer of the <A HREF="CJ/">Colloquium Junior</a> and president of the Association des Doctorants at INRIA.
+
+<P>
+   I was involved in the <A HREF="http://algo.inria.fr/Alcophys/"> Alcophys project</A> and in the project <A HREF="http://cs.au.dk/~gerth/alcom-ft/">ALCOM-FT</a> (2000-2003) supported by the European Community.
+<P>
+From January 2005 to Decembrer 2006, I was the French coordinator of an "Egide Amadeus" project between France and Austria.
+<BR>In 2006 and 2007, I was involved in a teaching collaboration with Madagascar (in the DEA IGMA [Informatique et Génie Mathématique] at the university of Antananarivo), with fundings  from the university of Paris 13 and the Agence Universitaire de la Francophonie.
+<BR>From September 2008 to September 2011, I was involved in the ANR PhysComb "Physique combinatoire".
+<BR>From May 2009 to May 2012, I was the French coordinator of a franco-tunisian project (projet 09/R 15-7 DGRSRT-CNRS).
+<BR>From September 2010 to September 2014, I was involved in the <a href="http://www.lix.polytechnique.fr/~rossin/ANR/Magnum/www/">ANR Magnum</a> "Méthodes Agorithmiques de Génération aléatoire Non   Uniforme, Modèles et application"  (ANR-2010-BLAN-0204).
+<br>From May 2012 to December 2013, I was the French coordinator of a project between France and Austria (PHC "Amadeus").
+<br>From May 2012 to December 2013, I was in charge of a PEPS CNRS "Holonomix".
+<br>From May 2013 to March 2014, I was one of the participants of projet LIPN-LAGA BQR MARMOT (Marches, ARbres et MOTs).
+<br>From January 2013 to December 2014, I was one of the participants of a franco-taiwanese project (PHC "Orchid").
+<br>In 2013, I was awarded the <a href="http://archives.cnrs.fr/ins2i/article/1090">Grand prix international de l'Académie des Sciences et de la fondation scientifique franco-taiwanaise</a>, with my colleagues Hsien-Kuei Hwang and Olivier Bodini. 
+<br>From December 2014 to December 2015, I was in charge of  a franco-taiwanese project via the BRTF/MOST.
+<br>From December 2015 to December 2019, I was one of the participants of a <a href="
+http://www.agence-nationale-recherche.fr/Projet-ANR-15-CE40-0014">franco-taiwanese ANR project</a> (MétAConC: Méthodes analytiques non conventionnelles en combinatoire).
+<P>
+I was the webmaster of my team and of my lab from  2003 to 2013.
+Since 2010, I am in charge of our <a href="Seminaires/">séminaire de combinatoire</a>.
+<br>
+I was involved in the organization of several <a href="Conf/">conferences, schools or workshops</a>.
+
+<P>
+I am one of the professors in the Master Recherche in mathematics and computer science of the University of Paris 13; I am also teaching 
+   in <a href="http://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles">classe préparatoire</a>
+ (<a href="http://www-galilee.univ-paris13.fr/cpes/presentation.html">CPES2 Feyder</a>) and at the 
+<a href="http://www.iutv.univ-paris13.fr/">Institut universitaire de technologie</a>. 
+<P>
+I also devote a part of my time to scientific popularization. I had the pleasure to work with the following associations: 
+<A HREF="http://www.animath.fr/">Animaths</a>, <A HREF="http://mathenjeans.fr/">Math.en.jeans</A>, 
+<A HREF="http://www.maths-pour-tous.org/">Maths pour Tous</A>, <A HREF="http://www.scienceacademie.org/presentation/">Science Académie</a>,
+<A HREF="http://www.scienceouverte.fr/">Science Ouverte</a>, <A HREF="http://www2.cnrs.fr/jeunes/25.htm">Club CNRS sciences et citoyens</A>, 
+<A HREF="http://smf.emath.fr/">Société Mathématique de France</a>, <A HREF="http://www.ville-bondy.fr/culture/universite-populaire-averroes/">
+   Université populaire de Bondy</a>,
+   <a href="http://www.bm-bagneux92.fr/taxonomy/term/98?page=1">Université pour tous de Bagneux</a>,
+   <a href="http://www.christianboyer.com/jumieges/index.htm">Cercle Pierre de Jumièges</a>,
+   <A HREF="http://www.palais-decouverte.fr/index.php">Palais de la découverte</A>,
+   <A HREF="http://www.palais-decouverte.fr/index.php">Cité des Sciences &amp; de l'Industrie</a>,
+and some yearly events: <a href="http://www.cnrs.fr/sciencesetcitoyens/">Rencontres CNRS-jeunes</a>, <a href="http://savantebanlieue.plainecommune.fr/">Savante Banlieue</a>, <a href="http://www.fetedelascience.fr/">Fête de la science</a>, <a href="http://www.cijm.org/">Salon de la culture et des jeux mathématiques</a>.
+
+
+<HR class="yellow">
+
+<H2><A name="Research">Thesis:</a> </H2>
+<P><H4>Analytic combinatorics of paths and maps.</H4>
+<P> You can download a <A HREF="Papers/these.ps">preliminary version</a> of my PhD thesis (directed by <A HREF="http://algo.inria.fr/flajolet/index.html">Philippe Flajolet</A>). I can send you a copy of the <em>final version</em>, simply email me your postal address.
+<P>For those who wonder what is a PhD student, I would recommend to read <A HREF="PetitNicolas/LittleNick.html">this</a>. That's the story of an old friend of mine, Nicolas, who became PhD in Strasbourg.
+
+<HR class="yellow">
+
+
+<H2><A name="Articles">Articles &amp; Preprints:</a> </H2>
+<P>When I was a young and innocent student, I wrote the following memoirs (that's in French):
+<UL>
+<LI>
+<B>Around Mathematics in 80 Problems</B>, Cyril Banderier (June 1995).
+[ <!--<A HREF="80pb/index.html">html</A> |-->
+<A HREF="80pb/80pb.ps">ps</A> ]
+
+<LI>
+<B> Quadratic Residues, Quadratic Reciprocity Laws</B>, Cyril Banderier (June 1997).
+[ <A HREF="Recipro/index.html">html</A> | <A HREF="Recipro/recipro.ps">ps</A> ]
+
+<LI>
+<B>Factorization Algorithms "à l'envi"</B>, Cyril Banderier (September 1997). [ <A HREF="Facto/index.html">html</A> | <A HREF="Facto/facto.ps">ps</A> ]
+<LI>
+<B>Analytic Combinatorics and Random Walks</B>, Cyril Banderier (July 1998).
+[ 
+<!--<A HREF="Marches/marches.html">html</A> |-->
+<A HREF="Marches/marches.ps">ps</A> ]
+</UL>
+
+<P>
+
+Now I am a young and innocent researcher, and I wrote the following (in English):
+
+<ul>
+<li>
+<b>Generating Functions for Generating Trees</b>, C. Banderier,
+<a href="http://www.labri.fr/perso/bousquet/">Mireille Bousquet-Mélou</a>, 
+<a href="https://www.lri.fr/~denise/">Alain Denise</a>, 
+<a href="http://algo.inria.fr/flajolet/">Philippe Flajolet</a>,
+<a href="http://www.prism.uvsq.fr/~gardy/publis.html">Danièle Gardy</a>,
+Dominique Gouyou-Beauchamps.
+(Nov. 1999 version), 27 pages. 
+Discrete Mathematics
+246(1-3), March 2002, pp. 29-55 :
+<small>[Subsumes INRIA Research-Report #3661 and the FPSAC'99 conference version, Nov. 98:
+ On Generating Functions of Generating Trees,  <a href="Papers/eco_fpsac99.pdf">pdf</a>]</small>
+[ <a href="https://hal.archives-ouvertes.fr/hal-00003258/document">pdf</a> ]
+
+
+<li><b>A Generalized Cover Time for Random Walks on Graphs</b>,
+C. Banderier, <A HRef="http://www.people.carleton.edu/~rdobrow/">Robert P. Dobrow</a>.
+(Nov. 99., revised Feb. 00), 12 pages. In the proceedings of FPSAC'00,
+ published by <a href="http://www.springer.com/computer/lncs?SGWID=0-164-0-0-0">Springer</a> (ISBN 3-540-67247-8):
+[  <a href="Papers/walksgraphs.pdf">pdf</a> ]
+
+
+<li><b>On the Sum of the Sizes of Binary Subtrees of a Perfect Binary Tree</b>,
+C. Banderier, (Jun. 2000), 2 pages. Personal note [ <a href="Papers/subtrees.pdf">pdf</a> ]
+
+
+<li><b>Fortunate and unfortunate primes : Nearest primes from a prime factorial</b>,
+C. Banderier, (Dec. 2000). Personal note [ <a href="Computations/prime_factorial.html">html</a> ]
+
+
+<li><b>A Markovian Generalization of Feller's Coin Tossing Constants</b>, 
+C. Banderier, <a href="https://research.pasteur.fr/fr/member/mathias-vandenbogaert/"> Mathias Vandenbogaert</a>, 
+(Nov. 2000), 4 pages. Personal note [ <a href="Papers/finch.pdf">pdf</a> ]
+
+<li> 
+<b>Factors' paradox</b>, C. Banderier,
+(Feb. 2001), Poster for <A HREF="http://www.liafa.jussieu.fr/~ddm/DM-CCG/prog.html">Discrete Models'01</a>
+[  <a href="Papers/dm.pdf">pdf</a> ]
+
+<li><b>Random Maps, Coalescing Saddles, Singularity Analysis, and Airy Phenomena</b>,
+C. Banderier, 
+<a href="http://algo.inria.fr/flajolet/">Philippe Flajolet</a>, 
+<a href="http://www.lix.polytechnique.fr/~schaeffe/">Gilles Schaeffer</a>, 
+<a href="http://www-apr.lip6.fr/~soria/">Michèle Soria</a>
+(Mar. 2001), 52 pages. Random Structures and Algorithms.
+Vol 19. Issue 3-4, pp. 194-246, Oct. 2001, 
+<small>(special	 volume for D.E. Knuth's (100)<SUB>8</SUB>th						birthday)
+[Subsumes the Jan. 2000 conference version "Planar Maps and Airy Phenomena", proceedings of ICALP'00,
+Springer,					LNCS 1853,  <a href="Papers/coal.pdf">pdf</a> ] </small>
+[  <a href="Papers/rsa.pdf">pdf</a> ]
+
+<li><b>Basic Analytic Combinatorics of Directed Lattice Paths</b>,
+C. Banderier, 
+<a href="http://algo.inria.fr/flajolet/">Philippe Flajolet</a>.
+ (June 2001), 39 pages.
+Theoretical Computer Science.
+Vol. 281. Issue 1-2, pp. 37-80, Jun. 2002, <small>(special volume dedicated to M. Nivat)</small>,
+[  <a href="Papers/tcs_banderier_flajolet_2002.pdf">pdf</a> ]
+
+<li><b>Limit laws for basic parameters of lattice paths with unbounded jumps</b>,
+C. Banderier. (Jan. 2002), 15 pages.
+Second Colloquium on Mathematics and Computer Science.
+[  <a href="Papers/versailles2002.pdf">pdf</a> ]
+
+<!--
+<li><b>Algebraic succession rules and Lattice paths with an infinite set of jumps</b>,
+C. Banderier, 
+<a href="http://deptinfo.unice.fr/~fedou/">Jean-Marc Fédou</a>,
+Christine Garcia,
+<a href="http://local.disia.unifi.it/merlini/">Donatella Merlini</a>,
+ (Jan. 2003), 32 pages. Preprint.
+<small>
+[Subsumes the <a href="http://www-igm.univ-mlv.fr/~fpsac/FPSAC02/fpsac02.html">FPSAC'02</a> conference version 
+ "Lattice paths with an infinite set of jumps", C. Banderier &amp; D. Merlini,
+ (Dec. 2001, revised in March 2002, 10 pages), [ <a href="Papers/fpsac02.pdf">pdf</a>]
+</small>
+[  <a href="Papers/dm03.pdf">pdf</a> ]
+-->
+
+<li><b>Smoothed analysis of three combinatorial algorithms</b>,
+C. Banderier, <A HREf="https://people.mpi-inf.mpg.de/~rbeier/">Rene Beier</a>, <A HREf="https://people.mpi-inf.mpg.de/~mehlhorn/">Kurt Mehlhorn</a>
+ (Apr. 2003), 13 pages.
+Mathematical Fundations of Computer Science (MFCS'03), pp. 198-207,
+<a href="http://www.springerlink.com/index/V70VPB0HD6A2NTA5.pdf">LNCS 2747</a>, 2003.
+[  <a href="Papers/smoothed.pdf">pdf</a> ]
+
+
+<li><b><a href="DRW2003/">Discrete Random Walks Proceedings (DRW'2003)</a></b>,
+C. Banderier, <A HREf="http://www.mat.univie.ac.at/~kratt/">Christian Krattenthaler</a> [ Guest Editors ] 
+ (Nov. 2003), 358 pages. 
+Discrete Mathematics &amp; Theoretical Computer Science. 
+[ <a href="https://dmtcs.episciences.org/volume/view/id/248">pdf</a> ]
+
+
+<li><b>Why Delannoy numbers?</b>, 
+C. Banderier, <a href="/~schwer/">Sylviane Schwer</a>
+ (Feb. 2004), 14 pages. 
+<A HREF="https://www.journals.elsevier.com/journal-of-statistical-planning-and-inference/">Journal of Statistical Planning &amp; Inference</a> Vol. 135, Issue 1, pp 40-54 (Nov. 2005)
+<small>[Subsumes the Lattice Paths'02 conference version, "Why Delannoy's numbers?", by C.Banderier, May 2002.] </small>
+ [  <a href="Papers/delannoy2004.pdf">pdf</a>, <a href="Papers/delannoy.pdf">reprint.pdf</a> ]
+
+<li><b>Generating functions for kernels of digraphs (Enumeration &amp; asymptotics for a constraint from game theory)</b>,
+C. Banderier, <A HREf="https://lebarsj.users.greyc.fr/">Jean-Marie Le Bars</a>, <A HREf="https://www.irif.fr/~vlad/Publications.html">Vlady Ravelomanana</a>
+Proceedings of FPSAC'04, July 2004, pp 91-105
+ [  <a href="Papers/fpsac04.pdf">pdf</a> ] 
+
+<li><b>The Influence of Real-Time Models on Cyberinformatics</b>,
+C. Banderier, W. Gates, C.F. Gauss, J. Chirac and A. Einstein.
+ Proceedings of <A HREF="http://pdos.csail.mit.edu/scigen/" rel="nofollow">RSMMC'05</a>
+	 (Random Stupid Money-Making Conference), April 1st, 2005
+[ <a href="http://pdos.csail.mit.edu/cgi-bin/sciredirect.cgi?author=Cyril+Banderier&amp;author=Bill+Gates&amp;author=Albert+Einstein&amp;author=Jacques+Chirac&amp;author=Carl+Friedrich+Gauss&amp;" rel="nofollow">html</a> ]
+
+<li><b>Analytic Combinatorics of Lattice Paths: Enumeration and Asymptotics for the Average Area</b>,
+C. Banderier, <a href="http://dmg.tuwien.ac.at/bgitten/">Bernhard Gittenberger</a>.
+Proceedings of the 4th Colloquium of Mathematics and Computer
+ Science, <a href="https://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/issue/view/dmAG01/showToc">DMTCS</a>, AG, pp. 345-355. April 1st, 2006
+[ <a href="Papers/area3.pdf">pdf</a> ]
+
+<li><b>Analysis of three graph parameters for random trees</b>,
+	 Cyril Banderier, <a href="http://dmg.tuwien.ac.at/kuba/">Markus Kuba</a>, <a href="http://dmg.tuwien.ac.at/panholzer/">Alois Panholzer</a>. 
+	 Random Structures &amp; Algorithms. Vol. 35, N. 1, pp. 42-69, 2009.
+[ <a href="Papers/kubapanholzer.pdf">pdf</a> ]
+
+	 <li><b>Average Case Analysis of NP-complete Problems: Maximum Independent Set and Exhaustive Search Algorithms</b>,
+ C. Banderier, <a href="http://algo.stat.sinica.edu.tw/">Hsien-Kuei Hwang</a>,
+ <a href="https://www.irif.fr/~vlad/Publications.html">Vlady Ravelomanana</a>, <a href="http://www.mif.vu.lt/~vytzach/">Vytas Zacharovas</a>. (AofA'09, RSA'09, Journées Graphes et Algorithmes'09)
+[ <a href="Papers/BaHwRaZa.pdf">pdf</a> ]
+
+<li><b>Symplectic transformations and quantum tomography in finite quantum systems</b>,
+	 Cyril Banderier, <a href="http://www.brad.ac.uk/ei/electrical-engineering-and-computer-science/staff-profiles/profile/?u=avourdas">Apostol Vourdas</a>.
+	 <a href="http://www.iop.org/EJ/toc/1751-8121/43/4">Journal of Physics A</a>, volume 43, Number 4, 29 January 2010. 
+[ <a href="Papers/vourdas_banderier.pdf">pdf</a> ]
+
+<li><b>Bounded discrete walks</b>, Cyril Banderier, <a href="/~nicodeme/">Pierre Nicodème</a>.
+In <a href="https://www.dmtcs.org/dmtcs-ojs/index.php/proceedings/article/view/dmAM0103">DMTCS Proceedings</a>, 
+21st International Meeting on Probabilistic, Combinatorial, and Asymptotic Methods in the Analysis of Algorithms (AofA'10),
+pp. 35-48, 2010. [ <a href="Papers/banderier_nicodeme2010.pdf">pdf</a> ]
+
+<li><b>Nondirected lattice paths on different latices</b>, Cyril Banderier, pp. 35-39 
+ Proceedings of "Lattice Path Combinatorics and Applications", 4-7 July 2010. [ <a href="Papers/lattice.pdf">pdf</a> ]
+
+<li><b>Constant time estimation of ranking statistics by analytic combinatorics</b>,
+Cyril Banderier, <a href="/~nicodeme/">Pierre Nicodème</a>.
+in <A HREF="http://smpgd2011.curie.fr/">Statistical Methods for Post-Genomic Data</a> January 2011.
+[ <a href="https://hal.inria.fr/hal-00567091">pdf</a> ]
+
+<li><b>On the diversity of pattern distributions in rational language</b>,
+	Cyril Banderier, <a href="/~bodini/">Olivier Bodini</a>, <a href="http://www.lix.polytechnique.fr/~ponty/">Yann Ponty</a>, <a href="">Hanane Tafat</a>, 
+	ANALCO - 12th Meeting on Analytic Algorithmics and Combinatorics - 2012, Jan 2012, Kyoto, Japan. Omnipress, pp.107--116, 2012 
+[ <a href="https://hal-univ-paris13.archives-ouvertes.fr/hal-00643598/document">pdf</a> ]
+
+
+<li><b>Enumeration and asymptotics of restricted compositions having the same number of parts</b>,
+	 Cyril Banderier, <a href="http://www.math.drexel.edu/~phitczen/">Paweł Hitczenko</a>. Discrete Mathematics and Applications.
+	 Volume 160, Issue 18, December 2012, pages 2542–2554. [ <a href="Papers/banderier_hitczenko_2011.pdf">preprint.pdf</a>,
+<a href="http://www.sciencedirect.com/science/article/pii/S0166218X11005002">journal_version.pdf</a> ]
+
+
+<li><b>Coefficients of algebraic functions: formulae and asymptotics</b>, Cyril Banderier,
+	<a href="http://www.dmg.tuwien.ac.at/drmota/">Michael Drmota</a>,
+	DMTCS Proc. AS,  pp. 1095-1106 (special volume for the conference Formal Power Series and Algebraic Combinatorics), 2013.
+
+<li><b>Analysis of an exhaustive search algorithm in random graphs and the n^{c log n}-asymptotics</b>,	 Cyril Banderier, <a href="http://algo.stat.sinica.edu.tw/">Hsien-Kuei Hwang</a>, <a href="https://www.irif.fr/~vlad/Publications.html">Vlady Ravelomanana</a> and <a href="http://www.mif.vu.lt/~vytzach/index_lt.html">Vytas Zacharovas</a>, 
+	 SIAM J. Discrete Math,	 28:1, pp. 342-371, 2014. [ <a href="Papers/mis-n-to-the-logn.pdf">pdf</a> or <a href="https://arxiv.org/abs/1207.6549">arXiv</a> ]
+
+<li><b>The Airy function and analytic combinatorics</b>, Cyril Banderier, <a href="https://arxiv.org/search/?searchtype=author&amp;query=Louchard%2C+G&amp;abstracts=show&amp;size=50&amp;order=-announced_date_first">Guy Louchard</a>, submitted.
+
+<li><b>Some reflections on lattice paths</b>,
+	Cyril Banderier, <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>.
+        In Proceedings of the 25th International Conference on Probabilistic, Combinatorial and Asymptotic Methods for the Analysis of Algorithms (AofA 2014),
+	Paris, pages 25-36, 2014.
+[        <a href="https://arxiv.org/abs/1605.01687">pdf</a> ]
+
+<li><b>Formulae and Asymptotics for Coefficients of Algebraic Functions</b>, Cyril Banderier, 
+	 <a href="http://www.dmg.tuwien.ac.at/drmota/">Michael Drmota</a>, Combinatorics, Probability and Computing, volume 24, January 2015, pp 1-53. 
+<!--<a href="http://dx.doi.org/10.1017/S0963548314000728">doi:10.1017/S0963548314000728</a>-->
+	 [ <a href="Papers/Alg.pdf">preprint pdf</a>]
+
+ <li><b>Right-jumps and pattern avoiding permutations</b>, Cyril Banderier, <a href="http://jl.baril.u-bourgogne.fr/">Jean-Luc Baril</A>, <a href="http://le2i.cnrs.fr/-Celine-Moreira-Dos-Santos-">Céline Moreira Dos Santos</a>. 
+	DMTCS, Vol. 18 no. 2, 2017.
+[	 <a href="Papers/rightjumps.pdf">pdf</a> ]
+<small>	 [Subsumes our works presented at Permutation Patterns'15 and AofA'15]</small>
+
+
+<li><b>Lattice paths with catastrophes</b>,   Cyril Banderier, <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>.
+        Discrete Mathematics &amp; Theoretical Computer Science,  volume 19, #23, September 2017, 31 pages.
+        [        <a href="https://arxiv.org/abs/1707.01931">arXiv</a>, <a href="Papers/catastrophes_journalversion.pdf">journal version</a> ]
+<small>[Subsumes our work published in  Electronic Notes in Discrete Mathematics,  volume 59 (dedicated to the GAScom 2016 conference), pages 131–146.
+		  (.<a href="http://dx.doi.org/10.1016/j.endm.2017.05.010">pdf</a>)]</small>
+
+<li><b>Analytic Combinatorics of Lattice Paths with Forbidden Patterns: Enumerative Aspects</b>,
+<a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, <a href="/~bacher/">Axel Bacher</a>,  Cyril Banderier,
+<a href="https://dmg.tuwien.ac.at/gittenberger/">Bernhard Gittenberger</a>, 
+ In proceedings of the 12th International Conference on Language and Automata Theory and Applications (LATA), Lecture Notes in Computer Science (LNCS), Vol. 10792, 195-206. 2018.  [<a href="Papers/lata2018.pdf">pdf</a>]
+
+ <li><b>Analytic Combinatorics of Lattice Paths with Forbidden Patterns: Asymptotics Aspects and Borges's Theorem</b>,   <!-- '-->
+	<a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, <a href="/~bacher/">Axel Bacher</a>,  Cyril Banderier,
+	<a href="https://dmg.tuwien.ac.at/gittenberger/">Bernhard Gittenberger</a>, 
+In the proceedings of the 29th International Conference on Probabilistic, Combinatorial and Asymptotic Methods for the Analysis of Algorithms (AofA), 2018
+ [<a href="Papers/aofa2018_patterns.pdf">pdf</a>]
+
+<li><b>Periodic Pólya urns and an application to Young Tableaux</b>, Cyril Banderier, <a href="https://www.math.univ-paris13.fr/~marchal/">Philippe Marchal</a>,
+	<a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>, 
+ In Proceedings of the 29th International Conference on Probabilistic, Combinatorial and Asymptotic Methods for the Analysis of Algorithms (AofA), 2018
+[<a href="https://hal.archives-ouvertes.fr/hal-01807635/document">pdf</a>]
+
+<li><b>Rectangular Young tableaux with local decreases and the density method for uniform random generation (short version)</b>, Cyril Banderier, <a href="https://www.math.univ-paris13.fr/~marchal/">Philippe Marchal</a>,
+        <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>, 9p., Proceedings of GASCom 2018. [<a href="https://hal.archives-ouvertes.fr/hal-01795882/document">pdf</a>]
+
+<li><b>Local time for lattice paths and the associated limit laws</b>, Cyril Banderier,
+        <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>, 10p., Proceedings of GASCom 2018. [<a href="https://hal.archives-ouvertes.fr/hal-01796320/document">pdf</a>]
+
+
+<li><b>Periodic P&oacute;lya urns, the density method, and asymptotics of Young tableaux</b>, Cyril Banderier, <a href="https://www.math.univ-paris13.fr/~marchal/">Philippe Marchal</a>,
+        <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>, 53 p., to appear in Annals of Probability, 2019 [<a href="Papers/">pdf</a>]
+
+<li><b>Latticepathology and symmetric functions</b>, Cyril Banderier, <a href="http://marielouise.lackner.xyz/">Marie-Louise Lackner</a>,
+        <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>, 12p., submitted [<a href="Papers/latticepathology.pdf">pdf</a>]
+
+	<li><b>The kernel method for lattice paths below a line of rational slope</b>, Cyril Banderier, <a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>.
+In <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-11102-1_7">Lattice Path Combinatorics and Applications</a>.
+        Developments in Mathematics Series (Springer),  pp. 119-154, 2019.
+[        <a href="https://arxiv.org/abs/1606.08412">pdf</a> ]
+        <small> [Subsumes our article "Lattice paths of slope 2/5", proceedings of ANALCO 2015, San Diego.]</small>
+
+<!--  <a href="https://arxiv.org/abs/1605.02967">pdf</a> -->
+
+	<li><b>Explicit formulas for enumeration of lattice paths: basketball and the kernel method</b>,
+        Cyril Banderier, <a href="http://www.mat.univie.ac.at/~kratt/">Christian Krattenthaler</a>, <a href="">Alan Krinik</a>, <a href="">Dmitry Kruchinin</a>, <a href="">Vladimir Kruchinin</a>, <a href="">David Nguyen</a> &amp; 
+<a href="http://dmg.tuwien.ac.at/mwallner/">Michael Wallner</a>.
+In <a href="https://link.springer.com/chapter/10.1007/978-3-030-11102-1_6">Lattice Path Combinatorics and Applications</a>.
+        Developments in Mathematics Series (Springer),  pp. 78-118, 2019.
+[        <a href="https://hal.archives-ouvertes.fr/hal-01456197/document">pdf</a> ]
+
+	<li><b>On the period mod m of polynomially-recursive sequences: a case study</b>, Cyril Banderier, <a href="https://scholar.google.com/citations?user=g-eDxl0AAAAJ">Florian Luca</a>, 14p., Journal of Integer Sequences, vol. 22, 2019. [<a href="Papers/BanderierLuca.pdf" rel="nofollow">pdf</a>]
+
+
+	<li><b>Numerators of Egyptian fractions</b>,
+	Cyril Banderier,  <a href="https://scholar.google.com/citations?user=g-eDxl0AAAAJ">Florian Luca</a>, 
+	<a href="http://www.mat.uniroma3.it/users/pappa/">Francesco Pappalardi</a>, 12 p., Submitted, 2019.  [<a href="Papers/">pdf</a>]
+ 
+
+	<li><b>On extremal cases of pop-stack sorting</b>,
+	<a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, Cyril Banderier,
+	<a href="https://benjamin-hackl.at/">Benjamin Hackl</a>, Permutation Patterns 2019.  [<a href="Papers/popstack.pdf">pdf</a>]
+
+	<li><b>Pop-stack sorting and its image: Permutations with overlapping runs</b>,
+	<a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, Cyril Banderier, <a href="https://sites.math.washington.edu/~billey/">Sarah Billey</a>, 
+	<a href="https://benjamin-hackl.at/">Benjamin Hackl</a>, <a href="https://people.kth.se/~linusson/">Svante Linusson</a>,  
+	in Proceedings of Eurocomb 2019, 
+	Acta Math. Univ. Comenianae Vol. LXXXVIII, 3 (2019), pp. 395-402.   [<a href="http://www.iam.fmph.uniba.sk/amuc/ojs/index.php/amuc/article/view/1307/672">pdf</a>]
+
+	<li><b>Analytic combinatorics of lattice paths with forbidden patterns, the vectorial kernel method, and generating functions for pushdown automata</b>,
+	<a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, <a href="/~bacher/">Axel Bacher</a>,  Cyril Banderier,
+	<a href="https://dmg.tuwien.ac.at/gittenberger/">Bernhard Gittenberger</a>. Algorithmica. pp. 1-43,  2019.  [<a href="https://doi.org/10.1007/s00453-019-00623-3">pdf</a>]
+   
+	<li><b> Generating functions for lattice paths with several forbidden patterns</b>, <a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>, Cyril Banderier, <a href="https://tiss.tuwien.ac.at/adressbuch/adressbuch/person/298148">Valerie Roitner</a>, submitted, 2020.
+        <li><b>Patterns in lattice paths and the multivariate Gaussian distribution</b>,  <a href="https://me.aau.at/~anasinowski/">Andrei Asinowski</a>,  Cyril Banderier, submitted, 2020.
+        <li><b>Number of prefixes in trace monoids: clique polynomials and dependency graphs </b>,  Cyril Banderier,  <a href="http://users.mat.unimi.it/users/goldwurm/">Massimiliano Goldwurm</a>, submitted, 2020.
+  
+
+<!--	 <li><b>Multidimensional partitions</b>, C. Banderier, <a href="http://www.th.cs.meiji.ac.jp/tamaki/">Hisao Tamaki</a>.	 In preparation. (The person who sent me some mails related to this work is invited to recontact me, I lost his address.)
+
+<li><b>Area of directed lattice paths</b>, C. Banderier, <a href="http://dmg.tuwien.ac.at/bgitten/">Bernhard Gittenberger</a>. In preparation.
+
+<li><b>Height of directed lattice paths</b>, C. Banderier, <a href="http://algo.inria.fr/flajolet/">Philippe Flajolet</a>. In preparation.
+
+<li><b>Asymptotics of D-finite sequences</b>, C. Banderier, <a href="http://whale.cs.ntou.edu.tw/~chern/felix_ntou.htm">Felix Chern</a>, <a href="http://algo.stat.sinica.edu.tw/">Hsien-Kuei Hwang</a>. In preparation.
+
+<li><b>The Moran Model, a cache algorithm, and height of an associated random walk</b>,	 C. Banderier, <a href="/associes/aguech/">Rafik Aguech</a>. In preparation.
+-->
+</ul>
+
+<P>
+<P>
+<B><A name="Summaries">Seminar summaries:</a> </B>
+
+There was a tradition to write summaries of 
+talks given at the 
+<A HREF="http://algo.inria.fr/seminars/">Algorithms Seminar</A>. 
+
+Here are the summaries that I have written:
+<P>
+<UL>
+<LI> "Enumeration Methods of Remarkable Families of Polyominoes, Animals and 
+Paths", by 
+<a href="http://www.lri.fr/~dgb/">Dominique Gouyou-Beauchamps</a>. <SMALL>March 2, 1998.</SMALL>
+(<a
+HREF="Seminar/gouyou-beauchamps.html">html</a> |
+<A HREF="Seminar/gouyou.ps">ps</A>)
+
+<LI>"Dynamics of the Binary Euclidean Algorithm: Functional
+Analysis and Operators", by 
+<A href="http://www.info.unicaen.fr/~brigitte/Publications/">
+Brigitte Vallée</A>. <SMALL>April 27, 1998.</SMALL>
+
+(<a href="Seminar/vallee98.html">html</a> | 
+<A HREF="Seminar/vallee.ps">ps</A>)
+
+
+<LI> "Sorted and/or Sortable Permutations", by 
+<A href="http://www.labri.fr/perso/bousquet/">Mireille
+Bousquet-Mélou</a>. <SMALL>June 8, 1998.</SMALL>
+
+(<A HREF="Seminar/bousquet.html">html</a> |
+<A HREF="Seminar/bousquet.ps">ps</A>)
+
+<LI>"An Introduction to Analytic Number Theory", by 
+<A href="http://cf.geocities.com/ilanpi/">Ilan Vardi</A>.
+ <SMALL>December 14, 1998.</SMALL>
+(<a HREF="Seminar/vardi3.html">html</A> |
+<A HREF="Seminar/vardi.ps">ps</A>)
+
+
+<LI>"Unified Analysis of Euclidean Algorithms", by 
+<A href="http://www.info.unicaen.fr/~brigitte/Publications/">
+Brigitte Vallée</A>. <SMALL>March 29, 1999.</SMALL>
+(<a HREF="Seminar/vallee99.html">html</A> |
+ <A HREF="Seminar/vallee2.ps">ps</A>)
+
+
+<LI>"Loop-Erased Random Walks", by 
+<A href="http://www.math.brown.edu/~rkenyon/">
+Richard Kenyon</A>. <SMALL>May 31, 1999.</SMALL>
+(<a HREF="Seminar/kenyon2.html">html</A> |
+<A HREF="Seminar/kenyon.ps">ps</A>)
+
+<LI>"The Local Limit Theorem for Random Walks on Free Groups", by 
+<A href="http://galton.uchicago.edu/~lalley/">
+Steve Lalley</A>. <SMALL>May 31, 1999.</SMALL>
+(<a HREF="Seminar/lalley.html">html</A> |
+<A HREF="Seminar/lalley.ps">ps</A>)
+
+<LI>"Solving Discrete Initial- and Boundary-Value Problems", by <A HREF="http://www.fmf.uni-lj.si/~petkovsek/">Marko
+Petkovsek</a>. <SMALL>October 4, 1999.</SMALL>
+(<a HREF="Seminar/petkovsek.html">html</A> |
+<A HREF="Seminar/petkovsek.ps">ps</A>)
+
+<LI>
+"Continued fractions, comparisons algorithms and fine structure
+constants", by <A HREF="http://algo.inria.fr/flajolet/">Philippe
+	 Flajolet</a>. <SMALL>November 8, 1999.</SMALL>
+
+(<a HREF="Seminar/flajolet.html">html</A> |
+<A HREF="Seminar/flajolet.ps">ps</A>)
+
+<LI>"Continued Fractions and Modular Forms", 
+by <A HREF="http://cf.geocities.com/ilanpi/">Ilan Vardi</a>. <SMALL>April 3, 2000.</SMALL>
+(<a HREF="Seminar/vardi00.html">html</A> |
+<A HREF="Seminar/vardi2000.ps">ps</A>)
+
+<LI>"Some Sharp Concentration Results about Random Planar Triangulations", 
+by <A HREF="http://mathstat.math.carleton.ca/~zgao/">Jason Zhicheng
+	 Gao</a>. <SMALL>June 8, 2000.</SMALL>
+(<a HREF="Seminar/gao2.html">html</A> |
+<A HREF="Seminar/gao2.ps">ps</A>)
+
+
+<LI>"The tennis ball problem", by
+ <A HREF="http://www.dsi.unifi.it/~merlini/">Donatella Merlini</a>.
+	<SMALL>March 19, 2001</SMALL>
+(<a HREF="http://algo.inria.fr/seminars/sem00-01/merlini.html"></A>
+	
+<A HREF="Seminar/merlini.ps">ps</A>)
+
+
+<LI>"Random walks and cycles stacking", by
+ <A HREF=""></a>Philippe Marchal. <SMALL>April 21, 2001</SMALL>
+(<a HREF="http://algo.inria.fr/seminars/sem00-01/marchal.html"></A>
+	
+<A HREF="Seminar/marchal.ps">ps</A>)
+
+<LI>"Hyperharmonic numbers and coupon collector's brothers", by
+ <A HREF="http://www-irma.u-strasbg.fr/~foata/">Dominique
+	 Foata</a>. <SMALL>May 21, 2001</SMALL> 
+(<a HREF="http://algo.inria.fr/seminars/sem00-01/foata2.html"></A>	
+<A HREF="Seminar/foata2.ps">ps</A>)
+
+<LI> "Animals, domino tilings, functional equations", by 
+<A href="http://www.labri.fr/perso/bousquet/">Mireille
+Bousquet-Mélou</a>. <SMALL>May 13, 2002.</SMALL>
+
+(<A HREF="Seminar/bousquet.html"></a> 
+<A HREF="Seminar/bousquet2.ps">ps</A>)
+</UL>
+
+
+<HR class="yellow">
+	 
+<H2><a name="Talks">Talks / Presentations / Conferences:</a></H2>
+<P>
+
+See the <A href="Conf/?lang=uk">conference page</A>.
+
+<HR class="yellow">
+
+<H2>Fun:</H2>
+
+<P>
+<UL>
+<LI> Tertulias and chocolate (<A HREF="bets.html">list of bets</A>
+made in the Project).
+<LI>
+Soon an olympic discipline: 
+<A HREF="Chess/index.html">
+chess</A>.
+<LI>
+I <i>love</i> <A HREF="Fun/foot.html">football</A>...
+<LI>I like jingoistic chauvinism: <a href="http://www.albinoblacksheep.com/text/victories.html">French military victories</A>
+<LI>You want to play go, this wonderful Asian game... 
+<A HREF="http://gailly.net/go.html">
+Jean-Loup's Go page</A> will help you!
+<LI> <A HREF="Biblio/cyrbib.pdf">My own library</A>
+
+
+<!--
+<LI> <A target="_blank"  HREF="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg">Wedstats4u</a>
+gives some statistics about this webpage.
+(Bad news : Webstats4u is the new free version of Nedstat, and it now
+generates sometimes a pop-up.).
+
+
+<script  src="basic.js" type="text/javascript" ></script>
+<script type="text/javascript" > 
+//webstats4u("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0); 
+</script>
+-->
+
+
+<!--
+<LI>
+A <A HREF="Fun/films.html">list </A> 
+ of some good directors and their movies.
+<LI>
+A <A HREF="Fun/musique.html">list </A> of some famous compositors.
+<P>
+-->
+</UL>
+
+<HR class="yellow">
+
+<table class=CENTERED width="100%">
+<TR><td><SMALL><i>Last modified: </i> Sunday 14 April 2019  </SMALL> </td>
+
+<td>
+<A href="https://validator.w3.org/check?uri=referer">
+
+<IMG style="border:0"
+          src="https://lipn.fr/~banderier/common/valid-html401.png"
+          alt="Valid HTML 4.01!" height="15" width="45"></A>
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+                     <img style="border:0;width:45px;height:15px"
+  src="https://lipn.fr/~banderier/common/vcss.png"
+                  alt="Valid CSS!">
+              </a></TD>
+<td><SMALL>
+Contact for this webpage: Cyril.Banderier <i>at</i> lipn.univ-paris13.fr</SMALL></TD>
+
+
+
+<td>
+<form method="GET" action="https://www.google.fr/search">
+<div><input maxlength=20 name=q value=""  size=20>
+<input type=hidden name=sitesearch value="lipn.univ-paris13.fr">
+<input type=SUBMIT value="Search in this site">
+</div>
+</form>
+</td>
+</tr>
+</table>
+
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3376402-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

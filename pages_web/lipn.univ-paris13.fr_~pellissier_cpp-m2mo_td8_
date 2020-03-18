@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 8</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 8 C++: allocation dynamique; Matrices.</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: Matrices</h3>
+<ol>
+  <li>
+    <b>Implémentez</b> dans un fichier <tt>1.1.cc</tt> la classe <tt>Matrix</tt> déclarée ci-dessous (télécharger: <a href="1.1.h" download>1.1.h</a>, ne le modifiez pas!):
+      <pre><code class="c++">class Matrix {
+ public:
+  Matrix(int num_rows, int num_columns);
+  ~Matrix();
+
+  int NumRows() const;
+  int NumColumns() const;
+
+  double&amp; Element(int row, int col);
+
+ private:
+  int num_rows_;
+  int num_columns_;
+  // We'll use the "flat" representation.
+  double* elements_;
+};</code></pre>
+    <b>Indices</b>:
+    <ul>
+      <li>On utilise la représentation <i>plate</i></li>
+      <li><tt>Element(i, j)</tt> est l'élement à la rangée <i>i</i> et la colonne <i>j</i>. On indexe a partir de zéro.</li>
+      <li>Il faudra bien initialiser les éléments à zéro. Regardez l'<a href="http://stackoverflow.com/questions/7546620/operator-new-initializes-memory-to-zero">excellente réponse sur la question</a> (sur stackoverflow.com)
+      </li>
+      <li>N'oubliez pas de libérer la mémoire...</li>
+    </ul>
+    <br/><b>Testez</b> votre code avec:
+    <pre>rm 1.tar.gz; wget --no-cache http://fabien.viger.free.fr/cpp/td8/1.tar.gz &amp;&amp; tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU:</b> <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.1.h</tt> et <tt>1.1.cc</tt> dans
+    <tt>1.2.h</tt> et <tt>1.2.cc</tt> et
+    <b>ajoutez</b> une fonction <i>statique</i> <tt>Identity</tt> dans la class <tt>Matrix</tt> pour créer une matrice identité de taille <i>n</i>.
+    <br/>N'oubliez pas de changer le <tt>#include "1.1.h"</tt> vers <tt>1.2.h</tt>!
+    <br/><b>Testez</b> votre code avec: <tt>make 1.2</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.2.h</tt>, <tt>1.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.2.h</tt> et <tt>1.2.cc</tt> dans
+    <tt>1.3.h</tt> et <tt>1.3.cc</tt>, <b>changez</b> le <tt>#include "1.2.h"</tt> vers <tt>1.3.h</tt>, et essayez:
+    <pre>make 1.3.1</pre>
+    puis:
+    <pre>make 1.3.2</pre>
+    Vous devriez avoir des erreurs: ça compile bien, mais ça ne tourne pas!
+    <br/><b>Regardez</b> les fichiers tests <tt>1.3.1.test.cc</tt> et <tt>1.3.2.test.cc</tt> (ré-inclus ci-dessous, mais ils doivent déja être dans votre repertoire de travail):
+    <table summary="Copie des fichiers 1.3.1.test.cc et 1.3.2.test.cc sur 2 colonnes">
+      <tr>
+        <td style="vertical-align:text-top">
+          <pre><code class="c++">#include "main_utils.h"
+#include "1.3.h"
+
+int main() {
+  Matrix a = Matrix::Identity(5);
+  Matrix b = a;
+  Matrix c = b;
+  c.Element(2, 1) = 4.5;
+  CHECK_EQ(c.Element(2, 1), 4.5);
+  CHECK_EQ(b.Element(2, 1), 0.0);
+  CHECK_EQ(a.Element(2, 1), 0.0);
+  cout &lt;&lt; "PASSED" &lt;&lt; endl;
+}</code></pre>
+        </td>
+        <td class="bigsep"/>
+        <td style="vertical-align:text-top">
+          <pre><code class="c++">#include "main_utils.h"
+#include "1.3.h"
+
+int main() {
+  Matrix a = Matrix::Identity(5);
+  Matrix b = a;
+  cout &lt;&lt; "PASSED" &lt;&lt; endl;
+}</code></pre>
+        </td>
+      </tr>
+    </table>
+    <b>Quel est le problème?</b> (aide au tableau)
+    <br/><br/>Pour le réparer, <b>ajoutez</b> un <i>constructeur de copie</i> valable. <b>Vérifiez</b> que <tt>make 1.3.1</tt> et <tt>make 1.3.2</tt> marchent bien desormais.
+    <br/>
+    <br/><i>NOTE:</i> Normalement on devrait aussi ajouter l'opérateur d'assignment (<tt>operator=</tt>),
+    ainsi que le constructeur par transfer (<i>move constructor</i>) et l'opérateur d'assignement par transfer (<i>move assignment operators</i>) en C++11.
+    <br/>Pour comprendre quand l' <tt>operator=</tt> est utilisé au lieu du constructeur par copie, voir <a href="https://en.wikipedia.org/wiki/Assignment_operator_(C%2B%2B)">cette page</a> qui l'explique en 2 temps 3 mouvements.
+
+    <br/><br/><b class="red">Vérifiez encore</b> avec <tt>make 1.3.3</tt>.
+    <br/><br/><b class="orange">RENDUS:</b> <tt>1.3.h</tt>, <tt>1.3.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    De même, copiez votre code dans <tt>1.4.h</tt> et <tt>1.4.cc</tt>,
+    <b>changez</b> le <tt>#include "1.3.h"</tt> vers <tt>1.4.h</tt>, et essayez: <tt>make 1.4</tt>.
+    <br/>Essayez de comprendre ce qui cloche en regardant <tt>1.4.test.cc</tt> (également inclus ci-dessous).
+    <br/><b>Comment le réparer</b>, <i>sans toucher</i> <tt>1.4.test.cc</tt>? (aide au tableau)
+    <pre><code class="c++">#include "main_utils.h"
+#include "1.4.h"
+
+int main() {
+  Matrix a(4, 3);
+  a.Element(2, 1) = 42.0;
+  a.Element(3, 2) = -3.5;
+  const Matrix b = a;
+  cout &lt;&lt; "b[2][1] = " &lt;&lt; b.Element(2, 1) &lt;&lt; endl;
+  cout &lt;&lt; "b[3][2] = " &lt;&lt; b.Element(3, 2) &lt;&lt; endl;
+  cout &lt;&lt; "PASSED" &lt;&lt; endl;
+}</code></pre>
+    <b class="orange">RENDUS:</b> <tt>1.4.h</tt>, <tt>1.4.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    On va à présent écrire des petit modules d'opérations sur les matrices.
+    <br/>Commençons par l'affichage:
+    <br/><b>Écrire</b> des fichiers <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt>
+    contenant la déclaration et la définition d'une fonction <tt>void PrintMatrix(const Matrix&amp; m)</tt>, qui affiche une matrice comme ça (même les espaces doivent parfaitement respecter l'exemple!):
+    <table summary="matrice affichée">
+      <tr>
+        <td>
+          <pre>[[       1       2     3.4]
+ [    -2.1 3.14159      -9]]</pre>
+        </td>
+      </tr>
+    </table>
+     <b>Indices</b>
+     <ul>
+       <li>
+         On pourra utiliser <tt>printf("% 8g", ...)</tt> pour afficher un <tt>double</tt>
+         aligné à droite, en prenant au moins 8 caractères.
+         <br/>Voir la <a href="http://fr.cppreference.com/w/cpp/io/c/fprintf">documentation</a>. Il faut inclure <tt>&lt;cstdio&gt;</tt>.
+       </li>
+       <li>
+         Pensez à inclure <tt>1.4.h</tt>
+         <br/>Vous aurez sans doute un souci de double inclusion de <tt>"1.4.h"</tt>.
+         C'est un grand classique des projets C++ avec plusieurs fichiers!
+         <br/>La parade est d'insérer le code suivant <i>autour</i> du contenu de <tt>1.4.h</tt>:
+         <pre>#ifndef _1_4_H
+#define _1_4_H
+...
+...
+#endif  // _1_4_H</pre>
+       </li>
+     </ul>
+    <b>Vérifiez</b>: <tt>make 1.5</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt>.
+    <br/><br/>
+  </li>
+  <li>
+    On va maintenant écrire le <a href="https://fr.wikipedia.org/wiki/Produit_matriciel">produit matriciel</a>.
+    <br/>Toujours dans les même fichiers <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt>, ajoutez
+    une fonction <tt>Matrix MatrixProd(const Matrix&amp; a, const Matrix&amp; b)</tt> qui calcule <i>a * b</i>
+    et le renvoie dans une nouvelle matrice.
+    Vous pourrez supposer que les dimensions de <i>a</i> et <i>b</i> collent bien.
+    <br/>
+    <br/>
+    <b>Verifiez</b> vous-même, avec votre propre fichier <tt>1.6.test.cc</tt>! Vous pouvez par exemple:
+    <ul>
+      <li>Vous inspirer de <tt>1.2.test.cc</tt> pour l'ossature (notamment le <tt>#include "main_utils.h"</tt> qui vous donne <tt>CHECK_EQ(..)</tt>), et de <tt>1.5.test.cc</tt> pour l'entrée manuelle d'une matrice.
+      <li>Remplir une petite matrice avec des nombres au hasard, et vérifier que son produit avec l'identité, à droite ou à gauche, est égal à la matrice de départ</li>
+      <li>Essayer une petite multiplication, comme celle donnée en exemple sur la page wikipédia.</li>
+    </ul>
+    Faites en sorte que 1.6.test.cc puisse tourner avec:
+    <pre><code>g++ -std=c++11 1.4.cc matrix_ops.cc 1.6.test.cc &amp;&amp; ./a.out</code></pre>
+
+    <b class="orange">RENDUS:</b> <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt> mis à jour, et <tt>1.6.test.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Pour finir, on va écrire l'<a href="https://fr.wikipedia.org/wiki/Exponentiation_rapide">exponentiation rapide</a> pour calculer la puissance <i>n</i>-ième (n entier positif ou nul) d'une matrice.
+    <br/>
+    <br/><b>Ajoutez</b> à <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt> une fonction
+    <tt>Matrix MatrixPower(const Matrix&amp; m, int p)</tt> qui, pour une matrice carrée <i>m</i>
+    et un exposant entier <i>p</i>, calcule <i>m<sup>p</sup></i>.
+    <br/><br/>Indices <b class="red">importants</b>:
+    <ul>
+      <li>Il est <b>dangereux</b> de manipuler des classes dont un des trois (destructeur, constructeur par copie, operateur d'assignement <tt>=</tt>) a été "personalisé" sans que les 3 soient personalisés.
+      <br/>C'est pourtant ce qu'on a fait jusqu'ici! Car on a pas encore personalisé l'opérateur d'assignement <b><tt>operator=</tt></b>.
+        <br/>Par exemple, le code suivant est problématique, au niveau de la
+        2<sup>ème</sup> ligne:
+        <pre><code class="c++">Matrix x = <i>quelquechose</i>;
+x = MatrixProd(x, x);</code></pre>
+        Pour réparer cette erreur, vous pouvez personaliser l'<tt>operator=</tt> vous-même, par exemple. Vous pouvez aussi choisir de complètement éviter l'opérateur <tt>=</tt></b>, en s'appuyant par exemple sur une fonction
+        <tt>void CopyTo(const Matrix&amp; from, Matrix* to)</tt> qui copie
+        <tt>from</tt> dans <tt>to</tt>, en supposant qu'elles ont déja les mêmes
+        dimensions; fonction que vous ajouteriez vous-même a <tt>matrix_ops.h</tt>.
+      </li>
+      <li><b class="red">Attention</b> aussi à l'overflow avec le dernier bit de la puissance entière!</li>
+    </ul>
+    <br/><b>Vérifiez</b>: <tt>make 1.7</tt>
+    <br/><br/><b class="orange">RENDUS:</b> <tt>matrix_ops.h</tt> et <tt>matrix_ops.cc</tt> mis à jour.
+    <br/><br/><b class="orange">BONUS:</b> <tt>1.7.txt</tt> qui donne la complexité (en fonction de <i>p</i> et de la taille <i>n</i> de la matrice).
+    <br/><br/>
+  </li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

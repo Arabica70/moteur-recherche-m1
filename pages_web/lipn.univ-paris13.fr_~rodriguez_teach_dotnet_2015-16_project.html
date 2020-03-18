@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+
+body {
+	/* font-family: "Adobe Caslon Pro", "Minion Pro", serif; */
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 13pt;
+	background-color: #eee;
+}
+
+table {
+	background-color: #f8f8ff;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #ccc solid;
+}
+
+th, td {
+	padding: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px #aaa solid;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+th {
+	background-color: #eef;
+	text-align: left;
+}
+
+.document {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	width: 900px;
+	background-color: white;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+}
+
+.large {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.med {
+	font-size: 120%;
+}
+
+.cmd {
+	border: 1pt #ccc solid;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	background-color: #fee;
+   font-family: monospace;
+	font-weight: bold;
+	/* font-size: 110%; */
+}
+
+
+.literal-block {
+	border: 1px #999 dashed;
+	padding: 5px;
+	background-color: #e8e8e8;
+}
+
+.literal {
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #e8e8e8;
+}
+
+.exercise {
+	border: 1pt #ccc solid;
+	background-color: #efe;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+}
+
+.update {
+	font-size: 65%;
+   text-align: right;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<p><span class="update">(last update: Mon Aug 15 07:05:15 CEST 2016)</span></p>
+<!-- .. sectnum:: -->
+<div class="section" id="the-remote-image-processing-system-rips">
+<h1>The Remote Image Processing system (RIPS)</h1>
+<p>During this course we will develop a client/server system for multithreaded
+image processing. The system will implement various algorithms, including:</p>
+<ul class="simple">
+<li>Computation of the histogram.</li>
+<li>Transforming an image to grayscale.</li>
+<li>Blurring an image (optional).</li>
+<li>Merging two images (optional).</li>
+</ul>
+<p>You are provided with a skeleton of the code for the client and server
+applications (you will need to add the assembly <tt class="docutils literal">System.Drawing.dll</tt> to your
+project):</p>
+<ul class="simple">
+<li><a class="reference external" href="code/Client.cs">Client.cs</a></li>
+<li><a class="reference external" href="code/Server.cs">Server.cs</a></li>
+<li><a class="reference external" href="code/Bencode.cs">Bencode.cs</a></li>
+</ul>
+<p>You are also provided with
+some <a class="reference external" href="bmp/">example images</a> in BMP format.</p>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>All image processing is performed on the server. The client only loads from a
+file the images to process, connects to the server, and writes to disk the
+output image after the server sends them back to the client.</p>
+<p>Client and server use the BitTorrent <a class="reference external" href="https://en.wikipedia.org/wiki/Bencode">Bencode</a> format to communicate.</p>
+<p>The client locates the server using an online database of servers, where
+previously the server has registered the IP and port on which it receives requests.
+The server updates this online database using an HTTP request every time it
+starts. The server uses the Windows Registry to store some configuration.</p>
+</div>
+<div class="section" id="detailed-behavior">
+<h2>Detailed behavior</h2>
+<p>Client (see the <tt class="docutils literal">Client.Run</tt> method, already given to you):</p>
+<ol class="arabic simple">
+<li>Parses commandline arguments (class <tt class="docutils literal">ClientOptions</tt>, code provided)</li>
+<li>Finds out the IP and port of the server to connect (<tt class="docutils literal">Client.LocateServer</tt>)</li>
+<li>Connects to the server (<tt class="docutils literal">Client.Connect</tt>)</li>
+<li>Sends the images and parameters of the algorithm to the server
+(<tt class="docutils literal">Client.Histogram</tt>, etc), and receives the results.</li>
+<li>Stores the output image in a file</li>
+<li>Closes the connection and exits (<tt class="docutils literal">Client.Disconnect</tt>)</li>
+</ol>
+<p>Server (see the <tt class="docutils literal">Server.Run</tt> method, already given to you):</p>
+<ol class="arabic simple">
+<li>Initializes the Windows Registry with default configuration parameters if it
+detects that no configuration is present (<tt class="docutils literal">Server.InitRegistry</tt>)</li>
+<li>Loads from the Windows Registry the IP and port where the server will listen,
+and binds a TCP socket to that service point (<tt class="docutils literal">Server.Listen</tt>)</li>
+<li>Registers in the online database its listening IP and port, so that clients
+can find the server (<tt class="docutils literal">Server.Register</tt>)</li>
+<li>Accepts new clients in the <tt class="docutils literal">Server.Work</tt> method, creating a new thread for
+each one of them (class <tt class="docutils literal">ServerConnection</tt>). That thread executes the
+method <tt class="docutils literal">ServerConnection.ConnectionThread</tt>.</li>
+<li>The connection thread parses the client's request, including the image
+processing algorithm to be applied and the number of worker threads.</li>
+<li>It then partitions the image and creates multiple threads to perform the
+task. The threads execute the method <tt class="docutils literal">WorkerParams.WorkerThread</tt>.</li>
+<li>When all worker threads finish, they notify this to the connection thread,
+who sends back the output image to the client, and closes the connection.</li>
+</ol>
+</div>
+<div class="section" id="commandline-syntax-for-the-client">
+<h2>Commandline Syntax for the Client</h2>
+<p>The RIPS client will be a commandline application with the following syntax:</p>
+<pre class="literal-block">
+Usage: Client REQUEST IMAGE1 [IMAGE2] [OPTIONS]
+
+Where REQUEST can be one of the following
+
+ histogram     - Outputs the histogram of IMAGE, by default to 'out.txt'
+ bw            - Transforms IMAGE1 into grayscales
+ blur          - Blurs the image and stores the result, by default, to 'out.bmp'
+ merge         - Fuses IMAGE1 (foreground) and IMAGE2 (background) into one
+                 single image, output to 'out.bmp'
+
+and where [OPTIONS] are zero or more options from the following list:
+
+ /out:FILE     - Saves the result image or histogram in FILE instead of the
+                 default file indicated above
+
+ /nthreads:N   - The server will use 2^N threads (default 2, ie, 4 threads used)
+
+ /contour:N    - (only for 'blur') Compute pixel averages using the N surrounding
+                 'rings' (default 3)
+
+ /alpha:N      - (only for 'merge') Set the transparency of IMAGE1 to N percent,
+                 where 0% means IMAGE1 is completely opaque and 100% means it is
+                 completely transparent (default 50)
+</pre>
+<p>Here are some examples of invocation:</p>
+<ul>
+<li><p class="first">Compute the histogram of the file <tt class="docutils literal">lena.bmp</tt> and store it in <tt class="docutils literal">hist.txt</tt>.
+By default 4 threads are used to perform the computation:</p>
+<pre class="literal-block">
+Client.exe histogram lena.bmp /out:hist.txt
+</pre>
+</li>
+<li><p class="first">Blur the image <tt class="docutils literal">lena.bmp</tt> using 32 threads and mixing the 2
+<cite>rings</cite> of pixels that surround every pixel:</p>
+<pre class="literal-block">
+Client.exe blur lena.bmp /nthreads:5 /contour:2
+</pre>
+</li>
+<li><p class="first">Mix the images <tt class="docutils literal">lena.bmp</tt> and <tt class="docutils literal">background.bmp</tt> into one single image whose
+pixels are defined as 15% of <tt class="docutils literal">lena.bmp</tt> and 85% of <tt class="docutils literal">background.bmp</tt>.
+Uses 16 threads:</p>
+<pre class="literal-block">
+Client.exe merge lena.bmp background.bmp /nthreads:4 /alpha:15
+</pre>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

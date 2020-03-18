@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Introduction Syst&egrave;me : TP virtualisation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="Christophe C&eacute;rin">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=latin-ext" rel="stylesheet">	
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<h1
+		class="header-heading">TP virtualisation, LP
+		ASUR 2018 - 2019</h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="main">
+				<!-- Paragraphs -->
+				<h1 id="one">Introduction</h1>
+				<p style="text-align:justify">
+				  Les systèmes d’exploitation
+				  fournissent une couche d’abstraction
+				  au-dessus du matériel de
+				  l’ordinateur. Le système
+				  d’exploitation virtualise la plupart
+				  des ressources physiques d’un
+				  ordinateur, par exemple : <ul><li>Mémoire</li>
+				  <li>Disques et partitions du disque</li>
+				  <li>Interfaces et ponts
+				  réseau</li></ul></p><p style="text-align:justify">
+				  Les ordinateurs modernes sont
+				  suffisamment puissants pour utiliser
+				  la virtualisation pour donner
+				  l’illusion que de nombreuses
+				  machines virtuelles, chacune
+				  exécutant une instance distincte du
+				  système d’exploitation, tournent sur
+				  un même hôte. La virtualisation
+				  n'est pas un concept nouveau (la
+				  mémoire virtuelle, par exemple, a
+				  été conçue dans les années
+				  1950). IBM a introduit le système
+				  d’exploitation VM/370 pour ses
+				  ordinateurs centraux d’architecture
+				  370 dans les années
+				  1960. L’environnement VM/370
+				  comprend deux composants logiciels,
+				  à savoir le programme de contrôle
+				  (CP) et le système de moniteur de
+				  conversation (CMS). Le CP effectue
+				  la gestion des ressources et crée
+				  l'environnement de machine virtuelle
+				  dans lequel un système
+				  d'exploitation peut s'exécuter.</p>
+				<p style="text-align:justify">Passons en revue quelques gestionnaires de machines virtuelles / hyperviseur :
+				  <ul>
+				    <li><a href="http://user-mode-linux.sourceforge.net/">User Mode Linux</a> (UML) : User
+				    Mode Linux (UML) est un noyau
+				    Linux compilé en tant que fichier
+				    ELF normal afin de pouvoir être
+				    exécuté en tant que processus
+				    utilisateur.</li>
+
+				    <li><a href="https://www.virtualbox.org/">VirtualBox</a>
+				    : VirtualBox est un hyperviseur à
+				    source ouverte développé à
+				    l'origine par Sun Microsystems. Il
+				    est actuellement développé par
+				    Oracle, car Sun Microsystems a été
+				    racheté par Oracle en
+				    2010. VirtualBox s'exécute sur
+				    plusieurs systèmes d'exploitation
+				    hôtes, notamment: Solaris, GNU /
+				    Linux, macOS, Windows et
+				      FreeBSD.</li>
+				    <li><a href="https://linuxcontainers.org/lxd/">LXD</a>
+				    est un système de gestions de
+				    conteneurs... permettant de
+				    déployer des VMs plutot que des
+				    conteneurs au sens
+				    de <a href="https://www.docker.com/">Docker</a>. Au
+				    titre de la gestion de conteneurs
+				    nous retrouvons les fonctions de
+				    créations, suppression, arrêt...
+				    de conteneurs mais aussi des
+				    fonctions pour copier des fichiers
+				    dans/depuis un conteneur,
+				    backup. Ceci ne sont que quelques
+				    exemples. D'un point de vue
+				    industriel, <a href="https://www.opencontainers.org/">l'Open
+				    Container Initiative</a> (OCI)
+				    s'est fixé comme mission de
+				    standardiser un peu les formats et
+				    les supports d'exécution des
+				    technologies de containers.
+				      </li>
+				  </ul>
+				</p>
+				<h4>Exercice UML</h4>
+				<p style="text-align:justify">Lancer une instance UML en suivant
+				les instructions de la page principale
+				du projet. Bien entendu, lancer cette
+				instance dans une VM de
+				RosettaHub. Ensuite, veuillez mettre
+				en évidence les problèmes avec hostfs
+				comme cela est expliqué sur
+				cette <a href="http://user-mode-linux.sourceforge.net/hostfs.html">page</a>.</p>
+				<h4>Exercice VirtualBox</h4>
+				<p style="text-align:justify">Après avoir installé VirtualBox dans une VM de RosettaHub
+				(voir par exemple différentes méthodes
+				sur
+				cette <a href="https://doc.ubuntu-fr.org/virtualbox">page</a>. Peut
+				être que le plus simple est de passer
+				par <tt>apt-get install virtualbox</tt> ?), vous devez
+				utiliser la commande VBoxManage pour
+				créer et utiliser des VMs. Dans ce
+				cadre, veuillez faire les
+				manipulations telles qu'elles sont
+				présentées sur
+				cette <a href="https://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/">page</a>.
+				</p>
+				<h4>Exercices LXD</h4>
+				<p style="text-align:justify">Après avoir lu et compris l'introduction à LDX proposée sur cette
+				<a href="https://blog.selectel.com/managing-containers-lxd-brief-introduction/">page</a>,
+				faites les manipulations qui sont
+				également proposées.
+				</p>
+				<h1>Containers (conteneurs)</h1>
+				<p style="text-align:justify">Les conteneurs constituent une
+				forme de virtualisation du système
+				d'exploitation mais, contrairement aux
+				machines virtuelles, ils ne
+				virtualisent pas le matériel
+				sous-jacent et consomment donc moins
+				de ressources qu'un ordinateur virtuel
+				complet.</p>
+
+				  <p style="text-align:justify">Le déploiement d’une application
+				  sur divers systèmes peut être
+				  problématique en raison des
+				  dépendances de
+				  l’application. L'arbre de dépendance
+				  d'une application peut être assez
+				  complexe. Des systèmes sophistiqués
+				  de gestion de paquets, tels
+				  que <tt>apt</tt>, résolvent beaucoup
+				  de ces problèmes de
+				  dépendance. Cependant, pour les
+				  développeurs partageant du code
+				  source (par exemple, via des outils
+				  comme <tt>git</tt>), l'environnement
+				  mis en place par le système de
+				  gestion de paquets peut ne pas être
+				    suffisant.</p>
+				<p style="text-align:justify">Le noyau
+				  Linux prend en charge un certain
+				  nombre de fonctionnalités
+				  d'isolation, à savoir les espaces de
+				  noms (namespace) et les groupes de
+				  contrôle (cgroups). Les espaces de
+				  noms sont une abstraction de
+				  certains systèmes de gestion de
+				  ressource. Un processus exécuté dans
+				  un espace de noms spécifique semble
+				  avoir sa propre instance d'une
+				  ressource, l'isolant ainsi du reste
+				  du système. Nous décrivons les
+				  espaces de noms dans la section
+				  ci-dessous. Les <tt>Cgroups</tt>
+				  permettent, quant à eux, de limiter
+				  la quantité de ressources système
+				  utilisée par un processus (ou
+				  groupes de processus).</p>
+				<h3>Namespaces</h3>
+				<p style="text-align:justify">La catégorie des types d'espace de noms Linux est fournie
+				  dans la liste ci-dessous :
+				  <ul>
+				    <li>Mount: Isolates a process from mounted filesystems. The mount namespace is the
+				    set of mount filesystems that a process can see. This set may be different from a
+				    process running natively on the host or a process running in another namespace
+				    (which has its own mounted filesystem set). A process within a mount namespace
+				    can change its set of mount filesystems (mount newones or unmount exiting ones)
+				    without affecting processes running outside of the namespace.
+				    <li>UTS: Isolates the hostname and the domain names. The hostname in a namespace
+				    can be changed without affecting the hostname of the host itself.
+				    <li>IPC: Isolates certain interprocess communication (IPC) resources, namely, POSIX
+				    message queues and System V IPC mechanisms.
+				    <li>PID: Isolates the process ID number space. Processes in different namespaces
+				    (including the host), therefore, may have the same process ID value. Note that,
+				    a process running in a namespace will have two process IDs. One ID in the
+				    namespace itself and one in the host system. The values of the two process IDs
+				    need not be the same (except by random chance).
+				    <li>Network: Isolates system network resources. Each namespace has its own network
+				    devices, IP addresses, TCP/UDP ports and routing tables.
+				    <li>User: Isolates users and groups. User and group IDs in a namespace are different
+				    from those on the host system (or any other namespace). The benefit of this is
+				    that a process could be given privileged (superuser) access to resources within the
+				    user namespace while access to resources outside are unprivileged.
+				  </ul>
+				</p>
+				<p style="text-align:justify">Les systèmes Unix ont depuis longtemps
+				une fonction d'isolation dans l'appel
+				système <tt>chroot</tt>. L’appel système <tt>chroot</tt>
+				modifie la perception d’un processus
+				de son répertoire / (racine). Un
+				sous-répertoire sous la hiérarchie du
+				système de fichiers peut être spécifié
+				en tant que nouveau répertoire “/” de
+				processus.</p>
+				<p style="text-align:justify">
+				  Bien que <tt>chroot</tt> ne soit pas
+				  un espace de noms de noyau, il peut
+				  fournir un confinement rudimentaire
+				  à un processus. Nous démontrons les
+				  espaces de noms en écrivant un
+				  utilitaire pour exécuter un
+				  processus dans un environnement
+				  confiné. Nous allons d'abord aller
+				  chercher une archive, décrite dans
+				  le livre "Embedded Operating
+				  Systems" publié chez Springer. Ce
+				  livre est accompagné d’un
+				  dépôt <tt>git</tt> contenant des
+				  fichiers utiles pour nos
+				  manipulations. L'un des fichiers est
+				  une archive d'une structure de
+				  fichier racine GNU / Linux
+				  simple. Utilisez <tt>git clone</tt> pour
+				  aller chercher le dépôt pour le
+				  livre dont on parle, comme suit :
+				  <pre>
+$ mkdir ˜/emxlbook && cd ˜/emxbook
+$ git clone https://github.com/agholt/emx.git
+				    </pre>
+				   </p>
+				<p style="text-align:justify">Dans le répertoire <tt>emx/chapter3</tt>
+				se trouve l'archive tarball de la
+				structure de fichier racine,
+				décompressez-la avec la ligne de
+				commande ci-dessous :
+				  <pre>
+$ tar zxf emx/chapter3/emx.tar.gz
+				  </pre>
+				</p>
+				<p style="text-align:justify">
+				  Cela crée un répertoire appelé root
+				  dans le répertoire de travail actuel
+				  (qui devrait se trouver
+				  dans <tt>~/emxbook</tt>). Le
+				  répertoire, root, contient une
+				  structure de répertoires racine pour
+				  un système GNU / Linux.  Il contient
+				  tous les fichiers d’administration,
+				  bibliothèques partagées, scripts de
+				  démarrage, utilitaires et fichiers
+				  de périphériques nécessaires au
+				  système d’exploitation GNU /
+				  Linux. Le seul composant qui manque
+				  est un noyau Linux, mais nous n’en
+				  avons pas besoin à ce stade car un
+				  système de conteneur utilise le
+				  noyau de l’hôte. Examinez le contenu
+				  du répertoire, racine:
+				  <pre>
+$ ls root/
+  bin dev lib proc sbin usr var.tar
+  boot etc linuxrc root sys var
+				  </pre>
+				</p>
+				<p style="text-align:justify">Lançons maintenant la commande <tt>chroot</tt> sur ce répertoire et demandons un shell :
+				  <pre>
+$ sudo chroot root /bin/sh -i
+/ #
+				  </pre>
+				</p>
+				<p style="text-align:justify">Bien que le chemin de notre
+				répertoire soit donné par /, nous
+				sommes dans le
+				répertoire <tt>~/emxbook/root</tt>. Le
+				répertoire <tt>~/emxbook/root</tt> de
+				l'hôte est identique à celui de / dans
+				le chroot. On terminera par vérifier
+				que l'on ne peut pas remonter d'un
+				niveau dans la hiérarchie des
+				répertoires via un <tt>cd
+				..</tt>. Nous sommes confinés !</p>
+
+				<h3>LXC</h3>
+<p style="text-align:justify">LXC, contraction de l’anglais Linux
+Containers est un système de virtualisation, utilisant l'isolation
+comme méthode de cloisonnement au niveau du système d'exploitation.
+LXC repose sur les fonctionnalités des cgroups du noyau Linux ainsi
+que le cloisonnement des espaces de nommage du noyau, permettant
+d'éviter à un système de connaître les ressources utilisées par le
+système hôte ou un autre conteneur.
+</p>
+
+<p style="text-align:justify">Le travail consiste à rejouer les
+instructions qui vous sont données sur
+cette <a href="https://linuxcontainers.org/lxc/getting-started/">page</a>. Merci
+de vérifier que votre OS dispose bien de la dernière version de
+LXC. Si ce n'est pas le cas, faites l'installation de la dernière
+version, puis procéder à la création, destruction, gel de conteneurs
+LXC comme cela est expliqué.
+</p>
+
+<p style="text-align:justify">Il est aussi possible d'utiliser des
+conteneurs en mode "unprivilegied". La distinction entre le mode
+privilégié et le mode non privilégié est
+discuté <a href="https://linuxcontainers.org/lxc/security/">ici</a>. On
+nous dit aussi sur le Web que "Ubuntu is also one of the few (if not
+only) Linux distributions to come by default with everything that's
+needed for safe, unprivileged LXC containers". Pour savoir si les
+conteneurs crées sont en mode privilégié ou pas, lire
+cette <a href="https://discuss.linuxcontainers.org/t/check-privileged-or-unprivileged/238">note</a>. Votre
+mission est de vérifier si la distribution Linux que vous utilisez
+autorise les conteneurs unprivilegied ou pas. Veuillez mentionner et
+  expliquer vos observations afin de justifer votre réponse.</p>
+
+<p style="text-align:justify"><b>Notes :</b> pour Debian, il se peut
+que, pour installer le mode non privilégié, il soit nécessaire de
+suivre
+ces <a href="https://github.com/BenSartor/unprivileged-lxc-containers">instructions</a>. Une
+dicussion très technique des problèmes avec les modes privilégiés et
+non privilégiés se
+trouve <a href="https://stgraber.org/2014/01/17/lxc-1-0-unprivileged-containers/">ici</a>.
+</p>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="container">
+				&copy; Copyright 2018, Christophe C&eacute;rin
+			</div>
+		</div>
+	</body>
+</html>

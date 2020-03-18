@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>PoMMaDe</title>
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 36px}
+.STYLE3 {
+	font-size: x-large;
+	color: #0000FF;
+}
+body {
+	background-color: #FFFFFF;
+}
+.STYLE4 {font-size: 24px}
+.STYLE5 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.STYLE6 {color: #000000}
+.STYLE7 {color: #0000FF}
+.STYLE12 {font-size: smaller}
+.STYLE23 {font-size: 20px}
+.STYLE24 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.STYLE27 {
+	color: #00FF00;
+	font-weight: bold;
+}
+.STYLE28 {color: #330033}
+.STYLE30 {color: #660033}
+.STYLE32 {
+	font-family: 'sans-serif', 'txsy';
+	color: #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<blockquote>
+  <h1><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> --<font size="5"> A Pushd</font><span class="STYLE23">O</span><font size="5">wn Model-checker for M</font><span class="STYLE23">A</span><font size="5">lware D</font><span class="STYLE23">E</span><font size="5">tection </font></h1>
+</blockquote>
+<table width="866" height="40" border="0" align="left" bordercolor="#FFFFFF" summary="main-menu">
+  <tr>
+    <td width="140" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center" class="STYLE3">
+      <p><a href="#Introduction"><font size="5">Introduction</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="#Download"><font size="5">Download</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="#QuickStart"><font size="5">Quick Start</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="#References"></a><a href="#Experiments"><font size="5">Experiments</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="#Syntax"><font size="5">Usage</font></a></p></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="#References"><font size="5">References</font></a><a href="#Experiments"></a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr size="3" noshade>
+<p class="STYLE3"><a name="Introduction"></a><strong>Introduction</strong></p>
+<p align="justify"><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> is a malware detector based on Pushdown Model-Checking techniques. Given a binary program, and a set of malicious behaviors 
+expressed by SCTPL or SLTPL, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  outputs <strong>Yes</strong> if the program satisfies one formula. It means that the binary program may be a malware. Otherwise, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> outputs <strong>No</strong> meaning that the binary program is benign. As shown in the following figure, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> consists of five components: <strong>Preprocessor</strong>, <strong>Oracle</strong>, <strong>Filter</strong>, <strong>Model Builder </strong>and <strong>Model-Checking Engines.</strong></p>
+<p align="justify"><strong>Preprocessor</strong> uses <a href="http://code.google.com/p/pefile">PEfile</a> to check whether the binary program is packed or not. If this is the case, we use the corresponding unpacker (if it exists) to unpack the binary code and feed the resulting binary program to <strong>Oracle</strong>. Otherwise, we directly pass the binary code to <strong>Oracle</strong>.  So far, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  supports dozens of popular packers for Windows, 
+  and hundreds of packers for Linux. Moreover, users can easily add a new unpacking tool by modifying the database file. <strong>Oracle</strong> takes as input a (unpacked) binary program and outputs the assembly program, and the informations of API functions and the states (values of the registers and memory addresses at each control point). <strong>Oracle</strong>  relies on <a href="www.jakstab.org">Jakstab</a> and <a href="http://www.hex-rays.com/">IDA Pro</a>. 
+  Jakstab performs  static analysis of the binary program, provides an assembly program and the states. 
+  However, it does not allow to extract the informations of API functions and some indirect calls to the API functions. <strong>Oracle</strong> uses IDA Pro to get these informations. The outputs of <strong>Oracle</strong> are used by <strong>Filter</strong> to filter out benign programs <strong>P</strong> according to the given optimization strategies by ``syntactically&quot; checking the assembly program. <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> provides three strategies: (1) keywords strategy, (2)sequence strategy and (3) direct strategy. 
+  When ``keywords strategy&quot; is chosen, the user has to provide a set of instructions to <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>. <strong>Filter</strong> will syntactically check whether or not the assembly program contains these instructions. 
+  If this is not the case, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  outputs <strong>No</strong> (we know that  <strong>P</strong> does not contain this malicious behavior, no need to apply model-checking). Otherwise, <strong>Model Builder</strong> is called (we need to apply model-checking to decide whether   <strong>P</strong> is a malware or not). 
+  When ``sequence strategy&quot; is chosen, the user has to provide a sequence of instructions to <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>. <strong>Filter</strong> will ``syntactically&quot; check in the control flow graph of the assembly program whether or not these instructions occur in the same order as in the sequence. If this is not the case,<span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> outputs <strong>No</strong> (no need to apply model-checking,  <strong>P</strong> is benign). Otherwise, <strong>Model Builder</strong> is called. 
+  If ``direct strategy&quot; is chosen, <strong>Model Builder</strong> is directly called.<strong>Model Builder</strong> outputs a PDS modeling the assembly program. <strong>Model-Checking Engines</strong> takes as input the PDS from <strong>Model Builder</strong> and performs model-checking of the PDS against all the formulas given by the user. 
+  If there is one formula satisfied by the PDS, <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  outputs <strong>Yes</strong>. Otherwise <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  outputs <strong>No</strong>.</p>
+<p>&nbsp;</p>
+<p align="center"><img src="Architecture.png" width="1004" height="336"></p>
+ <p align="center">&nbsp;</p>
+ <p><span class="STYLE3"><a name="Download"></a><strong>Download</strong></span> </p>
+<p><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  has been tested mainly on Linux distributions. <a href="https://docs.google.com/file/d/0Bz-ntf1Jfd7Bd0dXRXNfLVp4cTA/edit">Download</a>. </p>
+<blockquote>&nbsp;</blockquote>
+<p><STRONG>Tips for installing <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  on Linux</STRONG><STRONG>.</STRONG></p>
+<p align="justify"><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  relies on a commerical tool IDA Pro and several open source tools (CUDD, libcstl and Jakstab). After downloading the source code of <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>, these tools have to be installed. </p>
+<p align="justify"><strong>IDA Pro</strong> is a disassembler. You can get it here http://www.hex-rays.com/products/ida/index.shtml and put IDA Pro in the directory of <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>. After that, replace the file /IDAPRO/ida/idc/analysis.idc by our file <a href="analysis">analysis.idc, </a>the file /IDAPRO/ida/idc/idc.idc by <a href="idc">idc.idc</a>. </p>
+<p><strong>cudd-2.4.2</strong> is in <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>. Up-to-date versions can be   obtained from the <A href="http://vlsi.colorado.edu/~fabio/CUDD/">CU Decision   Diagram Package</A> . Use the following commands to install CUDD.</p>
+<BLOCKQUOTE>
+  <p><STRONG>tar -zxvf PuMoC.tar.gz</STRONG></p>
+  <p><STRONG>cd PuMoC/cudd-2.4.2 </STRONG></p>
+  <p><STRONG>make </STRONG></p>
+</BLOCKQUOTE>
+<p>Copy object files <STRONG>libcudd.a, libepd.a, libmtr.a, libst.a, libutil.a </STRONG>from the directory <STRONG>cudd, epd, mtr, st, util </STRONG>to the   directory <STRONG>lib in cudd-2.4.2 </STRONG>by the following commands: </p>
+<BLOCKQUOTE>
+  <p><STRONG>cp -i cudd/libcudd.a lib/ </STRONG></p>
+  <p><STRONG>cp -i epd/libepd.a lib/ </STRONG></p>
+  <p><STRONG>cp -i mtr/libmtr.a lib/ </STRONG></p>
+  <p><STRONG>cp -i st/libst.a lib/ </STRONG></p>
+  <p><STRONG>cp -i util/libutil.a lib/ </STRONG></p>
+</BLOCKQUOTE>
+<p align="justify"><strong>libcstl</strong> is an open source library implementing STL library in C. <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  is equipped with libcstl-2.0.1. Up-to-date versions can be   obtained from <a href="https://github.com/activesys/libcstl">https://github.com/activesys/libcstl</a>. Use the following commands to instal libcstl: </p>
+<blockquote>
+  <p> ./configure --prefix=/.../pommade/libcstl</p>
+  <p>make </p>
+</blockquote>
+<p><strong>Jakstab</strong> is static analysis tool for X86 binaries. <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  is equipped with <a href="http://www.jakstab.org">Jakstab</a>. Compile <em>compile.sh </em>or <em>compile.bat</em> to install Jakstab. </p>
+<p>&nbsp;</p>
+<p>Now, you can install <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  by the commands:</p>
+<BLOCKQUOTE>
+  <p><STRONG>cd..</STRONG></p>
+  <p><STRONG>make</STRONG></p>
+  <p>&nbsp;</p>
+</BLOCKQUOTE>
+<p><span class="STYLE3"><a name="QuickStart"></a><strong>QuickStart</strong></span></p>
+<p>After installing the above libraries and <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> , you can evaluate an example by the following commands: </p>
+<blockquote>
+  <p>./pommade -l3fI2  malware/Email-Worm.Win32.NetSky.a formulas/sp.ctpl</p>
+</blockquote>
+<p align="justify">Here the file <em>malware/Email-Worm.Win32.NetSky.a</em> is an email-worm, <em>formulas/sp.ctpl</em> contains a SCTPL formula that specifies the self-propagation behavior. -l3 specifies that the formula is in SCTPL.  I2 specifies that the filter strategy is <em>sequence strategy</em>. The results are shown in the following figures.</p>
+<p><img src="ctpl.jpg" width="661" height="415"></p>
+<p><img src="ctpl2.jpg" width="663" height="420"></p>
+<p>&nbsp;</p>
+<p><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  also supports SLTPL model-checking using the following commands:</p>
+<blockquote>
+  <p>./pommade -l5fI2  malware/Email-Worm.Win32.NetSky.a formulas/sp.ltpl</p>
+</blockquote>
+<p>The results are shown in the following figures.</p>
+<p><img src="ltpl.jpg" width="662" height="414"></p>
+<p><img src="ltpl2.jpg" width="661" height="416"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="STYLE3"><a name="Experiments"></a><strong>Experiments</strong></p>
+<p><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  was able to detect more than 600 real malwares. </p>
+<p align="justify"><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  is also applied to check 200 new malware generated by two malware generators NGVCK and VCL32. NGVCK 
+  and VCL32 are the best malware generators as shown in <a href="www.cs.sjsu.edu/faculty/stamp/students/Report.pdf">[Won06]</a>. Malwares created by 
+  NGVCK and VCL32 use very sophisticated features such as anti-disassembly, antidebugging, 
+  anti-emulation, and anti-behavior blocking and come equipped with code 
+morphing ability which allows them to produce different-looking viruses. <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> can detect all of these new malware, while several of them are not detected by several well-known anti-viruses such as <a href="http://www.avira.com">Avira</a>, <a href="http://www.kaspersky.com">Kaspersky</a>, <a href="http://www.avast.com">Avast</a>, <a href="http://www.360.cn">Qihoo 360</a>, <a href="http://www.mcafee.com">McAfee</a>, <a href="http://www.avg.com">AVG</a>, <a href="http://www.bitdefender.com">BitDefende</a>, <a href="http://www.eset.com">Eset</a> Nod32, <a href="http://www.f-secure.com">F-Secure</a>, <a href="http://www.norton.com">Norton</a>, <a href="http://www.pandasecurity.com">Panda</a> and <a href="http://www.trendmicro.com">Trend Micro</a>. </p>
+<table border="1" align="left" bordercolor="#000000" bgcolor="#CCCCCC">
+  <tr>
+    <th scope="col">Generator</th>
+    <th scope="col">Number of Variants</th>
+    <th nowrap bordercolor="#000000" scope="col"><span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> </th>
+    <th scope="col">Avira Detection Rate </th>
+    <th scope="col">Kaspersky Detection Rate</th>
+    <th scope="col">Avast Detection Rate</th>
+    <th scope="col">Qihoo 360 Detection Rate</th>
+    <th scope="col">McAfee Detection Rate</th>
+    <th scope="col">AVG Detection Rate</th>
+    <th scope="col"><p>BitDefende Detection Rate</p>    </th>
+    <th scope="col">Eset Nod32 Detection Rate</th>
+    <th scope="col">F-Secure Detection Rate</th>
+    <th scope="col">Norton Detection Rate</th>
+    <th scope="col">Panda Detection Rate</th>
+    <th scope="col">Trend Micro Detection Rate</th>
+  </tr>
+  <tr>
+    <th scope="row">NGVCK</th>
+    <td><div align="center">100</div></td>
+    <td bordercolor="#000000"><div align="center"><strong>100%</strong></div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">23%</div></td>
+    <td><div align="center">18%</div></td>
+    <td><div align="center">68%</div></td>
+    <td><div align="center">100%</div></td>
+    <td><div align="center">11%</div></td>
+    <td><div align="center">97%</div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">68%</div></td>
+    <td><div align="center">46%</div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">0%</div></td>
+  </tr>
+  <tr>
+    <th scope="row">VCL32</th>
+    <td><div align="center">100</div></td>
+    <td bordercolor="#000000"><div align="center"><strong>100%</strong></div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">2%</div></td>
+    <td><div align="center">100%</div></td>
+    <td><div align="center">99%</div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">100%</div></td>
+    <td><div align="center">100%</div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">99%</div></td>
+    <td><div align="center">30%</div></td>
+    <td><div align="center">0%</div></td>
+    <td><div align="center">0%</div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><a href="expr.html" class="STYLE4"></a> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1><a name="Syntax" id="Syntax"></a><span class="STYLE7"><strong>Manual</strong></span></h1>
+<p>The usage of <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>   is as follows: <span class="STYLE5">pommade [-&lt;options&gt;] &lt;modelfile&gt; &lt;formula&gt;</span></p>
+<p>&lt;modelfile&gt; should be a binary program. &lt;formula&gt; is either a SCTPL formula or SLTPL formula.</p>
+<p>The options of <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>  are as follows:</p>
+<blockquote>
+  <p>-n: Translate SLTPL formula into LTL formula with regular valuations, then apply LTL model-checking with regular valuations for pushdown systems<br>
+    <br>
+    -A: Enable abstraction w.r.t. the specification.
+    <br>
+    -o: Output the pushdown system modelling the binary program.</p>
+  -In: Specify the filter strategy: no strategy, or keyword strategy or sequence strategy.<br>
+  <span class="STYLE24">-n=0: No strategy, default.<br>
+  <span class="STYLE28">-n=1: The  strategy is keyword strategy.</span><br>
+  -n=2: The  strategy is sequence strategy.</span><br>
+  <br>
+  -ln: Specify the type of model checking.<br>
+  <span class="STYLE24">-n=3: SCTPL model checking, i.e, the formula is in SCTPL logic.<br>
+  <span class="STYLE30">-n=5: SLTPL model checking, i.e, the formula is in SLTPL logic.</span> </span></blockquote>
+<h3><font color="#0000FF">The implementation of SCTPL and SLTPL operators in  <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>.</font></h3>
+<TABLE align="center">
+  <TR>
+    <TH nowrap style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px 1px 3px 1px"> <div align="center"><SPAN style="color:#000000"
+>SCTPL/SLTP</SPAN
+><SPAN style="color:#000000"
+>L </SPAN
+><SPAN style="color:#000000"
+>Operator</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+></div></TH>
+    <th nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px 1px 3px 1px"><SPAN style="color:#000000"
+>Correspondin</SPAN
+><SPAN style="color:#000000"
+>g </SPAN
+><SPAN style="color:#000000"
+>Operator</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>n </SPAN
+><SPAN style="color:#000000"
+>P</SPAN
+><SPAN style="font-size:7.9pt; color:#000000"
+>O</SPAN
+><SPAN style="color:#000000"
+>MM</SPAN
+><SPAN style="font-size:7.9pt; color:#000000"
+>A</SPAN
+><SPAN style="color:#000000"
+>D</SPAN
+><SPAN style="font-size:7.9pt; color:#000000"
+>E </SPAN
+></th>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:16px; border-style:solid; border-color:#000000; border-width:3px 1px 1px 1px"> <div align="center"><SPAN style="color:#000000"
+>Atomi</SPAN
+><SPAN style="color:#000000"
+>c </SPAN
+><SPAN style="color:#000000"
+>predicat</SPAN
+><SPAN style="color:#000000"
+>e </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:16px; border-style:solid; border-color:#000000; border-width:3px 1px 1px 1px"><div align="center"><SPAN style="font-style:italic; color:#000000"
+>b</SPAN
+><SPAN style="color:#000000"
+>(</SPAN
+><SPAN style="font-style:italic; color:#000000"
+>p</SPAN
+><SPAN style="font-size:6.9pt; color:#000000"
+>1</SPAN
+><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+>, </SPAN
+><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+>...</SPAN
+><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+>, </SPAN
+><SPAN style="font-style:italic; color:#000000"
+>p</SPAN
+><SPAN style="font-size:6.9pt; font-style:italic; color:#000000"
+>n</SPAN
+><SPAN style="color:#000000"
+>) </SPAN
+><SPAN style="color:#000000"
+>o</SPAN
+><SPAN style="color:#000000"
+>r </SPAN
+><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+>#</SPAN
+><SPAN style="font-style:italic; color:#000000"
+>e</SPAN
+><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+># </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="vertical-align:middle; width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>¬ </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>! </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>∨ </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>||</SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>∧ </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>&amp;</SPAN
+><SPAN style="color:#000000"
+>& </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH rowspan=2 style="vertical-align:middle; width:142px; height:33px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>∃</SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>E</SPAN
+><SPAN style="color:#000000"
+>s x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>f </SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+><SPAN style="color:#000000"
+>use</SPAN
+><SPAN style="color:#000000"
+>d </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>n </SPAN
+><SPAN style="color:#000000"
+>regula</SPAN
+><SPAN style="color:#000000"
+>r </SPAN
+><SPAN style="color:#000000"
+>variabl</SPAN
+><SPAN style="color:#000000"
+>e </SPAN
+><SPAN style="color:#000000"
+>expression</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TD nowrap style="width:245px; height:16px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>Eo x if </SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+><SPAN style="color:#000000"
+>is used in atomic predicates </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH rowspan=2 style="vertical-align:middle; width:142px; height:32px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>∀</SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>A</SPAN
+><SPAN style="color:#000000"
+>s x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>f </SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+><SPAN style="color:#000000"
+>use</SPAN
+><SPAN style="color:#000000"
+>d </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>n </SPAN
+><SPAN style="color:#000000"
+>regula</SPAN
+><SPAN style="color:#000000"
+>r </SPAN
+><SPAN style="color:#000000"
+>variabl</SPAN
+><SPAN style="color:#000000"
+>e </SPAN
+><SPAN style="color:#000000"
+>expression</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TD nowrap style="width:245px; height:16px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>A</SPAN
+><SPAN style="color:#000000"
+>o x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>f </SPAN
+><SPAN style="font-style:italic; color:#000000"
+>x </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+><SPAN style="color:#000000"
+>use</SPAN
+><SPAN style="color:#000000"
+>d </SPAN
+><SPAN style="color:#000000"
+>i</SPAN
+><SPAN style="color:#000000"
+>n </SPAN
+><SPAN style="color:#000000"
+>atomi</SPAN
+><SPAN style="color:#000000"
+>c </SPAN
+><SPAN style="color:#000000"
+>predicate</SPAN
+><SPAN style="color:#000000"
+>s </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>X </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>X </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>F </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>F </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>G </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>G </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>U </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>U </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>R </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>W </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>A </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>A </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TH style="width:142px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style=" font-weight:normal; color:#000000"
+>E </SPAN
+></div></TH>
+    <TD nowrap style="width:245px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>E </SPAN
+></div></TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</p>
+<p><span class="STYLE6"> </span>Note that in the atomic predicate b(p1,...,pn), b is the operator of the instruction, p1,...,pn are operands of the instruction. If pi denotes some constant n, then pi='n. Otherwise, pi is a variable.</p>
+<p>In the atomic predicate #e# , e is a regular expression defined as follows. </p>
+<h3><font color="#0000FF">The syntax of regular variable expression (Regular Valuations) in<span style="font-variant: small-caps;"><strong> P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>.</font></h3>
+<TABLE width="274" align="center">
+  <TR>
+    <TH width="85" nowrap style="width:52px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="color:#000000"
+>identiﬁer </SPAN
+></div></TH>
+    <TH width="177" nowrap style="width:149px; height:17px; border-style:solid; border-color:#000000; border-width:1px"> <div align="center"><SPAN style="color:#000000"
+>[a-zA-Z0-9][a-zA-Z0-9 $:] </SPAN
+></div></TH>
+  </TR>
+  <TR>
+    <TD nowrap style="width:52px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'rtxr'; color:#000000"
+>+ </SPAN
+></div></TD>
+    <TD nowrap style="width:149px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="color:#000000"
+>+ </SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TD nowrap style="width:52px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>· </SPAN
+></div></TD>
+    <TD nowrap style="vertical-align:top; width:149px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>.</SPAN
+></div></TD>
+  </TR>
+  <TR>
+    <TD nowrap style="width:52px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'rtxmi'; color:#000000"
+>Γ </SPAN
+></div></TD>
+    <TD nowrap style="width:149px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><span class="STYLE6">|</span></div></TD>
+  </TR>
+  <TR>
+    <TD nowrap style="vertical-align:top; width:52px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><span class="STYLE32">*</span></div></TD>
+    <TD nowrap style="vertical-align:top; width:149px; height:17px; border-style:solid; border-color:#000000; border-width:1px"><div align="center"><SPAN style="font-family:'sans-serif', 'txsy'; color:#000000"
+>*</SPAN
+></div></TD>
+  </TR>
+</TABLE>
+<h3 align="center" class="STYLE7">&nbsp; </h3>
+<p class="STYLE6">For example, the SCTPL formula, the SCTPL formula <span class="STYLE5">∃x EF ( call(GetModuleFileNameA) ∧ 0xΓ*∧ EF(call(CopyFileA) ∧ xΓ*) )</span> will be in  <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span> syntax as follows:</p>
+<p align="center" class="STYLE6"><span class="STYLE24">Es x EF( call(GetModuleFileNameA) &amp;&amp; 0.x.|*&amp;&amp; EF(call(CopyFileA) &amp;&amp; x.|*) )</span> </p>
+<p class="STYLE3"><a name="References" id="References"></a><strong>References</strong></p>
+<p>[TACAS12] Fu Song and Tayssir Touili. Pushdown Model-Checking for Malware   Detection. <EM>In TACAS 2012.</EM> [ <A href="http://www.springerlink.com/index/84669P7P75064151.pdf">PDF</A>]</p>
+<p>[FM12]  Fu Song and Tayssir Touili.  Efficient Malware Detection Using Model-Checking.   <EM>In FM 2012.</EM> [ <A href="http://www.liafa.jussieu.fr/~song/FM12.pdf">PDF</A>]</p>
+<p>[TACAS13]  Fu Song and Tayssir Touili.  LTL Model-Checking for Malware Detection.   <EM>In  TACAS 2013.</EM><BR>
+</p>
+
+
+<p>[ESECFSE] Fu Song and Tayssir Touili. POMMADE:PushdOwn Model-checking for Malware DEtection.    <EM>In ESEC/FSE 2013.</EM><BR> 
+</p>
+
+<p>[STTT13] Fu Song and Tayssir Touili. Pushdown Model-Checking for Malware Detection.   <EM> In STTT 2013.</EM><BR> 
+</p>
+
+
+<p>&nbsp;</p>
+<p><strong>Contact</strong>: <span style="font-variant: small-caps;"><strong>P<span class="STYLE12">o</span>MM<span class="STYLE12">a</span>D<span class="STYLE12">e</span></strong></span>   is written and maintained by <a href="mailto:songfu1983@gmail.com">Fu Song</a> and <a href="mailto:touili@lipn.fr">Tayssir Touili</a>. </p>
+<p>&nbsp;</p>
+<a href="http://www4.clustrmaps.com/user/dc2fba46"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/www.liafa.jussieu.fr-~song-videc-thumb.jpg" alt="Locations of visitors to this page" /></a>
+<script type="text/javascript">var _clustrmaps = {'url' : 'http://www.liafa.jussieu.fr/~song/PuMoC/', 'user' : 977609, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-01-26', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script>
+<noscript>
+<a href="http://www3.clustrmaps.com/user/bb3eeac9"></a>
+</noscript>
+<hr noshade>
+<p align="center">Copyright © 2012-2013 LIAFA, University of Paris Diderot and CNRS.</p>
+<p class="STYLE1">&nbsp;</p>
+</body>
+
+
+</html>

@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>OSIS Sécurité 2016</title>
+	<meta name="author" content="Laure Petrucci" />
+	<meta name="description" content="La journée Sécurité de l'OSIS 2016 aura lieu à Villetaneuse le 10 mai 2016" />
+	<meta name="keywords" content="Journées OSIS 2016, Sécurité, Sûreté, Confidentialité, Accueil, Participants, Programme, Inscriptions, Informations pratiques" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="OSIS-Secu2016.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<a href="images/affiche-OSIS-A3.pdf"><img style="float:left;" src="images/affiche_osis_secu.jpg" height="150"></a>
+		<a href="http://www.systematic-paris-region.org/fr/logiciel-libre"><img style="float:right;" src="images/gtll.png" alt="GTLL" height="80" title="GTLL" /></a>
+		<a href="http://www.cnrs.fr/"><img style="float:right;" src="images/cnrs.png" alt="CNRS" height="80" title="CNRS" /></a>
+		<a href="http://www.irill.org"><img style="float:right;" src="images/irill.png" alt="IRILL" height="80" title="IRILL" /></a>
+		<h1><a href="index.php">Journée de l'OSIS 2016 :</a></h1>
+		<h1><a href="index.php">Sécurité, Sûreté et Confidentialité</a></h1>
+		<h2>10 Mai 2016, Villetaneuse</h2>
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Accueil</a></li>
+			<!-- <li><a href="call-for-paper.php">Call for papers</a></li> -->
+			<!-- <li><a href="registration.php">Inscription</a></li> -->
+			<li><a href="program.php">Programme</a></li>
+			<!-- <li><a href="invited-speakers.php">Orateurs invités</a></li> -->
+			<li><a href="talks.php">Orateurs et Exposés</a></li>
+			<!-- <li><a href="postersLundi.php">Posters</a></li> -->
+			<li><a href="participants.php">Participants</a></li>
+			<!-- <li><a href="social-event.php">Social Event </a></a></li> -->
+			<!-- <li><a href="practical.php">Informations pratiques</a></li> -->
+			<li><a href="venue.php">Accès </a></li>
+			<li><a href="committees.php">Organisateurs</a></li>
+			<li><a href="videos.php">Vidéos</a></li>
+			<!-- <li><a href="past.php">Past editions</a></li> -->
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+  
+	<div id="main">
+		<h2>Présentation de la journée OSIS - Sécurité, sûreté et confidentialité</h2>
+
+	<p>Les journées OSIS (<a href="http://www.open-source-innovation-spring.org">Open Source Innovation Spring</a>) sont un lieu d'information et d'échange annuel sur le logiciel libre rassemblant chercheurs et industriels. Cette initiative du <a href="http://www.systematic-paris-region.org/fr/logiciel-libre">Groupe Thématique Logiciel Libre</a> de Systematic et de l'IRILL (<a href="http://www.irill.org/">Initiative de Recherche sur le Logiciel Libre</a>) comprend plusieurs événements. La journée <b>Sécurité, sûreté et confidentialité</b> 2016 se tiendra au LIPN à l'Université de Paris 13 le 10 mai 2016.</p>
+
+<p>Elle comprendra des présentations scientifiques d'orateurs académiques et industriels, de membres du GTLL.</p>
+
+<p>L'<a href="registration.php"><b>inscription</b></a> à la journée est gratuite mais obligatoire.</p>
+
+<p>Pour toute question, contacter les <a href="committees.php">organisateurs</a>.</p>
+
+<p>La journée aura lieu dans les locaux de l'Institut Galilée (voir <a href="venue.php">accès</a>):
+	<ul>
+	<li> <b>Conférence : amphi B</b>
+	<li> <b>Pauses-café, buffet, cocktail : salles F003-F004</b>
+	</ul>
+</p>
+		
+<p>
+<a href="https://lipn.univ-paris13.fr/applications/osis-secu-2016/liste.php">Liste des participants</a>
+</p>
+
+<!-- <p>
+Affiche des journées: <a href="images/affiche_osis_secu.pdf"><img src="images/affiche_osis_secu.jpg" width="82" alt="OSIS-Sécu 2016" title="OSIS-Sécu 2016"></a>
+</p>
+ -->
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<!-- <img src="images/cnrs.png" alt="CNRS" title="CNRS"> -->
+			<img src="images/inria.png" alt="INRIA" title="INRIA">
+			<!-- <a href="https://www.gdr-im.fr/"><img src="images/logo-gdrim.png" alt="GdR IM CNRS" title="GdR IM"></a> -->
+			<a href="http://www.sorbonne-paris-cite.fr/"><img src="images/logosorbonnepariscit.jpg" alt="USPC" title="USPC"></a>
+			<a href="http://www.univ-paris13.fr/"><img src="images/paris13.png" alt="Université Paris 13" title="Université Paris 13"></a>
+			<a href="https://lipn.univ-paris13.fr/fr/"><img src="images/lipn.jpg" alt="LIPN" title="LIPN"></a>
+			<a href="http://www.iutv.univ-paris13.fr/index.php"><img src="images/logoIUT-villetaneuse2010_ev.jpg" alt="IUT Villetaneuse" title="IUT Villetaneuse"></a>
+<!-- 		</div>
+		
+		<div id="sponsors-labos">
+			<img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR">
+			<!-- <a href="https://lipn.univ-paris13.fr/~fernique/quasicool/"><img src="images/quasicool.gif" alt="Projet financé par l’ANR" title="ANR QuasiCool" width="90"></a> -->
+<!-- 			<a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>
+ -->			<!-- <a href="http://http://www.liafa.univ-paris-diderot.fr/dyna3s/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR Dyma3S"></a> -->
+ 			<a href="https://mathstic.univ-paris13.fr/"><img src="images/logo_mathstic.png" alt="MathSTIC" title="MathSTIC"></a>
+			<!-- <a href="https://digicosme.lri.fr/tiki-index.php"><img src="images/logo-DigiSaclaysmall.png" alt="DigiCosme" title="DigiCosme"></a> -->
+			<!-- <img src="images/alea.gif" alt="Projet SPC Alea" title="Alea"> -->
+		</div>
+		
+		<div id="contact">
+			<p> Contact: Laure Petrucci. Email: Laure.Petucci [ at ] lipn.univ-paris13.fr </p>
+		</div>
+		
+		<div id="copyright">
+			<p>Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)</p>
+			<p>Title font: <a href="https://fontlibrary.org/en/font/bretan">Coval</a> (SIL Open Font); Main banner: Paulin de Naurois</p>
+			<p>Poster: Fabrice Kordon</p>
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+</body>
+</html>
+ 

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Frederic Roupin home page</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Frederic Roupin home page" />
+<meta name="keywords" content="roupin, semidefinite, biqcrunch" />
+<link rel="stylesheet" href="my.css" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+
+<body onload="window.location.href='index.php#contact'">
+
+<div id="sidebar">
+<hr></hr>
+<h1>Fr&eacute;d&eacute;ric Roupin</h1>
+<h2>Professeur des Universit&eacute;s
+&agrave; l'Institut Galil&eacute;e, Paris 13</h2>
+<hr></hr>
+<div id="menu">
+<a href="index.php#contact">Contact</a>
+<a href="index.php#recherche">Recherche</a>
+<a href="index.php#publications">Publications</a>
+<a href="index.php#enseignements">Enseignements</a>
+<a href="index.php#responsabilites">Responsabilit&eacute;s</a>
+<a href="index.php#projets">Projets et R&eacute;alisations</a>
+<a href="index.php#liens">Documents et Liens</a>
+
+</div>
+<hr></hr>
+<p>
+<img src="img/logoP13Petit.GIF" width="142" height="37" alt="paris13" />
+</p>
+<br></br>
+<img src="img/LIPN.jpg" width="100" height="70" alt="LIPN" /> 
+<p>
+<img src="img/cnrs2.jpg" width="86" height="85" alt="CNRS" />
+</p>
+<br></br>
+<br></br>
+<p>mise &agrave; jour :<br></br>
+16/06/2019</p>
+</div>
+
+<div id="content">
+<a name="contact"></a>
+<hr></hr>
+<h3>Contact</h3>
+<img src="img/frederic.roupin.jpg" width="150" alt="roupin" />
+Equipe <b><a class="lk" href="http://lipn.univ-paris13.fr/accueil/equipe/aoc/membres_aoc/">Algorithmes et Optimisation Combinatoire</a></b> du <b><a class="lk" href="http://www-lipn.univ-paris13.fr/">LIPN</a></b> UMR CNRS 7030 
+de l'Universit&eacute Paris 13<br></br>
+<table> <tr> <td> <b>Courriel  </b></td>
+<td>
+<img id="image_nob" src="img/mel2.jpg" width="275" height="18" alt="mel" />
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Adresse  </b>
+</td>
+<td>
+Laboratoire d'Informatique Paris-Nord
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Institut Galil&eacute;e
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+99, avenue Jean-Baptiste Cl&eacute;ment 93430 Villetaneuse, France
+</td>
+</tr>
+
+<tr>
+<td>
+<b>T&eacute;l&eacute;phone  </b>
+</td>
+<td>
++33 1 49 40 35 95
+</td>
+</tr>
+</table>
+<br></br>
+<br></br>
+<br></br>
+<!--<hr></hr>
+<br></br>
+<p>
+<img src="img/new.gif" border=none width="34" height="16" alt="new" />  <a class="lk" href=" http://www-lipn.univ-paris13.fr/BiqCrunch/" target="_blank"><b>BiqCrunch</b>, a SDP-based branch-and-bound for solving 0-1 quadratic problems </a><br></br>
+</p>
+-->
+<hr></hr>
+<a name="recherche"></a>
+<h3>Recherche</h3>
+<img src="img/combinatoire.jpg" width="120" height="120" alt="combinatoire" />
+<p> Ma recherche concerne <b> l'Optimisation Combinatoire </b> et comporte trois th&egrave;mes principaux : </p>
+
+   <h4> - Programmation math&eacute;matique </h4>
+   <h4> - Optimisation dans les graphes </h4>
+   <h4> - Complexit&eacute; et approximation </h4>
+Un de mes axes de recherche privil&eacute;gi&eacute; est la <a class="lk" href="http://cedric.cnam.fr/PUBLIS/RC690.pdf" target="_blank">Programmation semid&eacute;finie</a> appliqu&eacute;e &agrave; l'Optimisation Combinatoire 
+<!--
+<br></br><br></br>
+&#150; Ma th&egrave;se d'<b>Habilitation &agrave; diriger des Recherches</b> est disponible <a class="lk" href="http://cedric.cnam.fr/fichiers/RC1099.pdf" target="_blank">ici</a><br></br><br></br>
+&#150; <b> Co-encadrements de th&egrave;ses </b> (avec <a class="lk" href="http://www.ensta.fr/~mcosta/"  target="_blank">Marie-Christine Costa</a>) :<br></br> <a class="lk" href="http://www-lipn.univ-paris13.fr/~letocart/"  target="_blank">Lucas L&eacute;tocart</a> (2002), <a class="lk" href="http://www.lri.fr/~bentz/" target="_blank">C&eacute;dric Bentz</a>  (2006), <a class="lk" href="http://cyn.sec.free.fr/nicolas_cedric.htm"  target="_blank">Nicolas Derhy </a> (2008)
+<br></br><br></br>
+-->
+<hr></hr>
+<a name="responsabilites"></a>
+<h3>Responsabilit&eacute;s</h3>
+<img src="img/ijmor.jpg" width="114" height="164" alt="ijmor" />
+<ul>
+<li> Directeur de l'<a class="lk" href="https://galilee.univ-paris13.fr/" target="_blank"> Institut Galil&eacute;e</a> depuis 2017 </li>
+<li> Directeur de la sp&eacute;cialit&eacute; Informatique de <a class="lk" href="http://www.sup-galilee.univ-paris13.fr/index.php?option=com_content&task=view&id=651&Itemid=659" target="_blank"> Sup Galil&eacute;e</a> de 2012 &agrave; 2017</li>
+<li> Responsable de l'&eacute;quipe <a class="lk" href="http://lipn.univ-paris13.fr/accueil/equipe/aoc/membres_aoc/" target="_blank"> Algorithmes et Optimisation Combinatoire du LIPN</a> 2016-2017 </li>
+<li> Responsable du comit&eacute; des th&egrave;ses du LIPN de 2014 &agrave; 2016 </li>
+<li> Responsable relations entreprises / CFA (Sup Galil&eacute;e AIR) de 2010 &agrave; 2012</li>
+<li> Membre du comit&eacute; &eacute;ditorial de la revue <i>International Journal of Mathematics in Operational Research</i> <a class="lk" href="http://www.inderscience.com/browse/index.php?journalCODE=ijmor" target="_blank"> (IJMOR)</a> </li>
+<!-- <li> Membre &eacute;lu du Conseil du D&eacute;partement Informatique (depuis 2011) -->
+<!--<li> Expert ext&eacute;rieur pour le Fonds "Nature et Technologies", bourses des Fonds de recherche du Qu&eacute;bec </li>
+<li> Membre du conseil du laboratoire <a class="lk" href="http://cedric.cnam.fr"  target="_blank">CEDRIC</a> (2008-2010) </li>
+<li> Responsable du parcours Recherche Op&eacute;rationnelle du <a class="lk" href="http://deptinfo.cnam.fr/master/spip.php?rubrique14"  target="_blank">Master M2 MOCS du CNAM</a> (2009-2010) </li>
+<li> Responsable des m&eacute;moires de fin d’&eacute;tudes d’ing&eacute;nieurs de l'ENSIIE (2003-2007) </li>
+<li> Membre de la commission de sp&eacute;cialistes (section 27) du CNAM (2002-2007) </li>
+<li> Membre ext&eacute;rieur de la commission de sp&eacute;cialistes (sections 26-27) de Paris I (2004-2007) </li>
+<li> Membre &eacute;lu du conseil d’Ecole de l’IIE (2003-2006) </li>
+<li> Membre de la commission technique de l’IIE au CNAM (2001-2004) </li>
+-->
+</ul>
+
+<hr></hr>
+<a name="projets"></a>
+<h3>Projets et R&eacute;alisations</h3>
+
+<p>
+<img src="img/BiqCrunch.png" width="200" height="172" alt="BiqCrunch" />
+&#150; <b> BiqCrunch, a semidefinite branch-and-bound method for solving binary quadratic problems" </b><a class="lk" href=" http://www-lipn.univ-paris13.fr/BiqCrunch/" target="_blank">Site web du solveur BiqCrunch</a><br></br>
+&#150; BiqCrunch permet de r&eacute;soudre tout probl&egrave;me quadratique en variables 0-1. Ce solveur utilise les nouvelles bornes semid&eacute;finies pr&eacute;sent&eacute;es dans 
+<a class="lk" href="http://hal.archives-ouvertes.fr/hal-00662367" target="_blank">[11]</a>. Le site web propose un solveur online avec des versions sp&eacute;cifiques pour plusieurs probl&egrave;mes combinatoires : max-cut, k-cluster, programme quadratique quelconque en 0-1.
+</p>
+<br></br><br></br>
+<p>
+<img src="img/Psdls.png" width="246" height="160" alt="SDLS" />
+&#150; <b> Projet LMI-SDP2 "Toward new semidefinite optimization tools for control and combinatorial optimization".</b>
+&#150; Une nouvelle g&eacute;n&eacute;ration de programmes convexes non-lin&eacute;aires, <b> Semidefinite Least-Squares Problems</b>, a &eacute;t&eacute; consid&eacute;r&eacute;e r&eacute;cemment pour &eacute;laborer des relaxations de probl&egrave;mes combinatoires difficiles.
+ Dans cette approche la mod&eacute;lisation des probl&egrave;mes est moins directe, mais les solveurs que nous avons d&eacute;velopp&eacute;s sont plus robustes et plus rapides que ceux de la programmation semid&eacute;finie standard.
+ Ce projet est men&eacute; en collaboration avec <a class="lk" href="http://www.inrialpes.fr/bipop/people/malick/" target="_blank"> J&eacute;r&ocirc;me Malick</a>.
+</p>
+<br></br><br></br>
+<p>
+<img src="img/sdps.png" width="255" height="180" alt="SDPS" />
+ &#150; <b> SDP_S "Un logiciel libre pour &eacute;laborer automatiquement et tester num&eacute;riquement des relaxations semid&eacute;finies" </b> <a class="lk" href="http://www-lipn.univ-paris13.fr/~roupin/docs/SDP_S.1.1.tar.gz" target="_blank">SDP_S.1.1.tar.gz</a><br></br>
+ &#150; SDP_S est un outil pour formuler et tester tr&egrave;s facilement des relaxations semid&eacute;finies pour les probl&egrave;mes quadratiques
+ en variables 0-1. Il int&egrave;gre le solveur <a class="lk" href="http://www-user.tu-chemnitz.de/~helmberg/SBmethod/" target="_blank">SB</a> de
+  C. Helmberg pour la r&eacute;solution num&eacute;rique des programmes semid&eacute;finis obtenus. Aucune programmation additionnelle ni expertise en programmation semid&eacute;finie ne sont n&eacute;cessaires. Un utilitaire, Res2PLot, permet de visualiser les courbes de convergence obtenues.
+</p>
+
+<hr></hr>
+<a name="publications"></a>
+<h3>Publications et Communications</h3>
+
+<h4>2018</h4><ol start="1"><li><span class="authors">Leclercq, E and Roupin, F</span> <span class="title">A dedicated version of BiqCrunch for solving the Max-Stable Set problem exactly</span>.  <span class="in">In ISMP'18, International Symposium on Mathematical Programming</span>, Bordeaux, France, 2018.<span class="links"></span></li><li><span class="authors">L&eacute;tocart, L; Roupin, F and Wiegele, A</span> <span class="title">Exact methods based on SDP for the k-item quadratic knapsack problem</span>.  <span class="in">In ISMP'18, International Symposium on Mathematical Programming</span>, Bordeaux, France, 2018.<span class="links"></span></li><li><span class="authors">Gandouin, Y; Leclercq, E and Roupin, F</span> <span class="title">R&eacute;solution exacte du probl&egrave;me du stable par une approche mixte semid&eacute;finie et poly&eacute;drale</span>.  <span class="in">In ROADEF'18</span>, Lorient, France, 2018.<span class="links"></span></li></ol><h4>2017</h4><ol start="4"><li><span class="authors">Krislock, N; Malick, J and Roupin, F</span> <span class="title">BiqCrunch: a semidefinite branch-and-bound method for solving binary quadratic problems</span>.  <span class="in">In ACM Transactions on Mathematical Software. 43(4)</span>, 2017.<span class="links"></span></li><li><span class="authors">Coti, C; Lelercq, E; Roupin, F and Butelle, F</span> <span class="title">Une version Multithread du solveur BiqCrunch</span>.  <span class="in">In ROADEF'17</span>, Metz, 2017.<span class="links"></span></li><li><span class="authors">Coti, C; Lelercq, E; Roupin, F and Butelle, F</span> <span class="title">Solving 0-1 Quadratic Problems with Two-Level Parallelization of the BiqCrunch Solver</span>.  <span class="in">In FProceedings of the 2017 Federated Conference on Computer Science and Information Systems</span>, pages 445-452, Prague, Czech Republic, 2017.<span class="links"></span></li></ol><h4>2016</h4><ol start="7"><li><span class="authors">Roupin, F</span> <span class="title">Semidefinite Optimization for MINLP</span>.  <span class="in">In <a href="http://www.mino-itn.unibo.it/system/files/RoupinCOST2016.pdf" target="_blank">MINO/COST Spring School on MINLP</a></span>, Paris, 2016.<span class="links"></span></li><li><span class="authors">Krislock, N; Malick, J and Roupin, F</span> <span class="title">Computational results of a semidefinite branch-and-bound algorithm for k-cluster</span>.  <span class="in">In <a href="http://www.sciencedirect.com/science/article/pii/S0305054815001756" target="_blank">Computers and Operations Research</a></span>, 66: 153-159, 2016.<span class="links"></span></li></ol><h4>2015</h4><ol start="9"><li><span class="authors">Butelle,</span> <span class="title">et al., Fast machine reassignment</span>.  <span class="in">In <a href="http://link.springer.com/article/10.1007/s10479-015-2082-3?wt_mc=internal.event.1.SEM.ArticleAuthorOnlineFirst" target="_blank">Annals of Operations Research</a></span>: 1-28, 2015.<span class="links"></span></li></ol><h4>2014</h4><ol start="10"><li><span class="authors">Culus, J.-F; Roupin, F and Toulouse, S</span> <span class="title">Satisfaction guaranteed</span>.  <span class="in">In IFORS 2014, 20th Conference of the International Federation of Operational Research Societies</span>, Barcelona, 2014.<span class="links"></span></li><li><span class="authors">Krislock, N; Malick, J and Roupin, F</span> <span class="title">BiqCrunch in Action: Solving Difficult Combinatorial Optimization Problems Exactly</span>.  <span class="in">In SIAM Conference on Optimization</span>, San diego, 2014.<span class="links"></span></li><li><span class="authors">L&eacute;tocart, L; Guignard-Spielberg, M; Plateau, G; Roupin, F and Wiegele, A</span> <span class="title">Approches exactes pour le probl&egrave;me du sac &agrave; dos quadratique avec contrainte de cardinalit&eacute;</span>.  <span class="in">In ROADEF'14</span>, Bordeaux, 2014.<span class="links"></span></li><li><span class="authors">Krislock, N.; Malick, J. and Roupin, F.</span> <span class="title">Improved semidefinite bounding procedure for solving Max-Cut problems to optimality. ISMP 2012, 21st International Symposium on Mathematical Programming, 19-24 August, Berlin</span>.  <span class="in">In <a href="http://dx.doi.org/10.1007/s10107-012-0594-z" target="_blank">Math. Prog. A.</a></span>, 143(1/2): 61-86, 2014.<span class="links"></span></li></ol><h4>2013</h4><ol start="14"><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">On the bridge between combinatorial optimization and nonlinear optimization:  new semidefinite bounds for 0-1 quadratic problems leading to quasi-Newton  methods</span>.  <span class="in">In <a href="http://link.springer.com/article/10.1007%2Fs10107-012-0628-6" target="_blank">Math. Prog. B</a></span>, 140(1): 99-124, 2013.<span class="links"></span></li></ol><h4>2012</h4><ol start="15"><li><span class="authors">Krislock, N.; Malick, J. and Roupin, F.</span> <span class="title">Mixing a Polyhedral Approach and a Nonlinear Optimization Algorithm for Integer Quadratic Programs</span>.  <span class="in">In INFORMS'12</span>, Beijing, 2012.<span class="links"></span></li><li><span class="authors">Alfandari, L.; Butelle, F.; Coti, C.; Finta, L.; Plateau, G.; Rozenknop, A. and Roupin, F.</span> <span class="title">Combining VNS, Simulated Annealing, and a Greedy Heuristic for the ROADEF/EURO 2012 Challenge</span>.  <span class="in">In EURO XXV</span>, Vilnius, 2012.<span class="links"></span></li><li><span class="authors">Toulouse, S.; Culus, J-F. and Roupin, F.</span> <span class="title">Differential Approximation Of SNP Optimization Problems</span>.  <span class="in">In ISCO'12, International Symposium on Combinatorial Optimization</span>, Athens, 2012.<span class="links"></span></li><li><span class="authors">Krislock, N.; Malick, J. and Roupin, F.</span> <span class="title">Nonstandard Semidefinite Bounds For Solving Exactly 0-1 Quadratic Problems</span>.  <span class="in">In EURO XXV</span>, Vilnius, 2012.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Solving k-cluster problems to optimality using semidefinite programming</span>.  <span class="in">In <a href="http://dx.doi.org/10.1007/s10107-012-0604-1" target="_blank">Math. Prog. B pp 279-300</a></span>, 136, 2012.<span class="links"></span></li></ol><h4>2011</h4><ol start="20"><li><span class="authors">Krislock, N.; Malick, J. and Roupin, F.</span> <span class="title">Efficient new semidefinite bounds for Max-Cut</span>.  <span class="in">In Second Alpen-Adria Workshop on Optimization 2011</span>, University of Klagenfurt, Austria, 2011.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Une famille de bornes semid&eacute;finies ajustables pour la programmation  quadratique en variables 0-1</span>.  <span class="in">In ROADEF 2011</span>, Saint-Etienne, France, 2011.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Computing Dense Subgraphs with Semidefinite Programming</span>.  <span class="in">In Optimization 2011</span>, Lisbon, Portugal, 2011.<span class="links"></span></li></ol><h4>2010</h4><ol start="23"><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Computing Dense Subgraphs with Semidefinite Programming</span>.  <span class="in">In EWMINLP'10, European Workshop on Mixed Integer Nonlinear Programming</span>, Marseille, France, 2010.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Numerical Study of Semidefinite Bounds for the k-cluster Problem</span>.  <span class="in">In ISCO'10, International Symposium on Combinatorial Optimization, Electronic  Notes in Discrete Mathematics</span>, pages 399-406, <span class="publisher">Elsevier</span>, 2010.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">R&eacute;solution exacte du probl&egrave;me k-cluster par optimisation semid&eacute;finie</span>.  <span class="in">In ROADEF'10</span>, Toulouse, France, 2010.<span class="links"></span></li></ol><h4>2009</h4><ol start="26"><li><span class="authors">Bentz, C; Costa, M.-C; Derhy, N and Roupin, F</span> <span class="title">Cardinality constrained and multicriteria (multi)cut problems</span>.  <span class="in">In Journal of Discrete Algorithms</span>, 7(1): 102-111, 2009.<span class="links"></span></li><li><span class="authors">Bentz, C; Costa, M.-C; L&eacute;tocart, L and Roupin, F</span> <span class="title">Multicut and integral multiflow in rings</span>.  <span class="in">In European Journal on Operations Research</span>, 196(3): 1251-1254, 2009.<span class="links"></span></li><li><span class="authors">Malick, J. and Roupin, F.</span> <span class="title">Une approche par moindres carr&eacute;s semid&eacute;finis pour le probl&egrave;me k-cluster</span>.  <span class="in">In ROADEF'09</span>, Nancy, France, 2009.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">Standard Semidefinite relaxations for the Quadratic Assignment Problem  in a Lagrangian Framework</span>.  <span class="in">In Int. J. of Mathematics in Operational Research</span>, 1: 144-162, 2009.<span class="links"></span></li></ol><h4>2008</h4><ol start="30"><li><span class="authors">Billionnet, A and Roupin, F</span> <span class="title">A Deterministic Approximation Algorithm for the Densest k-Subgraph  Problem</span>.  <span class="in">In International Journal of Operational Research</span>, 3(3): 301-314, 2008.<span class="links"></span></li></ol><h4>2007</h4><ol start="31"><li><span class="authors">Bentz, C; Costa, M.-C and Roupin, F</span> <span class="title">Maximum integer multiflow and minimum multicut problems in uniform  grid graphs</span>.  <span class="in">In Journal of Discrete Algorithms</span>, 5(1): 36-54, 2007.<span class="links"></span></li><li><span class="authors">Costa, M-C.; Derhy, N. and Roupin, F.</span> <span class="title">Un Branch and Bound utilisant la programmation semid&eacute;finie pour un  probl&egrave;me de placement de t&acirc;ches et un probl&egrave;me de partition des sommets  d'un graphe</span>.  <span class="in">In ROADEF'07</span>, Grenoble, France, 2007.<span class="links"></span></li><li><span class="authors">Faye, A and Roupin, F</span> <span class="title">Partial Lagrangian relaxation for General Quadratic Programming</span>.  <span class="in">In 4'OR, A Quarterly Journal of Operations Research</span>, 5(1): 75-88, 2007.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">Programmation Semid&eacute;finie en Optimisation Combinatoire</span>.  <span class="in">In Tutoriel invit&eacute;. Journ&eacute;es Franciliennes de Recherche Op&eacute;rationnelle,  Universit&eacute; Pierre et Marie Curie, 15 juin</span>, 2007.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">Semidefinite Relaxations for the QAP : A Lagrangian Point of View</span>.  <span class="in">In ECCO XX, European Chapter on Combinatorial Optimization</span>, Limassol, Chypre, 2007.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">Semidefinite Approaches for Quadratic Integer Programming</span>.  <span class="in">In EURO XXII</span>, Prague, R&eacute;publique Tch&egrave;que, 2007.<span class="links"></span></li></ol><h4>2006</h4><ol start="37"><li><span class="authors">Bentz, C; Costa, M.-C; Derhy, N and Roupin, F</span> <span class="title">Etude du probl&egrave;me de la multicoupe minimale &agrave; cardinalit&eacute; contrainte</span>.  <span class="in">In ROADEF'06 , Lille, f&eacute;vrier</span>, 2006.<span class="links"></span></li><li><span class="authors">Faye, A and Roupin, F</span> <span class="title">Partial Lagrangian relaxation for General Quadratic Programming</span>.  <span class="in">In JOPT'06,  Montr&eacute;al, Canada, mai</span>, 2006.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">Algorithmes Combinatoires et Relaxations par Programmation Lin&eacute;aire  et Semid&eacute;finie. Application &agrave; la R&eacute;solution de Probl&egrave;mes Quadratiques  et d'Optimisation dans les Graphes. Habilitation &agrave; Diriger la recherche.  Universit&eacute; Paris Nord</span>.<span class="links"> <span class="url"><a href="http://cedric.cnam.fr/fichiers/RC1099.pdf" target="_blank">more..</a></span>&nbsp;</span></li></ol><h4>2005</h4><ol start="40"><li><span class="authors">Bentz, C; Costa, M.-C and Roupin, F</span> <span class="title">Maximum edge disjoint paths and minimum unweighted multicuts in grid  graphs</span>.  <span class="in">In CIRO'05, Marrakech, mai</span>, 2005.<span class="links"></span></li><li><span class="authors">Bentz, C.; Costa, M-C. and Roupin, F.</span> <span class="title">R&eacute;soudre en temps lin&eacute;aire le probl&egrave;me de la multicoupe minimum dans  des grilles rectangulaires</span>.  <span class="in">In ROADEF'05</span>, Tours, France, 2005.<span class="links"></span></li><li><span class="authors">Costa, M.-C; Letocart, L and Roupin, F</span> <span class="title">Minimal multicut and maximal integer multiflow: a survey</span>.  <span class="in">In European Journal on Operations Research</span>, 162(1): 55-69, 2005.<span class="links"></span></li><li><span class="authors">Faye, A. and Roupin, F.</span> <span class="title">A cutting planes Algorithm based upon a Semidefinite relaxation for  the Quadratic Assignment Problem</span>.  <span class="in">In European Symposium on Algorithms, ESA 2005</span>, pages 850-861, Lecture Notes in Computer Science 3669, 2005.<span class="links"></span></li><li><span class="authors">Faye, A. and Roupin, F.</span> <span class="title">Relaxations Lagrangienne et Semid&eacute;finie de Programmes Quadratiques</span>.  <span class="in">In ROADEF'05</span>, Tours, France, 2005.<span class="links"></span></li></ol><h4>2004</h4><ol start="45"><li><span class="authors">Bentz, C; Costa, M.-C; L&eacute;tocart, L and Roupin, F</span> <span class="title">A bibliography on multicut and integer multiflow problems</span>.  Technical Report, <span class="institution">CNAM-CEDRIC 654</span>, 2004.<span class="links"></span></li><li><span class="authors">Bentz, C.; Costa, M-C. and Roupin, F.</span> <span class="title">Maximum edge disjoint paths and minimum unweighted multicut problems  in grid graphs</span>.  <span class="in">In Graph Theory 2004, a conference in memory of Claude Berge</span>, 2004.<span class="links"></span></li><li><span class="authors">Faye, A. and Roupin, F.</span> <span class="title">A lower bound for the Quadratic Assignment Problem based upon a semidefinite  relaxation and a cutting planes approach</span>.  <span class="in">In ECCO XVII, European Chapter on Combinatorial Optimization</span>, Beyrouth, Liban, 2004.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">L'approche par Programmation Semid&eacute;finie en Optimisation Combinatoire</span>.  <span class="in">In Article invit&eacute; dans le Bulletin de la Soci&eacute;t&eacute; Fran&ccedil;aise de Recherche  Op&eacute;rationnelle et d'aide &agrave; la d&eacute;cision</span>, 13: 7-11, 2004.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">From Linear to Semidefinite Programming: an Algorithm to obtain Semidefinite  Relaxations for Bivalent Quadratic Problems</span>.  <span class="in">In Journal of Combinatorial Optimization</span>, 8(4): 469-493, 2004.<span class="links"></span></li></ol><h4>2003</h4><ol start="50"><li><span class="authors">Costa, M-C.; L&eacute;tocart, L. and Roupin, F.</span> <span class="title">Minimal multicut and maximal integer multiflow in rings</span>.  <span class="in">In ISMP'03, International Symposium on Mathematical Programming</span>, Copenhague, Danemark, 2003.<span class="links"></span></li><li><span class="authors">Costa, M.-C; L&eacute;tocart, L and Roupin, F</span> <span class="title">A greedy algorithm for multicut and integral multiflow in rooted  trees</span>.  <span class="in">In Operations Research Letters</span>, 31(1): 21-27, 2003.<span class="links"></span></li><li><span class="authors">Delaporte, G.; Jouteau, S. and Roupin, F.</span> <span class="title">SDP_S: a Tool to formulate and solve Semidefinite relaxations for  Bivalent Quadratic problems</span>.  <span class="in">In ROADEF'03</span>, Avignon, France, 2003.<span class="links"></span></li><li><span class="authors">Elloumi, S; Roupin, F and Soutif, E</span> <span class="title">Comparison of Different Lower Bounds for the Constrained Module Allocation  Problem</span>.  Technical Report, <span class="institution">CNAM-CEDRIC</span>, 2003.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">Une approche semid&eacute;finie pour un probl&egrave;mede placement de t&acirc;ches avec  contraintes de ressources</span>.  <span class="in">In ROADEF'03</span>, Avignon, France, 2003.<span class="links"></span></li></ol><h4>2002</h4><ol start="55"><li><span class="authors">Costa, M-C.; L&eacute;tocart, L. and Roupin, F.</span> <span class="title">Multiflots entiers et multicoupes: analyse de leur difficult&eacute;</span>.  <span class="in">In ROADEF'02</span>, Paris, France, 2002.<span class="links"></span></li><li><span class="authors">L&eacute;tocart, L. and Roupin, F.</span> <span class="title">A semidefinite approach to solve multicut in trees</span>.  <span class="in">In JOPT'02, Optimization days</span>, Montr&eacute;al, Canada, 2002.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">Semidefinite relaxations for several quadratic problems</span>.  <span class="in">In CIRO'02, Conf&eacute;rence Internationale en Recherche Op&eacute;rationnelle</span>, Marrakech, Maroc, 2002.<span class="links"></span></li></ol><h4>2001</h4><ol start="58"><li><span class="authors">Roupin, F.</span> <span class="title">R&eacute;solution de MAX 2SAT par programmation semid&eacute;finie</span>.  <span class="in">In JOPT'01, Optimization days</span>, Qu&eacute;bec, Canada, 2001.<span class="links"></span></li></ol><h4>2000</h4><ol start="59"><li><span class="authors">Billionnet, A. and Roupin, F.</span> <span class="title">R&eacute;solution approch&eacute;e du probl&egrave;me k-cluster</span>.  <span class="in">In ROADEF'00</span>, Nantes, France, 2000.<span class="links"></span></li><li><span class="authors">Costa, M-C.; Cr&eacute;mieu, J-L. and Roupin, F.</span> <span class="title">A variable neighborhood search using an interior point descent method  for the module allocation problem</span>.  <span class="in">In ECCO XIII, European chapter on combinatorial optimization</span>, Capri, Italie, 2000.<span class="links"></span></li><li><span class="authors">Cung, V-D.; Roupin, F. and Hoeve, W-J. va</span> <span class="title">A parallel Branch-and-Bound algorithm using a semidefinite programming  relaxation for the maximum independent set problem</span>.  <span class="in">In ROADEF'00</span>, Nantes, France, 2000.<span class="links"></span></li></ol><h4>1999</h4><ol start="62"><li><span class="authors">Cung, V.-D and Roupin, F.</span> <span class="title">A Parallel Branch-and-Bound Algorithm using a Semidefinite Programming  Relaxation for the Vertex-Cover Problem</span>.  <span class="in">In ECCO XII, European chapter on combinatorial optimization</span>, Bandol, France, 1999.<span class="links"></span></li></ol><h4>1997</h4><ol start="63"><li><span class="authors">Billionnet, A. and Roupin, F.</span> <span class="title">Linear Programming to pproximate quadratic 0-1 maximization problems</span>.  <span class="in">In 35th Southeast ACM conference</span>, Murfreesboro, USA, Proceedings , 1997.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">A fast heuristic for continuous quadratic programs subject to linear  constraints</span>.  <span class="in">In MIC'97, 2nd International Conference on Metaheuristics</span>, Sophia-Antipolis, France, 1997.<span class="links"></span></li><li><span class="authors">Roupin, F.</span> <span class="title">A fast heuristic for the module allocation problem</span>.  <span class="in">In 15th IMACS World Congress</span>, pages 405-410, Proceedings 1, 1997.<span class="links"></span></li><li><span class="authors">Roupin, F</span> <span class="title">On approximating the memory-constrained module allocation problem</span>.  <span class="in">In Information Processing Letters</span>, 61(4): 205-208, 1997.<span class="links"></span></li></ol>
+
+<hr></hr>
+<a name="enseignements"></a>
+<h3>Enseignements</h3>
+
+<table> <tr> <img src="img/logo-IG.jpg" width="150" height="62" alt="Galilee" /> <i>L'&eacute;tudiant doit le savoir, l'assistant sait o&uacute; c'est &eacute;crit, le professeur a quelqu'un qui sait o&uacute; c'est &eacute;crit (proverbe allemand) </i>
+<td> </td> <td> </td> <td> </td>
+</tr>
+</table>
+
+<h4> Enseignements de 2010 &agrave; 2018 :</h4>
+<ul>
+<li> Master Parisien de Recherche Op&eacute;rationnelle <a class="lk" href="http://uma.ensta-paristech.fr/mpro/">MPRO</a> <br>
+<a class="lk" href="docs/MPROSDPRoupin2018-partie1.pdf">Support du cours (partie 1)</a> <br> 
+<a class="lk" href="docs/MPROSDPRoupin2018-partie2.pdf">Support du cours (partie 2)</a> <br> 
+<a class="lk" href="docs/MPROSDPRoupin2018-partie3.pdf">Support du cours (partie 3)</a> <br> 
+<!-- <a class="lk" href="docs/MPROSDPRoupin2017-partie2.pdf">Support du cours (partie 2)</a> <br> 
+<a class="lk" href="docs/MPROSDPRoupin2017-partie3.pdf">Support du cours (partie 3)</a> <br> -->
+<a class="lk" href="docs/ROUPINpolySDP.pdf">Polycopi&eacute;</a> </li>
+<li> M&eacute;thodes alg&eacute;briques pour l'Informatique (Classes pr&eacute;paratoires int&eacute;gr&eacute;es Sup Galil&eacute;e)
+<li> Algorithmique et algorithmique avanc&eacute;e (Sup Galil&eacute;e 1) </li>
+<li> Algorithmique dans les graphes (Licence 3) </li>
+<li> Optimisation Lin&eacute;aire (Sup Galil&eacute;e 2)
+<li> Enqu&ecirc;te industrielle (Sup Galil&eacute;e 1)
+<li> Math-Info (Licence 1) </li>
+<li> Optimisation Combinatoire (Sup Galil&eacute;e MACS3)
+<li> Algorithmique et complexit&eacute; (Sup Galil&eacute;e IR) </li>
+<li> Optimisation et Logiciels (Sup Galilee 3) </li>
+<li> Programmation imp&eacute;rative (Licence 1) </li>
+<li> Conduite et gestion de projet (Master 1 info)
+</ul>
+
+<h4> Autres enseignements : </h4>
+<ul>
+<li> Mod&eacute;lisation, Optimisation, Complexit&eacute; des algorithmes (CNAM) </li>
+<li> Recherche Op&eacute;rationnelle, Aide &agrave; la d&eacute;cision (CNAM) </li>
+<li> Programmation Semid&eacute;finie (ENSIIE, 3A) </li>
+<li> Recherche Op&eacute;rationnelle (ENSIIE, 2A) </li>
+<li> Assembleur/Projet mat&eacute;riel (ENSIIE, 1A) </li>
+<li> Programmation Quadratique en variables 0-1 Master M2 Mod&eacute;lisation et M&eacute;thodes Math&eacute;matiques en &Eacute;conomie et Finance Paris I 
+<li> Complexit&eacute; des Algorithmes (ENSIIE, 3A)</li>
+<li> Etude de cas en Recherche Op&eacute;rationnelle (ENSIIE, 3A) </li>
+<li> Algorithmique parall&egrave;le (ENSIIE 3A) </li>
+<li> Th&eacute;orie des Graphes (ENSIIE, NFI) </li>
+<li> Optimisation Math&eacute;matique (ENSIIE, 1A) </li>
+<li> Projet Math&eacute;matique (ENSIIE, 2A) </li>
+<li> Algorithmique/Programmation/C (ENSIIE, 1A) </li>
+<li> Projet Informatique (ENSIIE, 2A) </li>
+</ul>
+
+<hr></hr>
+<a name="liens"></a>
+<h3>Liens</h3>
+<ul>
+<li> <a class="lk" href="http://www.ensiie.fr" target="_blank">ENSIIE</a> je suis ing&eacute;nieur IIE 1993 (devenue ENSIIE en 2006)</li>
+<li> <a class="lk" href="http://www.roadef.org/" target="_blank">ROADEF</a> Soci&eacute;t&eacute; Fran&ccedil;aise de Recherche Op&eacute;rationnelle et d'Aide &agrave;
+la D&eacute;cision </li>
+<li> <a class="lk" href="http://www.ensta.fr/~diam/ro/" target="_blank"> Portail sur la RO</a> Un ensemble tr&egrave;s fourni d'informations et de liens sur la Recherche Op&eacute;rationnelle par Maurice Diamantini de l'ENSTA </li>
+<li><a class="lk" href="http://www.informs.org/" target="_blank">NFORMS</a> The Institute for Operations Research and the Management Sciences</li>
+<li><a class="lk" href="http://www-user.tu-chemnitz.de/%7Ehelmberg/semidef.html" target="_blank">Christoph Helmberg's Semidefinite Programming Page</a> Une mine d'articles et de liens concernant la programmation semid&eacute;finie</li>
+<li><a class="lk" href="http://mat.gsia.cmu.edu/" target="_blank"> Michael Trick's Operations Research Page</a></li>
+</ul>
+<br></br>
+<hr></hr>
+<p>&copy; 2017 F. Roupin</p>
+</div>
+</body>
+</html>

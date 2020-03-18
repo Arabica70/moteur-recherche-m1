@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="fr">
+	<head>
+		<title>Laure Petrucci</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<div class="logo">
+										<strong>Laure Petrucci</strong> <br/>
+										<a href="http://lipn.univ-paris13.fr">LIPN</a>, <a href="http://www.cnrs.fr">CNRS</a> UMR 7030<br/>
+										Professeur des Universités, <a href="https://iutv.univ-paris13.fr/">IUT de Villetaneuse</a>,
+											<a href="http://www.univ-paris13.fr/">Université Paris 13</a><br/>
+									</div>
+									<ul class="icons">
+										<li><a href="http://dblp.uni-trier.de/pers/hd/p/Petrucci:Laure" class="icon fa-th-list" title="DBLP"><span class="label">DBLP</span></a></li>
+										<li><a href="http://orcid.org/0000-0003-3154-5268" class="icon fa-circle-o" title="ORCID"><span class="label">ORCID</span></a></li>
+										<li><a href="https://scholar.google.fr/citations?user=OKhq1zgAAAAJ" class="icon fa-google" title="Google Scholar"><span class="label">Google Scholar</span></a></li>
+										<li><a href="https://www.researchgate.net/profile/Laure_Petrucci" class="icon fa-users" title="Reasearch Gate"><span class="label">ResearchGate</span></a></li>
+										<li><a hreflang="en-GB" lang="en-GB" xml:lang="en-GB" href="index_uk.html">🇬🇧</a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<p>Je suis <b>Professeur des Universités</b> depuis 2003 au département Réseaux et Télécommunications de l’IUT de Villetaneuse, <a href="http://www.univ-paris13.fr/">Université Paris 13</a>. Je suis membre de l’équipe <a href="https://lipn.univ-paris13.fr/fr/lcr-2">LoVe</a> (Logique et Vérification, anciennement LCR) du <a href="http://lipn.univ-paris13.fr/">Laboratoire d’informatique de Paris Nord</a>, plus spécifiquement dans l’axe de recherche <b><a href="http://lipn.univ-paris13.fr/specif/">spécification et vérification</a></b>.</p>
+										<p>Ma thématique de recherche concerne la spécification et la vérification formelles de systèmes concurrents pour garantir leur bon fonctionnement, en utilisant des modèles d'automates ou de réseaux de Petri, et des modèles paramétrés. Pour combattre le problème classique de l'explosion combinatoire de l'espace des états accessibles, mes travaux exploitent la modularité des modèles, proposent des approches distribuées, des algorithmes pour la synthèse de paramètres.</p>
+									</div>
+								</section>
+
+							<!-- Section Actualités -->
+								<section>
+									<header class="major" id="actus">
+										<h2>Actualités</oph2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content">
+												<h3>Conférences</h3>
+												<ul>
+												<li>Organisation de <a href="http://conf-2020.petrinet.net">Petri Nets 2020</a>, 22-26 juin 2020, Paris-Aubervilliers, France</li>
+												<li>Organisation de <a href="https://lipn.univ-paris13.fr/SynCoP2019/">SynCoP 2019</a>, workshop affilié à <a href="https://conf.researchr.org/home/etaps-2019">ETAPS</a>, 6-7 avril 2019, Prague, République Tchèque</li>
+												</ul>
+												<h3>Professeur visiteur à :</h3>
+												<ul>
+												<li> <a href="http://cs.au.dk/">Aarhus University</a>, Danemark,
+												du 28 février au 14 mars 2019
+												</li>
+												<li> <a href="https://utwente.nl">University of Twente</a>, Enschede, Pays-Bas, du 7 au 13 juillet 2019
+												</li>
+												<li><a href="https://ipipan.waw.pl">IPI-PAN</a>, Varsovie, Pologne,
+												du 5 au 11 mai 2019 ; du 27 mai au 14 juin 2019 et du 15 au 31 août 2019
+												</li>
+												<li>Pontificia Universidad Javeriana, Cali, Colombie, du 16 novembre au 1er décembre 2019
+												</li>
+												</ul>
+												<br>
+												<h3>Chapitre de livre</h3>
+												<span class="image left">
+												<a href="https://www.springer.com/gp/book/9783319635156"><img src="images/handbook.jpg" alt="Handbook of Parallel Constraint Reasoning, 2018"/></a>
+												</span>
+												Jiri Barnat, Vincent Bloemen, Alexandre Duret-Lutz, Alfons Laarman, <strong>Laure Petrucci</strong>, Jaco van de Pol et Étienne Renault. <i>Parallel Model Checking Algorithms for Linear-Time Temporal Logic</i>. Dans <a href="https://www.springer.com/gp/book/9783319635156">Handbook of Parallel Constraint Reasoning</a>, Springer, 2018.
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>Dernières publications</h3>
+											<table>
+											<tr>
+												<td>
+												Étienne André, Michał Knapik, Didier Lime, Wojciech Penczek et <strong>Laure Petrucci</strong>. <i>Parametric Verification: An Introduction</i>. Transactions on Petri Nets and Other Models of Concurrency, volume 14, LNCS, Springer, Novembre 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Michał Knapik, Wojciech Penczek, <strong>Laure Petrucci</strong> et Teofil Sidoruk. <i>Squeezing State Spaces of (Attack-Defence) Trees</i>. <abbr title="24th International Conference on Engineering of Complex Computer Systems, Guangzhou, China, November 2019"><a href="http://formal-analysis.com/iceccs/2019/">ICECCS'19</a></abbr>, IEEE, Novembre 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Étienne André, Wojciech Jamroga, Michał Knapik, Wojciech Penczek et <strong>Laure Petrucci</strong>. <a href="https://www.jair.org/index.php/jair/article/view/11612/26521"><i>Timed ATL: Forget Memory, Just Count</i></a>. Journal of Artificial Intelligence Research, volume 66,  Septembre 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Étienne André, Vincent Bloemen, <strong>Laure Petrucci</strong> et Jaco van de Pol. <i>Minimal-Time Synthesis for Parametric Timed Automata</i>. <abbr title="25th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, Prague, Czech Republic, avril 2019"><a href="https://conf.researchr.org/track/etaps-2019/tacas-2019-papers#About">TACAS'19</a></abbr>, LNCS, Springer, avril 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												<strong>Laure Petrucci</strong> et Jaco van de Pol. <i>Pruning NDFS for Parametric Timed Automata</i>. <abbr title="6th International Workshop on Synthesis of Complex Parameters, Prague, Czech Republic, avril 2019"><a href="https://lipn.univ-paris13.fr/SynCoP2019">SynCoP'19</a></abbr>, avril 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Camille Coti, <strong>Laure Petrucci</strong> et Daniel Torres. <i>Fault-tolerant matrix factorisation: a formal model and proof</i>. <abbr title="6th International Workshop on Synthesis of Complex Parameters, Prague, Czech Republic, avril 2019"><a href="https://lipn.univ-paris13.fr/SynCoP2019">SynCoP'19</a></abbr>, avril 2019.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Hoang Gia Nguyen, <strong>Laure Petrucci</strong> et Jaco van de Pol. <i>Layered and Collecting NDFS with Subsumption for Parametric Timed Automata</i>. <abbr title="23rd International Conference on Engineering of Complex Computer Systems, Melbourne, Australia, décembre 2018"><a href="http://formal-analysis.com/iceccs/2018/">ICECCS'18</a></abbr>, IEEE, décembre 2018.
+												</td>
+											</tr>
+											<tr>
+												<td>
+												Camille Coti, Sami Evangelista et <strong>Laure Petrucci</strong>. <i>State Compression Based on One-Sided Communications for Distributed Model Checking</i>. <abbr title="23rd International Conference on Engineering of Complex Computer Systems, Melbourne, Australia, décembre 2018"><a href="http://formal-analysis.com/iceccs/2018/">ICECCS'18</a></abbr>, IEEE, décembre 2018.
+												</td>
+											</tr>
+											</table>
+												<ul class="actions" style="text-align: center;">
+													<li><a href="publications.html" class="button">Toutes les publications</a></li>
+												</ul>
+											</div>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section Enseignement -->
+								<section>
+									<header class="major" id="enseignement">
+										<h2>Enseignement</h2>
+									</header>
+									<div class="content">
+										<p>J'enseigne en <a href="https://iutv.univ-paris13.fr/dut-reseaux-telecommunications/">DUT</a> au département Réseaux et Télécommunications de l’IUT de Villetaneuse, <a href="http://www.univ-paris13.fr/">Université Paris 13</a>, ainsi qu'en <a href="https://www.usth.edu.vn/en/programusth/master-in-information-and-communication-technology-ict/">Master STIC</a> à l'<a href="https://www.usth.edu.vn/en/">Université de Sciences et Technologies de Hanoï</a> (USTH), Vietnam.</p>
+
+									<h3>Supports de cours</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Module</th>
+													<th>Nom</th>
+													<th>Cours</th>
+													<th>TD</th>
+													<th>TP</th>
+													<th>Polycopié</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>M1104</td>
+													<td>Principes et architecture des réseaux</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><br/><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_M1104.pdf">cours_M1104</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_M1104.pdf">TD_M1104</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TP_M1104.pdf">TP_M1104</a></td>
+												</tr>
+												<tr>
+													<td>M2104</td>
+													<td>Bases de données</td>
+													<td><input type="checkbox" checked disabled><br/>
+														<input type="checkbox" checked disabled></td>
+													<td><br/><br/><input type="checkbox" checked disabled></td>
+													<td><br/><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_M2104.pdf">cours_M2104</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/slides_M2104.pdf">slides_M2104</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_M2104.pdf">TD_M2104</a></td>
+												</tr>
+												<tr>
+													<td>R2</td>
+													<td>Réseaux locaux</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><br/><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_R2.pdf">cours_R2</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_R2.pdf">TD_R2</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_R2.pdf">TP_R2</a>
+													</td>
+												</tr>
+												<tr>
+													<td>R3</td>
+													<td>Administration système et réseau</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_R3.pdf">cours_R3</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TP_R3.pdf">TP_R3</a></td>
+												</tr>
+												<tr>
+													<td>R4</td>
+													<td>Réseaux (routage)</td>
+													<td></td>
+													<td><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_R4.pdf">TD_R4</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TP_R4.pdf">TP_R4</a></td>
+												</tr>
+												<tr>
+													<td>TR2</td>
+													<td>Technologies de l'Internet</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/slides_TR2.pdf">slides_TR2</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_TR2.pdf">TD_TR2</a></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td>Sécurité et surveillance des réseaux (introduction)</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_secu.pdf">cours_secu</a></td>
+												</tr>
+												<tr>
+													<td>I1</td>
+													<td>Introduction aux systèmes informatiques</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/slides_I1.pdf">slides_I1</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TP_I1.pdf">TP_I1</a></td>
+												</tr>
+												<tr>
+													<td>I3</td>
+													<td>Programmation</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/cours_I3.pdf">cours_I3</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TD_I3.pdf">TD_I3</a></td>
+												</tr>
+												<tr>
+													<td>RPCI01</td>
+													<td>Programmation Java avancée</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td><br/><input type="checkbox" checked disabled></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/slides_RPCI01.pdf">slides_RPCI01.pdf</a><br/>
+														<a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/TP_RPCI01.pdf">TP_RPCI01.pdf</a></td>
+												</tr>
+												<tr>
+													<td>MI2.03(1)</td>
+													<td>Advanced Modelling Techniques - part 1</td>
+													<td><input type="checkbox" checked disabled></td>
+													<td></td>
+													<td></td>
+													<td><a href="https://lipn.univ-paris13.fr/~petrucci/polycopies/slides_MI2_03-1.pdf">slides_MI2_03-1.pdf</a></td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="6">Les corrigés des exercices sont disponibles sur demande pour les enseignants.</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+										<p><a href="https://lipn.univ-paris13.fr/~petrucci/M1106">Initiation au développement web (M1106)</a></p>
+										<p><a href="https://lipn.univ-paris13.fr/~petrucci/M2104">Bases de données (M2104)</a></p>
+										<p><a href="https://lipn.univ-paris13.fr/~petrucci/M2103">Technologies de l'Internet (M2103)</a></p>
+									</div>
+								</section>
+							<!-- Section Vidéos-->
+								<section>
+									<header class="major" id="videos">
+										<h2>Vidéos</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<iframe src="https://www.youtube.com/embed/pB0AuPuw2-o?list=PL9SOLKoGjbeqNcdQVqFpUz7HYqD1fbFIg" allowfullscreen></iframe>
+											<h3>Tutorial on Parametric verification</h3>
+										</article>
+										<article>
+											<iframe src="https://www.youtube.com/embed/6xzCtoko9Bs?list=PL9SOLKoGjbeq8Cdqwd-kEZ64acWXNnBBl" allowfullscreen></iframe>
+											<h3>Conférence: Sécurité, Sûreté et Confidentialité<br/>
+											10 mai 2016, Université Paris 13</h3>
+											<ul class="actions">
+												<li><a href="https://lipn.univ-paris13.fr/OSIS-Secu-2016/" class="button">Site de la conférence</a></li>
+											</ul>
+										</article>
+										<article>
+											<iframe src="https://www.youtube.com/embed/AupZCJS3Dcg?list=PL9SOLKoGjbeqvlZj1iqlb6A5Tc3P78qYd" allowfullscreen></iframe>
+											<h3>Tutorial on Symmetric nets</h3>
+										</article>
+										<article></article>
+									</div>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<div class="image avatar"><a href="#header"><img src="images/LP.jpg" alt="photo" align="right"></a></div>
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="presentation.html">Présentation</a></li>
+										<li><a href="#actus">Actualités</a></li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="#enseignement">Enseignement</a></li>
+										<li><a href="#videos">Vidéos</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<ul class="contact">
+										<li class="fa-envelope-o">laure.petrucci AT lipn.univ-paris13.fr</li>
+                                        <li class="fa-phone">+33 (0)1 49 40 28 05</li>
+                                        <li class="fa-vcard">Bureau A202, Institut Galilée<br/>
+										LIPN, CNRS UMR 7030<br/>
+										Université Paris 13<br/>
+										99 avenue Jean-Baptiste Clément<br/>
+										93430 VILLETANEUSE</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Laure Petrucci. All rights reserved.<br>
+										Design: <a href="https://html5up.net">HTML5 UP</a> (CCA 3.0).</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

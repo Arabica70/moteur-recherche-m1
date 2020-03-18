@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DICE 2016 – Developments in Implicit Computational Complexity</title>
+
+  <link href="style.css" type="text/css" rel='stylesheet'>
+  <link rel='stylesheet' media='screen and (max-width: 750px)' href='narrow.css'>
+</head>
+
+<body>
+    
+<div id="header">
+    <h1 style="color:#202050; background-color:rgba(200,200,200,0.6); font-size:xx-large;">DICE 2016<br>Developments in Implicit Computational Complexity</h1>
+ <h2 style="color:#e0e0e0; background-color:rgba(0,0,0,0.4)">Eindhoven, The Netherlands &mdash; 2-3 April 2016 &mdash; part of <a href="http://www.etaps.org" style="color:white;">ETAPS 2016</a> 
+        <br>
+     <br>
+    </h2>
+</div>
+
+<div class="content box">
+<h2>Context</h2>
+<p><a href="http://perso.ens-lyon.fr/patrick.baillot/DICE/">DICE</a> is a thematic workshop in the field of Implicit Computational
+Complexity, where researchers in the area can meet and discuss their most recent results. It takes place annually as part of ETAPS.</p>
+
+<h2>Program</h2>
+<p><b>Saturday, 2 April 2016, Auditorium 14 (top floor)</b></p>
+<table style="border-spacing: 20px 3px">
+	<tr>
+		<td>09:30-10:30</td>
+		<td>David Nowak, <i>Formal Security Proofs with Quasi-Interpretations</i> (invited talk) <a href="Talks/Nowak.pdf">[slides]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>	
+		<td>10:30-11:00</td>
+		<td>coffee break</td>
+	<tr>
+	</tr>
+	<tr>
+		<td>11:00-11:45</td>
+		<td>Alberto Cappai and Ugo Dal Lago: <i>On Equivalences, Metrics, and Polynomial Time</i> <a href="Abstracts/paper_12.pdf">[abstract]</a> <a href="Talks/DalLago.pdf">[slides]</a> <a href="Videos/02-DalLago.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>11:45-12:30</td> 
+		<td>Cynthia Kop: <i>On First-order Cons-free Term Rewriting and PTIME</i> <a href="Abstracts/paper_4.pdf">[abstract]</a> <a href="Talks/Kop.pdf">[slides]</a> <a href="Videos/03-Kop.mp4">[video]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>12:30-14:00</td>
+		<td>lunch</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>14:00-14:45</td>
+		<td>Laure Daviaud: <i>Max-Plus Automata for the Worst-Case Complexity Analysis</i> <a href="Abstracts/paper_5.pdf">[abstract]</a> <a href="Talks/Daviaud.pdf">[slides]</a> <a href="Videos/04-Daviaud.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>14:45-15:30</td>
+		<td>Jean-Yves Moyen and Jakob Grue Simonsen: <i>More intentional versions of Rice's Theorem</i> <a href="Abstracts/paper_1.pdf">[abstract]</a> <a href="Talks/Moyen.pdf">[slides]</a> <a href="Videos/05-Moyen.mp4">[video]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>15:30-16:00</td>
+		<td>coffee break</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>16:00-16:45</td>
+		<td>Thomas Rubiano and Jean-Yves Moyen: <i>Detection of Non-Size Increasing Programs in Compilers</i> <a href="Abstracts/paper_2.pdf">[abstract]</a> <a href="Talks/Rubiano.pdf">[slides]</a> <a href="Videos/06-Rubiano.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>16:45-17:30</td>
+		<td>Beniamino Accattoli and Giulio Guerrieri: <i>Open Call-by-Value</i> <a href="Abstracts/paper_3.pdf">[abstract]</a> <a href="Talks/Guerrieri.pdf">[slides]</a> <a href="Videos/07-Guerrieri.mp4">[video]</a></td>
+	</tr>
+</table>
+
+<p><b>Sunday, 3 April 2016, Auditorium 14 (top floor)</b></p>
+<table style="border-spacing: 20px 3px">
+	<tr>
+		<td>09:30-10:30</td>
+		<td>Robin Cockett: <i>Abstract Computability</i> (invited talk) <a href="Abstracts/invited_paper_1.pdf">[abstract]</a> <a href="Talks/Cockett.pdf">[slides]</a> <a href="Videos/08-Cockett.mp4">[video]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>	
+		<td>10:30-11:00</td>
+		<td>coffee break</td>
+	<tr>
+	</tr>
+	<tr>
+		<td>11:00-11:45</td>
+		<td>Ezgi Cicek, Marco Gaboardi and Deepak Garg: <i>Cost analysis: How do monads and comonads differ?</i> <a href="Abstracts/paper_10.pdf">[abstract]</a> <a href="Talks/Cicek.pdf">[slides]</a> <a href="Videos/09-Cicek.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>11:45-12:30</td> 
+		<td>Jonas Frey and Jakob Grue Simonsen: <i>Toposes for Time Complexity Classes</i> <a href="Abstracts/paper_6.pdf">[abstract]</a> <a href="Talks/Frey.pdf">[slides]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>12:30-14:00</td>
+		<td>lunch</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>14:00-14:45</td>
+		<td>Reinhard Kahle, Isabel Oitavem and Thomas Strahm: <i>An applicative theory for the #P hierarchy FCH</i> <a href="Abstracts/paper_7.pdf">[abstract]</a> <a href="Talks/Kahle.pdf">[slides]</a> <a href="Videos/11-Kahle.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>14:45-15:30</td>
+		<td>Anupam Das and Patrick Baillot: <i>Towards feasibility in arithmetic via linear logic</i> <a href="Abstracts/paper_8.pdf">[abstract]</a> <a href="Videos/12-Das.mp4">[video]</a></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>15:30-16:00</td>
+		<td>coffee break</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>16:00-16:45</td>
+		<td>Stéphane Gimenez and Georg Moser: <i>The Complexity of Interaction</i> <a href="Abstracts/paper_11.pdf">[asbtract]</a> <a href="Talks/Gimenez.pdf">[slides]</a> <a href="Videos/13-Gimenez.mp4">[video]</a></td>
+	</tr>
+	<tr>
+		<td>16:45-17:30</td>
+		<td>Giulio Guerrieri, Luc Pellissier and Lorenzo Tortora De Falco: <i>Relational type-checking of connected proof-structures</i> <a href="Abstracts/paper_9.pdf">[abstract]</a> <a href="Talks/Pellissier.pdf">[slides]</a> <a href="Videos/14-Pellissier.mp4">[video]</a></td>
+	</tr>
+</table>
+
+
+<h2>Scope and Topic</h2>
+<p> 
+The area of Implicit Computational Complexity (ICC) has grown from several proposals for using logic and formal methods to provide languages for complexity-bounded computation (e.g. PTIME, LOGSPACE computation). Its aim is to study computational complexity without reference to external measuring conditions but only in terms of language restrictions or logical/computational principles implying complexity properties.
+</p>
+<p>
+This workshop focuses on ICC methods related to programs. Traditionally, in this approach one relates complexity classes to restrictions on programming paradigms (functional programs, lambda-calculi, rewriting systems), such as ramified recurrence, weak polymorphic types, linear logic and linear types and interpretative measures. 
+</p>
+<p>
+<p>
+The workshop will be open to contributions on various aspects of ICC including (but not limited to):
+</p>
+<ul>
+<li>
+types for controlling complexity
+</li>
+<li>
+logical systems for implicit computational complexity
+</li>
+<li>
+linear logic
+</li>
+<li>
+semantics of complexity-bounded computation
+</li>
+<li>
+rewriting and termination orderings
+</li>
+<li>
+interpretation-based methods for implicit complexity
+</li>
+<li>
+programming languages for complexity-bounded computation
+</li>
+<li>
+theoretical foundations of program complexity analysis
+</li>
+<li>
+application of implicit complexity to security
+</li>
+</ul>
+
+
+<h2 id="submission">Submission</h2>
+
+<p>
+Authors are invited to submit an <strong>extended abstract</strong> of up to <strong>5 pages</strong>
+by <strong>February&nbsp;8, 2016</strong>, using the <a href="https://easychair.org/conferences/?conf=dice2016">DICE 2016 EasyChair page</a>.
+</p>
+<p>
+Abstracts must be written in English and be submitted as a single PDF file.
+</p>
+<p>
+Submissions will be judged on originality, relevance, interest and clarity. Accepted abstracts will be presented at the workshop. Abstracts may contain material already published elsewhere before the workshop. Preference will be given to abstracts containing novel work (including work in progress). 
+</p>
+<p>
+The workshop will not have formal proceedings and is not intended to preclude later publication at another venue. <!--Nevertheless, we plan to have a joint journal special issue for DICE 2016 and DICE 2017 if the number and quality of submissions will be of an high standard.-->
+</p>
+<p>
+Submissions of abstracts by PC members are allowed.
+</p>
+
+
+<h2>Previous Workshops and Special Issues</h2>
+
+<p>
+This is the 7th edition of DICE. Information about previous instances of the workshop and special
+issues of journals can be found at the homepage of the 
+<a href="http://perso.ens-lyon.fr/patrick.baillot/DICE/">DICE workshop series</a>.
+</p>
+
+</div>
+
+
+<div class="side box">
+	<a href="http://www.etaps.org"><img src="etapslogolarge_blue.png" width="300"></a>
+</div>
+<div class="side box">
+	<a href="http://www.agence-nationale-recherche.fr/"><img src="ANR.jpg" width="150"></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://lipn.univ-paris13.fr/~mazza/Elica"><img src="Elica.png" width="100"></a>
+</div>
+
+<div class="side box">
+<h2>Invited Speakers</h2>
+<ul class="nobullets">
+  <li><a href="http://pages.cpsc.ucalgary.ca/~robin/">Robin Cockett</a>
+  <br>University of Calgary</li>
+  <li><a href="http://www.cristal.univ-lille.fr/~nowakd/">David Nowak</a>
+  <br>University of Lille</li>
+  <!--br>
+  <li><a href="http://www.diku.dk/~simonsen/">Jakob Grue Simonsen</a> <br> DIKU</li>
+  <br>
+  <li><a href="http://www.mpi-sws.org/~dg/">Deepak Garg</a> <br> MPI-SWS</li>
+  <br-->
+</ul>
+</div>  
+
+<div class="side box">
+  <h2>Important Dates</h2>
+  <dl>
+    <dt>Abstract Submission</dt>
+    <dd>February&nbsp;8,&nbsp;2016 <b>(extended!)</b></dd>
+    <dt>Notification</dt>
+    <dd>February&nbsp;22,&nbsp;2016</dd>
+    <dt>Workshop</dt>
+    <dd>April&nbsp;2-3,&nbsp;2016</dd>
+  </dl>
+</div>
+
+
+<div class="side box">
+  <h2>Program Committee</h2>
+  <ul>
+    <li class="pc">
+    <a href="http://www.cs.bham.ac.uk/~drg/">Dan Ghica</a><br>
+     University of Birmingham
+    </li>
+    <li class="pc">
+    <a href="http://www.loria.fr/~hainry/">Emmanuel Hainry</a><br>
+    Universit&eacute; de Lorraine
+    </li>
+    <li class="pc">
+    <a href="http://lipn.univ-paris13.fr/~mazza/">Damiano Mazza</a> (Chair)<br>
+    CNRS - Universit&eacute; Paris 13
+    </li>
+    <li class="pc">
+    <a href="http://www2.tcs.ifi.lmu.de/~ramyaa/index.html">Ramyaa</a><br>
+    New Mexico Tech
+    </li>
+    <li class="pc">
+    <a
+  href="http://www.cs.unibo.it/~sacerdot/">Claudio Sacerdoti Coen</a><br>
+    Universit&agrave; di Bologna
+    </li>
+    <li class="pc">
+    <a
+  href="http://www.pps.univ-paris-diderot.fr/~seiller/">Thomas Seiller</a><br>
+    University of Copenhagen
+    </li>
+    <li class="pc">
+    <a
+  href="http://logica.uniroma3.it/~tortora/">Lorenzo Tortora de Falco</a><br>
+    Universit&agrave; Roma Tre
+    </li>
+  </ul>
+</div>
+
+<div class="side box">
+  <h2>Steering Committee</h2>
+  <ul>
+    <li class="pc">
+    <a href="http://perso.ens-lyon.fr/patrick.baillot/">Patrick Baillot</a><br> CNRS - ENS Lyon
+    </li>
+    <li class="pc">
+    <a href="http://www.cs.unibo.it/~dallago/">Ugo Dal Lago</a><br> Università degli Studi di Bologna
+    </li>
+    <li class="pc">
+    <a href="http://www2.tcs.ifi.lmu.de/~mhofmann/">Martin Hofmann</a><br> LMU Munich
+    </li>
+    <li class="pc">
+    <a href="http://www.loria.fr/~marionjy/">Jean-Yves Marion</a><br> Université de Lorraine
+    </li>
+    <li class="pc">
+    <a href="http://www.di.unito.it/~ronchi/">Simona Ronchi Della Rocca</a><br>Università degli Studi di Torino
+    </li>
+  </ul>
+</div>
+
+<!--div class="side box">
+<h2>Material</h2>
+<p>
+  Call for Papers: <a href="DICE2016-CFP.txt">txt</a>
+</p>
+</div-->  
+
+<!--div id="bg_descr">
+</div-->
+
+</body></html>

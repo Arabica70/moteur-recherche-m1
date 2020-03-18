@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>SynCoP 2014: 1st International Workshop on Synthesis of Continuous Parameters</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="SynCoP 2014 (1st International Workshop on Synthesis of Continuous Parameters) will take place in Grenoble, France in April 2014" />
+	<meta name="keywords" content="SynCoP, workshop, conference, call for papers, parametric timed automata, hybrid automata, probabilistic systems, Grenoble, France, 2014" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="SynCoP.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<img style="float:right;" src="SynCoP.png" alt="SynCoP" height="100" title="SynCoP – Logo: Goran Frehse" />
+		<h1><a href="index.php">SynCoP 2014</a></h1>
+		<h2>1st International Workshop on Synthesis of Continuous Parameters</h2>
+		<h3>Sunday April 6th 2014, Grenoble, France</h3>
+		<img src="grenoble5.jpg" width="1024" alt="Grenoble" title="Grenoble – Photo: Étienne André – Licence CC-BY-NC 3.0" />
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="submission.php">Call for papers</a></li>
+			<li><a href="committees.php">Committees</a></li>
+			<li><a href="invited-speakers.php">Invited Speakers</a></li>
+			<li><a href="program.php">Program</a></li>
+			<li><a href="pictures.php">Pictures</a></li>
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>Important dates</h3>
+		<p><strong>Submission (abstract)</strong><br /><span class="barre">January 13th</span> February 3rd, 2014 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Submission (paper)</strong><br /><span class="barre">January 20th</span> February 3rd, 2014 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Submission (informal presentation)</strong><br />February 20th, 2014</p>
+		
+		<p><strong>Notification	</strong><br /><span class="barre">February 20th</span> February 27th, 2014</p>
+		
+		<p><strong>Camera ready</strong><br />March 15th, 2014</p>
+		
+		<p><strong>Workshop</strong><br />April 6th 2014</p>
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+		<h2>Aim</h2>
+		<p>SynCoP aims at bringing together researchers working on parameter synthesis for systems with continuous variables, where the parameters consist of a (usually dense) set of constant values.
+		Such problems arise for real-time, hybrid or probabilistic systems where the goal is to identify suitable parameters to achieve desired behavior, or to verify the behavior for a given range of parameter values.
+		A parameter could be, e.g., a delay in a real-time system, or a reaction rate in a biological cell model.</p>
+
+		<h2>Topics of the workshop</h2>
+		<p>The scientific subject of the workshop covers (but is not limited to) the following areas:</p>
+		
+		<ul>
+			<li>parameter synthesis,</li>
+			<li>parametric model checking,</li>
+			<li>robustness analysis,</li>
+			<li>parametric logics, decidability and complexity issues,</li>
+			<li>formalisms such as parametric timed and hybrid automata, parametric time(d) Petri nets, parametric probabilistic automata, parametric Markov decision processes,</li>
+			<li>applications to major areas of computer science and control engineering.</li>
+		</ul>
+
+		
+		<h2>Venue</h2>
+		
+		<p>SynCoP 2014 is a satellite of the <a href="http://www.etaps.org/2014/">ETAPS 2014</a> conference taking place in Grenoble, France.</p>
+		
+		<p>The workshop will be able to (at least partially) support the travel and the ETAPS workshop 
+registration fees for one or two PhD or Master student(s).</p>
+
+		<h2>Support</h2>
+		
+		<p>The workshop is partially supported by VERIMAG, LIPN, Universite Paris 13, and 
+GDR IM.</p>
+		
+
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<img src="images/verimag.png" alt="Verimag" title="Verimag">
+			<img src="images/lipn.jpg" alt="LIPN" title="LIPN">
+			<img src="images/paris13.png" alt="Université Paris 13" title="Université Paris 13">
+			<img src="images/gdrim.jpg" alt="GdR IM CNRS" title="GdR IM">
+			<img src="images/cnrs.png" alt="CNRS" title="CNRS">
+		</div>
+		
+		<div id="copyright">
+			Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>
+ 

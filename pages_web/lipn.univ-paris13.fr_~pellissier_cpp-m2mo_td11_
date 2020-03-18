@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 11</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 11 C++: Fonctions abstraites, exceptions, template<></h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a>
+</ul>
+
+<hr/>
+<h3>Exercice 1: Fonctions abstraites (dans le TD10, mais à faire si vous n'aviez pas terminé)</h3>
+<ol>
+  <li>
+    Téléchargez <a href="1.1.h" download>1.1.h</a> (copié ci-dessous) et <b>complétez</b>-le,
+    et <b>implémentez</b> les classes dans un fichier <tt>1.1.cc</tt>.
+    <pre><code class="c++">class Sequence {
+ public:
+  // The value of the sequence at the current step.
+  double Value();
+
+  // Advances to the next step.
+  void Next();
+};
+
+// 1, 1, 2, 3, 5, 8, ...
+class FibonacciSequence : public Sequence {
+};
+
+// 1, 1, 2, 6, 24, 120, 720, ... modulo x: if x = 10, that's
+// 1, 1, 2, 6, 4, 0, 0, ...
+class FactorialModXSequence : public Sequence {
+ public:
+  explicit FactorialModXSequence(int x);
+};</code></pre>
+    Veillez à rendre les fonctions de la classe de base <tt>Sequence</tt>
+    <b>abstraites</b>.
+    <br/><br/><b>Testez</b> votre code avec
+    <a href="1.tar.gz" download>1.tar.gz</a>:
+    <pre>rm 1.tar.gz; wget --no-cache http://fabien.viger.free.fr/cpp/td11/1.tar.gz
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU</b>: <tt>1.1.h</tt> et <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.1.h</tt> et <tt>1.1.cc</tt> dans <tt>1.2.h</tt> et <tt>1.2.cc</tt>.
+    <br/>Ensuite, <b>Créez</b> une classe <tt>ShiftSequence</tt>, sous-classe de <tt>Sequence</tt>,
+    dont le constructeur prendra
+    en argument une <tt>Sequence*</tt> arbitraire <tt>seq</tt> et un décalage (entier positif)
+    <tt>shift</tt>, telle que:
+    <br/><i>ShiftSequence(seq, shift)<sub>n</sub></i> =
+    <i>seq<sub>seq<sub>0</sub> + n + shift</sub></i>, où <i>seq<sub>0</sub></i>
+    est l'étape initiale de <i>seq</i> quand on a construit l'objet
+    <tt>ShiftSequence</tt>.
+    <br/><br/>Le passage de <tt>seq</tt> se fera par pointeur, et la classe
+    <tt>ShiftSequence</tt> <b>prendra possession</b> de l'objet <tt>seq</tt>
+    donné: c'est lui qui devra se charger de sa suppression.
+    <br/><br/><b>Subtilité supplémentaire</b>: contrairement au reste des <tt>Sequence</tt>
+    donnés jusqu'à présent, vos objets <tt>ShiftSequence</tt> ne peuvent pas
+    être copiés "naturellement" sans créer des problèmes.
+    Empêchez la copie d'un <tt>ShiftSequence</tt> vers un autre! Ma solution
+    préférée est la <a
+       href="http://ariya.ofilabs.com/2015/01/c-class-and-preventing-object-copy.html">3<sup>ème</sup>
+       méthode citée ici</a>.
+    <br/><br/><b>Testez</b> votre code avec <pre>make 1.2</pre>
+    <b class="orange">RENDU</b>: <tt>1.2.h</tt> et <tt>1.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.2.h</tt> et <tt>1.2.cc</tt> dans <tt>1.3.h</tt> et <tt>1.3.cc</tt>.
+    <br/>Ensuite, ajoutez une fonction <tt>int Step()</tt> qui renvoie l'étape courante d'une
+    <tt>Sequence</tt> (elle renverra <tt>0</tt> au début).
+    Pour ne pas avoir à la redéfinir pour chaque sous-classe de
+    <tt>Sequence</tt>, on va utiliser une astuce:
+    <ul>
+      <li>Renommez tous vos <tt>Next()</tt> en <tt>InternalNext()</tt>.
+      <li>Implémentez <tt>Next()</tt> dans la classe de base <tt>Séquence</tt>, en
+        utilisant <tt>InternalNext</tt> et un compteur local.</li>
+      <li>Selon votre implémentation de <tt>ShiftSequence</tt>, vous aurez
+        peut-etre besoin de modifier le compteur local lors de la construction,
+        afin qu'il vale bien 0. Ça ne devrait pas vous poser de problème.</li>
+    </ul>
+    <br/><b>Testez</b> votre code avec <pre>make 1.3</pre>
+    <b class="orange">RENDU</b>: <tt>1.3.h</tt> et <tt>1.3.cc</tt>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Exceptions</h3>
+<ol>
+  <li>
+    Dans un fichier <tt>2.1.cc</tt>, <b>implémentez</b> la fonction <tt>ParseInt()</tt> décrite
+    dans <a href="2.1.h" download>2.1.h</a> (également copié ci-dessous),
+    et faites-lui renvoyer les exceptions dédiées, afin que cela fonctionne
+    (avec l'archive <a href="2.tar.gz" download>2.tar.gz</a>):
+    <pre>rm 2.tar.gz; wget --no-cache http://fabien.viger.free.fr/cpp/td11/2.tar.gz
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b>Ne changez pas</b> <tt>2.1.h</tt>!
+    <pre><code class="c++">#include &lt;exception&gt;
+
+// Converts a string to an integer, with strict checking: throws an exception
+// if 'str' doesn't represent an integer in the range [-2^31...2^31-1].
+//
+// Exceptions thrown:
+// - NullPtrException: if str == nullptr.
+// - EmptyStrException: if str is empty.
+// - BadFormatException: if the string doesn't follow the regexp 0|(-?[1-9][0-9]*)
+// - OverflowException: if the string follows the regexp above, but the integer
+//   is outside p[-2^31...2^31-1].
+//
+// The last two exceptions take an argument at construction: a string that helps
+// to know what failed. Typically it would be the input that's being parsed.
+// The first two don't need it, because the context is pretty clear (nullptr
+// or empty string).
+int ParseInt(const char* str);
+
+using std::exception;
+class NullPtrException : public exception {};
+class EmptyStrException : public exception {};
+class BadFormatException : public exception {
+ public:
+  explicit BadFormatException(const char* data) : data_(data) {}
+  // See http://www.cplusplus.com/reference/exception/exception/what/
+  const char* what() const throw() override { return data_; }
+ private:
+  const char* data_;
+};
+class OverflowException : public exception {
+ public:
+  explicit OverflowException(const char* data) : data_(data) {}
+  const char* what() const throw() override { return data_; }
+ private:
+  const char* data_;
+};</code></pre>
+    <b class="orange">RENDU</b>: <tt>2.1.cc</tt>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 3: Fonction générique (<i>aka</i> <tt>template</tt>)</h3>
+<ol>
+  <li>
+    <b>Implémentez</b> dans un fichier <tt>3.1.h</tt> une fonction <i>générique</i> <tt>void Print(x)</tt> qui prend un argument <tt>x</tt>
+    et l'imprime (avec <tt>cout &lt;&lt; x</tt>). L'argument <tt>x</tt> pourra avoir n'importe quel type.
+    <br/>Notez bien que je demande un <tt>.h</tt> et pas de <tt>.cc</tt>! C'est dû à l'utilisation de <tt>template</tt>:
+    dans un projet C++ classique, on implémente les fonctions génériques dans les .h, pour qu'elle soient utilisables
+    par les autres fichiers.
+    <br/><br/><b>Testez</b> votre code:
+    <pre>rm 3.tar.gz; wget --no-cache <a href="3.tar.gz" download>http://fabien.viger.free.fr/cpp/td11/3.tar.gz</a>
+tar xf 3.tar.gz
+make 3.1</pre>
+    <b class="orange">RENDU</b>: <tt>3.1.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>3.1.h</tt> dans <tt>3.2.h</tt> et <i>spécialisez</i> la fonction Print
+    pour qu'elle ait un comportement particulier quand x est un <tt>int</tt>: elle devra alors
+    afficher <tt>"int(x)"</tt> (sans les guillemets, et en remplaçant le "x" par sa valeur).
+    <br/>Vous utiliserez les <tt>template</tt>, et pas la surcharge!
+    <br/><br/><b>Test</b>: <tt>make 3.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>3.2.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Dans une copie <tt>3.3.h</tt>, continuez à spécialiser <tt>Print()</tt> pour que:
+    <ul>
+      <li>Si <tt>x</tt> est un <tt>unsigned int</tt>, elle affiche <tt>"unsigned int(<i class="pink">x</i>)"</tt></li>
+      <li>Si <tt>x</tt> est un <tt>long</tt>, elle affiche <tt>"long(<i class="pink">x</i>)"</tt></li>
+      <li>Si <tt>x</tt> est un <tt>unsigned long</tt>, elle affiche <tt>"unsigned long(<i class="pink">x</i>)"</tt></li>
+    </ul>
+    <br/><b>Test</b>: <tt>make 3.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>3.3.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

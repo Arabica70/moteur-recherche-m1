@@ -1,0 +1,1643 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<HTML>
+<HEAD>
+<TITLE>Résidus quadratiques</TITLE>
+<META NAME="description" CONTENT="R&#233;sidus quadratiques ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<H1 ALIGN="CENTER">R&#233;sidus quadratiques <BR>
+Lois de r&#233;ciprocit&#233; quadratique
+<P>
+<P>
+<P>
+<BR>
+<P>
+<A HREF="../">Cyril Banderier</a>
+<BR>
+<P>
+<SMALL>
+<P>
+<P>
+<BR>
+Ma&#238;trise de math&#233;matiques pures
+<BR>
+Universit&#233; de Rouen
+<BR>
+Année 1996/1997
+</SMALL>
+</H1>
+
+<BR>
+Warning : this a work I've done few years ago
+(when I was a student) and that I don't have updated, since, I discovered 
+the most complete site I have ever seen on this subject,
+written by a number theorist who prepares a book on the subject :
+<A HREF="http://www.rzuser.uni-heidelberg.de/~hb3/rec.html">Franz Lemmermeyer</a>.
+<P>
+Remarque : Je n'ai pas retouché à ce travail que j'ai fait il y a
+quelques années déjà. En revanche, pour ceux qui voudront en savoir
+plus, je leur conseille le site incontestatblement 
+le plus complet sur les lois de réciprocités (en
+anglais), qui est dû au théoricien des nombres <A HREF="http://www.rzuser.uni-heidelberg.de/~hb3/rec.html">Franz Lemmermeyer</a> 
+<BR>
+
+<P ALIGN="LEFT">
+</P>
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html6" HREF="node1.html#SECTION00100000000000000000">Table des mati&egrave;res</A>
+<LI><A NAME="tex2html7" HREF="node2.html#SECTION00200000000000000000">Prol&#233;gom&#232;nes</A>
+<LI><A NAME="tex2html8" HREF="node3.html#SECTION00300000000000000000">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<UL>
+<LI><A NAME="tex2html9" HREF="node4.html#SECTION00310000000000000000">Legendre, Gauss, Jacobi et les autres...</A>
+<LI><A NAME="tex2html10" HREF="node5.html#SECTION00320000000000000000">Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</A>
+<LI><A NAME="tex2html11" HREF="node6.html#SECTION00330000000000000000">Le neuvi&#232;me probl&#232;me de Hilbert</A>
+</UL>
+<LI><A NAME="tex2html12" HREF="node7.html#SECTION00400000000000000000">&#201;pisode second&nbsp;: un peu de symbolique</A>
+<UL>
+<LI><A NAME="tex2html13" HREF="node8.html#SECTION00410000000000000000">Le symbole de Legendre</A>
+<LI><A NAME="tex2html14" HREF="node9.html#SECTION00420000000000000000">Le symbole de Jacobi</A>
+<LI><A NAME="tex2html15" HREF="node10.html#SECTION00430000000000000000">Application</A>
+</UL>
+<LI><A NAME="tex2html16" HREF="node11.html#SECTION00500000000000000000">Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;</A>
+<UL>
+<LI><A NAME="tex2html17" HREF="node12.html#SECTION00510000000000000000">Savez-vous compter les r&#233;sidus...</A>
+<LI><A NAME="tex2html18" HREF="node13.html#SECTION00520000000000000000">Crit&#232;re d'Euler</A>
+<LI><A NAME="tex2html19" HREF="node14.html#SECTION00530000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">
+</A>
+<UL>
+<LI><A NAME="tex2html20" HREF="node15.html#SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</UL>
+<LI><A NAME="tex2html21" HREF="node16.html#SECTION00540000000000000000">Lemme de Gauss</A>
+<LI><A NAME="tex2html22" HREF="node17.html#SECTION00550000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$">
+</A>
+<LI><A NAME="tex2html23" HREF="node18.html#SECTION00560000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">
+</A>
+<LI><A NAME="tex2html24" HREF="node19.html#SECTION00570000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img149.gif" ALT="$\left(\frac{5}{p}\right)$">
+</A>
+<LI><A NAME="tex2html25" HREF="node20.html#SECTION00580000000000000000">Quod erat demanstrandum</A>
+<UL>
+<LI><A NAME="tex2html26" HREF="node21.html#SECTION00581000000000000000">Primo</A>
+<LI><A NAME="tex2html27" HREF="node22.html#SECTION00582000000000000000">Secundo</A>
+<LI><A NAME="tex2html28" HREF="node23.html#SECTION00583000000000000000">Tertio</A>
+<LI><A NAME="tex2html29" HREF="node24.html#SECTION00584000000000000000">In fine</A>
+</UL>
+<LI><A NAME="tex2html30" HREF="node25.html#SECTION00590000000000000000">Un petit th&#233;or&#232;me de progression arithm&#233;tique</A>
+<LI><A NAME="tex2html31" HREF="node26.html#SECTION005100000000000000000">Quod erat demanstrandum (bis repetita placent)</A>
+<UL>
+<LI><A NAME="tex2html32" HREF="node27.html#SECTION005101000000000000000">Lemme sur la somme de Gauss</A>
+<LI><A NAME="tex2html33" HREF="node28.html#SECTION005102000000000000000">Retour &#224; notre seconde preuve de la loi de r&#233;ciprocit&#233;</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html34" HREF="node29.html#SECTION00600000000000000000">Extraction de racine carr&#233;e</A>
+<UL>
+<LI><A NAME="tex2html35" HREF="node30.html#SECTION00610000000000000000">M&#233;thode de Zassenhauss-Cantor</A>
+<LI><A NAME="tex2html36" HREF="node31.html#SECTION00620000000000000000">M&#233;thode de Shanks</A>
+<LI><A NAME="tex2html37" HREF="node32.html#SECTION00630000000000000000">Et maintenant, extrayons&nbsp;!</A>
+</UL>
+<LI><A NAME="tex2html38" HREF="node33.html#SECTION00700000000000000000">R&#233;ciprocit&#233; et tests de primalit&#233;</A>
+<UL>
+<LI><A NAME="tex2html39" HREF="node34.html#SECTION00710000000000000000">R&#233;sidus d&#233;mocratiques</A>
+<LI><A NAME="tex2html40" HREF="node35.html#SECTION00720000000000000000">Crit&#232;re de P&#233;pin sur les nombres de Fermat</A>
+<LI><A NAME="tex2html41" HREF="node36.html#SECTION00730000000000000000">Un test de primalit&#233;</A>
+</UL>
+<LI><A NAME="tex2html42" HREF="node37.html#SECTION00800000000000000000">R&#233;ciprocit&#233; et nombres premiers r&#233;guliers</A>
+<UL>
+<LI><A NAME="tex2html43" HREF="node38.html#SECTION00810000000000000000">Nombres premiers r&#233;guliers</A>
+<LI><A NAME="tex2html44" HREF="node39.html#SECTION00820000000000000000">Post hoc, ergo propter hoc</A>
+<LI><A NAME="tex2html45" HREF="node40.html#SECTION00830000000000000000">Loi de r&#233;ciprocit&#233; pour un nombre premier r&#233;gulier</A>
+</UL>
+<LI><A NAME="tex2html46" HREF="node41.html#SECTION00900000000000000000">R&#233;ciprocit&#233; dans un corps quadratique imaginaire</A>
+<UL>
+<LI><A NAME="tex2html47" HREF="node42.html#SECTION00910000000000000000">Une formule accorte</A>
+<LI><A NAME="tex2html48" HREF="node43.html#SECTION00920000000000000000">Fonction de Weierstrass et courbes elliptiques</A>
+<LI><A NAME="tex2html49" HREF="node44.html#SECTION00930000000000000000">D&#233;finition du symbole quadratique</A>
+<LI><A NAME="tex2html50" HREF="node45.html#SECTION00940000000000000000">R&#233;ciprocit&#233; dans un corps quadratique</A>
+<LI><A NAME="tex2html51" HREF="node46.html#SECTION00950000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img339.gif" ALT="${\mathbb Q}(i)$">
+</A>
+<LI><A NAME="tex2html52" HREF="node47.html#SECTION00960000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img349.gif" ALT="${\mathbb Q}(j)$">
+</A>
+</UL>
+<LI><A NAME="tex2html53" HREF="node48.html#SECTION001000000000000000000">Pour quelques r&#233;ciprocit&#233;s de plus</A>
+<UL>
+<LI><A NAME="tex2html54" HREF="node49.html#SECTION001010000000000000000">R&#233;sidu quadratique dans les corps <I>p</I>-adiques <IMG WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img354.gif" ALT="${\mathbb Q}_p$">
+</A>
+<LI><A NAME="tex2html55" HREF="node50.html#SECTION001020000000000000000">Loi de r&#233;ciprocit&#233; quartique, de Burde, de Scholz</A>
+<LI><A NAME="tex2html56" HREF="node51.html#SECTION001030000000000000000">Loi de r&#233;ciprocit&#233; octale et plus si affinit&#233;</A>
+<LI><A NAME="tex2html57" HREF="node52.html#SECTION001040000000000000000">Une d&#233;monstration expr&#232;s</A>
+</UL>
+<LI><A NAME="tex2html58" HREF="node53.html#SECTION001100000000000000000">Nanobiographies</A>
+<LI><A NAME="tex2html59" HREF="node54.html#SECTION001200000000000000000">Remerciements</A>
+<LI><A NAME="tex2html60" HREF="node55.html#SECTION001300000000000000000">Bibliographie</A>
+<LI><A NAME="tex2html61" HREF="node56.html#SECTION001400000000000000000">&Agrave;propos de ce document... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+
+
+</HTML>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<HTML>
+<HEAD>
+<TITLE>Résidus quadratiques</TITLE>
+<META NAME="description" CONTENT="R&#233;sidus quadratiques ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<H1 ALIGN="CENTER">R&#233;sidus quadratiques <BR>
+Lois de r&#233;ciprocit&#233; quadratique
+<P>
+<P>
+<P>
+<BR>
+<P>
+<P>
+<BR>
+<P>
+<P>
+<BR>
+<P>Cyril Banderier
+<BR>
+<P>
+<SMALL>
+<P>
+<P>
+<BR>
+<P>
+<P>
+<BR>
+Ma&#238;trise de math&#233;matiques pures
+<BR>
+Universit&#233; de Rouen
+<BR>
+Année 1996/1997
+</SMALL>
+</H1>
+
+<BR>
+Warning : this a work I've done few years ago
+(when I was a student) and that I don't have updated, since, I discovered 
+the most complete site I have ever seen on this subject,
+written by a number theorist who prepares a book on the subject :
+<A HREF="http://www.rzuser.uni-heidelberg.de/~hb3/rec.html">Franz Lemmermeyer</a>.
+<P>
+Remarque : Je n'ai pas retouché à ce travail que j'ai fait il y a
+quelques années déjà. En revanche, pour ceux qui voudront en savoir
+plus, je leur conseille le site incontestatblement 
+le plus complet sur les lois de réciprocités (en
+anglais), qui est dû au théoricien des nombres <A HREF="http://www.rzuser.uni-heidelberg.de/~hb3/rec.html">Franz Lemmermeyer</a> 
+<BR>
+
+<P ALIGN="LEFT">
+</P>
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html6" HREF="node1.html#SECTION00100000000000000000">Table des mati&egrave;res</A>
+<LI><A NAME="tex2html7" HREF="node2.html#SECTION00200000000000000000">Prol&#233;gom&#232;nes</A>
+<LI><A NAME="tex2html8" HREF="node3.html#SECTION00300000000000000000">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<UL>
+<LI><A NAME="tex2html9" HREF="node4.html#SECTION00310000000000000000">Legendre, Gauss, Jacobi et les autres...</A>
+<LI><A NAME="tex2html10" HREF="node5.html#SECTION00320000000000000000">Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</A>
+<LI><A NAME="tex2html11" HREF="node6.html#SECTION00330000000000000000">Le neuvi&#232;me probl&#232;me de Hilbert</A>
+</UL>
+<LI><A NAME="tex2html12" HREF="node7.html#SECTION00400000000000000000">&#201;pisode second&nbsp;: un peu de symbolique</A>
+<UL>
+<LI><A NAME="tex2html13" HREF="node8.html#SECTION00410000000000000000">Le symbole de Legendre</A>
+<LI><A NAME="tex2html14" HREF="node9.html#SECTION00420000000000000000">Le symbole de Jacobi</A>
+<LI><A NAME="tex2html15" HREF="node10.html#SECTION00430000000000000000">Application</A>
+</UL>
+<LI><A NAME="tex2html16" HREF="node11.html#SECTION00500000000000000000">Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;</A>
+<UL>
+<LI><A NAME="tex2html17" HREF="node12.html#SECTION00510000000000000000">Savez-vous compter les r&#233;sidus...</A>
+<LI><A NAME="tex2html18" HREF="node13.html#SECTION00520000000000000000">Crit&#232;re d'Euler</A>
+<LI><A NAME="tex2html19" HREF="node14.html#SECTION00530000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">
+</A>
+<UL>
+<LI><A NAME="tex2html20" HREF="node15.html#SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</UL>
+<LI><A NAME="tex2html21" HREF="node16.html#SECTION00540000000000000000">Lemme de Gauss</A>
+<LI><A NAME="tex2html22" HREF="node17.html#SECTION00550000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$">
+</A>
+<LI><A NAME="tex2html23" HREF="node18.html#SECTION00560000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">
+</A>
+<LI><A NAME="tex2html24" HREF="node19.html#SECTION00570000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img149.gif" ALT="$\left(\frac{5}{p}\right)$">
+</A>
+<LI><A NAME="tex2html25" HREF="node20.html#SECTION00580000000000000000">Quod erat demanstrandum</A>
+<UL>
+<LI><A NAME="tex2html26" HREF="node21.html#SECTION00581000000000000000">Primo</A>
+<LI><A NAME="tex2html27" HREF="node22.html#SECTION00582000000000000000">Secundo</A>
+<LI><A NAME="tex2html28" HREF="node23.html#SECTION00583000000000000000">Tertio</A>
+<LI><A NAME="tex2html29" HREF="node24.html#SECTION00584000000000000000">In fine</A>
+</UL>
+<LI><A NAME="tex2html30" HREF="node25.html#SECTION00590000000000000000">Un petit th&#233;or&#232;me de progression arithm&#233;tique</A>
+<LI><A NAME="tex2html31" HREF="node26.html#SECTION005100000000000000000">Quod erat demanstrandum (bis repetita placent)</A>
+<UL>
+<LI><A NAME="tex2html32" HREF="node27.html#SECTION005101000000000000000">Lemme sur la somme de Gauss</A>
+<LI><A NAME="tex2html33" HREF="node28.html#SECTION005102000000000000000">Retour &#224; notre seconde preuve de la loi de r&#233;ciprocit&#233;</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html34" HREF="node29.html#SECTION00600000000000000000">Extraction de racine carr&#233;e</A>
+<UL>
+<LI><A NAME="tex2html35" HREF="node30.html#SECTION00610000000000000000">M&#233;thode de Zassenhauss-Cantor</A>
+<LI><A NAME="tex2html36" HREF="node31.html#SECTION00620000000000000000">M&#233;thode de Shanks</A>
+<LI><A NAME="tex2html37" HREF="node32.html#SECTION00630000000000000000">Et maintenant, extrayons&nbsp;!</A>
+</UL>
+<LI><A NAME="tex2html38" HREF="node33.html#SECTION00700000000000000000">R&#233;ciprocit&#233; et tests de primalit&#233;</A>
+<UL>
+<LI><A NAME="tex2html39" HREF="node34.html#SECTION00710000000000000000">R&#233;sidus d&#233;mocratiques</A>
+<LI><A NAME="tex2html40" HREF="node35.html#SECTION00720000000000000000">Crit&#232;re de P&#233;pin sur les nombres de Fermat</A>
+<LI><A NAME="tex2html41" HREF="node36.html#SECTION00730000000000000000">Un test de primalit&#233;</A>
+</UL>
+<LI><A NAME="tex2html42" HREF="node37.html#SECTION00800000000000000000">R&#233;ciprocit&#233; et nombres premiers r&#233;guliers</A>
+<UL>
+<LI><A NAME="tex2html43" HREF="node38.html#SECTION00810000000000000000">Nombres premiers r&#233;guliers</A>
+<LI><A NAME="tex2html44" HREF="node39.html#SECTION00820000000000000000">Post hoc, ergo propter hoc</A>
+<LI><A NAME="tex2html45" HREF="node40.html#SECTION00830000000000000000">Loi de r&#233;ciprocit&#233; pour un nombre premier r&#233;gulier</A>
+</UL>
+<LI><A NAME="tex2html46" HREF="node41.html#SECTION00900000000000000000">R&#233;ciprocit&#233; dans un corps quadratique imaginaire</A>
+<UL>
+<LI><A NAME="tex2html47" HREF="node42.html#SECTION00910000000000000000">Une formule accorte</A>
+<LI><A NAME="tex2html48" HREF="node43.html#SECTION00920000000000000000">Fonction de Weierstrass et courbes elliptiques</A>
+<LI><A NAME="tex2html49" HREF="node44.html#SECTION00930000000000000000">D&#233;finition du symbole quadratique</A>
+<LI><A NAME="tex2html50" HREF="node45.html#SECTION00940000000000000000">R&#233;ciprocit&#233; dans un corps quadratique</A>
+<LI><A NAME="tex2html51" HREF="node46.html#SECTION00950000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img339.gif" ALT="${\mathbb Q}(i)$">
+</A>
+<LI><A NAME="tex2html52" HREF="node47.html#SECTION00960000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img349.gif" ALT="${\mathbb Q}(j)$">
+</A>
+</UL>
+<LI><A NAME="tex2html53" HREF="node48.html#SECTION001000000000000000000">Pour quelques r&#233;ciprocit&#233;s de plus</A>
+<UL>
+<LI><A NAME="tex2html54" HREF="node49.html#SECTION001010000000000000000">R&#233;sidu quadratique dans les corps <I>p</I>-adiques <IMG WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img354.gif" ALT="${\mathbb Q}_p$">
+</A>
+<LI><A NAME="tex2html55" HREF="node50.html#SECTION001020000000000000000">Loi de r&#233;ciprocit&#233; quartique, de Burde, de Scholz</A>
+<LI><A NAME="tex2html56" HREF="node51.html#SECTION001030000000000000000">Loi de r&#233;ciprocit&#233; octale et plus si affinit&#233;</A>
+<LI><A NAME="tex2html57" HREF="node52.html#SECTION001040000000000000000">Une d&#233;monstration expr&#232;s</A>
+</UL>
+<LI><A NAME="tex2html58" HREF="node53.html#SECTION001100000000000000000">Nanobiographies</A>
+<LI><A NAME="tex2html59" HREF="node54.html#SECTION001200000000000000000">Remerciements</A>
+<LI><A NAME="tex2html60" HREF="node55.html#SECTION001300000000000000000">Bibliographie</A>
+<LI><A NAME="tex2html61" HREF="node56.html#SECTION001400000000000000000">&Agrave;propos de ce document... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+
+<TITLE>Table des mati&egrave;res</TITLE>
+<META NAME="description" CONTENT="Table des mati&egrave;res">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="recipro.html">
+<LINK REL="up" HREF="recipro.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+<BODY >
+<BR>
+<H2>
+<A NAME="SECTION00100000000000000000">Table des mati&egrave;res</A>
+</H2>
+<!--Table of Contents-->
+<UL>
+<LI><A NAME="tex2html72" HREF="node1.html#SECTION00100000000000000000">Table des mati&egrave;res</A>
+<LI><A NAME="tex2html73" HREF="node2.html#SECTION00200000000000000000">Prol&#233;gom&#232;nes</A>
+<LI><A NAME="tex2html74" HREF="node3.html#SECTION00300000000000000000">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<UL>
+<LI><A NAME="tex2html75" HREF="node4.html#SECTION00310000000000000000">Legendre, Gauss, Jacobi et les autres...</A>
+<LI><A NAME="tex2html76" HREF="node5.html#SECTION00320000000000000000">Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</A>
+<LI><A NAME="tex2html77" HREF="node6.html#SECTION00330000000000000000">Le neuvi&#232;me probl&#232;me de Hilbert</A>
+</UL>
+<LI><A NAME="tex2html78" HREF="node7.html#SECTION00400000000000000000">&#201;pisode second&nbsp;: un peu de symbolique</A>
+<UL>
+<LI><A NAME="tex2html79" HREF="node8.html#SECTION00410000000000000000">Le symbole de Legendre</A>
+<LI><A NAME="tex2html80" HREF="node9.html#SECTION00420000000000000000">Le symbole de Jacobi</A>
+<LI><A NAME="tex2html81" HREF="node10.html#SECTION00430000000000000000">Application</A>
+</UL>
+<LI><A NAME="tex2html82" HREF="node11.html#SECTION00500000000000000000">Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;</A>
+<UL>
+<LI><A NAME="tex2html83" HREF="node12.html#SECTION00510000000000000000">Savez-vous compter les r&#233;sidus...</A>
+<LI><A NAME="tex2html84" HREF="node13.html#SECTION00520000000000000000">Crit&#232;re d'Euler</A>
+<LI><A NAME="tex2html85" HREF="node14.html#SECTION00530000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">
+</A>
+<UL>
+<LI><A NAME="tex2html86" HREF="node15.html#SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</UL>
+<LI><A NAME="tex2html87" HREF="node16.html#SECTION00540000000000000000">Lemme de Gauss</A>
+<LI><A NAME="tex2html88" HREF="node17.html#SECTION00550000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$">
+</A>
+<LI><A NAME="tex2html89" HREF="node18.html#SECTION00560000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">
+</A>
+<LI><A NAME="tex2html90" HREF="node19.html#SECTION00570000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img149.gif" ALT="$\left(\frac{5}{p}\right)$">
+</A>
+<LI><A NAME="tex2html91" HREF="node20.html#SECTION00580000000000000000">Quod erat demanstrandum</A>
+<UL>
+<LI><A NAME="tex2html92" HREF="node21.html#SECTION00581000000000000000">Primo</A>
+<LI><A NAME="tex2html93" HREF="node22.html#SECTION00582000000000000000">Secundo</A>
+<LI><A NAME="tex2html94" HREF="node23.html#SECTION00583000000000000000">Tertio</A>
+<LI><A NAME="tex2html95" HREF="node24.html#SECTION00584000000000000000">In fine</A>
+</UL>
+<LI><A NAME="tex2html96" HREF="node25.html#SECTION00590000000000000000">Un petit th&#233;or&#232;me de progression arithm&#233;tique</A>
+<LI><A NAME="tex2html97" HREF="node26.html#SECTION005100000000000000000">Quod erat demanstrandum (bis repetita placent)</A>
+<UL>
+<LI><A NAME="tex2html98" HREF="node27.html#SECTION005101000000000000000">Lemme sur la somme de Gauss</A>
+<LI><A NAME="tex2html99" HREF="node28.html#SECTION005102000000000000000">Retour &#224; notre seconde preuve de la loi de r&#233;ciprocit&#233;</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html100" HREF="node29.html#SECTION00600000000000000000">Extraction de racine carr&#233;e</A>
+<UL>
+<LI><A NAME="tex2html101" HREF="node30.html#SECTION00610000000000000000">M&#233;thode de Zassenhauss-Cantor</A>
+<LI><A NAME="tex2html102" HREF="node31.html#SECTION00620000000000000000">M&#233;thode de Shanks</A>
+<LI><A NAME="tex2html103" HREF="node32.html#SECTION00630000000000000000">Et maintenant, extrayons&nbsp;!</A>
+</UL>
+<LI><A NAME="tex2html104" HREF="node33.html#SECTION00700000000000000000">R&#233;ciprocit&#233; et tests de primalit&#233;</A>
+<UL>
+<LI><A NAME="tex2html105" HREF="node34.html#SECTION00710000000000000000">R&#233;sidus d&#233;mocratiques</A>
+<LI><A NAME="tex2html106" HREF="node35.html#SECTION00720000000000000000">Crit&#232;re de P&#233;pin sur les nombres de Fermat</A>
+<LI><A NAME="tex2html107" HREF="node36.html#SECTION00730000000000000000">Un test de primalit&#233;</A>
+</UL>
+<LI><A NAME="tex2html108" HREF="node37.html#SECTION00800000000000000000">R&#233;ciprocit&#233; et nombres premiers r&#233;guliers</A>
+<UL>
+<LI><A NAME="tex2html109" HREF="node38.html#SECTION00810000000000000000">Nombres premiers r&#233;guliers</A>
+<LI><A NAME="tex2html110" HREF="node39.html#SECTION00820000000000000000">Post hoc, ergo propter hoc</A>
+<LI><A NAME="tex2html111" HREF="node40.html#SECTION00830000000000000000">Loi de r&#233;ciprocit&#233; pour un nombre premier r&#233;gulier</A>
+</UL>
+<LI><A NAME="tex2html112" HREF="node41.html#SECTION00900000000000000000">R&#233;ciprocit&#233; dans un corps quadratique imaginaire</A>
+<UL>
+<LI><A NAME="tex2html113" HREF="node42.html#SECTION00910000000000000000">Une formule accorte</A>
+<LI><A NAME="tex2html114" HREF="node43.html#SECTION00920000000000000000">Fonction de Weierstrass et courbes elliptiques</A>
+<LI><A NAME="tex2html115" HREF="node44.html#SECTION00930000000000000000">D&#233;finition du symbole quadratique</A>
+<LI><A NAME="tex2html116" HREF="node45.html#SECTION00940000000000000000">R&#233;ciprocit&#233; dans un corps quadratique</A>
+<LI><A NAME="tex2html117" HREF="node46.html#SECTION00950000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img339.gif" ALT="${\mathbb Q}(i)$">
+</A>
+<LI><A NAME="tex2html118" HREF="node47.html#SECTION00960000000000000000">Loi de r&#233;ciprocit&#233; quadratique dans <IMG WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img349.gif" ALT="${\mathbb Q}(j)$">
+</A>
+</UL>
+<LI><A NAME="tex2html119" HREF="node48.html#SECTION001000000000000000000">Pour quelques r&#233;ciprocit&#233;s de plus</A>
+<UL>
+<LI><A NAME="tex2html120" HREF="node49.html#SECTION001010000000000000000">R&#233;sidu quadratique dans les corps <I>p</I>-adiques <IMG WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img354.gif" ALT="${\mathbb Q}_p$">
+</A>
+<LI><A NAME="tex2html121" HREF="node50.html#SECTION001020000000000000000">Loi de r&#233;ciprocit&#233; quartique, de Burde, de Scholz</A>
+<LI><A NAME="tex2html122" HREF="node51.html#SECTION001030000000000000000">Loi de r&#233;ciprocit&#233; octale et plus si affinit&#233;</A>
+<LI><A NAME="tex2html123" HREF="node52.html#SECTION001040000000000000000">Une d&#233;monstration expr&#232;s</A>
+</UL>
+<LI><A NAME="tex2html124" HREF="node53.html#SECTION001100000000000000000">Nanobiographies</A>
+<LI><A NAME="tex2html125" HREF="node54.html#SECTION001200000000000000000">Remerciements</A>
+<LI><A NAME="tex2html126" HREF="node55.html#SECTION001300000000000000000">Bibliographie</A>
+</UL>
+<!--End of Table of Contents-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+
+<TITLE>Prol&#233;gom&#232;nes</TITLE>
+<META NAME="description" CONTENT="Prol&#233;gom&#232;nes">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="recipro.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00200000000000000000">Prol&#233;gom&#232;nes</A>
+</H1>
+Ce m&#233;moire a pour but d'&#233;clairer divers liens entre la notion de r&#233;sidu 
+quadratique et de nombreux pans de la th&#233;orie des nombres (au sens large,
+ cela va de la th&#233;orie additive, multiplicative des nombres - 
+l'arithm&#233;tique - &#224; la th&#233;orie alg&#233;brique des nombres en passant par 
+la th&#233;orie analytique des nombres et en
+poussant jusqu'&#224; la th&#233;orie des corps de classes).
+On aura ainsi un aper&#231;u de la profondeur de la notion de r&#233;sidu, tout en 
+oscillant souvent entre prospective et &#233;pist&#233;mologie, entre d&#233;monstration 
+et digression. On verra aussi quelques applications industrielles 
+(traduire&nbsp;: <I>algorithmiques</I>).
+<P>
+Toutefois, pour des raisons de limitation (du nombre de pages et des
+connaissances de l'auteur), bien souvent, seuls les r&#233;sultats sont cit&#233;s,
+ les d&#233;monstrations se trouvant dans les livres cit&#233;s dans la bibliographie 
+ou dans les articles cit&#233;s dans ce m&#233;moire.
+Cependant, un r&#233;sultat aussi puissant que la loi de r&#233;ciprocit&#233; d'Artin 
+n'est m&#234;me pas d&#233;montr&#233; dans l'ardu <I>Corps locaux</I> de J.P. Serre, qui
+ renvoie &#224; un livre de th&#233;orie des corps de classes.
+On trouvera dans nos pages quelques autres rouleaux compresseurs. N&#233;anmoins, 
+divers r&#233;sultats d'arithm&#233;tiques seront d&#233;montr&#233;s aux chapitres 2 et 3,
+ dont <I>last but not least</I> la loi de r&#233;ciprocit&#233; quadratique, serpent
+ de mer de ce TER.
+Nous esp&#233;rons que le lecteur aura autant de plaisir que nous &#224; se promener
+ &#224; travers les notions qui nous ont &#233;t&#233; offertes par deux si&#232;cles 
+d'alg&#232;bre, voire d'analyse.
+Et maintenant, commen&#231;ons &#224; ouvrir nos horizons en d&#233;finissant le
+ champ de bataille.
+<P>
+<HR>
+
+</BODY>
+</HTML>
+
+<TITLE>&#201;pisode premier&nbsp;: r&#233;sidus historiques</TITLE>
+<META NAME="description" CONTENT="&#201;pisode premier&nbsp;: r&#233;sidus historiques">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="recipro.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00300000000000000000">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+</H1>
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html149" HREF="node4.html#SECTION00310000000000000000">Legendre, Gauss, Jacobi et les autres...</A>
+<LI><A NAME="tex2html150" HREF="node5.html#SECTION00320000000000000000">Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</A>
+<LI><A NAME="tex2html151" HREF="node6.html#SECTION00330000000000000000">Le neuvi&#232;me probl&#232;me de Hilbert</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Legendre, Gauss, Jacobi et les autres...</TITLE>
+<META NAME="description" CONTENT="Legendre, Gauss, Jacobi et les autres...">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00310000000000000000">Legendre, Gauss, Jacobi et les autres...</A>
+</H1>
+<P>
+<B>D&#233;finition&nbsp;:</B> <I>a</I> est r&#233;sidu quadratique modulo <I>n</I> (ou encore 
+r&#233;sidu quadratique de <I>n</I>) si et seulement si <I>a</I> est un carr&#233; dans
+ <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img1.gif" ALT="${\mathbb Z}/n{\mathbb Z}$">. Eh oui&nbsp;! C'est aussi simple que cela.
+<P>
+<B>Exemple&nbsp;:</B> Dans <IMG WIDTH="359" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img2.gif" ALT="${\mathbb Z}/6{\mathbb Z}~: 0 = 0^2, 1 = 1^2 = 5^2, 3 =3^2, 4 = 2^2 = 4^2$"> 
+sont des r&#233;sidus quadratiques&nbsp;; 2 et 5 sont non r&#233;sidus (sous entendu&nbsp;: 
+quadratiques modulo 6).
+<P>
+Le terme ``r&#233;sidu quadratique'' est fort po&#233;tique mais nous nous 
+efforcerons, lorsqu'il n'y aura pas ambigu&#239;t&#233;, &#224; employer le terme 
+``carr&#233;''&nbsp;; ce dernier ayant l'avantage d'&#234;tre bien plus explicite que le 
+terme ``r&#233;sidu quadratique'' qui, ne faisant qu'esbroufe, ralentit la
+ compr&#233;hension des &#233;nonc&#233;s. Par ailleurs, nous dirons que deux nombres
+ sont ``&#233;trangers'' plut&#244;t que de dire qu'ils sont ``premiers entre eux'',
+ &#233;vitant ainsi une polys&#233;mie n&#233;faste.
+<P>
+La notion de r&#233;sidu quadratique appara&#238;t dans un m&#233;moire d'Euler de
+ 1754-1755. D'aucuns, qui ne sont pas math&#233;maticiens, se diront que c'est 
+encore l&#224; une futilit&#233; de matheux, d'autres, qui le sont, se diront que 
+c'est l&#224; une futilit&#233; d'arithm&#233;ticien. Eh bien&nbsp;! Nous allons nous efforcer,
+tout au long de ce m&#233;moire, de d&#233;montrer le profond int&#233;r&#234;t de
+ cette <I>futilit&#233;</I>, de ces carr&#233;s carr&#233;ment sans int&#233;r&#234;t.
+<P>
+Les jolies formules se succ&#233;deront mais, &#233;tant conscient que
+ l'esth&#233;tique n'est pas un motif d'int&#233;r&#234;t pour beaucoup, nous verrons 
+donc, pour ces r&#233;fractaires, quelques applications avec les tests de
+ primalit&#233;, dont le test de P&#233;pin.
+Cette miette math&#233;matique est &#233;galement &#224; la base d'algorithmes de 
+factorisation,
+avec la m&#233;thode de Gauss et celle de Kra&#239;tchik (1920), anc&#234;tre du
+ moderne ``algorithme de factorisation par crible quadratique'' de Carl 
+Pomerance (1990). La lecture du &#167;explicitera ce qu'on peut 
+entendre par int&#233;r&#234;t.
+<P>
+Comment savoir si <I>a</I> est un carr&#233; modulo <I>n</I>&nbsp;?
+Construire la table des carr&#233;s de <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img1.gif" ALT="${\mathbb Z}/n{\mathbb Z}$"> devient vite fastidieux, si <I>n</I> 
+est grand. Legendre donne un algorithme simple pour r&#233;pondre &#224; cette
+ question. Celui-ci repose sur un r&#233;sultat puissant de la th&#233;orie des 
+nombres&nbsp;: la loi de r&#233;ciprocit&#233;
+quadratique. Le premier &#224; l'avoir &#233;nonc&#233;e (sans preuve) est Euler en 1783,
+ apr&#232;s l'avoir fr&#244;l&#233;e en 1772. Ind&#233;pendamment, Legendre l'&#233;nonce
+ en 1785 avec une preuve incompl&#232;te, toujours insuffisante dans sa
+ <I>Th&#233;orie des nombres</I>, en 1798. Gauss en trouva une preuve &#224; l'&#226;ge 
+de 18 ans, au bout d'un an de recherches, et en exposera la premi&#232;re 
+d&#233;monstration rigoureuse dans ses <I>Recherches arithm&#233;tiques</I> en 1801.
+<P>
+Gauss consid&#233;rait cette loi comme le joyau de l'arithm&#233;tique, l'appelant
+ m&#234;me le ``th&#233;or&#232;me d'or''&nbsp;; il en donnera sept d&#233;monstrations 
+diff&#233;rentes. Aujourd'hui, des sp&#233;cialistes en ont recens&#233; au
+moins 163, on pourra en trouver une produite par un g&#233;n&#233;rateur
+ informatique de th&#233;or&#232;mes dans <I>A mechanical proof of quadratic 
+reciprocity</I>, Journal of Automated Reasoning, 1992 de D. Russinoff et nous 
+vous renvoyons &#224; l'American Mathematical Monthly d'avril 1963 pour 
+l'&#233;nonc&#233; de la 152<SUP>
+<I>e</I>
+</SUP> preuve de la loi de r&#233;ciprocit&#233; quadratique,
+qui comme la plupart est bas&#233;e sur le lemme de Gauss (voir &#167;).
+ En m&#233;tamath&#233;matique, on dit qu'un tel th&#233;or&#232;me, aux d&#233;monstrations 
+foisonnantes, a un degr&#233; d'ambigu&#239;t&#233; &#233;lev&#233;. Il en est de m&#234;me, 
+par exemple, du th&#233;or&#232;me de Pythagore ou du th&#233;or&#232;me de l'infinitude 
+des nombres premiers. On en trouvera une douzaine copurchics dans 
+[Ribenboim] (les noms entre crochets renvoient aux r&#233;f&#233;rences
+ bibliographiques &#224; la fin du document) ;
+nous en donnerons une dans le &#167; sur les progressions 
+arithm&#233;tiques.
+<P>
+En revanche, le th&#233;or&#232;me des nombres premiers, qui a f&#234;t&#233; l'an dernier
+ son centenaire, n'est pas ambigu&nbsp;: il n'a pour l'instant que deux 
+d&#233;monstrations. En effet, quoique conjectur&#233; depuis Legendre et Gauss, et
+ apr&#232;s des progr&#232;s dus &#224; Tchebychev et Riemann, il ne fut prouv&#233; 
+qu'en 1896, par Hadamard et de La Vall&#233;e-Poussin, ind&#233;pendamment l'un de 
+l'autre. Ce n'est qu'en 1949 qu'on en trouva une d&#233;monstration 
+'&#233;l&#233;mentaire' (i.e. n'utilisant ni la fonction <IMG WIDTH="11" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img3.gif" ALT="$\zeta$"> de Riemann ni 
+la th&#233;orie des fonctions holomorphes) due &#224; Erd&#246;s et Selberg (
+m&#233;daille Fields en 1950). On trouvera une version am&#233;lior&#233;e de cette 
+d&#233;monstration dans [Francinou].
+<P>
+La plus simple manifestation des lois de r&#233;ciprocit&#233; est celle, d&#233;j&#224; 
+connue par Pierre de Fermat, qui affirme que les seuls diviseurs
+premiers de <I>x<SUP>2</SUP>
+</I>+1 sont 2 et des nombres premiers du type 1+4<I>k</I> 
+(voir &#167;). Avec l'aide du symbole de Legendre, ceci se note 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="137" HEIGHT="47" SRC="img4.gif" ALT="\begin{displaymath}
+\left(\frac{-1}{p}\right)= (-1)^{\frac{p-1}{2}}.\end{displaymath}">
+</P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</TITLE>
+<META NAME="description" CONTENT="Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00320000000000000000">Lois de r&#233;ciprocit&#233; d'ordre sup&#233;rieur</A>
+</H1>
+La loi de r&#233;ciprocit&#233; de Gauss a &#233;t&#233; g&#233;n&#233;ralis&#233;e &#224; des 
+congruences du type <IMG WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img5.gif" ALT="$x^n \equiv a \ [p]$"> (<I>n</I>&gt;2)&nbsp;; on parle de r&#233;ciprocit&#233; 
+cubique pour <I>n</I>=3, de r&#233;ciprocit&#233; biquadratique ou quartique pour <I>n</I>=4, 
+de r&#233;ciprocit&#233; quintique pour <I>n</I>=5...Ceci impose
+une transition de l'arithm&#233;tique sur <IMG WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img6.gif" ALT="${\mathbb Q}$"> vers une arithm&#233;tique sur une 
+extension finie <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img7.gif" ALT="${\mathbb K}$"> de <IMG WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img6.gif" ALT="${\mathbb Q}$">. Une telle extension de
+<IMG WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img6.gif" ALT="${\mathbb Q}$"> ou d'un corps fini <IMG WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img8.gif" ALT="${\mathbb F}_p(X)$"> est nomm&#233;e un corps global, par opposition
+ aux corps locaux [Serre 2] qui sont les compl&#233;t&#233;s
+d'un corps de nombres alg&#233;briques, pour sa valeur absolue&nbsp;:
+c'est-&#224;-dire soit <IMG WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img9.gif" ALT="${\mathbb R}$">, soit <IMG WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img10.gif" ALT="${\mathbb C}$">, soit les corps de nombres <I>p</I>-adiques 
+(th&#233;or&#232;me d'Ostrowski). Un corps de nombres (alg&#233;briques) est une
+ extension finie de <IMG WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img6.gif" ALT="${\mathbb Q}$"> contenue dans <IMG WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img10.gif" ALT="${\mathbb C}$">.<P>
+Dans la g&#233;n&#233;ralisation aux r&#233;sidus &#233;ni&#232;mes, l'extension doit contenir
+ <IMG WIDTH="11" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img3.gif" ALT="$\zeta$">, une racine &#233;ni&#232;me primitive de l'unit&#233; (i.e. <IMG WIDTH="52" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img11.gif" ALT="$\zeta^n=1$"> et
+ <IMG WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0" SRC="img12.gif" ALT="$\zeta^k \not = 1 \ \forall k<n$">). Nous d&#233;signerons, conventionnellement 
+voire traditionnellement, un id&#233;al premier par la lettre <IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$"> 
+(ou <IMG WIDTH="11" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img14.gif" ALT="$\mathfrak p$">), <I>P</I> majuscule (ou minuscule) en alphabet gothique, 
+en honneur &#224; l'&#233;cole alg&#233;brique allemande&nbsp;: en effet Kummer a introduit 
+ses 'nombres id&#233;aux' en 1844 [Dahan], puis Dedekind a d&#233;velopp&#233; 
+la th&#233;orie des id&#233;aux premiers.
+Dedekind, dans le <I>Suppl&#233;ment aux `` Vorselungen &#252;ber Zahlentheorie '' 
+de Dirichlet</I>, 1871, a introduit explicitement les notions de corps, d'anneau, 
+de module et d'id&#233;al.
+<P>
+Les id&#233;aux premiers <IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$"> de <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img7.gif" ALT="${\mathbb K}$"> qui ne divisent pas <I>n</I> v&#233;rifient 
+<IMG WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img15.gif" ALT="$N_{\mathfrak P}\equiv 1 \ [n]$"> o&#249; <IMG WIDTH="28" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img16.gif" ALT="$N_{\mathfrak P}$"> est la norme
+de l'id&#233;al <IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$">, &#233;gale au nombre de classes du plus grand ordre du corps 
+modulo <IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$">, dit plus simplement, <IMG WIDTH="28" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img16.gif" ALT="$N_{\mathfrak P}$"> est le cardinal de <IMG WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img17.gif" ALT="${\mathbb A}/{\mathfrak P}$"> lorsque 
+<IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$"> est un id&#233;al de l'anneau <IMG WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img18.gif" ALT="${\mathbb A}$"> des entiers du corps <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img7.gif" ALT="${\mathbb K}$">. 
+L'analogue du symbole de Legendre est d&#233;fini par 
+<IMG WIDTH="215" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img19.gif" ALT="$\left(\frac{a}{{\mathfrak P}}\right)_n \equiv \zeta^k \equiv a^{(N_{\mathfrak P}-1)/n}\ [{\mathfrak P}]$">. Tout comme pour le symbole de Jacobi, si <IMG WIDTH="104" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img20.gif" ALT="$(b)=\prod_i{\mathfrak P}^{m_i}_i$"> est 
+la d&#233;composition de l'id&#233;al principal (<I>b</I>) en id&#233;aux premiers,
+et si <I>a</I> et <I>b</I> sont des entiers alg&#233;briques &#233;trangers, alors&nbsp;:
+ <IMG WIDTH="145" HEIGHT="45" ALIGN="MIDDLE" BORDER="0" SRC="img21.gif" ALT="$\left(\frac{a}{b}\right)_n =\prod_i \left(\frac{a}{{\mathfrak P}_i}\right)_n^{m_i}$">.Si, avec ce symbole de r&#233;sidu <I>n</I>-i&#232;me, on a <IMG WIDTH="70" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img22.gif" ALT="$\left(\frac{a}{{\mathfrak P}}\right)=1$">, alors 
+il existe un entier alg&#233;brique <IMG WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img23.gif" ALT="$b \in {\mathbb A}$"> tel que <IMG WIDTH="80" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img24.gif" ALT="$b^2\equiv a \ [{\mathfrak P}]$">.<P>
+La loi de r&#233;ciprocit&#233; pour <I>n</I>=4 dans le corps <IMG WIDTH="128" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img25.gif" ALT="${\mathbb Q}(i)={\mathbb Q}(e^{2i\pi/4})$"> a
+ &#233;t&#233; &#233;tablie par Gauss. Pour <I>n</I>=3 dans le
+corps <IMG WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img26.gif" ALT="${\mathbb Q}(e^{2i \pi/3})$">, elle a &#233;t&#233; &#233;tablie par Eisenstein&nbsp;:
+ <I>Beweis des Reziprozit&#228;tgesetze f&#252;r c&#252;bischen Reste</I>, J. Math., 1844,
+ utilisant la formule 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="232" HEIGHT="60" SRC="img27.gif" ALT="\begin{displaymath}
+\sum\sp {m-1}\sb {k=1}\sin \frac{2k\alpha \pi}m\cot \frac{k\pi}m=m-2\alpha\end{displaymath}">
+</P> 
+(valable pour <IMG WIDTH="82" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img28.gif" ALT="$1\leq a<m$">).
+Kummer dans <I>Allgemeine Reziprozit&#228;tgesezte beliebig hohe Potentzreste</I>,
+ Ber. K. Akad. Wiss., 1850, a &#233;tabli la loi g&#233;n&#233;rale de r&#233;ciprocit&#233;
+ pour le symbole des r&#233;sidus de degr&#233; <I>p</I> dans le corps <IMG WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img29.gif" ALT="${\mathbb Q}(e^{2i \pi/p})$">, pour <I>p</I> premier. Dans le chapitre sur les nombres premiers r&#233;guliers <I>p</I> 
+(voir &#167;), on donnera une loi de r&#233;ciprocit&#233; dans 
+<IMG WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img29.gif" ALT="${\mathbb Q}(e^{2i \pi/p})$">.<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Le neuvi&#232;me probl&#232;me de Hilbert</TITLE>
+<META NAME="description" CONTENT="Le neuvi&#232;me probl&#232;me de Hilbert">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00330000000000000000">Le neuvi&#232;me probl&#232;me de Hilbert</A>
+</H1>
+En 1900, &#224; Paris, lors du II<SUP>
+<I>e</I>
+</SUP> Congr&#232;s international des Math&#233;maticiens,
+ Hilbert avait dress&#233; une liste de 23 probl&#232;mes ouverts qui lui semblaient 
+fondamentaux et dont la r&#233;solution &#233;tait un d&#233;fi pour le XX<SUP>
+<I>e</I>
+</SUP> si&#232;cle. 
+Le neuvi&#232;me de ces probl&#232;mes consistait &#224; &#233;tablir une loi de
+ r&#233;ciprocit&#233; dans les corps de nombres alg&#233;briques.
+<P>
+On pourra remarquer que plusieurs sujets de T.E.R., outre le n&#244;tre, 
+recoupent des probl&#232;mes mis en &#233;vidence par Hilbert&nbsp;: le
+quatri&#232;me sur les g&#233;om&#233;tries non euclidiennes, le septi&#232;me sur la 
+transcendance de certains nombres, le dix-huiti&#232;me sur les
+pavages (de l'espace), le vingti&#232;me sur le probl&#232;me de Dirichlet...
+<P>
+A cette &#233;poque, une nouvelle &#233;tape dans la recherche de lois de 
+r&#233;ciprocit&#233; g&#233;n&#233;rales avait &#233;t&#233; franchie par Hilbert avec ses 
+deux articles&nbsp;: <I>Die Theorie der algebraischen Zahlk&#246;rper</I> et <I>&#220;ber 
+die Theorie der relativquadratischen Zahlk&#246;rpern</I>, Jahresber. Deutsch. Math.,
+ 1897 et 1899, dans lesquels il a &#233;clairci leurs aspects locaux. Il avait 
+&#233;tabli, dans certains cas, une loi de r&#233;ciprocit&#233; pour le symbole de
+ Hilbert&nbsp;: 
+<P ALIGN="CENTER">
+<IMG WIDTH="114" HEIGHT="55" SRC="img30.gif" ALT="\begin{displaymath}
+\prod _{\mathfrak P}\left(\frac{a,b}{{\mathfrak P}}\right)=1.\end{displaymath}">
+</P>
+Il avait aussi not&#233; l'analogie entre
+ cette formule et le th&#233;or&#232;me sur les r&#233;sidus d'une fonction alg&#233;brique&nbsp;:
+ ses points r&#233;guliers (dont la norme de Hilbert <IMG WIDTH="30" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img31.gif" ALT="$\not = 1$">) correspondent
+ aux points de branchements sur une surface de Riemann (i.e. une vari&#233;t&#233; 
+analytique complexe de dimension 1).
+<P>
+La premi&#232;re moiti&#233; du XX<SUP>
+<I>e</I>
+</SUP> si&#232;cle a vu diverses avanc&#233;es dans 
+l'&#233;tude des lois de r&#233;ciprocit&#233; dues &#224; Furtw&#228;ngler, Artin, Hasse et 
+Takagi. La loi de r&#233;ciprocit&#233; dans les corps quadratiques dans le cas 
+g&#233;n&#233;ral est due &#224; [Hecke] et la forme la plus &#233;labor&#233;e
+a &#233;t&#233; obtenue par une apoth&#233;ose due &#224; I.R. Shafarevich&nbsp;: 
+<I>A general reciprocity law</I>, Uspekhi Mat. Nauk., 1948.
+<BR>
+Elle est, tout comme la loi de r&#233;ciprocit&#233; de Gauss, tr&#232;s li&#233;e &#224; 
+l'&#233;tude de la d&#233;composition d'un id&#233;al <IMG WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img13.gif" ALT="${\mathfrak P}$"> d'un corps de nombres 
+alg&#233;briques <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img7.gif" ALT="${\mathbb K}$"> dans une extension alg&#233;brique <IMG WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img32.gif" ALT="${\mathbb L}/{\mathbb K}$"> &#224; groupe de Galois
+ab&#233;lien. En particulier, la th&#233;orie des classes, qui donne la solution de 
+ce probl&#232;me, peut &#234;tre bas&#233;e sur la loi de
+r&#233;ciprocit&#233; de Shafarevich comme l'ont fait Lapin, Cassels et [Neukirch].
+<P>
+Au jour d'aujourd'hui (redondance pl&#233;onastique voire 
+superf&#233;tatoire&nbsp;?), il reste quelques grandes conjectures offertes au monde 
+math&#233;matique. Gageons qu'elles figureront sur la liste des probl&#232;mes
+ ouverts pour le XXI<SUP>
+<I>e</I>
+</SUP> si&#232;cle.
+<P>
+Nous citerons les suivantes, qui sont plus ou moins en rapport avec notre sujet&nbsp;:
+- la conjecture de Riemann affirme que la fonction <IMG WIDTH="11" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img3.gif" ALT="$\zeta$"> (une fois prolong&#233;e
+ analytiquement &#224; <IMG WIDTH="62" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img33.gif" ALT="${\mathbb C}-\{ 1 \} $">) ne s'annule
+que sur la droite Re(z)=1/2 (&#224; l'exception des z&#233;ros triviaux <IMG WIDTH="45" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img34.gif" ALT="$-2{\mathbb N}^*$">).
+La conjecture de Riemann g&#233;n&#233;ralis&#233;e affirme la ``m&#234;me chose'' pour les 
+<I>L</I>-s&#233;ries de Dirichlet.
+Ces derni&#232;res sont d&#233;finies par 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="166" HEIGHT="56" SRC="img35.gif" ALT="\begin{displaymath}
+L(s,\chi)=\sum_{n=1}^{\infty}\chi(n)n^{-s}\end{displaymath}">
+</P>
+o&#249; <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img36.gif" ALT="$\chi$"> est un caract&#232;re modulo <I>k</I>.
+La convergence a lieu si Re(<I>s</I>)&gt;0 pour les caract&#232;res non principaux.
+Un caract&#232;re est un homomorphisme d'un groupe <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img37.gif" ALT="${\mathbb G}$"> dans le groupe 
+multiplicatif <IMG WIDTH="22" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" SRC="img38.gif" ALT="${\mathbb C}^*$">.Il est dit principal s'il est constamment &#233;gal &#224; 1 (on aurait pu plus 
+simplement l'appeler caract&#232;re trivial).
+<IMG WIDTH="22" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img39.gif" ALT="$\chi_k$">, le caract&#232;re modulo <I>k</I>, est d&#233;fini par <IMG WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img40.gif" ALT="$\chi_k(n)=0$"> si 
+<IMG WIDTH="76" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img41.gif" ALT="$(n,k)\not = 1$"> et par <IMG WIDTH="160" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img42.gif" ALT="$\chi_k(n)=\chi(n \ {\bmod}\ k)$"> sinon.
+On a l'&#233;quivalent de l'identit&#233; d'Euler&nbsp;: 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="223" HEIGHT="48" SRC="img43.gif" ALT="\begin{displaymath}
+L(s,\chi)=\prod_{p} (1-\chi(p) p^{-s})^{-1}.\end{displaymath}">
+</P>
+Les L-s&#233;ries interviennent dans la d&#233;monstration du th&#233;or&#232;me de la 
+progression arithm&#233;tique (voir &#167;).
+Il y a un lien important entre la factorisation de polyn&#244;mes sur des corps 
+finis et la conjecture de Riemann, de plus le rapport entre la factorisation 
+de polyn&#244;mes et la notion de r&#233;sidu quadratique (ou d'ordre sup&#233;rieur)
+transpire au regard de l'&#233;quation <IMG WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img5.gif" ALT="$x^n \equiv a \ [p]$">.<P>- la conjecture P <IMG WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img44.gif" ALT="$\not =$"> NP&nbsp;: tout probl&#232;me r&#233;soluble en temps polynomial
+ non d&#233;terministe est-il r&#233;soluble en temps polynomial&nbsp;? C'est-&#224;-dire&nbsp;: si on peut v&#233;rifier une solution en temps 
+polynomial, peut-on la trouver en temps polynomial&nbsp;? Bien s&#251;r,
+quelque soit la r&#233;ponse, il restera toujours &#224; trouver des algorithmes de
+ complexit&#233; minimale pour une multitude de probl&#232;mes...On conna&#238;t 
+l'importance de tels progr&#232;s, et les retomb&#233;es qu'ils pourraient avoir, 
+en cryptographie notamment, puisque cette derni&#232;re est bas&#233;e sur 
+l'hypoth&#232;se que la factorisation ou que le logarithme modulaire sont NP.
+<P>- les math&#233;maticiens, du moins ceux qui ne sont pas trop d&#233;courag&#233;s par 
+la r&#233;ponse n&#233;gative de Matijasevich au dixi&#232;me probl&#232;me de Hilbert 
+(on s'est m&#234;me demand&#233; si le probl&#232;me de Fermat n'&#233;tait pas
+ ind&#233;cidable&nbsp;!), n'ont toujours pas r&#233;solu moult
+ &#233;quations diophantiennes (Waring, Catalan).
+<P>- on ignore encore si de nombreuses familles de nombres v&#233;rifiant telle
+ propri&#233;t&#233; sont finies&nbsp;: par exemple les nombres premiers jumeaux (<I>p</I>,<I>p</I>+2),
+ repunits (1...1), de Mersenne (2<SUP>
+<I>n</I>
+</SUP>-1), de Fermat (2<SUP>2<SUP>
+<I>n</I>
+</SUP>
+</SUP>+1),
+ de Cullen (<IMG WIDTH="61" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img45.gif" ALT="$n2^n\pm1$">), de Sophie Germain (<I>p</I>, 2<I>p</I>+1), 
+r&#233;guliers (voir &#167;), de Wieferich (<IMG WIDTH="100" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img46.gif" ALT="$2^{p-1}\equiv 1 \ [p^2]$">), 
+de Wilson (<IMG WIDTH="137" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img47.gif" ALT="$(p-1) ! \equiv -1 \ [p^2]$">) [Guy].
+<P>- voici, pour finir, un probl&#232;me important de la th&#233;orie des nombres&nbsp;: 
+la conjecture ABC.
+Soit <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img48.gif" ALT="$\mathcal E$"> l'ensemble des triplets (<I>A</I>,<I>B</I>,<I>C</I>) d'entiers v&#233;rifiant 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="372" HEIGHT="43" SRC="img49.gif" ALT="\begin{displaymath}
+\frac{ \ln {\textrm{max}}(\vert A\vert,\vert B\vert,\vert C\vert)}{\ln R} \geq \eta\end{displaymath}">
+</P>
+avec <I>A</I>+<I>B</I>=<I>C</I> et
+ pgcd(<I>A</I>,<I>B</I>,<I>C</I>)=1 et o&#249; <I>R</I> est le plus grand entier sans carr&#233; divisant 
+<I>ABC</I>. La conjecture affirme que <IMG WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0" SRC="img48.gif" ALT="$\mathcal E$"> est fini.
+La conjecture ABC g&#233;n&#233;ralis&#233;e affirme la m&#234;me chose 
+avec des <I>n</I>-uplets.
+<BR>
+Pour les connexions entre la conjecture ABC et diff&#233;rents grands probl&#232;mes 
+de la th&#233;orie des nombres, on pourra consulter
+[Granville] et la th&#232;se d'A. Nitaj&nbsp;: <I>Cons&#233;quences et aspects de 
+conjectures ABC et de Spiro</I>, universit&#233; de Caen, 1994. <BR>
+Par exemple, le lien avec le grand th&#233;or&#232;me de Fermat se fait en posant&nbsp;:
+<I>a</I>
+<SUP>
+<I>p</I>
+</SUP>=<I>A</I>, <I>b</I>
+<SUP>
+<I>p</I>
+</SUP>=<I>B</I>, <I>c</I>
+<SUP>
+<I>p</I>
+</SUP>=<I>C</I> et alors, puisque <I>A</I>+<I>B</I>=<I>C</I>, on est ramen&#233; &#224; l'&#233;tude
+ de la courbe elliptique <I>y<SUP>2</SUP>
+</I>=<I>x</I>(<I>x</I>-<I>A</I>)(<I>x</I>+<I>B</I>) de discriminant
+(4<I>ABC</I>)<SUP>2</SUP> (voir &#167;). D'apr&#232;s une id&#233;e de G. Frey, K. Ribet 
+a montr&#233; en 1988 qu'une courbe elliptique associ&#233;e
+&#224; des solutions de <I>a</I>
+<SUP>
+<I>p</I>
+</SUP>+<I>b</I>
+<SUP>
+<I>p</I>
+</SUP>=<I>c</I>
+<SUP>
+<I>p</I>
+</SUP> ne peut &#234;tre modulaire. Or la conjecture 
+de Taniyama-Weil (1955, 1967) implique que les courbes
+de Frey sont modulaires. Wiles (en juin 1993, puis comblant le fameux 'trou' 
+avec R. Taylor en septembre 1994) a d&#233;montr&#233; un cas suffisamment large
+de cette conjecture pour impliquer la contradiction.
+Notons par ailleurs que, en 1977, G. Terjanian a utilis&#233; la loi de
+ r&#233;ciprocit&#233; quadratique pour d&#233;montrer un cas g&#233;n&#233;ral du
+ `premier cas du th&#233;or&#232;me de Fermat' (i.e. l'&#233;quation mod <I>n</I>).
+<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>&#201;pisode second&nbsp;: un peu de symbolique</TITLE>
+<META NAME="description" CONTENT="&#201;pisode second&nbsp;: un peu de symbolique">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="recipro.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00400000000000000000">&#201;pisode second&nbsp;: un peu de symbolique</A>
+</H1>
+<P>
+<I>`` Un symbole est une concr&#233;tisation d'une r&#233;alit&#233; abstraite.
+Le sens &#233;tymologique du mot grec 
+<IMG WIDTH="81" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img50.gif" ALT="$\sigma \acute{\upsilon} \mu \beta o\lambda o \nu$">, d&#233;riv&#233; du verbe 
+<IMG WIDTH="87" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img51.gif" ALT="$\sigma \upsilon \mu \beta \acute{\alpha} \lambda \lambda \omega$">, 
+``je joins'', d&#233;finit un objet partag&#233; en deux, la possession de chacune 
+des deux parties par deux individus diff&#233;rents leur permettant de se 
+rejoindre et de se reconna&#238;tre. [...] Le champ du symbole peut-il 
+&#234;tre limit&#233;&nbsp;? Il semble que non. ''</I>
+Encyclop&#230;dia Universalis, article ``symbole''.
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html194" HREF="node8.html#SECTION00410000000000000000">Le symbole de Legendre</A>
+<LI><A NAME="tex2html195" HREF="node9.html#SECTION00420000000000000000">Le symbole de Jacobi</A>
+<LI><A NAME="tex2html196" HREF="node10.html#SECTION00430000000000000000">Application</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Le symbole de Legendre</TITLE>
+<META NAME="description" CONTENT="Le symbole de Legendre">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00410000000000000000">Le symbole de Legendre</A>
+</H1>
+On d&#233;finit <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img52.gif" ALT="$\left(\frac{a}{p}\right)$"> pour <I>p</I> premier comme &#233;gal &#224; 1 si <I>a</I> est un 
+carr&#233; dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$">, &#224; -1 sinon.
+Ce symbole est multiplicatif&nbsp;: 
+<P ALIGN="CENTER">
+<IMG WIDTH="153" HEIGHT="47" SRC="img54.gif" ALT="\begin{displaymath}
+\left(\frac{ab}{p}\right)=\left(\frac{a}{p}\right) \left(\frac{b}{p}\right).\end{displaymath}">
+</P>
+Ceci est d&#251; au fait que le produit de deux carr&#233;s est un carr&#233;,
+(ceci est toujours vrai dans un groupe cyclique <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img1.gif" ALT="${\mathbb Z}/n{\mathbb Z}$">) et que, si nous 
+sommes dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$">, <I>p</I> <B>premier</B>,
+alors le produit d'un carr&#233; par un non carr&#233; est un non carr&#233; et le 
+produit de deux non carr&#233;s est un carr&#233;.
+<P>
+On peut aussi &#233;noncer le fait suivant&nbsp;:
+<BR>
+ <I>g</I> est un g&#233;n&#233;rateur du groupe 
+cyclique <IMG WIDTH="63" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img55.gif" ALT="${\mathbb G}\Longrightarrow g$"> est un non carr&#233;.
+La r&#233;ciproque est vraie si <IMG WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0" SRC="img56.gif" ALT="$ \char93 {\mathbb G}-1=2^k$">.<P>
+La loi de r&#233;ciprocit&#233; pour le symbole de Legendre affirme 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="207" HEIGHT="47" SRC="img57.gif" ALT="\begin{displaymath}
+\left(\frac{p}{q}\right)=(-1)^\frac{(p-1)(q-1)}{4} \left(\frac{q}{p}\right).\end{displaymath}">
+</P>
+Ainsi, de m&#234;me que dans l'algorithme d'Euclide pour le calcul du PGCD ou que
+ dans le test de primalit&#233; par descente-remont&#233;e (voir &#167;), 
+on est ramen&#233;, de proche en proche, &#224; traiter des nombres de plus en plus 
+petits.
+<P>
+L'int&#233;r&#234;t d'une strat&#233;gie de ``rapetissement progressif du
+ probl&#232;me'' transpara&#238;t dans l'algorithme de calcul du pgcd de 
+(<I>a</I>,<I>b</I>)=&nbsp;:(<I>r</I>,<I>s</I>), dont voici l'algorithme&nbsp;:
+<P>
+<P>
+<P>
+<BR>
+<P>
+<TT>DEBUT
+<BR>
+tant que <IMG WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img58.gif" ALT="$s \not = 0$"> faire <IMG WIDTH="166" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img59.gif" ALT="$(r,s)~:=(s, r \ {\bmod} \ s)$">&nbsp;;
+<BR> 
+<SMALL>(* on crunche et squeeze avec all&#233;gresse *)</SMALL>
+<BR>
+retourner <I>r</I>&nbsp;;
+<BR>
+FIN</TT>
+<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Le symbole de Jacobi</TITLE>
+<META NAME="description" CONTENT="Le symbole de Jacobi">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00420000000000000000">Le symbole de Jacobi</A>
+</H1>
+On trouvera dans [Naudin] une approche du symbole de Jacobi par Zolotarev 
+bas&#233;e sur la signature d'une permutation.
+Nous utiliserons la d&#233;finition classique.
+<BR>
+On prolonge le symbole de Legendre par <IMG WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img60.gif" ALT="$\left(\frac{a}{b}\right)=0$"> si <I>a</I> est un multiple 
+de <I>b</I>.
+Pour <IMG WIDTH="45" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img61.gif" ALT="$a \in {\mathbb Z}$"> et <I>b</I> entier impair, on d&#233;finit le symbole de Jacobi par
+<IMG WIDTH="114" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img62.gif" ALT="$\left(\frac{a}{b}\right)=\prod_i \left(\frac{a}{p_i}\right)$"> avec <IMG WIDTH="72" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img63.gif" ALT="$b=\prod_i p_i$"> d&#233;composition de <I>b</I> en 
+facteurs premiers.On peut d'ores et d&#233;j&#224; remarquer que <IMG WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img60.gif" ALT="$\left(\frac{a}{b}\right)=0$"> si 
+et seulement si <I>a</I> et <I>b</I> ne sont pas &#233;trangers.
+<BR>
+Ainsi, si <I>a</I> est un carr&#233; modulo <I>b</I> (<I>b</I> &#233;tant &#233;tranger avec <I>a</I>)
+alors <IMG WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img64.gif" ALT="$\left(\frac{a}{b}\right)=1$">. On remarquera aussi que <IMG WIDTH="122" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img65.gif" ALT="$\left(\frac{a}{b}\right)=-1 \Longrightarrow a$">est non carr&#233; modulo <I>b</I>
+mais qu'on peut avoir <IMG WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img64.gif" ALT="$\left(\frac{a}{b}\right)=1$"> sans que <I>a</I> soit un carr&#233; modulo <I>b</I>. 
+Exemple&nbsp;: <IMG WIDTH="202" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img66.gif" ALT="$\forall a \in {\mathbb Z}\ \left(\frac{a}{9}\right)=\left(\frac{a}{3}\right) \left(\frac{a}{3}\right)=1$">, or <I>a</I>=5 n'est 
+pas un carr&#233; dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img67.gif" ALT="${\mathbb Z}/9{\mathbb Z}$">. Il est facile de voir que le symbole de Jacobi est un symbole totalement 
+bimultiplicatif&nbsp;: il est totalement multiplicatif en sa premi&#232;re variable car 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="161" HEIGHT="37" SRC="img68.gif" ALT="\begin{displaymath}
+\left(\frac{a_1 a_2}{b}\right)=\left(\frac{a_1}{b}\right) \left(\frac{a_2}{b}\right)\end{displaymath}">
+</P>
+et il est totalement multiplicatif en sa deuxi&#232;me variable car 
+
+<P ALIGN="CENTER">
+<IMG WIDTH="179" HEIGHT="47" SRC="img69.gif" ALT="\begin{displaymath}
+\left(\frac{a}{b_1 b_2}\right)=\left(\frac{a}{b_1}\right) \left(\frac{a}{b_2}\right).\end{displaymath}">
+</P>
+Par cons&#233;quent, la loi de r&#233;ciprocit&#233;, une fois d&#233;montr&#233;e pour
+ le symbole de Legendre (ce que nous ferons dans le chapitre
+suivant), vaut aussi pour le symbole de Jacobi&nbsp;;
+on obtient la <B>loi de r&#233;ciprocit&#233; g&#233;n&#233;ralis&#233;e</B>&nbsp;:
+
+<P ALIGN="CENTER">
+<IMG WIDTH="201" HEIGHT="47" SRC="img70.gif" ALT="\begin{displaymath}
+\left(\frac{a}{b}\right)=\left(\frac{b}{a}\right) (-1)^\frac{(a-1)(b-1)}{ 4}.\end{displaymath}">
+</P>
+<P>
+La multiplicativit&#233; du symbole de Jacobi en fait un <I>caract&#232;re</I>
+ r&#233;el, on a vu l'importance de cette notion au &#167;<HR>
+
+</BODY>
+</HTML>
+<TITLE>Application</TITLE>
+<META NAME="description" CONTENT="Application">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00430000000000000000">Application</A>
+</H1>
+713 est-il un carr&#233; modulo le premier 1009&nbsp;? En utilisant la loi de
+ r&#233;ciprocit&#233; quadratique et le calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$"> fait au
+&#167;, on a ais&#233;ment&nbsp;:
+
+<P ALIGN="CENTER">
+<IMG WIDTH="586" HEIGHT="47" SRC="img72.gif" ALT="\begin{displaymath}
+\left(\frac{713}{1009}\right) =\left(\frac{1009}{713}\right)...
+ ...}\right)=\left(\frac{8}{713}\right) \left(\frac{37}{713}\right)\end{displaymath}">
+</P>
+
+<P ALIGN="CENTER">
+<IMG WIDTH="530" HEIGHT="59" SRC="img73.gif" ALT="\begin{displaymath}
+=\left(\frac{2}{713}\right) \left(\frac{37}{713}\right)
+ \un...
+ ...t)}=\left(\frac{713-740}{37}\right)=\left(\frac{-27}{37}\right)\end{displaymath}">
+</P>
+
+<P ALIGN="CENTER">
+<IMG WIDTH="595" HEIGHT="59" SRC="img74.gif" ALT="\begin{displaymath}
+=\left(\frac{10}{37}\right)=\left(\frac{2}{37}\right) \left(...
+ ... \left(\frac{2}{5}\right)(-1)^\frac{(4)(36)}{4}=(-1)(-1)(+1)=1.\end{displaymath}">
+</P>
+Ainsi <IMG WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0" SRC="img75.gif" ALT="$\left(\frac{713}{1009}\right)=1$"> donc 713 est bien un carr&#233; modulo 1009.
+<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;</TITLE>
+<META NAME="description" CONTENT="Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node29.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="recipro.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00500000000000000000">Quelques d&#233;monstrations de la loi de r&#233;ciprocit&#233;</A>
+</H1>
+<P>
+<I>`` Les probl&#232;mes pos&#233;s par les nombres entiers n&#233;cessitent de tels 
+travaux et de telles r&#233;flexions que,
+finalement, c'est de l&#224; que sortent &#224; peu pr&#232;s la moiti&#233; des th&#233;ories 
+math&#233;matiques [...] Il y a beaucoup de math&#233;maticiens &#224;
+la suite de Bourbaki qui pensent que c'est la th&#233;orie des ensembles qu'il 
+faut mettre au d&#233;part&nbsp;; eh bien&nbsp;! je ne le pense
+pas, je pense que c'est la th&#233;orie des nombres, des nombres entiers. ''</I>
+Charles Pisot.
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html239" HREF="node12.html#SECTION00510000000000000000">Savez-vous compter les r&#233;sidus...</A>
+<LI><A NAME="tex2html240" HREF="node13.html#SECTION00520000000000000000">Crit&#232;re d'Euler</A>
+<LI><A NAME="tex2html241" HREF="node14.html#SECTION00530000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">
+</A>
+<UL>
+<LI><A NAME="tex2html242" HREF="node15.html#SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</UL>
+<LI><A NAME="tex2html243" HREF="node16.html#SECTION00540000000000000000">Lemme de Gauss</A>
+<LI><A NAME="tex2html244" HREF="node17.html#SECTION00550000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$">
+</A>
+<LI><A NAME="tex2html245" HREF="node18.html#SECTION00560000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">
+</A>
+<LI><A NAME="tex2html246" HREF="node19.html#SECTION00570000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img149.gif" ALT="$\left(\frac{5}{p}\right)$">
+</A>
+<LI><A NAME="tex2html247" HREF="node20.html#SECTION00580000000000000000">Quod erat demanstrandum</A>
+<UL>
+<LI><A NAME="tex2html248" HREF="node21.html#SECTION00581000000000000000">Primo</A>
+<LI><A NAME="tex2html249" HREF="node22.html#SECTION00582000000000000000">Secundo</A>
+<LI><A NAME="tex2html250" HREF="node23.html#SECTION00583000000000000000">Tertio</A>
+<LI><A NAME="tex2html251" HREF="node24.html#SECTION00584000000000000000">In fine</A>
+</UL>
+<LI><A NAME="tex2html252" HREF="node25.html#SECTION00590000000000000000">Un petit th&#233;or&#232;me de progression arithm&#233;tique</A>
+<LI><A NAME="tex2html253" HREF="node26.html#SECTION005100000000000000000">Quod erat demanstrandum (bis repetita placent)</A>
+<UL>
+<LI><A NAME="tex2html254" HREF="node27.html#SECTION005101000000000000000">Lemme sur la somme de Gauss</A>
+<LI><A NAME="tex2html255" HREF="node28.html#SECTION005102000000000000000">Retour &#224; notre seconde preuve de la loi de r&#233;ciprocit&#233;</A>
+</UL>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Savez-vous compter les r&#233;sidus...</TITLE>
+<META NAME="description" CONTENT="Savez-vous compter les r&#233;sidus...">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00510000000000000000">Savez-vous compter les r&#233;sidus...</A>
+</H1>
+Ce paragraphe et les suivants sont directement recopi&#233;s sur [Francinou], ces
+ derniers &#233;tant eux-m&#234;mes parfois directement
+repiqu&#233;s sur [Hardy]...Mais puisque ni une d&#233;monstration ni une mise en 
+page ne peut &#234;tre copyright&#233;e, n'ayons pas d'&#233;tat d'&#226;me
+et saluons ainsi ces deux ouvrages de r&#233;f&#233;rences, quoiqu'aux ambitions 
+diff&#233;rentes.
+<P>
+Soit <IMG WIDTH="43" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img76.gif" ALT="$p\geq 3$"> un nombre premier (notation conserv&#233;e dans TOUT ce chapitre).
+<IMG WIDTH="171" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img77.gif" ALT="$f~: x \in ({\mathbb Z}/p{\mathbb Z})^* \mapsto x^2$"> est un endomorphisme du groupe multiplicatif
+ du corps <IMG WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img78.gif" ALT="${\mathbb F}_p={\mathbb Z}/p{\mathbb Z}$">.Son noyau est {-1, +1}, les racines de <I>X<SUP>2</SUP>
+</I>-1. Le noyau &#233;tant de cardinal 2,
+ l'image de <I>f</I> est de cardinal
+Card(<IMG WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img79.gif" ALT="${\mathbb F}_p^*$">)/Card(<IMG WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img80.gif" ALT="$\textrm{Ker}f$">)<IMG WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img81.gif" ALT="$=\frac{p-1}{2}$">. Il y a donc <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img82.gif" ALT="$\frac{p-1}{2}$"> carr&#233;s dans <IMG WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img83.gif" ALT="$({\mathbb Z}/p{\mathbb Z})^*$">. 0 &#233;tant
+aussi un carr&#233;, <IMG WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img84.gif" ALT="${\mathbb F}_p$"> contient <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img85.gif" ALT="$\frac{p+1}{2}$"> carr&#233;s.
+<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Crit&#232;re d'Euler</TITLE>
+<META NAME="description" CONTENT="Crit&#232;re d'Euler">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00520000000000000000">Crit&#232;re d'Euler</A>
+</H1>
+<IMG WIDTH="252" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img86.gif" ALT="$\forall x \not = 0, (x^{(p-1)/2})^2=x^{p-1} \equiv 1 [n]$">donc <I>x</I>
+<SUP>(<I>p</I>-1)/2</SUP> est dans <IMG WIDTH="86" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img87.gif" ALT="$\textrm{Ker}f={\pm 1}$">.Im(<I>f</I>) est un sous-groupe de <I>F</I>
+<SUB>
+<I>p</I>
+</SUB>
+<SUP>*</SUP> de cardinal <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img82.gif" ALT="$\frac{p-1}{2}$">.Si <I>x</I> est un carr&#233; non nul, on a <IMG WIDTH="29" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img88.gif" ALT="$x \in$"> Im (<I>f</I>) et donc
+<IMG WIDTH="272" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img89.gif" ALT="$x^{(p-1)/2}=(y^2)^{(p-1)/2}=y^{p-1}\equiv 1 [p]$">.D'autre part, remarquons que l'ensemble des racines du polyn&#244;mes
+ <I>X</I>
+<SUP>(<I>p</I>-1)/2</SUP>-1 contient les <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img82.gif" ALT="$\frac{p-1}{2}$"> carr&#233;s non nuls.
+Or ce polyn&#244;me a au plus <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img82.gif" ALT="$\frac{p-1}{2}$"> racines. Donc les racines de
+ <I>X</I>
+<SUP>(<I>p</I>-1)/2</SUP>-1 et les carr&#233;s non nuls
+co&#239;ncident.
+<P>
+On en d&#233;duit le crit&#232;re d'Euler&nbsp;: <I>x</I> est carr&#233; non nul si et seulement 
+si 
+<P ALIGN="CENTER">
+<I>x</I>
+<SUP>(<I>p</I>-1)/2</SUP>=1.
+</P>
+<P>
+En r&#233;sum&#233;, avec le symbole de Legendre&nbsp;: 
+<IMG WIDTH="141" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img90.gif" ALT="$\left(\frac{x}{p}\right) \equiv x^{(p-1)/2}\ [p]$">.<P>
+Il est int&#233;ressant de citer le <B>crit&#232;re d'Euler g&#233;n&#233;ralis&#233;</B> 
+aux r&#233;sidus <I>n</I>-i&#232;mes&nbsp;:
+en posant <I>q</I>=<I>pgcd</I>(<I>n</I>, <I>p</I>-1), <IMG WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img5.gif" ALT="$x^n \equiv a \ [p]$"> est r&#233;soluble si et seulement
+ si <IMG WIDTH="94" HEIGHT="45" ALIGN="MIDDLE" BORDER="0" SRC="img91.gif" ALT="$a^\frac{p-1}{q} \equiv 1 \ [p]$"> et il y a alors <I>q</I> racines modulo <I>p</I>.
+On a donc, au total, 1+(<I>p</I>-1)/<I>q</I> r&#233;sidus <I>n</I>-i&#232;mes et (<I>q</I>-1)(<I>p</I>-1)/<I>q</I> non
+ r&#233;sidus dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$">.<P>
+Vinogradov a par ailleurs montr&#233; que le nombre <I>R</I> de r&#233;sidus quadratiques 
+compris entre 1 et <IMG WIDTH="75" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img92.gif" ALT="$n\leq p-1$"> est 
+<IMG WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0" SRC="img93.gif" ALT="$R=\frac{1}{2} n+ \theta \sqrt{p} \ln p$"> o&#249; <IMG WIDTH="53" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img94.gif" ALT="$\vert\theta \vert \leq 1$"> 
+et a formul&#233; l'hypoth&#232;se que la distance entre deux non r&#233;sidus est 
+<IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img95.gif" ALT="$O(p^\varepsilon)$">, Linnik a d'ailleurs montr&#233; que 
+c'&#233;tait ``presque toujours'' le cas.
+En outre, le plus petit non r&#233;sidu quadratique est <IMG WIDTH="126" HEIGHT="37" ALIGN="MIDDLE" BORDER="0" SRC="img96.gif" ALT="$\leq p^{1/(2 \sqrt e)}
+(\ln p)^2$">.<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Calcul de </TITLE>
+<META NAME="description" CONTENT="Calcul de ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00530000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">
+</A>
+</H1>
+En appliquant le crit&#232;re d'Euler &#224; -1, on obtient&nbsp;:
+ -1 est un carr&#233; dans <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$"> si et seulement si (-1)<SUP>(<I>p</I>-1)/2</SUP>=1, i.e.
+si et seulement si (<I>p</I>-1)/2 est pair.
+<P>
+En r&#233;sum&#233;&nbsp;:
+-1 est carr&#233; modulo <IMG WIDTH="134" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img98.gif" ALT="$p \Longleftrightarrow p=4n+1$">.<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html289" HREF="node15.html#SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Application sur les diviseurs de a2+b2</TITLE>
+<META NAME="description" CONTENT="Application sur les diviseurs de a2+b2">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+<BODY >
+<H2>
+<A NAME="SECTION00531000000000000000">Application sur les diviseurs de <I>a<SUP>2</SUP>
+</I>+<I>b<SUP>2</SUP>
+</I>
+</A>
+</H2>
+<IMG WIDTH="149" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img99.gif" ALT="$a^2+b^2\equiv 0\ [p] \Longleftrightarrow$"> (avec <I>r</I>=<I>a<SUP>2</SUP>
+</I> mod <I>p</I> et 
+<I>r</I>'=<I>b<SUP>2</SUP>
+</I> mod <I>p</I>) <IMG WIDTH="358" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img100.gif" ALT="$r+r' \equiv 0\ [p] \Longleftrightarrow r'
+\equiv -r\ [p] \Longleftrightarrow r'q \equiv -1\ [p] $"> 
+o&#249; <I>q</I> est l'inverse de <I>r</I>, l'ensemble des carr&#233;s de <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$">&#233;tant un groupe multiplicatif, <I>q</I> et donc <I>qr</I>' sont aussi des carr&#233;s.
+D'o&#249; -1= <I>r</I>'<I>q</I> est un carr&#233; modulo <I>p</I> or on vient de voir que ceci 
+&#233;quivaut &#224; <I>p</I>=4<I>n</I>+1.
+<P>
+Les lecteurs attentifs ne devraient pas &#234;tre parvenus &#224; cette &#233;tape 
+sans avoir au moins fronc&#233; les sourcils&nbsp;: en effet les
+lignes pr&#233;c&#233;dentes mal recopi&#233;es sur [Itard] souffrent d'une 
+imperfection (euph&#233;misme). Justifierez-vous cette litote
+en trouvant quelle est l'&#233;quivalence apor&#233;tique&nbsp;?
+<P>
+Solution&nbsp;: Il suffit de remplacer <IMG WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img53.gif" ALT="${\mathbb Z}/p{\mathbb Z}$"> par <IMG WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img83.gif" ALT="$({\mathbb Z}/p{\mathbb Z})^*$"> qui lui sera bien 
+un groupe multiplicatif. En effet, si <IMG WIDTH="67" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img101.gif" ALT="$r \equiv 0 \ [p]$">, 
+il ne sera pas inversible. On peut pallier cet inconv&#233;nient, si <I>r</I> 
+ou <I>r</I>' n'est pas nul (ce qui revient &#224; ce que tous deux soient non nuls), 
+ainsi l'achoppement fatal saute si <I>p</I> ne divise ni <I>a</I> ni <I>b</I>, a fortiori 
+si <I>a</I> et <I>b</I> sont &#233;trangers, hypoth&#232;se apodictique et m&#234;me salvatrice.
+<P>
+En r&#233;sum&#233;&nbsp;: <B>les seuls diviseurs d'une somme de deux carr&#233;s 
+&#233;trangers sont 2 et des nombres premiers de la forme 4<I>n</I>+1.</B>
+<BR>
+Un r&#233;sultat de Fermat affirme m&#234;me qu'un nombre premier de la forme 
+4<I>n</I>+1 est somme de deux carr&#233;s&nbsp;;
+en 1977, Larson en a donn&#233; une d&#233;monstration qui utilise le placement de
+<I>n</I> reines sur un &#233;chiquier <IMG WIDTH="45" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img102.gif" ALT="$n \times n$"> sans qu'aucune ne soit en prise.
+<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Lemme de Gauss</TITLE>
+<META NAME="description" CONTENT="Lemme de Gauss">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00540000000000000000">Lemme de Gauss</A>
+</H1>
+Soit <I>p</I> un premier impair. Pour <IMG WIDTH="47" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img103.gif" ALT="$n \in {\mathbb N}$">, on appelle r&#233;sidu minimal de 
+<I>n</I> (modulo <I>p</I>) l'unique entier <IMG WIDTH="125" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img104.gif" ALT="$n' \in ]-p/2,p/2[$">tel que <IMG WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img105.gif" ALT="$n \equiv n'\ [p]$">. Soit <IMG WIDTH="52" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img106.gif" ALT="$m \in {\mathbb N}$">, non multiple de <I>p</I>.
+On note <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img107.gif" ALT="$\mu$"> le nombre d'entiers de <IMG WIDTH="149" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img108.gif" ALT="$\{m,2m,\dots,\frac{p-1}{2}m\}$"> dont 
+le r&#233;sidu minimal est strictement n&#233;gatif.
+<P>
+Montrons que <IMG WIDTH="107" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img109.gif" ALT="$\left(\frac{m}{p}\right)=(-1)^\mu$">.<P>
+Posons <IMG WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img110.gif" ALT="$\lambda = \frac{p-1}{2} - \mu$">. Consid&#233;rons l'ensemble des 
+r&#233;sidus minimaux de
+
+<P ALIGN="CENTER">
+<IMG WIDTH="165" HEIGHT="40" SRC="img111.gif" ALT="\begin{displaymath}
+\{m,2m,\dots,\frac{p-1}{2}m\}.\end{displaymath}">
+</P>
+Soient <IMG WIDTH="73" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img112.gif" ALT="$r_1,\dots, r_\lambda$"> les r&#233;sidus minimaux positifs et <IMG WIDTH="101" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img113.gif" ALT="$-r_1',\dots,
+-r_\mu'$"> les r&#233;sidus minimaux strictement n&#233;gatifs.
+Comme les &#233;l&#233;ments de <IMG WIDTH="149" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img108.gif" ALT="$\{m,2m,\dots,\frac{p-1}{2}m\}$"> ne sont pas congrus 
+deux &#224; deux, les <I>r</I>
+<SUB>
+<I>i</I>
+</SUB> sont distincts deux &#224; deux.
+Il en va de m&#234;me des <I>r</I>
+<SUB>
+<I>i</I>
+</SUB>'. Montrons par l'absurde que pour tout 
+<IMG WIDTH="97" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img114.gif" ALT="$(i,j), r_i \not = r_j'$">. Soient donc <I>a</I> et <I>b</I> dans
+<IMG WIDTH="154" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img115.gif" ALT="$\{1, 2, \dots, (p-1)/2\}$"> tels que <IMG WIDTH="185" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img116.gif" ALT="$am \equiv r_i = r_j' \equiv -bm\ [p]$">. 
+Alors <IMG WIDTH="217" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img117.gif" ALT="$0\equiv am+bm \equiv (a+b)m\ [p]$">. <I>p</I> ne divisant pas <I>m</I>, <I>p</I> 
+divise <I>a</I>+<I>b</I> ce qui est impossible car 0&lt;<I>a</I>+<I>b</I>&lt;<I>p</I>.
+Ainsi, <IMG WIDTH="348" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img118.gif" ALT="$\{r_1, r_2, \dots, r_\lambda, r_1', r_2', \dots, r_\mu'\}= \{1, 2, \dots, \frac{p-1}{2}\}$">. <BR>
+On peut donc &#233;crire modulo <I>p</I>&nbsp;:
+<BR>
+<IMG WIDTH="471" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img119.gif" ALT="$m.2m.3m\dots\frac{p-1}{2}.m \equiv (-1)^\mu r_1 r_2 \dots r_\lambda. r_1' r_2' \dots r_\mu' \equiv (-1)^\mu \frac{p-1}{2} !$">
+<P>
+Comme <I>p</I> ne divise pas <IMG WIDTH="35" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img120.gif" ALT="$\frac{p-1}{2} !$">, il vient&nbsp;: 
+<IMG WIDTH="136" HEIGHT="42" ALIGN="MIDDLE" BORDER="0" SRC="img121.gif" ALT="$m^{\frac{p-1}{2}} \equiv (-1)^\mu\ [p]$"> donc, d'apr&#232;s le crit&#232;re d'Euler&nbsp;:
+
+<P ALIGN="CENTER">
+<IMG WIDTH="113" HEIGHT="47" SRC="img122.gif" ALT="\begin{displaymath}
+\left(\frac{m}{p}\right)= (-1)^\mu.\end{displaymath}">
+</P>
+<P>
+Le lemme de Gauss peut &#234;tre utilis&#233; pour d&#233;terminer les nombres premiers 
+pour lesquels un entier pr&#233;alablement choisi est
+un carr&#233;. C'est ce que nous allons faire avec les entiers 2 et -3 pour 
+obtenir quelques formules, souvent appel&#233;es ``compl&#233;mentaires''.
+<P>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Calcul de </TITLE>
+<META NAME="description" CONTENT="Calcul de ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00550000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img71.gif" ALT="$\left(\frac{2}{p}\right)$">
+</A>
+</H1>
+Nous allons montrer que
+ <IMG WIDTH="231" HEIGHT="50" ALIGN="MIDDLE" BORDER="0" SRC="img123.gif" ALT="$\left(\frac{2}{p}\right)=(-1)^{E(\frac{p+1}{4})}=(-1)^{\frac{p^2-1}{8}}$"> 
+o&#249; <I>E</I>(<I>x</I>) d&#233;signe la partie enti&#232;re de <I>x</I>,
+i.e. le plus petit entier <IMG WIDTH="31" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img124.gif" ALT="$\leq x$">.<P>
+Il s'agit de calculer <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img107.gif" ALT="$\mu$"> pour <I>m</I>=2, i.e. le nombres de r&#233;sidus minimaux 
+de <IMG WIDTH="123" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img125.gif" ALT="$\{2, 4, \dots, p-1\}$"> strictement n&#233;gatifs.
+<BR>
+On est donc ramen&#233; &#224; compter les entiers <I>k</I> tels que&nbsp;: <I>p</I>/2 &lt; 2<I>k</I>&lt;<I>p</I>.
+<BR>
+On v&#233;rifie ais&#233;ment que si <IMG WIDTH="136" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img126.gif" ALT="$p\equiv 1\ [4], \lambda = \frac{p-1}{4}$"> et 
+<IMG WIDTH="164" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img127.gif" ALT="$ \mu= \frac{p-1}{2}-\frac{p-1}{4}=\frac{p-1}{4}$">.
+<BR>
+Si <IMG WIDTH="215" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img128.gif" ALT="$p\equiv 3\ [4], \lambda= E(\frac{p-1}{4})=\frac{p-3}{4}$"> et 
+<IMG WIDTH="164" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img129.gif" ALT="$\mu = \frac{p-1}{2}-\frac{p-3}{4}=\frac{p+1}{4}$">.
+<BR>
+Ainsi, dans tous les cas&nbsp;: <IMG WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img130.gif" ALT="$\mu = E(\frac{p+1}{4})$">. Notons 
+<IMG WIDTH="156" HEIGHT="41" ALIGN="MIDDLE" BORDER="0" SRC="img131.gif" ALT="$r=2 \frac{p-1}{4}\frac{p+1}{4}=\frac{p^2-1}{8}$">. Ainsi <IMG WIDTH="45" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img132.gif" ALT="$r\in {\mathbb N}$"> et si 
+<IMG WIDTH="67" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img133.gif" ALT="$p \equiv 1\ [4]$"> (resp. <IMG WIDTH="67" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img134.gif" ALT="$p \equiv 3\ [4]$">), <I>r</I> a
+la m&#234;me parit&#233; que <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img135.gif" ALT="$\frac{p-1}{4}$"> (resp. <IMG WIDTH="31" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img136.gif" ALT="$\frac{p+1}{4}$">). 
+Donc, dans tous les cas, <I>r</I> a m&#234;me parit&#233; que <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img107.gif" ALT="$\mu$"> et&nbsp;: 
+<IMG WIDTH="192" HEIGHT="50" ALIGN="MIDDLE" BORDER="0" SRC="img137.gif" ALT="$\left(\frac{2}{p}\right) =(-1)^r=(-1)^{\frac{p^2-1}{8}}$">.<P>
+En r&#233;sum&#233;&nbsp;:
+2 est un carr&#233; modulo <IMG WIDTH="134" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img138.gif" ALT="$p \Longleftrightarrow p=8n \pm 1$">.<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Calcul de </TITLE>
+<META NAME="description" CONTENT="Calcul de ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00560000000000000000">Calcul de <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">
+</A>
+</H1>
+Il s'agit de calculer <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img107.gif" ALT="$\mu$"> pour <I>m</I>=-3,
+i.e. le nombres de r&#233;sidus minimaux de <IMG WIDTH="161" HEIGHT="36" ALIGN="MIDDLE" BORDER="0" SRC="img140.gif" ALT="$\{-3, -6, \dots, -3 \frac{p-1}{2}\}$">strictement n&#233;gatifs.
+On est donc ramen&#233; &#224; compter les entiers <I>k</I> tels que&nbsp;: <I>p</I>/2 &lt;-3<I>k</I>&lt;<I>p</I>.
+<UL>
+<LI> Si <IMG WIDTH="93" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img141.gif" ALT="$1 \leq k <p/6$"> alors <IMG WIDTH="194" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img142.gif" ALT="$p/2<p-3k \leq p-3 < p$">, les r&#233;sidus minimaux sont
+ strictement n&#233;gatifs.
+<LI> Si <I>p</I>/6 &lt; <I>k</I> &lt;<I>p</I>/3 alors 0&lt;<I>p</I>-3<I>k</I>&lt;<I>p</I>/2, les r&#233;sidus minimaux ne sont pas 
+strictement n&#233;gatifs, donc on ne retient pas ces valeurs de <I>k</I>.
+<LI> Si <I>p</I>/3 &lt; <I>k</I> &lt; <I>p</I>/2 alors <I>p</I>/2&lt;2<I>p</I>-3<I>k</I> &lt; <I>p</I>, les r&#233;sidus minimaux sont 
+strictement n&#233;gatifs.
+</UL>
+Ainsi, les valeurs de <I>k</I> pour lesquelles les r&#233;sidus minimaux sont 
+strictement n&#233;gatifs sont&nbsp;: <IMG WIDTH="120" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img143.gif" ALT="$1,2,\dots,E(p/6)$"> et 
+<IMG WIDTH="270" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img144.gif" ALT="$E(p/3)+1, E(p/3)+2, \dots, E(p/2)$"> donc <IMG WIDTH="240" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img145.gif" ALT="$\mu = E(p/6)+E(p/2)-E(p/3)$">.D'o&#249; si <I>p</I>=6<I>n</I>+1 alors <IMG WIDTH="128" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img146.gif" ALT="$\mu = n +3n -2n$"> est pair et si <I>p</I>=6<I>n</I>+5 
+alors <IMG WIDTH="215" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img147.gif" ALT="$\mu = n +(3n+2) -(2n+1)$"> est impair.
+<P>
+En r&#233;sum&#233;&nbsp;:
+-3 est un carr&#233; modulo <IMG WIDTH="166" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img148.gif" ALT="$p\geq 5 \Longleftrightarrow p=6n+1$">.<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Calcul de </TITLE>
+<META NAME="description" CONTENT="Calcul de ">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00570000000000000000">Calcul de <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img149.gif" ALT="$\left(\frac{5}{p}\right)$">
+</A>
+</H1>
+<I>p</I>, car premier &gt; 5, est de la forme 10<I>n</I>+<I>k</I> o&#249; <I>k</I> vaut 1,3,7 ou 9. 
+Nous appliquons alors la loi de r&#233;ciprocit&#233; quadratique&nbsp;:
+
+<P ALIGN="CENTER">
+<IMG WIDTH="362" HEIGHT="47" SRC="img150.gif" ALT="\begin{displaymath}
+\left(\frac{5}{p}\right)= \left(\frac{p}{5}\right) (-1)^{\fr...
+ ...{2}}= \left(\frac{10n+k}{5}\right)= \left(\frac{k}{5}\right) 
+.\end{displaymath}">
+</P>
+Or dans <IMG WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img151.gif" ALT="$({\mathbb Z}/5{\mathbb Z})^*$">, les seuls carr&#233;s sont 1 et 4, d'o&#249; <IMG WIDTH="62" HEIGHT="35" ALIGN="MIDDLE" BORDER="0" SRC="img152.gif" ALT="$\left(\frac{k}{5}\right)=1$"> 
+pour <I>k</I>=1,9 et <IMG WIDTH="75" HEIGHT="35" ALIGN="MIDDLE" BORDER="0" SRC="img153.gif" ALT="$\left(\frac{k}{5}\right)=-1$"> pour <I>k</I>=3,7.
+<P>
+En r&#233;sum&#233;&nbsp;:
+5 est un carr&#233; modulo <IMG WIDTH="143" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img154.gif" ALT="$p \Longleftrightarrow p=10n \pm 1$">.<P>
+On montre &#233;galement&nbsp;:
+7 est un carr&#233; modulo 
+<IMG WIDTH="200" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img155.gif" ALT="$p \Longleftrightarrow p \equiv \pm 1, \pm 3, \pm 9 \ [28] $">.<P>
+Avec ces quelques r&#233;sultats et la bimultiplicativit&#233; du symbole de Jacobi,
+ il vous est d&#233;sormais possible de calculer tr&#232;s rapidement <IMG WIDTH="29" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img156.gif" ALT="$\left(\frac{a}{b}\right)$">. 
+Par exemple, <IMG WIDTH="34" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img157.gif" ALT="$\left(\frac{3}{p}\right)$"> peut s'obtenir comme combinaison des r&#233;sultats 
+pr&#233;c&#233;dents sur <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img97.gif" ALT="$\left(\frac{-1}{p}\right)$">et <IMG WIDTH="44" HEIGHT="44" ALIGN="MIDDLE" BORDER="0" SRC="img139.gif" ALT="$\left(\frac{-3}{p}\right)$">, on obtient ainsi&nbsp;:
+<BR>
+3 est un carr&#233; modulo <IMG WIDTH="143" HEIGHT="26" ALIGN="MIDDLE" BORDER="0" SRC="img158.gif" ALT="$p \Longleftrightarrow p=12n \pm 1$">.<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Quod erat demanstrandum</TITLE>
+<META NAME="description" CONTENT="Quod erat demanstrandum">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+<BODY >
+<H1>
+<A NAME="SECTION00580000000000000000">Quod erat demanstrandum</A>
+</H1>
+Soient <I>p</I> et <I>q</I> deux nombres premiers impairs, <IMG WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img159.gif" ALT="$p \not = q$">. 
+On &#233;crit <I>p</I>=2<I>p</I>'+1 et <I>q</I>=2<I>q</I>'+1.
+Pour tout <IMG WIDTH="128" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img160.gif" ALT="$k \in \{1,2,\dots,q'\}$">, on note (-1)<SUP><I>e</I><SUB><I>k</I></SUB></SUP><I>r</I><SUB><I>k</I></SUB> 
+(o&#249; <IMG WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img161.gif" ALT="$1\leq r_k \leq q'$"> et <IMG WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img162.gif" ALT="$e_k \in \{0,1\}$">) le r&#233;sidu de <I>kp</I> 
+modulo <I>q</I> de plus petite valeur absolue.
+<P>
+<BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html354" HREF="node21.html#SECTION00581000000000000000">Primo</A>
+<LI><A NAME="tex2html355" HREF="node22.html#SECTION00582000000000000000">Secundo</A>
+<LI><A NAME="tex2html356" HREF="node23.html#SECTION00583000000000000000">Tertio</A>
+<LI><A NAME="tex2html357" HREF="node24.html#SECTION00584000000000000000">In fine</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Primo</TITLE>
+<META NAME="description" CONTENT="Primo">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+<BODY >
+<H2>
+<A NAME="SECTION00581000000000000000">Primo</A>
+</H2>
+Soit <IMG WIDTH="47" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img163.gif" ALT="$\alpha \in {\mathbb Z}$"> avec <IMG WIDTH="151" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img164.gif" ALT="$kp=q \alpha + (-1)^{e_k}r_k$">. Alors 
+<IMG WIDTH="177" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img165.gif" ALT="$\alpha= kp/q-(-1)^{e_k}r_k/q$">. <BR>
+On a 0&lt;|(-1)<SUP>
+<I>e</I>
+<SUB>
+<I>k</I>
+</SUB>
+</SUP>
+<I>r</I>
+<SUB>
+<I>k</I>
+</SUB>/<I>q</I>|&lt;1/2.
+Si <IMG WIDTH="172" HEIGHT="37" ALIGN="MIDDLE" BORDER="0" SRC="img166.gif" ALT="$e_k=0, \alpha \in ]\frac{kp}{q}-\frac{1}{2},\frac{kp}{q}[$"> et 
+n&#233;cessairement, <IMG WIDTH="224" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img167.gif" ALT="$ \alpha = E(kp/q)=E(kp/q)+e_k$">.Si <IMG WIDTH="172" HEIGHT="37" ALIGN="MIDDLE" BORDER="0" SRC="img168.gif" ALT="$e_k=1, \alpha \in ]\frac{kp}{q},\frac{kp}{q}+\frac{1}{2}[$"> et
+ n&#233;cessairement, <IMG WIDTH="254" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img169.gif" ALT="$ \alpha = E(kp/q)+1=E(kp/q)+e_k$">.<P>
+Ainsi <IMG WIDTH="237" HEIGHT="37" ALIGN="MIDDLE" BORDER="0" SRC="img170.gif" ALT="$kp=q(E(\frac{kp}{q})+e_k)+(-1)^{e_k} r_k$">.<P>
+<BR>
+<HR>
+
+</BODY>
+</HTML>
+<TITLE>Secundo</TITLE>
+<META NAME="description" CONTENT="Secundo">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+<BODY >
+<H2>
+<A NAME="SECTION00582000000000000000">Secundo</A>
+</H2>
+Montrons que <IMG WIDTH="190" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img171.gif" ALT="$\{r_1, \dots, r_q'\} = \{1,\dots,q'\}$">.<P>
+Il suffit de prouver que si <IMG WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img172.gif" ALT="$k \not = l$"> alors <IMG WIDTH="55" HEIGHT="28" ALIGN="MIDDLE" BORDER="0" SRC="img173.gif" ALT="$r_k \not = r_l$">. 
+Soit <IMG WIDTH="162" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" SRC="img174.gif" ALT="$(k,l) \in \{1,2,\dots,q'\}^2$">. <BR>
+Si <I>r</I>
+<SUB>
+<I>k</I>
+</SUB>=<I>r</I>
+<SUB>
+<I>l</I>
+</SUB>, on obtient modulo <I>q</I>&nbsp;:
+ <IMG WIDTH="282" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img175.gif" ALT="$0\equiv (-1)^{e_k} kp- (-1)^{e_l} lp \equiv p (\pm k \pm l)$">.
+<BR>
+D'o&#249; <IMG WIDTH="108" HEIGHT="30" ALIGN="MIDDLE" BORDER="0" SRC="img176.gif" ALT="$\pm k \pm l \equiv 0\ [q]$">, et comme <IMG WIDTH="236" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" SRC="img177.gif" ALT="$\vert\pm k \pm l \vert \leq 2 q' <q, \pm k \pm l =0$"> et n&#233;cessairement <I>k</I>=<I>l</I>. CQFD.
+<P>
+<BR>
+<HR>
+
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR>
+<I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

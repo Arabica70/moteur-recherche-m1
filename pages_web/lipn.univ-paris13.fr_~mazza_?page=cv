@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Damiano Mazza -- Curriculum vitae</title>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+</head>
+
+<body>
+<div class="navbar">
+<h2>Damiano Mazza</h2>
+<a class="home" href="http://lipn.univ-paris13.fr/~mazza/">Home page</a>
+<ul>
+	<li><a class="button" href="?page=res">Research</a></li>
+<li><a class="button" href="?page=teach">Teaching</a></li>
+<li class="button">CV</li>
+<li><a class="button" href="?page=pub">Publications</a></li>
+</ul>
+<p>
+	<a href="http://lipn.univ-paris13.fr/index.php?lang=uk"><img style="border:0" src="img/logo-lipn.gif" alt="LIPN"></a>
+	<a href="http://www.cnrs.fr"><img style="border:0;margin-left:10px;width:100px;height:100px" src="img/CNRSfr-grand-blackbg.jpg" alt="CNRS"></a>
+</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/html5-badge-h-css3.png" alt="Valid HTML 5!"></a>
+	<!--/p>
+<p-->
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a>
+</p>
+</div>
+<div>
+<h3>Brief CV</h3>
+<p>I presently am <i>charg&eacute; de recherche</i> (CRCN) at CNRS, and have held this position since October 2008.</p>
+<p>In November 2017, I obtained my <a href="papers/Habilitation.pdf"><i>habilitation &agrave; diriger des recherches</i></a>.</p>
+<p>In 2007-2008, I was one of the very first recipients of the <a href="https://www.sciencesmaths-paris.fr/en/">Fondation Sciences Math&eacute;matiques de Paris</a> post-doctoral fellowships, under which I worked at the laboratory <i>Preuves, Programmes et Syst&egrave;mes</i> (now <a href="https://www.irif.fr/en/index">Institut de Recherche en Informatique Fondamentale</a>), <a href="http://www.univ-paris-diderot.fr/">Universit&eacute; Paris 7</a>.</p>
+<p>Before that, in 2006-2007 I was post-doctoral fellow at LIPN&ndash;<a href="http://www.univ-paris13.fr">Universit&eacute; Paris 13</a>. My fellowship was supported by the <a href="http://www.agence-nationale-recherche.fr/">ANR</a> project "NOCoST".</p>
+<p>Prior to that, in the period 2003-2006, I had an <i>allocation de recherche</i> (Ph.D. grant) to develop my <a href="papers/Thesis.pdf">Ph.D. thesis</a> at the <i>Institut de Math&eacute;matiques de Luminy</i> (now <a href="http://www.i2m.univ-amu.fr">Institut de Math&eacute;matiques de Marseille</a>), Universit&eacute; Aix-Marseille 2 (now <a href="http://www.univ-amu.fr/">Aix Marseille Universit&eacute;</a>), under the supervision of <a href="https://www.i2m.univ-amu.fr/perso/laurent.regnier/">Laurent Regnier</a>, which I defended in December 2006. The thesis was developed jointly with the Department of Philosophy of the <a href="http://www.uniroma3.it">Universit&agrave; Roma Tre</a>, with <a href="http://www.matfis.uniroma3.it/persone/docenti/docenti_beige.php?persona=71">V. Michele Abrusci</a> as co-supervisor. During my stay in Marseille, I was also <i>moniteur</i> (Teaching Assistant) at the Departments of Mathematics and of Computer Science in Luminy.</p>
+<p>Before starting my Ph.D. thesis, in 2002-2003, I studied at Universit&eacute; Aix-Marseille 2 to obtain a DEA (<i>Dipl&ocirc;me d'&Eacute;tudes Approfondies</i>, or M.S.) in Discrete Mathematics and Theoretical Computer Science.</p>
+<p>Prior to that, that is, before 2002, I studied <a href="https://www.inf.uniroma3.it/?lang=en">Computer Engineering in Rome</a>, spoke not even a word of French, and had no idea whatsoever I was going to end up living in France.</p>
+<!--p>A more complete CV may be found <a href="CV-fr.pdf">here</a> (in French, sorry).</p-->
+</div>
+</body>
+
+</html>

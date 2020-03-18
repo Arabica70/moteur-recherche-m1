@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Mathieu LACROIX - LIPN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="utils/css/font-awesome.min.css"> <!-- Pour avoir l'icône de menu sous forme de font -->
+		<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+		<!-- Banner -->
+		<header id="banner">
+			<div class="only_title">
+
+				<span class="menu_logo open_menu"><i class="fa fa-bars fa-3x"></i></span>
+				
+				<h2>Enseignements</h2>
+				
+			</div>		
+		</header>
+		
+		<main>
+		
+
+
+			<!-- <section  class="boite">
+				<div class="grille">
+						<h2> Optimisation Combinatoire (TD + TP)</h2>
+						<section>
+								<h4>Contenu</h4>
+								<p>
+									Les TD et TP d'optimisation combinatoire sont ceux du cours réalisé par Lucas Létocart en école d'ingénieur. Son cours présente plusieurs méthodes d'optimisation combinatoire :
+								</p>
+								<ul>
+									<li> Branch and bound</li>
+									<li>Relaxations lagrangienne</li>
+									<li>Décomposition lagrangienne</li>
+									<li> Heuristiques</li>
+									<li> Métaheuristiques</li>
+									<li> Programmation dynamique</li>
+								</ul>
+								<h4>Public</h4>
+								<p>
+									Étudiants de deuxième année d'école d'ingénieur de l'institut Galilée.
+								</p>
+								
+						</section>
+						<section>
+							<h4>Ressources</h4>
+							
+							<p>Les supports de cours, TD et TP sont disponibles sur l'ENT.</p> 
+							<p> Les sujets/ressources de TP sont également donnés ici dans le cas où l'ENT n'est pas accessible :</p>
+							<ul>
+								<li><strong>TP 1 :</strong> <a href="Ressources/OC/TP1/OC_TP1.pdf"> énoncé</a>, <a href="Ressources/OC/TP1/TP1_1_fichiers.zip">TP1_1_fichiers.zip</a> et <a href="Ressources/OC/TP1/TP1_2_modeles.zip">TP1_2_modeles.zip</a>.</li>
+								<li><strong>TP 2 :</strong> <a href="Ressources/OC/OC_TP2.pdf"> énoncé</a>.</li>
+							</ul>
+								
+					</section>
+			</div>
+		</section>	 -->
+
+
+		<section  class="boite">
+			<div class="grille">
+					<h2> Recherche opérationnelle (OS12)</h2>
+					<section>
+							<h4>Contenu</h4>
+							<p>
+								Ce cours présente une introduction à l'optimisation linéaire et l'optimisation linéaire en nombres entiers. Les principales notions abordées sont :
+								<ul>
+									<li>Algorithme du simplexe (méthode du dictionnaire)</li>
+									<li>Algorithme de séparation et évaluation (Branch-and-bound)</li>
+									<li>Modélisation de problèmes en variables mixtes</li>
+									<li>Résolution pratique de problèmes d'optimisation linéaire en variables mixtes à l'aide de <a href="https://julialang.org/">Julia</a>, <a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a> et <a href="https://www.gnu.org/software/glpk/">GLPK</a>.</li>
+								</ul>
+							</p>
+							
+							<h4>Public</h4>
+							<p>
+								Étudiants de S4 (deuxième année) de l'IUT de Villetaneuse.
+							</p>
+							
+					</section>
+					<section>
+							<h4>Ressources</h4>
+
+							<ul class="checklist">
+								<li>Chapitre 1 <a href="Ressources/RO/ro_chapitre1.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+								<li> TD 1 <a href="Ressources/RO/ol_td1.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+								<li>	 Correction du TD 1 <a href="Ressources/RO/corrige_ol_td1.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a>
+								</li>
+								<li> TD 2 <a href="Ressources/RO/ol_td2.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+								<li>	Correction du TD 2 <a href="Ressources/RO/corrige_ol_td2.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a>
+								</li>
+							</ul>
+
+							<p>
+								Les supports de TP sont des notebooks Jupyter et sont accessibles dans le dépôt GitHub :
+								<a href="https://github.com/mathieuLacroix/ROS4"><i class="fa fa-github"> &nbsp; </i>mathieuLacroix/ROS4</a>.
+								<br/>
+								<!-- Les modèles sont codés en <a href="https://julialang.org/">Julia</a> en utilisant le package <a href="https://github.com/JuliaOpt/JuMP.jl">JuMP</a>. Le solveur utilisé est <a href="https://www.gnu.org/software/glpk/">GLPK</a>. -->
+							</p>
+					</section>
+			</div>
+		</section>	
+
+			<section  class="boite">
+				<div class="grille">
+						<h2> Bases de la programmation (M1102)</h2>
+						<section>
+								<h4>Contenu</h4>
+								<p>
+									Ce cours présente une introduction à l'algorithmique. Le langage support utilisé est Python. Les principales notions abordées sont :
+								</p>
+								<ul>
+									<li> Variables</li>
+									<li>Alternatives</li>
+									<li>Boucles</li>
+									<li> Fonctions</li>
+									<li> Tableaux</li>
+									<li> Dictionnaires</li>
+								</ul>
+								<h4>Public</h4>
+								<p>
+									Étudiants de S1 (première année) de l'IUT de Villetaneuse.
+								</p>
+								
+						</section>
+						<section>
+								<h4>Ressources</h4>
+								<p>Les supports de cours/TD/TP sont faits en utilisant les notebooks du projet Jupyter. Ils sont sous licence libre (copy left) et sont accessibles dans le dépôt GitHub :
+									<br/>
+									<a href="https://github.com/iutVilletaneuseDptInfo/M1102"><i class="fa fa-github"> &nbsp; </i>iutVilletaneuseDptInfo/M1102</a>
+								</p>
+								<p> Les étudiants du groupe Indien peuvent utiliser le jupyterHub de l'université : <br/>
+								<a href="https://jupyter.univ-paris13.fr:8000/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FiutVilletaneuseDptInfo%2FM1102&urlpath=tree%2FM1102%2F"> <img src="images/logo_jupyterhub.svg" alt="logo de jupyterHub" style="width: 24px; position: relative;top:10px;";/> jupyterHub </a>
+								</p>
+						</section>
+				</div>
+			</section>	
+
+			<section  class="boite">
+				<div class="grille">
+						<h2> Structures de données et algorithmes fondamentaux (M1103)</h2>
+						<section>
+								<h4>Contenu</h4>
+								<p>
+									Ce cours présente une introduction à l'algorithmique. C'est la suite du module M1102. Le langage support utilisé est Python. Les principales notions abordées sont :
+								</p>
+								<ul>
+									<li>Complexité</li>
+									<li>Listes</li>
+									<li>Algorithmes de recherche</li>
+									<li>Modularité</li>
+									<li>Algorithmes de tris</li>
+									<li>Structures de données imbriquées</li>
+									<li>Tables de hachage</li>
+								</ul>
+								<h4>Public</h4>
+								<p>
+									Étudiants de S1 (première année) de l'IUT de Villetaneuse.
+								</p>
+								
+						</section>
+						<section>
+								<h4>Ressources</h4>
+								<p>Les supports de cours/TD/TP sont faits en utilisant les notebooks du projet Jupyter. Ils sont sous licence libre (copy left) et sont accessibles dans le dépôt GitHub :
+									<br/>
+									<a href="https://github.com/iutVilletaneuseDptInfo/M1103"><i class="fa fa-github"> &nbsp; </i>iutVilletaneuseDptInfo/M1103</a>
+								</p>
+								<p> Les étudiants du groupe Austral peuvent utiliser le jupyterHub de l'université : <br/>
+									<a href="https://jupyter.univ-paris13.fr:8000/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FiutVilletaneuseDptInfo%2FM1103&urlpath=tree%2FM1103%2F"> <img src="images/logo_jupyterhub.svg" alt="logo de jupyterHub" style="width: 24px; position: relative;top:10px;";/> jupyterHub </a>
+									</p>
+						</section>
+				</div>
+			</section>
+
+
+			<section  class="boite">
+				<div class="grille">
+						<h2> HTML 5 et CSS 3</h2>
+						<section>
+								<h4>Contenu</h4>
+								<p>
+									Ce cours présente une introduction à la création de sites Web statiques responsive à l'aide de l'HTML 5 et du CSS 3. Les principales notions abordées sont :
+								</p>
+								<ul>
+									<li> Explication d'une url et d'une requête selon le protocole http</li>
+									<li>Présentation des principales balises HTML 5</li>
+									<li> Représentation du DOM à l'aide d'un arbre</li>
+									<li> Présentation des principales propriétés CSS</li>
+									<li> Fonctionnement des sélecteurs en cascade et priorité des sélecteurs</li>
+									<li> Héritage en CSS</li>
+									<li> Positionnement des éléments d'une page Web en CSS 3</li>
+								</ul>
+								<h4>Public</h4>
+								<p>
+									Étudiants de première année de l'école d'ingénieur Galilée.
+								</p>
+								
+						</section>
+						<section>
+								<h4>Ressources</h4>
+								<ul class="checklist">
+									<li>Cours <a href="Ressources/WebIG/web_IG_cours.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+									<li>Slides de cours <a href="Ressources/WebIG/slides_HTML5_CSS3.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+									<li><a href="Ressources/WebIG/webIG_TP.html">TP</a></li>
+								</ul>
+						</section>
+				</div>
+			</section>	
+
+
+			<section  class="boite">
+				<div class="grille">
+						<h2> Programmation Web Serveur (M3014)</h2>
+						<section>
+								<h4>Contenu</h4>
+								<p>
+									Ce cours présente une introduction à la création de sites Web dynamiques en PHP. Les principales notions abordées sont :
+								</p>
+								<ul>
+									<li> Concept de page Web dynamique</li>
+									<li> Langage PHP</li>
+									<li> Interaction avec une base de données (utilisation de PDO)</li>
+									<li> Failles de sécurité Web et protections</li>
+									<li> Principes d'une architecture MVC</li>
+								</ul>
+								<h4>Public</h4>
+								<p>
+									Étudiants de S3 (deuxième année) de l'IUT de Villetaneuse.
+								</p>
+								
+						</section>
+						<section>
+								<h4>Ressources</h4>
+								<ul class="checklist">
+									<li>Cours - Partie 1 <a href="Ressources/WebS3/Documents/Cours/chapitre1_m3104.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+									<li><a href="Ressources/WebS3/Documents/CorrectionsTD/td1_corrige.pdf"> Correction du TD 1</a></li>
+									<li><a href="Ressources/WebS3/TP1">TP 1</a> 
+										/ <a href="Ressources/WebS3/Documents/CorrectionsTP/CorrectionTP1.zip">Correction</a>
+									</li>
+									<li>Cours - Partie 2 <a href="Ressources/WebS3/Documents/Cours/chapitre2_m3104.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+									<li><a href="Ressources/WebS3/Documents/CorrectionsTD/td2_corrige.pdf"> Correction du TD 2</a></li>
+									<li><a href="Ressources/WebS3/TP2">TP 2</a> 
+										/ <a href="Ressources/WebS3/Documents/CorrectionsTP/CorrectionTP2.zip">Correction</a>
+									</li>
+
+									<li>Cours - Partie 3 <a href="Ressources/WebS3/Documents/Cours/chapitre3_m3104.pdf"> <i class="espace fa fa-file-pdf-o fa-2x"></i></a></li>
+									<li><a href="Ressources/WebS3/Documents/CorrectionsTD/td3_corrige.pdf"> Correction du TD 3</a></li>
+									<li><a href="Ressources/WebS3/TP3">TP 3</a> 
+										/ <a href="Ressources/WebS3/Documents/CorrectionsTP/CorrectionTP3.zip">Correction</a>
+									</li>
+									<!-- <li>Correction des TD <a href="Ressources/WebS3/corrections_td.pdf"><i class="espace fa fa-file-pdf-o fa-2x"></i></a></li> -->
+								</ul>
+						</section>
+				</div>
+			</section>
+
+
+
+
+	
+
+			<!-- Two -->
+
+		</main>
+
+
+
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="copyright">
+						<p>Dernière mise à jour : 20 août 2018 </p>
+						Site optimisé pour Firefox Quantum<br/>
+					&copy; Mise en page adaptée du template CSS (licence Creative Commons) créé par <a href="http://templated.co">TEMPLATED</a>. 
+					
+				</div>
+			</footer>
+
+	<nav id="menu_side">
+		<div class="titre_menu">
+			<h3>NAVIGATION</h3>
+			<i class="fa fa-remove fa-3x close_menu"></i>
+		</div>
+		<ul >
+			<li><a href="index.html" class="close_menu">ACCUEIL</a></li> 
+			<li><a href="recherche.html" class="close_menu"></i>RECHERCHE</a></a> 
+			<li><a href="enseignement.html" class="close_menu">ENSEIGNEMENT</a></li>
+		</ul>
+	</nav>
+			
+			  
+
+
+	<!-- Return to Top -->
+	<i id="return-to-top" class="fa fa-arrow-circle-up fa-3x"></i>
+
+    <script src="utils/js/menu.js"></script>   
+				
+	</body>
+</html>

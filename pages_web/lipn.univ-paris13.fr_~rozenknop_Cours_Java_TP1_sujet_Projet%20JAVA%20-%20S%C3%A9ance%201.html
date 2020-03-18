@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2015-11-14 sam. 13:48 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. Introduction au projet Java</a></li>
+<li><a href="#orgheadline2">2. Première séance</a></li>
+<li><a href="#orgheadline3">3. Téléchargement</a></li>
+<li><a href="#orgheadline4">4. HelloWorld</a></li>
+<li><a href="#orgheadline5">5. Documentation de la librairie Slick</a></li>
+<li><a href="#orgheadline6">6. Un peu plus loin avec <i>Slick</i></a></li>
+<li><a href="#orgheadline9">7. Utiliser <b>Netbeans</b></a>
+<ul>
+<li><a href="#orgheadline7">7.1. Configuration initiale</a></li>
+<li><a href="#orgheadline8">7.2. Utilisation dans un nouveau projet</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline10">8. Utiliser <b>Eclipse</b></a></li>
+<li><a href="#orgheadline11">9. Jeu basique</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Introduction au projet Java</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Le projet consiste à programmer un jeu d'arcades en Java.
+</p>
+
+<p>
+La principale contrainte pour un jeu d'arcades est la rapidité :
+l'écran doit se rafraîchir suffisamment rapidement 
+pour que le joueur ait l'impression de fluidité dans le déplacement
+des objets, et ses actions (au clavier ou à la souris) doivent être
+prises en compte immédiatement.
+</p>
+
+<p>
+Pour respecter cette contrainte, on choisit dans cette session de TP
+d'utiliser une <i>bibliothèque</i> Java spécialisée dans la création de
+ce type de jeu : la bibliothèque <b>Slick</b>. Celle-ci nécessite
+l'utilisation d'une seconde bibliothèque pour fonctionner, nommée
+<b>LWJG</b>, qui elle-même est construite à partir de <b>OpenGL</b>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> Première séance</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+L'objectif de cette séance de TP est la prise en main des outils de
+programmation et de compilation en Java, ainsi que la
+familiarisation avec la bibliothèque <i>Slick</i>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> Téléchargement</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Télécharger :
+</p>
+<ul class="org-ul">
+<li><p>
+<a href="http://slick.ninjacave.com/slick.zip">la librairie <b>Slick</b></a>
+</p>
+
+<p>
+Créer un répertoire <code>$HOME/javalibs/slick</code>.
+<i>Précision si vous connaissez mal Linux : $HOME est votre</i>
+<i>répertoire utilisateur, et non pas votre bureau. Votre bureau est</i>
+<i>habituellement stocké dans le répertoire $HOME/Bureau ou</i>
+<i>$HOME/Desktop</i>.
+</p>
+
+<p>
+Décompresser le fichier <i>slick.zip</i> dans le répertoire
+<code>$HOME/javalibs/slick</code>.
+</p></li>
+
+<li><p>
+<a href="http://www.lwjgl.org/">la librairie <b>lwjgl</b></a>
+Cette librairie est incluse dans la librairie <code>Slick</code>, mais une
+version plus récente, corrigeant quelques bugs, peut être
+téléchargée. La dernière version compatible avec <code>Slick</code> est la
+<a href="https://sourceforge.net/projects/java-game-lib/files/Official%20Releases/LWJGL%202.9.3/">version 2.9.3 téléchargeable ici</a>.
+</p>
+
+<p>
+Décompressez le fichier <i>lwjgl-2.9.3.zip</i> dans le répertoire
+<code>$HOME/javalibs/slick</code>. Puis déplacez tous les fichiers du
+répertoire <code>$HOME/javalibs/slick/lwjgl-2.9.3/jar</code> vers le
+répertoire <code>$HOME/javalibs/slick/lib</code>. Enfin, déplacez les
+fichiers du répertoire
+<code>$HOME/javalibs/slick/lwjgl-2.9.3/native/linux</code> vers le répertoire
+<code>$HOME/javalibs/slick</code>.
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> HelloWorld</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Comme toute initiation qui se respecte, on dit bonjour au monde. Le
+programme tient en un seul fichier, qui définit une seule classe
+Java.
+</p>
+
+<ul class="org-ul">
+<li><p>
+Fichier <code>HelloWorld.java</code> :
+</p>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.*;
+
+<span style="color: #1c86ee;">public</span> <span style="color: #1c86ee;">class</span> <span style="color: #00688b;">HelloWorld</span> <span style="color: #1c86ee;">extends</span> <span style="color: #00688b;">BasicGame</span>
+{
+    <span style="color: #1c86ee;">public</span> <span style="color: #1c86ee;">static</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">main</span>(<span style="color: #00688b;">String</span>[] <span style="color: #2e8b57;">args</span>) <span style="color: #1c86ee;">throws</span> <span style="color: #00688b;">SlickException</span>
+    {
+        <span style="color: #00688b;">AppGameContainer</span> <span style="color: #2e8b57;">app</span> = <span style="color: #1c86ee;">new</span> <span style="color: #00688b;">AppGameContainer</span>(<span style="color: #1c86ee;">new</span> <span style="color: #00688b;">HelloWorld</span>());
+
+        app.setDisplayMode(800, 600, <span style="color: #6e8b3d;">false</span>);
+        app.start();
+    }
+
+    <span style="color: #1c86ee;">public</span> <span style="color: #cd9b1d;">HelloWorld</span>()
+    {
+        <span style="color: #1c86ee;">super</span>(<span style="color: #8b7355;">"Hello World"</span>);
+    }
+
+    <span style="color: #6e8b3d;">@Override</span>
+        <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">init</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">gc</span>) <span style="color: #1c86ee;">throws</span> <span style="color: #00688b;">SlickException</span>
+    {
+
+    }
+
+    <span style="color: #6e8b3d;">@Override</span>
+        <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">update</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">gc</span>, <span style="color: #00688b;">int</span> <span style="color: #2e8b57;">delta</span>) <span style="color: #1c86ee;">throws</span> <span style="color: #00688b;">SlickException</span>
+    {
+
+    }
+
+    <span style="color: #6e8b3d;">@Override</span>
+        <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">render</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">gc</span>, <span style="color: #00688b;">Graphics</span> <span style="color: #2e8b57;">g</span>) <span style="color: #1c86ee;">throws</span> <span style="color: #00688b;">SlickException</span>
+    {
+        g.<span style="color: #00688b;">drawString</span>(<span style="color: #8b7355;">"Hello World"</span>, 100, 100);
+    } 
+}
+</pre>
+</div></li>
+
+<li>Commentaire du programme :
+<ul class="org-ul">
+<li>la première ligne importe tous les membres du <i>package</i>
+<b>org.newdawn.slick</b>. Qui contient en particulier les classes
+<b>BasicGame</b> et <b>AppGameContainer</b>.</li>
+
+<li><p>
+la suite du programme définit une nouvelle classe, <b>HelloWorld</b>,
+qui hérite de la classe <b>BasicGame</b> ("<i>extends</i>
+BasicGame"). Elle <i>surcharge</i> trois méthodes essentielles de
+BasicGame :
+</p>
+<ul class="org-ul">
+<li><b>init</b>, qui est appelée (automatiquement) au démarrage du jeu;</li>
+<li><b>update</b>, qui est appelée (automatiquement) régulièrement et
+dont le rôle est de mettre à jour l'état des objets du jeu;</li>
+<li><b>render</b>, qui est appelée (automatiquement) régulièrement et
+dont le rôle est de tracer à l'écran les objets visibles.</li>
+</ul>
+<p>
+La méthode <b>main</b> est ajoutée. C'est la méthode qui sera appelée
+en premier lors du lancement du programme. Ici, elle crée un
+objet de la classe <b>HelloWorld</b>, puis un objet de la classe
+<b>AppGameContainer</b>. Elle fixe ensuite la taille de la fenêtre de
+jeu, puis démarre le <i>jeu HelloWorld</i> qui lui a été passé en
+paramètre lors de sa création. En arrière-plan, cela signifie
+qu'elle appelle la méthode <b>init</b> du jeu, puis qu'elle appelle
+successivement dans une boucle sans fin ses méthodes <b>render</b> et
+<b>update</b>.
+</p></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+compilation :
+</p>
+
+<p>
+Créez un répertoire <code>$HOME/ProjetJava/TP1</code>. Dans ce répertoire,
+créez le fichier <b>HelloWorld.java</b> ci-dessus.
+</p>
+
+<p>
+En ligne de commande, depuis le répertoire <code>TP1</code>, la compilation
+se fait avec :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-shell-script">javac -cp $<span style="color: #2e8b57;">HOME</span>/javalibs/slick/lib/<span style="color: #8b7355;">"*"</span>:. HelloWorld.java
+</pre>
+</div>
+
+<p>
+On peut aussi écrire :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-shell-script"><span style="color: #cd6600;">export</span> <span style="color: #2e8b57;">CLASSPATH</span>=$<span style="color: #2e8b57;">HOME</span>/javalibs/slick/lib/<span style="color: #8b7355;">"*"</span>:.
+javac HelloWorld.java
+</pre>
+</div>
+
+<p>
+Et la première ligne peut se mettre dans votre fichier
+<code>$HOME/.bashrc</code>, ce qui permet ensuite de compiler plus simplement
+en utilisant uniquement la seconde.
+</p></li>
+
+<li><p>
+exécution du programme :
+</p>
+<div class="org-src-container">
+
+<pre class="src src-shell-script">java -cp $<span style="color: #2e8b57;">HOME</span>/javalibs/slick/lib/<span style="color: #8b7355;">"*"</span>:. -Djava.library.path=$<span style="color: #2e8b57;">HOME</span>/javalibs/slick HelloWorld
+</pre>
+</div>
+
+<p>
+Dans le cas où la variable <i>CLASSPATH</i> est définie dans <i>.bashrc</i>,
+la commande suivante suffit :
+</p>
+<div class="org-src-container">
+
+<pre class="src src-shell-script">java -Djava.library.path=$<span style="color: #2e8b57;">HOME</span>/javalibs/slick HelloWorld
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">5</span> Documentation de la librairie Slick</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Un point de départ pour la documentation de Slick est le Wiki
+à l'adresse <a href="http://slick.ninjacave.com/wiki">http://slick.ninjacave.com/wiki</a>. Il est hélas très
+succint. On peut trouver des tutoriels sur internet. Par exemple ici :
+<a href="http://www.creationjeuxjava.fr/tutorials/slick2d/creez-votre-jeu-video-avec-slick2d">http://www.creationjeuxjava.fr/tutorials/slick2d/creez-votre-jeu-video-avec-slick2d</a>,
+avec des explications illustrées de l'utilisation de la librairie
+sous <b>Eclipse</b>. 
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">6</span> Un peu plus loin avec <i>Slick</i></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Dans le répertoire
+<code>$HOME/javalibs/slick/src/org/newdawn/slick/tests</code> se trouve un
+ensemble de programmes de test, qui peuvent servir d'exemple.
+</p>
+
+<ul class="org-ul">
+<li>Copier le programme <code>TransformTest.java</code> dans votre répertoire
+<code>TP1</code> et compiler.
+<ul class="org-ul">
+<li>l'exécution échoue à cause de la première ligne du
+programme. Le <i>package</i> doit correspondre au chemin à parcourir
+pour atteindre le fichier en remplaçant les points par des
+<i>slash</i> (/). Comme on compile depuis le répertoire courant,
+on doit supprimer cette ligne et recompiler le programme avant de
+le lancer. On
+agit sur l'affichage en pressant les touches 'A' et 'Q'. On
+sort en pressant la touche 'Echap'.</li>
+
+<li>comprendre comment le programme fait pour récupérer l'état des
+touches <i>A</i>, <i>Q</i> et <i>Echap</i>  du clavier. Les fonctions
+<i>keyPressed</i> et <i>keyReleased</i> sont appelées automatiquement par
+le système Slick avec les paramètres adéquats lorsqu'une action
+est effectuée par l'utilisateur au clavier.</li>
+
+<li>observer l'utilisation des <i>attributs</i> <code>scaleUp</code> et <code>scaleDown</code>.</li>
+
+<li>observer l'utilisation du paramètre <code>delta</code> dans la fonction
+<i>update</i>. A chaque fois que Slick appelle la méthode <i>update</i>,
+il garde en mémoire le moment où il effectue cet appel. La fois
+suivante il peut ainsi passer en paramètre le nombre de
+millisecondes écoulées depuis l'appel précédent. Ce nombre
+n'est pas constant (en fonction de l'activité de l'ordinateur,
+du temps passé dans les fonctions <i>update</i> et <i>render</i>). Pour
+que l'animation paraisse avoir une vitesse constante et ne
+dépende pas non plus de la machine sur laquelle elle est
+lancée, on utilise ce paramètre <i>delta</i> que l'on multiplie par
+la vitesse de l'animation.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+Les deux programmes précédents utilisent un seul "état",
+représentant un écran avec lequel on interragit d'une certaine
+manière. Or, dans un jeu, on peut avoir envie qu'il y ait
+plusieurs états, par exemple pour représenter différents niveaux,
+ou encore pour présenter des menus et des tableaux de scores.
+</p>
+
+<p>
+Recopier le fichier <code>TransitionTest.java</code> du répertoire <code>tests</code>
+dans votre répertoire <code>TP1</code>. Ce programme utilise une autre
+classe de Slick, appelée <i>StateBasedGame</i>, qui permet d'organiser
+différents états. Chaque état est un objet d'une sous-classe de
+<i>BasicGameState</i> (ici, la sous-classe s'appelle <i>ImageState</i>) qui
+ressemble aux classes principales des deux premiers progammes,
+avec ses fonction <i>render</i> et <i>update</i>.
+</p>
+
+<p>
+Le programme <code>TransitionTest.java</code> doit afficher des images à
+l'écran, chaque état affichant sa propre image. Les images sont
+ouvertes sous les noms :
+</p>
+<ul class="org-ul">
+<li>"testdata/wallpaper/paper1.png"</li>
+<li>"testdata/wallpaper/paper2.png"</li>
+<li>"testdata/bigimage.tga"</li>
+</ul>
+<p>
+Pour que le programme puisse ouvrir ces images lors de son
+exécution, il faut qu'il trouve les fichiers correspondants
+depuis le répertoire courant. Par conséquent, il faut créer dans
+le répertoire <code>TP1</code> un sous-répertoire <code>testdata</code>, qui lui-même
+doit contenir un sous-répertoire <code>wallpaper</code>. Ensuite, il faut
+y recopier les fichiers images depuis
+<code>$HOME/javalibs/slick/testdata</code>. Compiler et lancer le
+programme. On passe d'un état à un autre en pressant la touche
+espace. 
+</p>
+
+<ul class="org-ul">
+<li>Comprendre comment l'appui sur la touche espace est repéré par
+le programme et noter la différence avec le programme
+précédent (chercher le mot-clef <code>KEY_SPACE</code> dans le programme).</li>
+
+<li>Comprendre l'utilisation des <i>StateBasedGame</i>. La page suivante
+peut aider :
+<a href="http://lyndonarmitage.com/an-introduction-to-state-based-games-slick-library/">http://lyndonarmitage.com/an-introduction-to-state-based-games-slick-library/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">7</span> Utiliser <b>Netbeans</b></h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">7.1</span> Configuration initiale</h3>
+<div class="outline-text-3" id="text-7-1">
+<ol class="org-ol">
+<li>Ouvrir netbeans.</li>
+<li>Aller dans <i>Tools -&gt; Libraries</i> ou <i>Outils -&gt; Bibliothèques</i>. 
+Si l'entrée de menu n'existe pas, il faut commencer par créer un
+premier projet Java pour l'activer (menu <i>File -&gt; New project</i>,
+Catégorie <i>Java</i>, Projet <i>Java Application</i>).</li>
+<li>Cliquer sur <i>New library&#x2026;</i></li>
+<li>Entrer <code>Slick2S</code>.</li>
+<li>Dans l'onglet <i>Classpath</i>, cliquer sur <i>Add JAR/Folder&#x2026;</i>
+<ul class="org-ul">
+<li>Se rendre dans le répertoire <code>$HOME/javalibs/slick/lib</code> et
+sélectionner les fichiers suivants :
+<ol class="org-ol">
+<li><code>lwjgl.jar</code></li>
+<li><code>slick.jar</code></li>
+<li><code>jinput.jar</code></li>
+<li><code>lwjgl_util.jar</code></li>
+</ol></li>
+</ul></li>
+<li>Dans l'onglet <i>Sources</i>,  cliquer sur <i>Add JAR/Folder&#x2026;</i> pour
+ajouter le répertoire <code>$HOME/javalibs/slick/lib</code>.</li>
+<li>Dans l'onglet <i>Javadoc</i>, cliquer sur <i>Add JAR/Folder&#x2026;</i> pour
+ajouter le répertoire <code>$HOME/javalibs/slick/javadoc</code>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">7.2</span> Utilisation dans un nouveau projet</h3>
+<div class="outline-text-3" id="text-7-2">
+<ol class="org-ol">
+<li>Avoir un projet Java ouvert.</li>
+<li>Aller dans <i>File -&gt; Project Properties</i> et sélectionner
+<i>Libraries</i>.</li>
+<li>Cliquer sur <i>Add Library</i> et choisir dans la liste la librairie
+<i>Slick2D</i> créée précédemment.</li>
+<li><p>
+Sélectionner le noeud <i>Run</i> dans la liste de gauche et
+remplissez <i>VM Options</i> avec :
+</p>
+<div class="org-src-container">
+
+<pre class="src src-shell-script">-Djava.library.path=$<span style="color: #2e8b57;">HOME</span>/javalibs/slick
+</pre>
+</div>
+<p>
+(en remplaçant <code>$HOME</code> par le chemin complet de votre répertoire personnel)
+</p></li>
+<li>C'est fini ! On peut maintenant créer des classes et les compiler.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">8</span> Utiliser <b>Eclipse</b></h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Réimplanter les trois  programmes en créant pour chacun un projet
+dans <b>Eclipse</b>.</li>
+
+<li>Apprendre à spécifier le <i>classpath</i>, les librairies natives.</li>
+
+<li>Apprendre à exporter un fichier <i>Jar</i> contenant les ressources et
+les librairies nécessaires pour lancer le programme.</li>
+</ul>
+
+<p>
+<span class="underline">Indices :</span>
+</p>
+<ul class="org-ul">
+<li>File -&gt; New -&gt; Project -&gt; Java Project</li>
+<li>Clic doit sur le nom du projet -&gt; Properties -&gt; Java Build Path -&gt;
+Librairies -&gt; Add External JARS -&gt; Sélection des <i>jar</i></li>
+<li>Clic doit sur le nom du projet -&gt; Properties -&gt; Java Build Path -&gt;
+Librairies -&gt; dérouler <i>lwjgl.jar</i> -&gt; Native library location -&gt;
+ Edit&#x2026; -&gt; External Folder -&gt; choix du répertoire contenant les
+ fichier <span class="underline">*.so</span> (<i>native/linux</i>)</li>
+<li>Créer un répertoire <i>ressources</i> à côté du répertoire <i>src</i> du
+projet et placer les ressources (par exemple <i>testdata</i>) dans le
+répertoire <i>ressources</i>. Puis ajouter le répertoire <i>ressources</i>
+comme répertoire de sources :
+<ul class="org-ul">
+<li>clic droit sur le nom du projet -&gt; New -&gt; Folder &#x2026;</li>
+<li>clic droit sur le répertoire <i>ressources</i> -&gt; Build path -&gt; Use
+as source folder</li>
+</ul></li>
+<li>File -&gt; Export&#x2026; -&gt; Java -&gt; Runnable Jar File -&gt; cocher <i>Package required
+libraries into generated JAR</i></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">9</span> Jeu basique</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Le programme suivant anime un avion sur un fond d'écran spatial.
+Il nécessite deux fichiers images à placer dans un répertoire
+<code>ressources</code>. Ces fichiers sont téléchargeables ici : <a href="JeuBasique/ressources/land.png"><code>land.png</code></a> et
+<a href="JeuBasique/ressources/plane.png"><code>plane.png</code></a>.
+</p>
+
+<p>
+Utilisez Netbeans ou Eclipse pour y implanter ce programme !
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">AppGameContainer</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">BasicGame</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">Color</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">GameContainer</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">Graphics</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">Input</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">SlickException</span>;
+<span style="color: #1c86ee;">import</span> <span style="color: #6e8b3d;">org</span>.<span style="color: #6e8b3d;">newdawn</span>.<span style="color: #6e8b3d;">slick</span>.<span style="color: #00688b;">Image</span>;
+
+<span style="color: #1c86ee;">public</span> <span style="color: #1c86ee;">class</span> <span style="color: #00688b;">JeuBasique</span>  <span style="color: #1c86ee;">extends</span> <span style="color: #00688b;">BasicGame</span> {
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Exemple d'un objet d&#233;plac&#233; par un "joueur"</span>
+<span style="color: #cd853f;">     *</span>
+<span style="color: #cd853f;">     * </span><span style="color: #6e8b3d;">@author</span><span style="color: #cd853f;"> Antoine Rozenknop</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #cd853f;">/** Position du mobile */</span>
+    <span style="color: #1c86ee;">private</span> <span style="color: #00688b;">float</span> <span style="color: #2e8b57;">mobile_X</span> = 320;
+    <span style="color: #1c86ee;">private</span> <span style="color: #00688b;">float</span> <span style="color: #2e8b57;">mobile_Y</span> = 240;
+
+    <span style="color: #cd853f;">/** Images */</span>
+    <span style="color: #1c86ee;">private</span> <span style="color: #00688b;">Image</span> <span style="color: #2e8b57;">mobile_image</span>;
+    <span style="color: #1c86ee;">private</span> <span style="color: #00688b;">Image</span> <span style="color: #2e8b57;">ciel_image</span>;
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Construction de l'objet JeuBasique</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #cd9b1d;">JeuBasique</span>() {
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">appel au constructeur de la classe parente : BasicGame</span>
+        <span style="color: #1c86ee;">super</span>(<span style="color: #8b7355;">"Jeu basique"</span>);
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Initialisation du jeu</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">init</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">container</span>) <span style="color: #1c86ee;">throws</span> <span style="color: #00688b;">SlickException</span> {
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">On demande au conteneur d'essayer d'afficher 100 images par secondes</span>
+        container.setTargetFrameRate(100);
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">On demande au conteneur d'afficher le nombre d'images par secondes r&#233;el</span>
+        container.setShowFPS(<span style="color: #6e8b3d;">true</span>);
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">Affichage en plein &#233;cran : non</span>
+        container.setFullscreen(<span style="color: #6e8b3d;">false</span>);
+
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">On charge les images depuis le disque</span>
+        mobile_image = <span style="color: #1c86ee;">new</span> <span style="color: #00688b;">Image</span>(<span style="color: #8b7355;">"ressources/plane.png"</span>);
+        ciel_image = <span style="color: #1c86ee;">new</span> <span style="color: #00688b;">Image</span>(<span style="color: #8b7355;">"ressources/land.png"</span>);
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">On redimensionne le papier peint &#224; la taille de la fen&#234;tre</span>
+        ciel_image = ciel_image.getScaledCopy(container.getWidth(), container.getHeight());
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Affichage du jeu</span>
+<span style="color: #cd853f;">     * La m&#233;thode render est appel&#233;e r&#233;guli&#232;rement par le framework Slick</span>
+<span style="color: #cd853f;">     * Elle re&#231;oit automatiquement deux param&#232;tres : le "container" (qui repr&#233;sente la fen&#234;tre</span>
+<span style="color: #cd853f;">     * dans laquelle le jeu appara&#238;t), et un "contexte graphique" qui repr&#233;sente la surface &#224; l'int&#233;rieur</span>
+<span style="color: #cd853f;">     * de cette fen&#234;tre. C'est ce contexte graphique que l'on utilise pour tracer les objets.</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">render</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">container</span>, <span style="color: #00688b;">Graphics</span> <span style="color: #2e8b57;">g</span>) {
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">affichage du papier peint</span>
+        g.drawImage(ciel_image, 0, 0);
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">affichage du mobile</span>
+        g.drawImage(mobile_image, mobile_X, mobile_Y);
+
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Mise-&#224;-jour des &#233;l&#233;ments du jeu</span>
+<span style="color: #cd853f;">     * La m&#233;thode update est appel&#233;e r&#233;guli&#232;rement par le framework Slick (avant chaque appel</span>
+<span style="color: #cd853f;">     * &#224; la m&#233;thode render).</span>
+<span style="color: #cd853f;">     * Elle re&#231;oit automatiquement deux param&#232;tres : le "container" (qui repr&#233;sente la fen&#234;tre</span>
+<span style="color: #cd853f;">     * dans laquelle le jeu appara&#238;t), et un "delta". Ce "delta" repr&#233;sente le nombre de millisecondes</span>
+<span style="color: #cd853f;">     * qui se sont &#233;coul&#233;es depuis la derni&#232;re mise-&#224;-jour.</span>
+<span style="color: #cd853f;">         */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">update</span>(<span style="color: #00688b;">GameContainer</span> <span style="color: #2e8b57;">container</span>, <span style="color: #00688b;">int</span> <span style="color: #2e8b57;">delta</span>) {
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">r&#233;cup&#233;ration d'un objet "input" depuis le "containeur"</span>
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">Cet objet "sait" quelles sont les touches du clavier enfonc&#233;es</span>
+        <span style="color: #00688b;">Input</span> <span style="color: #2e8b57;">input</span> = container.getInput();
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">conversion du delta en secondes</span>
+        <span style="color: #00688b;">float</span> <span style="color: #2e8b57;">delta_sec</span> = delta * 0.001f;
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">rotation du mobile de 10&#176; par seconde</span>
+        mobile_image.rotate(10*delta_sec);
+
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">d&#233;placement du mobile, &#224; 100 pixels/s</span>
+        <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">dans une direction d&#233;pendant des touches enfonc&#233;es</span>
+        <span style="color: #1c86ee;">if</span> (input.isKeyDown(<span style="color: #6e8b3d;">Input</span>.KEY_Z)) {
+            mobile_Y = mobile_Y - 100 * delta_sec;
+        }
+        <span style="color: #1c86ee;">if</span> (input.isKeyDown(<span style="color: #6e8b3d;">Input</span>.KEY_S)) {
+            mobile_Y = mobile_Y + 100 * delta_sec;
+        }
+        <span style="color: #1c86ee;">if</span> (input.isKeyDown(<span style="color: #6e8b3d;">Input</span>.KEY_D)) {
+            mobile_X = mobile_X + 100 * delta_sec;
+        }
+        <span style="color: #1c86ee;">if</span> (input.isKeyDown(<span style="color: #6e8b3d;">Input</span>.KEY_Q)) {
+            mobile_X = mobile_X - 100 * delta_sec;
+        }
+
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Une autre fa&#231;on de rep&#233;rer lorsqu'une touche est enfonc&#233;e : la m&#233;thode keyPressed</span>
+<span style="color: #cd853f;">     * appel&#233;e automatiquement par Slick &#224; chaque touche enfonc&#233;e</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">keyPressed</span>(<span style="color: #00688b;">int</span> <span style="color: #2e8b57;">key</span>, <span style="color: #00688b;">char</span> <span style="color: #2e8b57;">c</span>) {
+        <span style="color: #1c86ee;">if</span> (key == <span style="color: #6e8b3d;">Input</span>.KEY_ESCAPE) {
+            System.exit(0);
+        }
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * keyReleased est appel&#233;e automatiquement par Slick &#224; chaque touche rel&#226;ch&#233;e</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">keyReleased</span>(<span style="color: #00688b;">int</span> <span style="color: #2e8b57;">key</span>, <span style="color: #00688b;">char</span> <span style="color: #2e8b57;">c</span>) {
+        <span style="color: #1c86ee;">if</span> (key == <span style="color: #6e8b3d;">Input</span>.KEY_F1) {
+            <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">recentrage du mobile</span>
+            mobile_X = 320;
+            mobile_Y = 240;
+        }
+    }
+
+    <span style="color: #cd853f;">/**</span>
+<span style="color: #cd853f;">     * Point d'entr&#233;e du programme</span>
+<span style="color: #cd853f;">     * </span>
+<span style="color: #cd853f;">     * </span><span style="color: #6e8b3d;">@param</span><span style="color: #cd853f;"> argv Les arguments pass&#233;s en ligne de commande</span>
+<span style="color: #cd853f;">     */</span>
+    <span style="color: #1c86ee;">public</span> <span style="color: #1c86ee;">static</span> <span style="color: #00688b;">void</span> <span style="color: #cd9b1d;">main</span>(<span style="color: #00688b;">String</span>[] <span style="color: #2e8b57;">argv</span>) {
+        <span style="color: #1c86ee;">try</span> {
+            <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">Cr&#233;ation d'un JeuBasique</span>
+            <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">Puis cr&#233;ation d'une fen&#234;tre de jeu (AppGameContainer) &#224; laquelle on associe le JeuBasique</span>
+            <span style="color: #00688b;">AppGameContainer</span> <span style="color: #2e8b57;">container</span> = <span style="color: #1c86ee;">new</span> <span style="color: #00688b;">AppGameContainer</span>(<span style="color: #1c86ee;">new</span> <span style="color: #00688b;">JeuBasique</span>());
+            <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">Taille de la fen&#234;tre</span>
+            container.setDisplayMode((<span style="color: #00688b;">int</span>)(container.getScreenWidth()*0.7), (<span style="color: #00688b;">int</span>)(container.getScreenHeight()*0.7),<span style="color: #6e8b3d;">false</span>);
+            <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">D&#233;marrage du jeu contenu dans la fen&#234;tre</span>
+            container.start();
+
+
+        } <span style="color: #7f7f7f;">// </span><span style="color: #7f7f7f;">gestion des erreurs</span>
+        <span style="color: #1c86ee;">catch</span> (<span style="color: #00688b;">SlickException</span> <span style="color: #2e8b57;">e</span>) {
+            e.printStackTrace();
+        }
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2015-11-14 sam. 13:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

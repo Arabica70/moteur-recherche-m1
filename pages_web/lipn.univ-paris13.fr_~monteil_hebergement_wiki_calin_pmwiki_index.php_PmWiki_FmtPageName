@@ -1,0 +1,208 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Fmt Page Name </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.FmtPageName' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=search&amp;q=link=PmWiki.FmtPageName'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Fmt Page Name</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>admins (advanced) </span>
+</div>
+<p>This page describes an internal function in PmWiki&rsquo;s engine called FmtPageName(). 
+The contents are not intended for those with a weak heart
+;-)
+</p>
+<p class='vspace'>Also see: <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Functions'>PmWiki.Functions</a>
+</p>
+<div class='vspace'></div><h2><a name='FmtPageName' id='FmtPageName'></a> <code class='escaped'>FmtPageName</code>({$fmt, $}pagename)</h2>
+<p><a name='FmtPageName-desc' id='FmtPageName-desc'></a>Returns <code class='escaped'>$fmt</code>, with {$variable and internationalisation substitutions performed, under the assumption that the current page is <code class='escaped'>pagename</code>. As a rule is used to pre-process all variables which by convention have a "Fmt" suffix (like $}GroupFooterFmt), but also other strings that require <a target='_blank'  class='urllink' href='https://en.wikipedia.org/wiki/Variable_%28programming%29#Interpolation' rel='nofollow'>interpolation</a>, notably the page template (.tmpl) file. See <a target='_blank'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>PmWiki.Variables</a> for an (incomplete) list of available variables, <a target='_blank'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations'>PmWiki.Internationalizations</a> for internationalisation.
+</p>
+<p class='vspace'>The function <code class='escaped'>FmtPageName()</code> applies internationalization-substitutions
+and {$Variable-substitions to the string $}fmt under the assumption that the
+current page is <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#pagename'><code class='varlink'>&#036;pagename</code></a>.
+</p>
+<p class='vspace'>The substitutions go as follows:
+</p>
+<div class='vspace'></div><ol><li>Replace any sequences of the form <code class='escaped'>$XyzFmt</code> with value of any   corresponding global variable.
+</li><li>Process the string for any <code class='escaped'>$[...]</code> phrases (internationalized phrase),   using the currently loaded translation tables.
+</li><li>Replace any instances of <code class='escaped'>{$ScriptUrl}</code> with <code class='escaped'>$ScriptUrl</code>   (to defer processing to the URI processing phase)
+</li><li>Replace any instances of standard <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page Variables</a>   (beginning with an upper case letter, followed by at least one word character)   with their values. <span  style='color: green;'>Note that PVs of the form <code class='escaped'>{Group.Page$Var}</code> are <strong>not</strong> replaced.</span>  If there are no more $-sequences, then return the formatted string and exit the function
+</li><li>Perform any pattern replacements from the array {$FmtP. Typically   this is used to handle things like $}Name and $Group etc that are   specific to the name of the current page. <span  style='color: green;'><em>?? Appears to be used in robots.php to hide actions from robots.</em></span>
+</li><li>Replace any remaining instances of Page Variables with their values.   <span  style='color: green;'>Note that these variables are in the form <code class='escaped'>$Var</code> rather than the usual PV form of <code class='escaped'>{$Var}</code>.</span>
+</li><li>If {$EnablePathInfo isn't set, convert <code class='escaped'>URIs</code> to use the syntax   $}ScriptUrl?n=&lt;Group&gt;.&lt;Name&gt; instead of {$ScriptUrl/&lt;Group&gt;/&lt;Name&gt;.   In any case, replace $}ScriptUrl with its value.   If there are no more $-sequences, then return the formatted string and exit the function
+</li><li>Replace any $-sequences with global variables (caching as needed)   of the same name (in reverse alphabetical order, and filtering out any unsafe globals) *
+</li><li>Replace any {$-sequences with values out of the array $}FmtV.
+</li></ol><p class='vspace'>Note that <code class='escaped'>FmtPageName</code>() is automatically aware of any global
+variables. However, since modifying global variables may be expensive, the
+array <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtV'><code class='varlink'>&#036;FmtV</code></a> exists as a way to avoid rebuilding the variable cache for
+values that change frequently.
+</p>
+<div class='vspace'></div><h2>Security</h2>
+<p>According to PM, as a general rule it&rsquo;s unwise to be calling FmtPageName() on strings that are coming from page markup, as this exposes the ability for people to view the values of variables that perhaps they shouldn&rsquo;t see.  This is also why page variables (which come from markup) use PageVar() and PageTextVar() and don&rsquo;t go through FmtPageName().
+</p>
+<div class='vspace'></div><h2>Availability of Variables in FmtPageName</h2>
+<p>To be very specific, here&rsquo;s what Pm wrote regarding different ways of
+defining a variable that can be used by FmtPageName (when it is formatting a
+string):
+</p>
+<div class='vspace'></div><ul><li>Set a global variable.  FmtPageName() automatically performs   substitution on all global variables that aren&rsquo;t arrays.   If the variable is going to change value over repeated calls   to FmtPageName, it&rsquo;s probably better to use <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/OtherVariables#FmtV'><code class='varlink'>&#036;FmtV</code></a> as in the next item.
+<div class='vspace'></div></li><li>Set a value in the {$FmtV array.  $}FmtV[&lsquo;{$MyVariable']='something'    means to replace instances of '$}MyVariable&rsquo; with &lsquo;something&rsquo;.   Use this for variables that change value frequently over   multiple calls to FmtPageName.  
+<div class='vspace'></div></li><li>Set a pattern/replacement in the {$FmtP array.  This is normally   done for substitutions that have to be dynamic somehow based on   the pagename being referenced, such as '$}Title&rsquo;, &lsquo;{$Group', '$}Name&rsquo;,   &lsquo;&#36;PageUrl&rsquo;, etc.
+</li></ul><p class='vspace'>Also see: <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Functions#FmtPageName' rel='nofollow'>Cookbook:Functions#FmtPageName</a>
+</p>
+<p class='vspace'>Finally, here&rsquo;s something else Pm wrote that is related and explains
+why we have this function:
+</p>
+<div class='vspace'></div><div class='indent'>In order to produce its output, PmWiki has to do a variety of string    substitutions:
+<div class='vspace'></div><ol><li>Generating the full name, group, title, or url of a page     (other than the currently displayed page)
+</li><li>Substituting the values of global variables
+</li><li>Performing internationalization substitutions
+</li><li>Converting {$ScriptUrl/$}Group/{$Name to $}ScriptUrl?n={$Group.$}Name    for sites that cannot handle PATH_INFO urls
+</li><li>Other substitutions needed by specific functions
+</li></ol><div class='vspace'></div></div><div class='indent'>PmWiki centralizes all of that substitute-a-dynamic-value-in-a-string    into the FmtPageName() subroutine.  Because some things are extremely    dynamic, such as the url or group for an arbitrary page that is not the    current one, those things cannot be simple global PHP variables.  Or, if    they do become global variables, they&rsquo;re variables that cannot be    trusted to hold a value for very long because some other routine (that    may happen to be formatting a string for a different page) will come    along and change that global variable for whatever it happens to be doing.
+<div class='vspace'></div></div><div class='indent'> A limited set of {$-substitutions -- basically anything that     corresponds to a page attribute -- are not PHP variables and     are only available through the FmtPageName() subroutine.      The complete set of these special substitutions is $}Group,     {$Name, $}FullName, {$PageUrl, $}Title, {$Titlespaced, $}Namespaced,     {$Groupspaced, $}LastModifiedBy, {$LastModifiedHost, and $}LastModified.      These items cannot just be standard PHP variables because often    PmWiki needs to obtain the url, name, group, title, etc. of a page     other than the one currently being viewed by a browser.
+<div class='vspace'></div></div><div class='indent'> At the moment, {$Title, $}LastModified, {$LastModifiedBy, and     $}LastModifiedHost can only work if the page&rsquo;s attributes have been     loaded and cached using the PCache function.   So, to get    at these values one must typically do:
+<div class='vspace'></div></div><div class='indent'><pre class='escaped'>
+$page = ReadPage($pagename);
+PCache($pagename, $page);
+$ptitle = FmtPageName('$Title', $pagename);
+$pauthor = FmtPageName('$LastModifiedBy', $pagename);
+</pre>
+</div><p> 
+<a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/FmtPageName' rel='nofollow'>PmWiki:FmtPageName</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/FmtPageName-Talk' rel='nofollow'>PmWiki:FmtPageName-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FmtPageName?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on September 10, 2011, at 06:08 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

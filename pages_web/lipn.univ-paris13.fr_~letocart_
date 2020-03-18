@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+
+   <head>
+       <title>Lucas L&eacute;tocart - Page acad&eacute;mique</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+       <link rel="stylesheet" media="screen" type="text/css" title="DesignJPOC" href="LIPN_gp.css" />
+   </head>
+
+   <body>
+       <div id="en_tete"> <!-- debut de l'en-tete -->
+            <table>
+            <tr>
+                <td><a href="http://www.univ-paris13.fr/"><img src="logoP13Petit.gif" alt="Logo Universit&eacute; Paris 13" /></a></td>
+                <td><h1><a href="http://www-lipn.univ-paris13.fr/">LIPN</a> : <a href="http://www-lipn.univ-paris13.fr/AOC/">AOC</a></h1></td>
+                <td><a href="http://www.cnrs.fr/"><img src="logoCNRS.jpg" alt="Logo CNRS" /></a></td>
+            </tr>
+            </table>
+            <h1>Lucas L&eacute;tocart - Page Acad&eacute;mique</h1>
+<table ><tr><td><img src="Photo_Lucas_Letocart_web.jpg" height="240" width="320" alt="Photo" /></td>
+<td>
+<i>Lucas L&eacute;tocart<br/>
+Laboratoire d'Informatique de l'Universit&eacute; Paris Nord<br/>
+Institut Galil&eacute;e<br/>
+Avenue J.B. Cl&eacute;ment<br/>
+93430 VILLETANEUSE<br/>
+
+FRANCE<br/>
+Tel 	: +33 1 49 40 35 95<br/>
+Fax 	: +33 1 48 26 07 12<br/>
+E-mail 	:lucas.letocart@lipn.univ-paris13.fr<br/><br/>
+</i>
+</td>
+</tr>
+</table>
+<hr/>
+       </div> <!-- fin de l'en-tete -->
+ 
+       <div id="menu">
+       <!-- Ici on mettra le menu -->
+            <table> <!-- tableau contenant le menu -->
+            <tr>
+               <td><a href="index.html">Accueil</a></td>
+               <td><a href="enseignement.html">Enseignement</a></td>
+               <td><a href="recherche.html">Recherche</a></td>
+               <td><a href="publications.html">Publications</a></td>
+            </tr>
+            </table>
+            <hr/>
+      </div>
+ 
+
+       <div id="corps">
+       <!-- Ici on mettra le contenu principal de la page (tout le texte quoi) -->
+
+       <div>
+       <h2>Situation actuelle</h2>
+       <p>Ma&icirc;tre de Conf&eacute;rences&nbsp;en informatique &agrave; l'<A HREF="http://www-galilee.univ-paris13.fr/">Institut
+       Galil&eacute;e,</p>
+       
+       <HR><A NAME="cont"></A>
+       <H2>
+       Contact&nbsp;<IMG SRC="mail16.gif" HEIGHT=32 WIDTH=32 ALIGN=ABSCENTER></H2>
+
+       <ADDRESS>
+       <TT>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       : Lucas L&eacute;tocart</TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>e-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <A HREF="mailto:lucas.letocart@lipn.univ-paris13.fr">lucas.letocart@lipn.univ-paris13.fr</A></TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+       +33 (1) 49 40 35 95</TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       : +33 (1) 48 26 07 12 </TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>Postal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : LIPN</TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       UMR CNRS 7030 - Universit&eacute; Paris 13</TT></ADDRESS>
+
+       <ADDRESS>
+       <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       99, avenue J-B. Cl&eacute;ment</TT></ADDRESS>
+
+      <ADDRESS>
+      <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      93430 VILLETANEUSE</TT></ADDRESS>
+
+      <ADDRESS>
+      <TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      FRANCE</TT></ADDRESS>
+
+<!--       <h2>Adresse professionnelle</h2>
+       Laboratoire d'informatique de Paris-Nord (LIPN), UMR CNRS 7030<br/>
+       Institut Galil&eacute;e, Universit&eacute; Paris 13<br/>
+       99, Avenue Jean-Baptiste Cl&eacute;ment<br/>
+       93430 Villetaneuse<br/>
+       tel. 01 49 40 35 95 (fax 01 48 26 07 12)<br/>
+       email lucas.letocart@lipn.univ-paris13.fr<br/>-->
+       </div>
+
+        </div>
+       </div> 
+       <div id="pied_de_page">
+       <!-- Enfin, on mettra en bas de la page le nom de l'auteur, un copyright... -->
+       </div>
+   </body>
+</html>
+
+
+
+

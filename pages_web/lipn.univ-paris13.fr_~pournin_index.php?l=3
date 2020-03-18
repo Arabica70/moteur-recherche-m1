@@ -1,0 +1,131 @@
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="lipn.png">
+
+ 
+<title>Lionel Pournin - Research</title>
+<meta name="author" content="Lionel Pournin">
+<meta name="description" content="Lionel Pournin, research interests">
+<meta name="keywords" content="Lionel Pournin, numerical simulation, granular media, discrete geometry, polytopes, operations research, triangulations">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div style="width=470;font-size:26px;font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">
+Lionel Pournin - Research
+</div>
+
+<hr align=left noshade size=2 width=200 style="margin-bottom:-5px;">
+
+<table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:120px;">
+      <p style="margin-top:20px;font-size:18px;"><a href="http://lipn.univ-paris13.fr/~pournin/">Main</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=2">Teaching</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=3">Research</a></p>
+<p style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;margin-top:-16px;"><span class="sp4">[<a href="index.php?l=32" style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;">Flip-graphs</a>]</span></p>
+<p style="font: 14px 'HelveticaNeue-Light',  'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;margin-top:-14px;"><span class="sp4">[<a href="index.php?l=33" style="font: 14px 'HelveticaNeue-Light',  'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Tesseract</a>]</span></p>
+<p style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300; margin-top:-14px;"><span class="sp4">[<a href="index.php?l=31" style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Simulation</a>]</span></p>
+<p style="margin-top:0px;font-size:18px;"><a href="index.php?l=4">Publications</a></p>
+<!--
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=6">Talks</a></p>
+-->
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=5">Links</a></p>
+      </div>
+    </td>
+    <td valign="top">
+      <div style="clear:both;float:left;width:910px;" align="justify">
+  <div style="position:relative;float:right;width:215px;;margin-top:-10px;">
+  <div style="position:relative;float:right;width:200px;">
+    <p><br>
+      <video width="200" height="320" style="margin-bottom:5px;" autoplay loop>
+        <source src="64k.mp4" type="video/mp4">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="200" height="320">
+          <param name="movie" value="64k.swf">
+          <param name="quality" value="high">
+          <param name="allowScriptAccess" value="sameDomain" />
+          <param name="allowFullScreen" value="True" />
+          <embed src="64k.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="200" height="320" allowScriptAccess="sameDomain" allowFullScreen="True">
+          </embed>
+        </object>
+
+      </video>
+      <font size=2>Pouring 64000 spherosimplices into a cylindrical container.</font>
+    </p>
+  </div>
+  </div>
+
+  <p align="justify">
+My research interests include discrete geometry and numerical simulation of granular media. How do these two (seemingly distant) subjects relate to one another?
+  </p>
+  <p align="justify">
+    <i>Numerical simulation of granular media</i> consists in reproducing the evolution with time of an assembly of particles (typically sand, pebbles, rice...) on a computer. This requires, among other things, a physical model for the contacts and an algorithm to detect the occurrence of these contacts. The contact detection algorithm is the reason why discrete geometry comes into play. <br>
+<!-- I use Distinct Element Method: here, the time is discretized and the equation of motion are integrated for each particle assuming that the forces acting of the grains are constant within one time step. Most of my simulations are performed using the contact force model by Cundall and Strack [1]. <br> -->
+  </p>
+  <p align="justify">
+      The contact detection method implemented in the simulation code I contributed to uses <i>weighted Delaunay triangulations</i>, also sometimes called regular triangulations. This method was designed by <a href="http://www.apprendre-en-ligne.net/auteur/">Didier M&uuml;ller</a> in the two-dimensional case [1] and Jean-Albert Ferrez for three-dimensional spherical grains [2,3], both under the supervision of <a href="http://people.epfl.ch/thomas.liebling">Prof. Tom Liebling</a>. During my PhD, I extended the Distinct Element simulation Method and Jean-Albert's C++ code to handle non-spherical particle shapes which I called <i>spheropolyhedra</i> [4].
+  </p>
+  <p align="justify">
+    The convergence of the triangulations-based contact detection method is conditioned to the connectedness of flip-graphs associated to three dimensional point configurations, which is an open problem in discrete geometry. See my <a href="index.php?l=32">page on flip-graphs</a> for some details on this problem.
+  </p>
+  <p align="justify">
+    Along these directions, I proved that the flip-graph of the <a href="index.php?l=33">4-dimensional cube</a> (or <i>tesseract</i>), is connected. This was another long-standing open problem in discrete geometry.
+  </p>
+
+  <p align="justify">
+    The granular media simulation code I contributed to can be used to investigate many phenomena occuring for assemblies of particles. These phenomena have a fundamental importance to both engineers and physicists. If you are interested in computer simulation and physics
+ of granular media, you may visit my <a href="index.php?l=31">page on numerical simulation</a>.
+  </p>
+
+<!--
+    <span class="sp4">[1] </span><span class="sp2"><a href="http://dx.doi.org/10.1680/geot.1979.29.1.47">A discrete numerical model for granular assemblies</a>, P. A. Cundall, O. D. L. Strack, G&eacute;otechnique <b>29</b>, 1, 47-65 (1979)</span><br>
+-->
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[1]</h3>
+  </div>
+  <div style="float:right;width:860px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://library.epfl.ch/en/theses/?nr=1545">Techniques informatiques efficaces pour la simulation de milieux granulaires par des m&eacute;thodes d&eacute;l&eacute;ments distincts</a><br>D. M&uuml;ller, EPFL PhD Thesis #1545 (1996)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[2]</h3>
+  </div>
+  <div style="float:right;width:860px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://library.epfl.ch/en/theses/?nr=2432">Dynamic triangulations for efficient 3D simulation of granular materials</a><br>J.-A. Ferrez, EPFL PhD Thesis #2432 (2001)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[3]</h3>
+  </div>
+  <div style="float:right;width:860px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://dx.doi.org/10.1080/13642810208218352">Dynamic triangulations for efficient detection of collisions between spheres with applications in granular media simulations</a><br>J.-A. Ferrez, Th. M. Liebling, Phil. Mag. B <b>82</b>(8), 905-929 (2002)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[4]</h3>
+  </div>
+  <div style="float:right;width:860px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://library.epfl.ch/en/theses/?nr=3378">On the behavior of spherical and non-spherical grain assemblies, its modeling and numerical simulation</a><br>L. Pournin, EPFL PhD Thesis #3378 (2005)</h3>
+  </div>
+</div>
+
+    </td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6627459; 
+var sc_invisible=1; 
+var sc_security="1f468d45"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

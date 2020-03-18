@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>ANR PACS: Parametric Analyses of Concurrent Systems</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="ANR PACS is an ANR project from 2014-2019 involving IRIF (Université de Paris), LIPN (Paris 13), and LS2N (formerly IRCCyN and LINA, Nantes, France), École Centrale de Nantes and Université de Nantes" />
+	<meta name="keywords" content="ANR, PACS, Agence nationale de la recherche, Parametric verification, 2014, 2015, 2016, 2017, 2018, 2019, France, research, ANR-14-CE28-0002" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="PACS.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<img style="float:right;" src="PACS.png" alt="ANR PACS" height="100" title="PACS – Logo: Mathias Ramparison" />
+		<h1><a href="index.php">ANR PACS</a></h1>
+		<h2>Parametric Analyses of Concurrent Systems</h2>
+		<h3>ANR-14-CE28-0002</h3>
+		<img src="pacs_banner.jpg" width="1024" alt="PACS" title="PACS – Photo: unknown guy passing by – Licence: Copyright (all rights reserved)" />
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php#top">Home</a></li>
+			<li><a href="index.php#project">About PACS</a></li>
+			<li><a href="index.php#news">News</a></li>
+			<li><a href="index.php#partners">Partners</a></li>
+			<li><a href="deliverables.php">Deliverables</a></li>
+			<li><a href="publications.php">Publications</a></li>
+			<li><a href="https://lipn.univ-paris13.fr/SynCoP2019/">SynCoP 2019</a></li>
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>PACS?</h3>
+		<p>PACS is an ANR project involving five partners from three cities (Paris, Nantes, Aalborg) working together on formal verification with parameters.</p> 
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+		<h2 id="project">About PACS</h2>
+		
+		<p>Model-checking and formal modeling are now techniques with a certain academic recognition, but their applicability in practice remain somewhat inferior to expectations. This is in part due to two main problems: rather rigid modeling of the systems impairing abstraction and scalability, and insufficient feedback from the verification process. In this project, we address these issues by lifting these techniques to the more flexible and rich setting of parametrised formal models.</p>
+
+		<p>In that setting, some features of the system like the number of processes, the size of some buffers, communication delays, deadlines, energy consumption, and so on, may be not numerical constants, but rather unknown parameters. The model-checking questions then become more interesting: is some property true for all values of the parameters? Or does there exist some value such that it is? Or even what are all the possible values such that it is?</p>
+
+		<p>Building on the skills of the consortium on topics like regular model-checking, timed systems, probabilistic systems, and our previous contributions in model-checking of systems with a parametrised number of processes and parametrised timed systems, including the development of software tool prototypes, we develop in this project new models, techniques, and tools to extend the applicability of parameters in formal methods.</p>
+
+		<p>To achieve this objective, we study parameters in the context of discrete and timed/hybrid systems, both of them possibly augmented with quantitative information relating to costs (e.g. energy consumption), and probabilities. This gives the following six tasks:</p>
+		<ol>
+		<li>Discrete parameters</li>
+		<li>Timing parameters</li>
+		<li>Discrete and timing parameters</li>
+		<li>Parameters in cost-based models</li>
+		<li>Parameters in discrete models with probabilities</li>
+		<li>Parameters in timed models with probabilities</li>
+	</ol>
+
+		<p>Parametrised models are of obvious interest but the associated theoretical problems are hard. For instance, in the model of parametric timed automata, the basic model for timed systems with time parameters, the mere existence of a parameter value such that the system can reach some given state, is generally undecidable, even with only one parameter.</p>
+
+		<p>As a consequence, in all these tasks, we follow a common methodology, acknowledging these difficulties, and consisting in formalising the problem, studying decidable subclasses and designing efficient algorithms for the the parametrised model-checking problems (including in particular parameter synthesis), building efficient semi-algorithms for the general class that behave well in realistic cases, and finally implement the techniques in tool prototypes.</p>
+
+		<p>This raises many challenging and original problems like extending regular model-checking to graphs to model parametrised systems with an arbitrary topology, using infinite-state automata to represent sets of configurations, finding useful decidable classes of parametrised timed/hybrid systems or properties, provide techniques for approximate synthesis of parameter values, study models with parametrised costs, study probabilistic parametric models, and extend statistical verification techniques to parametric systems.</p>
+
+		<p>Beyond the classical application fields of formal methods (e.g. embedded systems), we envision new applications domains like smart homes, where parameters may account for the specifics of the residents. In that setting, cost-based parametrised models are particularly interesting for a focus on optimising energy consumption.</p>
+		
+		
+		<h2 id="news">News</h2>
+		
+		<dl>
+			<dt>1/10/2019</dt>
+			<dd>Project end</dd>
+			
+			<dt>6-7/04/2019</dt>
+			<dd><a href="https://lipn.univ-paris13.fr/SynCoP2019/">SynCoP 2019</a> in Prag, Czech Republic</dd>
+
+			<dt>11/02/2019</dt>
+			<dd>Project meeting #9 in Nantes</dd>
+
+			<dt>28/08/2018</dt>
+			<dd>Project meeting #8 in Paris 13</dd>
+
+			<dt>14-15/04/2018</dt>
+			<dd><a href="https://lipn.univ-paris13.fr/SynCoP2018/">SynCoP 2018</a> in Thessaloniki, Greece</dd>
+
+			<dt>03/04/2018</dt>
+			<dd>Project meeting #7 in Paris 7</dd>
+
+			<dt>30/08/2017</dt>
+			<dd>Project meeting #6 in Paris 7</dd>
+
+			<dt>06/2017</dt>
+			<dd>Tutorial at Petri Nets 2017</dd>
+
+			<dt>22-23/04/2017</dt>
+			<dd><a href="https://lipn.univ-paris13.fr/SynCoPPV2017/">SynCoP 2017</a> in Uppsala, Sweden</dd>
+			
+			<dt>13/03/2017</dt>
+			<dd>Project meeting #5 in Nantes</dd>
+
+			<dt>01/03/2017</dt>
+			<dd>We are very glad to hire <a href="https://lipn.univ-paris13.fr/~andre/">Louis Fippo-Fitime</a> as a post-doc at LIPN</dd>
+
+			<dt>04/10/2016</dt>
+			<dd>ANR review</dd>
+
+			<dt>19/10/2016</dt>
+			<dd>Presentation of the CoPaS project by Benoît Delahaye [<a href="http://webtv.univ-nantes.fr/fiche/8748/atlanstic2020-presentation-du-projet-copas-constraints-in-parametric-systems">video</a>]</dd>
+
+			<dt>26/09/2016</dt>
+			<dd>Video-meeting in Paris 13 / LINA</dd>
+
+			<dt>7/09/2016</dt>
+			<dd>Video-meeting in Paris 13 / LINA</dd>
+
+			<dt>21/06/2016</dt>
+			<dd>Tutorial at <a href="http://pn2016.mat.umk.pl/">Petri Nets 2016</a> (<a href="https://www.youtube.com/playlist?list=PL9SOLKoGjbepAll8RnD16FfYngJtN22DY">videos of session 1</a>,
+					<a href="https://www.imitator.fr/tutorials/PN16/">documents for practical session 2</a>,
+					<a href="https://www.youtube.com/playlist?list=PL9SOLKoGjbeoRFCNJ5ujRHTqZ5IQL8cQH">videos of session 3</a>)</dd>
+
+			<dt>26/05/2016</dt>
+			<dd>Project meeting #4 / AFSEC workshop day in Paris 7</dd>
+
+			<dt>3/04/2016</dt>
+			<dd><a href="http://lipn.univ-paris13.fr/SynCoP2016/">SynCoP 2016</a> in Eindhoven, The Netherlands</dd>
+			
+			<dt>16/10/2015</dt>
+			<dd>Project meeting #3 in Nantes</dd>
+
+			<dt>11/04/2015</dt>
+			<dd><a href="https://lipn.univ-paris13.fr/SynCoP2015/">SynCoP 2015</a> in London, UK</dd>
+			
+			<dt>27/03/2015</dt>
+			<dd>Project meeting #2 in Paris 7</dd>
+
+			<dt>6/10/2014</dt>
+			<dd>Project meeting #1 in Paris 13</dd>
+
+			<dt>1/10/2014</dt>
+			<dd>Project start</dd>
+		</dl>
+	
+			
+		<h2 id="partners">Partners</h2>
+		
+		<table id="tpartners">
+		        <thead>
+		        <tr>
+					<th>LIPN (Paris 13)</th>
+					<th>LS2N (IRCCyN) (Nantes)</th>
+					<th>IRIF (Paris 7)</th>
+					<th>LS2N (LINA) (Nantes)</th>
+					<th>Aalborg</th>
+				</tr>
+		        </thead>
+		        <tr>
+					<td class="globalc"><span class="partnerLIPN"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span></td>
+		            <td><span class="partnerIRCCYN">Nicolas David</span></td>
+					<td class="localc"><span class="partnerIRIF"><a href="https://www.irif.fr/~haberm/">Peter Habermehl</a></span></td>
+					<td class="localc"><span class="partnerLINA"><a href="http://pagesperso.ls2n.fr/~delahaye-b/">Benoît Delahaye</a></span></td>
+					<td><span class="partnerAalborg"><a href="http://people.cs.aau.dk/~kgl/">Kim G. Larsen</a></span></td>
+				</tr>
+		        <tr>
+		            <td><span class="partnerLIPN"><a href="https://lipn.univ-paris13.fr/~hoanggia.nguyen/">Nguyễn Hoàng Gia</a></span></td>
+					<td><span class="partnerIRCCYN"><a href="http://pagesperso.ls2n.fr/~jezequel-l/">Loïg Jézéquel</a></span></td>
+		            <td><span class="partnerIRIF">Prateek Karandikar</span></td>
+					<td><span class="partnerLINA">Yrvann Emzivat</span></td>
+					<td class="localc"><span class="partnerAalborg"><a href="http://people.cs.aau.dk/~srba/">Jiří Srba</a></span></td>
+				</tr>
+		        <tr>
+		            <td><span class="partnerLIPN"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span></td>
+					<td class="localc"><span class="partnerIRCCYN"><a href="http://pagesperso.ls2n.fr/~lime-d/">Didier Lime</a></span></td>
+		            <td><span class="partnerIRIF"><a href="https://www.irif.fr/~sangnier/main-sangnier.html">Arnaud Sangnier</a></span></td>
+		            <td><span class="partnerLINA"><a href="http://pagesperso.ls2n.fr/~jard-c/">Claude Jard</a></span></td>
+		            <td></td>
+				</tr>
+		        <tr>
+		            <td><span class="partnerLIPN"><a href="https://lipn.univ-paris13.fr/~touili/">Tayssir Touili</a></span></td>
+					<td><span class="partnerIRCCYN"><a href="http://pagesperso.ls2n.fr/~roux-o/">Olivier H. Roux</a></span></td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+				</tr>
+		        <tr>
+		            <td><span class="partnerLIPN"><a href="https://lipn.univ-paris13.fr/~ramparison/">Mathias Ramparison</a></span></td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+				</tr>
+		        <tr>
+		            <td><a href="https://lipn.univ-paris13.fr/~andre/"><span style="text-decoration: line-through;">Louis Fippo-Fitime</span></a></td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+				</tr>
+		    </table>
+
+
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<a href="http://www.agence-nationale-recherche.fr/"><img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR"></a>
+			<a href="https://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>
+			<img src="images/cnrs.png" alt="CNRS" title="CNRS">
+		</div>
+		
+		<div id="copyright">
+			<p>Design: <a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)</p>
+			<p>Title font: <a href="https://www.fontsquirrel.com/fonts/alegreya-sans">Alegreya Sans</a> (SIL Open Font)</p>
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+
+<!-- Piwik -->
+
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>
+ 

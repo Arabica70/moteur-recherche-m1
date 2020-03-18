@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Signaux rapides en plusieurs dimensions</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Signaux rapides en plusieurs dimensions"/>
+            <meta property="og:url" content="./dubacqdea95.html"/>
+            <meta property="og:description" content="Les automates cellulaires ont des propriétés très différentes selon qu'ils soient en dimension 1 ou 2 d'un point de vue de la calculabilité. Après avoir défini une notion de signal, on essaye ici d'analyser la puissance de calcul intrinsèque des automates cellulaires en une ou deux dimensions d'après la forme des signaux qu'il est possible de générer."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dubacqdea95.html"
+         rel="bookmark"
+         title="Permalink to Signaux rapides en plusieurs dimensions">
+        Signaux rapides en plusieurs dimensions
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>ven. 04 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/rapport.html">rapport</a>
+        /
+	<a href="./tag/signal.html">signal</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Les automates cellulaires ont des propriétés très différentes selon
+qu'ils soient en dimension 1 ou 2 d'un point de vue de la
+calculabilité. Après avoir défini une notion de signal, on essaye ici
+d'analyser la puissance de calcul intrinsèque des automates cellulaires
+en une ou deux dimensions d'après la forme des signaux qu'il est
+possible de générer.</p>
+<p>Une vision alternative des automates cellulaires est de considérer
+qu'ils ne sont pas des agents actifs de calcul, mais simplement un
+milieu discret sur lequel se propagent des signaux (un signal se déplace
+en ligne droite, et un ou plusieurs signaux ne sont générés — à des
+angles calculables — uniquement à l'intersection de signaux ; certains
+«&nbsp;trucs&nbsp;» permettant de faire des «&nbsp;boucles de
+signaux&nbsp;»).</p>
+<p>Les résultats contenus sont intéressants et forment la base de mon
+travail avec Véronique Terrier. On a notamment construit en dimension 2
+un signal qu'il n'est pas possible de construire en dimension 1, à
+savoir un signal de vitesse <span class="math">\(n+\log^\star(n)\)</span>.</p>
+<h2>À propos de ce rapport</h2>
+<p>Ce rapport est issu de mon stage de DEA au LIP sous la direction de
+Jacques Mazoyer et Bruno Durand. Le rapport fourmille de schémas et
+d'illustrations, et je n'ai pas pu m'empêcher d'inclure ici la vieille
+version «&nbsp;couleur&nbsp;». La version PostScript avait la propriété
+de s'imprimer avec des tâches (de café) à des endroits différents à
+chaque fois. En 1995, c'était déjà pas mal.</p>
+<p>Plutôt que les transparents d'origine, j'ai inclus les transparents
+refaits à l'occasion des <a href="./rpac2008.html">rencontres programmation sur automates
+cellulaires</a> de Jean-Baptiste Yunès en
+2008.</p>
+<p>J'ai également recompilé avec une version moderne de LaTeX le
+rapport. Il semblerait que la gestion des veuves et des orphelines ait
+changé, et je n'arrive pas à obtenir la même pagination exacte. Mais
+comme je ne suis pas sûr que le fichier que j'avais était déjà celui
+d'origine et que ça n'a aucune importance, on se contentera de ce
+nouveau fichier.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/rpac2008.pdf">Le transparents de l'exposé RPAC 2008</a></li>
+<li><a href="./pdf/publications/dubacqdea95.pdf">Le rapport de stage (recompilé)</a></li>
+<li><a href="./pdf/publications/couleur.ps.xz">Le rapport original version parchemin sans tâches de café</a></li>
+</ul>
+<h2>Citer ce document</h2>
+<div class="highlight"><pre>@MastersThesis{dubacqdea95,
+  author =   {Jean-Christophe Dubacq},
+  title =    {Signaux rapides en plusieurs dimensions},
+  school =   {\&#39;Ecole normale sup\&#39;erieure de Lyon},
+  year =     {1995},
+  type =     {DEA / Master degree}},
+  month =    sep,
+  note =         {LIP, ENS Lyon}
+}
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

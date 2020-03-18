@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lectures at HDU (Hangzhou Dianzi University)</title>
+</head>
+<body>
+
+  <h1>Lectures at HDU (Hangzhou Dianzi University)</h1>
+  
+  <hr>
+
+  <nav>
+    <span>Lectures</span><a href=""></a>
+    <span class="sublink-1">Java</span>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/java-jee.html" class="sublink-2">JEE: servlet and JavaMail</a>
+    <span class="sublink-1">Web programming</span>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/client_side_web_programming.html" class="sublink-2">Client Side Web Programming</a>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/emscripten.html" class="sublink-2">Emscripten: C/C++ in the browser - Pthread programming in the browser</a>
+    <span class="sublink-1">Programming concepts and languages</span>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/python_go_scala_oop.html" class="sublink-2">Python vs. Go vs. Scala Object Oriented Programming</a>
+    <span class="sublink-1">Blockchain</span>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/vocabulary.html" class="sublink-2">Vocabulary</a>
+    <a href="https://lipn.univ-paris13.fr/~cerin/HDU/ethereum.html" class="sublink-2">Ethereum in practice</a>
+    <span>Resources on the Web</span>
+    <a href="https://github.com/djtrack16/thyme/tree/master/computer%20science" class="sublink-1">Great papers/books in Computer Sciences</a>
+    <a href="https://github.com/sindresorhus/awesome" class="sublink-1">Awesome project</a>
+  </nav>
+  
+
+<hr>
+
+<p>
+Christophe C&eacute;rin<br>
+<tt>christophe.cerin@univ-paris13.fr</tt><br>
+April-May-August-September, 2019
+</p>
+
+<p>
+</p>
+<hr>
+</body>
+</html>

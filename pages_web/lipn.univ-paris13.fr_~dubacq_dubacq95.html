@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Simuler une machine de Turing par un automate cellulaire inversible</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Simuler une machine de Turing par un automate cellulaire inversible"/>
+            <meta property="og:url" content="./dubacq95.html"/>
+            <meta property="og:description" content="Il est indécidable de savoir si un automate cellulaire est inversible. L'universalité des automates cellulaires inversibles a été résolue par Toffoli qui a montré qu'un automate cellulaire quelconque peut-être simulé par un automate cellulaire de dimension juste supérieure. Cet article présente une méthode pour prouver le même théorème en dimension 1, accessible à des étudiants de niveau M1 ou M2 pour prouver cela."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dubacq95.html"
+         rel="bookmark"
+         title="Permalink to Simuler une machine de Turing par un automate cellulaire inversible">
+        Simuler une machine de Turing par un automate cellulaire inversible
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>ven. 04 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/modele-de-calcul.html">modèle de calcul</a>
+        /
+	<a href="./tag/inversibilite.html">inversibilité</a>
+        /
+	<a href="./tag/journal.html">journal</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Il est indécidable de savoir si un automate cellulaire est
+inversible. L'universalité des automates cellulaires inversibles a été
+résolue par Toffoli qui a montré qu'un automate cellulaire quelconque
+peut-être simulé par un automate cellulaire de dimension juste
+supérieure. Ainsi, pour tout automate de dimension <em>d</em>≥2, le problème
+est résolu. Toutefois le cas de la dimension 1 était encore à
+traiter. <a href="http://www.iec.hiroshima-u.ac.jp/%7Emorita/">Kenichi Morita</a>
+avait déjà résolu le problème en montrant qu'une machine de Turing
+réversible pouvait simuler une machine de Turing quelconque, et en
+faisant simuler ces machines réversibles par des automates cellulaires
+de dimension 1 de façon réversible.</p>
+<p>Cet article présente une autre méthode, accessible à des étudiants de
+niveau M1 ou M2 pour prouver cela. En effet, partant de la simulation
+traditionnelle d'un automate cellulaire d'une machine de Turing et en
+utilisant un voisinage de taille 2 (ce qui peut ensuite se retransformer
+en un voisinage usuel {-1,0,1}) on peut projeter un historique de la
+simulation d'un côté sans que tout se mélange.</p>
+<h2>Les documents</h2>
+<p>L'article a été reformaté en A4 par rapport à l'original. La pagination peut donc en avoir été modifée.</p>
+<ul>
+<li><a href="./pdf/publications/dubacq95.pdf">Une version reformatée de l'article</a></li>
+</ul>
+<h2>Citer ce document</h2>
+<p>Cet <a href="http://dx.doi.org/10.1142/S0129054195000202">article</a> a été publié dans <a href="http://www.cs.ucsb.edu/%7Eijfcs/">IJFCS</a>, un journal (à l'époque) plutôt centré sur l'Asie (géographiquement).</p>
+<div class="highlight"><pre>@Article{dubacq95,
+  author =       {Jean-Christophe Dubacq},
+  title =        {How to simulate {Turing Machines} by invertible one-dimen\-sional cellular automata.},
+  journal =      {Int. J. of Found. of Comp. Sci.},
+  year =         1995,
+  volume =       6,
+  number =       4,
+  pages =        {395--402},
+  month =        dec
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

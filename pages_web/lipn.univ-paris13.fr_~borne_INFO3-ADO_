@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+
+   <head>
+       <title>SupGalil&eacute;e - INFO3 - ADO</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+       <link rel="stylesheet" media="screen" type="text/css" title="DesignINFO2" href="Info2.css" />
+   </head>
+
+   <body>
+       <div id="en_tete">
+       <!-- Ici on mettra la banni&egrave; re -->
+<table>
+<tr>
+<td><a href="http://www.sup-galilee.univ-paris13.fr/"><img src="logoSupGalilee.jpg" alt="Logo SupGalil&eacute;e" /></a></td>
+<td><img src="blanc.jpg" alt=" " /></td>
+<td><a href="http://www.univ-paris13.fr/"><img src="logoup13.gif" alt="Logo Universit&eacute; Paris 13" /></a></td>
+</tr>
+</table>
+<div>
+<h1>Ing&eacute;nieurs Informatique 3&egrave;me ann&eacute;e<br/>
+INFO3 - Option ADO</h1>
+</div>
+       </div>
+ 
+       <div id="menu">
+       <!-- Ici on mettra le menu -->
+
+            <span class="element_menu"> <!-- Cadre correspondant &agrave;  un sous-menu -->
+                   <a href="index.html">Accueil</a>
+            </span>
+ 
+            <span class="element_menu">
+		   <a href="#Edt">Emploi du temps</a>
+            </span>
+
+            <span class="element_menu">
+		   <a href="#Conf">Conf&eacute;rences</a>
+            </span>
+
+            <span class="element_menu">
+                   <a href="#Actu">Actualit&eacute;s</a>
+            </span>
+
+            <span class="element_menu">
+                   <a href="#Docs">Documents</a>
+            </span>
+
+            <span class="element_menu">
+                   <a href="#Contacts">Contacts</a>
+            </span>
+ 
+       </div>
+ 
+       <div id="corps">
+       <!-- Ici on mettra le contenu principal de la page (tout le texte quoi) -->
+
+          
+<div>
+           <h2>Option Aide &agrave; la D&eacute;cision et Optimisation</h2>     
+
+<p>
+<strong>Aide &agrave; la D&eacute;cision et Optimisation (ADO)</strong><br/>
+<a href="INFO3_OptionADO.pdf">INFO3_OptionADO.pdf</a><br/><br/>
+</p>
+<p>
+Vous devrez choisir un module parmi les modules optionnels suivants :<br/>
+- Apprentissage symbolique : mercredi matin &agrave; partir du 04 janvier.<br/>
+<a href="SYMB.html">Descriptif-SYMB</a><br/>
+- Analyse de R&eacute;seaux sociaux : mardi apr&egrave;s-midi &agrave; partir du 03 janvier.<br/>
+<a href="Descriptif-ARS.pdf">Descriptif-ARS.pdf</a><br/>
+Vous ne devrez suivre que l'un de ces deux cours.
+</p>
+</div>          
+       
+<div>
+
+           <h2 id="Edt">Emploi du temps 2012-2013</h2>
+
+<p>mise &agrave; jour du 14/01/2013 : <a href="EDT_INFO3_ADO.pdf">EDT_INFO3_ADO.pdf</a><br/></p>
+
+<h3> Mode d'emploi</h3>
+
+- L'emploi du temps de l'option ADO est s&eacute;par&eacute; de l'emploi du temps INFO3. Il sera toujours disponible &agrave; cette adresse.<br/>
+- Les cr&eacute;neaux not&eacute;s <strong>ADO (libre)</strong> sont des cr&eacute;neaux r&eacute;serv&eacute;s pour l'option mais dans lesquels aucun cours n'a encore &eacute;t&eacute; fix&eacute;. Tous ces cr&eacute;neaux ne seront pas utilis&eacute;s et cela va d&eacute;pendre des disponibilit&eacute;s des enseignants industriels.<br/>
+- A partir du 07/01/2013, vous devrez choisir entre le cours de <strong>R&eacute;seaux Sociaux</strong> (RS) du mardi apr&egrave;s-midi et celui d'<strong>Apprentissage Symbolique</strong>(SYMB) du mercredi matin. Vous ne devrez suivre que l'un de ces deux cours.<br/>
+
+</div>
+
+<div>
+
+           <h2 id="Conf">Conf&eacute;rences</h2>
+
+
+<h3> Calendrier des conf&eacute;rences 2011-2012:</h3> 
+<p>mise &agrave; jour du 07/10/2011 : <a href="calendrier_conferences_INFO3-ADO.pdf">calendrier_conferences_INFO3-ADO.pdf</a> </p>
+
+<!--<h3> Cr&eacute;neaux disponibles pour les conf&eacute;rences :</h3> 
+<p><a href="Dispo_conferences_INFO3-ADO.pdf">Dispo_conferences_INFO3-ADO.pdf</a> </p>-->
+
+</div>
+
+<div>
+
+           <h2>Descriptifs des conf&eacute;rences 2011-2012</h2>
+
+
+<h3> David De Almeida - Nicolas Marcos (SNCF)</h3>
+Mardi 8/11 de 13h45 &agrave; 17h en C315 et Jeudi 17/11 de 8h30 &agrave; 11h45 en G104.
+ 
+<p><strong>Aide &agrave; la d&eacute;cision en gestion de la production ferroviaire - Applications de la Recherche Op&eacute;rationnelle &agrave; la SNCF</strong><br/><br/>
+
+Apr&egrave;s une introduction illustrant la production ferroviaire en France, nous traiterons des grands principes de l'exploitation ferroviaire et pr&eacute;senterons quelques probl&egrave;mes de prises de d&eacute;cision structurant dans la gestion des ressources. Nous d&eacute;taillerons ensuite quelques contextes d'utilisation des techniques de la Recherche Op&eacute;rationnelle pour optimiser ces prises de d&eacute;cision, notamment pour la planification des engins et de certaines ressources utilis&eacute;es pour la maintenance du mat&eacute;riel. 
+
+</p>
+
+<h3> Matthieu Chardy (Orange) </h3>
+Mardi 15/11 de 13h45 &agrave; 17h en C214.
+ 
+<p><strong>Applications de la Recherche Op&eacute;rationnelle dans les t&eacute;l&eacute;coms</strong><br/><br/>
+
+Apr&egrave;s une courte pr&eacute;sentation de l'organisation du p&ocirc;le de Recherche Op&eacute;rationnelle des Orange Labs et de ses th&eacute;matiques de recherche, cette conf&eacute;rence focalisera sur trois probl&egrave;mes d&eacute;cisionnels cl&eacute;s pour un op&eacute;rateur mondial tel que France T&eacute;l&eacute;com Orange:
+<ul>
+   <li>l'optimisation des strat&eacute;gies d'interconnexion entre les acteurs de l'Internet,</li>
+   <li>l'optimisation de la planification des interventions Client et R&eacute;seau,</li>
+   <li>l'optimisation du d&eacute;ploiement du r&eacute;seau d'acc&egrave;s optique Fiber To The Home.</li>
+</ul>
+
+</p>
+
+<h3> Julien Briton (IBM) </h3>
+Vendredi 18/11 de 9h &agrave; 12h15 en C316.
+ 
+<p><strong></strong><br/>
+
+
+</p>
+
+
+<h3> Claude Le Pape (Schneider Electric) </h3>
+Mardi 22/11 de 13h45 &agrave; 17h Amphi Darwin.
+ 
+<p><strong>Programmation par contraintes et ordonnancement</strong><br/><br/>
+
+<ul>
+   <li>Introduction &agrave; la diversit&eacute; des probl&egrave;mes d'ordonnancement et &agrave; l'int&eacute;r&ecirc;t de la programmation par contraintes pour les r&eacute;soudre</li>
+   <li>Revue des contraintes d'ordonnancement les plus courantes
+       <ul>
+          <li>Activit&eacute;s interruptibles ou non-interruptibles, contraintes de non-pr&eacute;emption</li>
+          <li>Contraintes temporelles</li>
+          <li>Contraintes de ressources : ressources r&eacute;cup&eacute;rables et consomables, unaires, discr&egrave;tes, &agrave; &eacute;tat, &eacute;nerg&eacute;tiques</li>
+          <li>Contraintes de capacit&eacute; et de demandes en resssources variables dans le temps</li>
+          <li>Temps de transition</li>
+          <li>Contraintes complexes de synchronisation</li>
+       </ul>
+   </li>
+   <li>Propagation des contraintes temporelles (cas non-pr&eacute;emptif)</li>
+   <li>Propagation des contraintes de ressources (cas non-pr&eacute;emptif)
+       <ul>
+          <li>Tables d'emploi du temps</li>
+          <li>Contraintes disjonctives</li>
+          <li>"Edge-finding"</li>
+          <li>Raisonnement &eacute;nerg&eacute;tique</li>
+          <li>Comparaison</li>
+       </ul>
+   </li>
+   <li>Exemples d'applications
+       <ul>
+          <li>Atelier de moulage</li>
+          <li>Chantier de construction</li>
+       </ul>
+   </li>
+</ul>
+OUVRAGE DE REFERENCE :<br/>
+Philippe Baptiste, Claude Le Pape, and Wim Nuijten.<br/>
+Constraint-Based Scheduling.<br/>
+Kluwer Academic Publishers, 2001.
+</p>
+
+<h3> Miguel Antunes (GDF-Suez) </h3>
+Jeudi 24/11 de 8h30 &agrave; 11h45 en G104.
+ 
+<p><strong>Renforcement optimal des r&eacute;seaux r&eacute;gionaux de transport de gaz</strong><br/><br/>
+
+Le CRIGEN (Centre de Recherche et Innovation Gaz et &eacute;nergies Nouvelles) de GDFSUEZ d&eacute;veloppe un outil d'aide &agrave; la d&eacute;cision pour le d&eacute;veloppement des r&eacute;seaux r&eacute;gionaux de transport de gaz.<br/>
+
+Le probl&egrave;me de renforcement des r&eacute;seaux de transport de gaz consiste &agrave; :
+<ul>
+   <li>Identifier les canalisations &agrave; renforcer,</li>
+   <li>D&eacute;terminer les diam&egrave;tres de doublement optimaux,</li>
+   <li>Fournir la date de pose id&eacute;ale des canalisations.</li>
+</ul>
+Nous verrons comment mod&eacute;liser ce probl&egrave;me complexe ainsi que quelques r&eacute;sultats obtenus. 
+
+</p>
+
+<h3> Julien Lefebvre (Eurod&eacute;cision) </h3>
+Vendredi 25/11 de 8h30 &agrave; 11h45 en C304.
+ 
+<p><strong>Pr&eacute;sentation d'un logiciel d'optimisation de la chaine logistique</strong><br/><br/>
+
+Durant cette pr&eacute;sentation, apr&egrave;s avoir expliqu&eacute; ce qu'est une chaine logistique, je ferais un tour d'horizon des diff&eacute;rentes probl&eacute;matiques d'optimisation et j'expliquerais comment le logiciel permet de r&eacute;pondre &agrave; certaines de ces probl&eacute;matiques.
+
+</p>
+
+<h3> Erick Alphonse (IDAaaS) </h3>
+Mardi 29/11 de 13h45 &agrave; 17h Amphi Darwin.
+ 
+<p><strong></strong><br/>
+
+
+</p>
+
+<h3> Marc Porcheron (EDF) </h3>
+Vendredi 02/12 de 8h30 &agrave; 11h45 en F001.
+ 
+<p><strong>Optimisation de grands syst&egrave;mes, Trois &eacute;tudes de cas &agrave; EDF.</strong><br/><br/>
+
+Parmi les plus importants producteurs d'&eacute;lectricit&eacute;, EDF se doit d'optimiser sa production en permanence et cela &agrave; des horizons de temps vari&eacute;s : du long-terme o&ugrave; l'on programme les investissements sur la vingtaine d'ann&eacute;es &agrave; venir, jusqu'au tr&egrave;s court-terme o&ugrave; l'on d&eacute;cide en temps quasi-r&eacute;el de d&eacute;marrer ou pas un groupe de production pour satisfaire la demande, en passant par le moyen-terme o&ugrave; l'on planifie sur cinq ans les arr&ecirc;ts p&eacute;riodiques  des 58 r&eacute;acteurs nucl&eacute;aires du parc. Les probl&egrave;mes &agrave; traiter sont en g&eacute;n&eacute;ral de tr&egrave;s grande taille, fortement combinatoires pour certains d'eux, et pr&eacute;sentent quasiment tous des aspects stochastiques compte tenu du fait que l'optimisation est faite en avenir incertain (la demande &agrave; satisfaire, la disponibilit&eacute; des moyens de production, les prix de march&eacute; futurs, etc, ne sont pas connus avec certitude au moment o&ugrave; les d&eacute;cisions doivent &ecirc;tre prises).<br/>
+La r&eacute;solution de ces probl&egrave;mes  exige la mise en oeuvre de techniques d'optimisation sp&eacute;cifiques (programmation stochastique/robuste, d&eacute;composition lagrangienne, optimisation combinatoire, recherche locale heuristique ...) dont nous illustrerons quelques exemples sur trois &eacute;tudes de cas r&eacute;els.
+</p>
+
+<h3> Nancy Perrot (Orange) </h3>
+Vendredi 09/12 de 8h30 &agrave; 11h45 en F001.
+ 
+<p><strong></strong><br/>
+
+
+</p>
+
+</div>
+
+
+<div>
+<h2 id="Actu">Actualit&eacute;s</h2>
+
+
+</div>
+
+
+<div>
+<h2 id="Docs">Documents</h2>
+
+<p>- Feuille d'&eacute;margement ADO : <!--<a href="Emargement_INFO3_ADO.xls">Emargement_INFO3_ADO.xls</a>, <a href="Emargement_INFO3_ADO.pdf">Emargement_INFO_ADO.pdf</a>--></p>
+
+<p>- Trombinoscope : <!--<a href="Trombinoscope_INFO3.pdf">Trombinoscope_INFO3.pdf</a>--></p>
+
+<p>- Feuille d'&eacute;margement INFO3 (tronc commun): <!--<a href="Emargement_INFO3.pdf">Emargement_INFO3.pdf</a>--></p>
+
+</div>
+
+<div>
+<h2 id="Contacts">Contacts</h2>
+
+<p>Directrice de la sp&eacute;cialit&eacute; INFO : <a href="http://www-lipn.univ-paris13.fr/~rouveirol/">C&eacute;line Rouveirol</a></p>
+
+<p>Directrice des &eacute;tudes : <a href="http://www-lipn.univ-paris13.fr/~toulouse/">Sophie Toulouse</a></p>
+
+<p>Responsable INFO3 : <a href="http://www-lipn.univ-paris13.fr/~guerrini/">Stefano Guerrini</a></p>
+
+<p>Responsable option ADO : <a href="http://www-lipn.univ-paris13.fr/~borne/">Sylvie Borne</a></p>
+</div>
+       </div>
+ 
+     <!--  <div id="pied_de_page"> -->
+       <!-- Enfin, on mettra en bas de la page le nom de l'auteur, un copyright... -->
+      <!-- </div> -->
+   </body>
+</html>
+
+
+
+

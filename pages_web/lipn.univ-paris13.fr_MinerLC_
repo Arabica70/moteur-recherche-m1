@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href ="../santini.css" rel="stylesheet" type="text/css" />
+<meta charset="utf-8"  />
+<title>MinerLC sources and datasets</title>
+    <style type="text/css">
+    a, .mono {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    }
+    .cmd {
+    background-color: #e6e6e6;
+    border-width:1px;  
+    border-style:dotted;
+    padding-right:5px;
+    padding-left:5px;
+    font-family:monospace;
+    font-size: 12px;
+    font-weight: bold;
+    }
+    .centered {
+    text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+
+<h1> MinerLC/MinerLSD: closed pattern miners in attributed graphs</h1>
+<h2>Dominique Bouthinon, Guillaume Santini, Henry Soldano</h2>
+
+<div class="centered"><img alt="Figure 2-2 HA core" width="200" src="./fig/figure.png" /></div>
+<br>
+<br>
+<hr>
+
+
+    <h2>Overview</h2>
+    <h3>Enumerating abstract closed patterns and bi-patterns</h3>
+    <p>The minerLC software aims at enumerating  the abstract closed patterns in an attributed graph. </p>
+    <p>In attributed graphs addressed by minerLC,  a vertex is described as an itemset, i.e. a subset of a set of items. Whenever the vertex labels are not itemsets, some discretization has then to be performed as a pre-processing step.</p>
+    <p>In standard closed itemset mining, a <i>closed pattern</i> is the largest  itemset common to an object subset.  When the object are the vertices of a  graph, such a vertex  subset induces a subgraph.  In <i>abstract closed pattern mining</i>, this subgraph is reduced to its <i>core subgraph</i>, according to some <i>core definition</i>, as for instance, the <i>k-core</i> defined by <a href="#Seidman1983">[Seidman1983]</a>.  An abstract closed pattern (also called a <i>core closed pattern</i>) is then the largest pattern common to the vertices of the core subgraph derived from some vertex subset.</p>
+    <p>Technically, when considering some itemset <b><i>q</i></b>, to obtain an abstract closed pattern we build the vertex subset <b><i>ext (q)</i></b> in which <b><i>q</i></b> occurs, then compute the  core <b><i>p(ext(q))</i></b> of the subgraph induced by <b><i>ext(q)</i></b> using the core operator <b><i>p</i></b>. Finally, we compute the associated abstract closed pattern by applying the intersection operator <b><i>int</i></b>.  To sumarize, to any itemset <b><i>q</i></b> we associate: </p>
+    <ul>
+        <li>the <i>abstract closed pattern</i> <br>
+        <b><i>f(q) = int ( p ( ext(q) ) )</i></b></li>
+        <li>its <i>core subgraph</i> induced by its <i>abstract extension</i> <br>
+        <b><i>p ( ext(q) ) </i></b><li>
+    </ul>
+    <p>The general idea is that by considering  core subgraphs we only consider cohesive subnetworks  together with  the items  shared by their vertices,  This is exemplified in the small example that follows in which in the core subgraph all vertices have to belong to a triangle:</p>
+
+    <div class="centered"><img alt="Figure 2-2 HA core"
+        src="./fig/slide1.png" width="800"></div>
+<br>
+    <p>This idea has been adaptated to directed graphs, by intoriducing an appropriate core,  namely the hub-authority core, and  two-mode networks. In the latter case, the two vertex sets <b><i>V1</i></b> and <b><i>V2</i></b>  (representing for instance respectively  actors and movies) are described according to two different sets of items, and this leads to define <i>bi-patterns</i>.  An <i>abstract closed bi-pattern</i> is then an itemset pair <b><i>(q1, q2)</i></b> such that <b><i>q1</i></b> is the largest itemset common to all vertices from <b><i>V1</i></b> in the core subgraph   and <b><i>q2</i></b>  is the largest itemset common to all vertices from <b><i>V2</i></b> in the core subgraph. </p>
+
+    <div class="centered"><img alt="Figure 2-2 HA core"
+        src="./fig/slide2.png" width="800"></div>
+
+    <p>Interestingly we may also have bi-patterns in directed networks and even in undirected netwroks by defining a core as a vertex subset pairs. This allows for example to look, in the  <a href="#LAWYERS">LAWYERS</a> network presented below, to a core subgraph in which young lawyers from Boston ask for advice from older lawyers: components. 
+
+    <h3>Ranking abstract closed patterns and bi-patterns </h3>
+    <p>Abstract closed patterns (and bi-patterns) may be ordered by considering that most interesting patterns are unecpected patterns according to some random model. Here we consider the expected size of the core of a subgraph induced  by a random vertex subset of size n drawn from the attributed graph. Given a pattern which occurs in n vertices, we may then consider to what extent  the core size is larger than the expected value. Expected core sizes and related standard deviations are computed after the enumeration using  a different program.</p>
+
+    <h3>Computing  structural communities associated to abstract closed patterns <a href="#Soldano2015">[Soldano2015]</a></h3>
+<p>The core subgraph associated to an abstract closed pattern may contain various structural communities. An obvious definition of a structural community is a connected component, but  stronger  definitions have been  proposed  by <a href="#Palla2007">[Palla2007]</a>, namely  k-communities.</p>
+<p>A <i>k</i>-community is made of <i>k</i>-cliques and within the commuty it is always possible to find a  path such that two adjacent <i>k</i>-cliques share a <i>( k-1)</i>-clique.</p>
+<p>We may then define a <i>local closed pattern <b>l</b></i>  as the largest itemset common to a structural community <b><i>e</i></b> extracted  from the  core subgraph associated to some pattern <b><i>q</i></b>, and enumerate the triples <b><i>(l,e,q)</i></b> we call <i>local rules</i>.</p>
+<p>Such a rule expresses the specificity of the structural community <b><i>e</i></b> in the pattern <b><i>q</i></b> core subgraph:</p>
+<ul>
+    <li>if <b><i>l=q</i></b> the vertices of the community <b><i>e</i></b> have nothing more in common than the nodes of the whole core subgraph  while</li>
+    <li>if <b><i>l</i></b> contains items that do not belong to <b><i>q</i></b>, these items inform us about something specific of the structural community.</li>
+</ul>
+<p>We have implemented various structural communities definitions, including 3-communities. </p>
+
+
+
+<br>
+<br>
+
+<hr>
+<h2>Source files minerLC and minerLSD</h2>
+<ul>
+    <li><a href="./src/minerLC8.2.9.tgz">minerLC8.2.9.tgz  [1.1 Mo]</a></li>
+</ul>
+<br/>
+
+This archive contains a <span class="cmd">Makefile</span> and a directory with a french documentation that describes the formats of input and output files and explains how to compile and run the programs:
+
+<ul>
+    <li><span class="cmd">minerLC</span> to enumerate close abstract patterns. This program also implements <span class="cmd">minerLSD</span> algorithm,</li>
+    <li><span class="cmd">supportAttendus</span> to compute expected abstract extensions of abstract patterns,</li>
+    <li><span class="cmd">supportAttendusBi</span> to compute expected abstract extensions of bi-patterns.</li>
+</ul>
+<br>
+<br>
+<hr>
+<h2>Purposes and Command line examples</h2>
+<h3>Single pattern mining of undirected networks <a href="#Soldano2014cr">[Soldano2014cr]</a>, <a href="#Soldano2017fcasna">[Soldano2017fcasna]</a></h3>
+<p>Example of enumeration of 16-core abstract patterns of the <a href="#DBLP_C"]>DBLP_P</a> dataset. Core vertices must have at least 16 neighbors in the core subgraph.</p>
+<div class="cmd" style="width:90%"> <br> &nbsp; bash $> minerLC DBLP_P.nri -d1 16 > DBLP_P.nri.d1_16 <br><br></div>
+<p> Example of computation of expected abstract supports of found patterns using a monte-carlo sampling with size 100 samplings (takes the outpfile generated supra). <span class="cmd">supportAttendus</span> takes as input the file generated by <span class="cmd">minerLC</span> with the same parameters. </p>
+<div class="cmd" style="width:90%"> <br> &nbsp; bash $> supportsAttendus DBLP_P.nri DBLP_P.nri.d1_16 -d1 16 -n 100 > DBLP_P.nri.d1_16_100 <br><br> </div>
+
+
+<h3>Single pattern mining of directed networks <a href="#Soldano:2017ab">[Soldano:2017ab]</a></h3>
+<p>Example of enumeration of the  'h-a' HA-core abstract patterns in the <a href="#LAWYERS">LAWYERS</a> dataset. The 'h-a' Hub-Authority core of a directed graph is made of  a Hub vertex subset together with an Authority vertex subset. The associated core subgraph is such that  all <i>Hub</i> vertices have outdegree at least 'h' towards <i>Authority</i> vertices while  all <i>Authority</i> vertices have indegree at least 'a'  from <i>Hub</i> vertices.  Option <span class="cmd">-o</span> is required to mine directed graphs.</p>
+<div class="cmd" style="width:90%"> <br> &nbsp; bash $> minerLC LAWYERS.nri -o -hub_aut1 4 4 > LAWYERS.nri.o_hub_aut1_4_4 <br><br></div>
+<p>Example of computation of expected abstract supports of found patterns using a monte-carlo simulation with size 100 sampling.</p>
+<div class="cmd" style="width:90%"> <br> &nbsp; bash $> supportsAttendus LAWYERS.nri LAWYERS.nri.o_hub_aut1_4_4 -hub_aut1 4 4 -n 100 > LAWYERS.nri.o_hub_aut1_4_4_100 <br><br> </div>
+
+
+<h3>Single pattern mining of undirected network with local modularity constraint <a href="#Atzmueller2018dn">[Atzmueller2018dn]</a></h3>
+<p>Example of enumeration of 10-core abstract patterns on the <a href="#DBLP_C">DBLP_C</a> dataset. The <span class="cmd">-l 0.1</span>  means  that only  patterns whose core subgraph has  local modularity at least 0.1 are output.</p>
+<div class="cmd" style="width:90%"> <br> &nbsp; bash $> minerLC DBLP_C.nri -lm 0.1 -d1 10 > DBLP_C.nri.lm_0.1_d1_10 <br><br></div>
+
+
+
+<h3>Bi-pattern mining of two-mode and directed  networks <a href="#Soldano2018mn">[Soldano2018mn]</a></h3>
+<p>Example of enumeration of 6-6- BHA core abstract bi-patterns on the two-mode  <a href="#PtoC_BI">PtoC_BI</a>  dataset.</p>
+<p>In a two-mode network there are two vertex sets V1 and V2 and the edges relate vertices in V1 to vertices in V2. The h-a  BHA core is a pair (H,A) of vertex subsets where H is a subset of V1 while V2 is a subset of V2. The associated core subgraph is made of the edges relating H to A. All H vertices have degree at least 'h'  while all A vertices have degree at least 'a'. A bi-pattern is then a pair <b><i>(q1,q2)</i></b>  where <b><i>q1</i></b> selects objects in V1 while <b><i>q2</i></b> selects objects  in V2.</p>
+<p>The format of the input file allwong bi-pattern mining in minerLC is particular and described in the section nri files.</p>
+
+<div class="cmd" style="width:90%"> <br> &nbsp; minerLC PtoC.nri -o  -hub_aut1 6 6 > PtoC.nri.o_hub_aut1_6_6 <br><br></div>
+
+
+
+<br>
+<br>
+<hr>
+<h2>Dataset files</h2>
+
+Downloadable files should be unziped before use with minerLC programs.
+<br><br>
+<center>
+<table style="width:90%" border="1">
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <th> Description / Source </th>
+        <th> Name </th>
+        <th> link </th>
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Undirected</b> <a href="#Michell1996he">[Michell1996he]</a><br>
+        Social network from : The Teenage Friends and Lifestyle Study.<br>
+        Original datastes from <a href="https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm">https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm</a>.<br>
+        The dataset provided in the nri format derives from the data of the first year of the study. The graph comes from <span class="cmd">Glasgow-friendship.RData</span> and the labels from <span class="cmd">Glasgow-substances.RData</span>. Occasional and regular tobacco and drug  consumption labels are undifferenciated, as well as alcohol cconsumption once a week and more than once a week.  </td>
+        <td id="S50">S50</td>
+        <td> <a href="datasets/S50.nri.gz">S50.nri.gz (0.7 Ko)</a></td>
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td rowspan="3"><b>Undirected</b> <a href="#Galbrun2014dm">[Galbrun2014dm]</a><br>
+        DBLP co-authorship of publications (DBLP_XL) and selection of the publications at the ICDM conferences (DBLP_C) and song preference of LastFM users. <br>
+        Source code and original datasets from the author's site: <a href="http://research.ics.aalto.fi/dmg/lic.tgz">http://research.ics.aalto.fi/dmg/lic.tgz</a></td>
+        <td id="DBLP_C">DBLP_C</td>
+        <td> <a href="datasets/DBLP_P.nri.gz">DBLP_C.nri (172 Ko)</a></td>
+
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td id="LASTFM">LASTFM</td>
+        <td> <a href="datasets/LASTFM.nri.gz">LASTFM.nri.gz (367 Ko)</a></td>
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td id="DBLP_XL">DBLP_XL</td>
+        <td> <a href="datasets/DBLP_XL.nri.gz">DBLP_XL.nri.gz (367 Ko)</a></td>
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Undirected</b> <a href="#Prado2013tkde">[Prado2013tkde]</a><br>
+        Orginal Co-authorship labelled graph has been enriched by 3 additional labels that collects interest in domains. Those labels were derived from the original ones. <br>
+        Original dataset avialable from author on request at <a href="https://perso.liris.cnrs.fr/marc.plantevit/doku/doku.php?id=data_sets">https://perso.liris.cnrs.fr/marc.plantevit/doku/doku.php?id=data_sets</a></td>
+        <td id="DBLP_P">DBLP_P</td>
+        <td> <a href="datasets/DBLP_P.nri.gz">DBLP_P.nri.gz (1.5 Mo)</a></td>
+    </tr>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Undirected</b> <a href="#Silva2010kdd">[Silva2010kdd]</a><br>
+        Co-authorship Labelled graphs.<br>
+        Source code and original datasets from author's site : <a href="https://code.google.com/archive/p/scpm/">https://code.google.com/archive/p/scpm/</a></td>
+        <td id="DBLP_S">DBLP_S</td>
+        <td> <a href="datasets/DBLP_S.nri.gz">DBLP_S.nri.gz (5.6 Mo)</a></td>
+    </tr>
+     <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+    <td><b>Undirected</b><br>
+    Social networking, bookmarking, and tagging information from a set of 2K users from Delicious social bookmarking system.(<a href="http://www.delicious.com">http://www.delicious.com</a>).<br>
+    Original dataset are downloadable from <a href="https://grouplens.org/datasets/hetrec-2011/">https://grouplens.org/datasets/hetrec-2011/</a></td>
+        <td id="DELICIOUS">DELICIOUS</td>
+        <td> <a href="datasets/DELICIOUS.nri.gz">DELICIOUS.nri.gz (1.8 Ko)</a></td>
+    </tr>
+   <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Directed</b> <a href="#Lazega1997">[Lazega1997]</a><br>
+        Corporate law partnership advice network.<br>
+        Original dataset downloadable from <a href="https://www.stats.ox.ac.uk/~snijders/siena/Lazega_lawyers_data.htm">https://www.stats.ox.ac.uk/~snijders/siena/Lazega_lawyers_data.htm</a></td>
+        <td id="LAWYERS">LAWYERS</td>
+        <td> <a href="datasets/LAWYERS.nri.gz">LAWYERS.nri.gz (1.8 Ko)</a></td>
+    </tr>
+   <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Unirected</b> <a href="#Lazega1997">[Lazega1997]</a><br>
+        Vairiante of the previous Corporate law partnership advice network.<br></td>
+        <td id="LAWYERS_U">LAWYERS_U</td>
+        <td> <a href="datasets/"></a></td>
+    </tr>
+   <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Two-Mode (bi-pattern mining).</b> <a href=""></a><br>
+        Network relating particpants to campaigns of the  deep sea BENTHOS Program.</td>
+        <td id="PtoC_BI">PtoC_BI</td>
+        <td> <a href="datasets/bips/PtoC_BI.nri.gz">PtoC_BI.nri.gz</a></td>
+    </tr>
+   <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Unidrected (bi-pattern mining).</b> <a href=""></a><br></td>
+        <td id=""></td>
+        <td> <a href="datasets/"></a></td>
+    </tr>
+   <!-- ------------------------------------------------------------------------------------------ -->
+    <tr>
+        <td><b>Directed (bi-pattern mining).</b> <a href=""></a><br></td>
+        <td id=""></td>
+        <td> <a href="datasets/"></a></td>
+    </tr>
+</table>
+</center>
+PtoC_BI.nri
+LAZEGA_BI.nri
+DBLP_E_BI.nri
+COEXP_BI.nri
+
+<br>
+<br>
+<br>
+<hr>
+<h2>CDF wolfram computable document (interactive)</h2>
+Hereunder two CDF documents allowing to investigate interactively the 4-4 and 9-9 Hub Authority core closed patterns.
+In order to "play" the interactive documents you need to download and install the wolfram CDF player from the following URL:
+<br>
+<a href="https://www.wolfram.com/cdf-player/">https://www.wolfram.com/cdf-player/</a>
+<br>
+<ul>
+    <li><a href="./cdf/lawer_advice_4_4_1000.cdf">lawer_advice_4_4_1000.cdf</a> [14 Mo]</li>
+    <li><a href="./cdf/lawer_advice_9_9_1000.cdf">lawer_advice_9_9_1000.cdf</a> [608 Ko]</li>
+</ul>
+<br>
+<br>
+<hr>
+<h2>References</h2>
+<ul>
+    <li>[<span id="Seidman1983">Seidman1983</span>]<b>Network structure and minimum degre.</b> Seidman, Stephen B. (1983) Social Networks (5) 269--287.</li>
+    <li>[<span id="Soldano2015">Soldano2015</span>]<b>Local knowledge discovery in attributed graphs.</b> Henry Soldano, Guillaume Santini, and Dominique Bouthinon. In Anna Esposito, editor, 27th IEEE International Conference on Tools with Artificial Intelligence, ICTAI, Vietri sul Mare, Italy, November 9-11 2015, pages 250–257. IEEE Computer Society.</li>
+    <li>[<span id="Palla2007">Palla2007</span>]<b>Quantifying social group evolution.</b> Palla, Gergely and Barabasi, Albert-Laszlo and Vicsek, Tamas (2007) Nature (7136) 664--667.</li>
+    <li>[<span id="Soldano2014cr">Soldano2014cr</span>] <b>Graph abstraction for closed pattern mining in attributed network.</b> Henry Soldano and Guillaume Santini. 21st European Conference on Artificial Intelligence (ECAI 2014), Prague, Czech Republic, 849&#8211;854, Torsten Schaub and Gerhard Friedrich and Barry O&rsquo;Sullivan, IOS Press, Frontiers in Artificial Intelligence and Applications, 263, 2014</li>
+    <li>[<span id="Soldano2017fcasna">Soldano2017fcasna</span>] <b>Formal concept analysis of attributed network.</b>H. Soldano, G. Santini, and D. Bouthinon. Formal Concept Analysis in Social Network Analysis, Lecture Notes in Social Networks, pages 143–170. Springer, 2017.</li>
+    <li>[<span id="Soldano:2017ab">Soldano:2017ab</span>] <b>Hub-Authority Cores and Attributed Directed Network Mining.</b>Henry Soldano and Guillaume Santini and Dominique Bouthinon and Emmanuel Lazega. IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI 2017), Boston, MA, USA, IEEE Computer Society, 2017</li>
+    <li>[<span id="Soldano2018mn">Soldano2018mn</span>] <b>Bi-pattern Mining of Two Mode and Directed Networks.</b> Henry Soldano, Guillaume Santini, Dominique Bouthinon, Sophie Bary and Emmanuel Lazega. International workshop on  Mining Attributed Networks  Lyon, 23 April 2018</li>
+    <li>[<span id="Atzmueller2018dn">Atzmueller2018dn</span>] <b>MinerLSD: Efficient Local Pattern Mining On Attributed Graphs.</b> Martin Atzmueller, Henry Soldano, Guillaume Santini, Dominique Bouthinon. The Eighth IEEE ICDM Workshop on Data Mining in Networks
+    November 17, 2018, Singapore.</li>
+    <li>[<span id="Michell1996he">Michell1996he</span>] <b>Peer pressure to smoke: the meaning depends on the method.</b> Michell, L., and P. West. Health Education Research, 11(1), 39-49</li>
+    <li>[<span id="Galbrun2014dm">Galbrun2014dm</span>]<b>Overlapping community detection in labeled graphs.</b>Esther Galbrun, Aristides Gionis, and Nikolaj Tatti (2014).  Data Min. Knowl. Discov. 28(5-6): 1586-1610 (2014)</li>
+    <li>[<span id="Prado2013tkde">Prado2013tkde</span>]<b>Mining Graph Topological Patterns: Finding Covariations among Vertex Descriptors.</b> Adriana Prado, Marc Plantevit, Céline Robardet, Jean-François Boulicaut, (2013), IEEE Trans. Knowl. Data Eng. 25(9): 2090-2104.</li>
+    <li>[<span id="Silva2010kdd">Silva2010kdd</span>]<b>Structural correlation pattern mining for large graphs.</b>Arlei Silva, Wagner Meira Jr., Mohammed J. Zaki, (2010), MLG@KDD 2010: 119-126</li>
+    <li>[<span id="Lazega1997">Lazega1997</span>]<b>Position in formal structure, personal characteristics and choices of advisors in a law firm: a logistic regression model for dyadic network data.</b> Lazega, Emmanuel and van Duijn, Marijtjen (1997), Social Networks, (4) 375-397.</li>
+</ul>
+<br>
+<br>
+<hr>
+<h2>Contacts</h2>
+<p>In case of difficulties please contact us at:
+<ul>
+    <li><span class="mono">guillaume.santini -at- lipn.univ-paris13.fr</li>
+    <li><span class="mono">henry.soldano -at- lipn.univ-paris13.fr</li>
+    <li><span class="mono">db -at- lipn.univ-paris13.fr</li>
+</ul>
+</p>
+<br>
+<br>
+</body>
+</html>

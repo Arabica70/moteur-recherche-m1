@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+  
+
+
+  <head>
+    <title>
+      Licences Galilée
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="/projects/licences/search" />
+        <link rel="help" href="/projects/licences/wiki/TracGuide" />
+        <link rel="alternate" href="/projects/licences/wiki/WikiStart?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="/projects/licences/wiki" />
+        <link rel="stylesheet" href="/projects/licences/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/projects/licences/chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="/projects/licences/chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="/projects/licences/chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/projects/licences/search/opensearch" title="Search Licences Galilée" />
+    <!--[if lt IE 7]>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/projects/licences/chrome/site/style/style.css" />
+    <script type="text/javascript" src="/projects/licences/chrome/common/js/jquery.js"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/babel.js"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/trac.js"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/search.js"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/folding.js"></script><script type="text/javascript" src="/projects/licences/chrome/MathJax/MathJax.js?config=default"></script><script type="text/javascript" src="/projects/licences/chrome/common/js/ie_pre7_hacks.js"></script><script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+	<script type="text/javascript">
+function submitform()
+{
+	var url = window.location;
+	//var urlparts = url.split('/');
+	//var host = urlparts[0];
+	//alert(url);
+	document.rebuild.action = "/active.php?url="+url;
+	document.rebuild.submit();
+}
+	</script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="https://www-lipn.univ-paris13.fr/projects/licences/wiki"><img src="/projects/licences/chrome/site/style/banner.png" alt="Licences Galilée" /></a>
+      </div>
+      <form id="search" action="/projects/licences/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="https://sso.lipn.univ-paris13.fr/cas/login?service=https%3A%2F%2Ftrac.lipn.univ-paris13.fr%2Fprojects%2Flicences%2Flogin">Login</a></li><li><a href="/projects/licences/wiki/TracGuide">Help/Guide</a></li><li><a href="/projects/licences/about">About Trac</a></li><li class="last"><a href="/projects/licences/prefs">Preferences</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="/projects/licences/wiki">Wiki</a></li><li><a href="/projects/licences/timeline">Timeline</a></li><li><a href="/projects/licences/roadmap">Roadmap</a></li><li><a href="/projects/licences/report">View Tickets</a></li><li class="last"><a href="/projects/licences/search">Search</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="/projects/licences/wiki">wiki:</a><a class="pathentry" href="/projects/licences/wiki/WikiStart" title="View WikiStart">WikiStart</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="/projects/licences/wiki/WikiStart">Start Page</a></li><li><a href="/projects/licences/wiki/TitleIndex">Index</a></li><li class="last"><a href="/projects/licences/wiki/WikiStart?action=history">History</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby"><a href="/projects/licences/wiki/WikiStart?action=diff&amp;version=22" title="Version 22 by boudes">Last modified</a> <a class="timeline" href="/projects/licences/timeline?from=2013-07-24T15%3A28%3A53%2B02%3A00&amp;precision=second" title="2013-07-24T15:28:53+02:00 in Timeline">7 years</a> ago</div>
+          <div id="wikipage"><h1 id="TracdelalicenceinformatiquedelinstitutGalilée">Trac de la licence informatique de l'institut Galilée</h1>
+<h2 id="CoursélémentsdinformatiquecoursdeL1premiersemestre">Cours éléments d'informatique, cours de L1 premier semestre</h2>
+<p>
+Voir sur la page  <a class="wiki" href="/projects/licences/wiki/ElementsInformatique">éléments d'informatique</a>. 
+</p>
+<h2 id="Gestiondesservicesavecpain">Gestion des services avec pain</h2>
+<p>
+<a class="wiki" href="/projects/licences/wiki/AccueilPain">Pain</a> est un petit applicatif de gestion des formations et des services. 
+</p>
+<h2 id="AideausujetdeTrac">Aide au sujet de Trac</h2>
+<ul><li><a class="wiki" href="/projects/licences/wiki/WikiFormatting">WikiFormatting</a> &mdash; syntaxe du wiki
+</li><li><a class="wiki" href="/projects/licences/wiki/TitleIndex">TitleIndex</a> &mdash; Toutes les pages du wiki
+</li><li><a class="wiki" href="/projects/licences/wiki/TracGuide">TracGuide</a> &mdash;  Documentation générale
+</li></ul><p>
+ 
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/projects/licences/wiki/WikiStart?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+    <p id="tracpowered">Hosted at <a href="http://www-lipn.univ-paris13.fr/">LIPN</a><br />Design by <a href="http://www-lipn.univ-paris13.fr/~dubacq/">J-C Dubacq</a></p>
+      <p class="left">Powered by <a href="/projects/licences/about"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

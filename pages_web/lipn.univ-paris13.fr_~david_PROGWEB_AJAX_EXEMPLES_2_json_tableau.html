@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="jquery-2.2.1.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <select>
+	<option value="0"></option>
+	<option value="1">Watson Bosquet</option>
+      </select>
+    </form>
+
+    <p></p>
+
+
+    <script>
+      $("select").change(function(){
+        $.post("2_json_tableau.php",{value: $(this).val()},function(res){
+           var obj=$.parseJSON(res);
+           $("p").text(obj.prenom+" "+obj.nom+" est un "+obj.desc+".");
+           $("p").append(" Il a "+obj.age+" ans.");
+        });
+      });
+    </script>
+
+
+  </body>
+</html>

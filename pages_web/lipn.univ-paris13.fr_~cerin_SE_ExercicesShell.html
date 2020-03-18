@@ -1,0 +1,1334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+    
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+    
+<title>Exercices de programmation avec l’interpréteur bash</title>
+
+    
+<meta name="GENERATOR" content="OpenOffice.org 2.0 (Linux)">
+
+    
+<meta name="CREATED" content="20060220;12542400">
+
+    
+<meta name="CHANGED" content="20060220;13561200">
+
+    
+<meta name="Title" content="Exercices de programmation avec
+      lÕinterprŽteur bash">
+
+    
+<meta name="ProgId" content="Word.Document">
+
+    
+<meta name="Originator" content="Microsoft Word 10">
+
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Christophe Cérin</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Christophe Cérin</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:LastPrinted>2009-04-22T19:26:53Z</o:LastPrinted>
+  <o:Created>2005-11-08T21:08:00Z</o:Created>
+  <o:LastSaved>2005-11-08T21:08:00Z</o:LastSaved>
+  <o:Pages>14</o:Pages>
+  <o:Words>2709</o:Words>
+  <o:Characters>15444</o:Characters>
+  <o:Company>ppcqa</o:Company>
+  <o:Lines>128</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>18966</o:CharactersWithSpaces>
+  <o:Version>10.1316</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:PixelsPerInch>800x600</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:DrawingGridHorizontalSpacing>0 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>0 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:DrawingGridHorizontalOrigin>0 pt</w:DrawingGridHorizontalOrigin>
+  <w:DrawingGridVerticalOrigin>0 pt</w:DrawingGridVerticalOrigin>
+  <w:Compatibility>
+   <w:NoLeading/>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+    <!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]-->
+    <!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+    
+<style>
+    .style2 {
+color: #ffffff;
+font-weight: bold;
+}
+
+.style1 { FONT-WEIGHT: bold; COLOR: #ff0000
+}
+P  {
+FONT-FAMILY: Verdana, Georgia, Helvetica, Sans-serif
+}
+
+BODY {
+        PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 13px; PADDING-BOTTOM: 0px; MARGIN: 0px; P\
+ADDING-TOP: 0px; FONT-FAMILY: Verdana, Georgia, Helvetica, Sans-serif
+}
+#head {
+        PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(../images/head_empty.gif) #e4e4e4 no\
+-repeat left top; PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH: 1000px; PADDING-TOP: 0px; HEIGHT: 150\
+px
+}
+#head #title {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 150px; FONT-SIZE: 26px; PADDING-BOTTOM: 0px; COLOR: #f0f0f0\
+; PADDING-TOP: 35px; HEIGHT: 80px
+}
+#top_menu {
+        FONT-SIZE: 15px; LINE-HEIGHT: 35px; HEIGHT: 35px; TEXT-ALIGN: right
+}
+#menu_span A:link {
+        PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000000; MARGIN-RIGHT: 3px\
+; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#top_menu A:visited {
+        PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000000; MARGIN-RIGHT: 3px\
+; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#menu_span {
+        BACKGROUND: #c7b8a4
+}
+#body_wrapper {
+        BORDER-RIGHT: #c0c0c0 2px solid; BORDER-TOP: #c0c0c0 2px solid; DISPLAY: block; BACKGROUND: #\
+ffffff; MARGIN: 0px auto; BORDER-LEFT: #c0c0c0 2px solid; WIDTH: 1000px; BORDER-BOTTOM: #c0c0c0 2px s\
+olid
+}
+#body {
+        PADDING-RIGHT: 20px; DISPLAY: block; PADDING-LEFT: 20px; MIN-HEIGHT: 343px; FLOAT: left; PADD\
+ING-BOTTOM: 0px; PADDING-TOP: 10px
+}
+#end_body {
+        DISPLAY: block; MARGIN: 0px auto; WIDTH: 1000px; HEIGHT: 37px
+}
+.clearer {
+        CLEAR: both; HEIGHT: 1px
+}
+#left {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: \
+160px; PADDING-TOP: 0px
+}
+#left .top {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 160px; PADDIN\
+G-TOP: 0px; HEIGHT: 18px
+}
+#left .bottom {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 160px; PADDIN\
+G-TOP: 0px; HEIGHT: 21px
+}
+#right {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px \
+30px; WIDTH: 760px; PADDING-TOP: 0px
+}
+#right .top {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 169px; PADDIN\
+G-TOP: 0px; HEIGHT: 18px
+}
+#right .bottom {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 169px; PADDIN\
+G-TOP: 0px; HEIGHT: 21px
+}
+.content {
+        PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#footer {
+        FONT-WEIGHT: bold; MARGIN: 0px auto; WIDTH: 1000px; COLOR: #b05128; TEXT-ALIGN: center
+}
+#footer A {
+        COLOR: #b05128
+}
+#nav UL {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LI\
+ST-STYLE-TYPE: none
+}
+#nav UL LI {
+        PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADD\
+ING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#nav UL A {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 3px; DISPLAY: block; PADDING-LEFT: 10px; BORDER-LEFT-WI\
+DTH: 0px; BACKGROUND: #c7b8a4; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 3px; MARGIN: 0px; WIDTH: 150\
+px; COLOR: #000; PADDING-TOP: 3px; BORDER-RIGHT-WIDTH: 0px; TEXT-DECORATION: none
+}
+#nav UL A:hover {
+        BACKGROUND: #822c0f; COLOR: #ffffff
+}
+#menu_span A:hover {
+        BACKGROUND: #822c0f; COLOR: #ffffff
+}
+#links UL {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; WIDTH: 159p\
+x; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: center
+}
+#links LI {
+        MARGIN-TOP: 5px
+}
+H1 {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 1.6em; PADDING-BOTTOM: \
+0px; MARGIN: 0px 0px 5px; COLOR: #d96b11; PADDING-TOP: 0px; BACKGROUND-COLOR: transparent
+}
+#right A {
+        PADDING-BOTTOM: 0px; COLOR: #ad4c21; BORDER-BOTTOM: 1px dashed; TEXT-DECORATION: none
+}
+#right A:hover {
+        COLOR: #000
+}
+HR {
+        BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM: #f0ebe7 1px dashed; HEIGHT: 1px\
+; BORDER-RIGHT-WIDTH: 0px
+}
+.border1{border:3px #dae5ed solid}
+.border2{
+        border:1px #DEDCDB solid;
+        padding-left: 20px;
+        padding-top: 10px;
+}
+.border3{
+        border:none;
+        padding-top: 5px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        line-height: 20px;
+}
+.border4{border:4px #ccecf4 solid}
+A:link {COLOR: #0A51A2; TEXT-DECORATION: none}
+A:visited {COLOR: #0A51A2; TEXT-DECORATION: none}
+A:hover {COLOR: #FF0000; TEXT-DECORATION: none}
+
+a.link-blue:link {color:#5f8ccd;font-size: 14px;font-weight: bold;text-decoration:none;}
+a.link-blue:visited {color:#5f8ccd;font-size: 14px;font-weight: bold;text-decoration:none}
+a.link-blue:hover {color: #5f8ccd;;font-size: 14px;font-weight: bold;text-decoration: underline}
+
+a.link-blue13:link {color:#006699;font-size: 13px;font-weight: normal;text-decoration:none;}
+a.link-blue13:visited {color:#006699;font-size: 13px;font-weight: normal;text-decoration:none}
+a.link-blue13:hover {color: #004F75;;font-size: 13px;font-weight: bold}
+
+a.link-white:link {color:#FFFFFF;font-size: 14px;font-weight: bold;text-decoration:none;}
+a.link-white:visited {color:#FFFFFF;font-size: 14px;font-weight: bold;text-decoration:none}
+a.link-white:hover {color: #FFFFFF;;font-size: 14px;font-weight: bold;text-decoration: underline}
+
+a.link-white13:link {color:#FFFFFF;font-size: 10px;font-weight: normal;text-decoration:none;}
+a.link-white13:visited {color:#FFFFFF;font-size: 10px;font-weight: normal;text-decoration:none}
+a.link-white13:hover {color: #FFFFFF;;font-size: 10px;font-weight: bold}
+
+a.f:visited {COLOR: #FF6600; TEXT-DECORATION: none}
+a.f:hover {COLOR: #FF0000; TEXT-DECORATION: none}
+
+a.ff:link {     COLOR: #FF6600; TEXT-DECORATION: none;  font-size: 12px;        font-weight: bold;}
+a.ff:visited {COLOR: #FF6600;   TEXT-DECORATION: none;  font-size: 12px; font-weight: bold;}
+a.ff:hover {COLOR: #FF6600;     TEXT-DECORATION: none;  font-size: 12px; font-weight: bold;}
+
+a.g:link {COLOR: #8D3C17; TEXT-DECORATION: none}
+a.g:visited {COLOR: #8D3C17; TEXT-DECORATION: none}
+a.g:hover {     COLOR: #FF0000; TEXT-DECORATION: none;  font-size: 12px; word-spacing: normal;  lette\
+r-spacing: normal;}
+
+a.e:link {COLOR: #333366; TEXT-DECORATION: none}
+a.e:visited {COLOR: #333366; TEXT-DECORATION: none}
+a.e:hover {COLOR: #FF9900;TEXT-DECORATION: none;}
+a.t:link{color:#000000;text-decoration:none;}
+a.t:visited { color:#000000;text-decoration: none}
+a.t:hover{color: #ff0000;text-decoration: underline}
+
+a.k:link{color:#8D5E04;font-size:12px; text-decoration:none;}
+a.k:visited { color:#8D5E04;font-size:12px;text-decoration: none}
+a.k:hover{color: #FF6600;font-size:12px; text-decoration: none}
+
+a.z:link{color:#D22401;text-decoration:none;}
+a.z:visited { color:#D22401;text-decoration: none}
+a.z:hover{color: #ff0000;text-decoration: underline}
+
+	<!--
+		TD P { color: #000000 }
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		PRE { color: #000000 }
+		A:link { color: #0000ff }
+		A:visited { color: #800080 }
+	-->
+	</style>
+  </head>
+<body id="head" dir="LTR" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" vlink="#800080" lang="fr-CA" link="#0000ff">
+    
+<h1 style="font-family: Helvetica,Arial,sans-serif; text-align: center;">Exercices de programmation avec l’interpréteur bash </h1>
+
+<h1 style="font-family: Helvetica,Arial,sans-serif; text-align: left;">
+    </h1>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><br>
+</p>
+<p style="font-family: Helvetica,Arial,sans-serif;">Préambule&nbsp;: la
+      documentation en ligne de l’interpéteur
+      bash se trouve sous
+      <a href="http://www.gnu.org/software/bash/manual/bashref.html"><font style="font-size: 13pt;" size="3">http://www.gnu.org/software/bash/manual/bashref.html</font></a></p>
+
+    <span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">A-&nbsp;
+      Apéritif</span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.1. Ecrire un
+      fichier shell
+      qui prend en parametre 2 entiers et affiche la somme. S'il n'y a
+      pas
+      deux paramètres, il faut afficher un message d'erreur.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.2. Ecrire
+      un script qui prend en paramètre trois entiers et qui affiche
+      le plus grand. On affichera un message d'erreur s'il n'y pas pas
+      trois arguments passés sur la ligne de commande. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.3. Ecrire un
+      script shell qui affichera
+      5,4,3,2,1 en utilisant une boucle while.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.4. Ecrire un
+      script qui
+      utilisera une instruction case pour effectuer des opérations
+      arithmétiques : <br>
+      + addition<br>
+      - subtraction<br>
+      x
+      multiplication<br>
+      / division<br>
+      Le nom du script doit être 'q4'
+      et il s'utilisera comme suit :<br>
+      $ ./q4 20 / 3</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Vérifier
+      également qu'il y a
+      suffisamment de paramètres sur la ligne de commande.</p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.5. Ecrire un
+      script qui
+      listera : current date, time, username, and current directory<a name="q6"></a></p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><a name="q6"></a>Q.6.
+      Ecrire un script qui
+      prend en paramètre un entier et affiche l'entier en ordre
+      inverse (123 -&gt; 321).</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.7. Ecrire un
+      script qui prend en paramètre
+      un entier et affiche la somme des digits qui le compose (123 -&gt;
+      1+2+3 = 6).</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.8. Quelle
+      commande Unix vous permet de réaliser de l'arithmétique
+      sur les réels .</p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.9. Comment
+      calculer&nbsp; 5.12 + 2.5 à
+      partir du prompt Linux ?</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.10. Comment
+      réaliser
+      dans un shell un calcul sur les réels ?Par exemple, on veut
+      a=5.66, b=8.67, c=a+b.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.11. Ecrire un
+      script qui détermine si
+      un fichier donné en paramètre existe. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.12. Ecrire un
+      script qui
+      détrmine si l'argument $1 contient le symbole "*".
+      Si $1 ne contient pas le symbole "*" ajoutez le à
+      $1, sinon affichez le message "Symbol is not required". Le
+      script se lance par :<br>
+      <b style="font-family: Courier New,Courier,monospace;">$ Q12 /bin</b><br>
+      Ici $1 est /bin, et
+      puisque l'on n'a pas de "*" on affichera </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">/bin/*</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.13. Ecrire un
+      script qui
+      affiche le contenu d'un fichier d'une ligne donnée à
+      une autre. Si le script s'appelle Q13 :<br>
+    </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">$ Q13 5 9 myf</pre>
+
+    <font style="font-family: Helvetica,Arial,sans-serif;" face="Times">
+      affiche le
+      contenu du fichier myf de la ligne 5 a la ligne 9.</font>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.14. Ecrire un
+      script qui,
+      au moyen de la commande getopts, affiche les options (de la forme
+      -c,
+      -d, -e) passées sur la ligne de commande. Si le script
+      s'appelle Q14 alors on pourra lancer :<br>
+      Q14 -c -d -e xemacs<br>
+      et
+      le programme affichera :<br>
+      -c clear the screen<br>
+      -d show list of
+      files in current working directory<br>
+      -e { editor } start this {
+      editor } if installed </p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">et il lancera
+      une session xemacs.<a name="q15"></a><br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q.15. Ecrire un
+      script que vous insérerez dans votre fichier .bash_profile. Il
+      affichera :<br>
+    </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">Good Morning<br>Good Afternoon<br>Good Evening , selon l'heure<a name="q16"></a>Q.16. Ecrire un script qui
+affichera le message "Hello World", en gras et clignotant
+et dans différentes couleurs en utilisant la commande echo.</pre>
+
+    <font style="font-family: Helvetica,Arial,sans-serif;" face="Times">Q.17.
+      Ecrire un script qui
+      implémente un processus en arrière plan qui affichera
+      continuellement l'heure courante</font><a style="font-family: Helvetica,Arial,sans-serif;" name="q18"></a><font style="font-family: Helvetica,Arial,sans-serif;" face="Times"><br>
+      <br>
+      Q.18. Ecrire un script qui
+      simule un menu permettant de réaliser les actions suivantes :</font><br style="font-family: Helvetica,Arial,sans-serif;">
+
+    <br style="font-family: Helvetica,Arial,sans-serif;">
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<table style="font-family: Helvetica,Arial,sans-serif;" width="440" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0">
+
+      <colgroup><col width="58"> <col width="159"> <col width="197"> </colgroup><tbody>
+        <tr>
+          <td width="58" bgcolor="#ffff99">
+            <p style="border: medium none; padding: 0cm;" align="CENTER"><b>Menu-Item</b></p>
+          </td>
+          <td width="159" bgcolor="#ffff99">
+            <p style="border: medium none; padding: 0cm;" align="CENTER"><b>Purpose</b></p>
+          </td>
+          <td width="197" bgcolor="#ffff99">
+            <p style="border: medium none; padding: 0cm;" align="CENTER"><b>Action
+                for Menu-Item</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="58">
+            <p style="border: medium none; padding: 0cm;">Date/time&nbsp;</p>
+          </td>
+          <td width="159">
+            <p style="border: medium none; padding: 0cm;">To see current date
+              time</p>
+          </td>
+          <td width="197">
+            <p style="border: medium none; padding: 0cm;">Date and time must be
+              shown using infobox of dialog utility</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="58">
+            <p style="border: medium none; padding: 0cm;">Calendar</p>
+          </td>
+          <td width="159">
+            <p style="border: medium none; padding: 0cm;">To see current
+              calendar</p>
+          </td>
+          <td width="197">
+            <p style="border: medium none; padding: 0cm;">Calendar must be shown
+              using infobox of dialog utility</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="58">
+            <p style="border: medium none; padding: 0cm;">Delete</p>
+          </td>
+          <td width="159">
+            <p style="border: medium none; padding: 0cm;">To delete selected
+              file</p>
+          </td>
+          <td width="197">
+            <p style="border: medium none; padding: 0cm;">First ask user name of
+              directory where all files are present, if no name of
+              directory given assumes current directory, then show all
+              files only of that directory, Files must be shown on
+              screen using menus of dialog utility, let the user select
+              the file, then ask the confirmation to user whether he/she
+              wants to delete selected file, if answer is yes then
+              delete the file , report&nbsp; errors if any while deleting
+              file to user.</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="58">
+            <p style="border: medium none; padding: 0cm;">Exit</p>
+          </td>
+          <td width="159">
+            <p style="border: medium none; padding: 0cm;">To Exit this shell
+              script</p>
+          </td>
+          <td width="197">
+            <p style="border: medium none; padding: 0cm;">Exit/Stops the menu
+              driven program i.e. this script</p>
+          </td>
+        </tr>
+      </tbody>
+    
+</table>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><br>
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><a name="q19"></a>Q.19.
+      Ecrire un script qui
+      vous permet d'afficher différentes informations sur le système
+      :<br>
+      1) Currently logged user and his logname<br>
+      2) Your current
+      shell<br>
+      3) Your home directory<br>
+      4) Your operating system type<br>
+      5)
+      Your current path setting<br>
+      6) Your current working directory<br>
+      7)
+      Show Currently logged number of users<br>
+      8) About your os and version
+      ,release number , kernel version<br>
+      9) Show all available shells<br>
+      10)
+      Show mouse settings<br>
+      11) Show computer cpu information like
+      processor type, speed etc<br>
+      12) Show memory information<br>
+      13) Show
+      hard disk information like size of hard-disk, cache memory, model
+      etc<br>
+      14) File system (Mounted)<br>
+      &nbsp;</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><a name="q20"></a>Q.20.Ecrire
+      un script vous
+      permettant de réaliser à l'écran le dessin
+      suivant :</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">Ordinateur-de-Christophe-Cerin:~ cerin$ /bin/bash Q20.sh
+Enter Number between (5 to 9) : 9
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . . .
+&nbsp;&nbsp;&nbsp;&nbsp; . . . . . .
+&nbsp;&nbsp;&nbsp; . . . . . . .
+&nbsp;&nbsp; . . . . . . . .
+&nbsp; . . . . . . . . .
+&nbsp; . . . . . . . . .
+&nbsp;&nbsp; . . . . . . . .
+&nbsp;&nbsp;&nbsp; . . . . . . .
+&nbsp;&nbsp;&nbsp;&nbsp; . . . . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .
+Ordinateur-de-Christophe-Cerin:~ cerin$ 
+</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      Q.21. Ecrire un script qui converti un fichier de
+      majuscule à minuscule et vice et versa selon ce que l'on passe
+      sur la ligne de commande.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><font style="font-size: 11pt;" size="2">Q.22 Editer un fichier pour
+        qu’il contienne le texte suivant&nbsp;:</font></p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">case $# in
+&nbsp;&nbsp;&nbsp; <span lang="en-US">0) variable=`pwd`;;</span>
+&nbsp;&nbsp;&nbsp; <span lang="en-US">1) variable=$1 ;;</span>
+&nbsp;&nbsp;&nbsp; <span lang="en-US">*) echo "Erreur de syntaxe" ; exit;;</span>
+esac</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">a) Exécuter le
+      code pour faire apparaître le message
+      d’erreur</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">b) Modifier le
+      code en ajoutant du texte après le esac pour
+      que le programme affiche la valeur de <span lang="en-US">variable</span>
+      si elle a été positionnée par `<span lang="en-US">pwd</span>`uniquement.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-23 La commande
+      set sert a affecter les variables $0, $1 alors
+      que la commande shift permet de décaler sur la gauche les
+      valeurs des paramètres positionnels. Voir l’exemple suivant
+      :</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">$ set ab cd
+$ echo $1
+ab
+$ shift
+$ echo $1
+cd
+$ shift
+$ echo $1
+&nbsp;
+$</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Écrire un script
+      permettant d'afficher à l'écran
+      le contenu d'une série de fichiers dont les noms sont passés
+      en paramètres, et n'utilisant pas de boucle for. Le message
+      &lt;nom fichier&gt;&nbsp;inaccessible sera affiché si le
+      fichier &lt;nom fichier&gt; est inexistant ou ne peut être lu.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-24 Écrire un
+      script (en utilisant set, par exemple)
+      permettant de convertir une date, renvoyée par la commande
+      date, sous le format suivant (en français) :</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;" lang="en-US"><font style="font-size: 13pt;" size="3"><b>Lundi
+          16 Decembre 1996 15:31:37</b></font></p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Note : on peut
+      se servir de set et shift mais on ne peut pas faire
+      quelque chose du genre :</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">$ date "+DATE: %m/%d/%y%nTIME: %H:%M:%S"
+DATE: 10/03/05
+TIME: 09:53:14</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      &nbsp;</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-25 Tapez sous
+      le prompt de l’interpréteur bash les
+      commandes suivantes et observez les résultats (certains
+      peuvent être différents sur votre système, en
+      particulier pour la commande pwd). En fait, les () permettent
+      d’ouvrir et de fermer un nouveau shell. Expliquer ce qui s’est
+      passé.</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">$ pwd
+/users/linfg/linfg0
+$ a=1
+$ ( echo $a ; a=2 ; echo $a ; cd /usr/include ; pwd )
+1
+2
+/usr/include
+$ echo $a
+1
+$ pwd
+/users/linfg/linfg0
+$</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-26 Taper le
+      code suivant et observer les valeurs de a. Si vous
+      n’obtenez pas 1 pour le premier affichage, que faut-il faire ?
+      (voir la commande export)</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">$ a=1
+$ bash
+$ echo $a ; a=2 ; echo $a ; cd /usr/include ; pwd
+$ exit</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-27 Modifier le
+      moins possible le code suivant pour faire
+      apparaitre à l'écran que le chien et le chat sont des
+      «&nbsp;animaux dosmestiques qui vivent à la maison&nbsp;»
+      :<br>
+    </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">echo -n Enter the name of an animal:
+read ANIMAL
+echo -n The $ANIMAL has
+</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-28 La commande
+      shell select permet d’élaborer
+      facilement des menus. Tapez le code suivant puis entrer un entier
+      :</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">select fname in *;
+do
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="en-US">echo you picked $fname \($REPLY\)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="en-US">break;</span>
+done</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      <br>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Inspirez vous de
+      ce texte pour ne lister que les fichiers
+      d’extension txt ou doc. Vous pouvez utiliser l’expansion avec {}.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-29 Vous lancer
+      la commande ps et vous la redirigez dans un
+      fichier. Ecrire un script permettant d'afficher uniquement les
+      processus triés par ordre alphabétique. Vous pouvez
+      utiliser sort, uniq, cut... Modifiez votre script pour afficher le
+      nom des processus ainsi que le nombre d'occurrences de ce
+      processus.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q-30 Créer un
+      script test-fichier,
+      qui précisera le type du fichier passé en paramètre,
+      ses permissions d'accès pour l'utilisateur </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Exemple de
+      résultats&nbsp;: </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">Le&nbsp;fichier&nbsp;/etc&nbsp;est&nbsp;un&nbsp;répertoire
+"/etc"&nbsp;est&nbsp;accessible&nbsp;par&nbsp;root&nbsp;en&nbsp;lecture&nbsp;écriture&nbsp;exécution
+Le&nbsp;fichier&nbsp;/etc/smb.conf&nbsp;est&nbsp;un&nbsp;fichier&nbsp;ordinaire&nbsp;qui&nbsp;n'est&nbsp;pas&nbsp;vide
+"/etc/smb.conf"&nbsp;est&nbsp;accessible&nbsp;par&nbsp;jean&nbsp;en&nbsp;lecture.</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      <br>
+      Q-31 Afficher le contenu d'un répertoire
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Écrire un script
+      bash listedir.sh
+      permettant d'afficher le contenu d'un répertoire en séparant
+      les fichiers et les (sous)répertoires. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Exemple
+      d'utilisation&nbsp;: </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">$&nbsp;./listdir.sh&nbsp;</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">affichera&nbsp;: </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">--------------&nbsp;&nbsp;&nbsp;Fichiers&nbsp;dans&nbsp;/etc/rc.d&nbsp;--------------------
+rc
+rc.local
+rc.sysinit
+--------------&nbsp;&nbsp;&nbsp;Repertoires&nbsp;dans&nbsp;/etc/rc.d&nbsp;--------------------
+init.d
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      <br>
+      <font size="3">Q-32 Lister les utilisateurs </font>
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Écrire un script
+      bash affichant la liste des noms de login
+      des utilisateurs définis dans /etc/passwd ayant un UID
+      supérieur à 500. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Indication&nbsp;:
+      for&nbsp;in&nbsp;$(cat&nbsp;/etc/passwd) permet
+      de parcourir les lignes du dit fichier. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><font size="3"><br>
+        Q</font>-33 lecture au clavier
+    </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">La commande bash
+      read permet de
+      lire une chaîne au clavier et de l'affecter à une
+      variable. exemple&nbsp;: </p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">echo&nbsp;-n&nbsp;"Entrer&nbsp;votre&nbsp;nom:&nbsp;"
+read&nbsp;nom
+echo&nbsp;"Votre&nbsp;nom&nbsp;est&nbsp;$nom"
+</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      La commande file affiche des
+      informations sur le contenu d'un fichier (elle applique des règles
+      basées sur l'examen rapide du contenu du fichier). </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Les fichiers de
+      texte peuvent être affichés page par
+      page avec la commande more. </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><br>
+      1-&nbsp; Tester ces trois commandes; </p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><br>
+      2-&nbsp; Écrire un script qui propose à
+      l'utilisateur de visualiser page par page chaque fichier texte du
+      répertoire spécifié en argument. Le script
+      affichera pour chaque fichier texte (et seulement ceux là) la
+      question "voulez vous visualiser le fichier machintruc ?".
+      En cas de réponse positive, il lancera more,
+      avant de passer à l'examen du fichier suivant. </p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">Q34&nbsp; Gestion des
+      notes<span style="font-weight: bold;"></span></p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">N1)&nbsp; Écrire un
+      script qui demande à l'utilisateur de saisir une note et qui
+      affiche un message en fonction de cette note :<br>
+      "très bien" si la note est entre 16 et 20<br>
+      "bien" lorsqu'elle est entre 14 et 16<br>
+      "assez bien" si la note est entre 12 et 14<br>
+      "moyen" si la note est entre 10 et 12<br>
+      "insuffisant" si la note est inférieur à 10<br>
+      <br>
+      N2)&nbsp; Reprenez l'exercice 1 et faites en sorte que le programme se
+      répète tant que l'utilisateur n'ai pas saisi une note négative ou
+      q (pour quitter). Le script doit calculer le nombre de notes
+      saisies et en faire la moyenne tout à la fin.<br>
+      <br>
+      N3)&nbsp; Reprenez uniquement le code de l'exercice 1. La note peut
+      cette fois être donnée en paramètre ou bien être saisie si elle
+      n'a pas été trouvée en paramètre. La comparaison de la note devra
+      être faite dans une fonction "appreciation".<span style="font-weight: bold;"><br>
+      </span></p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;"><br>
+      </span></p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;">B-&nbsp;&nbsp;
+        Plat principal</span></p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">0- Un fichier
+      contient des entiers au format binaire, un par
+      ligne. Donner une commande sed qui permet d'afficher les entiers
+      qui
+      commencent et se terminent par 1 avec au milieu 2 à 4 zéro:</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">1- Ecrire un
+      programme shell qui prend en paramètre un
+      exécutable, qui va retrouver tous les numéros de
+      processus et les détruire. Il s’agit de simuler la commande
+      killall. Vous pouvez vous inspirer du code suivant&nbsp;:</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">#!/bin/bash
+TITI="`echo $1`"
+for i in `ps -hu | cut -c 8-14 `
+do
+&nbsp; TOTO=`ps -h $i | cut -c 22- | grep -G $TITI | cut -f 1 -d " "`
+&nbsp; NUM=`echo $TOTO | wc -c `
+&nbsp; if test $NUM -ne 1; then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ps -h $i
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Detruction du PID $NUM"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # kill –9 $NUM
+&nbsp; fi
+done</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;" align="JUSTIFY">2-
+      Le texte qui suit permet de générer
+      un fichier au format HTML. Expliquer le fonctionnement général
+      en isolant les différentes parties. Expliquer les parties les
+      plus techniques. Exécuter le code à partir d’un
+      fichier de données que vous avez à créer.
+      Rajouter l’envoi d’un mail à vous même (voir
+      commande mail) dont le corps sera le fichier produit. Rajouter
+      également le contrôle du nombre de paramêtres dans
+      le fichier d’entrée. Vérifiez que les objets qui
+      doivent être de type entier dans le fichier d’entrée
+      le sont bien.</p>
+
+    
+<pre style="font-family: Courier New,Courier,monospace;">#!/bin/sh
+&nbsp;
+# pour digerer le formulaire de registration
+&nbsp;
+echo Content-type: text/HTML
+echo
+cat &gt; /tmp/BIDON
+&nbsp;
+NUMERO=`expr 0 + 1`
+for i in `echo 1 2 3 4 5 6 7 8 9 10 11 12 13 14`
+do
+#eval TI$NUMERO="`cut -f $i -d \= /tmp/BIDON | cut -f 2 -d \&amp; `"
+#&nbsp;&nbsp;&nbsp; NUMERO=`expr $NUMERO + 1`
+&nbsp;&nbsp;&nbsp; j=`expr $i + 1`
+&nbsp;&nbsp;&nbsp; eval TI$i="\"`cut -f $j -d \= /tmp/BIDON | cut -f 1 -d \&amp; | tr \+ \ | sed -e '1,$s/\%0D\%0A/ /g' | sed -e '1,$s/\%09/ /g' | sed -e '1,$s/\%E9/\&amp;eacute;/g' | sed -e '1,$s/\%7E/\~/g' | sed -e '1,$s/\%23/\#/g'&nbsp; | sed -e '1,$s/\%7B/\{/g' | sed -e '1,$s/\%7D/\}/g' | sed -e '1,$s/\%28/\(/g' | sed -e '1,$s/\%29/\)/g' | sed -e '1,$s/\%5B/\[/g' | sed -e '1,$s/\%5D/\]/g' | sed -e '1,$s/\%E8/\&amp;egrave;/g' | sed -e '1,$s/\%E0/\&amp;agrave;/g' | sed -e '1,$s/\%26/\&amp;amp;/g' | sed -e '1,$s/\%22/\&amp;quot;/g' | sed -e '1,$s/\%7C/\|/g' | sed -e '1,$s/\%3C/\&amp;lt;/g' | sed -e '1,$s/\%3E/\&amp;gt;/g' | sed -e '1,$s/\%E7/\&amp;ccedil;/g' | sed -e '1,$s/\%5E/\^/g' | sed -e '1,$s/\%F9/\&amp;ugrave;/g' | sed -e '1,$s/\%25/\%/g' | sed -e '1,$s/\%2B/\+/g' | sed -e '1,$s/\%24/\$/g' | sed -e '1,$s/\%21/\!/g' | sed -e '1,$s/\%2F/\//g' | sed -e '1,$s/\%3A/\:/g' | sed -e '1,$s/\%3B/\;/g' | sed -e '1,$s/\%2C/\,/g' | sed -e '1,$s/\%3F/\?/g' | sed -e '1,$s/\%5C/\&amp;backslash;/g'`\""
+#&nbsp;&nbsp;&nbsp; TI=$TI:"`cut -f $j -d \= /tmp/BIDON | cut -f 1 -d \&amp; #| tr \+ \ | sed -e '1,$s/\%0D\%0A/ /g' | sed -e #'1,$s/\%09/ /g' `"
+#&nbsp;&nbsp;&nbsp; NUMERO=`expr $NUMERO + 1`
+done
+&nbsp;
+case $TI13 in
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "80")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUM=80
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "284")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUM=284
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "334")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUM=334
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "317")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUM=317
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "384")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUM=384
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;;
+esac
+DEST="/tmp/registration-iscee98.html"
+#rm /tmp/BIDON
+EXEL="./exel.txt"
+echo "$TI1&nbsp;&nbsp; $TI2&nbsp;&nbsp; $TI3&nbsp;&nbsp; $TI4&nbsp;&nbsp; $TI5&nbsp;&nbsp; $TI6&nbsp;&nbsp; $TI7&nbsp;&nbsp; $TI8&nbsp;&nbsp; $TI9&nbsp;&nbsp; $TI10&nbsp; $TI11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $TI12&nbsp; $TI13&nbsp; $TI14" &gt;&gt; $EXEL
+#-----------------------------------------------------
+cat &lt;&lt; FIN1 &gt; $DEST
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;
+ISCEE'98 Registration Form
+&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY BGCOLOR="#FFFFFF"&gt;
+&lt;CENTER&gt;
+&lt;H3&gt;
+ISCEE'98 Registration Form
+&lt;/H3&gt;
+Oct 8-9, 1998, Universit&amp;eacute; de Melbourne&lt;/CENTER&gt;
+&lt;HR&gt;
+&lt;UL&gt;&lt;P&gt;
+&nbsp;
+&nbsp;
+&lt;B&gt;Last name:&lt;/B&gt; $TI1 &amp;nbsp;&amp;nbsp;
+&lt;B&gt;First name:&lt;/B&gt; $TI2&lt;br&gt;
+&lt;b&gt;Name on Badge:&lt;/b&gt; $TI3&lt;br&gt;
+&lt;B&gt;Affiliation: &lt;/B&gt;$TI4&lt;br&gt;
+&lt;b&gt;Address:&lt;/b&gt; $TI5&lt;br&gt;
+&lt;B&gt;City: &lt;/B&gt;$TI6&lt;br&gt;
+&lt;B&gt;Phone Number: &lt;/B&gt;$TI7 &amp;nbsp;&amp;nbsp;
+&lt;B&gt;Fax Number: &lt;/B&gt;$TI8&lt;br&gt;
+&lt;b&gt;E-Mail: &lt;/b&gt;$TI9&lt;br&gt;
+&lt;B&gt;IEEE Number:&lt;/B&gt;$TI10&lt;br&gt;
+&lt;b&gt;HTTP: &lt;/b&gt;$TI11&lt;br&gt;
+&lt;b&gt;Special Diary:&lt;/b&gt;$TI12&lt;br&gt;
+&lt;b&gt;Registration Fees: &lt;/b&gt;$TI13 US$ or `expr 6 \* $NUM` FF&lt;br&gt;
+&lt;b&gt;Comment: &lt;/b&gt; $TI14&lt;br&gt;
+&lt;P&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;P&gt;Signature ____________________________&lt;P&gt;
+&lt;/UL&gt;&lt;P&gt;
+&lt;/UL&gt;&lt;HR&gt;
+&lt;pre&gt;
+Way of Payment (**): 
+(**) Change fees will be paid by the participant. 
+&nbsp;
+1- By check payable to VERNE-ADER 
+&nbsp;
+2- By administration order form to VERNE-ADER: 
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UPJV-Chemin du Thil-80025 Amiens Cedex 1-France 
+&nbsp;
+3- By direct BankTransfer on the account: 
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Credit Lyonnais Melbourne 30002/05024/0000079046K20 
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(Please, indicate your identity and the name ISCEE'98.)
+&lt;/pre&gt;
+Registration form along with payment must be MAILED to:&lt;P&gt;
+&lt;B&gt;ISCEE'98&lt;/B&gt;&lt;BR&gt;
+Melbourne - Australia&lt;br&gt;
+Email: iscee98@melbourne.au
+&lt;p&gt;
+Please, FAX to 33-322827502 this form AND a copie of your
+bank transfert form which contains the symposium name and your name in order to identify the payment. Thanks.
+&lt;/p&gt;
+&lt;/UL&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+FIN1
+cat /tmp/registration-iscee98.html
+&nbsp;</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      3) On veut un script permettant de formater un fichier qui
+      contient
+      des lignes organisées en colonnes mais le séparateur de
+      colonne et un ou plusieurs blancs ou encore \t. Par exemple, vous
+      pouvez utiliser la commande column comme suit : </p>
+
+    
+<p style="margin-left: 0.5cm; margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">&nbsp;</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;">Ordinateur-de-Christophe-Cerin:~ cerin$ column -t titi
+abc
+efg&nbsp; asdf
+ijk&nbsp; ert&nbsp;&nbsp; fgv
+qqq
+Ordinateur-de-Christophe-Cerin:~ cerin$ more titi
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; abc
+efg asdf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ijk ert&nbsp;&nbsp;&nbsp; fgv
+qqq</pre>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">
+      &nbsp;</p>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">&nbsp;Il vous faut donc simuler la
+      commande column. Utilisez sed par exemple.</p>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">4) Le script suivant prend en
+      paramètre
+      un fichier texte et génère un fichier HTML :</p>
+
+    
+<p style="margin-bottom: 0cm; font-family: Helvetica,Arial,sans-serif;">&nbsp;</p>
+
+    
+<pre style="font-family: Helvetica,Arial,sans-serif;"><span style="font-family: Courier New,Courier,monospace;">Ordinateur-de-Christophe-Cerin:~ cerin$ more script.sed
+2i\
+&lt;html&gt;\
+&lt;head&gt;&lt;title&gt;sed generated html&lt;/title&gt;&lt;/head&gt;\
+&lt;body bgcolor="#ffffff"&gt;\
+&lt;pre&gt;
+$a\
+&lt;/pre&gt;\
+&lt;/body&gt;\
+&lt;/html&gt;
+&nbsp;
+Ordinateur-de-Christophe-Cerin:~ cerin$ more titi
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; abc
+efg asdf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ijk ert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fgv
+qqq
+&nbsp;
+&nbsp;
+&nbsp;
+Ordinateur-de-Christophe-Cerin:~ cerin$
+&nbsp;
+Ordinateur-de-Christophe-Cerin:~ cerin$ sed -f script.sed titi
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; abc
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;sed generated html&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="#ffffff"&gt;
+&lt;pre&gt;
+efg asdf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ijk ert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fgv
+qqq
+&nbsp;
+&nbsp;
+&nbsp;
+&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;Ordinateur-de-Christophe-Cerin:~ cerin$</span>
+&nbsp;</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      Le script repose sur les commandes d'insertion et de concaténation
+      de sed. Veuillez le modifier pour insérer dès la
+      première ligne et ajouter un \n en fin de fichier.&nbsp; On
+      vous demande ensuite de modifier script.sed pour que l'on puisse
+      procéder au traitement suivant sur le fichier inséré
+      : suppression des &lt;tab&gt; et blancs en tête de chaque ligne
+      et mettre un seul blanc entre les mots. Supprimer également
+      les lignes blanches de fin.</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">5- Utilisez sed
+      pour réaliser les actions suivantes : </p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">1. Print a list of
+      files in your scripts directory,
+      ending in ".sh". Mind that you might have to unalias <b>ls</b>.
+      Put the result in a temporary file.</p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">2. Fabriquer une
+      liste des fichiers dans /usr/bin qui
+      ont un a en deuxième position. Ranger le résultat dans
+      un fichier temporaire.</p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">3. Détruire
+      les 3 premières lignes du fichier temporaire.</p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">4. Afficher sur la
+      sortie standard les fichier ayant comme motif "an".</p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">5. Create a file
+      holding <b>sed</b> commands to perform the previous two tasks.
+      Add an
+      extra command to this file that adds a string like "*** This
+      might have something to do with man and man pages ***" in the
+      line preceding every occurence of the string "man". Check
+      the results.</p>
+
+    
+<p style="margin-left: 0.5cm; text-indent: -0.5cm; font-family: Helvetica,Arial,sans-serif;">6. A long listing
+      of the root directory, /, is used for
+      input. Create a file holding <b>sed</b> commands that check for
+      symbolic links and plain files. If a file is a symbolic link,
+      precede
+      it with a line like "--This is a symlink--". If the file is
+      a plain file, add a string on the same line, adding a comment like
+      "&lt;--- this is a plain file".</p>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;"><br>
+      <span style="font-weight: bold;">C-&nbsp;&nbsp;
+        Dessert</span></p>
+
+    <span style="font-family: Helvetica,Arial,sans-serif;">
+    </span>
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">1- Etude d’un
+      code</p>
+
+    
+<ol style="font-family: Helvetica,Arial,sans-serif;">
+
+      <li>
+        <p>Après avoir mis des commentaires dans le code qui suit, dites
+          en une phrase ce que fait le code.</p>
+      </li>
+      <li>
+        <p>Ajouter les codes permettant de créer les répertoires s’ils
+          ne sont pas présents et qui va créer quelques fichiers
+          «&nbsp;bidons&nbsp;» en entrée si le répertoire d’entrée n’existait pas.</p>
+      </li>
+      <li>
+        <p>Exécutez le code et lister le résultat.</p>
+      </li>
+    
+</ol>
+
+    
+<pre style="font-family: Courier New,Courier,monospace;">#!/bin/bash
+#
+&nbsp;
+#
+# File&nbsp;&nbsp;&nbsp; : addlog.sh
+# Date&nbsp;&nbsp;&nbsp; : avril 2nd, 2002
+#
+# Purpose: 
+# Args&nbsp;&nbsp; : -h for help
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1, dir1
+#
+&nbsp;
+&nbsp;
+# ------------------- Local Function
+&nbsp;
+Help()
+{ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo `basename $0` [-h] dir1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo " -h : get this help msg";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo
+&nbsp;}
+&nbsp;
+# ------------------- Main Function
+&nbsp;
+# -------------------
+&nbsp;
+if [ $# -lt 1 ]; then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo `basename $0` : too few args
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Help
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit 1
+fi
+&nbsp;
+if [ $1 = "-h" ]; then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Help
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit 0
+fi
+&nbsp;
+inDir=$1
+shift
+&nbsp;
+if [ -d $inDir ]; then
+&nbsp;&nbsp;&nbsp; dirExist=1
+else
+&nbsp;&nbsp;&nbsp; dirExist=0
+fi
+&nbsp;
+if [ $dirExist -ne 1 ]; then
+&nbsp;&nbsp;&nbsp; echo "$dirIn is not a valid directory"
+&nbsp;&nbsp;&nbsp; exit 2
+fi
+&nbsp;
+&nbsp;
+# ------------------- Main loop
+&nbsp;
+scriptLogFile="ADDLOG.txt"
+if [ -f $scriptLogFile ]; then
+&nbsp;&nbsp;&nbsp; echo $inDir &gt;&gt; $scriptLogFile
+else
+&nbsp;&nbsp;&nbsp; echo $inDir &gt; $scriptLogFile
+fi
+&nbsp;
+localDir=`pwd`
+outDir=$localDir/total
+inDir=$localDir/$inDir
+&nbsp;
+cd $outDir
+&nbsp;
+for fileIn in `ls $inDir/*.log`; do
+&nbsp;
+&nbsp; fileOut=`basename $fileIn`
+&nbsp;
+&nbsp; if [ -f $fileOut ]; then
+&nbsp;
+&nbsp;&nbsp;&nbsp; tempFile=`date | sed 's/ /_/g' | sed 's/:/_/g'`
+&nbsp;&nbsp;&nbsp; cp $fileIn $tempFile
+&nbsp;&nbsp;&nbsp; $localDir/rmline1.sh $tempFile
+&nbsp;
+&nbsp;&nbsp;&nbsp; cat $tempFile &gt;&gt; $fileOut
+&nbsp;&nbsp;&nbsp; rm -f $tempFile
+&nbsp;
+&nbsp; else
+&nbsp;
+&nbsp;&nbsp;&nbsp; cp $fileIn $fileOut
+&nbsp;
+&nbsp; fi
+&nbsp;
+done
+&nbsp;
+cd $localDir
+&nbsp;</pre>
+
+    
+<p style="font-family: Helvetica,Arial,sans-serif;">
+      &nbsp;</p>
+
+    
+<p id="end_body" style="font-family: Helvetica,Arial,sans-serif;">&nbsp;</p>
+
+  
+
+</body></html>

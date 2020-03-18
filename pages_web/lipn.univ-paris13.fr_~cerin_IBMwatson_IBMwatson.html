@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Utilisation du cloud IBM (Watson et autres services)</h1>
+
+<h2>0- La semaine internationale &agrave; Leuven</h2>
+
+<p>
+Organis&eacute;e
+par <a href="https://www.ucll.be/international/about/partners/international-weeks/international-busit-week">UCLL</a>
+la semaine internationale BusIT permet de relever un d&eacute;fi de
+programmation avec les outils d'IBM. Nous discutons ci-apr&egrave;s de
+l'acc&egrave;s &agrave; IBM Watson puis au support de stockage du
+cloud IBM. Il ne s'agit pas de r&eacute;v&eacute;ler le d&eacute;fi de
+programmation mais d'illustrer certaines technologies qui sont utiles
+dans le cadre de cette semaine internationale. Je remercie tr&egrave;s
+chaleureusement Griet Barrezeele de UCLL, et tant qu'on y est,
+toute la Belgique de la mer du Nord &agrave; l'Oural.
+</p>
+
+<h2>1- Obtenir un compte sur la plateforme... et lire de la documentation</h2>
+
+<p>Avant toute chose, puisque nous allons utiliser l'API et les
+services de Watson, il est n&eacute;cessaire de cr&eacute;er un compte
+sur le cloud IBM.  Veuillez cliquer sur cette URL pour cr&eacute;er un
+<a href="https://console.bluemix.net/registration/trial">compte
+d'essai</a>. &Agrave; un moment donn&eacute; vous allez obtenir un
+jeton, en fait une cl&eacute; d'authentification que vous retrouverez
+sous le vocable <code>api_key</code> dans les pages de la
+documentation.</p>
+
+<p>Pour pouvoir programmer des applications, il est important
+d'&ecirc;tre au clair avec la notion
+d'architecture <a =ref="https://fr.wikipedia.org/wiki/Representational_state_transfer">REST</a>. Les
+syst&egrave;mes qui suivent les principes de l'architecture REST sont
+souvent appel&eacute;s <i>RESTful</i>. L'interface REST dans le
+contexte d'IBM est amplement discut&eacute;e en
+ligne <a href="https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/ra/rat_overview.html">ici</a>
+ou
+encore <a href="https://console.bluemix.net/docs/tutorials/create-manage-secure-apis.html#create-secure-and-manage-rest-apis">la</a>. Nous
+recommandons au lecteur de lire ces pages.
+</p>
+
+<p>La documentation sur la partie &laquo; reconnaissance par
+r&eacute;seaux de neurones &raquo; se trouve, quant &agrave; elle, en suivant
+ce <a href="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/python.html?python#introduction">lien</a>.</p>
+
+<p>Dans ce qui suit nous allons commencer par programmer un exemple beaucoup plus
+simple d'acc&egrave;s. Il se r&eacute;alise avec une
+m&eacute;thode <code>POST</code> de l'API de programmation REST.</p>
+
+<p>Pour une introduction aux concepts des r&eacute;seaux de neurones,
+vous pouvez visualiser
+la <a href="https://www.youtube.com/watch?v=aircAruvnKk">video</a>
+suivante, puis
+celle <a href="https://www.youtube.com/watch?v=IHZwWFHWa-w">ci</a> (la
+descente du gradient) et enfin cette vid&eacute; un peu plus technique
+sur les <a href="https://www.youtube.com/watch?v=vT1JzLTH4G4">CNN</a>
+(Convolutional Neural Networks).</p>
+
+<h2>2- Installer un environnement Python pour acc&eacute;der &agrave; la plateforme</h2>
+
+<h3>Configuration Python</h3>
+
+<p>Vous pouvez suivre les &eacute;tapes suivantes afin de pr&eacute;parer un environnement :
+<pre>
+Tu commences par installer la derni&egrave;re version de Python depuis 
+https://www.python.org/downloads/release/python-2714/
+
+Tu installes la librairies Python requests
+christophe:tmp christophecerin$ sudo pip install --upgrade requests
+Password:
+The directory '/Users/christophecerin/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/christophecerin/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already up-to-date: requests in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
+Requirement already up-to-date: certifi>=2017.4.17 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests)
+Requirement already up-to-date: chardet<3.1.0,>=3.0.2 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests)
+Requirement already up-to-date: idna<2.7,>=2.5 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests)
+Requirement already up-to-date: urllib3<1.23,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests)
+
+Ensuite tu installes le kit de d&eacute;veloppement de Watson pour Python
+
+christophe:tmp christophecerin$ sudo pip install --upgrade "watson-developer-cloud>=1.1.1"
+Password:
+The directory '/Users/christophecerin/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/christophecerin/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting watson-developer-cloud>=1.1.1
+Requirement already up-to-date: requests<3.0,>=2.0 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from watson-developer-cloud>=1.1.1)
+Collecting Twisted>=13.2.0 (from watson-developer-cloud>=1.1.1)
+Collecting service-identity>=17.0.0 (from watson-developer-cloud>=1.1.1)
+  Downloading service_identity-17.0.0-py2.py3-none-any.whl
+Collecting python-dateutil>=2.5.3 (from watson-developer-cloud>=1.1.1)
+  Downloading python_dateutil-2.7.2-py2.py3-none-any.whl (212kB)
+    100% |████████████████████████████████| 215kB 2.5MB/s 
+Collecting pyOpenSSL>=16.2.0 (from watson-developer-cloud>=1.1.1)
+  Downloading pyOpenSSL-17.5.0-py2.py3-none-any.whl (53kB)
+    100% |████████████████████████████████| 61kB 5.9MB/s 
+Collecting autobahn>=0.10.9 (from watson-developer-cloud>=1.1.1)
+  Downloading autobahn-18.3.1-py2.py3-none-any.whl (283kB)
+    100% |████████████████████████████████| 286kB 3.6MB/s 
+Requirement already up-to-date: certifi>=2017.4.17 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<3.0,>=2.0->watson-developer-cloud>=1.1.1)
+Requirement already up-to-date: chardet<3.1.0,>=3.0.2 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<3.0,>=2.0->watson-developer-cloud>=1.1.1)
+Requirement already up-to-date: idna<2.7,>=2.5 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<3.0,>=2.0->watson-developer-cloud>=1.1.1)
+Requirement already up-to-date: urllib3<1.23,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<3.0,>=2.0->watson-developer-cloud>=1.1.1)
+Collecting zope.interface>=3.6.0 (from Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+Collecting constantly>=15.1 (from Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+  Downloading constantly-15.1.0-py2.py3-none-any.whl
+Collecting hyperlink>=17.1.1 (from Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+  Downloading hyperlink-18.0.0-py2.py3-none-any.whl
+Collecting incremental>=16.10.1 (from Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+  Downloading incremental-17.5.0-py2.py3-none-any.whl
+Collecting Automat>=0.3.0 (from Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+  Downloading Automat-0.6.0-py2.py3-none-any.whl
+Collecting attrs (from service-identity>=17.0.0->watson-developer-cloud>=1.1.1)
+  Downloading attrs-17.4.0-py2.py3-none-any.whl
+Collecting pyasn1 (from service-identity>=17.0.0->watson-developer-cloud>=1.1.1)
+  Downloading pyasn1-0.4.2-py2.py3-none-any.whl (71kB)
+    100% |████████████████████████████████| 71kB 490kB/s 
+Collecting pyasn1-modules (from service-identity>=17.0.0->watson-developer-cloud>=1.1.1)
+  Downloading pyasn1_modules-0.2.1-py2.py3-none-any.whl (60kB)
+    100% |████████████████████████████████| 61kB 3.7MB/s 
+Collecting six>=1.5 (from python-dateutil>=2.5.3->watson-developer-cloud>=1.1.1)
+  Downloading six-1.11.0-py2.py3-none-any.whl
+Collecting cryptography>=2.1.4 (from pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+  Downloading cryptography-2.2.2-cp27-cp27m-macosx_10_6_intel.whl (1.5MB)
+    100% |████████████████████████████████| 1.5MB 244kB/s 
+Collecting txaio>=2.7.0 (from autobahn>=0.10.9->watson-developer-cloud>=1.1.1)
+  Downloading txaio-2.9.0-py2.py3-none-any.whl
+Collecting setuptools (from zope.interface>=3.6.0->Twisted>=13.2.0->watson-developer-cloud>=1.1.1)
+  Downloading setuptools-39.0.1-py2.py3-none-any.whl (569kB)
+    100% |████████████████████████████████| 573kB 979kB/s 
+Collecting asn1crypto>=0.21.0 (from cryptography>=2.1.4->pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+  Downloading asn1crypto-0.24.0-py2.py3-none-any.whl (101kB)
+    100% |████████████████████████████████| 102kB 1.4MB/s 
+Collecting cffi>=1.7; platform_python_implementation != "PyPy" (from cryptography>=2.1.4->pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+  Downloading cffi-1.11.5-cp27-cp27m-macosx_10_6_intel.whl (238kB)
+    100% |████████████████████████████████| 245kB 1.3MB/s 
+Collecting enum34; python_version < "3" (from cryptography>=2.1.4->pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+  Downloading enum34-1.1.6-py2-none-any.whl
+Collecting ipaddress; python_version < "3" (from cryptography>=2.1.4->pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+Collecting pycparser (from cffi>=1.7; platform_python_implementation != "PyPy"->cryptography>=2.1.4->pyOpenSSL>=16.2.0->watson-developer-cloud>=1.1.1)
+Installing collected packages: setuptools, zope.interface, constantly, hyperlink, incremental, attrs, six, Automat, Twisted, asn1crypto, pycparser, cffi, enum34, ipaddress, cryptography, pyOpenSSL, pyasn1, pyasn1-modules, service-identity, python-dateutil, txaio, autobahn, watson-developer-cloud
+  Found existing installation: setuptools 28.8.0
+    Uninstalling setuptools-28.8.0:
+      Successfully uninstalled setuptools-28.8.0
+  Found existing installation: six 1.8.0
+    Uninstalling six-1.8.0:
+      Successfully uninstalled six-1.8.0
+  Found existing installation: python-dateutil 2.2
+    Uninstalling python-dateutil-2.2:
+      Successfully uninstalled python-dateutil-2.2
+Successfully installed Automat-0.6.0 Twisted-17.9.0 asn1crypto-0.24.0 attrs-17.4.0 autobahn-18.3.1 cffi-1.11.5 constantly-15.1.0 cryptography-2.2.2 enum34-1.1.6 hyperlink-18.0.0 incremental-17.5.0 ipaddress-1.0.19 pyOpenSSL-17.5.0 pyasn1-0.4.2 pyasn1-modules-0.2.1 pycparser-2.18 python-dateutil-2.7.2 service-identity-17.0.0 setuptools-39.0.1 six-1.11.0 txaio-2.9.0 watson-developer-cloud-1.2.1 zope.interface-4.4.3
+You are using pip version 9.0.1, however version 9.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+christophe:tmp christophecerin$ sudo pip install --upgrade pip
+The directory '/Users/christophecerin/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/christophecerin/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting pip
+  Downloading pip-9.0.3-py2.py3-none-any.whl (1.4MB)
+    100% |████████████████████████████████| 1.4MB 807kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-9.0.3
+</pre>
+</p>
+
+<h3>Fichier de test</h3>
+
+<p>Le fichier Python &agrave; consid&eacute;rer est le suivant :
+<pre>
+import requests
+
+url = 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=c001219f52abfaf4f28812f6dddedd65fcabd6be&version=2016-05-20'
+files = {'file': open('test.jpg', 'rb')}
+r = requests.post(url, files=files)
+print r.text
+</pre>
+</p>
+
+<p>Note : l'API <code>requests</code> est discut&eacute;e <a href="http://docs.python-requests.org/en/master/#">ici</a>.
+
+<p>Le r&eacute;sultat de la commande <code>python test.py</code> est le suivant :
+<pre>
+{
+    "images": [
+        {
+            "classifiers": [
+                {
+                    "classifier_id": "default",
+                    "name": "default",
+                    "classes": [
+                        {
+                            "class": "sumo ring",
+                            "score": 0.83,
+                            "type_hierarchy": "/platform/sumo ring"
+                        },
+                        {
+                            "class": "platform",
+                            "score": 0.83
+                        },
+                        {
+                            "class": "field house",
+                            "score": 0.578,
+                            "type_hierarchy": "/building/field house"
+                        },
+                        {
+                            "class": "building",
+                            "score": 0.578
+                        },
+                        {
+                            "class": "sumo",
+                            "score": 0.539,
+                            "type_hierarchy": "/sport/contact sport/sumo"
+                        },
+                        {
+                            "class": "contact sport",
+                            "score": 0.539
+                        },
+                        {
+                            "class": "sport",
+                            "score": 0.676
+                        },
+                        {
+                            "class": "concert hall",
+                            "score": 0.522,
+                            "type_hierarchy": "/indoors/hall/concert hall"
+                        },
+                        {
+                            "class": "hall",
+                            "score": 0.566
+                        },
+                        {
+                            "class": "indoors",
+                            "score": 0.566
+                        },
+                        {
+                            "class": "court game",
+                            "score": 0.5,
+                            "type_hierarchy": "/sport/athletic game/court game"
+                        },
+                        {
+                            "class": "athletic game",
+                            "score": 0.501
+                        },
+                        {
+                            "class": "reddish brown color",
+                            "score": 0.601
+                        }
+                    ]
+                }
+            ],
+            "image": "test.jpg"
+        }
+    ],
+    "images_processed": 1,
+    "custom_classes": 0
+}
+</pre>
+</p>
+
+<p>L'image qui a &eacute;t&eacute; analys&eacute;e est celle-ci :
+<center>
+<figure>
+  <img src="test.jpg" width="55%">
+  <figcaption>Sumo &agrave; la t&eacute;l&eacute;vision japonaise</figcaption>
+</figure>
+</center>
+</p>
+
+<p>On remarque que le classifieur a &eacute;t&eacute; capable de
+d&eacute;tecter dans l'image qu'elle faisait r&eacutef&eacute;rence
+&agrave; un dojo de Sumo. Trop fort !
+
+<h2>Interagir avec le stokage IBM</h2>
+
+<h3>Introduction</h3>
+
+<p>Le <a href="https://medium.com/ibm-watson-data-lab/keeping-your-secrets-between-cloud-object-storage-and-your-browser-part-1-68f4b83bbd38">tutoriel</a>
+en ligne est un bon point d'entr&eacute;e aux concepts du stockage
+chez IBM. Il est donc conseill&eacute; de le lire avant de
+poursuivre.</p>
+
+<p>L'API qui d&eacute;crit comme d&eacute;poser ou lire des fichiers
+dans le cloud IBM est
+disponible <a href="https://console.bluemix.net/docs/services/cloud-object-storage/api-reference/about-compatibility-api.html#about-the-ibm-cloud-object-storage-api">&agrave;
+cette adresse</a>. L'acc&egrave;s via Python se fait en installant une librairie et comme suit :
+<pre>
+MacBook-Pro-de-Christophe:tmp christophecerin$ sudo pip install ibm-cos-sdk
+Password:
+The directory '/Users/christophecerin/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/christophecerin/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting ibm-cos-sdk
+  Downloading ibm-cos-sdk-2.0.2.tar.gz (47kB)
+    100% |████████████████████████████████| 51kB 3.2MB/s 
+Collecting ibm-cos-sdk-core==2.*,>=2.0.0 (from ibm-cos-sdk)
+  Downloading ibm-cos-sdk-core-2.0.2.tar.gz (777kB)
+    100% |████████████████████████████████| 778kB 1.6MB/s 
+Collecting ibm-cos-sdk-s3transfer==2.*,>=2.0.0 (from ibm-cos-sdk)
+  Downloading ibm-cos-sdk-s3transfer-2.0.2.tar.gz (174kB)
+    100% |████████████████████████████████| 184kB 4.9MB/s 
+Collecting jmespath<1.0.0,>=0.7.1 (from ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+  Downloading jmespath-0.9.3-py2.py3-none-any.whl
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Collecting docutils>=0.10 (from ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+  Downloading docutils-0.14-py2-none-any.whl (543kB)
+    100% |████████████████████████████████| 552kB 2.3MB/s 
+Requirement already satisfied: requests<=2.18.4,>=2.12.0 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Collecting futures<4.0.0,>=2.2.0 (from ibm-cos-sdk-s3transfer==2.*,>=2.0.0->ibm-cos-sdk)
+  Downloading futures-3.2.0-py2-none-any.whl
+Requirement already satisfied: six>=1.5 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from python-dateutil<3.0.0,>=2.1->ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Requirement already satisfied: certifi>=2017.4.17 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<=2.18.4,>=2.12.0->ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<=2.18.4,>=2.12.0->ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Requirement already satisfied: idna<2.7,>=2.5 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<=2.18.4,>=2.12.0->ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Requirement already satisfied: urllib3<1.23,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from requests<=2.18.4,>=2.12.0->ibm-cos-sdk-core==2.*,>=2.0.0->ibm-cos-sdk)
+Installing collected packages: jmespath, docutils, ibm-cos-sdk-core, futures, ibm-cos-sdk-s3transfer, ibm-cos-sdk
+  Running setup.py install for ibm-cos-sdk-core ... done
+  Running setup.py install for ibm-cos-sdk-s3transfer ... done
+  Running setup.py install for ibm-cos-sdk ... done
+Successfully installed docutils-0.14 futures-3.2.0 ibm-cos-sdk-2.0.2 ibm-cos-sdk-core-2.0.2 ibm-cos-sdk-s3transfer-2.0.2 jmespath-0.9.3
+MacBook-Pro-de-Christophe:tmp christophecerin$ 
+</pre>
+</p>
+
+<h2>Exemple avec l'interface Python</h2>
+
+<p>Nous reprenons ici l'exemple de la
+page <a href="https://console.bluemix.net/docs/services/cloud-object-storage/libraries/python.html#python">https://console.bluemix.net/docs/services/cloud-object-storage/libraries/python.html#python</a>. Cet
+exemple consid&egrave;re un fichier JSON pour l'authentification
+aupr&egrave;s du service de stokage, et un fichier en Python. Le
+fichier JSON, disponible sur la plateforme IBM, dans l'onglet Donn&eacute;es d'identification pour le service, est :
+
+<pre>
+{
+  "apikey": "??????? INFO MASQUEE ???????",
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:cloud-object-storage:global:a/24277a09408fd3208c568af9d9a99a23:0fffb970-fae2-49e0-a5ee-7472c31f7ac9::",
+  "iam_apikey_name": "auto-generated-apikey-4c145f3f-2c45-4baa-9e82-1c9726ee783b",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Writer",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/24277a09408fd3208c568af9d9a99a23::serviceid:ServiceId-021301ae-5869-4a76-868e-2cde193776fd",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/24277a09408fd3208c568af9d9a99a23:0fffb970-fae2-49e0-a5ee-7472c31f7ac9::"
+}
+</pre>
+</p>
+
+<p>Et maintenant le fichier Python :
+<pre>
+import ibm_boto3
+import json
+import requests
+import random
+from ibm_botocore.client import Config
+from pprint import pprint
+
+with open('./credentials.json') as data_file:
+    credentials = json.load(data_file)
+
+print("Service credential:")
+print(json.dumps(credentials, indent=2))
+print("")
+print("Connecting to COS...")
+
+# Rquest detailed enpoint list
+endpoints = requests.get(credentials.get('endpoints')).json()
+#import pdb; pdb.set_trace()
+
+# Obtain iam and cos host from the the detailed endpoints
+iam_host = (endpoints['identity-endpoints']['iam-token'])
+cos_host = (endpoints['service-endpoints']['cross-region']['us']['public']['us-geo'])
+
+api_key = credentials.get('apikey')
+service_instance_id = credentials.get('resource_instance_id')
+
+# Constrict auth and cos endpoint
+auth_endpoint = "https://" + iam_host + "/oidc/token"
+service_endpoint = "https://" + cos_host
+
+print("Creating client...")
+# Get bucket list
+cos = ibm_boto3.client('s3',
+                    ibm_api_key_id=api_key,
+                    ibm_service_instance_id=service_instance_id,
+                    ibm_auth_endpoint=auth_endpoint,
+                    config=Config(signature_version='oauth'),
+                    endpoint_url=service_endpoint)
+print "client has been created"
+print type(cos)
+
+# Call COS to list current buckets
+response = cos.list_buckets()
+
+# Get a list of all bucket names from the response
+buckets = [bucket['Name'] for bucket in response['Buckets']]
+
+# Print out the bucket list
+print("Current Bucket List:")
+print(json.dumps(buckets, indent=2))
+print("---")
+result = [bucket for bucket in buckets if 'cos-bucket-sample-' in bucket]
+
+print("Creating a new bucket and uploading an object...")
+if len(result) == 0 :
+   bucket_name = 'cos-bucket-sample-' + str(random.randint(100,99999999));
+   # Create a bucket
+   cos.create_bucket(Bucket=bucket_name)
+   # Upload a file
+   cos.upload_file('./example.py', bucket_name, 'example-object')
+
+   # Call COS to list current buckets
+   response = cos.list_buckets()
+
+   # Get a list of all bucket names from the response
+   buckets = [bucket['Name'] for bucket in response['Buckets']]
+
+   # Print out the bucket list
+   print("New Bucket List:")
+   print(json.dumps(buckets, indent=2))
+   print("---")
+else :
+   bucket_name = result[0];
+
+
+# Call COS to list current objects
+response = cos.list_objects(Bucket=bucket_name)
+
+# Get a list of all object names from the response
+objects = [object['Key'] for object in response['Contents']]
+
+# Print out the object list
+print("Objects in %s:" % bucket_name)
+print(json.dumps(objects, indent=2))
+</pre>
+</p>
+
+<p>Maintenant, nous pouvont lancer la
+commande <code>/Users/christophecerin/.pyenv/versions/2.7.14/bin/python
+test1.py</code> et nous obtenons la trace suivant :
+<pre>
+Service credential:
+{
+  "apikey": "??????? INFO MASQUEE ?????????", 
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/24277a09408fd3208c568af9d9a99a23::serviceid:ServiceId-021301ae-5869-4a76-868e-2cde193776fd", 
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Writer", 
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/24277a09408fd3208c568af9d9a99a23:0fffb970-fae2-49e0-a5ee-7472c31f7ac9::", 
+  "iam_apikey_name": "auto-generated-apikey-4c145f3f-2c45-4baa-9e82-1c9726ee783b", 
+  "endpoints": "https://cos-service.bluemix.net/endpoints", 
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:cloud-object-storage:global:a/24277a09408fd3208c568af9d9a99a23:0fffb970-fae2-49e0-a5ee-7472c31f7ac9::"
+}
+
+Connecting to COS...
+ibm_auth_endpoint: https://iam.bluemix.net/oidc/token
+service_endpoint: https://s3-api.us-geo.objectstorage.softlayer.net
+Creating client...
+client has been created
+<class 'ibm_botocore.client.S3'>
+Current Bucket List:
+[
+  "bucketcerin"
+]
+---
+Creating a new bucket and uploading an object...
+New Bucket List:
+[
+  "bucketcerin", 
+  "cos-bucket-sample-3681546"
+]
+---
+Objects in cos-bucket-sample-3681546:
+[
+  "example-object"
+]
+MacBook-Pro-de-Christophe:tmp christophecerin$ 
+</pre>
+</p>
+
+<p>Gr&acirc;ce &agrave; l'interface graphique de notre compte nous pouvons observer les deux buckets :
+<center>
+<figure>
+  <img src="cloud_storage.png" width="85%">
+  <figcaption>Interface graphique pour des objets storage</figcaption>
+</figure>
+</center>
+</p>
+
+<h2>Exemple avec l'interface curl</h2>
+
+<p>Pour t&eacute;l&eacute;charger un fichier depuis le cloud, nous
+pouvons aussi nous servir de la commande <code>curl</code> et nous
+inspirer de l'exemple suivant :
+<pre>
+curl -T ./trump.jpg -H 'Content-type: image/jpg' 'https://s3-api.us-geo.objectstorage.softlayer.net/mybucket/N9n4YnJcyGlbEnwIXD49.jpg?AWSAccessKeyId=xxx&Signature=yyy&Expires=1519910332'
+</pre>
+</p>
+
+<p>Il convient bien entendu de remplacer les champs xxx, yyy et mybucket par les valeurs ad&eacute;quates li&eacute;es &agrave; votre compte.
+</p>
+
+<h3>Note technique pour les utilisateurs MacOSX</h3>
+
+<p>Si vous utilisez un Mac, il est possible que votre version Python
+soit trop ancienne vis &agrave; vis de la biblioth&egrave;que SSL, ce
+qui conduira &agrave; des refus d'authentification aupr&egrave;s des
+services IBM. Si le num&eacute;ro de version SLL est inf&eacute;rieur
+&agrave; 1, alors vous allez avoir des probl&egrave;mes. Ainsi la
+version suivante pose probl&egrave;me m&ecirc;me si la version de Python est &agrave; jour :
+
+<pre>
+MacBook-Pro-de-Christophe:~ christophecerin$ python
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 12:01:12) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ssl
+>>> ssl.OPENSSL_VERSION
+'OpenSSL 0.9.8zh 14 Jan 2016'
+>>> 
+</pre>
+</p>
+
+<p>Pour rem&eacute;dier au probl&egrave;me, vous avez le choix entre
+deux m&eacute;thodes :
+<ul>
+  <li>actualiser la version SSL actuelle de votre Python ;
+  <li>installer une nouvelle version de Python, puis r&eacute;installer toutes les librairies
+d'acc&egrave;s au cloud IBM.
+</ul>
+</p>
+
+<p>Pour la deuxi&egrave;me m&eacute;thode, vous pouvez proc&eacute;der
+comme suit &agrave; partir du moment ou vous avez install&eacute;
+l'utilitaire <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a> :
+
+<pre>
+brew update
+brew install openssl --update
+brew link --force openssl
+</pre>
+</p>
+
+<p>Il est possible que cette derni&egrave;re commande conduise
+&agrave; une erreur :
+<pre>
+MacBook-Pro-de-Christophe:~ christophecerin$ brew link --force openssl
+Warning: Refusing to link: openssl
+Linking keg-only openssl means you may end up linking against the insecure,
+deprecated system OpenSSL while using the headers from Homebrew's openssl.
+Instead, pass the full include/library paths to your compiler e.g.:
+  -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib
+</pre>
+<p>
+
+<p>Vous pouvez ensuite faire la manipulation
+suivante pour installer un Python (ici la version 2.7.14) qui utilisera
+la nouvelle version SSL :
+<pre>
+CFLAGS="-I$(brew --prefix openssl)/include" \
+LDFLAGS="-L$(brew --prefix openssl)/lib" \
+pyenv install -v 2.7.14
+</pre>
+</p>
+
+<p>Vous pouvez maintenant acc&eacute;der &agrave; votre version Python
+et v&eacute;rifier votre version SSL comme suit :
+<pre>
+MacBook-Pro-de-Christophe:~ christophecerin$ .pyenv/versions/2.7.14/bin/python
+Python 2.7.14 (default, Mar 29 2018, 21:00:49) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ssl
+>>> ssl.OPENSSL_VERSION
+'OpenSSL 1.0.2o  27 Mar 2018'
+>>> 
+</pre>
+</p>
+
+<p>
+Note : en fait, la version d'Openssl utilis&eacute;e sur le Mac
+est <a href="http://www.libressl.org">Libressl</a>. Vous pouvez
+l'installer simplement &agrave; partir des sources par le cycle classique
+<code>./configure ; make; make install</code>. 
+</p>
+
+<p>Note : pour installer un nouveau paquet, par exemple une librairies
+pour IBM Cloud, pour votre nouvelle version de Python, vous devez maintenant
+utiliser le <code>pip</code> nouvellement install&eacute; :
+<pre>
+MacBook-Pro-de-Christophe:~ christophecerin$ .pyenv/versions/2.7.14/bin/pip --version
+pip 9.0.1 from /Users/christophecerin/.pyenv/versions/2.7.14/lib/python2.7/site-packages (python 2.7)
+</pre>
+</p>
+
+<p>
+&nbsp;
+</p>
+<hr>
+
+<p>
+Christophe C&eacute;rin<br>
+christophe.cerin@lipn.univ-paris13.fr<br>
+March 31, 2018
+</p>
+
+<p>
+</p>
+<hr>
+</body>
+</html>

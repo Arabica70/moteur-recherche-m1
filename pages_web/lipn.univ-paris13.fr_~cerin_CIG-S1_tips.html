@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Moodle</h1>
+<p>
+Le cours et les exercices se font en ligne sur
+<a href="http://moodle.iutv.univ-paris13.fr">http://moodle.iutv.univ-paris13.fr</a>.
+</p>
+
+<h1>Police de caract&egrave;res</h1>
+
+<p>
+Nous nous sommes interrog&eacute;s la derni&egrave;re fois sur le premier TP moodle
+au sujet des polices de caract&egrave;res. Dans un des exercices il fallait
+saisir la r&eacute;ponse 64. Nous ne comprenions pas quel &eacute;tait le lien de
+cette valeur avec la taille de la police/fonte. Nous avions relev&eacute; que
+la taille d'un texte ne correspondait pas &agrave; la taille de la police
+multipli&eacute; par le nombre de caract&egrave;res. Ainsi si la fonte-size est 12pt
+et le texte &laquo; Hello &raquo; la taille du texte n'est pas 5*12=60pt
+</p>
+<p>
+La r&eacute;alit&eacute; est plus complexe. En fait la fonte-size peut &ecirc;tre relative
+&agrave; la r&eacute;solution de l'&eacute;cran, ou relative &agrave; un param&egrave;tre du navigateur,
+ou encore relative &agrave; un &eacute;l&eacute;ment parent du texte. Je vous joint un
+programme HTML+javascript (testPolice.html) qui permet d'observer des
+largeurs de chaines de caract&egrave;res, en fonction de diff&eacute;rentes
+propri&eacute;t&eacute;s de polices de caract&egrave;res. Vous pouvez interpr&eacute;ter ce
+programme via votre navigateur sur l'url :
+<a href="https://lipn.univ-paris13.fr/~cerin/CIG-S1/testPolice.html">https://lipn.univ-paris13.fr/~cerin/CIG-S1/testPolice.html</a>
+</p>
+
+<h1>Clip ou pas clip</h1>
+
+<p>
+La question initiale d'un &eacute;tudiant discut&eacute;e dans ce post &eacute;tait la
+suivante. Comment "extraire" une partie d'une image bitmap pour en
+faire une zone clickable ?
+</p>
+<p>
+C'est la notion de Clip ou Clipping qui va nous permettre l'extration
+d'une partie d'une image. The definition of a clipping is something
+that has been cut out or off.  An example of a clipping is a piece of
+art that's been cut from a magazine.
+</p>
+<p>
+C'est une notion ancienne. Personnelement je me rappelle avoir
+programm&eacute; du Clipping avec le langage PostScript
+(<a href="https://fr.wikipedia.org/wiki/PostScript">ttps://fr.wikipedia.org/wiki/PostScript</a>)... &agrave;
+la fin des ann&eacute;e 80 !  Le PostScript est un langage de
+description de page mis au point par Adobe. PostScript permet une
+description vectorielle de la page et de tous les
+&eacute;l&eacute;ments graphiques la composant. Ainsi une page
+d'impression n'est pas vue comme un bitmap mais comme un ensemble
+d'objets.
+</p>
+<p>
+SVG (Scalable Vector Graphics -
+<a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)">https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)</a>
+est un format de donn&eacute;es con&ccedil;u pour le Web, comme
+HTML. C'est aussi un format vectoriel. Un fichier HTML peut faire
+appel a une description SVG. Le premier exemple de code SVG est simple
+&agrave; comprendre. Pour le visualiser taper l'url suivante dans
+votre navigateur
+: <a href="http://lipn.univ-paris13.fr/~cerin/CIG-S1/svg1.html">http://lipn.univ-paris13.fr/~cerin/CIG-S1/svg1.html</a>
+</p>
+<pre>
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
+  <title>Exemple simple de figure SVG</title>
+  <desc>
+    Cette figure est constitu&eacute;e d'un rectangle,
+    d'un segment de droite et d'un cercle.
+  </desc>
+ 
+  <rect width="100" height="80" x="0" y="70" fill="green" />
+  <line x1="5" y1="5" x2="250" y2="95" stroke="red" />
+  <circle cx="90" cy="80" r="50" fill="blue" />
+  <text x="180" y="60">Un texte</text>
+</svg>
+</pre>
+</p>
+<p>
+Vous avez un deuxi&egrave;me exemple ici :
+<a href="http://lipn.univ-paris13.fr/~cerin/CIG-S1/bird.svg">http://lipn.univ-paris13.fr/~cerin/CIG-S1/bird.svg</a>
+Cet exemple montre que les navigateurs actuels supportent nativement
+SVG. Le support de SVG par plugins n'est plus maintenu.
+</p>
+<p>
+Pour commencer avec SVG, je vous recommande la page :
+<a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html</a>
+Vous y trouverez des informations sur le Clipping (clip-path).
+</p>
+<p>
+Il y a d'autres exemples de code SVG ici :
+<ul>
+<li><a href="https://lipn.univ-paris13.fr/~cerin/ipdps2002/chart.svg">https://lipn.univ-paris13.fr/~cerin/ipdps2002/chart.svg</a>
+<li><a href="https://lipn.univ-paris13.fr/~cerin/ipdps2002/HelloSVG.svg">https://lipn.univ-paris13.fr/~cerin/ipdps2002/HelloSVG.svg</a>
+<li><a href="https://lipn.univ-paris13.fr/~cerin/ipdps2002/h_time.svg">ttps://lipn.univ-paris13.fr/~cerin/ipdps2002/h_time.svg</a>,
+<a href="https://lipn.univ-paris13.fr/~cerin/ipdps2002/h_osource_news.rb.svg">https://lipn.univ-paris13.fr/~cerin/ipdps2002/h_osource_news.rb.svg</a>
+<a href="http://lipn.univ-paris13.fr/~cerin/CIG-S1/Cerin.svg">http://lipn.univ-paris13.fr/~cerin/CIG-S1/Cerin.svg</a>
+</ul>
+</p>
+<p>
+... et un exemple de HTML faisant appel a du SVG ici :
+<a href="https://lipn.univ-paris13.fr/~cerin/ipdps2002/image.htm">https://lipn.univ-paris13.fr/~cerin/ipdps2002/image.htm</a>
+</p>
+<p>
+Pour en revenir &agrave; notre probl&egrave;me initial, je vous recommande la page :
+<a href="https://css-tricks.com/clipping-masking-css/">https://css-tricks.com/clipping-masking-css/</a>
+ainsi que la page :
+<a href="https://css-tricks.com/using-svg/">https://css-tricks.com/using-svg/</a>
+pour le lien avec SVG.
+</p>
+<br>
+<br>
+</body>
+</html>

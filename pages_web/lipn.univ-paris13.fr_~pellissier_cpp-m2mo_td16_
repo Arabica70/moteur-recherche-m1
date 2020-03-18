@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 16</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    .footnote { }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 16 C++: Révisions</h2>
+
+<hr/>
+<h3>Exercice 0: QCM (révisions)</h3>
+
+Faites ce QCM: <a href="http://goo.gl/forms/MtzwBmXsI2">http://goo.gl/forms/MtzwBmXsI2</a>.
+<br/>Vous avez <b>60 minutes</b>.
+
+Il sera noté au cours de la séance, mais seulement à titre indicatif: la note ne comptera pas.
+<p>
+Voir les <b><a href="https://docs.google.com/spreadsheets/d/1lhEPF0DGbYO6_6esKMIcG8GHe2-3Cp0wpWge7nQ8h4s/edit?usp=sharing">Résultats 2018</a></b> du QCM
+
+<hr/>
+<h3>Exercice 1: Programmation (révisions)</h3>
+<ol>
+  <li>
+    <b>Écrire</b> dans un fichier <tt>1.1.cc</tt> une fonction <tt>RevString</tt>
+    qui inverse les caractères d'une chaîne de caractères, eg. <tt>"hello"</tt> &rarr; <tt>"olleh"</tt>.
+    La signature de la fonction devra être exactement:
+    <pre><code class="c++">void RevString(string* s);</code></pre>
+    Vous devrez listez tous les <tt>#include</tt> et <tt>using</tt> nécessaires.
+
+    <br/><br/>
+    <b>Testez</b> votre code:
+    <pre>rm 1.tar.gz; wget --no-cache <a href="1.tar.gz" download>http://fabien.viger.free.fr/cpp/td16/1.tar.gz</a>
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU:</b> <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>Écrire</b> dans un fichier <tt>1.2.h</tt> une fonction générique GetSecond() qui prend
+    un <tt>const vector<T>&amp;</tt> en argument, contenant un type quelconque <tt>T</tt>,
+    et renvoie l'<b>index</b> du 2<sup>ème</sup> plus grand élément (le type de retour est donc <tt>int</tt>).
+    <br/><br/><b>Exemple</b>: <tt>GetSecond({3, 5, 2, 4, 0, 6})</tt> doit renvoyer <tt>1</tt> (l'index de <tt>5</tt>).
+    <br/><br/>
+    La fonction devra fonctionner en <b>O(N)</b>, où N est la taille du vecteur.
+    Vous pourrez présupposer que le vecteur donné en entrée contient au moins 2 éléments.
+    <br/><br/>Pour tester: <tt>make 1.2</tt>
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.2.h</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>Écrire</b> dans un fichier <tt>1.3.h</tt> une fonction générique GetKth() qui prend
+    un <tt>const vector<T>&amp;</tt> en argument, et un entier <tt>K</tt>,
+    et renvoie le <tt>K</tt>-ième plus <b>grand</b> élément du vecteur
+    (indexé à 0: pour le plus grand élement on utiliserait K=0, pour le 2<sup>ème</sup> plus grand on utiliserait K=1).
+    <br/>La syntaxe d'un appel de cette fonction serait par exemple:
+    <pre><code class="cpp">vector<string> x = {"Hello", "Beautiful", "World"};
+int idx = GetKth(x, 1);  // We expect idx = 0.</code></pre>
+    La fonction doit fonctionner en <b>O(N.log(K))</b>, où N est la taille du vecteur. Ou mieux.
+    <br/><br/>Pour tester: <tt>make 1.3</tt>  Note: Le test de performance devrait tourner en a peu près 1s.
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.3.h</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>reunion CRISS</title>
+  </head>
+
+  <body>
+   
+<div align="center">
+<h3>R&eacute;union de l'ACI  <A
+	  href="http://www.cmi.univ-mrs.fr/~amadio/Criss/criss.html">
+	  CRISS</A></h3>
+<h3>'Contrôle de Ressources et d'Interférence dans les Systèmes Synchrones'</h3>
+
+<h3>à Paris (Chevaleret), lundi 13 et mardi 14 juin 2005</h3>
+</div>
+<BR><BR>
+<div align="left">
+Salle 1C18 (1er &eacute;tage), 175 rue du Chevaleret, 75013 Paris. <A href="http://www.math.jussieu.fr/acces.html">Comment venir</A>
+
+<h4><LI> Orateurs invit&eacute;s:</h4>  Emmanuel
+	Chailloux (PPS), Jean-Pierre Jouannaud (LIX), Ugo Dal Lago (Bologne, Italie). </LI>
+
+<h4><LI>Programme préliminaire:</h4>
+
+lundi 13 juin:<BR>
+10h15 accueil<BR>
+10h30 Roberto Amadio (LIF). The Synchronous Language, revisited<BR>
+11h15 Vincent Atassi (LIPN). Sur l'inférence de type en Logique linéaire
+élémentaire et son implémentation.<BR>
+12h discussion<BR>12h30 déjeuner<BR><BR>
+14h30 Jean-Pierre Jouannaud (LIX). Ordres d'ordre supérieur.<BR>
+15h15 Ugo Dal Lago (Bologna).The Geometry of Linear Ramified Recursion.<BR>
+16h pause<BR>
+16h45-17h30 Julien Verlaguet et Emmanuel Chailloux (PPS). HirondML: Fair threads
+Migrations for Objective Caml<BR>
+<BR>
+
+mardi 14 juin:<BR>
+9h Gérard Boudol (INRIA Sophia) . Sur le typage du flux d'information<BR>
+9h45 Roberto Amadio (LIF). Feasible reactivity for synchronous cooperative
+threads<BR>
+10h30 pause<BR>
+11h15 Paulin Jacobé de Naurois (LORIA).Implicit Complexity over an Arbitrary
+Structure: Sequential and Parallel Polynomial Time.<BR>
+12h Romain Péchoux (LORIA). Synthesis of Quasi-Interpretations<BR>
+12h45 déjeuner<BR>
+14h discussion 
+<BR><BR></LI>
+
+ <LI> quelques adresses d' <A
+	  href="http://www.liafa.jussieu.fr/web9/acces/hotelsquartier_fr.php">hotels</A>  ( page du LIAFA ) </LI><br>
+
+<LI>Contacts: Patrick Baillot, Virgile Mogbil, ({pb,vm}'at'lipn.univ-paris13.fr) </LI> 
+</div>
+
+
+    <hr>
+    
+<!-- Created: Tue May 31 13:47:41 CEST 2005 -->
+<!-- hhmts start -->
+Last modified: Tue May 31 14:26:35 CEST 2005
+<!-- hhmts end -->
+  </body>
+</html>

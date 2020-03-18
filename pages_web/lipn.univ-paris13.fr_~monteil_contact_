@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <title>Page de maths de Thierry Monteil</title>
+  <meta name="author" content="Thierry Monteil" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="thierry monteil, mathematics, informatique, computer science, finite blocking property, dynamical systems, billiards, symbolic dynamics, quasiperiodic subshift, discrete circle, cercle discret, tiling, pavage, kolakoski, ergodicity, unique ergodicity, unique ergodicite, frequency, frequence, entropy, entropie, graph, graphe, Rauzy, montpellier, marseille, LLL, lattice, algorithmics, diophantine approximation" />
+  <meta name="robots" content="index,follow" />
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+     }
+    });
+  </script>
+  <script type="text/javascript" src="/~monteil/hebergement/wikiarith/pub/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<p>
+<body>
+<p>
+<img src="../blog/UneNouvelleIdentiteVisuellePourLeCNRS/mini-coupe-IdentiteVisuelleCNRS.jpg" align="right"></img>
+<p>
+<center>
+<h1>Page de maths de Thierry Monteil <br /></h1>
+<!-- (site pr&ecirc; &agrave; se remettre en gr&egrave;ve) -->
+<code>
+  <a href="../contact/">contact</a> ::
+  <!--
+  <a href="../adminsys/">cours adminsys</a> ::
+  -->
+  <a href="../recherche/">th&egrave;mes de recherche</a> ::
+  <a href="../papiers/">papiers</a> ::
+  <a href="../admin/">admin</a> ::
+  <a href="../archive">archive</a> ::
+  <a href="../liens/">liens</a> ::
+  <a href="./index.en.html">english</a>
+</code>
+</center>
+<br />
+<hr />
+<p>
+<!-- blocs enleves
+<p>
+  <a href="../seminaires/">s&eacute;minaires (photos)</a> ::
+  <a href="../m2/">m2</a> ::
+  <a href="../blog/Accueil/">blog</a> ::
+  <a href="../these/">th&egrave;se</a> ::
+<p>
+-->
+<p>
+<!--
+<center>
+<a href="/~monteil/proposition-de-these/">Proposition de th&egrave;se pour la p&eacute;riode 2011-2014 !</a>
+</center>
+<hr />
+-->
+<p>
+<h2>Coordonn&eacute;es</h2>
+<a href="https://lipn.univ-paris13.fr/">LIPN</a> - CNRS (UMR 7030) <br />
+99, avenue Jean-Baptiste Cl&eacute;ment <br />
+93430 Villetaneuse <br />
+FRANCE
+<p>
+&Eacute;quipe de recherche : <a href="/accueil/equipe/calin/">Calin</a> <br />
+T&eacute;l&eacute;phone : +33 1 49 40 40 70 <br />
+Bureau : A 105 <br />
+Adresse e-mail :
+<ul>
+<li>  R&eacute;cup&eacute;rez-la depuis ma <a href="monteil-lirmm.asc">clef publique GPG</a> : <br /> <pre>gpg --fetch-keys http://www.lirmm.fr/~monteil/contact/monteil-lirmm.asc</pre> </li>
+<li>  Ou essayez pr&eacute;nom.nom@laboratoire.pays </li>
+</ul>
+<p>
+<p>
+<hr />
+<code>
+    Page web propuls&eacute;e par nilcms. Pour une validation stricte, d&eacute;brouillez-vous.
+<br />
+[ Wiki ::
+	<a href="http://lma.metelu.net/FlatSurfaces/">WildSurfaces</a> -
+	<a href="http://baire.metelu.net/">BwataBaire</a> -
+	<a href="http://lma.metelu.net/Substitutions/">Substitutions</a> -
+	<a href="http://lma.metelu.net/CellularAutomata/">CellularAutomata</a> -
+	<a href="http://lma.metelu.net/">LMA</a> -
+	<a href="http://lma.metelu.net/Ecool">Ecool</a>
+]
+</code>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="lipn.png">
+
+ 
+<title>Lionel Pournin</title>
+<meta name="author" content="Lionel Pournin">
+<meta name="description" content="Lionel Pournin, research interests, publications, teaching">
+<meta name="keywords" content="Lionel Pournin, numerical simulation, granular media, discrete geometry, polytopes, operations research, triangulations">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div style="width=470;font-size:26px;font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">
+Lionel Pournin - Home Page
+</div>
+
+<hr align=left noshade size=2 width=200 style="margin-bottom:-5px;">
+
+<table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:120px;">
+      <p style="margin-top:20px;font-size:18px;"><a href="http://lipn.univ-paris13.fr/~pournin/">Main</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=2">Teaching</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=3">Research</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=4">Publications</a></p>
+<!--
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=6">Talks</a></p>
+-->
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=5">Links</a></p>
+      </div>
+    </td>
+    <td valign="top">
+      <div style="float:left;width:680px;margin-top:15px;">
+<IMG align=left src="lionel.jpg" height="186" title="&#1053;&#1072; &#1086;&#1089;&#1090;&#1088;&#1086;&#1074;&#1077; &#1054;&#1083;&#1100;&#1093;&#1086;&#1085;",, SGI_SRC="http://perso.efrei.fr/~pournin/lionel.jpg", border=0>
+
+<p style="margin-top:15px;">
+<span class="sp1"></span><span class="sh2">Mail Address:</span>
+<blockquote>
+<span class="sp5">LIPN, Universit&eacute; Paris 13,</span><br>
+<span class="sp5">99, avenue Jean-Baptiste Cl&eacute;ment,</span><br>
+<span class="sp5">93&thinsp;430 Villetaneuse, France</span><br>
+</blockquote>
+</p>
+<p>
+<span class="sp1"></span><span class="sh2">Phone number:</span> +33&thinsp;(0)1&thinsp;49&thinsp;40&thinsp;40&thinsp;70<br>
+<span class="sp1"></span><span class="sh2">&#8203;E&#45;&#8203;&#x200b;&#77;&#x200b;a&#105;&#x200b;l&#58;</span> firstname&#46;lastname&#x000040;un&#x69;v&#45;p&#97;r&#105;s13&#x2e;&#102;r<br>
+</p>
+
+<p align="justify" style="margin-top:35px;">
+I am a professor at the <a href="http://www.univ-paris13.fr/">University of Paris 13</a>. I work in the <a href="https://lipn.univ-paris13.fr/en/calin">combinatorics group</a>.
+</p>
+
+<!--
+<p align="justify">
+I am a member of the <a href="http://members.loria.fr/Monique.Teillaud/collab/SoS/">SoS</a> (Structure on Surfaces) project, co-funded by the French National Research Agency and the Luxembourg National Research Fund. Three post-doctoral positions are currently open. More details on the project and the application procedure <a href="http://members.loria.fr/Monique.Teillaud/collab/SoS/postdoc_marne.html">here</a>.
+</p>
+-->
+
+<p align="justify">
+My research fields are mathematics, computer science, and applied physics. My interests include: discrete geometry, polyhedral combinatorics, geometric topology, computer simulation and the physics of granular media. See my <a href="index.php?l=3">research page</a> and my <a href="index.php?l=4">list of publications</a> for more details.
+</p>
+
+<p align="justify">
+I got my habilitation at the <a href="http://www.univ-paris-diderot.fr/">University of Paris 7</a>.
+Before moving back to France, I was 
+<!--a professor at the <a href="http://www.ehl.edu">&Eacute;cole Hoteli&egrave;re de Lausanne</a>, and-->
+a lecturer in Operations Research at the <a href="http://www.epfl.ch">&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne</a>, in Switzerland where I did my PhD under the supervision of <a href="http://people.epfl.ch/thomas.liebling">Tom Liebling</a>.
+</p>
+</div>
+
+    </td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6627459; 
+var sc_invisible=1; 
+var sc_security="1f468d45"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

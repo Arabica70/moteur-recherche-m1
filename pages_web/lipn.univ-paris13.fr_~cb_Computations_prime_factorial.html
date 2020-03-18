@@ -1,0 +1,197 @@
+<HTML>
+<TITLE>Fortune's conjecture (Fortunate and unfortunate primes : Nearest primes from a prime factorial)</TITLE>
+<CENTER>
+<h1>Fortune's conjecture (Fortunate and unfortunate primes : Nearest primes from a prime factorial)</h1>
+by <A HREF="/~banderier/">Cyril Banderier</a>, LIPN, Univ. Paris 13<Br>
+September 1999 <SMALL>[Updated 12/18/2000, with an addendum in Oct. 2006]</small>
+ </CENTER>
+<H4>On the distance between the prime factorial and the
+previous/next prime number</H4>
+
+
+The <A HREF="http://en.wikipedia.org/wiki/Prime_number_theorem">distribution of prime numbers</a> 
+is one of the most fundamental problems in mathematics. It is nicely related to complex analysis,
+as e.g. explained in the following lecture note on <A HREF="http://www-lipn.univ-paris13.fr/~banderier/Seminar/vardi3.html">analytic number theory</a>.
+<P>
+Let us define the "prime factorial of order <em>n</em>"
+as the product of the first <em>n</em> prime numbers:
+<em>f<sub>n</sub>=p<sub>1</sub> &times; p<sub>2</sub> &times;
+  ... &times; p<sub>n</sub></em>.<BR>
+E.g. <em>f<sub>5</sub>= 2 &times; 3 &times; 5 &times; 7 &times; 11=
+  2310, f<sub>6</sub>= 2 &times; 3 &times; 5 &times; 7 &times; 11
+  &times; 13=30030.</em>
+
+(These numbers f<sub>n</sub> are also sometimes called "primorial").<BR>
+<P>
+When I was a child, I was astonished to read in the <em>Dictionnaire des math&eacute;matiques</Em> (by Le Lionnais/Bouvier/Georges)
+that a so-called "conjecture de Fortune" claims that f<sub>n</sub>+1 is always a prime number.
+Well, I quickly checked and, in fact 
+ f<sub>1</sub>+1=3,
+ f<sub>2</sub>+1=7,
+ f<sub>3</sub>+1=31,
+ f<sub>4</sub>+1=211,
+ f<sub>5</sub>+1 =2311, are all primes... but  f<sub>6</sub>+1 = 59 &times; 509 is certainly not !
+
+<BR>
+Therefore, something was wrong in the way this books presented the conjecture. I will give later the correct conjecture.
+
+
+
+
+<BR>
+Some interesting values of <em>n</em> are those for which
+<em>f<sub>n</sub>-</em>1 or <em>f<sub>n</sub>+</em>1 is prime.
+These sequences are in fact a way to prove that there exist infinitely many prime numbers  as done by Euclid in his nice "reductio ad absurdum".
+<P>
+
+A natural conjecture (we will explain why hereafter) is the following one
+<! that I never saw in the literature before in all its generality: !>
+<P>
+<B>The Prime Factorial Conjecture:</B>
+<LI>The distance <em>d<sub>n</sub><SUP><SMALL>+</SMALL></SUP></EM>
+between the prime factorial <em>f<sub>n</sub></em>
+and the first prime greater
+ than <em>f<sub>n</sub></em> is either 1, either a prime number.<BR>
+<LI>Similarly, the distance
+<em>d<sub>n</sub><SUP><SMALL>-</SMALL></SUP></EM>
+between the prime factorial
+<em>f<sub>n</sub></em>
+and the first prime least
+ than <em>f<sub>n</sub></em>  is either 1, either a prime number. 
+<P>
+
+
+The second line is Banderier's conjecture while the 
+first line is known as Fortune's conjecture 
+(which leads to the so-called "fortunate numbers"). 
+Fortune's conjecture (the first prime greater than a given prime 
+factorial) is studied in the section A2 
+of the famous book of Richard K. Guy "Unsolved Problems in Number Theory"
+(2nd edition, Springer, 1994).
+<P>
+<B>Who was R.F. Fortune ?</B><BR>
+Reo Franklin Fortune (1903-1979) was a social
+anthropologist, lecturer in social anthropology at the Cambridge
+University, specialist in Melanesian language and culture
+(confer the obituaries "Reo FORTUNE (1903-1979)", by Michael W. Young in "Canberra
+Anthropology"  vol. 3, n.1, pp 105-108, 1980).
+R.F. Fortune joined in 1941 the <A HREF="http://www.chass.utoronto.ca/anthropology/history.htm">Department of Anthropology at University of Toronto</a>.
+ Fortune was married to <A href="http://www.webster.edu/~woolflm/margaretmead.html">Margaret Mead</a> from 1928 to 1935
+(<A HREf="http://en.wikipedia.org/wiki/Margaret_Mead">Margaret Mead</a> did have three husbands...the first was Luther Cressman 
+from 1923-28. I believe he was a minister. The second was Reo Fortune, a 
+New Zealand psychologist turned anthropologist from 1928-35. The third 
+was Gregory Bateson (1936-50). He was a British anthropologist whose 
+strong natural science background influenced Mead's work.
+<SMALL>[Information from a book called Women Anthropologists - Selected 
+Biographies edited by Gacs, Khan, McIntyre, and Weinberg. USA: Greenwood 
+press, 1988]</SMALL>). 
+Fortune is well known for his <A HREf="http://www.amazon.com/s/?url=search-alias%3Dstripbooks&field-keywords=reo+fortune">ethnographies</a> of the Dobu and Manus islanders 
+of the Pacific. What many anthropologists do not realize is that
+he is also known to mathematicians for his conjecture on prime
+ numbers, or "Fortunate Numbers"! Levin et al. (1984), 
+report a story that Fortune once attempted to conclude an
+academic dispute with McIlwraith by challenging him to a duel with any weapon of his
+choice from the collections of the Royal Ontario Museum.
+Here are <A HREF="warms.txt">other anecdotes</a> kindly communicated to me 
+by Richard L. Warms.
+<P>
+The reader amazed by this "link" between anthropology and  mathematics
+should keep in mind that is not the only one:
+remember Claude Lévi-Strauss, whose mathematical 
+considerations influenced his science and the structuralist
+school (I consider that this is perhaps in linguistic that
+structuralism was the most fruitful, with applications in computer
+sciences to programming languages). Note that the (ab)use of mathematics by Lacan and other people in
+human sciences was at the origin of the <A HREF="http://en.wikipedia.org/wiki/Sokal_Affair">Sokal affair</a>.
+<P>
+
+I am not aware of literature about the case of the first prime less than a given prime factorial, so I
+suggest to call "unfortunate numbers" the
+<em>d<sub>n</sub><SUP><SMALL>-</SMALL></SUP></EM>'s
+(whereas the 
+<em>d<sub>n</sub><SUP><SMALL>+</SMALL></SUP></EM>'s
+are already known as fortunate numbers, as probably coined by M. Gardner,
+see e.g. The Last Recreations).
+
+
+<P><B>Heuristics:</B>
+If <em>d<sub>n</sub><SUP><SMALL>+</SMALL></SUP></EM>
+were not prime, then 
+<em>d<sub>n</sub><SUP><SMALL>+</SMALL></SUP>=(p<sub>n+1</sub>)<SUP>2</SUP></EM>
+or a greater composite number.
+Asymptocally, one has
+log( <EM>f<SUB>n</SUB></eM>
+)=O(<EM>p<SUB>n</SUB></EM>/log( <EM>p<SUB>n</SUB></EM> ))
+and Shinzel's conjecture (there is always a prime between x and
+x+ln(x)<SUP>2</SUP>) thus implies that the <EM>d<SUB>n</SUB></EM>'s are primes.
+
+<P><B>Computations:</B>
+I give below the list of fortune and unfortunate numbers 
+<EM>d<SUB>n</sub></EM> for <em>n<1300</em>,<BR>
+<A HREf="previous_prime.txt">previous prime case</a> (<A HREF="http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A005235">EIS A005235</a>),<BR>
+<A HREF="next_prime.txt">next prime case</a> (<A HREF="http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A055211">EIS A055211</a>).
+<P>
+(EIS refers to the Encyclopedia of integer sequences).
+Caveat: thus the 2 conjectures are checked for <em>n<1300</em>, provided 
+Algorithm P. (in D.E. Knuth, The Art of Computer Programming, Vol 2,
+2nd edition, Section 4.5.4) does not fail when answering that a given
+number is indeed prime [this is not yet proven for numbers of ten
+thousands digits]. This is the algorithm used by Maple, it would be
+interesting to cross-check my results with other computer algebra
+software (Mathematica, Pari, ...) relying on other primality
+tests. However, all of them are probabilistic tests (Mathematica uses
+multiple Rabin-Miller and Lucas, Pari GP uses Baillie-Pomerance-Selfridge-Wagstaff 
+and Lucas) and the best known deterministic test is about 1000 times slower.
+
+<P>The prime factorial primes, aka as primorial primes (coined by Dubner)
+are the <EM>f<SUB>n</SUB>+-1</EM> with<BR>
+<EM>n</em> such that <em>p<sub>1</sub> p<sub>2</sub>
+... p<sub>n</sub>+1</em> is prime : n=1, 2, 3,
+4, 5, 11, 75, 171, 172, 384, 457, 616, 643, 1391, 1613, 2122, 2647, 2673,
+4413, 13494, 31260, 33237, 67132
+<SMALL> [<A HREF="http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A014545">EIS A014545</a>]</SMALL>.
+<BR>
+<EM>n</em> such that <em>p<sub>1</sub> p<sub>2</sub>
+... p<sub>n</sub>-1</em> is prime : n=2, 3, 5, 6, 13, 24, 66 ,68, 167,
+287, 310, 352, 564, 590, 620, 849, 1552, 1849 
+<SMALL>[<A HREF="http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A057704">EIS A057704</a>]</small>.
+<P>
+
+The factorisation of the composite primorial numbers
+is given <A
+HREF="http://www.loria.fr/~zimmerma/records/ecmnet.html">here</a>, 
+
+<P><B>References:</B>
+<SMALL>
+<UL>
+<LI>Chris K. Caldwell, Yves Gallot, On The Primality of n!+- 1 and 2.3.5...p+- 1,
+      <A	   HREF="http://www.ams.org/journal-getitem?pii=S0025-5718-01-01315-1">Math. Comp. 71
+ (2002), 441-448</a>
+<LI>H. Dubner, Factorial and primorial primes, J. Rec. Math., 19 (No. 3,
+              1987), 197-203.
+<LI>A. Fletcher, J. C. P. Miller, L. Rosenhead, and L. J. Comrie, An Index of
+              Mathematical Tables. Vols. 1 and 2, 2nd ed., Blackwell, Oxford and
+Addison-Wesley, 1962, Vol. 1, p. 50.           
+<LI>S. W. Golomb, The evidence for Fortune's conjecture, Math. Mag. 54
+              (1981), 209-210.
+<LI>P. Ribenboim, The Book of Prime Number Records. Springer-Verlag, NY,
+              2nd ed., 1989, p. 4.
+
+<LI>H. Ibstedt, A Few Smarandache Sequences, Smarandache Notions
+              Journal, Vol. 8, No. 1-2-3, 1997, 170-183.
+</UL>
+<P>
+[Addendum Oct. 2006:] since the creation of this page, many websites mention the
+fortunate primes, let me give here some of them :
+<A HREF="http://mathworld.wolfram.com/FortunatePrime.html">MathWorld</a>,
+<A HREF="http://primes.utm.edu/glossary/page.php?sort=FortunateNumber">Prime Glossary</a>, 
+<A
+HREF="http://www.primepuzzles.net/problems/prob_004.htm">primepuzzles.net</a>,
+<a
+HREF="http://abdulbaki.blogspot.com/2005/07/fortunate-primes.html">a
+blog</a>...<BR>
+T.D. Noe checked the computations in Mathematica 
+for fortunate primes until n=2000, and unfortunate primes until n=1000 and communicated me few typos in
+my list (see his results on the EIS website).
+</SMALL>
+</HTML>

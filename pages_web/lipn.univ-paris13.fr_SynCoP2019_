@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>SynCoP 2019</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image-fit"><img src="images/syncop.png" style="max-width:55%;" alt="SynCoP logo"/></span>
+					<h1 id="logo"><a href="#">SynCoP 2019</a></h1>
+					<p>6 and 7 April 2019<br />
+					Prague, Czech Republic</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#program">Program</a></li>
+						<li><a href="#committees">Committees</a></li>
+						<li><a href="#call">Call for papers</a></li>
+						<li><a href="#invited">Speakers</a></li>
+						<li><a href="#contacts">Contacts</a></li>
+					</ul>
+				</nav>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>SynCoP 2019</h2>
+										<h4>6th International Workshop on Synthesis of Complex Parameters</h4>
+									</header>
+									
+									<p>This event is an <a href="https://conf.researchr.org/home/etaps-2019">ETAPS</a> workshop organised as a series of invited talks and submitted contributions. Everyone is welcome to attend and participate in the discussions. There are no formal proceedings.</p>
+									
+									<h3>Scientific objective of SynCoP</h3>
+									<p>SynCoP aims at bringing together researchers working on verification and parameter synthesis for systems with discrete or continuous parameters, in which the parameters influence the behaviour of the system in ways that are complex and difficult to predict.
+									Such problems may arise for real-time, hybrid or probabilistic systems in a large variety of application domains.
+									The parameters can be continuous (e.g. timing, probabilities, costs) or discrete (e.g. number of processes). The goal can be to identify suitable parameters to achieve desired behaviour, or to verify the behaviour for a given range of parameter values.</p>
+									<p>Systems composed of a finite but possibly arbitrary number of identical components occur everywhere from hardware design (e.g. cache coherence protocols) to distributed applications (e.g. client-server applications). Parameterised verification is the task of verifying the correctness of this kind of systems regardless the number of their components.</p>
+									<h4>Topics of SynCoP</h4>
+									<p>The scientific subject of the workshop covers (but is not limited to) the following areas:</p>
+		
+									<ul>
+										<li>parameter synthesis,</li>
+										<li>parametric model checking,</li>
+										<li>regular model checking,</li>
+										<li>robustness analysis,</li>
+										<li>parameterised logics, decidability and complexity issues,</li>
+										<li>formalisms such as parametric timed and hybrid automata, parametric time(d) Petri nets, parametric probabilistic (timed) automata, parametric Markov Decision Processes, networks of identical processes,</li>
+										
+																				<li>specifications in automata and logic, term and graph rewriting, Petri nets, process algebra, …</li>
+										<li>validation methods via assertional and regular model checking, reachability and coverability decision procedures, abstractions, theorem proving, constraint solving, …</li>
+										
+										<li>interactions between discrete and continuous parameters,</li>
+										<li>tools and applications to hardware design, cache coherence protocols, security and communication protocols, multithreaded and concurrent programs, programs with relaxed memory models, mobile and distributed systems, database languages and systems, biological systems, …</li>
+									</ul>
+									
+								</div>
+							</section>
+
+						<!-- Committees -->
+							<section id="committees">
+								<div class="container">
+									<h3>Committees</h3>
+										<div class="row">
+											<div class="alt">
+												<h5>SynCoP general chairs (2019)</h5>
+												<ul class="alt">
+													<li><a href="http://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a>, Université Paris 13 & CNRS, France</li>
+													<li><a href="https://wwwhome.ewi.utwente.nl/~vdpol/">Jaco van de Pol</a>, Aarhus University, Denmark</li>
+												</ul>
+												<h5>SynCoP steering committee</h5>
+												<ul class="alt">
+													<li><a href="http://user.it.uu.se/~parosh/">Parosh Abdulla</a>, Uppsala University, Sweden</li>
+													<li><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a>, Université Paris 13 & CNRS, France</li>
+													<li><a href="http://www.disi.unige.it/person/DelzannoG/">Giorgio Delzanno</a>, Università degli studi di Genova, Italy</li>
+													<li><a href="https://www.irif.fr/~haberm/">Peter Habermehl</a>, Université Paris 7 & CNRS, France</li>
+													<li><a href="http://www.irccyn.ec-nantes.fr/~jezequel/">Loïg Jezequel</a>, Université de Nantes & CNRS, France</li>
+													<li><a href="http://people.cs.aau.dk/~kgl/">Kim Larsen</a>, Aalborg University, Denmark</li>
+													<li><a href="http://www.ipipan.waw.pl/~penczek/">Wojciech Penczek</a>, IPI-PAN, Warszawa, Poland</li>
+													<li><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a>, Université Paris 13 & CNRS, France</li>
+												</ul>
+											</div>
+										</div>
+
+								</div>
+							</section>
+
+						<!-- Invited speakers -->
+							<section id="call">
+								<div class="container">
+									<h3>Call for papers</h3>
+									
+										<p>In addition to invited presentations, SynCoP 2019 organises a call for papers.</p>
+										
+										<p>SynCoP seeks short abstracts only.
+										<br>
+										Recently published works, ongoing works, or works under submission are welcome.</p>
+
+<p>The page limit is 3 pages (excluding bibliography), LNCS style.
+All accepted abstracts will be made available to the participants of SynCoP 2019 but
+they will not result in referenced publications.</p>
+
+<p>Authors of accepted abstracts will be required to give a presentation during
+the workshop.</p>
+
+<p>We intend to select the best abstracts and presentations for a full paper in
+a special issue of a journal.</p>
+
+<p>Submissions must be made in English in PDF format through
+	<a href="https://easychair.org/conferences/?conf=syncop2019">Easychair</a><br>
+</p>
+
+									<p>See the <a href="SynCoP19-call-for-papers.txt">call for papers</a> for further details.</p>
+										<ul class="feature-icons">
+											<li class="fa-calendar">Deadline:
+												<!-- <span style="text-decoration: line-through">15th January, 2018 29th January, 2018</span> -->
+												15 February 2019
+											</li>
+
+											<li class="fa-calendar-check-o">Notification: <!-- <span style="text-decoration: line-through">22nd January, 2018 5th February, 2018</span> --> 22 February 2019
+											</li>
+
+											<li class="fa-file-pdf-o">Final version: 15 March 2019
+											</li>
+
+										</ul>									
+									 
+
+										
+								</div>
+							</section>
+													<!-- Invited speakers -->
+							<section id="invited">
+								<div class="container">
+									<h3>Invited speakers</h3>
+									
+<!-- 										<p>The invited speakers will be announced as soon as possible</p>
+ -->
+										<p>The following speakers confirmed their participation:</p>
+										<ul class="feature-icons">
+											<li class="fa-user"><a href="#baier">Christel Baier</a> (Dresden, Germany):
+													<a href="#baier">Parametric Markov chains: algorithms, complexity and applications</a>
+											</li>
+
+											<li class="fa-user"><a href="#benes">Nikola Beneš</a> (Brno, Czech Republic):
+													<a href="#benes">Parameter Synthesis for Timed Automata with Clock-Aware LTL Properties</a>
+											</li>
+
+											<li class="fa-user"><a href="#delahaye">Benoît Delahaye</a> (Nantes, France):
+													<a href="#delahaye">Parametric statistical model checking of UAV flightplan</a>
+											</li>
+
+											<li class="fa-user"><a href="#habermehl">Peter Habermehl</a> (Paris, France):
+													<a href="#habermehl">On Parameterised Jobshop Scheduling Problems</a>
+											</li>
+
+											<li class="fa-user"><a href="#jansen">Nils Jansen</a> (Nijmegen, The Netherlands):
+													<a href="#jansen">Convex Optimization meets Parameter Synthesis for MDPs</a>
+											</li>
+
+											<li class="fa-user"><a href="#kretinsky">Jan Křetínský</a> (Munich, Germany):
+													<a href="#kretinsky">Learning-Based Mean-Payoff Optimization in an Unknown MDP under Omega-Regular Constraints</a>
+											</li>
+
+											<li class="fa-user"><a href="#nenzi">Laura Nenzi</a> (Trieste, Italy):
+													<a href="#nenzi">Parametric Verification and Synthesis based on Gaussian Processes</a>
+											</li>
+
+											<li class="fa-user"><a href="#penczek">Wojciech Penczek</a> (Warsaw, Poland):
+													<a href="#penczek">SMT-based bounded model checking for parametric reaction systems</a>
+											</li>
+
+										</ul>									
+									 
+
+										
+								</div>
+							</section>
+							
+
+						<!-- Program -->
+							<section id="program">
+								<div class="container">
+									<h3>Program</h3>
+
+									<!-- <p>To be announced</p> -->
+										<div class="table-wrapper">
+											<h4>Saturday, 6th of April 2019</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>11:00-11:45</td>
+														<td><a href="#habermehl">Peter Habermehl</a></td>
+														<td><a href="#habermehl">On Parameterised Jobshop Scheduling Problems</a><!--  [<a href="papers/paper-habermehl.pdf">paper</a>]--> [<a href="slides/slides-habermehl.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>12:00-13:30</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+													<tr>
+														<td>13:45-14:30</td>
+														<td>Ran Bao, Christian Attiogbe, <a href="#delahaye">Benoît Delahaye</a></td>
+														<td><a href="#delahaye">Parametric statistical model checking of UAV flightplan</a> [<a href="papers/paper-delahaye.pdf">paper</a>] [<a href="slides/slides-delahaye.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>14:30-15:15</td>
+														<td>Camille Coti, Laure Petrucci, Daniel Alberto Torres Gonzalez</td>
+														<td>Fault-tolerant matrix factorisation: a formal model and proof [<a href="papers/paper-torres.pdf">paper</a>] [<a href="slides/slides-torres.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>15:30-16:00</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>16:00-16:45</td>
+														<td><a href="#jansen">Nils Jansen</a></td>
+														<td><a href="#jansen">Convex Optimization meets Parameter Synthesis for MDPs</a> [<a href="papers/paper-jansen.pdf">paper</a>]<!--  [<a href="slides/slides-jansen.pdf">slides</a>] --></td>
+													</tr>
+													<tr>
+														<td>16:45-17:30</td>
+														<td><a href="#kretinsky">Jan Křetínský</a></td>
+														<td><a href="#kretinsky">Learning-Based Mean-Payoff Optimization in an unknown MDP under Omega-Regular Constraints</a> [<a href="papers/paper-kretinsky.pdf">paper</a>]<!--  [<a href="slides/slides-kretinsky.pdf">slides</a>] --></td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<h4>Sunday, 7th of April 2019</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>9:00-9:45</td>
+														<td><a href="#benes">Nikola Beneš</a></td>
+														<td><a href="#benes">Parameter Synthesis for Timed Automata with Clock-Aware LTL Properties</a> [<a href="papers/paper-benes.pdf">paper</a>] [<a href="slides/slides-benes.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>9:45-10:30</td>
+														<td>Laure Petrucci, Jaco van de Pol</td>
+														<td>Pruning NDFS for Parametric Timed Automata [<a href="papers/paper-vandepol.pdf">paper</a>] [<a href="slides/slides-vandepol.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>10:30-11:00</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>11:00-11:45</td>
+														<td><a href="#penczek">Wojciech Penczek</a>, Artur Męski</td>
+														<td><a href="#penczek">SMT-based bounded model checking for parametric reaction systems</a> [<a href="papers/paper-penczek.pdf">paper</a>] [<a href="slides/slides-penczek.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>12:00-13:30</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+													<tr>
+														<td>13:30-14:15</td>
+														<td><a href="#baier">Christel Baier</a></td>
+														<td><a href="#baier">Parametric Markov chains: algorithms, complexity and applications</a> [<a href="papers/paper-baier.pdf">paper</a>]<!--  [<a href="slides/slides-baier.pdf">slides</a>] --></td>
+													</tr>
+													<tr>
+														<td>14:15-15:00</td>
+														<td>Luca Bortolussi, <a href="#nenzi">Laura Nenzi</a>, Simone Silvetti</td>
+														<td><a href="#nenzi">Parametric Verification and Synthesis based on Gaussian Processes</a> [<a href="papers/paper-nenzi.pdf">paper</a>] <!--  [<a href="slides/slides-nenzi.pdf">slides</a>] --></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+							</section>
+
+
+						<!-- SPEAKERS -->
+							<section id="speakers">
+								<div class="container">
+									<h3>Invited speakers</h3>
+									
+									<div class="features">
+										
+<!-- 											<p>To be annouced</p>
+ -->										<article>
+											<a href="https://wwwtcs.inf.tu-dresden.de/~baier/" class="image"><img src="photos/baier.jpg" alt="Christel Baier" /></a>
+											<div class="inner">
+												<h4 id="baier"><a href="https://wwwtcs.inf.tu-dresden.de/~baier/">Christel Baier</a> (Dresden, Germany)</h4>
+												<h5>Parametric Markov chains: algorithms, complexity and applications</h5>
+												<p>Parametric Markov chains have been introduced as model for families of stochastic systems with the same topological structure, but that may differ in the transition probabilities. The talk provides an overview of techniques for computing rational functions as closed-form expressions for reachability probabilities or expected costs and complexity-theoretic results for checking the existence of a parameter valuation such that the induced Markov chains satisfies a PCTL formula. The last part of the talk provides insights in application scenarios of the parametric approach.</p>
+											</div>
+										</article>
+
+										<article>
+											<a href="https://www.muni.cz/en/people/72525-nikola-benes" class="image"><img src="images/avatar-orig.jpg" alt="Nikola Beneš" /></a>
+											<div class="inner">
+												<h4 id="benes"><a href="https://www.muni.cz/en/people/72525-nikola-benes">Nikola Beneš</a> (Brno, Czech Republic)</h4>
+												<h5>Parameter Synthesis for Timed Automata with Clock-Aware LTL Properties</h5>
+												<p>The parameter synthesis problem for timed automata is undecidable in general even for very simple reachability properties. We introduce restrictions on parameter valuations under which the parameter synthesis problem is decidable for Clock-Aware LTL properties. Clock-Aware LTL is an extension of LTL that allows to reason about the clock values in the atomic propositions. We propose a symbolic zone-based method for the problem which can be significantly faster than the naive parameter scan solution. Our technique adapts the ideas of the automata-based approach to Clock-Aware LTL model checking of timed automata.</p>
+											</div>
+										</article>
+
+
+										<article>
+											<a href="http://pagesperso.ls2n.fr/~delahaye-b/index-eng.html" class="image"><img src="photos/delahaye.jpg" alt="Benoît Delahaye" /></a>
+											<div class="inner">
+												<h4 id="delahaye"><a href="http://pagesperso.ls2n.fr/~delahaye-b/index-eng.html">Benoît Delahaye</a> (Nantes, France)</h4>
+												<h5>Parametric statistical model checking of UAV flightplan</h5>
+												<p>Unmanned Aerial Vehicles (UAV) are now widespread in our society and are often used in a context where they can put people at risk. Studying their reliability, in particular in the context of flight above a crowd, thus becomes a necessity. 
+In this paper, we study the modeling and analysis of UAV in the context of their flight plan. 
+To this purpose, we build a parametric probabilistic model of the UAV and use it as well as a given flight plan in order to model its trajectory. This model takes into account parameters such as potential filter or sensor (like GPS) failure as well as wind force and direction. 
+Because of the nature and complexity of the obtained models, their exact verification using tools such as PRISM or PARAM is impossible. 
+We therefore develop a new approximation technique, called Parametric Statistical Model Checking, in order to compute failure probabilities. 
+This method has been implemented in a prototype tool, which we use to resolve the problem described above.
+
+<br>This is joint work with Ran Bao and Christian Attiogbe.</p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="https://www.irif.fr/~haberm/" class="image"><img src="photos/habermehl.jpg" alt="Peter Habermehl" /></a>
+											<div class="inner">
+												<h4 id="habermehl"><a href="https://www.irif.fr/~haberm/">Peter Habermehl</a> (Paris, France)</h4>
+												<h5>On Parameterised Jobshop Scheduling Problems</h5>
+												<p>In this talk, we consider parameterised versions of the jobshop scheduling
+problem where a parameterised number of jobs have to complete a sequence
+of actions some of which are mutually exclusive. The cost of completing
+the jobs is the total time the jobs spend.
+We show that in the some cases the parameterised cost function is semilinear
+and can be computed by using Petri Net techniques.
+   </p>
+											</div>
+										</article>
+
+
+										<article>
+											<a href="http://www.cs.ru.nl/personal/nilsjansen/" class="image"><img src="photos/jansen.jpg" alt="Nils Jansen" /></a>
+											<div class="inner">
+												<h4 id="hasuo"><a href="http://www.cs.ru.nl/personal/nilsjansen/">Nils Jansen</a> (Nijmegen, The Netherlands)</h4>
+												<h5>Convex Optimization meets Parameter Synthesis for MDPs</h5>
+												<p>Verification and synthesis problems of parametric Markov decision processes can be naturally expressed as nonlinear programs. 
+Our results are based on two key insights. 
+
+First, we first observe that many of these computationally demanding problems belong to the subclass of signomial programs. 
+Second, we show how the nonlinear program can be formulated as a quadratically-constrained quadratic program (QCQP) and is non-convex in general. 
+
+The first insight allows for a sequential optimization algorithm to efficiently compute sound but possibly suboptimal solutions. 
+Each stage of this algorithm solves a convexified version of the original problem. 
+
+The second insight allows to exploit a convex-concave procedure (CCP) to iteratively obtain local optima. 
+An appropriate interplay between convex optimization solvers and probabilistic model checkers creates a procedure --- realized in the tool PROPheSY --- that is the first to solve the synthesis problem for well-known benchmarks with thousands of parameters. 
+
+Moreover, employing these scalability improvements, we establish and demonstrate the applicability of parameter synthesis to strategy computation for partially observable Markov decision processes.</p>
+											</div>
+										</article>
+
+										<article>
+											<a href="https://www7.in.tum.de/~kretinsk/" class="image"><img src="photos/kretinsky.jpg" alt="Jan Křetínský" /></a>
+											<div class="inner">
+												<h4 id="kretinsky"><a href="https://www7.in.tum.de/~kretinsk/">Jan Křetínský</a> (Munich, Germany)</h4>
+												<h5>Learning-Based Mean-Payoff Optimization in an Unknown MDP under Omega-Regular Constraints</h5>
+												<p>We consider Markov decision processes (MDP) with unknown probabilistic transition function and unknown reward function. We formalize the problem of maximizing the mean-payoff value with high probability while satisfying a parity objective in this setting. This problem can be viewed as strategy synthesis for parametric MDP where the parameters are fixed but unknown. Assuming the support of the unknown transition function and a lower bound on the minimal transition probability are known in advance, we construct probably approximately correct (PAC) strategies w.r.t. the mean payoff objective that guarantee sure or almost-sure satisfaction of a parity condition, depending on the memory allowed. This is a joint work with Guillermo Perez and Jean-Francois Raskin published at Concur'18 and ongoing work.</p>
+											</div>
+										</article>
+
+										<article>
+											<!-- <a href="http://www.informatik.uni-leipzig.de/~quaas/" class="image"><img src="images/avatar-orig.jpg" alt="Karin Quaas" /></a> -->
+												<a class="image"><img src="images/avatar-orig.jpg" alt="Laura Nenzi" /></a>
+											<div class="inner">
+												<h4 id="nenzi"><!-- <a href="http://www.informatik.uni-leipzig.de/~quaas/"> -->Laura Nenzi<!-- </a> --> (Trieste, Italy)</h4>
+												<h5>Parametric Verification and Synthesis based on Gaussian Processes</h5>
+												<p>Parameter verification and synthesis problems for stochastic systems are still hard challenges. The tasks become even more prohibitive when the systems are large-scale and the verification/synthesis are respect the satisfaction of some linear temporal logic formulae. In this paper, we review a number of techniques that we designed to tackle such problems.
+
+<br>This is joint work with Luca Bortolussi and Simone Silvetti.</p>
+											</div>
+										</article>
+
+										<article>
+											<a href="http://www.ipipan.waw.pl/~penczek/" class="image"><img src="photos/penczek.jpg" alt="Wojciech Penczek" /></a>
+											<div class="inner">
+												<h4 id="penczek"><a href="http://www.ipipan.waw.pl/~penczek/">Wojciech Penczek</a> (Warsaw, Poland)</h4>
+												<h5>SMT-based bounded model checking for parametric reaction systems</h5>
+												<p>Reaction systems are a formal model for specifying and analysing computational processes in which reactions operate on sets of entities (molecules), providing a framework for dealing with qualitative aspects of biochemical systems. This paper is concerned with reaction systems in which entities can have discrete concentrations and reactions operate on multisets of entities, providing a succinct framework for dealing with quantitative aspects of systems. This is facilitated by a dedicated linear time temporal logic which allows one to express and verify a wide range of behavioural system properties.
+In practical applications, a reaction system with discrete concentrations may only be partially specified, and effective calculation of the missing details would provide an attractive design approach. To develop such an approach, this paper introduces reaction systems with parameters representing the unknown parts of the reactions. The main result is a method which attempts to replace these parameters in such a way that the resulting reaction system operating in a given external environment satisfies a given temporal logic formula. We provide a suitable encoding of parametric reaction systems in SMT, and outline a synthesis procedure
+based on bounded model checking for solving the synthesis problem. We also provide a complexity result of the synthesis problem and preliminary experimental results demonstrating the feasibility of the new synthesis method.
+
+<br>This is joint work with Artur Męski.</p>
+											</div>
+										</article>
+
+										
+									</div>
+								</div>
+							</section>
+
+
+						<!-- Past editions -->
+							<section id="past">
+								<div class="container">
+									<h3>Past editions</h3>
+										<h4>SynCoP</h4>
+										<ul class="alt">
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2018/">SynCoP 2018</a>, Thessaloniki, Greece</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoPPV2017/">SynCoP + PV 2017</a>, Uppsala, Sweden</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2016/">SynCoP 2016</a>, Eindhoven, The Netherlands</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2015/">SynCoP 2015</a>, London, UK</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2014/">SynCoP 2014</a>, Grenoble, France</li>
+										</ul>
+
+										<h4>PV</h4>
+										<ul class="alt">
+											<li><a href="http://pv.dibris.unige.it/">PV 2015</a>, Madrid, Spain</li>
+											<li><a href="http://www.disi.unige.it/person/DelzannoG/PV/PV14/">PV 2014</a>, Roma, Italy</li>
+										</ul>
+								</div>
+							</section>
+
+						<!-- Contact -->
+							<section id="contacts">
+								<div class="container">
+									<h3>Contacts</h3>
+									<ul>
+										<li><a href="http://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></li>
+										<li><a href="http://wwwhome.ewi.utwente.nl/~vdpol/">Jaco van de Pol</a></li>
+									</ul>
+								</div>
+						</section>
+						
+						<!-- Partners -->
+							<section id="partners">
+								<div class="container">
+									<h3>Support</h3>
+									<a href="https://lipn.univ-paris13.fr/PACS/"><img src="images/anr_pacs_small.png" alt="ANR PACS"></a>
+								</div>
+						</section>						
+					</div>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Site maintained by Laure Petrucci</li><li>Content released under Creative Commons CC-BY-SA 3.0.</li>
+							</ul>
+							<ul class="copyright">
+								<li>Design: <a href="https://html5up.net/read-only">read-only</a> by <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Banner: <a href="https://commons.wikimedia.org/wiki/Praha#/media/File:Prague_Castle_from_Vltava_bank.jpg">Eeva (Wikimedia Commons)</a></li>
+			<li>Three crowns: <a href="https://commons.wikimedia.org/wiki/File:Flygvapnet_roundel.svg">slady</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="latin1"/>
+    <meta name="keywords" content="AJAX,recherche"/>    
+    <link href="1_moteur.css" rel="stylesheet" style="text/css"/>
+    <script src="jquery-2.2.1.min.js"></script>
+  </head>
+  
+  <body>
+    <div id="monparagraphe"></div>
+    <button id="bouton">Clique sur moi!</button>
+
+    <form action="0_contenu.php">
+      <input type="submit" value="Et moi!!!"/>
+    </form>
+
+    <script>
+      $("#bouton").click(function(){
+        //$("#monparagraphe").load("0_contenu.html");
+        //$("#monparagraphe").load("0_contenu.html #deux");
+        $("#monparagraphe").load("0_contenu.php");
+      });
+
+    </script>
+
+
+  </body>
+
+</html>

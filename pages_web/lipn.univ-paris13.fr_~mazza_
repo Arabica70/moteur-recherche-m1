@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Damiano Mazza -- Home page</title>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+<script type="text/javascript">
+	function mouseOver()
+	{
+		document.swapimg.src = "img/me.icecream.jpg";
+	}
+	function mouseOut()
+	{
+		document.swapimg.src  = "img/me.jpg";
+	}
+</script>
+</head>
+
+<body>
+<div class="navbar">
+<h2>Damiano Mazza</h2>
+<a class="home" href="http://lipn.univ-paris13.fr/~mazza/">Home page</a>
+<ul>
+	<li><a class="button" href="?page=res">Research</a></li>
+<li><a class="button" href="?page=teach">Teaching</a></li>
+<li><a class="button" href="?page=cv">CV</a></li>
+<li><a class="button" href="?page=pub">Publications</a></li>
+</ul>
+<p>
+	<a href="http://lipn.univ-paris13.fr/index.php?lang=uk"><img style="border:0" src="img/logo-lipn.gif" alt="LIPN"></a>
+	<a href="http://www.cnrs.fr"><img style="border:0;margin-left:10px;width:100px;height:100px" src="img/CNRSfr-grand-blackbg.jpg" alt="CNRS"></a>
+</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/html5-badge-h-css3.png" alt="Valid HTML 5!"></a>
+	<!--/p>
+<p-->
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a>
+</p>
+</div>
+<div>
+<table class="home">
+<tr>
+<td>
+	<p>Welcome to my web page!</p>
+	<p>I am <i>charg&eacute; de recherche</i> (<a href="https://en.wikipedia.org/wiki/Academic_ranks_in_France#Research-only_positions">researcher</a>) in <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">theoretical computer science</a> at <a href="http://www.cnrs.fr">CNRS</a> (<a href="https://ins2i.cnrs.fr/">INS2I</a>).</p>
+	
+	<h4>Affiliation</h4>
+	<ul>
+		<li>
+		<a href="https://ins2i.cnrs.fr/">CNRS</a>, <a href="http://lipn.univ-paris13.fr/index.php?lang=uk">LIPN</a>, <a href="https://www.univ-paris13.fr/">Universit&eacute; Paris 13</a>
+		</li>
+	</ul>
+	
+	<h4>Research interests</h4>
+	<ul>
+		<li>logical approaches to <a href="https://en.wikipedia.org/wiki/Structural_complexity_theory">structural complexity theory</a> (in particular <a href="https://en.wikipedia.org/wiki/Implicit_computational_complexity">implicit computational complexity</a>)</li>
+		<li>foundational aspects of <a href="https://en.wikipedia.org/wiki/Programming_language_theory">programming language theory</a> (<a href="http://ncatlab.org/nlab/show/lambda-calculus">lambda-calculi</a>, <a href="https://en.wikipedia.org/wiki/Process_calculus">concurrent process calculi</a>, <a href="http://en.wikipedia.org/wiki/Denotational_semantics">semantics</a>, <a href="https://en.wikipedia.org/wiki/Type_system">type systems</a>)</li>
+		<li>More broadly: <a href="https://en.wikipedia.org/wiki/Logic_in_computer_science">logic in computer science</a>, <a href="http://ncatlab.org/nlab/show/linear+logic">linear logic</a>, <a href="https://ncatlab.org/nlab/show/category+theory">category theory</a>
+	</ul>
+
+	<h4>Research-related activities and administration</h4>
+	<ul>
+		<li>Head of the <i>Types, models and programming theory</i> group within the <a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/">Logic and Verification</a> team at LIPN</li>
+		<li>Co-leader of the <a href="https://www.irif.fr/gt-scalp/index">Scalp</a> working group within the <a href="http://www.gdr-im.fr/">GDR Informatique Math&eacute;matique</a></li>
+		<li>Member of the steering committee of <a href="http://fscdconference.org/">FSCD</a></li>
+		<li>Member of the steering committee of SCOT (the successor of <a href="http://perso.ens-lyon.fr/patrick.baillot/DICE/">DICE</a>).
+	</ul>
+
+	<h4>Current/future events and ongoing projects</h4>
+	<ul>
+		<li>After the great success of the <a href="https://caleidoscope.sciencesconf.org/">first edition</a>, I am co-organizing the second edition of <i>Caleidoscope</i> (Complexity as a Kaleidoscope), a research school covering a great variety of different approaches to computational complexity. It is planned to take place at the <a href="https://universite.univ-paris-diderot.fr/structures/halle-aux-farines">Halle aux Farines</a> (<a href="https://u-paris.fr/en/">University of Paris</a>), the week of June 15th-19th, 2020. A web site will be available soon.</li>
+		<li>The <a href="http://chocola.ens-lyon.fr/">Chocola seminar</a>.</li>
+	</ul>
+	
+	<h4>Contact information</h4>
+	<table class="home">
+		<tr>
+			<td>email:</td>
+			<td><img src="img/email.gif" alt="damiano dot mazza at lipn dot univ dash paris13 dot fr" style="vertical-align: middle"></td>
+		</tr>
+		<tr>
+			<td>address:</td>
+			<td>LIPN - UMR CNRS 7030</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Institut Galil&eacute;e, Universit&eacute; Paris-Nord</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>99, av. Jean-Baptiste Cl&eacute;ment</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>93430 Villetaneuse</td>
+		</tr>
+		<tr>
+			<td>phone:</td>
+			<td>+33 1 49 40 40 67</td>
+		</tr>
+	</table>
+	<p>On a normal working day, you may physically find me in <a href="http://maps.google.com/maps?q=48.959001,2.339999&amp;t=h&amp;z=20">office A205 of the Institut Galil&eacute;e</a>. (Taking that aerial photograph on Google Maps too literally may lead you into believing that I usually work on the roof of building A of Institut Galil&eacute;e. That would actually be cool&mdash;or wouldn't, depending on the meteorological conditions. However, my office is more trivially located at the 2nd floor of that building, with two more floors on top of it).</p>
+</td>
+<td style="vertical-align: top">
+	<!--<img id="swapimg" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/me.jpg" alt="Me">-->
+	<img id="swapimg" src="img/me.jpg" alt="Me">
+</td>
+</tr>
+<!--tr>
+<td></td>
+<td><a href="http://www.charliehebdo.fr/"><img height="200" width="200" src="img/JeSuisCharlie.jpg"></a></td>
+</tr-->
+</table>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--	_________________________________________________
+		_______________ENTETE _________________________
+-->
+<head>
+<!-- jeu de caract&egrave;res -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/lipnPopUp.css">
+<title>Résultats d'approximation</title>
+<meta name="author" content="Sophie Toulouse">
+<meta name="date" content="10/29/2004">
+<meta name="keywords" lang="en" content="LIPN, computer sciences, polynomial approximation, differential approximation, local optima">
+<meta name="keywords" lang="fr" content="LIPN, informatique théorique, approximation polynomiale, approximation differentielle, optima locaux">
+<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html">
+</head>
+
+<BODY class="popup">
+
+<p class="popup">
+Le problème du voyageur de commerce (TSP) consiste, étant donné un graphe complet muni d'une fonction de distance sur les arêtes, à trouver un tour de distance minimale. Dans un graphe non orienté, un tour est un cycle sélémentaire qui passe une et une seule fois par chaque sommet du graphe. La valeur d'une solution est la somme des distances des arêtes qui la composent.<br>
+
+[MTP032] TSP<span class="math">ab</span> (problème du voyageur de commerce, versions minimisation et maximisation, instances métriques particulières où la fonction distance est à valeur dans {<span class="math">ab</span>}) est 3/4-approximable en différentiel, MaxTSP12 est 7/8-approximable en classique&nbsp; l'algorithme analysé, comme celui de [PY93], se base sur un 2-couplage parfait sans triangle de poids optimal.
+</p>
+
+<p class="popup">
+Le problème du partitionnement des sommets d'un graphe par des chaînes de longueur 3 (P4P) consiste, étant donné un graphe complet non orienté muni d'une fonction de distance sur les arêtes, à trouver un ensemble de chaînes de longueur 3 deux à deux sommet-disjointes qui couvre les sommets du graphe (tout sommet doit appartenir à une chaîne de la partition) et qui soit de distance minimale. La valeur d'une partition est donnée par la somme des distances des arêtes qui composent ses chaînes.<br>
+
+[MT05] Les instances métriques MinMetricP4P, MinP4P12 et MaxP4P12 sont respectivement 3/2-, 7/6- et 9/10-approximables en classique&nbsp; en différentiel, P4P (versions minimisation et maximisation) est 1/2-approximable tandis que la restriction P4P<span class="math">ab</span> à une fonction de distance bivalente est 2/3-approximable. L'algorithme analysé est celui proposé dans [HR97] et consiste à construire deux couplages parfaits imbriqués de poids optimal. 
+</p>
+
+<p class="popup">
+Les problèmes de logique jouent un rôle central en théorie de la complexité puisqu'ils sont fournisseurs de problèmes complets en décision comme en approximation. Or, en différentiel, ces problèmes sont difficiles à approcher, bien que leur statut ne soit pas encore décidé. Néanmoins, on sait par exemple que MinSat [MTP031], même lorsque l'on se restreint à des clauses de Horn, n'est pas approximable à rapport différentiel constant. Pire encore, la programmation linéaire en 01 est non-approximable à mieux que 0.
+</p>
+
+<hr>
+
+<p class="popup">
+[HR97] R. Hassin, S. Rubinstein},<br> 
+An Approximation Algorithm for Maximum Packing of 3-Edge Paths<br>
+Information Processing Letters, 1997, 63: 63-67
+</p>
+
+<p class="popup">
+[MPT031] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Approximation polynomiale des problèmes NP-difficiles - Optima locaux et rapport différentiel<br>
+Hermes Science, janvier 2003
+</p>
+
+<p class="popup">
+[MPT032] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Differential approximation results for traveling salesman problem with distances 1 and 2,<br>
+European Journal of Operational Research, 145 (2003) 557-568
+</p>
+
+<p class="popup">
+[MT05] J. Monnot,  S. Toulouse,<br>
+Approximation results for the weighted P4-partition problem<br>
+Rapport LIPN 2005-01 - soumis
+</p>
+
+<p class="popup">
+[PY93] C. Papadimitriou, M. Yannakakis,<br>
+The traveling salesman problem with distances one and two<br>
+Mathematics of Operations Research, 1993, 18(1): 1-11
+
+</BODY>
+</HTML>

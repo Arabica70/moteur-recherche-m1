@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Homepage T. Rakoto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="#teaching">Teaching</a></li>
+					<li><a href="#research">Research</a></li>
+					<li><a href="#contact">Contacts</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u 12u(mobile)">
+									<center>
+										<a href="https://www.univ-paris13.fr" target="_blank"> <img src="images/paris13.png" alt="" width="50%" /> </a>
+									</center>
+						</div>
+						<div class="4u 16u(mobile)">
+
+						</div>
+						<div class="4u 12u(mobile)">
+							<center>
+									<a href="https://lipn.univ-paris13.fr" target="_blank"><img src="images/lipn.png" alt="" width="40%" id="lipn"/></a>
+							</center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<span class="image fit"><img src="images/tsinjo.jpg" alt="" /></span>
+						</div>
+						<div class="8u 12u(mobile)">
+							<header>
+								<h2>Hi! I'm <strong>Tsinjo Rakotoarimalala</strong>.</h2>
+							</header>
+							<p> I'm a PHD-student in  <a href="http://www.univ-paris13.fr" target="_blank"> Paris 13 Univerisity</a> on computer science in labortory called <a href="http://lipn.univ-paris13.fr" target="_blank"> LIPN</a>. And this is my homepage.</p>
+
+							<a href="#resume" class="button big scrolly">Learn about what I do</a>
+						</div>
+						
+					</div>
+				</article>
+			</div>
+
+		<!-- Work -->
+			<div class="wrapper style2">
+				<article id="resume">
+					<header>
+						<h2>Here's all the stuff I do.</h2>
+					</header>
+					<div class="container">
+
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-university"></span>
+									<h3><a href="#teaching"> Teaching </a></h3>
+									<p>Monitor in computer science Departement at <a href="https://iutv.univ-paris13.fr/" target="_blank"> UIT Villetaneuse</a> </p>
+								</section>
+							</div>
+							
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-search"></span>
+									<h3><a class="scrolly" href="#research"> Research</a></h3>
+									<p>Reaseach on computer science at LIPN in <a href="https://lipn.univ-paris13.fr/fr/calin-2" target="_blank">CALIN</a> group</p>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-question-circle"></span>
+									<h3><a href=""> curriculum vitae </a></h3>
+									<p> Here is my brief CV and my topics of interest</p>
+								</section>
+							</div> 
+							<!-- <div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-question-circle"></span>
+									<h3><a href=""> Feugiat posuere </a></h3>
+									<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								</section>
+							</div> -->
+						</div>
+					</div>
+					<footer>
+						
+						<a href="#teaching" class="button big scrolly">See more details</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+		<div class="wrapper style3">
+			<article id="teaching">
+				<header>
+					<h2>Here are the subjects that I teach as monitor in UIT Villetaneuse </h2>
+				</header>
+				<!--<div class="research">
+					<ul>
+						<li> <strong> Scholar year : 2015-2016 </strong></li>
+							<ul>
+								<li> <strong>Network architecture </strong>: error detection , ethernet , TCP/IP,...</li>
+								<li> <strong>Advanced Algorithm</strong> : abstract data structures (stack, file, tree ,...), algorithm analysis ( worst case and best case), algorithm of sorting,...</li>
+								<li> <strong> Low-level programming </strong>: computer architecture (memory, processor), algebric simplification, logic gate , MIPS assembler</li>
+							</ul>
+						<li> <strong>Scholar year : 2016-2017 </strong></li>
+							<ul>
+								<li> <strong> Network service </strong></li>
+								<li> <strong>Intoduction to IHM</strong></li>
+								<li> <strong>Object-oriented design (UML) </strong> </li>
+							</ul>
+					</ul>
+				</div> -->
+				<div class="container">
+					<h3> Scholar year : 2015-2016 </h3>
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/reseau.jpg" alt="" /></a>
+								<br/>
+								<h3><a href="#">Network architecture</a></h3>
+
+							</article>
+						</div>
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/algo.png" alt=""/></a>
+								<br/>
+								<h3><a href="#">Advanced Algorithm  </a></h3>
+							
+
+							</article>
+						</div>
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/basniveau.jpg" alt="" /></a>
+								<h3><a href="#">Low-level programming </a></h3>
+
+							</article>
+						</div>
+					</div>
+					<h3>Scholar year : 2016-2017 </h3>
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/tcpip.png" alt="" /></a>
+								<br/>
+								<h3><a href="#">Network service </a></h3>
+							</article>
+						</div>
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/ihm.png" alt="" /></a>
+								<br/>
+								<h3><a href="#">Intoduction to IHM </a></h3>
+
+							</article>
+						</div>
+						<div class="4u 12u(mobile)">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/actor.png" alt="" /></a>
+								<h3><a href="#">Object-oriented Design</a></h3>
+
+							</article>
+						</div>
+					</div>
+				</div>
+
+			</article>
+		</div>
+			<div class="wrapper style3">
+				<article id="research">
+					<header>
+						<h2>Here’s some stuff I made recently.</h2>
+					</header>
+					<div clas="container">
+					<div class="research">
+					<h3> Traineeship Master 2 : Avererage Analysis of text algorithms </h3>
+					<ul>
+							<li>  <strong>Average analysis of Bloom Filter rate of false positive </strong> : Bloom filter is a probabilistic data structure used for testing the belonging of an element to a large set. It is a bit table with hash functions.
+								It is efficient for test of belonging, computing intersection between two big sets , Computing union between two big sets.
+
+							</li>
+
+							<li>  <strong> Average analysis of time complexity Compareads </strong> : Comparead is a program used to find a similarity score between two metagenomics. Comparead use Bloom filter to calculate the shared k-mers  between two huge
+								metagenomics.
+							</li>
+							<li> <strong> Analysis of Minia's space complexity </strong> : Minia is a low memory sequencing software. It use Bloom filter to save a De Bruijn graph.
+							</li>
+							<li> <strong> Analysis of SSEF's time complexity </strong> : SSEF is a program of exact pattern matching. It used new instruction set on recent processors Intel called SIMD and AVX.
+							 </li>
+							 <li> <strong> Random word generator </strong>: to make test (ad hoc and recursive methods).
+							</li>
+
+					</ul>
+					<h3>  PHD : Analysis of pattern matching algorithms and their associated data structures (in progress) </h3>
+					<ul>
+							<li> <u> <strong>Director</strong> </u>: <a href="http://lipn.fr/~bassino" target="_blank" > Frédérique Bassino </a></li>
+
+							<li> <strong>On the optimality of Pattern-Matching algorithms for random strings</strong></a>
+										<ul>
+												<li> <strong>Authors</strong> : <a href="http://lipn.fr/~bassino" target="_blank" > Frédérique Bassino </a>, <a href="http://lipn.fr/~rakotoarimalala" target="_blank" > Tsinjo Rakotoarimalala </a>
+													, <a href="http://lipn.fr/~sportiello" target="_blank" > Andrea Sportiello </a> </li>
+												<li> <strong> Abstract </strong> : <br/>
+
+													We generalise a multiple string pattern matching algorithm of Fredriksson and Grabowski [J.
+
+	Discr. Alg. 7, 2009], to deal with arbitrary dictionaries. If s is the size of the alphabet, r<sub>m</sub> is the
+
+	number of words of length m in the dictionary, and  	&phi;(r) = max<sub>m</sub> ln(s m r<sub>m</sub>)/m, the complexity
+
+	rate for the string characters to be read by this algorithm is at most  	&kappa;<sub>UB</sub>  	&phi;(r). On the other side,
+
+	we generalise the classical lower bound of Yao [SIAM J. Comput. 8, 1979], for the problem with
+
+	a single pattern, to deal with arbitrary dictionaries, and determine it to be at least  	&kappa;<sub>LB</sub> (s) φ(r).
+
+	This proves the optimality of the algorithm, improving and correcting previous claims.
+
+												</li>
+												<li> <a href=" http://lipn.fr/~rakotoarimalala">Paper download link</a> </li>
+										</ul>
+							</li>
+							<li><strong>Interest work </strong>: On the optimality of approximate Pattern-Matching algorithms for random strings</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+				
+				</article>
+				<!--<footer>
+					<a href="#contact" class="button big scrolly">Get in touch with me</a>
+				</footer> -->
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<header>
+						<h2>Contact</h2>
+					</header>
+					Rakotoarimalala Tsinjo Tony <br/>
+					rakotoarimalala@lipn.univ-paris13.fr <br/>
+					99 Avenue J-B Clément Villetaneuse 93430 France, Institut Galilé, Office : B103 <br/>
+					<div>
+						<ul id="copyright">
+							<li>&copy; Amsayan. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

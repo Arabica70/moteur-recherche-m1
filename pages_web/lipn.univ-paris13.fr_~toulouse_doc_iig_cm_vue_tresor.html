@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<title>Institut Galil&eacute;e Universit&eacute; Paris 13 - Licence 1 - Initiation aux Interfaces Graphiques : Mod&eacute;lisation</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="author" content="Sophie Toulouse" />
+	<meta name="date" content="6/3/2012" />
+	<meta name="keywords" lang="fr" content="vue, gtk, etude de cas"/>
+
+	<link rel="stylesheet" type="text/css" href="http://www-lipn.univ-paris13.fr/~toulouse/css/lipn-new.css" />
+	<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html" />
+
+	<style type="text/css">
+		#info{background-color: #000044; color:white; padding:20px; width:75%; text-align: left;}
+
+		code{background-color: #CCCCCC; display:block; width:90%;margin-left:0.5cm; margin: 10px; padding: 5px;}
+		.comment{font-style:italic; color:#000099;}
+		.comment:before{content:"/* ";}
+		.comment:after{content:" */";}
+		.string{color:#990000;}
+		.string:before{content:"\"";}
+		.string:after{content:"\"";}
+		.char{color:#990000;}
+		.char:before{content:"'";}
+		.char:after{content:"'";}
+		.emph{font-style:italic; font-weight:bolder;}
+	</style>
+</head>
+
+<body>
+	<ul id="menu-h">
+		<li><a href="doc/iig/cm/vue_tresor.html#iig-vue">principes (rappels de cours)</a></li>
+		<li><a href="doc/iig/cm/vue_tresor.html#iig-cas">&eacute;tude de cas (tr&eacute;sor)</a></li>
+		<li><a href="doc/iig/cm/vue_tresor.html#iig-prog">bonnes pratiques (impl&eacute;mentation)</a></li>
+		<li><a id="retour" href="l1.html">retour</a></li>
+    </ul>
+
+	<h1>Initiation aux Interfaces Graphiques&nbsp;: <em>Mod&eacute;lisation</em></h1>
+
+	<hr/>
+	<div id="iig-intro">
+		<q>Initiation aux Interfaces Graphiques</q>, IIG est une mati&egrave;re d'ordre <em>m&eacute;thodologique</em>, permettant d'acqu&eacute;rir plusieurs savoir-faire&nbsp;: 
+		<ol>
+			<li>Mod&eacute;lisation d'un concept du monde <q>r&eacute;el</q><br/>
+				Il faut identifier les <em>informations</em> qui d&eacute;crivent le concept &agrave; mod&eacute;liser, mais aussi les actions que l'on peut faire subir &agrave; ce concept&nbsp;:
+				<ol>
+					<li>Structure de donn&eacute;e (liste organis&eacute;e des <em>informations</em> sp&eacute;cifiant le concept).</li>
+					<li>Interface de cette structure&nbsp;: son <em>mode d'emploi</em>, la listes de fonctions permettant de la manipuler.</li> 
+				</ol>
+			</li>
+			<li>Mise en &oelig;uvre d'une biblioth&egrave;que&nbsp; pour la r&eacute;alisation d'un but pr&eacute;cis.
+			</li>
+			<li><a href="doc/iig/cm/vue_tresor.html#iig-vue">Conception de l'interface graphique d'une application</a>&nbsp;:
+				<ol>
+					<li>D&eacute;fintion de l'interface (utilisation de la bibilioth&egrave;que graphique gtk)</li>
+					<li>Programmation &eacute;v&eacute;nementielle</li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+	<hr/>
+
+	<div id="iig-vue">
+		<h2>D&eacute;marche de conception d'une interface</h2>
+
+		<h3>Probl&eacute;matique</h3>
+		Il s'agit de concevoir une interface graphique permettant &agrave; l'utilisateur d'atteindre certains buts. Les buts (les concepts, informations, traitements)  qu'ils mettent en jeu sont impl&eacute;ment&eacute;s par le mod&egrave;le. La vue offre &agrave; l'uilisateur une <span class="emph">repr&eacute;sentation du mod&egrave;le</span> et les moyens <span class="emph">d'agir sur celui-ci</span>. Il faut donc d&eacute;finir&nbsp;:
+		<ul>
+			<li>la repr&eacute;sentation&nbsp;;</li>
+			<li>les interactions et leurs encha&icirc;nements.</li>
+		</ul>
+	</div>
+
+	<div id="iig-cas">
+		<h2>Repr&eacute;sentation d'une partie du <q>Jeu de tr&eacute;sor</q></h2>
+
+		<h3>Fichiers source</h3>
+		<ul>
+			<li>Biblioth&egrave;que <q>tresor</q> avec passage par adresse des arguments&nbsp;: <a href="doc/iig/cm/tresor2/tresor.h">fichier d'ent&ecirc;te</a>, <a href="doc/iig/cm/tresor2/tresor.c">fichier source</a></li>
+			<li>Vue gtk associ&eacute;&nbsp;: <a href="doc/iig/cm/tresor_vue/vue_tresor.h">fichier d'ent&ecirc;te</a>, <a href="doc/iig/cm/tresor_vue/vue_tresor.c">fichier source</a></li>
+			<li>Tests (partiels)&nbsp;: <a href="doc/iig/cm/tresor_vue/vue_tresor_test.c">fichier source</a>.
+			</li>
+		</ul>
+
+		<h3>Commentaires</h3>
+		Voir fichier d'ent&ecirc;te.
+
+		<h2>D&eacute;roulement d'une partie du <q>Jeu de tr&eacute;sor</q></h2>
+
+		<h3>Fichiers source</h3>
+		<ul>
+			<li>Contr&ocirc;leur&nbsp;: <a href="doc/iig/cm/tresor_ctrl/ctrl_tresor.h">fichier d'ent&ecirc;te</a>, <a href="doc/iig/cm/tresor_ctrl/ctrl_tresor.c">fichier source</a></li>
+			<li>Jeu&nbsp;: <a href="doc/iig/cm/tresor_ctrl/jeu_tresor.c">fichier source</a>.
+			</li>
+		</ul>
+
+		<h3>Commentaires</h3>
+		Voir fichier d'ent&ecirc;te.
+	</div>
+
+	<div id="carte-visite">
+		<a href="coursfr.html">Sophie Toulouse</a>, LIPN - Institut Galil&eacute;e	<br/>
+		+33.1.49.40.40.73 (tel.) - Bureau A103<br/>
+		<span class="mail">sophie.toulouse 'at' lipn.univ-paris13.fr</span>
+	</div>
+
+	<ul id="w3c">
+ 		<li>
+			<a href="http://validator.w3.org/check?uri=referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict"/>
+			</a>
+		</li>
+		<li>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+			</a>
+		</li>
+    </ul>
+
+<script type="text/javascript">
+	var sc_project=3463137; 
+	var sc_invisible=1; 
+	var sc_partition=38; 
+	var sc_security="42bad5b8"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c39.statcounter.com/3463137/0/42bad5b8/1/" alt="unique visitor counter" /></a></div></noscript>
+
+</body>
+
+</html>
+

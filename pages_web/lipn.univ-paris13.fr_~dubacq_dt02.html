@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Signaux pour automates cellulaires en dimension 2 ou plus</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Signaux pour automates cellulaires en dimension 2 ou plus"/>
+            <meta property="og:url" content="./dt02.html"/>
+            <meta property="og:description" content="Dans cet article, co-écrit avec Véronique Terrier pour la conférence Latin 2002, nous regardons comment les automates cellulaires de dimension supérieure peuvent aider à tracer des signaux. Nous montrons l'existence d'un « trou » dans l'espace des signaux constructibles en dimension quelconque, Nous montrons à l'aide de deux automates cellulaires de dimension 2 qu'une dimension plus élevée permet de diminuer le nombre d'états nécessaires à certaines constructions."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dt02.html"
+         rel="bookmark"
+         title="Permalink to Signaux pour automates cellulaires en dimension 2 ou plus">
+        Signaux pour automates cellulaires en dimension 2 ou plus
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>mar. 08 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/journal.html">journal</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/dt02.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Dans cet article, co-écrit avec Véronique Terrier pour la conférence Latin 2002, nous regardons comment les automates cellulaires de dimension supérieure peuvent aider à tracer des signaux. Nous montrons l'existence d'un « trou » dans l'espace des signaux constructibles en dimension quelconque, Nous montrons à l'aide de deux automates cellulaires de dimension 2 qu'une dimension plus élevée permet de diminuer le nombre d'états nécessaires à certaines constructions.</p>
+<h2>À propos de cet article</h2>
+<p>Pour parvenir à ces résultats, j'ai fait de l'expérimentation <em>in silico</em>. J'ai en particulier un fichier <a href="http://www.geomview.org/">Geomview</a> (mais de nos jours, c'est un format dont il est difficile de sortir) du diagramme espace-temps de l'automate cellulaire à trois états (blanc, rouge, transparent) capable de construire un signal d'épaisseur <span class="math">\(\log(t)\)</span> au-dessus de la diagonale. Il a été produit par un programme en C (disponible ci-dessous). Dans le temps, je mettais une applet java pour prévisualiser la structure. Comme je n'ai pas eu le temps de tout reconvertir à un format plus moderne, utilisez <code>geomview</code>.</p>
+<p><img alt="Un signal de vitesse t+log(t) dans un diagramme espace-temps de dimension 3" src="./images/recherche/latin2002.png" /></p>
+<p>L'exposé est disponible en anglais (version Latin 2002) et en français (version présentée en séminaire au LRI, ou à une école de jeunes chercheurs). Les transparents ont été fait avec <code>ppower4</code>, technologie maintenant complètement surpassée par <code>beamer</code> pour faire des transparents en LaTeX. Mais ça a été drôle un certain temps.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/dt02.pdf">L'article de proceedings</a></li>
+<li><a href="./pdf/publications/latin2002-fr.pdf">L'exposé en français</a></li>
+<li><a href="./pdf/publications/latin2002-en.pdf">L'exposé en anglais</a></li>
+<li><a href="./pdf/publications/automata.c">Le programme qui génère l'automate</a></li>
+<li><a href="./pdf/publications/ca.off">Le fichier Geomview obtenu</a></li>
+</ul>
+<h2>Citer cette publication</h2>
+<p>Cette publication a été faite dans les actes de la conférence
+<a href="http://www.latintcs.org/2002/">Latin 2002</a> qui s'est déroulée cette
+année-là à Cancun (Mexique).</p>
+<div class="highlight"><pre>@InProceedings{dt02,
+  author =   {Jean-Christophe Dubacq and V{\&#39;e}ronique Terrier},
+  title =    {Signals for Cellular Automata in Dimension 2 or Higher},
+  booktitle =    {LATIN 2002: Theoretical Informatics, 5th Latin American Symposium, Cancun, Mexico, April 3-6, 2002, Proceedings},
+  pages =    {451--464},
+  year =     {2002},
+  editor =   {Sergio Rajsbaum},
+  volume =   {2286},
+  series =   {Lecture Notes in Computer Science},
+  month =    may,
+  publisher =    {Springer},
+  isbn =         {3-540-43400-3}
+}
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

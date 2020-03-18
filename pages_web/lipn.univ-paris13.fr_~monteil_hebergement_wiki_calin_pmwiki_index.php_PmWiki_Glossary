@@ -1,0 +1,179 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Glossary </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.Glossary' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=search&amp;q=link=PmWiki.Glossary'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Glossary</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ChangeLog'>Change log</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Introduction'>Introduction</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p class='vspace'>This page describes various terms related to PmWiki.
+</p>
+<div class='vspace'></div><dl><dt>Author</dt><dd> Any user with privileges to write to the wiki.
+<div class='vspace'></div></dd><dt>Admin</dt><dd> The person (or people) who controls access to the wiki, configures the wiki, and generally is the person who installed the wiki.
+<div class='vspace'></div></dd><dt>Configuration file</dt><dd> A specially-named PHP script file where local customizations can take place for a farm, a wiki, a group, or a page.
+<div class='vspace'></div></dd><dt>Default configuration</dt><dd> The way Pm has chosen to set all settings, or an individual setting, by default.  For example, {$EnablePathInfo is disabled by default.  A wiki with no ''local/config.php'' file is using the default configuration.  Likewise, a farm that only defines $}FarmPubDirUrl in <em>farmconfig.php</em> is using the default configuration.
+</dd></dl><p class='vspace'><a name='farm' id='farm'></a>
+</p><dl><dt>Farm</dt><dd> A group of wikis that share code. Content and formats may or may not be shared. For more farm-related terms, including several which have been deprecated, see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiFarmTerminology'>WikiFarmTerminology</a>
+<div class='vspace'></div></dd><dt>Farm-wide configuration file</dt><dd> A WikiFarm&rsquo;s <em>local/farmconfig.php</em> file, where any settings (besides <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#FarmPubDirUrl'><code class='varlink'>&#036;FarmPubDirUrl</code></a>) customize the default configuration for all of the wikis in a farm.
+<div class='vspace'></div></dd><dt>Full page name</dt><dd> The <em>full page name</em> consists of a group and a name, e.g. <code class='escaped'>Main.WikiSandbox</code>. The variable for the full page name is <code class='escaped'>{$FullName}</code>, which for this page is <code>PmWiki.Glossary</code>. Similarly, the variable for the group is <code class='escaped'>{$Group}</code> which here is <code>PmWiki</code>.
+<div class='vspace'></div></dd><dt>Group</dt><dd> A collection of associated wiki pages; by default this appears in the page name as &ldquo;Group.PageName&rdquo;. Attributes can be set on all pages in the group simultaneously. The variable for the group is <code class='escaped'>{$Group}</code>, which here is <code>PmWiki</code>.
+<div class='vspace'></div></dd><dt>Local configuration file</dt><dd> A specially-named PHP script where local customizations can take place for an individual wiki.  For an entire wiki it&rsquo;s named <em>local/config.php</em>.  Individual groups and pages can also have their own local configuration files.
+<div class='vspace'></div></dd><dt>Local customization</dt><dd> Any deviation from the default configuration.  A related phrase is &ldquo;farm-wide customization&rdquo;.
+<div class='vspace'></div></dd><dt>Page file name</dt><dd> The <em>page file name</em> is the name of the file that normally stores the data of a page in the directory <code class='escaped'>wiki.d/</code>. This file name is normally built directly from the page name.
+<div class='vspace'></div></dd><dt>Page link</dt><dd> A <em>page link</em> is something that is used to generate a link to a page. For example, the markup <code class='escaped'>[[wiki sandbox]]</code>, <code class='escaped'>[[(wiki) sandbox]]</code>, <code class='escaped'>WikiSandbox</code>, <code class='escaped'>Main/WikiSandbox</code>, <code class='escaped'>[[Main/wiki sandbox]]</code>, <code class='escaped'>[[Main.WikiSandbox | click here]]</code>, etc all specify a link to the page &lsquo;Main.WikiSandbox&rsquo;.  In each case PmWiki uses the context of the link to generate a page name from the page link &mdash; normally by capitalizing each word found in the link and stripping any characters that aren&rsquo;t considered valid in page names.
+<div class='vspace'></div></dd><dt>Page name</dt><dd> The <em>page name</em> is a string that PmWiki uses to refer to a page - i.e. it <em>names the page</em>. This could also be considered a <em>handle</em> for the page. The variable for the page name is simply called <code class='escaped'>{$Name}</code>, which for this page is <code>Glossary</code>.
+</dd></dl><div class='indent'>Note that there is no whitespace in page names, and by default PmWiki capitalizes each word in a page&rsquo;s name. There is however a variable <code class='escaped'>{$Namespaced}</code> where spaces have been inserted, e.g. for the page WikiSandbox this variable would be <code class='escaped'>Wiki Sandbox</code>.
+</div><div class='indent'>Note that PmWiki also uses the page name to locate per-group and per-page customization files in the <code class='escaped'>local/</code> subdirectory. For example, browsing Main.WikiSandbox would cause <code class='escaped'>local/Main.WikiSandbox.php</code> and <code class='escaped'>local/Main.php</code> to be loaded if these files existed.
+</div><div class='vspace'></div><dl><dt>Page title</dt><dd> A <em>page title</em> is the title element of a page, i.e. what is usually shown above the page and in the browser window&rsquo;s name. This title is normally set via the directive <code class='escaped'>(:title:)</code>, but if no such directive is given the title will be automatically generated from the page name. The title of a page is accessed via either the variable <code class='escaped'>{$Title}</code> or the variable  <code class='escaped'>{$Titlespaced}</code>. The latter differs in that it uses the spaced version of the name.
+<div class='vspace'></div></dd><dt>Page URI</dt><dd> Page names are used in <small>URI</small>s to tell PmWiki which page is to be loaded or acted upon. The normal form of a page URI is usually one of these two
+<div class='indent'><code class='escaped'>http://www.example.com/pmwiki/pmwiki.php?n=Main.WikiSandbox</code>
+</div><div class='indent'><code class='escaped'>http://www.example.com/pmwiki/pmwiki.php/Main.WikiSandbox</code>
+</div></dd></dl><div class='indent'>Note that various aliasing and rewriting tricks can be used to modify this, but PmWiki expects to obtain a page name from the parameter &lsquo;n&rsquo; or from the <code class='escaped'>PATH_INFO</code> component following the URI of the script (<code class='escaped'>pmwiki.php</code>).
+</div><div class='indent'>Note that the parameter &lsquo;n&rsquo; takes precedence over <code class='escaped'>PATH_INFO</code> if both are available.
+</div><div class='vspace'></div><dl><dt>Wikifarm</dt><dd>Synonymous for &ldquo;<a href='#farm'>farm</a>&rdquo;.
+</dd></dl><p class='vspace'> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ChangeLog'>Change log</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Introduction'>Introduction</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Glossary' rel='nofollow'>PmWiki:Glossary</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Glossary-Talk' rel='nofollow'>PmWiki:Glossary-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Glossary?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on September 10, 2011, at 06:08 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

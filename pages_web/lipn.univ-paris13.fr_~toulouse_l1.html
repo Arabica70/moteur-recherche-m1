@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="author" content="Sophie Toulouse" />
+	<meta name="date" content="1/1/2011" />
+	<meta name="keywords" lang="fr" content="modelisation, interface graphique, cours, exercices" />
+
+	<link rel="stylesheet" type="text/css" href="css/lipn-new.css" />
+	<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html" />
+	<title>Sophie Toulouse - Page Acad&eacute;mique - Licence 1 - IIG - cours et exercices</title>
+
+	<style type="text/css">
+		#info{background-color: #000044; color:white; padding:20px; width:75%; text-align: left;}
+	</style>
+
+	<style type="text/css">
+		.avenir:after{content:" A venir...";}
+		.avenir{font-style: italic;}
+	</style>
+
+</head>
+
+<body>
+	<ul id="menu-h">
+		<li><a id="news" href="l1.html#last-update">news</a></li>
+		<li><a href="l1.html#cm">notes de cours</a></li>
+		<li><a href="l1.html#c">c</a></li>
+		<li><a href="l1.html#gtk">gtk</a></li>
+		<li><a href="l1.html#partiel">examen</a></li>
+		<li><a href="l1.html#projet">projet</a></li>
+		<li><a href="l1.html#projet_old">projet 2010-2011</a></li>
+		<li><a id="retour" href="coursfr.html">retour</a></li>
+    </ul>
+
+	<h1>Initiation aux interfaces graphiques (IIG) 2012</h1>
+
+	<div id="update">
+		<p>derni&egrave;re mise &agrave; jour&nbsp;: 14/5/12</p>
+	</div>
+
+	<div class="info" id="last-update" style="font-size:smaller;">
+		<ul>
+			<li id="date_14_5_12">14/5/12&nbsp;: <a href="l1.html#partiel">examen de deuxi&egrave;me session</a>&nbsp;: date, et sujets pour s'entra&icirc;ner.</li>
+			<li id="date_9_5_12">9/5/12&nbsp;: <a href="doc/iig/enonce/soutenances_11_mai.pdf">soutenances du vendredi 11 mai</a>. Si votre nom n'appara&icirc;t pas et que vous avez un projet &agrave; soutenir&nbsp;: signalez-vous <span class="emph">au plus vite</span> par courrier &eacute;lectronique&nbsp;!</li>
+			<li id="date_8_5_12">8/5/12&nbsp;: <a href="doc/iig/enonce/soutenances.pdf">convocation soutenances</a>. Si votre nom n'appara&icirc;t pas et que vous avez un projet &agrave; soutenir&nbsp;: signalez-vous <span class="emph">au plus vite</span> par courrier &eacute;lectronique&nbsp;!</li>
+			<li id="date_2_4_12">2/4/12&nbsp;: troisi&egrave;me &eacute;valuation comptant pour le contr&ocirc;le continu, l'impl&eacute;mentation en C/gtk de la vue propos&eacute;e pour le jeu de mastermind. &Agrave; rendre par e-mail, &agrave; votre charg&eacute; de TD, au plus tard le 6/4/12, midi. Pensez &agrave; pr&eacute;ciser <q>mastermind</q> ainsi que votre nom dans le sujet du mail.</li>
+			<li id="date_7_3_12">7/3/12&nbsp;: deuxi&egrave;me &eacute;valuation comptant pour le contr&ocirc;le continu, la conception d'une maquette pour l'interface graphique du jeu de mastermind. Quels composants graphiques utiliser pour repr&eacute;senter le jeu&nbsp;? Quels composants graphiques utiliser pour permettre au joueur de jouer&nbsp;? Comment imbriquer l'ensemble de ces composants (quel composant est fils de quel autre, et par l'utilisation de quelle fonction gtk)&nbsp;? &Agrave; rendre sur papier, version manuscrite, &agrave; votre charg&eacute; de TD, le 13/3/12 en TP. &Agrave; r&eacute;aliser en mon&ocirc;me. Pensez &agrave; pr&eacute;ciser votre nom sur la feuille.</li>
+			<li id="date_30_1_12">30/1/12&nbsp;: premi&egrave;re &eacute;valuation comptant pour le contr&ocirc;le continu, le <a href="doc/iig/enonce/tp_mastermind/mastermind_TODO.c"><q>mastermind &agrave; trous</q></a> &agrave; rendre par e-mail, &agrave; votre charg&eacute; de TD, au plus tard le 6/2/12, 8h00 du matin. Pensez &agrave; pr&eacute;ciser <q>mastermind</q> ainsi que votre nom dans le sujet du mail. Si vous ne parvenez pas &agrave; tout &eacute;crire, faites le maximum, indiquez dans le ficher source les difficult&eacute;s que vous rencontrez (en commentaires), et surtout envoyez un fichier source qui compile sans <em><q>warning</q></em>.</li>
+		</ul>
+	</div>
+
+	<!-- html -->
+	<h2 id="cm" class="cadre">Notes de cours</h2>
+	<div class="cadre">
+		<ul class="list">
+			<li><a href="doc/iig/cm/tresor.html">Mod&eacute;lisation.</a></li>
+			<li><a href="doc/iig/cm/vue_tresor.html">Vue avec gtk (page en cours de r&eacute;daction, exemple de code source).</a></li>
+			<li>Exemple de programme complet avec le <a href="doc/iig/cm/puissance4">puissance 4</a> (projet 2010-2011).<br/>
+					<span style="font-size:smaller;">Vous y trouverez notamment&nbsp;: l'utilisation des <q>GtkTable</q>, la capture de l'&eacute;v&eacute;nement <q>delete-event</q> avant que la fen&ecirc;tre ne soit effectivement d&eacute;truite, la mise en forme des libell&eacute;s.</span>
+			</li>
+		</ul>
+	</div>
+
+	<h2 id="c" class="cadre">TD/TP interface <q>console</q></h2>
+	<div class="cadre">
+		<h3>TP semaines 1 &agrave; 4</h3> 
+		<ul class="list">
+			<li>
+				Mastermind&nbsp;:
+					<a href="doc/iig/enonce/tp_mastermind/enonce_modele.txt">sujet</a>, 
+					<a href="doc/iig/enonce/tp_mastermind/figure.pdf">figure de la structure de donn&eacute;e</a>,
+					<a href="doc/iig/enonce/tp_mastermind/mastermind_TODO.c">fichier &agrave; trous</a>
+			</li>
+		</ul>
+
+		<h3>Autres sujets pour s'entra&icirc;ner</h3> 
+		<ul class="list">
+			<li>
+				Chasse au tr&eacute;sor&nbsp;: <a href="doc/iig/enonce/tp_tresor">sujet</a>
+			</li>
+			<li>
+				Calculatrice complexe&nbsp;: <a href="doc/iig/enonce/tp_complexe">sujet</a>
+			</li>
+			<li>
+				Jeu de morpion&nbsp;: <a href="doc/iig/enonce/tp_morpion">sujet</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- gtk -->
+	<h2 id="gtk" class="cadre">TD/TP GTK</h2>
+
+	<div class="cadre">
+
+		<h3>TP semaines 5 &agrave; 12</h3> 
+		<ul class="list">
+			<li>Premier sujet&nbsp;: <a href="doc/iig/enonce/tp_mastermind/enonce_ig-1.txt">&eacute;nonc&eacute;</a></li>
+			<li>Deuxi&egrave;me sujet&nbsp;: <a href="doc/iig/enonce/tp_mastermind/enonce_ig-2.txt">&eacute;nonc&eacute;</a></li>
+			<li>Troisi&egrave;me sujet&nbsp;: faire l'interface compl&egrave;te  (seulement graphique, pas encore li&eacute;e au mod&egrave;le) du jeu de mastermind</li>
+			<li id="tp_gtk_morpion">Quatri&egrave;me sujet&nbsp;: faire le contr&ocirc;leur du jeu de morpion&nbsp;: <a href="doc/iig/enonce/tp_morpion_gtk/">enonc&eacute; et fichiers sources</a> (du mod&egrave;le dont programme test, de la vue dont programme test).</li>
+		</ul>
+		Mod&egrave;le support&nbsp;: <a href="doc/iig/source_etud/mastermind_separe/">mastermind</a>.
+
+		<h3>Supports de cours</h3>
+		<ul class="list">
+			<li>
+				<a href="doc/igw/current/poly-td/gtk-unix.pdf">Introduction &agrave; unix pour gtk</a> (cours et exercices)
+			</li> 
+			<li>
+				<a href="doc/igw/current/poly-td/gtk-intro-poly.pdf">Introduction &agrave; gtk</a> (cours)
+			</li> 
+			<li>
+				<a href="doc/igw/current/poly-td/gtk-objet-1.pdf">Composants graphiques de base</a> (cours et exercices)
+			</li> 
+			<li>
+				<a href="doc/igw/current/poly-td/gtk-dialogue.pdf">Bo&icirc;tes de dialogue</a> (cours et exercices) 
+			</li>
+			<li>
+				<a href="doc/igw/current/poly-td/gtk-objet-2.pdf">Tableaux et menus</a> (cours et exercices) 
+			</li>
+		</ul>
+
+		<h3>Autres supports d'exercices</h3> 
+		<ul class="list">
+			<li>
+				Introduction &agrave; gtk&nbsp;: <a href="doc/igw/current/poly-td/gtk-intro-td.pdf">exercices</a> 
+			</li> 
+			<li>
+				Chasse au tr&eacute;sor&nbsp;: <a href="doc/iig/enonce/tp_tresor_gtk.txt">sujet</a>
+			</li>
+		</ul>
+	</div>
+	
+	<!-- exam -->
+	<h2 id="partiel" class="cadre">Examen</h2>
+	<div class="cadre">
+		<p>Deuxi&egrave;me session&nbsp;:</p>
+		<ul class="list">
+			<li>Date&nbsp;: le 11 juin 2012, de 14h &agrave; 16h, salle non encore communiqu&eacute;e.</li>
+			<li>Les documents <span class="emph">ne</span> sont <span class="emph">pas</span> autoris&eacute;s &agrave; l'examen.</li>
+			<li>Pour information, sujets d'examen de <a href="doc/iig/examen/s1_1112/">premi&egrave;re session 2011/2012</a> et de <a href="doc/iig/examen/s2_1011/">deuxi&egrave;me session 2010/2011</a>.
+			</li>
+		</ul>
+		<p>Premi&egrave;re session&nbsp;:</p>
+		<ul class="list">
+			<li>Date&nbsp;: le 30 avril 2012, de 14h &agrave; 16h, en salles C101/C103.</li>
+			<li>Les documents <span class="emph">ne</span> sont <span class="emph">pas</span> autoris&eacute;s &agrave; l'examen.</li>
+			<li>Pour information, <a href="doc/igw/current/poly-td/sept-2008.pdf">partiel html &amp; gtk 2008</a> (et son <a href="doc/igw/current/poly-td/sept-2008-annexe.pdf">annexe</a>).
+			</li>
+		</ul>
+	</div>
+	
+	<h2 class="cadre" id="projet">Projet</h2>
+	<div class="cadre">	
+		<p><span class="entete">Principes</span>
+			l'application (&eacute;crite en C) vous est fournie, vous devez en d&eacute;velopper l'interface graphique.
+		</p>
+
+		<p><span class="entete">Ils l'ont fait l'an dernier...</span> Jones MAGLOIRE, promotion 2010-2011 (puissance 4) 
+							<a href="http://www.youtube.com/watch?v=ZkLzG5uiSow">animation</a>, 
+							<a href="doc/iig/projet_en_ligne/puissance4_jm">projet</a>.
+		</p>
+
+		<span class="entete">Sujet 2011-2012</span>&nbsp;: <q>Mastermind</q>.
+		<ul class="list">
+			<li><a href="doc/iig/enonce/soutenances.pdf">convocation soutenances</a>. Si votre nom n'appara&icirc;t pas et que vous avez un projet &agrave; soutenir&nbsp;: signalez-vous <span class="emph">au plus vite</span> par courrier &eacute;lectronique&nbsp;!</li>
+			<li><span class="entete">Code source du mod&egrave;le</span> <a href="doc/iig/enonce/projet_mm">ici</a> (plus programme test).</li>
+			<li><span class="entete">Consignes de production</span>
+				<ul>
+					<li>L'utilisation du mod&egrave;le fourni est <span class="emph">obligatoire</span>.</li>
+					<li>L'organisation du code source en trois modules <q>mod&egrave;le</q>, <q>vue</q> et <q>contr&ocirc;leur</q> est &eacute;galement <span class="emph">obligatoire</span>. Vous disposez pour cela des exemples du <q><a href="l1.html#cm">tr&eacute;sor</a></q> (notes de cours), du <q><a href="doc/iig/cm/puissance4">puissance 4</a></q> (code mis &agrave; disposition) et du <q><a href="l1.html#tp_gtk_morpion">morpion</a></q> (trait&eacute; en TD).</li>
+					<li>Le projet peut &ecirc;tre r&eacute;alis&eacute; en <span class="emph">mon&ocirc;me ou bin&ocirc;me</span>. Au-del&agrave;, la note est divis&eacute;e par le nombre d'individus (de m&ecirc;me, pour un projet livr&eacute; par plusieurs mon&ocirc;mes ou bin&ocirc;mes).</li>
+					<li>La livraison comprend le <span class="emph">code source</span>, la <span class="emph">documentation</span> (expliquer comment le projet a &eacute;t&eacute; pens&eacute;), <span class="emph">l'aide &agrave; l'installation</span> (<em>ex.</em>, makefile), l'analyse des &eacute;ventuelles difficult&eacute;s rencontr&eacute;es.</li>
+				</ul>
+			</li>
+			<li><span class="entete">Calendrier</span>
+				<ul>
+					<li>Soutenances en salle machine&nbsp;: les 9 mai (G211, 8h30 -- 17h00), 10 mai (F205, 8h30 -- 17h00) et 11 mai (F202, 8h30 -- 13h30) 2012. La pr&eacute;sence aux soutenances est <span class="emph">obligatoire</span>.</li>
+					<li>Date de remise&nbsp;: par courrier &eacute;lectronique, au plus tard le jeudi 3 mai &agrave; midi.</li>
+				</ul>
+			</li>
+			<li>
+				<span class="entete">Consignes de livraison</span>
+				<ul>
+					<li>Envoi par <span class="emph">courrier &eacute;lectronique</span> &agrave; votre <span class="emph">charg&eacute; de TP</span> ainsi qu'&agrave; votre <span class="emph">charg&eacute; de cours</span>, si possible sous forme d'une archive &agrave; t&eacute;l&eacute;charger&nbsp;; </li>
+					<li>Indiquer dans le <span class="emph">sujet </span>du mail <span class="emph"><q>Projet IIG</q></span>&nbsp;; 
+						pr&eacute;cisez le <span class="emph">nom</span>, le pr&eacute;nom, le <span class="emph">groupe de TD d'option</span> de <span class="emph">chacun</span> des membres du groupe (<span class="emph">au plus 2</span> personnes par projet).</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="cadre">Pour vous aider</h2>
+	<div class="cadre">
+		<ul class="list">
+			<li>installation de gtk sous ubuntu&nbsp;: sudo apt-get install libgtk2.0-dev</li>
+			<li>installation de gtk sous Windows (EDI <q>Code blocks</q> conseill&eacute;) sur le <a href="http://www.siteduzero.com/tutoriel-3-2988-installer-gtk-sous-windows.html">site du z&eacute;ro</a>, sur <a href="http://nicolasj.developpez.com/gtk/windows/">developpez.com</a></li>
+			<li><a href="http://library.gnome.org/devel/gtk-tutorial/stable/">En anglais... tutoriel plus complet et bien document&eacute;</a></li>
+		</ul>
+	</div>	
+
+	<div id="carte-visite">
+		<a href="coursfr.html">Sophie Toulouse</a>, LIPN - Institut Galil&eacute;e	<br/>
+		+33.1.49.40.40.73 (tel.) - Bureau A103<br/>
+		<span class="mail">sophie.toulouse 'at' lipn.univ-paris13.fr</span>
+	</div>
+
+	<ul id="w3c">
+ 		<li>
+			<a href="http://validator.w3.org/check?uri=referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict"/>
+			</a>
+		</li>
+		<li>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+			</a>
+		</li>
+    </ul>
+
+<script type="text/javascript">
+	var sc_project=3463137; 
+	var sc_invisible=1; 
+	var sc_partition=38; 
+	var sc_security="42bad5b8"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c39.statcounter.com/3463137/0/42bad5b8/1/" alt="unique visitor counter" /></a></div></noscript>
+
+</body>
+</html>
+

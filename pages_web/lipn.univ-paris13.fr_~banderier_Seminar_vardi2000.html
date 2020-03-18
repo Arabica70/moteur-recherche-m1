@@ -1,0 +1,1064 @@
+<HTML>
+<HEAD><TITLE>Continued Fractions and Modular Forms</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<!-- hhmts start --> <!-- hhmts end -->
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Continued Fractions and Modular Forms</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Ilan Vardi</FONT></I></FONT><BR>
+<BR>
+
+ IHES<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+April 3, 2000<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="vardi2000.ps">postscript</A> and in <A HREF="http://algo.inria.fr/seminars/sem99-00/vardi.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE>
+This incursion into the realm of elementary and probabilistic number theory
+of continued fractions, via modular forms, 
+allows us to study the alternating sum of coefficients of a continued
+fraction, thus solving the longstanding open problem of their limit law.
+</BLOCKQUOTE><BR><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+For the readers of these proceedings,<A NAME="text1" HREF="#note1"><SUP><FONT SIZE=2>1</FONT></SUP></A> it is
+not a secret anymore that the continued fraction expansion of <I>p</I>/<I>q</I>,
+the Jacobi symbol (<I>p</I>/<I>q</I>), or the gcd of two
+integers (<I>p</I>,<I>q</I>), or even Gauss' lattice reduction algorithm cover
+phenomena of similar computational complexity. However for continued
+fractions, two distinct cases have to be considered: the continuous
+and the discrete case. The discrete case deals with continued
+fraction expansions of rational numbers whereas the continuous case
+deals with continued fractions of real (irrational) numbers.<BR>
+<BR>
+For the continuous model, given the apparatus of ergodic theory, many basic results on
+continued fractions fall as application of more general theorems (see
+Chapter 9 in Paul Lévy's book&nbsp;[<A HREF="#Levy37"><CITE>11</CITE></A>]).
+Ergodic
+theory, which was guessed by Maxwell and formulated by Boltzmann, concerns itself principally with quantifying how points
+in a continuous space evolve under iteration of a transformation.
+The ergodic theorem (due to Birkhoff in 1931) states that for almost all initial points <I>x</I><SUB><FONT SIZE=2>0</FONT></SUB> of the continuous
+space&nbsp;<I>E</I> with measure&nbsp;<FONT FACE=symbol>l</FONT>,
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>®</FONT>+<FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>j</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>f</I></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP><I>T</I><SUP><FONT SIZE=2><I>j</I></FONT></SUP>(<I>x</I><SUB><FONT SIZE=2>0</FONT></SUB>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>E</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>f</I>(<I>y</I>)&nbsp;<I>d</I><FONT FACE=symbol>l</FONT>(<I>y</I>).</TD>
+</TR></TABLE></DIV><BR>
+For the discrete model, there is some kind of 
+effect that precludes the use of
+ergodic theory. 
+At least, results from the continuous model may serve as a heuristic for
+guessing corresponding facts about the discrete world.<BR>
+<BR>
+What one would need in order to make this heuristic rigorous
+is a kind of ``ergodic theory with an error term.''
+This is to some extent afforded by the introduction 
+of Ruelle operators (see the works by Brigitte Vallée in 1995) and
+of modular forms (see the works by Ilan Vardi in 1987--1993) in the discrete model.<BR>
+<BR>
+The main object of this lecture is the alternating sum of coefficients of a
+continued fraction.
+A&nbsp;motivation for studying this is the evaluation of Legendre symbol
+(<I>d</I>/<I>c</I>), which
+essentially expresses whether <I>d</I> is a perfect
+square modulo <I>c</I>. This symbol can be evaluated 
+using the Euclidean reduction
+(<I>d</I>/<I>c</I>) = (<I>d</I>mod <I>c</I>/<I>c</I>)
+(where <I>c</I>, <I>d</I> are odd) and the quadratic 
+reciprocity law 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>d</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>= 
+(-1)<SUP><FONT SIZE=2>(<I>c</I>-1)(<I>d</I>-1)/4</FONT></SUP></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>d</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV> In fact, it was shown by 
+Rademacher&nbsp;[<A HREF="#Rademacher54"><CITE>12</CITE></A>] that 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>d</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>=(-1)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>(3 - <I>a</I> - <I>d</I> + <I>c</I> </FONT><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT><FONT SIZE=2> (-1)</FONT><SUP><FONT SIZE=2><I>i</I></FONT></SUP><FONT SIZE=2> <I>a</I></FONT><SUB><FONT SIZE=2><I>i</I></FONT></SUB><FONT SIZE=2>)/4</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></DIV> 
+where <I>d</I>/<I>c</I>=[0,<I>a</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>a</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>] (brackets stand for the
+expansion in continued fraction)
+and 0&lt;<I>a</I>,<I>d</I>&lt;<I>c</I>, <I>ad</I><FONT FACE=symbol>º</FONT>1mod <I>c</I> 
+with <I>c</I> and <I>r</I> odd.
+Note that 
+<I>d</I><SUP><FONT SIZE=2>-1</FONT></SUP>mod <I>c</I> can itself be computed using the 
+Euclidean algorithm.<BR>
+<BR>
+There is also a geometrical motivation: the alternating sum
+expresses the number of times that a geodesic winds around the cusp of 
+a modular surface.<BR>
+<BR>
+In the continuous case, Guivarc'h and Le Jan&nbsp;[<A HREF="#GuJa93"><CITE>7</CITE></A>] established
+that the average alternating sum converges to a Cauchy distribution
+with characteristic function exp(-<FONT FACE=symbol>p</FONT>|<I>t</I>|/(2ln 2)). For
+the discrete case, the stumbling block is that even the expected
+asymptotics estimated <FONT FACE=symbol>s</FONT>(<I>d</I>,<I>c</I>)~12/<FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>ln <I>c</I>ln ln <I>c</I>
+is unproved (<FONT FACE=symbol>s</FONT>(<I>d</I>,<I>c</I>) stands for the sum of the coefficient of
+the continued fraction of <I>d</I>/<I>c</I>). The problem remained open
+until Vardi found another approach (see&nbsp;[<A HREF="#Vardi93"><CITE>15</CITE></A>]) via Dedekind
+sums.<BR>
+<BR>
+<!--TOC section Dedekind Sums-->
+
+<H2>2&nbsp;&nbsp; Dedekind Sums</H2><!--SEC END -->
+The Dedekind sum appears to be have been mistakenly
+defined and instead should have been defined as the alternating sum of
+continued fraction coefficients. 
+Historically, 
+the Dedekind sum is defined for relatively prime integers
+<I>d</I> and <I>c</I> as 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>s</I>(<I>d</I>,<I>c</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>c</I>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>h</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>((<I>hd</I>/<I>c</I>))((<I>h</I>/<I>c</I>)),</TD>
+</TR></TABLE></DIV>
+with the notation
+((<I>x</I>)) = 
+0 (if <I>x</I> is an integer), and <I>x</I> - <FONT
+FACE=symbol>ë</FONT> <I>x</I><FONT FACE=symbol>û</FONT> - 1/2 otherwise. 
+<BR>
+<BR>
+This sum was introduced by Dedekind in 1876 
+while editing Riemann's collected works. 
+He used this sum to express the 
+functional equation of the Dedekind <FONT FACE=symbol>h</FONT> function
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>h</FONT>(<I>z</I>) = <I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>p</FONT> <I>i</I> <I>z</I>/12</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(1 - <I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>i</I> <I>n</I> <I>z</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>)
+</TD>
+</TR></TABLE></DIV>
+which, he proved, satisfies 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><A NAME="eq1"></A>
+ &nbsp;&nbsp; ln <FONT FACE=symbol>h</FONT></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>az</I>+<I>b</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>cz</I>+<I>d</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>ï<BR>ï<BR>í<BR>ï<BR>ï<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>ln <FONT FACE=symbol>h</FONT>(<I>z</I>) + </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>ln (<I>cz</I>+<I>d</I>) 
++</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT> <I>i</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>12</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP>-3+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>a</I>+<I>d</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>-12<I>s</I>(<I>d</I>,<I>c</I>)</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>,
+	</TD>
+</TR></TABLE></TD>
+<TD ALIGN=left NOWRAP>for <I>c</I> &gt; 0,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>ln<FONT FACE=symbol>h</FONT>(<I>z</I>)+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT> <I>ib</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>12</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></TD>
+<TD ALIGN=left NOWRAP>when&nbsp;<I>c</I>=0,</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+&nbsp;&nbsp;&nbsp;&nbsp;(1)</TD>
+</TR></TABLE></DIV>
+where <FONT FACE=symbol>Á</FONT>(<I>z</I>)&gt;0, <I>g</I>=(<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>a</I>&nbsp;<I>b</I>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>c</I>&nbsp;<I>d</I>&nbsp;</TD>
+</TR></TABLE>), 
+and <I>a</I>, <I>b</I>, <I>c</I>, <I>d</I> are integers satisfying
+<I>ad</I>-<I>bc</I>=1. Note that 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>ln <FONT FACE=symbol>h</FONT>(<I>z</I>) 
+ = </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT> <I>iz</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>12</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> -</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I>,<I>n</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>imn</I> <I>z</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>m</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+</TD>
+</TR></TABLE></DIV>
+so ln <FONT FACE=symbol>h</FONT> is holomorphic for <FONT FACE=symbol>Á</FONT>(<I>z</I>)&gt;0. 
+Using the functional equation&nbsp;(<A HREF="#eq1">1</A>) Dedekind proved a fundamental 
+identity for Dedekind sums, namely the reciprocity law 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>s</I>(<I>c</I>, <I>d</I>) = </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>d</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> + </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>d</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>c</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> + </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>cd</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> - <I>s</I>(<I>d</I>, <I>c</I>).
+</TD>
+</TR></TABLE></DIV><BR>
+Note that the definition of the Dedekind sum gives
+that <I>s</I>(<I>d</I>, <I>c</I>) = <I>s</I>(<I>d</I>mod <I>c</I>, <I>c</I>) 
+and the reciprocity law relates the value of 
+<I>s</I>(<I>d</I>,<I>c</I>) to <I>s</I>(<I>c</I>,<I>d</I>). It follows that <I>s</I>(<I>d</I>,<I>c</I>) can be computed
+by using the Euclidean algorithm, so it should 
+be expressible in terms of
+the continued fraction expansion of <I>d</I>/<I>c</I>. In fact, this is the 
+statement of a result found independently by three authors in 1977:
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Barkan&nbsp;[</FONT><A HREF="#Barkan77"><CITE><FONT COLOR=purple>2</FONT></CITE></A><FONT COLOR=purple>], Hickerson&nbsp;[</FONT><A HREF="#Hickerson77"><CITE><FONT COLOR=purple>9</FONT></CITE></A><FONT COLOR=purple>], Knuth&nbsp;[</FONT><A HREF="#Knuth77"><CITE><FONT COLOR=purple>10</FONT></CITE></A><FONT COLOR=purple>]]&nbsp;&nbsp;</FONT><EM>
+If </EM><EM>[0,<I>a</I></EM><SUB><EM><FONT SIZE=2>1</FONT></EM></SUB><EM>,<I>a</I></EM><SUB><EM><FONT SIZE=2>2</FONT></EM></SUB><EM>,...,<I>a</I></EM><SUB><EM><FONT SIZE=2><I>r</I></FONT></EM></SUB><EM>]</EM><EM> is the
+regular continued<BR>fraction expansion of </EM><EM><I>d</I>/<I>c</I></EM><EM> with </EM><EM><I>r</I></EM><EM> odd
+(with </EM><EM><I>d</I>&lt;<I>c</I></EM><EM> and </EM><EM>0&lt;<I>a</I>&lt;<I>c</I></EM><EM> 
+such that </EM><EM><I>ad</I><FONT FACE=symbol>º</FONT> 1 </EM><EM>mod</EM><EM> <I>c</I></EM><EM>) then
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>s</I>(<I>d</I>,<I>c</I>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>12</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><EM>-3+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>a</I>+<I>d</I></EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>c</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>-</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>r</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>i</I>=1</FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>(-1)</EM><SUP><EM><FONT SIZE=2><I>i</I></FONT></EM></SUP><EM><I>a</I></EM><SUB><EM><FONT SIZE=2><I>i</I></FONT></EM></SUB></TD>
+<TD NOWRAP><EM><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></EM></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+It remains to find the distribution of the values of the Dedekind sums
+when <I>c</I> and <I>d</I> range over large intervals.
+Vardi did so by using Paul Lévy's theorem (details in Section 4) and for
+this, needed to justify several approximations.
+To this aim, let us recall a few facts about modular forms
+and Kloosterman sums, since these objects appeared to be the key to
+the asymptotic analysis.<BR>
+<BR>
+<!--TOC section Modular Forms-->
+
+<H2>3&nbsp;&nbsp; Modular Forms</H2><!--SEC END -->
+
+The group SL(2,<B><I>Z</I></B>) acts on the upper half complex plane <B><I>H</I></B>
+by (<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>a</I>&nbsp;<I>b</I>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>c</I>&nbsp;<I>d</I>&nbsp;</TD>
+</TR></TABLE>)&nbsp;<I>z</I>=<I>az</I>+<I>b</I>/<I>cz</I>+<I>d</I>. One now
+considers subgroups <I>G</I> of SL(2,<B><I>Z</I></B>) containing every matrices of
+SL(2,<B><I>Z</I></B>) congruent to the identity matrix in SL(2,<B><I>Z</I></B>/<I>N</I><B><I>Z</I></B>).
+Every such group <I>G</I> has a fundamental domain: an open set <I>D</I><FONT FACE=symbol>Ì</FONT>
+<B><I>H</I></B> such that for all <I>z</I><FONT FACE=symbol>Î</FONT> <B><I>H</I></B> there is at most one <I>g</I> <FONT FACE=symbol>Î</FONT>
+<I>G</I> with <I>g</I>(<I>z</I>)<FONT FACE=symbol>Î</FONT> <I>D</I> and at least one <I>g</I> <FONT FACE=symbol>Î</FONT> <I>G</I> with <I>g</I>(<I>z</I>)<FONT FACE=symbol>Î</FONT> <FONT COLOR=black><I>D</I></FONT>.<BR>
+<BR>
+<B>Definition.</B> A <EM>modular form</EM> of weight <I>k</I> 
+is a holomorphic function on <B><I>H</I></B>
+satisfying:<BR>
+<BR>
+<UL>
+<LI>
+1)Modularity condition: <I>f</I>(<I>gz</I>) = (<I>cz</I>+<I>d</I>)<SUP><FONT SIZE=2><I>k</I></FONT></SUP> <I>f</I>(<I>z</I>)  for  <I>g</I> <FONT FACE=symbol>Î</FONT> <I>G</I>,
+
+<LI>2)Meromorphy condition:
+<I>f</I>(<I>z</I>) is bounded in the cusps (i.e., parts of <I>D</I> going off to infinity).
+</UL><B>Definition.</B> A <EM>non-holomorphic modular form</EM> of
+<EM>weight</EM> <I>r</I> and <EM>multiplier system</EM> <FONT FACE=symbol>c</FONT>
+is a function <I>f</I>(<I>z</I>) on <B><I>H</I></B> satisfying:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+1') <I>f</I>(<I>gz</I>)=<FONT FACE=symbol>c</FONT>(<I>g</I>)</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>cz</I>+<I>d</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>|<I>cz</I>+<I>d</I>|</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>r</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>f</I>(<I>z</I>)
+&nbsp;&nbsp;(for <I>g</I><FONT FACE=symbol>Î</FONT> <I>G</I>),&nbsp;&nbsp;and&nbsp;&nbsp;2')&nbsp;&nbsp;
+<FONT FACE=symbol>ó<BR>õ</FONT><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>D</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP><I>f</I>(<I>x</I>+<I>iy</I>)</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>dxdy</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>y</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>&lt;<FONT FACE=symbol>¥</FONT>.
+</TD>
+</TR></TABLE></DIV><BR>
+Condition 2') shows that the non-holomorphic 
+modular forms form 
+a Hilbert space <I>L</I><SUP><FONT SIZE=2>2</FONT></SUP>(<I>D</I>, <FONT FACE=symbol>c</FONT>, <I>r</I>) under
+the Petersson inner product
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>á</FONT> <I>f</I>,<I>g</I><FONT FACE=symbol>ñ</FONT>
+=<FONT FACE=symbol>ó<BR>õ</FONT><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>D</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>f</I>(<I>z</I>)<FONT COLOR=black><I>g</I>(<I>z</I>)</FONT><I>y</I><SUP><FONT SIZE=2><I>r</I></FONT></SUP></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>dxdy</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>y</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+The Kloosterman sum (introduced by Kloosterman in&nbsp;1927 in a refinement
+of the Hardy--Littlewood circle method) is defined by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>S</I>(<I>m</I>,<I>n</I>,<I>c</I>)=<FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+<TD NOWRAP> <I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>i</I>(<I>ma</I>+<I>nd</I>)/<I>c</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,</TD>
+</TR></TABLE></DIV>
+where the sum ranges over <I>d</I>&lt;<I>c</I> for <I>ad</I><FONT FACE=symbol>º</FONT>1mod <I>c</I> and
+gcd(<I>d</I>,<I>c</I>)=1.<BR>
+<BR>
+In&nbsp;1948, André Weil proved the estimate <I>S</I>(<I>m</I>,<I>n</I>,<I>c</I>)=<I>O</I>(<I>c</I><SUP><FONT SIZE=2>1/2+<FONT FACE=symbol>e</FONT></FONT></SUP>).
+Asymptotics of sums of Kloosterman sums is a vivid subject, e.g., this
+``kloostermania'' recently succeeded&nbsp;[<A HREF="#FrIw98"><CITE>5</CITE></A>] to prove that there are
+infinitely many numbers of the form <I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+<I>y</I><SUP><FONT SIZE=2>4</FONT></SUP>.
+ Sums of Kloosterman sums exhibit strong 
+cancellations that can be estimated by making use of modular forms.<BR>
+<BR>
+Generalized Kloosterman sums (for some subgroup <I>G</I> of SL(2,<B><I>Z</I></B>)) are defined by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>S</I>(<I>m</I>,<I>n</I>,<I>c</I>,<FONT FACE=symbol>c</FONT>,<I>G</I>)=<FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT><FONT COLOR=black><FONT FACE=symbol>c</FONT>(<I>g</I>)</FONT></TD>
+<TD NOWRAP>
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>i</I></FONT></TD>
+<TD NOWRAP><FONT SIZE=2>(</FONT></TD>
+<TD NOWRAP><FONT SIZE=2>(<I>m</I>-<FONT FACE=symbol>a</FONT>)<I>a</I>+(<I>n</I>-<FONT FACE=symbol>a</FONT>)<I>d</I></FONT></TD>
+<TD NOWRAP><FONT SIZE=2>)</FONT></TD>
+<TD NOWRAP><FONT SIZE=2>/(<I>qc</I>)</FONT></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+</TD>
+</TR></TABLE></DIV>
+where the sums ranges over <I>g</I>=(<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>a</I>&nbsp;<I>c</I>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;<I>c</I>&nbsp;<I>d</I>&nbsp;</TD>
+</TR></TABLE>)<FONT FACE=symbol>Î</FONT> <I>G</I> with
+0 &lt; <I>a</I> &lt; <I>qc</I> and 0 &lt; <I>d</I> &lt; <I>qc</I>.
+In the sum, <I>q</I> is the smallest integer such that
+(<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>&nbsp;1&nbsp;<I>q</I>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;0&nbsp;1&nbsp;</TD>
+</TR></TABLE>)<FONT FACE=symbol>Î</FONT> <I>G</I>
+and <FONT FACE=symbol>a</FONT> is defined by
+<I>e</I><SUP><FONT SIZE=2>-2<FONT FACE=symbol>p</FONT> <I>i</I> <FONT FACE=symbol>a</FONT></FONT></SUP>=<FONT FACE=symbol>c</FONT> (<TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>&nbsp;1&nbsp;<I>q</I>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>&nbsp;0&nbsp;1&nbsp;</TD>
+</TR></TABLE>) with 
+0<FONT FACE=symbol>£</FONT><FONT FACE=symbol>a</FONT>&lt;1.<BR>
+<BR>
+Goldfeld and Sarnak's formulation (see [<A HREF="#GoSa83"><CITE>6</CITE></A>])
+of Kuznetsov's trace formula gives
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>c</I> &lt; <I>N</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>S</I>(<I>m</I>, <I>n</I>, <I>c</I>, <FONT FACE=symbol>c</FONT>, <I>G</I>)
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>1/2 &lt; <I>s</I></FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB><FONT SIZE=2> &lt; 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>t</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>(<I>m</I>, <I>n</I>, <FONT FACE=symbol>c</FONT>, <I>G</I>)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>N</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>2<I>s</I></FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB><FONT SIZE=2>-1</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2<I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
++ <I>O</I>(<I>N</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>b</FONT>/3 + </FONT><FONT SIZE=2><FONT COLOR=purple><FONT FACE=symbol>e</FONT></FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>),
+<A NAME="GS"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(2)</TD>
+</TR></TABLE></DIV>
+where <FONT FACE=symbol>b</FONT> is the best constant that can be put in the
+estimate <I>S</I>(<I>m</I>, <I>n</I>, <I>c</I>,<FONT FACE=symbol>c</FONT>, <I>G</I>) = <I>O</I>(<I>c</I><SUP><FONT SIZE=2><FONT FACE=symbol>b</FONT> +</FONT></SUP><SUP><FONT SIZE=2><FONT COLOR=purple><FONT FACE=symbol>e</FONT></FONT></FONT></SUP>), 
+and the sum is over exceptional eigenvalues <I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB> 
+(defined hereafter) of the operator
+<FONT FACE=symbol>D</FONT><SUB><FONT SIZE=2><I>r</I></FONT></SUB>=<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>(<FONT FACE=symbol>¶</FONT><SUP><FONT SIZE=2>2</FONT></SUP>/<FONT FACE=symbol>¶</FONT> <I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+<FONT FACE=symbol>¶</FONT><SUP><FONT SIZE=2>2</FONT></SUP>/<FONT FACE=symbol>¶</FONT>
+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)-<I>iry</I><FONT FACE=symbol>¶</FONT>/<FONT FACE=symbol>¶</FONT> <I>x</I>.
+Since <FONT FACE=symbol>D</FONT><SUB><FONT SIZE=2><I>r</I></FONT></SUB> has
+a self-adjoint extension to <I>L</I><SUP><FONT SIZE=2>2</FONT></SUP>(<I>D</I>, <FONT FACE=symbol>c</FONT>, <I>r</I>), its 
+spectrum is discrete and real: there is a sequence of eigenvalues
+going to infinity, with only a finite set of negative eigenvalues
+which correspond to holomorphic modular forms if <I>r</I> is an even integer. 
+The non-negative eigenvalues are simple except the case
+<FONT FACE=symbol>l</FONT> = 1/4, which could have multiplicity 2. <BR>
+<BR>
+According to Selberg's notation, one writes an
+eigenvalue as <FONT FACE=symbol>l</FONT> = <I>s</I>(1-<I>s</I>), with <FONT FACE=symbol>Â</FONT>(<I>s</I>) <FONT FACE=symbol>³</FONT> 1/2. 
+It follows that there is a finite number of <EM>exceptional</EM>
+eigenvalues for which <FONT FACE=symbol>l</FONT> &lt; 1/4. An exceptional eigenvalue
+corresponds to <I>s</I> &gt; 1/2, while the other eigenvalues have
+<FONT FACE=symbol>Â</FONT>(<I>s</I>) = 1/2 (note the analogy with the Riemann hypothesis).<BR>
+<BR>
+For a given non-holomorphic Poincaré series <I>P</I><SUB><FONT SIZE=2><I>m</I></FONT></SUB> (see&nbsp;[<A HREF="#FlVaVa??"><CITE>4</CITE></A>]),
+the Petersson product <FONT FACE=symbol>á</FONT> <I>P</I><SUB><FONT SIZE=2><I>m</I></FONT></SUB>,<I>u</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB><FONT FACE=symbol>ñ</FONT> gives the <I>m</I>th Fourier
+coefficient <FONT FACE=symbol>r</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>(<I>m</I>) of the eigenfunction <I>u</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB> (which is a
+modular form) associated to the eigenvalue <I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB> (1-<I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB>). 
+This allows to make explicit the <FONT FACE=symbol>t</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>'s of
+the formula&nbsp;(<A HREF="#GS">2</A>):
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>t</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>(<I>m</I>, <I>n</I>, <FONT FACE=symbol>c</FONT>, <I>G</I>)
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>q</I><SUP><FONT SIZE=2>2</FONT></SUP><FONT COLOR=black><FONT FACE=symbol>r</FONT></FONT><SUB><FONT COLOR=black><FONT SIZE=2><I>j</I></FONT></FONT></SUB><FONT COLOR=black>(<I>m</I>)</FONT><FONT FACE=symbol>r</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB>(<I>n</I>) 
+</TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP> (<I>m</I>-<FONT FACE=symbol>a</FONT>)(<I>n</I>-<FONT FACE=symbol>a</FONT>)/<I>q</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>1-<I>s</I></FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB></TD>
+</TR>
+<TR><TD ALIGN=left>&nbsp;</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>G</FONT>(<I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB>+<I>r</I>/2)
+<FONT FACE=symbol>G</FONT>(2<I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB>-1)</TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(-<I>i</I>)<SUP><FONT SIZE=2><I>r</I></FONT></SUP><FONT FACE=symbol>p</FONT><FONT FACE=symbol>G</FONT>(<I>s</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB>-<I>r</I>/2)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><BR>
+Finally, the following theorem provides the link between a sum of generalized
+Kloosterman sums and a sum whose asymptotics allows the application
+of Lévy's theorem:
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[Vardi&nbsp;[</FONT><A HREF="#Vardi87"><CITE><FONT COLOR=purple>14</FONT></CITE></A><FONT COLOR=purple>]]&nbsp;&nbsp;</FONT><EM>
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>e</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2><FONT FACE=symbol>p</FONT> <I>i</I> <I>r</I>/2</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM> 
+</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><EM><FONT SIZE=2>0 &lt; <I>d</I> &lt; <I>c</I></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><EM><FONT SIZE=2>gcd</FONT></EM><EM><FONT SIZE=2>(<I>d</I>, <I>c</I>) = 1</FONT></EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+<I>e</I></EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><EM><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>i</I> <I>r</I> <I>s</I>(<I>d</I>, <I>c</I>)</FONT></EM></TD>
+</TR>
+<TR><TD><EM>&nbsp;</EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>
+=<I>S</I></EM></TD>
+<TD NOWRAP><EM>(</EM></TD>
+<TD NOWRAP><EM>1,1,<I>c</I>,<FONT FACE=symbol>c</FONT></EM><SUB><EM><FONT SIZE=2><I>r</I></FONT></EM></SUB><EM>,</EM><EM>SL</EM><EM>(2,</EM><EM><B><I>Z</I></B></EM><EM>)</EM></TD>
+<TD NOWRAP><EM>)</EM></TD>
+<TD NOWRAP><EM>,
+</EM></TD>
+</TR></TABLE></DIV><EM>
+where </EM><EM><FONT FACE=symbol>c</FONT></EM><SUB><EM><FONT SIZE=2><I>r</I></FONT></EM></SUB><EM>=<I>e</I></EM><SUP><EM><FONT SIZE=2>2<FONT FACE=symbol>p</FONT> <I>i</I> <I>r</I> (</FONT></EM></SUP><SUP><EM><FONT SIZE=2><I>a</I>+<I>d</I>/<I>c</I></FONT></EM></SUP><SUP><EM><FONT SIZE=2>-3-12<I>s</I>(<I>d</I>,<I>c</I>))</FONT></EM></SUP><EM>.
+</EM></DIV><BR>
+<!--TOC section Limiting Distribution-->
+
+<H2>4&nbsp;&nbsp; Limiting Distribution</H2><!--SEC END -->
+
+One says that an arithmetic function
+<I>f</I>(<I>n</I>) has a limiting distribution
+<I>F</I>(<I>x</I>) if 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>N</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>N</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP>{&nbsp;<I>n</I>&lt;<I>N</I>:<I>f</I>(<I>n</I>)&lt;<I>x</I>&nbsp;}</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP>=<I>F</I>(<I>x</I>).</TD>
+</TR></TABLE></DIV>
+In other words, one takes a histogram of values of the function <I>f</I>(<I>n</I>)
+and looks at its shape. One method of showing that an arithmetic
+function has a limiting distribution is due to Paul Lévy (see
+examples in [<A HREF="#Tenenbaum95"><CITE>13</CITE></A>]).<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;3</B>&nbsp;&nbsp;<FONT COLOR=purple>[Paul Lévy]&nbsp;&nbsp;</FONT><EM> If there exists a function </EM><EM><I>g</I>(<I>t</I>)</EM><EM>
+continuous in 0 such that
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM>lim</EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>N</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM>1</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>N</I></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><EM><FONT SIZE=2>&nbsp;</FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></EM></TD>
+</TR>
+<TR><TD ALIGN=center><EM><FONT SIZE=2><I>n</I>&lt;<I>N</I></FONT></EM></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM><I>e</I></EM><SUP><EM><FONT SIZE=2><I>itf</I>(<I>n</I>)</FONT></EM></SUP><EM>=<I>g</I>(<I>t</I>),</EM></TD>
+</TR></TABLE></DIV><EM>
+then </EM><EM><I>f</I>(<I>n</I>)</EM><EM> has a limiting distribution </EM><EM><I>F</I>(<I>x</I>)</EM><EM> satisfying
+</EM><EM> <I>g</I>(<I>t</I>)=</EM><EM><FONT SIZE=4><FONT FACE=symbol>ò</FONT></FONT></EM><SUB><EM><FONT SIZE=2>-<FONT FACE=symbol>¥</FONT></FONT></EM></SUB><SUP><EM><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></EM></SUP><EM><I>e</I></EM><SUP><EM><FONT SIZE=2><I>it</I> <I>x</I></FONT></EM></SUP><EM>&nbsp;<I>dF</I>(<I>x</I>)</EM><EM>.
+</EM></DIV>
+This is simply the probabilist's terminology for the Fourier transform;
+<I>g</I> is the <EM>characteristic function</EM> of the distribution.
+In order to prove the limiting distribution result for 
+Dedekind sums (and thus for alternating sums of continued
+fraction coefficients) one applies Lévy's theorem to
+<I>s</I>(<I>d</I>, <I>c</I>)/ln <I>c</I>. What we want to prove is the estimate
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><A NAME="estim"></A></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>N</I><FONT FACE=symbol>®</FONT><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>0&lt;<I>d</I>&lt;<I>c</I>&lt;<I>N</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>gcd</FONT><FONT SIZE=2>(<I>d</I>,<I>c</I>)=1</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>its</I>(<I>d</I>,<I>c</I>)/</FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2> <I>c</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>|</TD>
+<TD NOWRAP>{&nbsp;0&lt;<I>d</I>&lt;<I>c</I>&lt;<I>N</I>:gcd(<I>d</I>,<I>c</I>)=1&nbsp;}</TD>
+<TD NOWRAP>|</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+=<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-|<I>t</I>|/(2<FONT FACE=symbol>p</FONT>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+&nbsp;&nbsp;&nbsp;&nbsp;(3)</TD>
+</TR></TABLE></DIV>
+where the right-hand side corresponds to the characteristic
+function of the Cauchy distribution
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>-<FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>a</FONT> <I>e</I><SUP><FONT SIZE=2><I>ity</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>a</FONT><SUP><FONT SIZE=2>2</FONT></SUP> + <I>y</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>&nbsp;<I>dy</I>
+=
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-<FONT FACE=symbol>a</FONT>|<I>t</I>|</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+</TD>
+</TR></TABLE></DIV>
+with <FONT FACE=symbol>a</FONT> = 1/(2<FONT FACE=symbol>p</FONT>). The well-known estimate [<A HREF="#HaWr79"><CITE>8</CITE></A>]
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>|</TD>
+<TD NOWRAP>{&nbsp;0&lt;<I>d</I>&lt;<I>c</I>&lt;<I>N</I>:gcd(<I>d</I>,<I>c</I>)=1&nbsp;}</TD>
+<TD NOWRAP>|</TD>
+<TD NOWRAP>
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>3<I>N</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+<I>O</I>(<I>N</I>ln <I>N</I>)
+</TD>
+</TR></TABLE></DIV>
+shows that the sought estimate&nbsp;(<A HREF="#estim">3</A>)
+can be rewritten as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> 0&lt; <I>d</I> &lt; <I>c</I> &lt;<I>N</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>gcd</FONT><FONT SIZE=2>(<I>d</I>, <I>c</I>) = 1</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>it</I> <I>s</I>(<I>d</I>, <I>c</I>)/</FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2> <I>c</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+~
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-|<I>t</I>|/(2<FONT FACE=symbol>p</FONT>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>3<I>N</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV>
+Proving such a formula presents a number of technical difficulties.
+For example, one would like to remove the absolute values on
+the right hand side, and the 
+bothersome 1/ln <I>c</I> term in the exponential. 
+The first point is solved since 
+<I>s</I>(<I>c</I>-<I>d</I>, <I>c</I>) = - <I>s</I>(<I>d</I>, <I>c</I>) so that the left-hand side is
+independent of the sign of <I>t</I>. Consequently, one may restrict attention to <I>t</I>&gt;0. The second point 
+is solved noting that 
+the ln function does not vary very much,
+and that for most values of <I>c</I> &lt; <I>N</I>, ln <I>c</I> is almost
+equal to ln <I>N</I>. An estimate obtained by the continued fraction
+formula for Dedekind sums and the subsequent 
+upper bound of
+<I>S</I>(<I>d</I>/<I>c</I>) <FONT FACE=symbol>£</FONT> (ln <I>N</I>)<SUP><FONT SIZE=2>3/2 +</FONT></SUP><SUP><FONT SIZE=2><FONT COLOR=purple><FONT FACE=symbol>e</FONT></FONT></FONT></SUP> for almost all <I>d</I> &lt; <I>c</I> &lt; <I>N</I>,
+shows that-5mm
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> 0&lt; <I>d</I> &lt; <I>c</I> &lt;<I>N</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>gcd</FONT><FONT SIZE=2>(<I>d</I>, <I>c</I>) = 1</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>it</I> <I>s</I>(<I>d</I>, <I>c</I>)/</FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2> <I>c</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> 0&lt; <I>d</I> &lt; <I>c</I> &lt;<I>N</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>gcd</FONT><FONT SIZE=2>(<I>d</I>, <I>c</I>) = 1</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>it</I> <I>s</I>(<I>d</I>, <I>c</I>)/</FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2> <I>N</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
++
+<I>O</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>è</FONT></TD>
+<TD NOWRAP><I>N</I><SUP><FONT SIZE=2>2</FONT></SUP>(ln</TD>
+<TD NOWRAP> <I>N</I>)</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-1/5 +</FONT><FONT SIZE=2><FONT COLOR=purple><FONT FACE=symbol>e</FONT></FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>ø</FONT></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV>
+See [<A HREF="#Vardi93"><CITE>15</CITE></A>] for details. The problem is therefore reduced
+to showing that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> 0&lt; <I>d</I> &lt; <I>c</I> &lt;<I>N</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2>gcd</FONT><FONT SIZE=2>(<I>d</I>, <I>c</I>) = 1</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>it</I> <I>s</I>(<I>d</I>, <I>c</I>)/</FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2> <I>N</I></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+~
+<I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-<I>t</I>/(2<FONT FACE=symbol>p</FONT>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>3<I>N</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>, &nbsp;&nbsp; <I>t</I> &gt; 0.
+<A NAME="titi"></A>
+&nbsp;&nbsp;&nbsp;&nb
+
+
+
+
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>

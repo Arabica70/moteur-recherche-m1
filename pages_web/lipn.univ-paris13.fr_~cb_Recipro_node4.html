@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Legendre, Gauss, Jacobi et les autres...</TITLE>
+<META NAME="description" CONTENT="Legendre, Gauss, Jacobi et les autres...">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html161"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html158"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html152"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html160"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html162"
+ HREF="node5.html">Lois de r&#233;ciprocit&#233; d'ordre</A>
+<B> Up:</B> <A NAME="tex2html159"
+ HREF="node3.html">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<B> Previous:</B> <A NAME="tex2html153"
+ HREF="node3.html">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00310000000000000000">
+Legendre, Gauss, Jacobi et les autres...</A>
+</H1>
+<P><B>D&#233;finition&nbsp;:</B> <I>a</I> est r&#233;sidu quadratique modulo <I>n</I> (ou encore 
+r&#233;sidu quadratique de <I>n</I>) si et seulement si <I>a</I> est un carr&#233; dans
+ <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="${\mathbb Z}/n{\mathbb Z}$">. Eh oui&nbsp;! C'est aussi simple que cela.
+<P><B>Exemple&nbsp;:</B> Dans <IMG WIDTH="359" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="${\mathbb Z}/6{\mathbb Z}~: 0 = 0^2, 1 = 1^2 = 5^2, 3 =3^2, 4 = 2^2 = 4^2$"> 
+sont des r&#233;sidus quadratiques&nbsp;; 2 et 5 sont non r&#233;sidus (sous entendu&nbsp;: 
+quadratiques modulo 6).
+<P>
+Le terme ``r&#233;sidu quadratique'' est fort po&#233;tique mais nous nous 
+efforcerons, lorsqu'il n'y aura pas ambigu&#239;t&#233;, &#224; employer le terme 
+``carr&#233;''&nbsp;; ce dernier ayant l'avantage d'&#234;tre bien plus explicite que le 
+terme ``r&#233;sidu quadratique'' qui, ne faisant qu'esbroufe, ralentit la
+ compr&#233;hension des &#233;nonc&#233;s. Par ailleurs, nous dirons que deux nombres
+ sont ``&#233;trangers'' plut&#244;t que de dire qu'ils sont ``premiers entre eux'',
+ &#233;vitant ainsi une polys&#233;mie n&#233;faste.
+<P>
+La notion de r&#233;sidu quadratique appara&#238;t dans un m&#233;moire d'Euler de
+ 1754-1755. D'aucuns, qui ne sont pas math&#233;maticiens, se diront que c'est 
+encore l&#224; une futilit&#233; de matheux, d'autres, qui le sont, se diront que 
+c'est l&#224; une futilit&#233; d'arithm&#233;ticien. Eh bien&nbsp;! Nous allons nous efforcer,
+tout au long de ce m&#233;moire, de d&#233;montrer le profond int&#233;r&#234;t de
+ cette <I>futilit&#233;</I>, de ces carr&#233;s carr&#233;ment sans int&#233;r&#234;t.
+<P>
+Les jolies formules se succ&#233;deront mais, &#233;tant conscient que
+ l'esth&#233;tique n'est pas un motif d'int&#233;r&#234;t pour beaucoup, nous verrons 
+donc, pour ces r&#233;fractaires, quelques applications avec les tests de
+ primalit&#233;, dont le test de P&#233;pin.
+Cette miette math&#233;matique est &#233;galement &#224; la base d'algorithmes de 
+factorisation,
+avec la m&#233;thode de Gauss et celle de Kra&#239;tchik (1920), anc&#234;tre du
+ moderne ``algorithme de factorisation par crible quadratique'' de Carl 
+Pomerance (1990). La lecture du &#167;explicitera ce qu'on peut 
+entendre par int&#233;r&#234;t.
+<P>
+Comment savoir si <I>a</I> est un carr&#233; modulo <I>n</I>&nbsp;?
+Construire la table des carr&#233;s de <IMG WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="${\mathbb Z}/n{\mathbb Z}$"> devient vite fastidieux, si <I>n</I> 
+est grand. Legendre donne un algorithme simple pour r&#233;pondre &#224; cette
+ question. Celui-ci repose sur un r&#233;sultat puissant de la th&#233;orie des 
+nombres&nbsp;: la loi de r&#233;ciprocit&#233;
+quadratique. Le premier &#224; l'avoir &#233;nonc&#233;e (sans preuve) est Euler en 1783,
+ apr&#232;s l'avoir fr&#244;l&#233;e en 1772. Ind&#233;pendamment, Legendre l'&#233;nonce
+ en 1785 avec une preuve incompl&#232;te, toujours insuffisante dans sa
+ <I>Th&#233;orie des nombres</I>, en 1798. Gauss en trouva une preuve &#224; l'&#226;ge 
+de 18 ans, au bout d'un an de recherches, et en exposera la premi&#232;re 
+d&#233;monstration rigoureuse dans ses <I>Recherches arithm&#233;tiques</I> en 1801.
+<P>
+Gauss consid&#233;rait cette loi comme le joyau de l'arithm&#233;tique, l'appelant
+ m&#234;me le ``th&#233;or&#232;me d'or''&nbsp;; il en donnera sept d&#233;monstrations 
+diff&#233;rentes. Aujourd'hui, des sp&#233;cialistes en ont recens&#233; au
+moins 163, on pourra en trouver une produite par un g&#233;n&#233;rateur
+ informatique de th&#233;or&#232;mes dans <I>A mechanical proof of quadratic 
+reciprocity</I>, Journal of Automated Reasoning, 1992 de D. Russinoff et nous 
+vous renvoyons &#224; l'American Mathematical Monthly d'avril 1963 pour 
+l'&#233;nonc&#233; de la 152<SUP><I>e</I></SUP> preuve de la loi de r&#233;ciprocit&#233; quadratique,
+qui comme la plupart est bas&#233;e sur le lemme de Gauss (voir &#167;).
+ En m&#233;tamath&#233;matique, on dit qu'un tel th&#233;or&#232;me, aux d&#233;monstrations 
+foisonnantes, a un degr&#233; d'ambigu&#239;t&#233; &#233;lev&#233;. Il en est de m&#234;me, 
+par exemple, du th&#233;or&#232;me de Pythagore ou du th&#233;or&#232;me de l'infinitude 
+des nombres premiers. On en trouvera une douzaine copurchics dans 
+[Ribenboim] (les noms entre crochets renvoient aux r&#233;f&#233;rences
+ bibliographiques &#224; la fin du document) ;
+nous en donnerons une dans le &#167; sur les progressions 
+arithm&#233;tiques.
+<P>
+En revanche, le th&#233;or&#232;me des nombres premiers, qui a f&#234;t&#233; l'an dernier
+ son centenaire, n'est pas ambigu&nbsp;: il n'a pour l'instant que deux 
+d&#233;monstrations. En effet, quoique conjectur&#233; depuis Legendre et Gauss, et
+ apr&#232;s des progr&#232;s dus &#224; Tchebychev et Riemann, il ne fut prouv&#233; 
+qu'en 1896, par Hadamard et de La Vall&#233;e-Poussin, ind&#233;pendamment l'un de 
+l'autre. Ce n'est qu'en 1949 qu'on en trouva une d&#233;monstration 
+'&#233;l&#233;mentaire' (i.e. n'utilisant ni la fonction <IMG WIDTH="11" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\zeta$"> de Riemann ni 
+la th&#233;orie des fonctions holomorphes) due &#224; Erd&#246;s et Selberg (
+m&#233;daille Fields en 1950). On trouvera une version am&#233;lior&#233;e de cette 
+d&#233;monstration dans [Francinou].
+<P>
+La plus simple manifestation des lois de r&#233;ciprocit&#233; est celle, d&#233;j&#224; 
+connue par Pierre de Fermat, qui affirme que les seuls diviseurs
+premiers de <I>x<SUP>2</SUP></I>+1 sont 2 et des nombres premiers du type 1+4<I>k</I> 
+(voir &#167;). Avec l'aide du symbole de Legendre, ceci se note 
+
+<P ALIGN="CENTER"><IMG WIDTH="137" HEIGHT="47"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}
+\left(\frac{-1}{p}\right)= (-1)^{\frac{p-1}{2}}.\end{displaymath}"></P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html161"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html158"
+ HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html152"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html160"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html162"
+ HREF="node5.html">Lois de r&#233;ciprocit&#233; d'ordre</A>
+<B> Up:</B> <A NAME="tex2html159"
+ HREF="node3.html">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<B> Previous:</B> <A NAME="tex2html153"
+ HREF="node3.html">&#201;pisode premier&nbsp;: r&#233;sidus historiques</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

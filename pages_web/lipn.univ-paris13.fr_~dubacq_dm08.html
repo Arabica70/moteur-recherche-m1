@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Étude de la NP-complétude du compactage de tables</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Étude de la NP-complétude du compactage de tables"/>
+            <meta property="og:url" content="./dm08.html"/>
+            <meta property="og:description" content="Le problème du compactage de tables consiste à trouver les recoupements maximums dans des tables aléatoires, c'est-à-dire des tables qui permettent en fonction de conditions initiales de donner une liste coefficientée de résultats possibles. Par exemple, dans un jeu qui ressemblerait aux dames avec des pions rouges et bleus et un dé à six faces, il pourrait y avoir une table qui nous dit que sur un jet de dé, si nous avons un pion bleu qui arrive sur un pion rouge, sur un 1, les deux sont éliminés, sur un 2 ou un 3, le pion rouge reste et sinon, le pion bleu prend la place ; alors que si un pion rouge arrive sur un bleu, les résultats 1 à 4 donnent le pion rouge vainqueur et 5 et 6 le pion bleu. Le compactage dans le cas précédent consisterait à dire qu'on lance un dé, qu'on garde la table comme elle est pour le premier cas, que l'on ajoute +2 dans le deuxième cas, et que sur un résultat de 7 ou 8 c'est le pion rouge qui gagne. Nous avons montré (avec Jean-Yves Moyen que le problème est NP-complet dans le cas général, et étudié certaines des restrictions du problème."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./dm08.html"
+         rel="bookmark"
+         title="Permalink to Étude de la NP-complétude du compactage de tables">
+        Étude de la NP-complétude du compactage de tables
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>mar. 15 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/journal.html">journal</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/dm08.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Le problème du compactage de tables consiste à trouver les recoupements
+maximums dans des tables aléatoires, c'est-à-dire des tables qui
+permettent en fonction de conditions initiales de donner une liste
+coefficientée de résultats possibles. Par exemple, dans un jeu qui
+ressemblerait aux dames avec des pions rouges et bleus et un dé à six
+faces, il pourrait y avoir une table qui nous dit que sur un jet de dé,
+si nous avons un pion bleu qui arrive sur un pion rouge, sur un 1, les
+deux sont éliminés, sur un 2 ou un 3, le pion rouge reste et sinon, le
+pion bleu prend la place&nbsp;; alors que si un pion rouge arrive sur un
+bleu, les résultats 1 à 4 donnent le pion rouge vainqueur et 5 et 6 le
+pion bleu. Le <strong>compactage</strong> dans le cas précédent consisterait à dire
+qu'on lance un dé, qu'on garde la table comme elle est pour le premier
+cas, que l'on ajoute +2 dans le deuxième cas, et que sur un résultat de
+7 ou 8 c'est le pion rouge qui gagne.</p>
+<p>Nous avons montré (avec <a href="/~moyen">Jean-Yves Moyen</a> que le problème est
+NP-complet dans le cas général, et étudié certaines des restrictions du
+problème.</p>
+<h2>Autour de JAC 2008</h2>
+<p>Cette publication dans JAC 2008 (Journées Automates Cellulaires, le
+titre a été forcé en français pour faire penser à Jacques Mazoyer) était
+un peu limite, car assez hors-sujet : pas de mention d'automate
+cellulaire, juste un automate probabiliste. Ceci dit, le problème a
+intéressé plusieurs personnes lors de l'exposé, et une application à la
+programmation d'automates a même été suggérée. J'ai fait mon <a href="./jac2008.html">propre
+commentaire de la conférence</a> agrémenté
+de photographies.</p>
+<h2>Autour de cet article</h2>
+<p>Le sujet de cet article est tiré de constatations que j'ai faite pendant
+des parties de <a href="http://fr.wikipedia.org/wiki/Wargame">wargame</a>.  Les
+tables utilisées dans ces jeux donnent souvent des résultats croissants
+en fonction d'un jet de dé ; plus on fait, mieux c'est. À cause de la
+diversité des situations, il y a souvent des modificateurs (si on plus
+de tanks, on rajoute 2 ; si on a de l'aviation, on rajoute aussi 2 au
+jet de dé ; si on a les deux, on rajoute 4). Et des fois apparaissent
+dans les tables des résultats plus faibles dans le haut que dans le
+bas. Ce qui s'explique par le fait que ce qui compte du point de vue du
+jet de dé, ce n'est pas le résultat précis obtenu, mais la probabilité
+de l'obtenir. Donc notamment la différence entre la ligne ajoutée par le
+modificateur (ou les lignes) et les lignes qu'on ne peut plus atteindre
+(par exemple, si le résultat 1 signifie un échec total de l'attaque, un
+bonus de +1 permet de ne pas avoir d'échec total, et c'est déjà un
+avantage, même si le résultat maximal+1 n'est qu'un échec partiel). Nous
+nous sommes aperçus avec Jean-Yves qu'en construisant une telle table,
+le problème était assez complexe. De fait, il est NP-complet. Je
+remercie d'ailleurs encore une fois Pierre Borgnat pour nous avoir
+expliqué ce particularisme de la table d'assaut d'<a href="http://en.wikipedia.org/wiki/Europa_Universalis_%28Board_Game%29">Europa
+Universalis</a>.</p>
+<h2>Le résultat essentiel</h2>
+<p>Comme expliqué en introduction et dans les transparents de l'exposé, il
+s'agit en fait d'une variante du problème du supermot : étant donné une
+collection de mots (ici, tous de la même longueur), il s'agit de trouver
+le plus petit mot qui contient au moins une fois de façon contiguë
+chacun des mots de la collection. Par exemple, si je prends les mots
+<em>aabc</em>, <em>abbb</em> et <em>abcc</em>, le mot <em>bbabcc</em> est une réponse correcte au
+problème puisque les trois mots apparaissent.</p>
+<p>Le problème est NP-complet (donc difficile à résoudre).  Il est
+aussi #P-complet, ce qui signifie que si on sait compter le nombre de
+solutions de ce problème, on sait aussi compter le nombre de solutions
+de beaucoup d'autres problèmes. La réduction est faite depuis le
+problème du <a href="http://fr.wikipedia.org/wiki/Graphe_hamiltonien">chemin hamiltonien</a>.</p>
+<p><img alt="widget basé sur le chemin hamiltonien" src="./images/recherche/hamiltonian-path.png" /></p>
+<p>Les restrictions restent NP-complètes dès que l'on garde des mots d'au
+moins trois lettres. Lorsque l'on a seulement deux lettres (pile ou
+face, en quelque sorte), il existe une méthode polynomiale pour résoudre
+le problème (basée sur le chemin eulérien).</p>
+<p>Un problème ouvert intéressant est apparu lors de la rédaction de cet
+article. Il y a <span class="math">\(\ell+k-1\choose\ell\)</span> mots possibles de <span class="math">\(k\)</span> lettres de
+longueur <span class="math">\(\ell\)</span>. On pourrait donc imaginer placer ses mots les uns à la
+suite des autres en passant de l'un à l'autre par une seule
+lettre. Étonnament, ce n'est pas possible. La longueur du plus petit mot
+contenant une permutation de tous les mots de <span class="math">\(k\)</span> lettres de longueur
+<span class="math">\(\ell\)</span> reste donc un mystère.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/dm.pdf">L'article de proceedings</a></li>
+<li><a href="./pdf/publications/jac2008.pdf">L'exposé</a></li>
+</ul>
+<h2>Citer cette publication</h2>
+<p>Cette publication a été faite dans les actes de la conférence
+<a href="http://www.lif.univ-mrs.fr/jac/">JAC 2008</a> qui s'est déroulée cette
+année-là à Uzès (France).  On notera que cet article a été mis sous
+licence
+<a href="http://creativecommons.org/licenses/by-nd/3.0/deed.fr">CC-BY-ND</a> et
+insérée automatiquement dans
+<a href="http://hal.archives-ouvertes.fr/hal-00274004/fr/">HAL</a> (et normalement
+aussi dans arXiv).</p>
+<div class="highlight"><pre>@InProceedings{dm08,
+  author =   {Jean-Christophe Dubacq and Jean-Yves Moyen},
+  title =    {Study of the NP-completeness of the Compact Table problem},
+  booktitle =    {Proceedings of the First Symposium on Cellular Automata Journ\&#39;{e}es Automates Cellulaires},
+  pages =    {451--464},
+  year =     {2008},
+  editor =   {Bruno Durand},
+  address =  {Moscow},
+  month =    apr,
+  publisher =    {MCCME Publishing House},
+  isbn =         {978-5-94057-377-7}
+}
+</pre></div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

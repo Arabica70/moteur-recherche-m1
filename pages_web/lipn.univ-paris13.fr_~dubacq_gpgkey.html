@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Annonce de changement de clé GPG</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Annonce de changement de clé GPG"/>
+            <meta property="og:url" content="./gpgkey.html"/>
+            <meta property="og:description" content="Je change de clé GPG. Je passe d'une clé 1024 bits DSA à une clé 4096 bits RSA. L'ancienne continuera à être valide un certain temps, mais je préfère désormais que toute correspondance soit chiffrée ou signée avec la nouvelle clé. Je ne ferais plus que des signatures ..."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li class="active">
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./gpgkey.html"
+         rel="bookmark"
+         title="Permalink to Annonce de changement de clé GPG">
+        Annonce de changement de clé GPG
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>jeu. 07 août 2014
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/gpg.html">gpg</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/gpgkey.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Je change de clé GPG. Je passe d'une clé 1024 bits DSA à une clé 4096 bits RSA. L'ancienne continuera à être valide un certain temps, mais je préfère désormais que toute correspondance soit chiffrée ou signée avec la nouvelle clé. Je ne ferais plus que des signatures avec la nouvelle clé.</p>
+<p>J'ai suivi le tutoriel de <a href="http://www.debian-administration.org/users/dkg/weblog/48">Daniel Kahn Gillmor</a> qui explique comment et pourquoi changer de clé. Je vais dans les prochains mois tâcher de contacter les gens dont j'ai signé la clé avec l'ancienne pour la leur signer avec la nouvelle. Le texte est de <a href="http://upsilon.cc/~zack/key-transition.2010.txt">Zack</a>.</p>
+<p>Le <a href="./src/cv/gpgtransition.txt.asc">document formel de transition</a> est disponible en anglais uniquement et est inclus ci-dessous.</p>
+<div class="includefile hiddeninclude panel panel-primary"><div class="includefilename panel-heading">gpgtransition.txt.asc <a href="src/cv/gpgtransition.txt.asc"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+I am transitioning GPG keys from an old 1024-bit DSA key to a new
+4096-bit RSA key.  The old key will continue to be valid for some
+time, but I prefer all new correspondance to be encrypted in the new
+key, and will be making all signatures going forward with the new key.
+
+This transition document is signed with both keys to validate the
+transition.
+
+If you have signed my old key, I would appreciate signatures on my new
+key as well, provided that your signing policy permits that without
+reauthenticating me.
+
+The old key, which I am transitional away from, is:
+
+    pub   1024D/38D092B4 2006-03-15
+          Key fingerprint = 080F 4FC3 E825 0080 207D  4464 90CD 8287 38D0 92B4
+
+The new key, to which I am transitioning, is:
+
+    pub   4096R/D1E233A9 2014-03-07
+          Key fingerprint = 4112 E10A 9986 9E25 9E6D  D0B1 6391 B494 D1E2 33A9
+
+To fetch the full new key from a public key server using GnuPG, run:
+
+  gpg --keyserver keys.gnupg.net --recv-key 4112E10A99869E259E6DD0B16391B494D1E233A9
+
+If you have already validated my old key, you can then validate that
+the new key is signed by my old key:
+
+  gpg --check-sigs 4112E10A99869E259E6DD0B16391B494D1E233A9
+
+If you then want to sign my new key, a simple and safe way to do that
+is by using caff (shipped in Debian as part of the &quot;signing-party&quot;
+package) as follows:
+
+  caff 4112E10A99869E259E6DD0B16391B494D1E233A9
+
+Please contact me (for example via e-mail at
+&lt;jean-christophe@dubacq.fr&gt;) if you have any questions about this
+document or this transition.
+
+  Jean-Christophe Dubacq
+  jean-christophe@dubacq.fr
+  2014-08-07
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJT4y7kAAoJEK5VSseTcinxG4oQAJoVJNB2GUpkLF0n099cf/20
+iDF8MEc6K/MXgmhMz0y8A4JV0672buOxKGZNTCSNByNESecQdVx+hZ3Ual1/usm2
+8qMwXpwK4Q1nHwFYGQf4cCBEu5HtNk7VdxcDLrLOMof9br0LYSHLu5V+cXvj4Xbr
+DIqo9qR58n0OJ21WnbXI3Eg+ZzBn5FTqD3XOCimqe7ENWUmKZsKjHFpPBXaEJEWV
+V44MPPALruFrelA7URCC8GJ2yObkPo4jZ3j7PTTPKJ6zeK+nAjk4V5zEG1AXGcsw
+Qm5fkOI6cpmT0Wktu1TdML7GQS+Kf992Hx7ERTl9sZakRyUrXAzxhJ0/1nA+qV06
+U0bQRzzPi/xLhWP5OD29PfxipoBbJOBz+5SpnFEPBwyJKLtUysnhyLvjUpDhgn0G
+5SMdB5VSmw4LRf6z+c6mD5nmXMx8TKSDYepGPIbuxBRdznm94I0DYAiJushiIRna
+VIis22TPVfAmnKCXvVmzsBJen2wa8RFHi3WXCGyGG5OE/1P0wsnVNhc+s1r0wAoj
+MqEtui8G9mIvalKZf4xdzUSl4XkhPTi8aPDlRtb9gqf9N4KVyJyuW2+YBha6n1jb
+6/ftV3UGg8qS9HgaFIlBMO07pzatf6gm6pLhVpgzfbPRDfHHy6QSGA2fDHHOCCjz
+j4IOvOrgXJdAzPDd0OSGiEYEARECAAYFAlPjLuQACgkQkM2ChzjQkrTb0gCgz5pp
+Z5PketgGDXWqW4KM9HB3o9kAniKoTyDsr+v9tZDJH/xkrVYfqZM0
+=P1Qw
+-----END PGP SIGNATURE-----
+</pre></div>
+
+
+</div></div>
+
+<p>Si vous avez mon ancienne clé, ou si vous avez déjà la nouvelle (mais dans ce cas, si vous lui faites déjà confiance, vous n'avez pas besoin du document), vous pouvez en vérifier l'intégrité comme suit:</p>
+<div class="highlight"><pre><span class="n">gpg</span><span class="o">:</span> <span class="n">Signature</span> <span class="n">faite</span> <span class="n">le</span> <span class="n">jeu</span><span class="o">.</span> <span class="mi">07</span> <span class="n">ao</span><span class="err">û</span><span class="n">t</span> <span class="mi">2014</span> <span class="mi">09</span><span class="o">:</span><span class="mi">46</span><span class="o">:</span><span class="mi">44</span> <span class="n">CEST</span> <span class="n">avec</span> <span class="n">la</span> <span class="n">clef</span> <span class="n">RSA</span> <span class="n">d</span><span class="s1">&#39;identifiant 937229F1</span>
+<span class="s1">gpg: Bonne signature de « Jean-Christophe Dubacq &lt;jean-christophe@dubacq.fr&gt; »</span>
+<span class="s1">gpg:                 alias « Jean-Christophe Dubacq &lt;jean-christophe.dubacq@ens-lyon.org&gt; »</span>
+<span class="s1">gpg:                 alias « Jean-Christophe Dubacq &lt;jcdubacq1@free.fr&gt; »</span>
+<span class="s1">gpg:                 alias « Jean-Christophe Dubacq &lt;Jean-Christophe.Dubacq@iutv.univ-paris13.fr&gt; »</span>
+<span class="s1">gpg:                 alias « Jean-Christophe Dubacq &lt;Jean-Christophe.Dubacq@lipn.univ-paris13.fr&gt; »</span>
+<span class="s1">gpg: Signature faite le jeu. 07 août 2014 09:46:44 CEST avec la clef DSA d&#39;</span><span class="n">identifiant</span> <span class="mi">38</span><span class="n">D092B4</span>
+<span class="n">gpg</span><span class="o">:</span> <span class="n">Bonne</span> <span class="n">signature</span> <span class="n">de</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">jean</span><span class="o">-</span><span class="n">christophe</span><span class="o">.</span><span class="na">dubacq</span><span class="err">@</span><span class="n">ens</span><span class="o">-</span><span class="n">lyon</span><span class="o">.</span><span class="na">org</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">jcdubacq1</span><span class="err">@</span><span class="n">free</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span><span class="o">.</span><span class="na">Dubacq</span><span class="err">@</span><span class="n">lipn</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span><span class="o">.</span><span class="na">Dubacq</span><span class="err">@</span><span class="n">iutv</span><span class="o">.</span><span class="na">univ</span><span class="o">-</span><span class="n">paris13</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span><span class="o">.</span><span class="na">Dubacq</span><span class="err">@</span><span class="n">lipn</span><span class="o">.</span><span class="na">univ</span><span class="o">-</span><span class="n">paris13</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="o">[</span><span class="n">jpeg</span> <span class="n">image</span> <span class="n">of</span> <span class="n">size</span> <span class="mi">3076</span><span class="o">]</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">jean</span><span class="o">-</span><span class="n">christophe</span><span class="err">@</span><span class="n">dubacq</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+<span class="n">gpg</span><span class="o">:</span>                 <span class="n">alias</span> <span class="err">« </span><span class="n">Jean</span><span class="o">-</span><span class="n">Christophe</span> <span class="n">Dubacq</span> <span class="o">&lt;</span><span class="n">jcdubacq</span><span class="err">@</span><span class="n">free</span><span class="o">.</span><span class="na">fr</span><span class="o">&gt;</span><span class="err"> »</span>
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

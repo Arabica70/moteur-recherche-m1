@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Sémiolog</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+
+  </head>
+  <body>
+    
+    <div id="main">
+      <div id="content">
+	
+<p>Co-organisé par <a href="../index.html">Luc Pellissier</a> et <a href="http://www.sphere.univ-paris-diderot.fr/spip.php?article1809">Juan Luis
+Gastaldi</a>, le
+séminaire <em>Sémiomaths</em> vise à développer et concevoir une procédure
+d'inférence grammaticale à partir de corpus linguistiques basée sur des
+principes structuralistes et une notion d'orthogonalité.</p>
+
+<h3 id="runions">Réunions</h3>
+<ul>
+  <li>01/03/2019 : Réunion préparatoire</li>
+  <li>22/03/2019 : «Introduction à l’analyse automatique de corpus et hypothèses de
+travail: Segmentation et Typage» <br>
+Gianni Gastaldi &amp; Luc Pellissier</li>
+  <li>15/04/2019 : «Typage par biorthogonalité comme principe de classification»<br>
+<a href="https://www.seiller.org">Thomas Seiller</a> &amp; <a href="http://www-philo.univ-paris1.fr/Joinet/NEW/index.php">Jean-Baptiste
+Joinet</a>
+</li>
+  <li>14/05/2019 : «Aperçu de l’état actuel en linguistique computationnelle et le
+TAL» <br>
+<a href="http://www.linguist.univ-paris-diderot.fr/~bcrabbe/">Benoît Crabbé</a>
+</li>
+  <li>22/11/2019 : «Comparaison du clustering et de la biorthogonalité» __
+Présentation des résultats du stage de Salwa Tabet Gonzalez</li>
+</ul>
+
+<h3 id="publications">Publications</h3>
+<ul>
+  <li>
+<em>Why can computers understand natural language?<br>
+The structuralist nature of language behind word embedding</em>.<br>
+Juan Luis Gastaldi, <a href="https://link.springer.com/journal/13347">Philosophy &amp;
+Technology</a>, accepté pour
+publication.</li>
+  <li>
+<em>TDPhiMa: A structuralist framework for the automatic analysis of mathematical
+texts</em>.<br>
+Juan Luis Gastaldi &amp; Luc Pellissier, <a href="http://clmpst2019.flu.cas.cz">CLMPST
+2019</a>
+</li>
+  <li>
+<em>Duality and interaction: a common dynamics behind logic and natural
+language</em>.<br>
+Juan Luis Gastaldi &amp; Luc Pellissier, <a href="http://clmpst2019.flu.cas.cz">CLMPST
+2019</a>
+</li>
+  <li>
+<em>The Logic of Language: An alternative logical approach to machine learning
+based on the case of Natural Language Processing</em>.__
+Juan Luis Gastaldi &amp; Luc Pellissier, <a href="https://hapoc2019.sciencesconf.org">HaPoC
+2019</a>
+</li>
+</ul>
+
+<h3 id="financement">Financement</h3>
+<p>Le projet est financé par un appel à projet de l'<a href="http://institutdeshumanites.fr">Institut Humanités, Sciences
+et Sociétés</a> de l'Université Paris Diderot.</p>
+
+      </div>
+    </div>
+    <!-- <div id='logo'> -->
+    <!--   <a href=/index.html> -->
+    <!-- 	<img alt='logo' src='/logo-logica.png' /> -->
+    <!--   </a> -->
+    <!-- </div> -->
+    <div id="sidebar">
+      <div id="logo">
+	<a href="../index.html">
+	  <h2>Luc Pellissier</h2>
+	  <img alt="Luc Pellissier" height="100" src="../Luc.jpg">
+	</a>
+	<!--   <a href="https://www.fing.edu.uy/imerl/inicio"> -->
+	<!--     <img alt='imerl' src='/logo-imerl.png' height='60' /> -->
+	<!--   </a>&ensp;&ensp;&ensp; -->
+	<!--   <a href="https://www.fing.edu.uy"> -->
+	<!--     <img alt='fing' src='/logo-fing.png' height='60'/> -->
+	<!--   </a> -->
+      </div>
+      <ul>
+	<li><a href="../work">Research</a></li>
+	<li><a href="../teaching">Teaching</a></li>
+        <li><a href="../documents">Documents</a></li>
+	<li><a href="../links">Links</a></li>
+    </ul>
+</div>
+    <!-- <div id="footer"> -->
+    <!--   Equipo de Lógica — IMERL<br> -->
+    <!--   Julio Herrera y Reissig 565 — 11300 Montevideo <br> -->
+    <!--   Uruguay -->
+    <!-- </div> -->
+  </body>
+</html>

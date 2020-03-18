@@ -1,0 +1,420 @@
+<HTML>
+<HEAD>
+<TITLE>Langages et compilation</TITLE>
+</HEAD>
+<BODY >
+<H1 ALIGN="CENTER">Langages et compilation</H1>
+<P ALIGN="CENTER"><STRONG>Cyril Banderier
+<BR>
+Survol du cours de "Th&eacute;orie des langages" du Deug 2ème année<BR>
+ Universit&#233; de Paris XIII
+<BR>
+Contact&nbsp;: <A HREF="http://algo.inria.fr/banderier">Cyril.Banderier</a><EM> at </em> inria.fr</STRONG></P>
+<P ALIGN="CENTER"><STRONG>Mai 1999</STRONG>
+<BR>
+[vous pouvez aussi t&eacute;l&eacute;charger mon cours au : format <A HREF="../TL/courstl.pdf">.pdf</a>, format <A HREF="../TL/courstl.ps">.ps</a>]
+</P>
+
+<P ALIGN="LEFT"></P>
+Voici un rapide panorama de choses que vous devez conna&#238;tre pour l'examen
+et d'autres dont vous n'entendrez peut-&#234;tre plus jamais parler.
+<P><H1><A NAME="SECTION00010000000000000000">
+Th&#233;orie des langages</A>
+</H1>
+La structure de base de la TL sont les mots,
+on peut en donner une d&#233;finition math&#233;matique
+<P>
+<B>D&#233;finition 1</B> <B>(Mono&#239;de) </B></P>
+<P>
+Un mono&#239;de est un ensemble avec une loi interne associative (not&#233;e ``.'') et
+un &#233;l&#233;ment neutre not&#233; <IMG WIDTH="9" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\epsilon$">. </P>
+<P><P>
+<B>D&#233;finition 2</B> <B>(Libert&#233;) </B></P>
+<P>
+Le mono&#239;de est dit libre
+s'il poss&#232;de une base dont les &#233;l&#233;ments sont ind&#233;pendants 
+(c'est-&#224;-dire qu'il n'y a pas de relations entre les &#233;l&#233;ments 
+de la base&nbsp;; n&#233;anmoins, doter une telle base de relations n'est pas stupide et donne en fait lieu &#224; la riche th&#233;orie des groupes de repr&#233;sentation). Moralement, on a donc existence et unicit&#233; d'une factorisation sur un
+ mono&#239;de libre.</P>
+<P><P>
+<B>D&#233;finition 3</B> <B>(Langage, TP1) </B></P>
+<P>
+En TL, la base est appel&#233;e alphabet, les &#233;l&#233;ments
+de cette base sont appel&#233;s lettres, la loi du mono&#239;de est appel&#233;e 
+concat&#233;nation 
+(du latin catena=cha&#238;ne). Une concat&#233;nation de lettres forme un mot, 
+l'&#233;l&#233;ment neutre <IMG WIDTH="9" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\epsilon$"> est ainsi logiquement d&#233;nomm&#233; le mot vide. Un ensemble de mots est appel&#233; langage.</P>
+<P><P>
+<B>D&#233;finition 4</B> <B>(Rationnel) </B></P>
+<P>
+On appelle <B>R</B>at la plus petite classe 
+des langages stable par union,  produit,
+ &#233;toile et qui contient les lettres de l'alphabet. 
+Un langage de cette classe est appel&#233; rationnel.</P>
+<P>
+Un langage rationnel est associ&#233; &#224; une expression
+rationnelle (on dit aussi régulière), <em>i.e.</em> un objet du 
+type <I>b</I>(<I>a</I>+<I>b</I>)<SUP>*</SUP><I>ab</I>.
+<P><P>
+<B>D&#233;finition 5</B> <B>(Reconnaissable) </B></P>
+<P>
+On appelle  <B>R</B>ec la classe des langages reconnus par un automate.
+Un langage de cette classe est appel&#233; reconnaissaible.</P>
+<P>
+Il existe par ailleurs une th&#233;orie des automates qui reconnaissent 
+des mots infinis
+(une d&#233;finition due &#224; B&#252;chi dit qu'il suffit, 
+pour qu'un mot soit accept&#233;, 
+qu'il passe une infinit&#233; de fois dans des &#233;tats terminaux).
+<P>
+<B>Th&#233;or&#232;me 6</B> <B>(Kleene 1951, RAND research memorandum
+  #704, p. 80) </B></P>
+<P><B>R</B>at=<B>R</B>ec, 
+i.e. on a &#233;quivalence entre un langage reconnu par un automate et un langage correspondant
+&#224; une expression rationnelle.</P>
+<P>
+<P>
+<B>D&#233;finition 7</B> <B>(Grammaire alg&#233;brique) </B></P>
+<P>
+On appelle <B>A</B>lg la classe des langages engendr&#233;s par une grammaire.
+Un langage de cette classe est appel&#233; alg&#233;brique.</P>
+<P><P>
+<B>Th&#233;or&#232;me 8</B> <B>(<B>A</B>lg=pile) </B></P>
+<P>
+La classe des langages engendr&#233;s par une grammaire
+correspond &#224; la classe des langages reconnus par un automate &#224; pile.</P>
+<P>
+La classe des langages rationnels est incluse dans la classe des
+langages alg&#233;briques, comme le montre la proposition suivante.<P>
+<B>Proposition 9</B> <B>(Grammaire r&#233;guli&#232;re, ex.1 TD2) </B></P>
+<P><B>R</B>eg=<B>R</B>at, i.e. la classe des langages engendr&#233;s par une grammaire r&#233;guli&#232;re (i.e. dont les membres droits sont du type <I>aB</I> ou <I>b</I>) correspond aux langages rationnels.</P>
+<P>
+La TL n'est pas purement ``alg&#233;brique'', il existe un lien avec l'analyse via ce qui suit.
+Soit <I>a</I><SUB><I>n</I></SUB> le nombre de mots de <I>L</I> de
+longueur <I>n</I>, on appelle s&#233;rie g&#233;n&#233;ratrice de <I>L</I> la fonction
+<IMG WIDTH="135" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$F(z)=\sum_{n \geq 0} a_n z^n$"><P>
+<B>Th&#233;or&#232;me 10</B> <B>(Chomsky et Sch&#252;tzenberger 1963) </B></P>
+<P>
+Un langage rationnel a une s&#233;rie g&#233;n&#233;ratrice <I>F</I> rationnelle
+(i.e. <I>F</I>=un quotient de deux polyn&#244;mes).
+<BR>
+Un langage alg&#233;brique a une  s&#233;rie g&#233;n&#233;ratrice <I>F</I> alg&#233;brique
+(i.e.  <IMG WIDTH="94" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\exists P\in Q[z][F]$">,avec <I>P</I>(<I>F</I>)=0).</P>
+<P><P>
+<B>Exemple 11</B> <B>(Dyck et &#321;ukasiewicz) </B></P>
+<P>
+Le langage de Dyck <IMG WIDTH="85" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$S\rightarrow aSbS\vert\epsilon$">, qui correspond aux mots bien
+ parenth&#233;s&#233;s, a une s&#233;rie g&#233;n&#233;ratrice <I>F</I> qui v&#233;rifie<BR> <I>F</I>(<I>z</I>)=<I>zF</I>(<I>z</I>)<I>zF</I>(<I>z</I>)+1, 
+donc <I>z<SUP>2</SUP></I> <I>F</I>(<I>z</I>)-<I>F</I>(<I>z</I>)+1=0 et ainsi 
+
+<P ALIGN="CENTER"><IMG WIDTH="419" HEIGHT="41"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}
+F(z)=\frac{1-\sqrt{1-4z^2}}{2z^2}=1+z^2+2z^4+5z^6+14z^8+O(z^{10}).\end{displaymath}"></P>
+Le langage de &#321;ukasiewicz 
+(cf notation polonaise des calculatrices Hewlett Packard) <IMG WIDTH="79" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$S\rightarrow aSS\vert b $"> a quant &#224; lui la s&#233;rie
+ g&#233;n&#233;ratrice
+alg&#233;brique
+
+<P ALIGN="CENTER"><IMG WIDTH="419" HEIGHT="41"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}
+F(z)=\frac{1-\sqrt{1-4z^2}}{2z}=z+z^3+2z^5+5z^7+14z^9+O(z^{11}).\end{displaymath}"></P>
+Dans les deux cas, on reconna&#238;t la suite des nombres de Catalan 
+<IMG WIDTH="31" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\frac{{2n \choose n}}{n+1}$">.
+<BR>
+Une suite quelconque de tirage &#224; pile ou face correspond 
+&#224; l'expression rationnelle (<I>P</I>+<I>F</I>)<SUP>*</SUP> et
+donc &#224; la s&#233;rie g&#233;n&#233;ratrice rationnelle
+<IMG WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\frac{1}{1-2z}$">.Remarquez que dans tous les cas, il y a un lien entre le rayon de
+convergence <IMG WIDTH="11" HEIGHT="24" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\rho$"> de <I>F</I> et le nombre de mots de grande longueur (<IMG WIDTH="68" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$a_n\sim\rho^{-n}$">).</P>
+<P>
+<P><P>
+<B>Th&#233;or&#232;me 12</B> <B>(Propri&#233;t&#233;s de stabilit&#233;) </B></P>
+<P>
+Les langages rationnels et alg&#233;briques 
+sont stables par union, produit, &#233;toile,
+ miroir, homomorphisme, homomorphisme inverse,
+substitution rationnelle, r&#233;siduel...
+Les langages rationnels sont &#233;galement clos par passage au 
+compl&#233;mentaire et intersection.</P>
+<P>
+On peut toutefois donner l'exemple de stabilit&#233;s bien moins triviales&nbsp;:
+<I>L</I> &#233;tant un langage rationnel sur un alphabet <IMG WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\Sigma$"> de cardinalit&#233; quelconque, on peut
+montrer  avec la notion sophistiqu&#233;e de 
+transduction rationnelle (hors programme) que les langages suivants sont rationnels
+ <IMG WIDTH="172" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\sqrt L=\{w \in \Sigma^* \vert ww\in L\}$">,et 
+<IMG WIDTH="160" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\frac{1}{2}L=\{u \in \Sigma^* \vert \exists v\in \Sigma^*$"> avec <IMG WIDTH="50" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$uv\in L$"> et <IMG WIDTH="67" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\vert u\vert=\vert v\vert\}$">.<P>
+En dehors des propri&#233;tes de stabilit&#233; (on dit aussi cl&#244;ture ou fermeture),
+un moyen courant et pratique pour montrer qu'un langage (n') est (pas)
+rationnel (respectivement alg&#233;brique) sont les lemmes d'it&#233;rations.
+<P>
+<B>Proposition 13</B> <B>(Lemme d'it&#233;ration pour les rationnels, ex.2 TD2) </B></P>
+<P>
+Si <I>L</I> est rationnel alors il existe un certaine longueur <I>k</I> &#224; partir de laquelle pour tout mot <I>w</I> de longueur <IMG WIDTH="28" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\geq k$"> qui admet une d&#233;composition <IMG WIDTH="65" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$w=\alpha u\beta$"> (avec <IMG WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\alpha$">, <I>u</I> et <IMG WIDTH="13" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\beta$"> non vides),
+on a <IMG WIDTH="96" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\forall n, \alpha u^n \beta \in L$">. Connu aussi sous le nom 
+de lemme de l'&#233;toile (pumping lemma).
+Application&nbsp;: <IMG WIDTH="51" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\{a^nb^n\}$"> n'est pas rationnel.</P>
+<P><P>
+<B>Proposition 14</B> <B>(Lemme d'it&#233;ration pour les alg&#233;briques) </B></P>
+<P>
+Si <I>L</I> est alg&#233;brique, alors il existe une certaine longueur <I>k</I> 
+&#224; partir de laquelle pour tout mot <I>w</I> de longueur <IMG WIDTH="28" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\geq k$"> 
+qui admet une d&#233;composition <IMG WIDTH="82" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$w=\alpha u\beta v\gamma$"> 
+(avec soit <I>u</I> soit <I>v</I> non vide et soit <IMG WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\alpha$"> soit <IMG WIDTH="12" HEIGHT="24" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\gamma$"> 
+non vide), on a  <IMG WIDTH="122" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\forall n, \alpha u^n \beta v^n \gamma \in L$">.Applications&nbsp;: <IMG WIDTH="67" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\{a^nb^nc^n\}$"> n'est pas alg&#233;brique&nbsp;; 
+<B>A</B>lg n'est pas stable par intersection et compl&#233;mentaire.</P>
+<P>
+<P>
+<B>D&#233;finition 15</B> <B>(Ambig&#252;it&#233;, TD1) </B></P>
+<P>
+Si dans une grammaire, il existe un mot qui peut &#234;tre obtenu de deux 
+ fa&#231;ons diff&#233;rentes &#224; partir de l'axiome (c'est-&#224;-dire si ce mot 
+poss&#232;de plusieurs arbres de d&#233;rivation), on dit que la grammaire 
+est ambig&#252;e. Il existe des langages alg&#233;briques dont toutes 
+les grammaires qui les engendrent sont ambig&#252;es&nbsp;; un exemple de langage ainsi
+inh&#233;remment ambigu est donn&#233; par <IMG WIDTH="61" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\{a^nb^mc^p$"> avec <I>n</I>=<I>m</I> ou <IMG WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$m=p\}$">.</P>
+<P><P>
+<B>D&#233;finition 16</B> <B>(Compl&#233;tude, TD3) </B></P>
+<P>
+Un automate est dit complet si chacun de ses &#233;tats poss&#232;de une transition
+&#233;tiquet&#233;e par chacune des lettres de l'alphabet.
+Quitte &#224; rajouter un &#233;tat puits, 
+tout automate peut &#234;tre rendu complet. </P>
+<P><P>
+<B>D&#233;finition 17</B> <B>(D&#233;terminisation, TD3) </B></P>
+<P>
+Un automate est dit d&#233;terministe si on n'a jamais de choix, d'h&#233;sitation dans 
+les transitions. Plus formellement, on a un seul &#233;tat initial puis, 
+pour chaque &#233;tat, pas plus d'une transition par lettre.
+Tout automate peut &#234;tre rendu d&#233;terministe.</P>
+<P><P>
+<B>D&#233;finition 18</B> <B>(Minimisation) </B></P>
+<P>
+Un automate est dit minimal s'il n'y a pas d'automate avec moins d'&#233;tats
+qui engendre le m&#234;me langage.
+Tout automate peut &#234;tre minimis&#233;. Tout langage rationnel admet un
+unique automate minimal.</P>
+<P>
+<P><P>
+<B>D&#233;finition 19</B> <B>(R&#233;cursivement &#233;num&#233;rable) </B></P>
+<P>
+Les grammaires contextuelles (i.e. dont les membres gauches des 
+productions peuvent contenir des terminaux et des non-terminaux)
+engendre une classe de langages, appel&#233;s r&#233;cursivement &#233;num&#233;rables.
+Ces derniers correspondent aux machines de Turing. </P>
+<P><P>
+<B>Conjecture 20</B> <B>(Th&#232;se de Church) </B></P>
+<P>
+On conjecture que tout ce que le cerveau humain peut calculer est
+effectivement calculable par une machine de Turing. Tout langage
+humain est ainsi r&#233;cursivement &#233;num&#233;rable.</P>
+<P><H1><A NAME="SECTION00020000000000000000">
+Compilation</A>
+</H1>
+La compilation d'un programme est la succession des &#233;tapes suivantes&nbsp;:
+<DIV ALIGN="CENTER">
+programme source
+
+<P ALIGN="CENTER"><IMG WIDTH="10" HEIGHT="26"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}
+\Downarrow\end{displaymath}"></P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>analyse lexicale (``scanner'')</TD>
+<TD ALIGN="CENTER" NOWRAP>Lex</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>analyse syntaxique (``parser'')</TD>
+<TD ALIGN="CENTER" NOWRAP>Yacc</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>g&#233;n&#233;ration du code interm&#233;diaire</TD>
+<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>optimisation du code</TD>
+<TD ALIGN="CENTER" NOWRAP>tpc</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>g&#233;n&#233;ration de code</TD>
+<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
+</TR>
+</TABLE>
+
+<P ALIGN="CENTER"><IMG WIDTH="10" HEIGHT="26"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}
+\Downarrow\end{displaymath}"></P>
+programme ex&#233;cutable
+</DIV>
+<P>
+L'optimisation de code consiste essentiellement 
+&#224; compacter l'arbre de d&#233;rivation
+(on le transforme en DAG, directed acyclic graph, graphe orient&#233; sans cycle)
+ afin de ne pas refaire deux fois un m&#234;me calcul.
+Notez que le programme ex&#233;cutable d&#233;pend profond&#233;ment 
+de la machine (architecture PC/Mac/Alpha...) et de son
+syst&#232;me d'exploitation (Dos/Windows/Unix/Linux)
+alors que le programme source tend vers une certaine universalit&#233;.
+<P>
+L'analyse lexicale lit les lettres du  programme source
+une &#224; une et reconna&#238;t des 
+&quot;mots-clefs&quot; ou des &quot;nombres&quot; (lex&#232;mes ou token en anglais).
+On a alors traduit le programme source en un nouveau mot <I>u</I> 
+(sur l'alphabet des lex&#232;mes).
+<P>
+L'analyse syntaxique (qui pr&#233;suppose que l'on s'est fix&#233; une grammaire non-ambig&#252;e)
+essaie alors de trouver <EM>la</EM> d&#233;rivation de l'axiome en <I>u</I>.
+L'id&#233;e de base consiste &#224; promener une fen&#234;tre de longueur <I>k</I> 
+sur le mot <I>u</I> et d'en d&#233;duire quelle suite de r&#232;gles de r&#233;critures
+ont &#233;t&#233; employ&#233;es pour produire ce mot.
+Il y a deux strat&#233;gies.<P>
+<B>D&#233;finition 21</B> <B>(analyse montante) </B></P>
+<P>
+On part de <I>u</I> et on essaie d'atteindre l'axiome.</P>
+<P>
+Exemple : analyse LR(<I>k</I>). La suite des r&#233;ductions, prise &#224;
+l'envers, donne la suite des r&#232;gles &#224; appliquer pour avoir une
+d&#233;rivation droite de l'axiome en <I>u</I>.<P>
+<B>D&#233;finition 22</B> <B>(analyse descendante) </B></P>
+<P>
+On part de l'axiome et on essaie d'atteindre <I>u</I>.</P>
+<P>
+Exemple : analyse LL(<I>k</I>). La suite des r&#232;gles donne
+ une d&#233;rivation gauche de l'axiome en <I>u</I>.
+<P>
+<B>D&#233;finition 23</B> <B>(Tables d'analyse, TD4) </B></P>
+<P>
+Pour nous aider dans cette t&#226;che,  
+il existe des tables d'analyse. Elles se construisent en calculant les 
+Follow(<I>k</I>), First(<I>k</I>)...</P>
+<P>
+Il existe de nombreuses analyses : LL(<I>k</I>), LR(<I>k</I>), SLR... 
+Signalons que Yacc (construit et) utilise une table LALR(1).
+Voir le TD4 pour une analyse LR(1).
+<P>
+Quand on compile un programme, on est amen&#233; &#224; sauvegarder les
+ diff&#233;rentes valeurs/types des variables, tout ceci se fait via une
+ pile (voir le TD5 pour la gestion de la pile). On peut ainsi
+ facilement faire les calculs associ&#233;s &#224; l'arbre d'&#233;valuation
+li&#233; &#224; l'arbre de d&#233;rivation que vient de trouver l'analyse
+ syntaxique (les <IMG WIDTH="95" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\$\$:=\$1 +\$3$"> de Yacc).
+<P><P>
+<B>Remarque 24</B> <B>(Puissance/pile) </B></P>
+<P>
+Quand on n'a pas de pile, on a la puissance des langages rationnels&nbsp;;
+quand on a une pile (~un compteur) on a la puissance des langages
+alg&#233;briques&nbsp;; quand on a plusieurs piles, on a la puissance d'une
+machine de Turing.</P>
+<P><H1><A NAME="SECTION00030000000000000000">
+Bibliographie</A>
+</H1>
+<P>
+Puisque vous rechignez &#224; lire des livres/articles en anglais,
+je puis vous conseiller, en plus du cours et des TD/TP, 
+les ouvrages suivants : 
+<UL>
+<LI> Compilation. Cours de licence de Dominique Perrin. Jussieu, 1986-1987.
+<LI> Th&#233;orie des langages et des automates. J.-M. Autebert. Masson,
+1994.
+<LI> Le petit manuel sur Lex et Yacc qui vous a &#233;t&#233; distribu&#233;. 
+</UL><H1><A NAME="SECTION00040000000000000000">
+Examen</A>
+</H1>
+J'esp&#232;re que vous aurez un aper&#231;u plus clair 
+de la th&#233;orie des langages et de la compilation avec ces quelques
+pages.
+Après avoir lu ces quelques pages, assurez-vous que vous ma&#238;trisez les techniques de
+ bases (manipulation d'expressions rationnelles, 
+d&#233;terminisation d'un automate, utilisation d'une table LR(1),
+trouver une d&#233;rivation simple d'un mot pour une grammaire donn&#233;e)
+ et pouvez interpr&#233;ter 
+ce que fait un .l et un .y (e.g. exprlex.l et expr.y).
+Nota bene&nbsp;: ceci peut ne vous aider en rien à l'examen, 
+ce n'est pas moi qui fais le sujet&nbsp;!
+<BR>
+Bonnes r&#233;visions&nbsp;! :-)
+<BR><HR>
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>5/27/1999</I>
+</ADDRESS>
+</BODY>
+
+
+
+
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="0" height="0"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+</HTML>

@@ -1,0 +1,2253 @@
+\documentclass[
+notes=hide, 
+compress, 
+%handout
+]{beamer}
+\usetheme{LITIS}
+\setbeamercolor{title}{fg=blue,bg=black!13!yellow}
+
+\setbeamercovered{dynamic}
+\usefonttheme{structurebold}
+
+% Les packages
+%
+\usepackage{alltt}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage[french, english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xspace}
+\usepackage{graphics}
+\usepackage{times}
+
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\LogoEcole}{
+ %\includegraphics[height=1.5cm]{LogoEcole.jpg} % nom de votre logo 
+ %\includegraphics[height=.5cm]{logo-univ-rouen.png}
+ \includegraphics[height=0.8cm]{logo-univ-lehavre.png}
+}
+
+ \newcommand{\LogoEco}{
+  %\includegraphics[height=1.5cm]{LogoEcole.jpg} % nom de votre logo 
+  %\includegraphics[height=.5cm]{logo-univ-rouen.png}
+ % \includegraphics[height=0.8cm]{logo-univ-lehavre.png}
+  \includegraphics[height=0.9cm]{logo-univ-lehavre.png}
+ }
+
+\definecolor{bleu}{rgb}{0.2,0.2,0.8}
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[CoPe - introduction]{WelCoPe\\Fragments de complexité} 
+\author[Cyrille Bertelle]{
+  %\small{ 
+		\href{mailto:Cyrille.Bertelle@univ-lehavre.fr}
+		{\textbf{Cyrille Bertelle}}\\
+		{\scriptsize
+		{\textbf {http:$\setminus\setminus$litis.univ-lehavre.fr$\setminus\backsim$bertelle}}
+		}
+		%}
+		}
+\institute[LITIS, Le Havre]{ \footnotesize LITIS - Laboratoire d'Informatique, \\du Traitement de l'Information et des Systèmes}
+ \date{{\scriptsize \textcolor{red}{\textbf{CoPe 2009}\\ \textbf{COmplexité PluriellE}\\}
+\textcolor{blue}{Valmeinier, 24-31 Janvier 2009}}}
+
+%\titlegraphic{\includegraphics[height=1.5cm]{logoLITIStitle.png} ~~~~
+\titlegraphic{\includegraphics[height=1.2cm]{logoLitis3.jpg} 
+~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+%\includegraphics[height=1.2cm]{logoRegionHN.jpg}
+~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\LogoEco}
+%\logo{\includegraphics[height=1.5cm]{logoLITIS.png} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\frame[plain]{
+\titlepage}
+
+
+\part{}
+
+%\frame{\frametitle{Outline}
+%%\tableofcontents[subsectionstyle=hide]}
+%\tableofcontents}
+
+%\section{Fragments de complexité}
+
+\begin{frame}
+\frametitle{Fragments de complexité}
+
+\begin{block}{A la lumière de quelques livres}
+\begin{itemize}
+\item Edgar Morin ``Introduction à la pensée complexe'', Edition du Seuil, 2005 (1990, ESF éditeur)
+\item Murray Gell-Mann ``Le quark et le jaguar'', Albin Michel Sciences, 1995
+\item Fritjof Capra ``The web of life'', Anchor books
+\item Pascal Novel ``Enquête sur la notion de modèle'', PUF, 
+\item Franck Varenne ``Du modèle à la simulation informatique'', Vrin, 2007
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\section{Qu'est-ce qu'un modèle}
+
+\begin{frame}
+\frametitle{Enquête sur le notion de modèle, Pascal Novel}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Du modèle à la simulation informatique, Franck Varenne}
+
+\end{frame}
+
+\section{La complexité : une approche pour percevoir les modèles des Sciences}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe,  Edgar Morin}
+\begin{block}{La complexité : une rupture ... }
+\begin{itemize}
+\item ... la connaissance scientifique fut longtemps ... comme ayant pour mission de dissiper l'apparente complexité des phénomènes afin de révéler l'ordre simple auquel ils obéissent.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe, Edgar Morin}
+\begin{block}{La complexité : une rupture ... }
+\begin{itemize}
+\item Mais s'il apparait que les modes simplificateurs de connaissances mutilent plus qu'ils n'expriment les réalités ou les phénomènes dont ils rendent compte, s'il devient évident qu'ils produisent plus d'aveuglement que d'élucidation, alors surgit le problème : comment envisager la complexité de façon non-simplifiante ?
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe, Edgar Morin}
+\begin{block}{La complexité : une rupture ... }
+La complexité porte une lourde tare sémantique. Elle porte confusion, incertitude, désordre 
+\begin{itemize}
+\item Définition première~: est complexe ce qui ne peut se résumer en un maître mot, ce qui nepeut se ramener à une loi, ce qui ne peut se réduire à une idée simple.
+\item La complexité ne saurait être quelque chose qui se définirait de façon simple et prendrait la place de la simplicité.
+\item Ne pas reprendre l'ambition de la pensée simple qui était de contrôler et de maîtriser le réel. Il s'agit de traiter avec le réel, de dialoguer avec lui, de négocier avec lui.
+\item La complexité est un mot {\it problème} et non un mot {\it solution}.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe, Edgar Morin}
+\begin{block}{La complexité : une rupture ... }
+Dissiper des illusions :
+\begin{itemize}
+\item La complexité conduit à l'élimination de la simplicité ... NON
+\item Confondre complexité et complétude ... une erreur 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe, Edgar Morin}
+\begin{block}{La complexité ne conduit pas à l'élimination de la simplicité}
+\begin{itemize}
+\item Tout en intervenant là où la simplicité défaille, la complexité intégre tout ce qui met de l'ordre, de la précision, de la distinction (plus que de la classification) dans la connaissance
+\item A l'inverse de la simplicité qui désintégre la complexité du réel, la complexité intègre le plus possible des modes simplifiants ... mais refuse les conséquences réductrice et mutilante de visons simplifiantes qui se prennent pour le reflet de ce qu'il y a de réel dans la réalité. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction à la pensée complexe, Edgar Morin}
+\begin{block}{}
+ 
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Le quark et le jaguar, Murray Gell-Man}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The web of life, Fritjof Capra}
+
+\end{frame}
+
+
+\end{document}
+
+\section[modèle]{Qu'est-ce qu'un modèle ?}
+
+\begin{frame}
+\frametitle{Qu'est-ce qu'un modèle ?}
+\begin{alertblock}{Une définition}
+$A^*$ est un modèle de $A$ pour $X$ si\\ $X$ peut utiliser $A^*$ pour répondre à des questions qui l'intéressent sur $A$.
+\begin{flushright}
+(Marvin Minsky, 1965)
+\end{flushright} 
+\end{alertblock}
+
+\begin{block}{Caractéristiques d'un modèle}
+ \begin{itemize}
+ \item Un objet ou un système cible
+ \item Une question sur ce système 
+ \item Un utilisateur $X$ qui a un objectif
+ \item ``Utiliser $A^*$'' : abstraction et formalisme  
+ \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Qu'est-ce qu'un modèle ?}
+\vspace*{-0.27cm}
+\begin{alertblock}{Une autre définition}
+\begin{small}
+Dans le langage scientifique, le modèle est
+essentiellement un instrument heuristique qui vise, par le
+moyen de la fiction, à briser une interprétation inadéquate
+et à frayer la voie à une interprétation nouvelle plus
+adéquate.
+\vspace*{-0.35cm}
+\begin{flushright}
+(Paul Ric\oe ur, 1975)
+\end{flushright}
+\end{small}
+\end{alertblock}
+\vspace*{-0.27cm}
+\begin{block}{3 types de modèles (selon Max Black \& Paul Ricoeur)}
+\begin{small}
+\begin{itemize}
+\item ``Modèle à l'échelle''. Le modèle miniaturise ou agrandit un
+objet. Agrandissemnet de la patte d'un insecte.
+\item ``Modèle analogique``. Analogie hydraulique par exemple.
+\item ''Modèle théorique``. Modèle biologique de l'activité d'un
+enzyme où les enzymes sont représentés par des formes
+géométriques stylisées (cercles, carrés).
+\end{itemize}
+\end{small} 
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Qu'est-ce qu'un modèle ?}
+% \begin{block}{Modéliser : une notion complexe et multiple}
+% \begin{itemize}
+%  \item ''Modéliser un problème`` n'a pas le même sens, ni le même intérêt suivant les domaines scientifiques
+% 	\begin{itemize}
+% 	\item En logique et en physique ?
+% 	\item En biologie ou en sciences de l'ingénieur ?
+% 	\item En climatologie ou en économie ?
+% 	\end{itemize} 
+% \begin{small}
+% \begin{flushright}
+% (Pascal Nouvel, ''Enquête sur le concept de modèle``, PUF, 2002
+% \end{flushright}
+% \end{small}
+% 
+% \end{itemize}
+%  
+% \end{block}
+% 
+% \end{frame}
+
+
+\begin{frame}
+\frametitle{Qu'est-ce qu'un modèle ?}
+\begin{block}{Pourquoi modéliser ?}
+\begin{itemize}
+ \item Pour comprendre et expliquer
+	\begin{itemize}
+	\item Test/élaboration d'hypothèses
+	\item Formalisation/vérification de théories 
+	\end{itemize}
+ \item Pour prédire et décider
+ 	\begin{itemize}
+	\item Test de scénarios
+	\item Artefacts pour l'aide à la négociation
+	\end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Pourquoi modéliser ?}
+
+\vspace*{-0.3cm}
+\begin{alertblock}{Modéliser : une notion complexe et multiple}
+\begin{small}
+''Modéliser un problème`` n'a pas le même sens, ni le même intérêt suivant les domaines scientifiques
+	\begin{itemize}
+	\item En logique et en physique ? En biologie ou en sciences de l'ingénieur ? En climatologie ou en économie ?
+	\end{itemize} 
+\vspace*{-0.4cm}
+\begin{scriptsize}
+\begin{flushright}
+(Pascal Nouvel, ''Enquête sur le concept de modèle``, PUF, 2002)
+\end{flushright}
+\end{scriptsize}
+\end{small}
+\end{alertblock}
+
+\vspace*{-0.3cm}
+\begin{block}{Prudence}
+\begin{small}
+\begin{itemize}
+\item Avoir plusieurs buts, c'est prendre le risque d'en atteindre aucun (Ex : prédire vs. comprendre)
+\item Plus la question est vague, plus le processus de modélisation est fluctuant
+\item Danger de réutiliser un modèle conçu (ou même validé) dans un cadre pour l'utiliser dans un autre. 
+\end{itemize}
+\end{small} 
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Cycle de modélisation}
+\begin{block}{} \begin{center}
+\includegraphics[width=0.8\textwidth]{modeliser.png}
+\end{center} \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cycle de modélisation}
+\begin{block}{} \begin{center}
+\includegraphics[width=0.8\textwidth]{modeliser2.png}
+\end{center} \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Qu'est-ce qu'un modèle ?}
+\begin{block}{Formalisme}
+\begin{itemize}
+ \item Propositions et axiomes $\rightarrow$ Modèle logique
+ \item Grandeurs et flux $\rightarrow$ Modèles à compartiments (analytiques)
+ \item Lois d'évolution temporelles et spatiales $\rightarrow$ Modèles équationnels (analytiques)
+ \item Individus, comportements et interactions $\rightarrow$ Modèles comportementaux, complexes, agents, distribués, ...
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\section[Systèmes complexes]{Modèles et systèmes complexes}
+\begin{frame}
+\frametitle{Modèles et systèmes complexes}
+\begin{block}{Limites des approches analytiques}
+\begin{itemize}
+	\item Globalisante (avantage et inconvénient)
+		\begin{itemize}
+		\item Le phénomène est décrit à son niveau global (diffusion, tranport, ...)
+		\item Puis formaliser sous forme équationnelle 
+		\item Puis résolu de manière analytique ou numérique pour obtenir des trajectoires de solution ou d'éléments constituant le système
+		\item La formalisation n'est accessible ou même compréhensible que par les ''modélisateurs`` et souvent étanche aux ''thématiciens``
+		\item Avantage : permet une appréhension très synthétique du phénomène global
+		\end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modèles et systèmes complexes}
+\begin{block}{Limites des approches analytiques}
+\begin{itemize}
+	\item Parfois la modélisation peut être vue comme très applicative car 
+   	\begin{itemize}
+		\item Elle ne propose qu'un formalisme déjà bien identifié et réducteur
+		\item Elle n'amène pas de connaissance qualitative aux thématiciens ... sert à la validation d'observations ou de données.
+		\end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Modèles et systèmes complexes}
+\begin{block}{Caractéristiques et intérêt des modèles à base de systèmes complexes}
+\begin{itemize}
+\item Le modèle se construit à partir des éléments de base constitutifs du système
+\item On décrit les individus/entités et leur comportement
+\item On décrit leur environnement
+\item On décrit leur interactions 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modèles et systèmes complexes}
+\begin{block}{Exemple}
+Modélisation des chaînes trophiques et écosystèmes
+\begin{itemize}
+\item Approche analytique : équations de Lotka-Volterra proies-prédateurs qui globalisent le phénomène par des coefficients étanches ... mais permettent une compréhension de l'évolution globale
+\item Approche individus-centrés : individus + comportement + environnement + interaction. Permet l'intégration de connaissances fines mais la compréhension de l'évolution globale n'est pas toujours accessible.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modèles et systèmes complexes}
+\begin{block}{Avantages}
+\begin{itemize}
+\item La description des individus/entités est accessible et contrôlable par les thématiciens
+\item Des méthodologies existent pour le dialogue thématiciens/modélisateurs : ontologies 
+\end{itemize}
+\end{block}
+
+\begin{block}{Inconvénients ou particularités}
+\begin{itemize}
+\item On part des individus, de leur environnement et de leur système d'interaction.
+\item Le comportement global n'est pas décrit dans les individus et émerge du système d'interaction
+\item Phénomènes d'auto-organisation
+\item Feed-back du système émergent sur ses constituants
+\end{itemize}
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Systèmes Complexes ?}
+\begin{block}{Une vision synthétique}
+\begin{center}
+\includegraphics[scale=2.5]{Complex-adaptive-system-2.jpg}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Systèmes Complexes ?}
+\begin{block}{Complexe ou compliqué ?}
+\begin{itemize}
+\item un système compliqué peut être réduit pour être compris.
+\item un système complexe perd son intelligibilité s'il n'est pas considéré dans son ensemble
+\end{itemize}
+\begin{flushright}
+(J.-L. Le Moigne, 1999)
+\end{flushright}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Des caractéristiques pour le modéliser}
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Non linéarité
+\item Systèmes dynamiques ordre/chaos
+\item Auto-organisation
+\item Propriétés émergentes
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Systèmes naturels auto-organisés}
+\begin{block}{Interactions et auto-organisation}
+\begin{center}
+\begin{tabular}{lr}
+\includegraphics[scale=0.35]{fishes.jpg}  &
+\includegraphics[scale=0.3]{bacteria1.jpg}  
+\end{tabular}
+\end{center}
+\end{block}
+
+\end{frame}
+
+
+
+\section[Environnement]{Environnement des systèmes et support de la complexité}
+\begin{frame}
+\frametitle{Environnement des systèmes et\\~~~~~~~~support de la complexité}
+\vspace*{-0.3cm}
+\begin{block}{}
+\begin{small}
+\begin{itemize}
+\item Environnement spatial cartésien : précis mais non structuré (pas de support de voisinage, ni de support d'interaction)
+\item Grille et automate cellulaire : support et interaction de voisinage. Modélise efficacement la diffusion 
+\end{itemize}
+\end{small}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{agentTopo1.png}
+\end{center}
+\end{block}
+
+\end{frame}
+
+\section[Environnement]{Environnement des systèmes et support de la complexité}
+\begin{frame}
+\frametitle{Environnement des systèmes et\\~~~~~~~~support de la complexité}
+\vspace*{-0.3cm}
+\begin{block}{}
+\begin{small}
+\begin{itemize}
+\item Graphe d'interactions : support des interactions voisines et distantes, mais pas de précision géographique. 
+\item SIG : Bénéficie des bases de données géographiques et de leur environnement ... nécessite des extensions pour gérer la complexité.
+\end{itemize}
+\end{small} 
+ \begin{center}
+\includegraphics[width=0.5\textwidth]{agentTopo2.png}
+\end{center}
+\end{block}
+
+
+\end{frame}
+
+
+\section[exemples]{Quelques exemples}
+\begin{frame}
+\frametitle{Quelques exemples}
+\begin{block}{Dynamique urbaine (gentrification)}
+	\begin{itemize}
+	\item Attraction des centres urbains par des phénomènes multi-critères (économiques, sociaux, environnementaux, culturels, ...). Comment modéliser la répartition/mobilité des individus dans un contexte urbain complexe ?
+	\item Reformation des centres urbains et de leurs caractéristiques suite à la venue de nouveaux habitants (changement économiques, culturels ...). Feed-back du processus sur les individus. 
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Quelques exemples}
+ \begin{block}{Réseaux de distributions des nouvelles énergies (solaires, éoliennes, ...)}
+	\begin{itemize}
+	\item Le système de distribution énergétique (français, par exemple) est très hiérarchisé et arborescent.
+	\item Le développement des nouvelles énergies va faire apparaître une multitude de petits producteurs et la nécessité d'échanges point-à-point ... formation et identification de sous-systèmes organisés, capables de répondre de manière adaptative à des demandes.
+	\item Complexité de la topologie de distribution sur un support de graphes dynamiques.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\end{document}
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Swarm Contribution}
+\begin{block}{Swarm bees} D.~Olivier, M.A.~Aziz-Alaoui, F.~Guinand, A.~Cardon, V.~Jay, A.~Dutot.
+\end{block}
+\begin{block}{PhD students contributions} B.~Adouobo, P.~Tranouez, K.~Khatatneh, H.~Kadri-Dahmani, G.~Pr\'evost, F.~Kebair, L.~Jaff, R.~Ghnemat, K.~Mahboub, M.~Nabaa.
+\end{block}
+% \begin{block}{Some collaborations} G.H.E.~Duchamp~(Paris~13~Univ.), M.~Cotsaftis~(ECE,~Paris), E.~Cl\'ement~(Rouen~University).
+% \end{block}
+\end{frame}
+
+% 
+%===============================
+\section{Complexity \& Self-Organization}
+
+% \begin{frame}
+% \frametitle{Complexity \& Self-Organization}
+% \begin{alertblock}{Section Outline}
+% \begin{itemize}
+% \item Complexity within Natural Systems
+% \item Self-Organization Understanding
+% \item Complexity and Current World Description
+% \item Ecosystems and Climate change
+% \item Complex Systems Concepts
+% \item Dissipative Structures
+% \end{itemize}
+% \end{alertblock}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Complexity \& Self-Organization\\ 
+~~~~~
+within natural and artificial Systems}
+\begin{block}{System as generic description}
+%\begin{itemize}
+%\item 
+Physic, Biology, Computer Science or Human Science 
+ give many examples of systems 
+ where the global behavior is the result of interactions 
+ between homogeneous or heterogeneous entities.
+%\end{itemize}
+\end{block}
+%\begin{block}{}
+\begin{center}
+\begin{tabular}{lr}
+\includegraphics[scale=0.27]{fishes.jpg}  &
+\includegraphics[scale=0.35]{bees.jpg}  
+\end{tabular}
+\end{center}
+%\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Social animal systems}
+% \begin{block}{Interaction and self-organized society}
+% \begin{center}
+% \begin{tabular}{lr}
+% \includegraphics[scale=0.35]{fishes.jpg}  &
+% \includegraphics[scale=0.45]{bees.jpg}  
+% \end{tabular}
+% \end{center}
+% \end{block}
+% 
+% \end{frame}
+
+
+
+\begin{frame}
+\frametitle{Bacteria colonies systems}
+% %\begin{block}{Interaction and natural self-organization after a external stimuli}
+% %\begin{center}
+% \begin{tabular}{lr}
+% \includegraphics[scale=0.3]{bacteria1.jpg}  &
+% \inclusegraphics[scale=0.3]{bacteria2.jpg} 
+% \end{tabular}
+% %\end{center}
+% %\end{block}
+\begin{block}{Interaction and self-organization after a external stimuli}
+\begin{center}
+\begin{tabular}{lr}
+\includegraphics[scale=0.3]{bacteria1.jpg}  &
+\includegraphics[scale=0.3]{bacteria2.jpg}  
+\end{tabular}
+\end{center}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Complexity \& Self-organization}
+% \begin{block}{Some elements of self-organization understanding}
+% \begin{itemize}
+% \item Interactions and system formation are essential
+% \item They are the basis of local or global properties
+% \item The interactions are expressed within a network in permanent evolution
+% \end{itemize}
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}
+% \frametitle{Complexity and current world description}
+% \begin{block}{Current world  complexity within New Technologies}
+% \begin{tabular}{cc}
+% \begin{minipage}{5cm}
+% \begin{itemize}
+% \item Advances in Computer Science
+% 	\begin{itemize}
+% 	\item Huge Data Bases
+% 	\item High Performance Computing
+% 	\end{itemize}
+% \item Advances in Information Technology
+% 	\begin{itemize}
+% 	\item Satellites
+% 	\item Internet
+% 	\end{itemize}
+% \end{itemize}
+% \end{minipage} &
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=0.2]{netconnect.jpg}\\
+% \includegraphics[scale=0.15]{satellite.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+\begin{frame}
+\frametitle{Ecosystems complexity}
+\begin{block}{Natural ecosystems complexity: from interactions to self-organized systems as a whole}
+\begin{center}
+\includegraphics[scale=0.43]{ecosystem.jpg}
+\end{center}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Current world complexity}
+\begin{block}{Current world complexity within New Technologies}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+\begin{itemize}
+\item From Computer Networks to World-Wide Communications
+	\begin{itemize}
+	\item Informational dynamic fluxes
+	\item Increasing expectations and needs for information
+	\end{itemize}
+\item From New Models to New Challenges
+	\begin{itemize}
+	\item Geopolitics \& World-Wide Economy are:
+ 	\begin{center}
+	\textbf{Complex Systems}
+	\end{center}
+	\end{itemize}
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\begin{center}
+\includegraphics[scale=0.17]{telecom.jpg}\\
+\includegraphics[scale=0.12]{sig3D.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Complexity in Urban System Modelling}
+% \begin{block}{}
+% \begin{tabular}{cc}
+% \begin{minipage}{7cm}
+% Cities are 
+% \begin{itemize}
+% \item Buildings and spaces (parks, streets, etc); 
+% \item But also people: individuals and organizations. 
+% \end{itemize}
+% Modelling Objectives
+% \begin{itemize}
+% \item To Study the interactions of all these city constituents.
+% \item To have effective decision making concerning urban development
+% \end{itemize}
+% \textcolor{red}{Complex system modeling is needed}
+% \end{minipage} &
+% \begin{minipage}{3cm}
+% \begin{center}
+% \includegraphics[scale=0.21]{cars.jpg}\\
+% \includegraphics[scale=0.21]{city.jpg}\\
+% \includegraphics[scale=0.21]{city2.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+
+
+
+% \begin{frame}
+% \frametitle{Climatic change}
+% \begin{block}{From fiction to geopolitic}
+% \begin{tabular}{cc}
+% \begin{minipage}{5.5cm}
+% \begin{itemize}
+% \item Fiction: "Day after tommorrow" movie. Computation on natural systems.
+% \item Reality: Kyoto. Geopolitic and North-South equilibrium interact with climatic evolution.
+% \end{itemize}
+% \textcolor{red}{Complexity as a whole from natural, economic, social and politic interaction}
+% \end{minipage} &
+% \begin{minipage}{4.5cm}
+% \begin{center}
+% \includegraphics[scale=0.1]{day-after.jpg}
+% \includegraphics[scale=0.4]{weather.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% 
+% \end{block}
+% \end{frame}
+
+
+\begin{frame}
+\frametitle{Complex Systems Concept}
+\begin{block}{Interactive entities}
+\begin{tabular}{cc}
+\begin{minipage}{4cm}
+\begin{itemize}
+\item Systems involve a number of interacting entities:
+\item Each entity has local relationships;
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{6cm}
+\begin{center}
+\includegraphics[scale=1.7]{Complex-adaptive-system-1.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Complex Systems Concept}
+\begin{block}{Emergent System Properties}
+\begin{tabular}{cc}
+\begin{minipage}{5cm}
+\begin{itemize}
+\item System properties emerge from its own entities interactions;
+\item Emergent properties  are not expressed by the behavior of the constitutive entities, themselves.
+\end{itemize}
+\begin{center}
+\textbf{"The system is more than the sum of its parts"}
+\end{center}
+\end{minipage} &
+\begin{minipage}{5.5cm}
+\begin{center}
+\includegraphics[scale=1.5]{Complex-adaptive-system-2.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Complex Systems Concept}
+% \begin{block}{Emergent System Properties}
+% \begin{tabular}{cc}
+% \begin{minipage}{5cm}
+% \begin{itemize}
+% \item Emergent properties cannot be traced by separately analyzing the attributes of constitutive entities 
+% \begin{center}
+% \textbf{"The system is more than the sum of its parts"}
+% \end{center}
+% \end{itemize}
+% \end{minipage} &
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1.4]{Complex-adaptive-system-2.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Complex Systems Concept}
+\begin{block}{System feedback over its entities}
+\begin{tabular}{cc}
+\begin{minipage}{4cm}
+Bilateral feedback:
+The system which emerge from entities,  constraints  theses entities to form it.\\
+\begin{itemize}
+\item Positive ones amplify the system formation
+\item Negative ones regulate the system formation
+\end{itemize}
+% \begin{center}
+% \textcolor{red}{Complex adaptive behavior \& Self-organization}
+% \end{center}
+\end{minipage} &
+\begin{minipage}{6cm}
+\begin{center}
+\includegraphics[scale=1.7]{Complex-adaptive-system-3.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Complex Systems Concept}
+% \begin{block}{System feedback over its entities}
+% \begin{tabular}{cc}
+% \begin{minipage}{4cm}
+% Two kinds of feedback:
+% \begin{itemize}
+% \item Positive one which amplify the system formation
+% \item Negative one which regulate the system formation
+% \end{itemize}
+% \end{minipage} &
+% \begin{minipage}{6cm}
+% \begin{center}
+% \includegraphics[scale=1.7]{Complex-adaptive-system-3.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Complex Systems Concept}
+\begin{block}{Complex systems are open}
+\begin{tabular}{cc}
+\begin{minipage}{5cm}
+Complex adaptive systems are open systems (dissipative structures):
+\begin{itemize}
+\item They are crossed by information fluxes (like ecosystems are crossed by energetic fluxes) which dynamically structure the system
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{5cm}
+\begin{center}
+\includegraphics[scale=1.5]{Complex-adaptive-system-4.jpg}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Complex Systems Concept}
+% \begin{block}{Complex systems are open}
+% \begin{tabular}{cc}
+% \begin{minipage}{5cm}
+% Opening is an evolutive process:
+% \begin{itemize}
+% \item The system structures can change because of these fluxes
+% \item The system exhibits periods of fluctuation or bifurcations (sudden jumps in system that lead to new structures)
+% \end{itemize}
+% \end{minipage} &
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1.5]{Complex-adaptive-system-4.jpg}
+% \end{center}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+
+
+% \begin{frame}
+% \frametitle{Complex Systems and Dissipative Structures}
+% %Dissipative Structure is a concept introduced and formulated par I. Prigogine
+% \begin{block}{Ilya Prigogine Theory}
+% \begin{itemize}
+% \item Better understanding of living systems with extension of classical thermodynamic laws. 
+% \item Dissipative structures are involved by continuous energetic fluxes crossing the system.
+% \item They maintain themselves in a "stable" state far from equilibrium, including multiple feedback loops (non linear equations)
+% \item Dissipative structure are islands of order in a sea of disorder.  
+% \end{itemize}
+% \end{block}
+% \end{frame}
+
+
+% \begin{frame}
+% \frametitle{Brain is an open system}
+% \begin{block}{Learning is a self-organization process of the brain crossed by informational or emotional fluxes}
+% \begin{center}
+% \begin{tabular}{lr}
+% \includegraphics[scale=0.35]{brain.jpg}  &
+% \includegraphics[scale=0.35]{child-look.jpg}  
+% \end{tabular}
+% \end{center}
+% \end{block}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Complex Systems Concept}
+\begin{block}{Complicated System vs. Complex System (J.-L. Le Moigne)}
+\begin{itemize}
+\item \textbf{Complicated System}: Can be understanding using simplification and decomposition;
+\item \textbf{Complex System}: With simplification, we break its understanding. Must be understanding as a whole. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%======================================================
+% \section{Computer Science and Information Technologies}
+% 
+% \begin{frame}
+% \frametitle{Computer Science: from Information Theory to Science of Modelling}
+% 
+% \end{frame}
+% 
+% \begin{frame}
+% \frametitle{How information and phenomena structure themselve to give the model}
+% 
+% \end{frame}
+% 
+% \begin{frame}
+% \frametitle{Distribution as a new paradigm for Computer Science Modelling}
+% \begin{itemize}
+% \item Distribution as the basis of concepts in problems resolution
+% \item Distribution as the technology of efficience in computing
+% \end{itemize}
+% \end{frame}
+
+
+%=====================================================================================
+\section[Emergent Computing]{Emergent Computing (3 modeling examples)}
+
+%\begin{frame}[allowframebreaks]
+% \begin{frame}
+% \frametitle{Emergent Computing for Self-Organized Systems}
+% \begin{alertblock}{Section Outline}
+% \begin{itemize}
+% \item Cellular automata
+% 	\begin{itemize}
+% 	\item Sand Pile Model from Per Bak
+% 	\item Seggregation Model from Thomas Schelling
+% 	\end{itemize}
+% \item Individual-Based Modelling
+% 	\begin{itemize}
+% 	\item Integrative Approach: Agent-Based Systems Modelling
+% 	\item Ant Systems
+% 	\end{itemize}
+% \end{itemize}
+% \end{alertblock}
+% \end{frame}
+
+%\subsection{Cellular Automata Modelling (Bak's sand pile \& Schelling's seggregation}
+
+% \begin{frame}
+% \frametitle{Cellular automata}
+% \begin{block}{Definition}
+% \begin{tabular}{cc}
+% \begin{minipage}{5cm}
+% Definition
+% \begin{itemize}
+% \item Regular grid of cells, each of them is characterized by a finite number of states
+% \item Discrete and global time
+% \item Local rules of cell interaction toward global emergent behavior 
+% \end{itemize}
+% Application for this work
+% \begin{itemize}
+% \item Sand pile model
+% \item Segregation model
+% \end{itemize}
+% \end{minipage}&
+% \begin{minipage}{5cm}
+% \includegraphics[scale=0.2]{ca_model.jpg}
+% \end{minipage}
+% \end{tabular}
+% \end{block}
+% \end{frame}
+
+%\subsection{Sand Pile Model from Per Bak}
+
+\begin{frame}
+\frametitle{Emergent Computing}
+\begin{alertblock}{3 modeling examples}
+\begin{itemize}
+\item Sand Pile model from Per Bak
+\item Seggregation model from Thomas Schelling
+\item Ant Systems model  
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Emergent Computing 1:\\
+~~~~~
+Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+%\begin{itemize}
+%\item 
+Per Bak proposes a model called {\bf self-organized criticality}
+%\item 
+Sand pile formation is a basic example:
+	\begin{itemize}
+	\item Grains are dropped to form a sand pile;
+	\item Pile self-organizes to critical states;
+	\end{itemize}
+%\item 
+%\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\begin{center}
+\includegraphics[scale=0.3]{perBak.jpg}\\
+\includegraphics[scale=0.3]{sandPile.jpg}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+%\begin{itemize}
+%\item 
+%\item 
+Sand pile formation is a basic example:
+	\begin{itemize}
+	\item Addition of small grains can result in "avalanche" : cascade of sand downs the edges of the sand pile;
+	\item The magnitude of avalanche can vary from one grain to catastrophic collapses.
+	\end{itemize}
+%\item 
+Sand pile formation history is composed of many critical self-organized states.
+%\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\begin{center}
+\includegraphics[scale=0.3]{perBak.jpg}\\
+\includegraphics[scale=0.3]{sandPile.jpg}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.6]{sandPile-example0.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandPile-example1.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example2.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example3.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example4.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example5.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example6.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example7.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example8.png}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+~\\
+~~~~\includegraphics[scale=0.25]{sanspile-base1.png}~~~~
+\includegraphics[scale=0.16]{sandpile-base2.jpg}\\~\\
+%\begin{tabbing}
+If $Z(i,j)\geq 4$ then\\ 
+\hspace*{0.7cm}$Z(i,j)\leftarrow Z(i,j)-4$\\
+\hspace*{0.7cm}$Z(i-1,j)\leftarrow Z(i-1,j)+1$\\
+\hspace*{0.7cm}$Z(i+1,j)\leftarrow Z(i+1,j)+1$\\
+\hspace*{0.7cm}$Z(i,j-1)\leftarrow Z(i,j-1)+1$\\
+\hspace*{0.7cm}$Z(i,j+1)\leftarrow Z(i,j+1)+1$
+%\end{tabbing}
+\end{minipage} &
+\begin{minipage}{4.5cm}
+\begin{center}
+\includegraphics[scale=0.4]{sandpile-example9.png}\\
+\textbf{
+Avalanche Magnitude:\\
+8 involved cases}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+\begin{tabular}{cc}
+\begin{minipage}{5cm}
+\begin{itemize}
+\item From sand pile, we deduce a law: big avalanches are rare and small frequent in exponential way:
+$$
+N(s)=s^{-u}
+$$
+\item Using logarithm representation of abscisse, we obtain a linear graph.
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{5cm}
+\includegraphics[scale=0.4]{loiPuissance.jpg}\\
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sand Pile Model from Per Bak}
+\begin{block}{Self-Organized Criticality \& Sand Pile Model}
+This law can describe many self-organized complex systems:
+\begin{itemize}
+\item \textbf{Earthquakes}: for 1000 earthquakes of magnitude 4 on Richter scale, there is only 100 of magnitude 5 and 10 of magnitude 6;
+\item \textbf{Linguistic}: for 1000 occurrences of "the" in an English text, only 100 occurrences of "I" and 10 of "say";
+\item \textbf{Urban systems}: Big cities are rare and small frequent in exponential way.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%\subsection{Seggregation Model from Thomas Schelling}
+
+\begin{frame}
+\frametitle{Emergent Computing 2:\\
+~~~~~
+Segregation Model from Thomas Schelling}
+\begin{block}{Spatial Emergent Patterns \& Schelling Model}
+\begin{tabular}{cc}
+\begin{minipage}{6cm}
+\begin{itemize}
+\item T. Schelling (Nobel Price in Economic Sciences - oct 2005)
+\item He contributes to enhance the understanding of conflict and cooperation about social institutions
+\item He proposes a simple model of spatial segregation which can lead to self-organized phenomena
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{4cm}
+\begin{center}
+\includegraphics[scale=0.25]{thomasSchelling.jpg}\\
+\includegraphics[scale=0.33]{littleItaly.jpg}\\
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Segregation Model from Thomas Schelling}
+\begin{block}{Schelling Model Micro-level Rules}
+\begin{itemize}
+\item Two categories of persons share a territory. 
+\item Schelling proposes a rule-based model based on simplified spatial territory using chessboard.\\
+\end{itemize}
+
+\begin{tabular}{cc}
+\begin{minipage}{4cm}
+\includegraphics[scale=0.4]{schellingRules1.jpg}\\
+\includegraphics[scale=0.4]{schellingRules2.jpg}\\
+\end{minipage}
+\begin{minipage}{6cm}
+\begin{itemize}
+\item Stay if at least a third of neighbors of his category\\~\\~\\
+\item Move to random location, otherwise
+\end{itemize}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Segregation Model from Thomas Schelling}
+\begin{block}{Spatial Emergent Patterns \& Schelling Model}
+\begin{tabular}{cc}
+\begin{minipage}{5.5cm}
+\begin{itemize}
+\item In following figures, Schelling's model computed on a cellular automaton; 
+\item Two categories of people (red and green points - blue: free space);
+\item Self-organized pattern formations are observed;
+\item Demo on Repast.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{4.5cm}
+\includegraphics[scale=0.14]{schellingCA1.jpg}\\~\\
+%{\bf Initial state}\\
+\includegraphics[scale=0.14]{schellingCA2.jpg}
+%{\bf After 999 steps}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+
+%\subsection{Individual-Based Modelling (Agents and Ants)}
+
+% \begin{frame}
+% \frametitle{Individual-Based Modelling}
+% \begin{block}{IBM-Introduction}
+% \begin{itemize}
+% \item Cellular Automata deal with simple spatial configuration and rule-based processes;
+% \item Individual-Based Modelling deal with individual population over an environment:
+% 	\begin{itemize}
+% 	\item Initialy proposed for population dynamic studies by biologists, allowing to care of individual aspects not managed by analytical models describing global population number evolution;
+% 	\item More generally IBM is used for modelling and simulation purpose;
+% 	\item Used in Artificial Intelligence for Distributed Problem Solving where Individual are the entities (not only person) on which the problem decomposition is made.
+% 	\end{itemize}
+% \end{itemize}
+% \end{block}
+% \end{frame}
+% 
+% %\subsection{An integrative approach: Agent-Based Systems Modelling}
+% 
+% \begin{frame}
+% \frametitle{\noindent Agent-Based System Modelling}
+% \begin{alertblock}{Multi-Agent System is an integrative approach for Individual-Based Modelling}
+% ~\\~\\
+% \textbf{$\Longrightarrow$ to complete}\\
+% ~\\~\\
+% \end{alertblock}
+% \end{frame}
+
+%\subsection{Ant Systems}
+
+\begin{frame}
+\frametitle{Emergent Computing 3:\\
+~~~~~
+Ant Systems}
+\begin{block}{Ant Colonies Principles}
+\begin{itemize}
+\item Ant systems are reactive agents systems suitable to implement self-organization;
+\item Bio-Inspiration: We try to understand the behavior of artificial ants, especially the mechanism which lead to the self-organization of social insects;
+\item We implement in a formal way some artificial ant systems: Mathematical formulation + distributed implementation;
+\item Many applications in engineering computation: graph oriented optimization problems, tasks allocation, clustering. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant Self-Organization}
+\begin{block}{Self-Organization from social insects}
+\begin{center}
+\includegraphics[scale=0.5]{antBridge.jpg}\\~\\
+\end{center}
+Natural ants are able to organize themselves on various aspects ... here they collaborate to manage a broken way, making living bridge.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant Self-Organization}
+\begin{block}{Ant Foraging}
+\begin{tabular}{cc}
+\begin{minipage}{6cm}
+Deneubourg experiment:
+\begin{itemize}
+\item Find the optimal way from nest to food source
+\item Use of pheromone when food is find, during the come back
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{4cm}
+\includegraphics[scale=0.4]{deneubourgX.jpg}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ant Systems Engineering Applications}
+\begin{block}{Application to TSP}
+\begin{itemize}
+\item Application to TSP - Traveling Salesman Problem
+	\begin{itemize}
+	\item Find the shortest cycle which links $N$ interconnected towns within weigthed graph with only one pass in each town.
+	\end{itemize}
+\item Model to use
+	\begin{itemize}
+	\item Graph where nodes $C_i$ are towns and weighted edges $D_{ij}$ mean distance between towns
+	\item $T_{ij}(t)$ are pheromon quantity leave by ants on the edge $(i,j)$
+	\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System applied to TSP}
+\begin{block}{Graph visualisation of the interconnected towns}
+\begin{center}
+\includegraphics[scale=0.4]{tsp.jpg}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System Algorithm for TSP}
+\begin{block}{Synthetic algorithm (1)}
+When an ant is on the town $i$, it computes the probability to go to the non yet visited town $j$ by the formula:
+$$
+P_{ij}^k(t)=\left\lbrace 
+\begin{array}{cl}
+\frac{\displaystyle{\left( T_{ij}(t) \right)^\alpha \left( \frac{1}{D_{ij}} \right)^\beta} }
+     {\displaystyle{\sum_{l \in J_k(t)} \left( T_{il}(t) \right)^\alpha \left( \frac{1}{D_{il}} \right)^\beta} }
+& \textstyle{ ~~~if~~~ } j \in J_k(t)\\
+0 & \textstyle{ ~~~if~~~ } j \not\in J_k(t)
+\end{array}
+\right.
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System Algorithm for TSP}
+\begin{block}{Synthetic algorithm (2)}
+In the previous formula:
+\begin{itemize}
+\item $J_k$ is the set of towns not yet visited by the ant $k$;
+\item The numerator means that:
+	\begin{itemize}
+	\item The more there are pheromone ($T_{ij}$), 
+		the more the probability $P_{ij}$ is;
+	\item The less the distance ($D_{ij}$) is, 
+		the more the probability $P_{ij}$ is;
+	\item $\alpha$ and $\beta$ allow to control 
+		the relative importance of the 2 previous parts. 
+	\end{itemize}
+\item The denominator (sum of all possible numerators) allows to compute a probability value.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System Algorithm for TSP}
+\begin{block}{Synthetic algorithm (3)}
+When an ant has find a solution as a good cycle between towns, it deposits some pheromone on all of the edges of the cycle, inversely proportional to the length of the cycle ($L_k$): 
+$$
+\delta T_{ij}^k(t)=\left\lbrace 
+\begin{array}{cl}
+\frac{Q}{L_k}
+& \textstyle{ ~~~if~~~ } (i,j) \textstyle{~~is~a~edge~of~the~cycle}\\
+0 & \textstyle{~~elsewhere}
+\end{array}
+\right.
+$$
+Where Q is a constant parameter
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System Algorithm for TSP}
+\begin{block}{Synthetic algorithm (4)}
+On each edge $(i,j)$, the pheromone quantity is update from step t to step t+1, by adding all the contribution of each ant to previous pheromone quantity:
+$$
+T_{ij}(t+1)=\rho T_{ij}(t)+\displaystyle{\sum_{k=1}^{m}}\delta T_{ij}^k(t)
+$$
+Where $\rho$ is an evaporation factor which allow that some first path/solution can be remplaced by better ones.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant System Algorithm}
+\begin{alertblock}{Java Applet Demo for Ant Foraging}
+~\\~\\
+{\bf From Antoine Dutot (LITIS - Le Havre University)}\\
+~\\
+Simulation of Deneubourg's experiment:
+\begin{itemize}
+\item Graph representation
+\item Previous formula implementation
+\item Visualization and adaptive process demo by moving dynamically one node
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant Clustering Self-Organisation}
+\begin{block}{Ants cimetery clustering}
+\begin{center}
+\includegraphics[scale=0.2]{antClustering.jpg}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant Clustering Self-Organization}
+\begin{block}{Ants cimetery custering}
+\begin{itemize}
+\item Ants form piles of corpses to clean nests
+\item Each has elementary action unknowing the whole situation but only local information
+\item No supervisor to lead the piles formation
+\item Emergence of the clustering not designed for itself but only as result of ants interaction.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ant Clustering}
+\begin{block}{Principle}
+Ants and other social insects deal with cooperative way in distributed clustering, like cimetery (see previous slide)
+\begin{itemize}
+\item Aggregations of objects
+\item Then small clusters formation which act on social insects as feed-back (stigmergie)
+\item Then the clusters increase
+\end{itemize} 
+\end{block}
+\end{frame}
+
+\begin{frame} %[allowframebreaks]
+\frametitle{Ant Clustering}
+\begin{block}{Synthetic algorithm (1)}
+The algorithm consists in making moving in random direction a great number of autonomous ants inside an environment of objects to agregate them in clusters.\\
+
+At each step, an ant is in one of the 3 situations:
+\begin{itemize}
+\item[1] The ant moves without carrying anything and meet no object $\rightarrow$ the ant continue to move randomly
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame} %[allowframebreaks]
+\frametitle{Ant Clustering}
+\begin{block}{Synthetic algorithm (2)}
+\begin{itemize}
+\item[2] The ant moves without carrying and meet an object. The ant can take this object to carry it. The probability of the ant take the object is:
+$$
+P_p=\left(\frac{k_1}{k_1+f}\right)^2
+$$
+	\begin{itemize}
+	\item $f$  is a value corresponding of the number of objects perceived in the ant neighborhood 
+	\item $k_1$ is a treshold:
+		\begin{itemize}
+		\item if $f \ll k_1$ then $Pp$ is near $1$
+		\item if $f \gg k_1$ then $Pp$ is near $0$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame} %[allowframebreaks]
+\frametitle{Ant Clustering}
+\begin{block}{Synthetic algorithm (3)}
+\begin{itemize}
+\item[3] The ant moves and carries an object. The ant can leave this object on the ground. The probability of the ant to leave the carried object is:
+$$
+P_d=\left(\frac{f}{k_2+f}\right)^2
+$$
+	\begin{itemize}
+	\item $f$  is a value corresponding of the number of objects perceived in the ant neighborhood 
+	\item $k_2$ is another treshold:
+		\begin{itemize}
+		\item if $f \ll k_2$ then $P_d$ is near $0$
+		\item if $f \gg k2$ then $P_d$ is near $1$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+% \begin{frame}
+% \frametitle{Ant Clustering Implementation}
+% \begin{block}{NetLogo(1)}
+% Many platforms have been proposed since some years for the development of agents-based programming. We focus here on NetLogo:
+% \begin{itemize}
+% \item Authored by Uri Wilensky and under continuous development at Northwestern University (USA), Institute on Complex Systems, Center for Connected Learning and Computer-Based Modeling
+% \item Whole integrated interface allowing usage of predefined models (using specific language). 
+% \end{itemize}
+% \end{block}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Ant Clustering Implementation}
+% \begin{block}{NetLogo(2)}
+% \begin{itemize}
+% \item Programmable modelling environment for simulating natural and social phenomena.
+% \item Authoring graphical environment allowing to create our own model with a specific language
+% \end{itemize}
+% \end{block}
+\begin{alertblock}{NetLogo Demo}
+\begin{itemize}
+\item {\bf Ants}: corresponds to ant foraging on an unlimited plan (no graph support). Multi source of foods that are dynamically consumed
+\item {\bf Termites}: corresponds to distributing clustering (very similar to previous real ant clustering photos)
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ant Application to Collective Robotic}
+\begin{block}{Swarm Robotic}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+\begin{itemize}
+%\item Ants are nice natural model but ... not efficient industrial workers!
+\item Principle: adapt the ant organizations to collective robotics. 
+\item Foraging can be adapted to ore exploitation in hard environment for human (on planet exploration, for ex.) or to research and human rescue inside a tunnel under fire.
+\item Clustering can be adapted to cooperative transport by swarm of robots (Netlogo demo).
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{3.5cm}
+\includegraphics[scale=0.13]{antRobots.jpg}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Ant Application to Collective Robotic}
+% \begin{alertblock}{Netlogo demo}
+%  
+% \end{alertblock}
+% 
+% \end{frame}
+
+
+%======================
+\section{Contributions}
+
+\begin{frame}
+\frametitle{Contributions}
+\begin{alertblock}{Section Outline}
+\begin{itemize}
+\item Computer-based Modelling for Living Systems
+	\begin{itemize}
+	\item Living Complex System \& Distributed Computer Systems
+	\item Dynamical Graphs and Networks
+	\item Structures Detection and their management
+	\item Dynamical Distribution Computation using Ant System
+	\end{itemize}
+\item Economical and Social Modelling
+	\begin{itemize}
+	\item Urban dynamic, territorial intelligence
+   \item Car Traffic
+	\item Genetic automata and spatial organizations for Decision Systems Support
+	\item Emotional Aspect in Decision Making 
+	\end{itemize}
+%\item Conferences \& Scientific Animations
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\subsection{Computing-Based Modelling for Living Systems}
+
+\begin{frame}
+\frametitle{Computer-Based Modelling\\~~~~~ for Living Systems}
+
+% l'idée à la base de ce groupe est de considérer les systèmes
+% complexes du vivant, soit comme objet d'étude, soit comme source
+% d'inspiration, mais toujours dans le cadre des systèmes informatiques
+% distribués et parallèles.
+% Nous poursuivons deux objectifs, approcher... mais également... 
+% Ceci définit le cadre général et les actions de recherches sont assez
+% variées.  
+ 
+\begin{overprint}
+
+  \onslide<1| trans:1| handout:1>
+  \begin{block}{Living Complex Systems \& Distributed Computer Systems}
+    \begin{itemize}
+    \item 2 goals~:
+      \begin{itemize}
+      \item Understanding and modelling the organization and self-organization of living systems using appropriate models and simulations,
+      \item Take inspiration from living systems to design new methodologies, new models and new algorithms suited to parallel and distributed computer systems. 
+      \end{itemize}
+   \end{itemize}
+  \end{block}
+
+% elles suivent à peu près le distingo que je viens de vous décrire, puisque
+% nous menons à la fois des recherches dans le cadre de la modélisation du
+% vivant (écosystème et génomique) et dans le cadre des systèmes informatiques
+% distribués pour lesquels nous essayons de concevoir des méthodes bio-inspirées
+
+  \onslide<2| trans:2| handout:1>
+  \begin{block}{Research Developments}
+    \begin{itemize}
+    \item Modelling and simulating aquatic ecosystems (fluid flow and trophic chains organizations in multi-scale and multi-models approaches),
+%    \item Bioinformatic with partialy unknown data (genomic using ant systems)
+% recherche de résultats partiels mais fiables et/ou robustes (faible
+% dégradation de la qualité du résultats en cas de modification limitée
+    \item Dynamical distribution of Multi-agents simulation over computer Network, dealing with load balancing.
+    \item Services execution and spreading over distributed systems composed of mobile ressources. 
+%      mise en oeuvre de stratégies basées sur des mécanismes d'intelligence
+%      collective (algorithmes fourmis) pour des problèmes d'informatique
+%      distribuée et parallèle,
+    \end{itemize}
+  \end{block}
+
+\end{overprint}
+  
+\end{frame}
+
+%===================================================
+%\section[Graphes et réseaux dynamiques]{Graphes et réseaux dynamiques}
+%===================================================
+
+%--------------------------------------------------
+\begin{frame}
+\frametitle{Dynamical Graphs and Networks}
+
+% dans une grande partie des actions de recherche que nous menons, les 
+% graphes dynamiques sont présents. Par exemple, les chaînes trophiques dans
+% les écosystèmes correspondent à des réseaux d'interactions. Plus
+% généralement, les systèmes composés d'un ensemble d'entités en  
+% interaction, quelle que soit leur nature, qu'il s'agisse de particules en
+% suspension dans un fluide, du fluide lui-même, ou des organismes vivants qui
+% évoluent dans ce fluide, correspondent à des graphes d'interaction.
+% ... On peut considérer ainsi un graphe des interactions dans le premier cas,
+% un graphe des communications lorsqu'on traite de la simulation d'un SMA ou
+% d'un graphe des connexions lorsqu'il s'agit d'un réseau mobile ad hoc, avec
+% chaque fois des objectifs bien précis et qui peuvent être soit simples, soit
+% multiples. On peut à
+% la fois chercher à détecter les structures émergentes au cours de la
+% simulation d'un écosystème et chercher à minimiser les communications si
+% la simulation est distribuée/parallèle.
+
+  \begin{block}{Motivations}
+    \begin{itemize}
+    \item<1-> Interactive entities set (ecosystem)~: \textcolor{bleu}{Interaction graph}
+    \item<1->[$\rightarrow$] Organizations detection (multi-scale description) and dynamicaly re-implementation of these organizations inside the simulation, using for example multi-models approaches (IBM and equational ones),
+    \item<2-> Multi-agent simulation~: \textcolor{bleu}{Communication graph}
+    \item<2->[$\rightarrow$] Communication minimization and load balancing,
+    \item<3-> Ad hoc networks diffusion~: \textcolor{bleu}{Connexion graph}
+    \item<3->[$\rightarrow$] Maximisation of the number of the most quickly reached stations and minimisation of the sending message number between them.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+% je vais un petit peu rentrer dans les détails pour quelques unes de ces
+% actions.
+
+%---------------------------------------------------------------------------
+%\subsection{Détection de structures et équilibrage dynamique}
+%---------------------------------------------------------------------------
+
+%--------------------------------------------------
+\frame{
+\frametitle{Structure Detection and their management}
+
+% un des objectifs que nous poursuivons est d'être capable de simuler une 
+% application 
+
+\underline{Principle et goal~:} \textcolor{bleu}{Detection} of the structures 
+which appear during the simulation and \textcolor{bleu}{managing} this information 
+for \textcolor{bleu}{load balancing}.
+
+\begin{center}
+\begin{tabular}{lr}
+\includegraphics[scale=0.1]{simulation_depart.png}  &
+\includegraphics[scale=0.1]{simulation_encours.png}  
+\end{tabular}
+\end{center}
+
+%VDO.
+
+}
+
+%--------------------------------------------------
+\frame{
+\frametitle{Structure Detection and their management}
+
+\begin{overprint}
+  \onslide<1| trans:2| handout:1>
+  \begin{block}{Structures and interactions~: fusion}
+    \begin{itemize}
+    \item Interaction of elements of the same category leads to fusion and agregation~:
+    \item[]
+    \begin{center}
+      \begin{tabular}{cc}
+        \includegraphics[scale=0.4]{fusion_3.png}  &
+        \includegraphics[scale=0.5]{fusion_6.png}  \\
+      \end{tabular}
+    \end{center}
+  \end{itemize}
+ \end{block}
+
+
+  \onslide<2| trans:2| handout:1>
+  \begin{block}{Structures and interactions~: avoiding}
+    \begin{itemize}
+    \item Interaction of elements of different categories with structure conservation~:
+    \item[]
+    \begin{center}
+      \begin{tabular}{cc}
+        \includegraphics[scale=0.5]{evitement_3.png}  & % \\
+        \includegraphics[scale=0.4]{evitement_4.png}  \\ % &
+      \end{tabular}
+    \end{center}
+  \end{itemize}
+ \end{block}
+
+  \onslide<3| trans:2| handout:1>
+  \begin{block}{Structures and interactions~: breaking}
+    \begin{itemize}
+    \item Interaction of elements of different categories with structure losing~:
+    \item[]
+      \begin{center}
+        \begin{tabular}{cc}
+          \includegraphics[scale=0.5]{fission_2.png}  & % \\
+          \includegraphics[scale=0.5]{fission_5.png}  \\ % &
+        \end{tabular}
+      \end{center}
+    \end{itemize}
+    \end{block}
+
+\end{overprint}
+
+}
+
+%--------------------------------------------------
+\begin{frame}
+\frametitle{Dynamical Distribution Computation using Ant System}
+\begin{block}{Dynamical agent-based simulation distribution over computer network based on ant system}
+How distribute the previous simulation interacting entities on a computer network:
+\begin{itemize}
+\item<1-> minimizing the communication $\rightarrow$ placing communicating entities on the same computer;
+\item<2-> dealing with load balancing $\rightarrow$ distributing entities to all the computers, respecting their power capabilities.
+\item<3-> Proposed solution: an innovative algorithm called AntCO$^2$, for Ant Competition Colonies.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dynamical Distribution Computation using Ant System}
+\begin{block}{AntCO$^2$: principle}
+\begin{tabular}{cc}
+\begin{minipage}{5.2cm}
+    \begin{itemize}
+	\item<1-> Extension of the classical ant system with
+		\begin{itemize}
+		\item dynamical colored graph, 
+		\item colored pheromons.
+		\end{itemize}
+	\item<2-> Each ant is associated to one color: 
+		\begin{itemize}
+		\item It is attracted by the pheromon of its color.
+		\item It is repulsed by the pheromons of other colors.
+		\end{itemize}
+	\end{itemize}
+\end{minipage} &
+\begin{minipage}{4.8cm}
+\includegraphics[scale=0.27]{ColoredGraph2.pdf}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dynamical Distribution Computation using Ant System}
+\begin{block}{AntCO$^2$: results (1)}
+\begin{tabular}{cc}
+\begin{minipage}{5cm}
+\begin{itemize}
+	\item Cooperation and Competition process leading to emergent clustering
+	\item Decentralized process with flexibility and robutness properties
+\end{itemize}
+\end{minipage} &
+\begin{minipage}{5cm}
+\includegraphics[scale=0.35]{antco2result.jpg}
+\end{minipage}
+\end{tabular}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Dynamical Distribution Computation using Ant System}
+% \begin{block}{AntCO$^2$: validation}
+% \begin{itemize}
+% \item $r_1$: communication loading (rate of communications between computers over all the communications between entities)
+% \item $r_2$: Computer ressources loading (rate of more busy computer loading over less busy computer loading)
+% \end{itemize}
+% \end{block}
+% \end{frame}
+% 
+\begin{frame}
+\frametitle{Dynamical Distribution Computation using Ant System}
+  \begin{block}{AntCO$^2$: results (2)}
+    \begin{center}
+      \begin{tabular}{cc}
+        \includegraphics[scale=0.2]{antco2_snapshot.png} & 
+        \includegraphics[scale=0.2]{r1_n_r2.png} \\
+      \end{tabular}
+    \end{center}
+  \end{block}
+\end{frame}
+
+
+
+
+
+\subsection{Economical and Social Modelling}
+
+\begin{frame}
+\frametitle{Economical and Social Modelling}
+\begin{block}{Urban car traffic (1)}
+\begin{itemize}
+\item Dynamic urban circulation based on ant system;
+\item Urban cartography represented by weighted graph;
+\item Edge weighs are dynamic and represented the local traffic load;
+\item Ants cross the graph and deposite numerical pheromones to mark optimal solution;
+\item Example of ring road first solution which become loaded then a new adaptive solution is dynamically computed. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Economical and Social Modelling}
+\begin{block}{Urban car traffic (2)}
+\begin{center}
+\includegraphics[scale=0.5]{trafficAnt2.jpg}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Economical and Social Modelling}
+\begin{block}{Genetic automata and spatial organizations for Decision Systems Support}
+\begin{itemize}
+\item Automata-based strategy for agent behavior in iterative prisoner dilemma;
+\item Probabilistic automaton for adaptive strategy:
+	\begin{itemize}
+	\item The probabilities evolve using a genetic algorithm;
+	\item The fitness is the accumulated payoff along steps.
+	\end{itemize} 
+\item Community detection using spatial genetic automata-based behavior. Application to urban dynamic.
+% \item Perspectives: Integration of ant system and genetic automata over spatial representation to propose an emergent computation leading to a global environment support system.
+% \item Application: concurrent telecom societies can share collective antenna or compete for exclusive use.
+\end{itemize}
+\end{block}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Economical and Social Modelling}
+% \begin{block}{Global Environment Support System}
+% \begin{center}
+% \includegraphics[scale=0.2]{gess.jpg}
+% \end{center}
+% \end{block}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Economical and Social Modelling}
+\begin{block}{Emotional aspect in Decision making}
+\begin{itemize}
+\item Modeling the complex interaction emotion-cognition-action
+\item Application to decision making and learning modelling
+%\item Adaptive behavior or learning processus modelling using genetic automata
+% \item Emotion modelling using OCC (Ortony, Clore and Colin) model over fuzzy functions (stigmoide) which give transition values of behavior automata.
+\item Pluridisciplinary approach: Psychologist scientific researchers are associated and allow the modelling validation with experimental data. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%===================
+\section{Conclusion}
+
+\begin{frame}
+\frametitle{Conclusion}
+\begin{block}{Conclusion}
+\begin{itemize}
+\item Complex systems conceptual approaches allow to model current world natural and artificial systems, respecting their complexity
+\item Computer Science propose nowaday efficient way to model these complex systems
+\item Toward a generalization of decentralized vision of computing and interacting systems as new challenge in modelling and systems understanding
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+\frame{\frametitle{Plan}
+\tableofcontents[currentsection, subsectionstyle=hide]}{}
+\subsection{}
+\frame{\frametitle{Introduction}
+
+Le blabla
+\begin{itemize}
+\item item1
+\item item2
+\item item3
+\end{itemize}
+
+\begin{block}{Contenu de cet exposé}
+\begin{itemize}
+\item partie 1
+\item partie 2
+\end{itemize}
+\end{block}
+}
+
+\section{Démonstration}
+
+\frame{\frametitle{Démonstration}
+
+Le blabla
+\begin{itemize}
+\item item1
+\item item2
+\item item3
+\end{itemize}
+
+\begin{alertblock}{Contenu de cet exposé}
+\begin{itemize}
+\item partie 1
+\item partie 2
+\end{itemize}
+\end{alertblock}
+}
+
+\section{Autre section}
+\frame{\frametitle{Autre}
+
+\begin{exampleblock}{Exemple}
+blabla
+\end{exampleblock}
+}
+
+\part{Computer Science & Information Technologies Toward a Complexity Understanding}
+
+\section{nouvelle session}
+\frame{\frametitle{Nouvelle session}
+
+\begin{exampleblock}{Exemple}
+blabla
+\end{exampleblock}
+}
+
+
+\section{Bibliographie}
+\begin{frame}[allowframebreaks]
+  \frametitle{Bibliographie}
+  
+  \begin{thebibliography}{}
+	\bibitem[Auzou 2002]{auzou2002a}
+		M.~Auzou.
+		\newblock Négociations évolutives entre agents à base d'automates.
+		\newblock Rapport de stage de {DEA} {I}nformatique {T}héorique et {A}pplications, Universités de Rouen et du Havre, Septembre 2002.
+
+\bibitem{derrien2003a}
+Y.~Derrien.
+\newblock Mod\'elisation des interactions et des organisations dynamiques dans
+  des \'ecosyst\`emes aquatiques hi\'erarchiques.
+\newblock Rapport de stage de {DEA} {I}nformatique {T}héorique et
+  {A}pplications, LIH, Juin 2003.
+
+\bibitem{TheseDutot2005}
+A.~Dutot.
+\newblock {\em Distribution dynamique adaptative par des mécanismes
+  d'intelligence collective -- Détection d'organisations par des techniques de
+  collaboration et de compétition.}
+\newblock PhD thesis, Université du Havre, Décembre 2005.
+
+\bibitem{Fares2006}
+A.~Farès.
+\newblock Résistance aux antibiotiques.
+\newblock Master's thesis, LMAH and LITIS, 2006.
+
+\bibitem{fisch2004a}
+R.~Fisch.
+\newblock {DEDIS} - dynamic distribution of an ecosystem model.
+\newblock Rapport de stage de {DEA} {I}nformatique {T}héorique et
+  {A}pplications, LIH, Juin 2004.
+
+\bibitem{Franzolini2005}
+J.~Franzolini.
+\newblock Système immunitaire artificiel pour la détection d'organisations.
+\newblock Master's thesis, LITIS, 2006.
+
+\bibitem{frebourg2001a}
+V.~Frebourg.
+\newblock Mise en \oe uvre de la représentation du comportement d'un agent.
+\newblock Rapport de stage de maîtrise informatique du {H}avre, Université du
+  Havre, Juin 2001.
+
+\bibitem{lerebourg2002a}
+S.~Lerebourg.
+\newblock Clustering dynamique appliqué aux écoulements fluides complexes.
+\newblock Rapport de stage du {DESS} {I}ngénierie {M}athématiques et {O}utils
+  {I}nformatiques, Université d'Orléans, Septembre 2002.
+
+  \end{thebibliography}
+\end{frame}
+%\bibliographystyle{plain}
+%\tiny
+%\bibliography{biblio}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

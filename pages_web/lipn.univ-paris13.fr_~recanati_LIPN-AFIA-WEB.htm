@@ -1,0 +1,734 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Titre content="Laboratoire d'Informatique de Paris-Nord">
+<meta name="Mots cl&eacute;s" content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="LIPN-AFIA-WEB_fichiers/filelist.xml">
+<title>Laboratoire d'Informatique de Paris-Nord</title>
+<!--[if gte mso 9]><xml>
+  <o:DocumentProperties>
+   <o:Author>Catherine Recanati</o:Author>
+   <o:Template>Normal</o:Template>
+   <o:LastAuthor>Catherine Recanati</o:LastAuthor>
+   <o:Revision>2</o:Revision>
+   <o:TotalTime>1</o:TotalTime>
+   <o:LastPrinted>2005-05-25T18:00:00Z</o:LastPrinted>
+   <o:Created>2006-02-19T18:01:00Z</o:Created>
+   <o:LastSaved>2006-02-19T18:01:00Z</o:LastSaved>
+   <o:Pages>3</o:Pages>
+   <o:Words>1270</o:Words>
+   <o:Characters>7431</o:Characters>
+   <o:Company>universit&eacute; de Paris13</o:Company>
+   <o:Lines>138</o:Lines>
+   <o:Paragraphs>33</o:Paragraphs>
+   <o:CharactersWithSpaces>8686</o:CharactersWithSpaces>
+   <o:Version>9.2511</o:Version>
+  </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+  <w:WordDocument>
+   <w:DoNotShowRevisions/>
+   <w:DoNotPrintRevisions/>
+   <w:HyphenationZone>21</w:HyphenationZone>
+   <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+   <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+   <w:UseMarginsForDrawingGridOrigin/>
+   <w:Compatibility>
+    <w:SpaceForUL/>
+    <w:BalanceSingleByteDoubleByteWidth/>
+    <w:DoNotLeaveBackslashAlone/>
+    <w:ULTrailSpace/>
+    <w:DoNotExpandShiftReturn/>
+    <w:AdjustLineHeightInTable/>
+   </w:Compatibility>
+  </w:WordDocument>
+</xml><![endif]--><![if !supportAnnotations]>
+<style id="dynCom" type="text/css"><!-- --></style>
+<script language="JavaScript"><!--
+function msoCommentShow(anchor_id, com_id)
+{
+	if(msoBrowserCheck())
+		{
+		c = document.all(com_id);
+		if (null != c)
+			{
+			a = document.all(anchor_id);
+			var cw = c.offsetWidth;
+			var ch = c.offsetHeight;
+			var aw = a.offsetWidth;
+			var ah = a.offsetHeight;
+			var x  = a.offsetLeft;
+			var y  = a.offsetTop;
+			var el = a;
+			while (el.tagName != "BODY")
+				{
+				el = el.offsetParent;
+				x = x + el.offsetLeft;
+				y = y + el.offsetTop;
+				}
+			var bw = document.body.clientWidth;
+			var bh = document.body.clientHeight;
+			var bsl = document.body.scrollLeft;
+			var bst = document.body.scrollTop;
+			if (x + cw + ah / 2 > bw + bsl && x + aw - ah 
+/ 2 - cw >= bsl )
+				{ c.style.left = x + aw - ah / 2 - cw; }
+			else
+				{ c.style.left = x + ah / 2; }
+			if (y + ch + ah / 2 > bh + bst && y + ah / 2 
+- ch >= bst )
+				{ c.style.top = y + ah / 2 - ch; }
+			else
+				{ c.style.top = y + ah / 2; }
+			c.style.visibility = "visible";
+}	}	}
+function msoCommentHide(com_id)
+{
+	if(msoBrowserCheck())
+		{
+		c = document.all(com_id);
+		if (null != c)
+		{
+		c.style.visibility = "hidden";
+		c.style.left = -1000;
+		c.style.top = -1000;
+		} }
+}
+function msoBrowserCheck()
+{
+	ms = navigator.appVersion.indexOf("MSIE");
+	vers = navigator.appVersion.substring(ms + 5, ms + 6);
+	ie4 = (ms > 0) && (parseInt(vers) >= 4);
+	return ie4;
+}
+if (msoBrowserCheck())
+{
+	document.styleSheets.dynCom.addRule(".msocomanchor","background: 
+infobackground");
+	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
+	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
+	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
+	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
+	document.styleSheets.dynCom.addRule(".msocomtxt","background: 
+infobackground");
+	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 
+1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 
+2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 
+2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 
+1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 
+3pt 3pt 3pt 3pt");
+}
+// --></script>
+<![endif]>
+<style>
+<!--
+  /* Font Definitions */
+@font-face
+	{font-family:"Times New Roman";
+	panose-1:0 2 2 6 3 5 4 5 2 3;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:50331648 0 0 0 1 0;}
+@font-face
+	{font-family:Arial;
+	panose-1:0 2 11 6 4 2 2 2 2 2;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:50331648 0 0 0 1 0;}
+@font-face
+	{font-family:"Lucida Sans Unicode";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+  /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoCommentReference
+	{font-size:9.0pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;
+	color:black;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;
+	color:red;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Times;}
+a:link, span.MsoHyperlink
+	{mso-style-parent:"";
+	color:navy;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.programme, li.programme, div.programme
+	{mso-style-name:programme;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:1.0cm 2.0cm 3.0cm 4.0cm 5.0cm 6.0cm 7.0cm 8.0cm 9.0cm 10.0cm;
+	font-size:16.0pt;
+	font-family:Arial;}
+p.BodyText, li.BodyText, div.BodyText
+	{mso-style-name:"Body Text";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.heading1, li.heading1, div.heading1
+	{mso-style-name:"heading 1";
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-hyphenate:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.Liste3, li.Liste3, div.Liste3
+	{mso-style-name:Liste3;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	mso-pagination:widow-orphan;
+	mso-list:l3 level1 lfo4;
+	tab-stops:list 18.0pt;
+	font-size:12.0pt;
+	font-family:Times;}
+span.msoDel
+	{mso-style-type:export-only;
+	mso-style-name:"";
+	text-decoration:line-through;
+	display:none;
+	color:red;}
+@page Section1
+	{size:595.0pt 841.0pt;
+	margin:70.9pt 2.0cm 70.9pt 70.9pt;
+	mso-header-margin:53.85pt;
+	mso-footer-margin:53.85pt;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+  /* List Definitions */
+@list l0
+	{mso-list-id:3;
+	mso-list-template-ids:3;}
+@list l0:level1
+	{mso-level-tab-stop:14.15pt;
+	mso-level-number-position:left;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;}
+@list l0:level2
+	{mso-level-tab-stop:1.0cm;
+	mso-level-number-position:left;
+	margin-left:1.0cm;
+	text-indent:-14.15pt;}
+@list l0:level3
+	{mso-level-tab-stop:42.5pt;
+	mso-level-number-position:left;
+	margin-left:42.5pt;
+	text-indent:-14.15pt;}
+@list l0:level4
+	{mso-level-tab-stop:2.0cm;
+	mso-level-number-position:left;
+	margin-left:2.0cm;
+	text-indent:-14.15pt;}
+@list l0:level5
+	{mso-level-tab-stop:70.85pt;
+	mso-level-number-position:left;
+	margin-left:70.85pt;
+	text-indent:-14.15pt;}
+@list l0:level6
+	{mso-level-tab-stop:3.0cm;
+	mso-level-number-position:left;
+	margin-left:3.0cm;
+	text-indent:-14.15pt;}
+@list l0:level7
+	{mso-level-tab-stop:99.2pt;
+	mso-level-number-position:left;
+	margin-left:99.2pt;
+	text-indent:-14.15pt;}
+@list l0:level8
+	{mso-level-tab-stop:4.0cm;
+	mso-level-number-position:left;
+	margin-left:4.0cm;
+	text-indent:-14.15pt;}
+@list l0:level9
+	{mso-level-tab-stop:127.55pt;
+	mso-level-number-position:left;
+	margin-left:127.55pt;
+	text-indent:-14.15pt;}
+@list l1
+	{mso-list-id:1310863051;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-24765074 984076 1639436 1770508 984076 
+1639436 1770508 984076 1639436 1770508;}
+@list l1:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1329137514;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1139841998 984076 1639436 1770508 
+984076 1639436 1770508 984076 1639436 1770508;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1348755590;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-24765074 -128391178 1639436 1770508 
+984076 1639436 1770508 984076 1639436 1770508;}
+@list l3:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-style-link:Liste3;
+	mso-level-text:-;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=white lang=FR link=navy vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b>Laboratoire d'Informatique de 
+Paris-Nord<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>LIPN &#8211; UMR 7030 du CNRS</b></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>LIPN, Institut Galil&eacute;e, Universit&eacute; 
+Paris 13</p>
+
+<p class=MsoNormal>99, av. J.B. Cl&eacute;ment<span style="mso-spacerun:
+yes">&nbsp; </span>93430 Villetaneuse</p>
+
+<p class=MsoNormal><span class=MsoHyperlink><span style='color:blue'><a
+href="http://www-lipn.univ-paris13.fr/"><span 
+style='color:blue'>http://www-lipn.univ-paris13.fr</span></a></span></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText3>La structuration et l&#8217;exploitation des
+donn&eacute;es issues du web n&eacute;cessitent le d&eacute;veloppement
+d&#8217;expertises multiples du fait de la diversit&eacute; de la nature de ces
+donn&eacute;es (comportement des internautes, donn&eacute;es textuelles,
+services web, etc.). Ces expertises font appel &agrave; de nombreuses 
+th&eacute;matiques
+de recherches d&eacute;velopp&eacute;es au laboratoire. </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=heading1 style='mso-pagination:widow-orphan;page-break-after:auto;
+mso-hyphenate:auto'><span style='font-family:Times'>1. Apprentissage
+num&eacute;rique</span><span style='font-family:Times'><o:p></o:p></span></p>
+
+<p class=MsoNormal>Y. Bennani (Professeur), <a href=""><span 
+style='color:windowtext;
+text-decoration:none;text-underline:none'>K. Benaddeslem</span></a>
+(Post-Doctorant CNRS), F. Zehraoui (<span class=msoDel><del
+cite="mailto:Catherine%20Recanati" 
+datetime="2005-05-30T12:12">Docteur</del></span>Docteur<a
+style='mso-footnote-id:ftn1' href="#_ftn1" name="_ftnref1" title=""><span
+class=MsoFootnoteReference><span 
+style='mso-special-character:footnote'><![if 
+!supportFootnotes]>[1]<![endif]></span></span></a>)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>La mod&eacute;lisation du
+comportement des utilisateurs (internautes) sur un site web est un enjeu
+important. Elle permet par exemple dans le contexte d&#8217;un site web de
+commerce &eacute;lectronique, d&#8217;analyser et de pr&eacute;dire le
+cheminement d&#8217;un visiteur, permettant ainsi des 
+am&eacute;liorations cibl&eacute;es
+(<i>e.g.</i><span style='font-style:normal'> ventes) de la structure 
+et du contenu
+du site. Cette th&eacute;matique a &eacute;t&eacute; au centre d&#8217;un
+contrat<span style="mso-spacerun: yes">&nbsp; </span>de recherche entre le LIPN
+et la soci&eacute;t&eacute; Numsight-Consulting et a servi de domaine
+d&#8217;application pour la validation des travaux effectu&eacute;s dans le
+cadre de deux th&egrave;ses de doctorat. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Un proc&eacute;d&eacute; de
+codage original des traces de navigation des internautes y a &eacute;t&eacute;
+propos&eacute; et utilis&eacute; pour construire une cartographie des usages du
+site web fournissant ainsi une repr&eacute;sentation interpr&eacute;table [1].
+Cette technique a fait l&#8217;objet d&#8217;un brevet<span
+style="mso-spacerun: yes">&nbsp; </span>international. Deux approches
+originales d&#8217;apprentissage connexionniste non-supervis&eacute; ont
+&eacute;galement &eacute;t&eacute; utilis&eacute;es pour visualiser, classer et
+pr&eacute;dire le comportement des internautes. La premi&egrave;re est
+fond&eacute;e sur des techniques de m&eacute;lange de mod&egrave;les
+(Cha&icirc;nes de Markov Cach&eacute;es+Cartes topologiques) et la
+deuxi&egrave;me sur un mod&egrave;le de Kohonen temporel original (M-SOM-ART)
+qui combine des propri&eacute;t&eacute;s de stabilit&eacute; et de
+plasticit&eacute; [2]. Cette derni&egrave;re approche a permis 
+d&#8217;impl&eacute;menter<span
+style="mso-spacerun: yes">&nbsp; </span>un syst&egrave;me hybride de
+pr&eacute;diction du comportement des internautes combinant le raisonnement
+&agrave; partir de cas (R&agrave;PC) et l&#8217;apprentissage connexionniste
+(elle a &eacute;t&eacute; utilis&eacute;e pour impl&eacute;menter &agrave; la
+fois la phase de recherche et la phase de r&eacute;utilisation du cycle
+R&agrave;PC).<i><o:p></o:p></i></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=heading1 style='mso-pagination:widow-orphan;page-break-after:auto;
+mso-hyphenate:auto'><span style='font-family:Times'>2. Raisonnement &agrave;
+partir de cas</span><span style='font-family:Times'><o:p></o:p></span></p>
+
+<p class=MsoNormal>R. Kanawati (MC), H. Karoui (Doctorante) , S. Salotti (MC),
+F. Zehraoui (Docteur<sup>1</sup>)</p>
+
+<p class=MsoNormal><span style='color:maroon'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'>La m&eacute;thodologie
+R&agrave;PC est principalement employ&eacute;e au laboratoire dans la fouille
+de donn&eacute;es d&#8217;usages du web. Diff&eacute;rentes applications ont
+&eacute;t&eacute; r&eacute;alis&eacute;es. L&#8217;une d&#8217;entre 
+elles concerne
+la pr&eacute;diction du comportement des utilisateurs d'un site de commerce
+&eacute;lectronique (cf. section pr&eacute;c&eacute;dente). </p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Une collaboration avec
+l&#8217;EISTI a par ailleurs permis de d&eacute;finir une approche R&agrave;PC
+pour l&#8217;adaptation automatique des sites web dynamiques. Un 
+sch&eacute;ma de
+codage original des fichiers de traces de sites web, bas&eacute; sur des
+actions comportementales, y assure une meilleure prise en compte de la nature
+dynamique des sites. Le R&agrave;PC est &eacute;galement employ&eacute; au sein
+de syst&egrave;mes multi-agents de type &eacute;gal &agrave; &eacute;gal (peer
+to peer) pour permettre &agrave; un groupe d&#8217;utilisateurs de partager
+leurs exp&eacute;riences de recherches d&#8217;informations sur le web. Deux
+syst&egrave;mes ont &eacute;t&eacute; d&eacute;velopp&eacute;s&nbsp;autour de
+cette probl&eacute;matique : un syst&egrave;me pour la gestion
+coop&eacute;rative de signets [3] et une application visant &agrave;
+am&eacute;liorer le tri des r&eacute;ponses rendues par les moteurs de
+recherche.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='color:black'><b>3. </b></span><b>Traitement
+automatique des langues<o:p></o:p></b></p>
+
+<p class=MsoNormal>A. Nazarenko (MC<a style='mso-footnote-id:ftn2' 
+href="#_ftn2"
+name="_ftnref2" title=""><span class=MsoFootnoteReference><span
+style='mso-special-character:footnote'><![if 
+!supportFootnotes]>[2]<![endif]></span></span></a>),T.
+Poibeau (CR1), T. Hamon (MC),
+T.&nbsp;A&iuml;t&nbsp;El&nbsp;Mekki&nbsp;(Docteur),<span style="mso-spacerun:
+yes">&nbsp; </span>S.&nbsp;Szulman (MC), B. Bi&eacute;bow (MC), C.
+Fouquer&eacute; (Professeur)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>La masse et la diversit&eacute;
+de nature des donn&eacute;es textuelles r&eacute;cup&eacute;rables sur le web
+rendent leur exploitation difficile pour les utilisateurs, les moteurs de
+recherche actuels s&#8217;av&eacute;rant souvent insuffisants.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>L&#8217;&eacute;quipe
+Repr&eacute;sentation des Connaissances et Langage Naturel du LIPN
+d&eacute;veloppe depuis plusieurs ann&eacute;es des techniques
+d&#8217;extraction d&#8217;information, de recherche documentaire et de
+navigation dans les documents [4]. Le d&eacute;veloppement de tels outils, en
+particulier dans les domaines de sp&eacute;cialit&eacute;, repose sur des
+techniques d&#8217;analyse robuste des documents mais aussi sur des
+m&eacute;thodes d&#8217;acquisition de connaissances &agrave; partir de textes,
+celles-ci permettant de construire les lexiques, ontologies, et r&egrave;gles
+d&#8217;extraction qui sont exploit&eacute;s pour l&#8217;analyse des documents
+[5]. </p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Ces recherches ont
+d&eacute;bouch&eacute; sur le d&eacute;veloppement de diff&eacute;rents outils
+d&#8217;analyse des textes du web. IndDoc, par exemple, est<span
+style='color:red'> </span>un outil d&#8217;aide &agrave; la construction
+d&#8217;index pour faciliter la navigation dans les documents. Les contrats
+Caderige, ExtraPloDocs et aujourd&#8217;hui le projet europ&eacute;en STREP
+ALVIS portent sur la probl&eacute;matique de l&#8217;analyse des bases de
+donn&eacute;es textuelles de biologie (comme Medline ou Flybase), facilement
+accessibles sur le web, mais dont l&#8217;exploitation efficace reste un
+probl&egrave;me critique pour les chercheurs en biologie.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Le probl&egrave;me de la
+pertinence des pages r&eacute;cup&eacute;rables sur le web [6] a
+&eacute;t&eacute; attaqu&eacute; dans le projet franco-qu&eacute;becois UQAM -
+LLI &#8211; LIPN<span style='color:black'> en &eacute;valuant l&#8217;apport
+possible des techniques de traitement du langage &agrave; une recherche
+d&#8217;information ne reposant pas sur une organisation de la base de
+donn&eacute;es textuelles.</span> L&#8217;&eacute;tude a &eacute;t&eacute;
+r&eacute;alis&eacute;e en mesurant l&#8217;effet d&#8217;une variation de la
+requ&ecirc;te initiale sur la pertinence des pages
+r&eacute;cup&eacute;r&eacute;es. Elle constitue un premier pas vers la
+sp&eacute;cification de m&eacute;canismes de reformulation de requ&ecirc;tes
+int&eacute;grables aux moteurs de recherches.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Le web est &eacute;galement une
+source d&#8217;information pour l&#8217;acquisition de connaissances. Les
+travaux men&eacute;s dans le domaine de l&#8217;ing&eacute;nierie de
+connaissances &agrave; partir de textes ont conduit au d&eacute;veloppement de
+l&#8217;outil Terminae qui permet la construction d&#8217;ontologies &agrave;
+partir de textes. Cette approche a pu &ecirc;tre appliqu&eacute;e sur des
+corpus extraits du web pour cr&eacute;er des ontologies de domaine
+poss&eacute;dant des biais applicatifs particuliers.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=heading1 style='mso-pagination:widow-orphan;page-break-after:auto;
+mso-hyphenate:auto'><span style='font-family:Times'>4. Programmation et
+services web</span><span style='font-family:Times'><o:p></o:p></span></p>
+
+<p class=MsoNormal>F. L&eacute;vy (Professeur), J-V. Loddo (MC), C.
+Fouquer&eacute; (Professeur), N.&nbsp;Amara&#8209;Hachmi (Doctorante, sous la
+direction de A. El Fallah-Segrouchni du LIP6) </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>La mise en oeuvre des services
+web et la programmation de sites web dynamiques posent de nombreuses
+difficult&eacute;s, li&eacute;es &agrave; la distribution et au
+caract&egrave;re dynamique des donn&eacute;es et des programmes. Divers travaux
+men&eacute;s au laboratoire touchent &agrave; cette 
+probl&eacute;matique. La planification
+d&#8217;actions complexes dans les services web est l&#8217;objet d&#8217;une
+collaboration avec le CNET. On s&#8217;attache ici &agrave; caract&eacute;riser
+les plans d&#8217;actions redondants, selon plusieurs crit&egrave;res de
+redondance, dans le but de maintenir une biblioth&egrave;que de plans 
+pr&eacute;-&eacute;tablis
+(utilis&eacute;s lors de la d&eacute;tection de requ&ecirc;tes similaires) et
+d&#8217;&eacute;tudier le choix du meilleur plan.</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>Les difficult&eacute;s de
+programmation des sites et services web sont &eacute;galement abord&eacute;es
+sous un angle plus th&eacute;orique. Le but de ce projet est la
+d&eacute;finition et l&#8217;impl&eacute;mentation d'un langage de
+programmation d&eacute;vou&eacute; &agrave; la programmation de sites ou
+services web, les langages usuels s&#8217;av&eacute;rant inadapt&eacute;s
+&agrave; cette t&acirc;che. Ce d&eacute;veloppement s&#8217;inscrit dans le
+cadre d&#8217;un projet europ&eacute;en ambitieux int&eacute;grant un
+traitement de donn&eacute;es multim&eacute;dia (projet HyperLearning).</p>
+
+<p class=MsoNormal style='text-align:justify'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'>La technologie des agents mobiles
+apporte aussi des solutions attractives relativement &agrave; ces questions,
+mais elle est difficilement accessible aux programmeurs. Une plate-forme de
+d&eacute;veloppement et d&#8217;ex&eacute;cution d&#8217;agents 
+mobiles a &eacute;t&eacute;
+propos&eacute;e pour r&eacute;soudre ce probl&egrave;me
+d&#8217;accessibilit&eacute;. L&#8217;effort a ici port&eacute; sur la
+modularit&eacute; et l'adaptabilit&eacute; des agents mobiles, ainsi que sur
+leurs propri&eacute;t&eacute;s de reconfiguration dynamique.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='color:black'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=heading1 style='mso-pagination:widow-orphan;mso-hyphenate:auto'><span
+style='font-family:Times'>Bibliographie</span><span 
+style='font-family:Times'><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>[1] K. Benabdeslem K., Y. Bennani, E. Janvier, &quot;
+Visualization and Analysis of Web Navigation Data&quot;, International
+Conference on Artificial Neural Networks (ICANN '02), pp. 486-491, Madrid,
+Espagne, Ao&ucirc;t 2002.</p>
+
+<p class=MsoNormal><span lang=EN-GB 
+style='mso-ansi-language:EN-GB'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-ansi-language:EN-GB'>[2]<span
+style="mso-spacerun: yes">&nbsp; </span></span>F. Zehraoui, Y. Bennani, <span
+lang=EN-GB style='mso-ansi-language:EN-GB'>&laquo; </span>M-SOM-ART: Growing
+Self Organizing Map for sequence clustering and classification <span
+lang=EN-GB style='mso-ansi-language:EN-GB'>&raquo;</span>,&nbsp; 
+European Conference
+on Artificial Intelligence (ECAI &#8216;04),&nbsp; Valencia, Spain, August
+2004.<span style='color:maroon'><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-ansi-language:EN-GB'>[3]<span
+style="mso-spacerun: yes">&nbsp; </span>R. Kanawati, M. Malek, &laquo; CoWing:
+A Collaborative Bookmark Management System &raquo;, International Workshop on
+Collaborative Information Agents CIA'01,<span style="mso-spacerun: yes">&nbsp;
+</span>Springer LANI 2182, pp. 38-44, Modena, septembre 
+2001.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB 
+style='mso-ansi-language:EN-GB'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB 
+style='mso-ansi-language:EN-GB'>[4] T. </span><span
+style='color:black'>Poibeau, <i>Extraction automatique d'information&nbsp;: du
+texte brut au web s&eacute;mantique</i></span><span style='color:black'>,
+Herm&egrave;s, Paris, 2003.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'>[5] C. </span>N&eacute;dellec, A.
+Nazarenko,<span style="mso-spacerun: yes">&nbsp; </span>&laquo;&nbsp;Ontology
+and Information Extraction: a necessary Symbiosis&nbsp;&raquo;, In, P.
+Buitelaar, P. Cimiano and B. Magnini (eds.), <i>Ontology Learning from Text:
+Methods, Applications and Evaluation</i><span style='font-style:normal'>,<span
+style="mso-spacerun: yes">&nbsp; </span>Advances in Artificial Intelligence,
+IOS Press, Amsterdam, &agrave; para&icirc;tre 2005. <span 
+style='color:black'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='color:black'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'>[6] L. Emirkanian, C.
+Fouquer&eacute;, F. Issac, </span>&laquo;&nbsp;<span style='color:black'>Corpus
+issus du Web : analyse des pertinences th&eacute;matique et 
+informationnelle </span>&raquo;,<span
+style='color:black'> JADT 2004 , vol. 1, pp. 390-398.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB 
+style='mso-ansi-language:EN-GB'><![if 
+!supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+<div style='mso-element:footnote-list'><![if !supportFootnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:footnote' id=ftn1>
+
+<p class=MsoFootnoteText><a style='mso-footnote-id:ftn1' href="#_ftnref1"
+name="_ftn1" title=""><span class=MsoFootnoteReference><span 
+style='mso-special-character:
+footnote'><![if !supportFootnotes]>[1]<![endif]></span></span></a>
+R&eacute;cemment nomm&eacute;e MC &agrave; Evry.</p>
+
+</div>
+
+<div style='mso-element:footnote' id=ftn2>
+
+<p class=MsoFootnoteText><a style='mso-footnote-id:ftn2' href="#_ftnref2"
+name="_ftn2" title=""><span class=MsoFootnoteReference><span 
+style='mso-special-character:
+footnote'><![if !supportFootnotes]>[2]<![endif]></span></span></a>
+R&eacute;cemment nomm&eacute;e Professeur &agrave; Paris 13.</p>
+
+</div>
+
+</div>
+
+<div style='mso-element:comment-list'><![if !supportAnnotations]>
+
+<hr class=msocomoff align=left size=1 width="33%">
+
+<![endif]></div>
+
+</body>
+
+</html>

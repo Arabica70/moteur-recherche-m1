@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+   </script>
+   <title>Emscripten: run C and C++ codes in the browser</title>
+  </head>
+  <body>
+
+    <h1>Emscripten: run C and C++ codes in the browser</h1>
+
+    <h2>Introduction</h2>
+
+<p>In this lecture we will learn how to use and to understand the
+underlying concepts
+of <a href="https://emscripten.org">Emscripten</a>, a toolchain for
+compiling to <a href="http://asmjs.org">asm.js</a>
+and <a href="https://webassembly.org">WebAssembly</a>. Built
+using <a href="http://llvm.org">LLVM</a> technology too, it lets you
+run C and C++ on the web at near-native speed without plugins.
+  
+  Its feature are mainly:</p>
+  <ul>
+  <li>Porting: Compile your existing projects written in C or C++ and
+run them on all modern browsers;</li>
+  <li>APIs: Emscripten converts OpenGL into WebGL, and lets you use
+familiar APIs like SDL, or HTML5 directly;</li>
+  <li>Fast: Thanks to LLVM, Emscripten, asm.js and WebAssembly, code
+runs at near-native speed.</li>
+  </ul>
+
+<h2>Installing Emscripten</h2>
+
+<p>To download and to install, please follow
+this <a href="https://emscripten.org/docs/getting_started/downloads.html">guide</a>. Then
+follow
+this <a href="https://emscripten.org/docs/getting_started/Tutorial.html">turorial</a>
+about how to use Emscripten. All of this is a little tricky! You may
+still have problems, for instance, due to a previous install or some
+incompatibilities. In my case, since I got the <code>Your fastcomp compiler is out of date</code> message, I
+followed the
+following <a href="https://emscripten.org/docs/building_from_source/building_fastcomp_manually_from_source.html">tutorial</a>. The
+full messages list, obtained during the tutorial was:
+</p>
+							    
+<pre>
+MacBook-de-Christophe:emscripten christophecerin$ ./emcc tests/hello_world_sdl.cpp -o hello.html
+cache:INFO: generating system library: libc-wasm.bc... (this will be cached in "/Users/christophecerin/.emscripten_cache/asmjs/libc-wasm.bc" for subsequent builds)
+cache:INFO:  - ok
+cache:INFO: generating system asset: generated_struct_info.json... (this will be cached in "/Users/christophecerin/.emscripten_cache/asmjs/generated_struct_info.json" for subsequent builds)
+shared:ERROR: Your fastcomp compiler is out of date, please update! (need >= 1.38.26)
+FAIL: Compilation failed!
+
+MacBook-de-Christophe:emscripten christophecerin$ 
+MacBook-de-Christophe:emscripten christophecerin$ mkdir myfastcomp
+MacBook-de-Christophe:emscripten christophecerin$ cd myfastcomp/
+MacBook-de-Christophe:myfastcomp christophecerin$ git clone https://github.com/emscripten-core/emscripten-fastcomp
+Cloning into 'emscripten-fastcomp'...
+remote: Enumerating objects: 67, done.
+remote: Counting objects: 100% (67/67), done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 1475278 (delta 31), reused 50 (delta 23), pack-reused 1475211
+Receiving objects: 100% (1475278/1475278), 344.08 MiB | 2.31 MiB/s, done.
+Resolving deltas: 100% (1219137/1219137), done.
+
+
+MacBook-de-Christophe:myfastcomp christophecerin$ cd emscripten-fastcomp/
+MacBook-de-Christophe:emscripten-fastcomp christophecerin$ git clone https://github.com/emscripten-core/emscripten-fastcomp-clang tools/clang
+Cloning into 'tools/clang'...
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100% (50/50), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 663417 (delta 16), reused 31 (delta 9), pack-reused 663367
+Receiving objects: 100% (663417/663417), 142.50 MiB | 2.09 MiB/s, done.
+Resolving deltas: 100% (562490/562490), done.
+
+MacBook-de-Christophe:emscripten-fastcomp christophecerin$ mkdir build
+MacBook-de-Christophe:emscripten-fastcomp christophecerin$ cd build
+MacBook-de-Christophe:build christophecerin$ cmake .. -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="host;JSBackend" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DCLANG_INCLUDE_TESTS=OFF
+-bash: cmake: command not found
+
+MacBook-de-Christophe:~ christophecerin$ brew install cmake
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/cask).
+No changes to formulae.
+
+==> Downloading https://homebrew.bintray.com/bottles/cmake-3.14.3.mojave.bottle.
+==> Downloading from https://akamai.bintray.com/10/103cfc24445145ceaa7904d0e894e
+######################################################################## 100.0%
+==> Pouring cmake-3.14.3.mojave.bottle.tar.gz
+==> Caveats
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/cmake
+==> Summary
+🍺  /usr/local/Cellar/cmake/3.14.3: 5,674 files, 50.4MB
+MacBook-de-Christophe:~ christophecerin$ cmake
+Usage
+
+  cmake [options] &lt;path-to-source>
+  cmake [options] &lt;path-to-existing-build>
+  cmake [options] -S &lt;path-to-source> -B &lt;path-to-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+
+  
+MacBook-de-Christophe:build christophecerin$ cmake .. -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="host;JSBackend" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DCLANG_INCLUDE_TESTS=OFF
+CMake Deprecation Warning at CMakeLists.txt:14 (cmake_policy):
+  The OLD behavior for policy CMP0051 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+-- The ASM compiler identification is unknown
+-- Found assembler: /Users/christophecerin/emscripten/emcc
+-- Check for working C compiler: /Users/christophecerin/emscripten/emcc
+-- Check for working C compiler: /Users/christophecerin/emscripten/emcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /Users/christophecerin/emscripten/em++
+-- Check for working CXX compiler: /Users/christophecerin/emscripten/em++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Warning: Did not find file Compiler/-ASM
+-- Found libtool - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool
+-- Looking for dirent.h
+CMake Warning (dev) at /usr/local/Cellar/cmake/3.14.3/share/cmake/Modules/CheckIncludeFile.cmake:80 (message):
+  Policy CMP0075 is not set: Include file check macros honor
+  CMAKE_REQUIRED_LIBRARIES.  Run "cmake --help-policy CMP0075" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  CMAKE_REQUIRED_LIBRARIES is set to:
+
+    m
+
+  For compatibility with CMake 3.11 and below this check is ignoring it.
+Call Stack (most recent call first):
+  cmake/config-ix.cmake:47 (check_include_file)
+  CMakeLists.txt:579 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Looking for dirent.h - found
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for errno.h
+-- Looking for errno.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for link.h
+-- Looking for link.h - found
+-- Looking for malloc.h
+-- Looking for malloc.h - found
+-- Looking for malloc/malloc.h
+-- Looking for malloc/malloc.h - not found
+-- Looking for ndir.h
+-- Looking for ndir.h - not found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for signal.h
+-- Looking for signal.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for sys/dir.h
+-- Looking for sys/dir.h - found
+-- Looking for sys/ioctl.h
+-- Looking for sys/ioctl.h - found
+-- Looking for sys/mman.h
+-- Looking for sys/mman.h - found
+-- Looking for sys/ndir.h
+-- Looking for sys/ndir.h - not found
+-- Looking for sys/param.h
+-- Looking for sys/param.h - found
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for sys/uio.h
+-- Looking for sys/uio.h - found
+-- Looking for termios.h
+-- Looking for termios.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for valgrind/valgrind.h
+-- Looking for valgrind/valgrind.h - not found
+-- Looking for zlib.h
+-- Looking for zlib.h - not found
+-- Looking for fenv.h
+-- Looking for fenv.h - found
+-- Looking for FE_ALL_EXCEPT
+-- Looking for FE_ALL_EXCEPT - found
+-- Looking for FE_INEXACT
+-- Looking for FE_INEXACT - found
+-- Looking for mach/mach.h
+-- Looking for mach/mach.h - not found
+-- Looking for histedit.h
+-- Looking for histedit.h - not found
+-- Looking for CrashReporterClient.h
+-- Looking for CrashReporterClient.h - not found
+-- Performing Test HAVE_CRASHREPORTER_INFO
+-- Performing Test HAVE_CRASHREPORTER_INFO - Success
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for pthread_getspecific in pthread
+-- Looking for pthread_getspecific in pthread - found
+-- Looking for pthread_rwlock_init in pthread
+-- Looking for pthread_rwlock_init in pthread - found
+-- Looking for pthread_mutex_lock in pthread
+-- Looking for pthread_mutex_lock in pthread - found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- Looking for compress2 in z
+-- Looking for compress2 in z - not found
+-- Looking for compress2 in zlib_static
+-- Looking for compress2 in zlib_static - not found
+-- Looking for compress2 in zlib
+-- Looking for compress2 in zlib - not found
+-- Looking for setupterm in tinfo
+-- Looking for setupterm in tinfo - not found
+-- Looking for setupterm in terminfo
+-- Looking for setupterm in terminfo - not found
+-- Looking for setupterm in curses
+-- Looking for setupterm in curses - not found
+-- Looking for setupterm in ncurses
+-- Looking for setupterm in ncurses - not found
+-- Looking for setupterm in ncursesw
+-- Looking for setupterm in ncursesw - not found
+-- Found LibXml2: /usr/lib/libxml2.dylib (found version "2.9.4") 
+-- Looking for xar_open in xar
+-- Looking for xar_open in xar - not found
+-- Looking for arc4random
+-- Looking for arc4random - not found
+-- Looking for backtrace
+-- Looking for backtrace - not found
+-- Could NOT find Backtrace (missing: Backtrace_LIBRARY) 
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Success
+-- Looking for _Unwind_Backtrace
+-- Looking for _Unwind_Backtrace - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for sysconf
+-- Looking for sysconf - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for setrlimit
+-- Looking for setrlimit - found
+-- Looking for isatty
+-- Looking for isatty - found
+-- Looking for futimens
+-- Looking for futimens - found
+-- Looking for futimes
+-- Looking for futimes - found
+-- Looking for posix_fallocate
+-- Looking for posix_fallocate - found
+-- Looking for writev
+-- Looking for writev - found
+-- Looking for lseek64
+-- Looking for lseek64 - found
+-- Looking for mallctl
+-- Looking for mallctl - not found
+-- Looking for mallinfo
+-- Looking for mallinfo - found
+-- Looking for malloc_zone_statistics
+-- Looking for malloc_zone_statistics - not found
+-- Looking for mkdtemp
+-- Looking for mkdtemp - found
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Looking for mktemp
+-- Looking for mktemp - found
+-- Looking for getcwd
+-- Looking for getcwd - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for getrlimit
+-- Looking for getrlimit - found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - found
+-- Looking for pread
+-- Looking for pread - found
+-- Looking for realpath
+-- Looking for realpath - found
+-- Looking for sbrk
+-- Looking for sbrk - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strerror_s
+-- Looking for strerror_s - not found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Looking for dladdr
+-- Looking for dladdr - found
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - not found
+-- Looking for sched_getaffinity
+-- Looking for sched_getaffinity - not found
+-- Looking for CPU_COUNT
+-- Looking for CPU_COUNT - not found
+-- Looking for pthread_getname_np in pthread
+-- Looking for pthread_getname_np in pthread - found
+-- Looking for pthread_setname_np in pthread
+-- Looking for pthread_setname_np in pthread - found
+-- Performing Test HAVE_INT64_T
+-- Performing Test HAVE_INT64_T - Success
+-- Performing Test HAVE_UINT64_T
+-- Performing Test HAVE_UINT64_T - Success
+-- Performing Test HAVE_U_INT64_T
+-- Performing Test HAVE_U_INT64_T - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- Performing Test LLVM_HAS_ATOMICS
+-- Performing Test LLVM_HAS_ATOMICS - Success
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG - Success
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG - Success
+-- Native target architecture is X86
+-- Threads enabled.
+-- Doxygen disabled.
+-- Go bindings enabled.
+-- Found ld64 - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- Could NOT find Python module pygments
+-- Could NOT find Python module pygments.lexers.c_cpp
+-- Could NOT find Python module yaml
+-- LLVM host triple: i386-apple-darwin18.2.0
+-- LLVM default target triple: i386-apple-darwin18.2.0
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Found PythonInterp: /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 (found version "2.7.16") 
+-- Constructing LLVMBuild project information
+-- Targeting JSBackend
+-- Targeting X86
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Clang version: 6.0.1
+-- Configuring done
+CMake Warning (dev):
+  Policy CMP0068 is not set: RPATH settings on macOS do not affect
+  install_name.  Run "cmake --help-policy CMP0068" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, the install_name fields for
+  the following targets are still affected by RPATH settings:
+
+   LTO
+   libclang
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /Users/christophecerin/emscripten/myfastcomp/emscripten-fastcomp/build
+MacBook-de-Christophe:build christophecerin$
+</pre>
+
+<h2>Working with examples</h2>
+
+<p>You only need to install the SDK once! After that you can update to
+the latest SDK at any time using the following in a command prompt:
+</p>
+<pre>
+#
+# Check if Python certificates are installed
+#
+MacBook-de-Christophe:emsdk christophecerin$ cd /Applications/Python\ 2.7/
+MacBook-de-Christophe:Python 2.7 christophecerin$ ll
+total 800
+drwxr-xr-x@ 11 root  wheel    352 16 mai 16:58 .
+drwxrwxr-x+ 81 root  admin   2592 16 mai 17:50 ..
+drwxr-xr-x   5 root  wheel    160  3 mar 03:32 Extras
+drwxr-xr-x   3 root  wheel     96 16 mai 16:58 IDLE.app
+-rw-r--r--@  1 root  wheel      0  3 mar 03:33 Icon?
+-rwxr-xr-x   1 root  wheel   1411  3 mar 03:33 Install Certificates.command
+-rw-r--r--   1 root  wheel  13345  3 mar 03:33 License.rtf
+lrwxr-xr-x   1 root  wheel     98 16 mai 16:58 Python Documentation.html -> /Library/Frameworks/Python.framework/Versions/2.7/Resources/English.lproj/Documentation/index.html
+drwxr-xr-x   3 root  wheel     96 16 mai 16:58 Python Launcher.app
+-rw-r--r--   1 root  wheel   8373  3 mar 03:33 ReadMe.rtf
+-rwxr-xr-x   1 root  wheel   2534  3 mar 03:33 Update Shell Profile.command
+MacBook-de-Christophe:Python 2.7 christophecerin$ ./Install\ Certificates.command  
+ -- pip install --upgrade certifi
+Collecting certifi
+  Downloading https://files.pythonhosted.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whl (158kB)
+    100% |████████████████████████████████| 163kB 37kB/s 
+Installing collected packages: certifi
+Successfully installed certifi-2019.3.9
+You are using pip version 18.1, however version 19.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ -- removing any existing file or link
+ -- creating symlink to certifi certificate bundle
+ -- setting permissions
+ -- update complete
+MacBook-de-Christophe:Python 2.7 christophecerin$ 
+
+# First, go into the sdk directory
+MacBook-de-Christophe:~ christophecerin$ cd emsdk
+MacBook-de-Christophe:emsdk christophecerin$
+
+# Fetch the latest registry of available tools.
+./emsdk update
+
+# Download and install the latest SDK tools.
+./emsdk install latest
+
+# Set up the compiler configuration to point to the "latest" SDK.
+./emsdk activate latest
+
+# Activate PATH and other environment variables in the current terminal
+source ./emsdk_env.sh
+</pre>
+    <p>You should obtain the following information:</p>
+<pre>
+MacBook-de-Christophe:emsdk-portable christophecerin$ ./emsdk install latest
+Installing SDK 'sdk-1.38.31-64bit'..
+Installing tool 'clang-e1.38.31-64bit'..
+Downloading: /Users/christophecerin/emsdk-portable/zips/emscripten-llvm-e1.38.31.tar.gz from https://s3.amazonaws.com/mozilla-games/emscripten/packages/llvm/tag/osx_64bit/emscripten-llvm-e1.38.31.tar.gz, 317264223 Bytes
+ Unpacking '/Users/christophecerin/emsdk-portable/zips/emscripten-llvm-e1.38.31.tar.gz' to '/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit'
+Done installing tool 'clang-e1.38.31-64bit'.
+Installing tool 'node-8.9.1-64bit'..
+The contents of file 'node-v8.9.1-darwin-x64.tar.gz' already exist in destination '/Users/christophecerin/emsdk-portable/node/8.9.1_64bit', skipping.
+Done installing tool 'node-8.9.1-64bit'.
+Installing tool 'emscripten-1.38.31'..
+Downloading: /Users/christophecerin/emsdk-portable/zips/1.38.31.tar.gz from https://github.com/kripken/emscripten/archive/1.38.31.tar.gz, 41822751 Bytes
+ Unpacking '/Users/christophecerin/emsdk-portable/zips/1.38.31.tar.gz' to '/Users/christophecerin/emsdk-portable/emscripten/1.38.31'
+Done installing tool 'emscripten-1.38.31'.
+Done installing SDK 'sdk-1.38.31-64bit'.
+MacBook-de-Christophe:emsdk-portable christophecerin$ ./emsdk activate latest
+Writing .emscripten configuration file to user home directory /Users/christophecerin/
+The Emscripten configuration file /Users/christophecerin/.emscripten has been rewritten with the following contents:
+
+import os
+LLVM_ROOT='/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit'
+EMSCRIPTEN_NATIVE_OPTIMIZER='/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/optimizer'
+BINARYEN_ROOT='/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/binaryen'
+NODE_JS='/Users/christophecerin/emsdk-portable/node/8.9.1_64bit/bin/node'
+EMSCRIPTEN_ROOT='/Users/christophecerin/emsdk-portable/emscripten/1.38.31'
+SPIDERMONKEY_ENGINE = ''
+V8_ENGINE = ''
+TEMP_DIR = '/var/folders/63/yyxnpnc51jb5fqt5y0q4br1w0000gn/T'
+COMPILER_ENGINE = NODE_JS
+JS_ENGINES = [NODE_JS]
+
+To conveniently access the selected set of tools from the command line, consider adding the following directories to PATH, or call 'source ./emsdk_env.sh' to do this for you.
+
+   /Users/christophecerin/emsdk-portable:/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit:/Users/christophecerin/emsdk-portable/node/8.9.1_64bit/bin:/Users/christophecerin/emsdk-portable/emscripten/1.38.31
+Set the following tools as active:
+   clang-e1.38.31-64bit
+   node-8.9.1-64bit
+   emscripten-1.38.31
+
+MacBook-de-Christophe:emsdk-portable christophecerin$ source ./emsdk_env.sh
+Adding directories to PATH:
+PATH += /Users/christophecerin/emsdk-portable
+PATH += /Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit
+PATH += /Users/christophecerin/emsdk-portable/node/8.9.1_64bit/bin
+PATH += /Users/christophecerin/emsdk-portable/emscripten/1.38.31
+
+Setting environment variables:
+EMSDK = /Users/christophecerin/emsdk-portable
+BINARYEN_ROOT = /Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/binaryen
+EMSCRIPTEN = /Users/christophecerin/emsdk-portable/emscripten/1.38.31
+
+MacBook-de-Christophe:emsdk-portable christophecerin$ 
+</pre>
+
+<h3>Concurrent activities in the browser: using Pthreads</h3>
+
+    <p>The <code>Pthreads</code> library is one of the fundamental
+      library for creating concurrent activities in C/C++
+      languages. The basic example we investigate is this one:
+    </p>
+<pre>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;pthread.h>
+
+//void *print_message_function( void *ptr );
+void *print_message_function( void *ptr )
+{
+     char *message;
+     message = (char *) ptr;
+     printf("%s \n", message);
+     return (void *)NULL;
+}
+
+int main()
+{
+     pthread_t thread1, thread2;
+     const char *message1 = "Thread 1";
+     const char *message2 = "Thread 2";
+     int  iret1, iret2;
+
+    /* Create independent threads each of which will execute function */
+
+     iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
+     if(iret1)
+     {
+         fprintf(stderr,"Error - pthread_create() return code: %d\n",iret1);
+         exit(EXIT_FAILURE);
+     }
+
+     iret2 = pthread_create( &thread2, NULL, print_message_function, (void*) message2);
+     if(iret2)
+     {
+         fprintf(stderr,"Error - pthread_create() return code: %d\n",iret2);
+         exit(EXIT_FAILURE);
+     }
+
+     printf("pthread_create() for thread 1 returns: %d\n",iret1);
+     printf("pthread_create() for thread 2 returns: %d\n",iret2);
+
+     /* Wait till threads are complete before main continues. Unless we  */
+     /* wait we run the risk of executing an exit which will terminate   */
+     /* the process and all threads before the threads have completed.   */
+
+     pthread_join( thread1, NULL);
+     pthread_join( thread2, NULL); 
+
+     //exit(EXIT_SUCCESS);
+     return 1;
+}
+</pre>
+
+<p>We compile this program as follows:</p>
+<pre>
+MacBook-de-Christophe:examples christophecerin$ emcc -v pthread.c -l pthread -s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=2  -o pthread.html
+shared:INFO: (Emscripten: Running sanity checks)
+clang version 6.0.1  (emscripten 1.38.31 : 1.38.31)
+Target: asmjs-unknown-emscripten
+Thread model: posix
+InstalledDir: /Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit
+ "/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/clang" -cc1 -triple asmjs-unknown-emscripten -emit-llvm-bc -emit-llvm-uselists -disable-free -disable-llvm-verifier -discard-value-names -main-file-name pthread.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -no-integrated-as -mconstructor-aliases -dwarf-column-info -debugger-tuning=gdb -target-linker-version 305 -v -coverage-notes-file /tmp/emscripten_temp_ztkzOD/pthread_0.gcno -nostdsysteminc -nobuiltininc -resource-dir /Users/christophecerin/emsdk-portable/clang/lib/clang/6.0.1 -D __EMSCRIPTEN_major__=1 -D __EMSCRIPTEN_minor__=38 -D __EMSCRIPTEN_tiny__=31 -D _LIBCPP_ABI_VERSION=2 -D __EMSCRIPTEN_PTHREADS__=1 -Werror=implicit-function-declaration -fno-dwarf-directory-asm -fdebug-compilation-dir /Users/christophecerin/cilk-5.4.6/examples -ferror-limit 19 -fmessage-length 124 -fobjc-runtime=gnustep -fdiagnostics-show-option -fcolor-diagnostics -nobuiltininc -nostdsysteminc -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/libcxx -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/lib/libcxxabi/include -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/compat -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/SSE -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/libc -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/lib/libc/musl/arch/emscripten -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/local/include -disable-O0-optnone -isystem/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/SDL -o /tmp/emscripten_temp_ztkzOD/pthread_0.o -x c pthread.c
+clang -cc1 version 6.0.1 based upon LLVM 6.0.1 default target x86_64-apple-darwin18.2.0
+ignoring nonexistent directory "/Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/SSE"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/libcxx
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/lib/libcxxabi/include
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/compat
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/libc
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/lib/libc/musl/arch/emscripten
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/local/include
+ /Users/christophecerin/emsdk-portable/emscripten/1.38.31/system/include/SDL
+End of search list.
+ "/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/opt" /tmp/emscripten_temp_ztkzOD/pthread_0.o /Users/christophecerin/.emscripten_cache/asmjs/libdlmalloc_threadsafe.bc /Users/christophecerin/.emscripten_cache/asmjs/libpthreads.bc /Users/christophecerin/.emscripten_cache/asmjs/libc-mt.bc /Users/christophecerin/.emscripten_cache/asmjs/libc-wasm.bc /Users/christophecerin/.emscripten_cache/asmjs/libpthreads_asmjs.bc /var/folders/63/yyxnpnc51jb5fqt5y0q4br1w0000gn/T/emscripten_temp_Jb_gxo_archive_contents/muldc3.c.o /var/folders/63/yyxnpnc51jb5fqt5y0q4br1w0000gn/T/emscripten_temp_Jb_gxo_archive_contents/mulsc3.c.o -strip-debug -disable-debug-info-type-map -internalize -internalize-public-api-list=main,malloc,free,__errno_location,fflush -globaldce -disable-loop-vectorization -disable-slp-vectorization -vectorize-loops=false -vectorize-slp=false -o /tmp/emscripten_temp_ztkzOD/pthread.bc
+ "/Users/christophecerin/emsdk-portable/clang/e1.38.31_64bit/llc" /tmp/emscripten_temp_ztkzOD/pthread.bc -march=js -filetype=asm -o /tmp/tmppo97zW.4.js -emscripten-stack-size=5242880 -O0 -emscripten-precise-f32 -emscripten-enable-pthreads -emscripten-assertions=1 -emscripten-no-aliasing-function-pointers -emscripten-global-base=1024 -emscripten-no-exit-runtime -emscripten-wasm -emscripten-only-wasm  
+</pre>
+
+<p>This compilation step produces the following pthreads files and
+  pthread.html is the one you can download in your browser:</p>
+<pre>
+MacBook-de-Christophe:examples christophecerin$ ll pthread.*
+-rw-r--r--  1 christophecerin  staff    1411 21 mai 11:18 pthread.c
+-rw-r--r--@ 1 christophecerin  staff  107168 21 mai 11:18 pthread.html
+-rw-r--r--  1 christophecerin  staff    1858 21 mai 11:18 pthread.html.mem
+-rw-r--r--  1 christophecerin  wheel  218371 21 mai 11:18 pthread.js
+-rw-r--r--  1 christophecerin  staff   67051 21 mai 11:18 pthread.wasm
+-rw-r--r--  1 christophecerin  staff   10147 21 mai 11:18 pthread.worker.js
+</pre>
+
+<p>However, some configuration needs to be done for some parameters of
+your browser. First, we recommend to use Mozilla Firefox Nightly as
+your brower. Then, type <code>about:config</code> in the URL bar, and
+set the flags as follows:</p>
+<p>
+  <img src="Capture2019-05-21.png">
+</p>
+
+<p>The execution of the program should look as:</p>
+<p>
+<img src="Capture2019-05-21-1.png">
+</p>      
+
+<p>A general discussion about Pthreads in the browser with Emscripten
+and Web Assembly can be
+found <a href="https://emscripten.org/docs/porting/pthreads.html">here</a>.
+See also
+this <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm">post</a>.
+For optimizing the Emscripten codes at compile time, see
+this <a href="https://emscripten.org/docs/optimizing/Optimizing-Code.html">discussion</a>.
+</p>
+
+<p>You can play with this example by clicking
+on <a href=">https://lipn.univ-paris13.fr/~cerin/HDU/pthread.html">https://lipn.univ-paris13.fr/~cerin/HDU/pthread.html</a>. Enjoy!</p>
+
+<h3>Interlude: parallel programming in C<h3>
+
+    <p>You are now ready to learn more on parallel programming. Please, read this
+      <a href="https://gribblelab.org/CBootCamp/A2_Parallel_Programming_in_C.html">introductory
+      material</a> before going further in this lecture. In fact, it is not an interlude!</p>
+
+<h3>Computing an approximation of &Pi; in parallel</p>
+
+<p>Computing the digits of &pi; is an old problem. Some sequential
+solutions are very tricky and require a good level in mathematics. See
+this <a href="https://crypto.stanford.edu/pbc/notes/pi/code.html">page</a>
+for instance.
+</p>
+
+<p>The code shown below is the calculation of &pi; by the method of
+  numeric integration. John Wallis (1616-1703) discoved in 1655 a
+  method for computing &pi;. He considered a circle with a radius
+  equal to 1, then he was looking for the area of one fourth of the
+  circle.  He proposed the formula $$\pi/4 = \int^{1}_{0}{\sqrt{1-x^2}}.
+  dx$$ Remember that we simply start with the equation of a circle
+  $$x^2+y^2=r^2$$ The algorithm has a loop which executes a
+  predetermined number of iterations (num_steps) where a reduction
+  over the variable 'sum' is done. The variable 'x' works like a
+  partial result which has an independent value between iterations. At
+  the end of the loop, the operation between 'step' and 'sum' produces
+  'pi'. The number &pi; will be more precise if the number of
+  iterations is greater.
+</p>
+
+<pre>
+    x=0;
+    sum = 0.0;
+    step = 1.0/(double) num_steps;
+    for (i=0; i < num_steps; ++i) {
+        x = (i+0.5)*step;
+        sum = sum + 4.0/(1.0+x*x);
+    }
+    pi = step * sum;
+</pre>
+
+<p>The parallel code with Pthreads is as follows. Please, notice the
+semaphore that is used to protect the pi variable against concurrent
+writes. The idea is to distribute the integration steps in 4 threads,
+each working concurrently on a distinct part of the integration
+domain. We control the number of iterations with
+the <code>numberOfIntervals = 200</code> instruction, meaning that
+each thread is running 200/4 iterations. Hence the following code:</p>
+<pre>
+//
+// emcc pi.c -l pthread -s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=4 -o pi.html
+//
+// If NUM_THREADS is too large, you may have the following message:
+// Cannot enlarge memory arrays to size 17842176 bytes (OOM). Either
+// (1) compile with -s TOTAL_MEMORY=X with X higher than the current
+// value 16777216, (2) compile with -s ALLOW_MEMORY_GROWTH=1 which
+// allows increasing the size at runtime, or (3) if you want malloc to
+// return NULL (0) instead of this abort, compile with -s
+// ABORTING_MALLOC=0
+//
+// It seems that the return values of pthread_create(), pthread_join()
+// and pthread_mutex_unlock() always return 0 (True)
+// This is not the case when we compile with gcc/clang
+//
+
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;pthread.h>
+#include &lt;time.h>
+
+#define NUM_THREADS     4
+
+void            *pi_function(void *p);
+//returns the value of pi
+pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
+//creates a mutex variable
+double          pi = 0.0;
+int             k = 0;
+double          sumvalue = 0, sum = 0;
+double          intervalWidth, intervalMidPoint;
+
+int
+main()
+{
+     pthread_t       threads[NUM_THREADS];
+     //creates the number of threads NUM_THREADS
+     int             iret1;
+     //used to ensure that threads are created properly
+     // pthread_create(thread, attr, start_routine, arg)
+     int             i;
+     pthread_mutex_init(&mutex1, NULL);
+
+     for (i = 0; i &lt; NUM_THREADS; i++) {
+          iret1 = pthread_create(&threads[i], NULL, pi_function, (void *)i);
+          if (iret1) {
+            //printf("ERROR; return code from pthread_create() is %d\n", iret1);
+            //exit(-1);
+          }
+     }
+
+     for (i = 0; i &lt; NUM_THREADS; i++) {
+          iret1 = pthread_join(threads[i], NULL);
+          if (iret1) {
+            //printf("ERROR; return code from pthread_create() is %d\n", iret1);
+            //exit(-1);
+          }
+     }
+
+     pthread_mutex_destroy(&mutex1);
+     printf("Main: program completed. Exiting.\n");
+     printf("The value of pi is  : %f\n", pi);
+
+     return (0);
+}
+
+void           *
+pi_function(void *p)
+{
+     int          rc;
+     int          k;
+     int          i;
+     int          interval;
+     int          numberOfIntervals = 200;
+     /* Compute the interval width. */
+     double          intervalWidth = 1.0 / numberOfIntervals;
+     double          intervalMidPoint, area1 = 0.0;
+
+     k = (int)p;
+     //printf("---- %d ----\n", k);
+     for (interval = (numberOfIntervals / NUM_THREADS) * k; interval &lt; (numberOfIntervals / NUM_THREADS) * k + (numberOfIntervals / NUM_THREADS); interval++) {
+          intervalMidPoint = (interval + 0.5) * intervalWidth;
+          area1 += 4.0 / (1.0 + intervalMidPoint * intervalMidPoint);
+     }
+     area1 *= intervalWidth;
+
+     pthread_mutex_lock(&mutex1);
+     //locks the share variable pi and p16
+     pi += area1;
+     printf("iteration (%d) %f %d %d %d\n", k, pi, (numberOfIntervals / NUM_THREADS) * k, (numberOfIntervals / NUM_THREADS) * k + (numberOfIntervals / NUM_THREADS), (numberOfIntervals / NUM_THREADS));
+     rc = pthread_mutex_unlock(&mutex1);
+     if (rc) {
+       //printf("ERROR; return code from pthread_create() is %d\n", rc);
+     }
+     pthread_exit(&sumvalue);
+}
+</pre>
+
+<p>You can test it (with the Mozilla Firefox Nightly browser, please) at
+<a href="https://lipn.univ-paris13.fr/~cerin/HDU/pi.html">https://lipn.univ-paris13.fr/~cerin/HDU/pi.html</a>.
+</p>
+
+<p>Another relation for an estimate of &pi; it to start with the
+  formula \(arctan(1)={\pi\over 4}\) and to use
+  the <a href="https://www.intmath.com/series-expansion/2-maclaurin-series.php">Maclaurin</a>
+  formula for arctan() as follows: \(\arctan x = x - {x^3\over 3} +
+  {x^5\over 5} - {x^7\over 7} + \cdots\ \ \ |x| < 1\) but this series
+  is also converging for \(x=1\). Thus we have \({\pi\over 4} = 1 -
+  {1\over 3} + {1\over 5} - {1\over 7} + {1\over 9} - {1\over 11} +
+  \cdots\) or, much more simply \(\pi = 4 - {4\over 3} + {4\over 5} -
+  {4\over 7} + {4\over 9} - {4\over 11} + \cdots\) You can now
+  proceed with an implementation.
+</p>
+
+<h3>The Cpp-Taskflow library</h3>
+
+<p><a href="https://github.com/cpp-taskflow/cpp-taskflow">Cpp-Taskflow</a>
+is a fast C++ header-only library to help you quickly write parallel
+programs with complex task dependencies. Cpp-Taskflow is by far
+faster, more expressive, fewer lines of code, and easier for drop-in
+integration than existing parallel task programming libraries such as
+  OpenMP Tasking and Intel TBB FlowGraph.</p>
+
+<p>Please, install it and try the examples!</p>
+
+<h3>Work stealing: Cilk programming</h3>
+
+<p>The Cilk framework follows the principle of work stealing on idle
+cores. The libray can still be downloaded
+from <a href="http://supertech.csail.mit.edu/cilk/">this site</a>.
+The compilation with emcc is quite difficult and not straitforward
+because the Cilk library is dependent of the type of CPU (see this
+message <code>grep -i "Unsupported CPU"
+./../runtime/cilk-sysdep.h</code>). Another entry point for Clik
+is <a href="https://www.usenix.org/legacy/publications/library/proceedings/ana97/full_papers/blumofe/blumofe_html/node2.html">this
+point</a>.
+</p>
+
+<p></p>
+<p></p>
+<hr>
+  </body>
+</html>

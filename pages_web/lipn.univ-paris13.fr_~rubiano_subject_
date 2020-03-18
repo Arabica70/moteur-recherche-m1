@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page perso Thomas Rubiano - Subject</title>
+    <link rel="stylesheet" href="/~rubiano/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <!-- <meta name="generator" content="nanoc 3.8.0"> -->
+  </head>
+  <body>
+    <div id="main">
+      
+<h1 id="subject">Subject</h1>
+
+<p>The implicit computational complexity (ICC) helps us to predict and control
+resources (Time and Space) consumed by programs. Static analysis on specific
+syntactic criterion allow us to categorize some of them.  A common approach is
+to observe the program’s data’s behaviors.</p>
+
+<p>For instance, the detection of Non Size Increasing programs is based on a simple
+principle : counting memory allocation and deallocation, particularly in loops.
+By this way, we can detect programs which computes within a constant amount of
+space. This method can be easily express as property on Control Flow Graph.</p>
+
+<p>In practice, the system allocates a finite space of memory, if it’s not enough
+during the execution, the program needs to ask and wait for more space (waste of
+time). If it’s too many, it’s a waste of space.</p>
+
+<p>The starting point of this thesis is to use the results of NSI Programs theories
+to generate a complexity certificate that provide the precise amount of space
+needed. This analysis is not always computable but if it is, we can provide a
+resource optimization.</p>
+
+<p>Because it’s only syntactic, this analysis can be done during compilation, and
+the certificate can be gather with the executable file. Furthermore, compilers
+manipulates an intermediate representation language that’s close to assembly
+(Gimple/RTL for gcc or LLVM-IR) and gives access to the Control Flow Graph.
+Thereby we have all the required tools for realize some implicit complexity
+methods.</p>
+
+<p>The first goal is to write a module in a chosen compiler to detect NSI programs
+and deduce potentials optimizations. After that, in one hand, we could continue
+to implement others implicit complexity methods (Size Change Termination or
+polynomial MWP).</p>
+
+<p>Until now, theses implicit complexity theories were applied on more or less toys
+languages. We would like to apply theses theories on widely used
+languages/compilers to give the community a tool capable to treat a big amount
+of examples and give an accurate idea of the real expressivity of these
+analysis.</p>
+
+    </div>
+    <div id="sidebar">
+      <h2><a href="/~rubiano/">About me</a></h2>
+      <h2>Research</h2>
+      <ul>
+        <li><a href="/~rubiano/subject/">PhD Thesis</a></li>
+        <li><a href="/~rubiano/talks/">Talks</a></li>
+      </ul>
+      <h2>Teaching</h2>
+      <ul>
+        <li><a href="/~rubiano/ING1/">Ingénieur Première année</a></li>
+        <li><a href="/~rubiano/L1/">Licence Première année</a></li>
+      </ul>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://fsf.org/">Free Software Foundation</a></li>
+        <li><a href="http://framasoft.org/">Framasoft</a></li>
+        <li><a href="http://www.april.org/">April</a></li>
+        <li><a href="http://www.laquadrature.net/">La Quadrature du Net</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

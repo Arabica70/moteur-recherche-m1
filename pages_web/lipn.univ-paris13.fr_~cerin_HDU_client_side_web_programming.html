@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Client side web programming with Brython</title>
+  </head>
+  <body>
+
+    <h1>Client side web programming with Brython</h1>
+
+    <h2>Introduction</h2>
+
+<p>In this lecture we will learn how to put in place a program
+with <a href="https://www.brython.info/">Brython</a>, a client side
+web programming tool. Brython is a Javascript library that interprets
+  Python code, but not only. Its goals are mainly:</p>
+  <ul>
+  <li>Instantly do interactive computation in using heavy UI widgets;</li>
+  <li>To think "Browser-only web applications", powered by Python.</li>
+  </ul>
+
+<p>Python is more fun to write and is more readable than
+  Javascript. However
+  the <a href="https://tc39.github.io/">Javascript</a> specification
+  is still evolving and it is part of a very large growing ecosystem
+  (<a href="http://asmjs.org/">asm</a>,
+  <a href="https://www.dartlang.org/">dart</a> (see also
+  a <a href="https://blog.codemagic.io/dart-vs-javascript/">comparison</a>
+  between Dart and
+  Javascript), <a href="https://www.typescriptlang.org/">typescript</a>). Note
+  that there exists many projects for Python-to-Javascript compilers:
+  <ul>
+      <li>Stand-alone compilers:
+      <a href="https://github.com/PythonJS/PythonJS">PythonJS</a>,
+      Pyjaco,
+      Pyjamas,
+      <a href="https://github.com/qsnake/py2js">Py2JS</a>;</li>
+      <li>
+      In-browser implementations:
+      <a href="http://www.skulpt.org/">Skulpt</a>,
+      Brython.</li></ul>
+</li>
+
+<p>A client side web application means that you download an html page
+containing all the information to compute and to display the result of
+your problem. There is no server, except a repository for your html
+file. Your browser interprets the code inside the html file, and solve
+  the problem!</p>
+
+<p>The magic part is that the html file is divided into (virtual)
+  sections of code as follows:</p>
+<div>
+<ol>
+    <li>First it downloads a Python interpreter written in Javascript,
+      plus, in general, a library of useful functions;</li>
+    <li>Then, a Python section serves to implement the model of your
+      application and problem to solve;</li>
+    <li>Then, the code contains the view i.e. the description of
+    buttons, text area... for interacting with the Python code, in
+    order to transfer information from/to the graphical user
+      interface;</li>
+    <li>Then, the code contains the controller part i.e. the binding
+    between the funtion/methods of your model with the butons, text
+      area...</li>
+  </ol>
+</div>
+<p>
+  This type of organization is known under the vocabulary of MVC
+  (Model View Controller). It is placed at the methodological level
+  regarding the develpment of applications and may be useful for
+  developing database applications (Mysql, Mariadb, Postgresql...) or
+  GUI (Graphical User Interface) with JavaFX and Swing (Java tools),
+  or in many other situations. The following frameworks also use an
+  MVC approach: Angular (becoming very popular), Backbone, Ember,
+  Knockout. Some complementary explanations about MVC can be found
+  on <a href="https://www.dummies.com/web-design-development/mobile-apps/the-model-view-controller-mvc-design-pattern/">this
+  page</a>.</p>
+
+<h2>Working with examples</h2>
+
+<p>We recommend to download all the examples and to inspect the
+codes. We put some comments inside the codes in order to discuss the
+limitations of Brython. The portions of codes with a comment (</code>#
+is used in Python to introduce a comment</code>) show alternatives
+that are theoretically possible but, in general, not implemented yet
+with Brython (for good and maybe for bad reasons too).
+</p>
+
+<p>The reader of this lecture is now invited to review, in depth, the
+codes inside the following three examples in order to understand them
+  according to the MVC principles:</p>
+<span>
+  <ol>
+    <li>The <a href="https://lipn.univ-paris13.fr/~cerin/CIG-S1/multiens.html">Multiset</a>
+    example. A multiset is a set with multiple occurences, if any, of
+    the same elements. The implementation allows to add an element, to
+    cancel one occurence, to cancel all the occurences... and to
+    represent the multiset as a drawing. The multiset is initialized
+    randomly with five integers. A Python class is introduced in order
+      to group the methods for adding, cancelling...</li>
+    <li>This <a href="https://lipn.univ-paris13.fr/~cerin/CIG-S1/brython_cerin.html">example</a>
+    demonstrates how to fill a table and to play with a table;</li>
+    <li>The <a href="https://lipn.univ-paris13.fr/~cerin/HDU/weather_station.html">Weather
+    Station</a> example demonstrates: <ol><li>how to post an ajax query
+    to get information about the weather in different
+    cities</li><li>how to draw tables, in a dynamic way, acconding to
+    the number of days, per city, for the forecast</li><li>how to
+    react the an event i.e. to bind an action to a list of checked
+    buttons</li></ol> One problem with this application is that we
+    can't POST a request outside our domain i.e. on the web, because
+    of the sandboxing mechanism for the browser. Your browser and
+    javascript follow the CORS (Cross Origin Resource Sharing)
+    specification to protect against bad behaviors or intrusions. More
+    information
+    about <a href="https://stackoverflow.com/questions/298745/how-do-i-send-a-cross-domain-post-request-via-javascript">CORS</a>
+    can be found on the web, in particuar the way to set up your
+    server to accept multi-domains requests. See also
+    this <a href="http://restlet.com/company/blog/2015/12/15/understanding-and-using-cors/">excellent
+    post</a> or this one on
+    the <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS#simples">Mozilla</a>
+    web site. So, to download, from the web, the information about the
+    weather, we developed
+    a <a href="https://lipn.univ-paris13.fr/~cerin/HDU/weather_station.ps">Python
+    3 script</a> that you have to install on your machine and to lanch
+    before going to
+    the <a href="https://lipn.univ-paris13.fr/~cerin/HDU/weather_station.html">Weather
+    Station</a> example. The code of the Python program is in using
+    the <code>requests</code> interface, for all the cities, and to
+      store locally the results, on your local disk. The main loop is:
+<pre>
+  for i,_ in dico.items():
+      print('We are creating the file named ',dico[i]+'_fr.xml -- Please wait!')
+      data = requests.get('http://worldweather.wmo.int/fr/json/'+dico[i]+'_fr.xml')
+      dataa=data.text
+      j = json.loads(dataa)
+      # Open a file
+      fo = open(dico[i]+'_fr.xml', "w")
+      foo = str(j)
+      foo=foo.replace(": None", ": 'None'")
+      foo=foo.replace(": False", ": 'False'")
+      foo=foo.replace(": True", ": 'True'")
+      # we put the anchor <cerin></cerin> in order to pre-build
+      # an XML object that will be read by an ajax request in the
+      # weather-station.html file. This is a Tip!
+      fo.write("<cerin>"+foo+"</cerin>")
+      # Close opend file
+      fo.close()
+</pre>
+To conclude, we obtain two independant programs, that do not really
+cooperate (only through files). The Python program generates the data
+for the HTML code. The communication between the HTML code and the
+'outside' of the browser is accomplished with an ajax POST
+request. The Python program needs to be started daily if you want
+fresh information about the weather!
+    </li>
+  </ol>
+</span>
+
+<h2>Home work / exercices</h2>
+
+<h3>NodejS</h3>
+
+<p>Use a <a href="https://nodejs.org/en/">NodeJS</a> server to implement
+the dialog with your HTML/python application regarding the POST
+requests over the Internet that is necessary to download information
+from http://worldweather.wmo.int</p>
+
+<h3>Redis</h3>
+
+<p>Use a <a href="https://redis.io/">Redis</a> server to implement the
+dialog with your HTML/python applicationregarding the POST requests
+over the Internet that is necessary to download information from
+http://worldweather.wmo.int</p>
+
+<br>
+<hr>
+<p><b>Special note:</b>
+the <a href="https://www.brython.info/">Brython</a> web site contains
+also many demos that can be considered to capture the main facilities
+to implement user interfaces.</p>
+
+<hr>
+<p><b>Special note:</b> the
+  following <a href="https://hacks.mozilla.org/2019/04/pyodide-bringing-the-scientific-python-stack-to-the-browser/">post</a>
+  contains interesting information about client side web programming,
+  notably a general discussion of issues, technical solution for
+  implementing data science librairy inside the browser i.e. Bringing
+  the scientific Python stack to the browser according to the viion of
+  the <a href="https://github.com/iodide-project/pyodide/">Pyodide</a>
+  project. Pyodide is the Python scientific stack, compiled to
+  <a href="https://webassembly.org/">WebAssembly</a>. WebAssembly
+  (abbreviated Wasm) is a binary instruction format for a stack-based
+  virtual machine. Wasm is a core technology
+  for <a href="https://github.com/iodide-project/iodide">Iodide</a>. Iodide
+  is a modern, literate, and interactive programming environment that
+  uses the strengths of the browser to let scientists work flexibly
+  and collaboratively with minimal friction. In the same vein, the
+  Nexedi team uses all of these technologies for
+  the <a href="https://www.nexedi.com/erp5-Iodide.OfficeJS.Overview">OfficeJS
+  Iodide</a> project, which is an ubiquitous Data Science Notebooks
+  for Business and Education, running in the browser.</p>
+
+
+<hr>
+
+<br>
+  </body>
+</html>

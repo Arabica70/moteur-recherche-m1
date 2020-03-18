@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Cours M2103 (Technologie de l'Internet) − IUT de Villetaneuse</title>
+		
+
+		<meta name="author" content="Laure Petrucci" />
+		<meta name="description" content="Cours « Bases de données » (M2103) du DUT réseaux et télécommunications de l’IUT de Villetaneuse, Université Paris 13" />
+		<meta name="keywords" content="Internet, IUT, DUT R&amp;T, cours, TP, TD, Creative Commons, licence libre" />
+		<meta name="robots" content="index,follow" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+
+	<body>
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+                <div id="main">
+                    <div class="inner">
+
+	<header>
+
+		<h2>DUT réseaux et télécommunications</h2>
+
+		<h1>Cours M2103 (Technologies de l'Internet)</h1>
+
+<p><em>Cette page est relative à l’enseignement M2103 dans le DUT Réseaux&amp;Télécommunications de l’IUT de Villetaneuse (Université Paris 13).</em></p>
+	</header>
+
+
+	<article>
+		<h2>Ressources du cours</h2>
+
+		<ul>
+			<li><a href="../polycopies/slides_M2103.pdf">transparents de cours</a></li>
+			<li><a href="../polycopies/TD_M2103.pdf">sujets de travaux dirigés</a></li>
+            <li><a href="../polycopies/TP_M2103.pdf">sujets de travaux pratiques</a></li>
+		</ul>
+	</article>
+
+
+		<footer id="bas">
+			<p>Ressources réutilisables selon les conditions de leur licence respective, en général <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/">Creative Commons CC BY-NC-SA 3.0</a>&nbsp;; auteur&nbsp;: <a href="http://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a>.</p>
+
+			<p>Source LaTeX et corrigés disponibles pour les enseignants sur demande.</p>
+		</footer>
+
+                </div>
+            </div>
+
+        <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <header class="major">
+                                <div class="image avatar"><a href="../index.html#header"><img src="../images/LP.jpg" alt="photo" align="right"></a></div>
+                                <h2>Menu</h2>
+                            </header>
+                            <ul>
+                                <li><a href="../presentation.html">Présentation</a></li>
+                                <li><a href="../index.html#actus">Actualités</a></li>
+                                <li><a href="../publications.html">Publications</a></li>
+                                <li><a href="../index.html#enseignement">Enseignement</a></li>
+                                <li><a href="../index.html#videos">Vidéos</a></li>
+                            </ul>
+                        </nav>
+
+                    <!-- Section -->
+                        <section>
+                            <header class="major">
+                                <h2>Contact</h2>
+                            </header>
+                            <ul class="contact">
+                                <li class="fa-envelope-o">laure.petrucci AT lipn.univ-paris13.fr</li>
+                                <li class="fa-phone">+33 (0)1 49 40 28 05</li>
+                                <li class="fa-vcard">Bureau A202, Institut Galilée<br/>
+                                LIPN, CNRS UMR 7030<br/>
+                                Université Paris 13<br/>
+                                99 avenue Jean-Baptiste Clément<br/>
+                                93430 VILLETANEUSE</li>
+                            </ul>
+                        </section>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <p class="copyright">&copy; Laure Petrucci. All rights reserved.<br>
+                                Design: <a href="https://html5up.net">HTML5 UP</a> (CCA 3.0).</p>
+                        </footer>
+
+                </div>
+            </div>
+
+    </div>
+
+<!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+	</body>
+
+
+</html>

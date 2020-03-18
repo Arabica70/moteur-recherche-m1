@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LIAFA -- PuMoC</title>
+</head>
+
+<body>
+<blockquote>
+  <h1><strong><font color="#0000A0" size="7">PuMoC</font></strong></h1>
+  <h1><strong><font size="5">A CTL Model Checker for Sequential Program</font></strong><font size="5">s</font></h1>
+</blockquote>
+<table width="866" height="40" border="0" align="left" bordercolor="#FFFFFF" summary="main-menu">
+  <tr>
+    <td width="140" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="index.html"><font color="#FF0000" size="5"><strong>Home</strong></font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="download.html"><font size="5">Download</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="quick start.html"><font size="5">Quick Start</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="references.html"><font size="5">References</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="experiments.html"><font size="5">Experiments</font></a></p>    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr size="3" noshade>
+<p>PuMoC is a CTL model checker for pushdown systems (PDS), and sequential C/C++ and Java programs. </p>
+<p>The CTL model checking problem for PDSs is reduced to the emptiness problem of  alternating Buechi pushdown systems. </p>
+<p>PuMoC allows to check CTL properties for PDSs w.r.t. simple 
+  valuations, where the atomic propositions depend on the control locations of the PDSs, 
+  and w.r.t. regular valuations, where atomic propositions are regular predicates over the stack 
+content.</p>
+<p>PuMoC allows also to do CTL model checking for sequential boolean, C/C++ and Java 
+  programs. Indeed, sequential boolean programs can naturally be modeled by PDSs. To 
+  translate C/C++ sequential programs into boolean programs, we use<a href="http://www.cprover.org/satabs/"> Satabs</a> , whereas 
+to extract a PDS from a Java program, we use  <a href="http://www.cs.ox.ac.uk/matthew.hague/pdsolver.html">JimpleToPDSolver</a>.</p>
+<p> In addition to CTL model checking, PuMoC  is intergrated with <a href="http://www.fmi.uni-stuttgart.de/szs/tools/moped/">Moped. </a>This offers a toolkit that can 
+  do both LTL and CTL model-checking for PDSs and sequential programs.</p>
+<p> Given a CTL formula and an input file (boolean programs, pushdown systems), or an alternating pushdown system, PuMoC either outputs Yes or No when the input file has an initial configuration, otherwise PuMoC outputs a finite automaton (FA) recognizing all the configurations which satisfy the CTL formula. </p>
+<p align="center"><img src="Architecture.png" width="694" height="442"></p>
+<p>
+<strong>Contact</strong>:  PuMoC is written and maintained by <a href="mailto:songfu1983@gmail.com">Fu Song</a> and <a href="mailto:touili@lipn.fr">Tayssir Touili</a>. </p>
+<p>&nbsp;</p>
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://www.liafa.jussieu.fr/~song/PuMoC/', 'user' : 977609, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-01-26', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www3.clustrmaps.com/user/bb3eeac9"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/www.liafa.jussieu.fr-~song-PuMoC--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+<hr noshade>
+<p align="center">Copyright © 2011-2012 LIAFA, University of Paris Diderot and CNRS.</p>
+</body>
+</html>

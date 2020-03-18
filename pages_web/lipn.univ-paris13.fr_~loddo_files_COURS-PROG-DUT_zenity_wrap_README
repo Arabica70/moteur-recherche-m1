@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>Instructions</h1>
+Le fichier <b>zenity_wrap.c</b> doit &ecirc;tre plac&eacute; dans le m&ecirc;me r&eacute;pertoire du fichier
+&agrave; compiler et une directive d'inclusion doit &ecirc;tre ajout&eacute;e &agrave; votre fichier : 
+<br/><br/>
+
+<b>
+#include "zenity_wrap.c"
+</b>
+
+<br/><br/>
+Ensuite vous pourrez faire appel aux fonctions fournies (<b>zenity_</b>qqchose) comme
+montr&eacute; dans le fichier <b>zenity_examples.c</b>.
+</body>
+</html>

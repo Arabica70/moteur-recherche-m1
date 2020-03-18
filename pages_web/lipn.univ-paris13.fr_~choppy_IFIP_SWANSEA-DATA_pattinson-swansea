@@ -1,0 +1,71 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the Swansea IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talk at the Swansea IFIP WG1.3 meeting (September 6-8, 2005)</H2>
+</CENTER>
+
+
+<LI>
+Towards a strategy language for Maude
+<BR>------------------------------------------------------
+<BR>Narciso Marti-Oliet
+(joint work with Jose Meseguer and Alberto Verdejo)
+
+We describe a proposal for a strategy language for Maude, to
+control the rewriting process and to be used at the object level instead of
+at the metalevel. We also describe a prototype implementation built over
+Full Maude using the metalevel and the metalanguage facilities provided
+by Maude. We include a series of examples that illustrate the main
+features of the proposed strategy language. This language
+has been put to work in the implementation of operational semantics
+for the ambient calculus and for the parallel functional language Eden.
+
+Related papers:
+
+N. Marti-Oliet, J. Meseguer, and A. Verdejo
+Towards a strategy language for Maude
+In N. Marti-Oliet (ed.),
+Fifth International Workshop on Rewriting Logic and its Applications,
+WRLA 2004, Barcelona, Spain, Part of ETAPS 2004,
+ENTCS 117, Elsevier Science, 417-441, 2005.
+<A HREF="http://www.sciencedirect.com/science/journal/15710661">paper<\A>
+
+F. Rosa-Velardo, C. Segura, and A. Verdejo.
+Typed Mobile Ambients in Maude.
+In H. Cirstea and N. Marti-Oliet (eds.),
+6th International Workshop on Rule-Based Programming,
+RULE 2005, Nara, Japan,
+ENTCS, Elsevier Science, to appear.
+
+M. Hidalgo-Herrero, A. Verdejo, and Y. Ortega-Mallen.
+Looking for Eden through Maude and its strategies.
+In F. Lopez-Fraguas (ed.),
+Fifth Spanish Conference on Programming and  Computer Languages,
+PROLE 2005, Granada, Spain, Part of CEDI 2005.
+
+
+</LI>
+<LI>
+Domain Theoretic Analysis of Separated Hybrid Automata
+<BR>------------------------------------------------------
+<BR>talk by Dirk Pattinson, Ludwig-Maximilians-Universität München 
+
+We define a domain theoretic semantics of non-linear
+hybrid automata, and shows that this denotational semantics is effectively
+computable. For a hybrid automaton H, the semantics assigns to
+every point t in time the set $[| H |](t) of states that H can enter into
+at time t, starting from one if its initial states. The semantic function is
+defined as a least fixpoint in the domain of compact-set valued
+functions of one real variable. This allows to use standard
+domain theoretic techniques to obtain effective algorithms to
+compute the semantic function, resulting in a directly implementable
+framework for the reachability analysis of a large class of
+non-linear hybrid automata. As a by-product, we obtain several new
+computability and continuity results for hybrid automata.
+
+<A HREF="http://www.pst.ifi.lmu.de/~pattinso/Talks/">slides</A>
+</LI>

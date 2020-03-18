@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Arbre généalogique</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Arbre généalogique"/>
+            <meta property="og:url" content="./genealogie.html"/>
+            <meta property="og:description" content="Grâce aux recherches d'un ami, j'ai pu extraire et reconstruire mon arbre généalogique scientifique : on remonte ainsi de moi à mes directeurs de thèse, d'eux à leur directeur de thèse, etc. Contrairement à un arbre généalogique classique, il arrive qu'on ait deux directeurs, mais on en ..."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li class="active">
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./genealogie.html"
+         rel="bookmark"
+         title="Permalink to Arbre généalogique">
+        Arbre généalogique
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>jeu. 06 mars 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/cv.html">CV</a>
+        /
+	<a href="./tag/drole.html">drôle</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Grâce aux recherches d'un ami, j'ai pu extraire et reconstruire mon arbre généalogique scientifique&nbsp;: on remonte ainsi de moi à mes directeurs de thèse, d'eux à leur directeur de thèse, etc.</p>
+<p>Contrairement à un arbre généalogique classique, il arrive qu'on ait
+deux directeurs, mais on en a souvent un seul. Et la consanguinité n'est
+pas aussi condamnée. En France, pour encadrer une thèse, il faut
+posséder une <a href="http://fr.wikipedia.org/wiki/Habilitation_%C3%A0_diriger_des_recherches">habilitation à diriger des
+recherches</a>
+(<acronym>HDR</acronym>). Et pour obtenir son <acronym>HDR</acronym>, il
+est souhaitable d'avoir déjà encadré une thèse (au moins). Ce problème
+d'œuf et de poule se résout par le co-encadrement (un directeur sur le
+papier, et un encadrant non-habilité dans la pratique). Dans mon cas,
+j'ai été réellement co-encadré par mes deux directeurs (ceci arrive
+aussi).</p>
+<p>Cet arbre généalogique a été généré par le format <a href="http://www.graphviz.org/">graphviz</a>.</p>
+<p><a href="./pdf/cv/genealogie.pdf">Arbre généalogique, format PDF</a></p>
+<p><img alt="Arbre généalogique, format PNG" src="./images/cv/genealogie.png" /></p>
+<div class="includefile panel panel-primary"><div class="includefilename panel-heading">genealogie.dot <a href="src/cv/genealogie.dot"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre>digraph G {
+	Mencke-&gt;Wichmannshausen-&gt;Hausen-&gt;Kaestner-&gt;Lichtenberg-&gt;Brandes-&gt;Scherk-&gt;Kummer-&gt;Frobenius-&gt;Landau-&gt;Bernays-&gt;MacLane-&gt;Solovay-&gt;McAloon-&gt;Grigorieff-&gt;Mazoyer-&gt;Dubacq;
+	Kaestner-&gt;Brandes;
+	Kaestner-&gt;Pfaff-&gt;Gauss-&gt;Bessel-&gt;Scherk;
+	Gauss-&gt;Gerling-&gt;Plucker-&gt;Klein-&gt;Lindemann-&gt;Hilbert-&gt;Weyls-&gt;MacLane;
+	Gauss-&gt;Gudermann-&gt;Weierstrass-&gt;Frobenius;
+	Kummer-&gt;Fuchs-&gt;Landau;
+	Langsdorf-&gt;Ohm-&gt;Fuchs;
+	Ohm-&gt;Lipschitz-&gt;Klein;
+	Weigel-&gt;Leibniz-&gt;Bernoulli-&gt;JBernoulli-&gt;Euler-&gt;Lagrange-&gt;Poisson-&gt;Dirichlet-&gt;Lipschitz;
+	Lagrange-&gt;Fourier-&gt;Dirichlet;
+	Mazoyer-&gt;Durand-&gt;Dubacq;
+	Mencke[label=&quot;Otto Mencke&quot;];
+	Grigorieff[label=&quot;Serge Grigorieff&quot;];
+	McAloon[label=&quot;Kenneth Walter McAloon&quot;];
+	Solovay[label=&quot;Robert Solovay&quot;];
+	MacLane[label=&quot;Saunders Mac Lane&quot;];
+	Bernays[label=&quot;Isaak Paul Bernays&quot;];
+	Weyls[label=&quot;Hermann Claus Hugo Weyls&quot;];
+	Landau[label=&quot;Edmund Landau&quot;];
+	Hilbert[label=&quot;David Hilbert&quot;];
+	Lindemann[label=&quot;Carl Louis Ferdinand\nLindemann&quot;];
+	Frobenius[label=&quot;Georg Ferdinand Frobenius&quot;];
+	Klein[label=&quot;Christian Felix Klein&quot;];
+	Fuchs[label=&quot;Lazarus Immanuel Fuchs&quot;];
+	Weierstrass[label=&quot;Karl Theodor Wilhelm\nWeierstraß&quot;];
+	Lipschitz[label=&quot;Rudolf Otto Sigismund\nLipschitz&quot;];
+	Gudermann[label=&quot;Christoph Gudermann&quot;];
+	Kummer[label=&quot;Ernst Eduard Kummer&quot;];
+	Dirichlet[label=&quot;Gustav Peter Lejeune\nDirichlet&quot;];
+	Plucker[label=&quot;Julius Plücker&quot;];
+	Scherk[label=&quot;Heinrich Ferdinand Scherk&quot;];
+	Gerling[label=&quot;Christian Ludwig Gerling&quot;];
+	Ohm[label=&quot;Martin Ohm&quot;];
+	Bessel[label=&quot;Friedrich Wilhelm Bessel&quot;];
+	Brandes[label=&quot;Heinrich Wilhelm Brandes&quot;];
+	Gauss[label=&quot;Carl Friedrich Gauß&quot;];
+	Poisson[label=&quot;Simeon Denis Poisson&quot;];
+	Fourier[label=&quot;Jean-Baptiste Joseph\nFourier&quot;];
+	Pfaff[label=&quot;Johann Friedrich Pfaff&quot;];
+	Langsdorf[label=&quot;Karl Christian\nvon Langsdorf&quot;];
+	Lichtenberg[label=&quot;Georg Christoph\nLichtenberg&quot;];
+	Kaestner[label=&quot;Abraham Gotthelf\nKaestner&quot;];
+	Lagrange[label=&quot;Joseph Louis Lagrange&quot;];
+	Hausen[label=&quot;Christian August Hausen&quot;];
+	JBernoulli[label=&quot;Johann Bernoulli&quot;];
+	Wichmannshausen[label=&quot;Johann Christoph\nWichmannshausen&quot;];
+	Mencke[label=&quot;Otto Mencke&quot;];
+	Bernoulli[label=&quot;Jacob Bernoulli&quot;];
+	Leibniz[label=&quot;Gottfried Wilhelm Leibniz&quot;];
+	Euler[label=&quot;Leonhard Euler&quot;];
+	Weigel[label=&quot;Erhard Weigel&quot;];
+	Mazoyer[label=&quot;Jacques Mazoyer&quot;];
+	Durand[label=&quot;Bruno Durand&quot;];
+	Dubacq[label=&quot;Jean-Christophe\nDubacq&quot;];
+}
+</pre></div>
+
+
+</div></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

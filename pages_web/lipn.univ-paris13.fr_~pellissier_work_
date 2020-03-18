@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Research</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+
+  </head>
+  <body>
+    
+    <div id="main">
+      <div id="content">
+	
+<h3 id="international-conferences-with-reading-comitee">International Conferences with Reading Comitee</h3>
+<ul>
+  <li>
+<a href="../articles/Glueability.pdf">Glueability of resource proof-structures: inverting the Taylor
+expansion</a><br>
+Giulio Guerrieri, Luc Pellissier, and Lorenzo Tortora de Falco, CSL 2020</li>
+  <li>
+<a href="../articles/TaylorPullback.pdf">Proof-net as graph, Taylor expansion as
+pullback</a><br>
+Giulio Guerrieri, Luc Pellissier, and Lorenzo Tortora de Falco, WoLLIC 2019</li>
+  <li>
+<a href="../articles/IntersectionTypes.pdf">Approximations, Fibrations and Intersection Type Systems</a><br>
+Damiano Mazza, Luc Pellissier, and Pierre Vial, POPL 2018</li>
+  <li>
+<a href="https://hal.archives-ouvertes.fr/hal-00998847">Computing (Connected) Proof-Structures from Their Taylor Expansion</a><br>
+Giulio Guerrieri, Luc Pellissier, and Lorenzo Tortora de Falco, FSCD 2016</li>
+  <li>
+<a href="https://hal.archives-ouvertes.fr/hal-01183520">A Functorial Bridge Between the Infinitary Affine Lambda-Calculus and Linear Logic</a><br>
+Damiano Mazza and Luc Pellissier, ICTAC 2015</li>
+</ul>
+
+<h3 id="preprints">Preprints</h3>
+<ul>
+  <li>
+<a href="https://hal.archives-ouvertes.fr/hal-01921942">PRAMs over integers do not compute maxflow  efficiently</a><br>
+Luc Pellissier and Thomas Seiller.</li>
+  <li>
+<a href="../articles/Cbpv.pdf">Intersection Types for a strong Call-by-Push Value: normalisations and
+solvability</a><br>
+Luc Pellissier</li>
+</ul>
+
+<h3 id="in-preparation">In preparation</h3>
+<ul>
+  <li>Linear Implicative Algebras</li>
+</ul>
+
+
+      </div>
+    </div>
+    <!-- <div id='logo'> -->
+    <!--   <a href=/index.html> -->
+    <!-- 	<img alt='logo' src='/logo-logica.png' /> -->
+    <!--   </a> -->
+    <!-- </div> -->
+    <div id="sidebar">
+      <div id="logo">
+	<a href="../index.html">
+	  <h2>Luc Pellissier</h2>
+	  <img alt="Luc Pellissier" height="100" src="../Luc.jpg">
+	</a>
+	<!--   <a href="https://www.fing.edu.uy/imerl/inicio"> -->
+	<!--     <img alt='imerl' src='/logo-imerl.png' height='60' /> -->
+	<!--   </a>&ensp;&ensp;&ensp; -->
+	<!--   <a href="https://www.fing.edu.uy"> -->
+	<!--     <img alt='fing' src='/logo-fing.png' height='60'/> -->
+	<!--   </a> -->
+      </div>
+      <ul>
+	<li><a href=".">Research</a></li>
+	<li><a href="../teaching">Teaching</a></li>
+        <li><a href="../documents">Documents</a></li>
+	<li><a href="../links">Links</a></li>
+    </ul>
+</div>
+    <!-- <div id="footer"> -->
+    <!--   Equipo de Lógica — IMERL<br> -->
+    <!--   Julio Herrera y Reissig 565 — 11300 Montevideo <br> -->
+    <!--   Uruguay -->
+    <!-- </div> -->
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Système: serveur SSH+Apache HTTPS sur le port 443</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Système: serveur SSH+Apache HTTPS sur le port 443"/>
+            <meta property="og:url" content="./systeme-serveur-sshapache-https-sur-le-port-443.html"/>
+            <meta property="og:description" content="De récentes protections mises en place ont eu pour effet l'interdiction de connexions sortantes hors un trafic parfaitement identifié (HTTP, HTTPS) depuis le lieu de travail de J. Or, pour son travail, elle utilisait régulièrement des connexions ssh vers notre serveur commun. Reste la solution d'utiliser un port ..."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li class="active">
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./systeme-serveur-sshapache-https-sur-le-port-443.html"
+         rel="bookmark"
+         title="Permalink to Système: serveur SSH+Apache HTTPS sur le port 443">
+        Système: serveur SSH+Apache HTTPS sur le port 443
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>lun. 07 octobre 2013
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/systeme.html">système</a>
+        /
+	<a href="./tag/reseau.html">réseau</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>De récentes <em>protections</em> mises en place ont eu pour effet
+l'interdiction de connexions sortantes hors un trafic parfaitement
+identifié (HTTP, HTTPS) depuis le lieu de travail de J. Or, pour son
+travail, elle utilisait régulièrement des connexions ssh vers notre
+serveur commun.</p>
+<p>Reste la solution d'utiliser un port autorisé pour y faire circuler les
+connexions SSH. Le port 443 nous tend les bras (pas de proxys, en plus).
+Mais bon, le port 443 est déjà utilisé sur le serveur, par un Apache.</p>
+<p>Qu'à cela ne tienne! Il existe une solution,
+<a href="http://www.rutschle.net/tech/sslh.shtml">sslh</a> qui permet de
+multiplexer quelques protocoles connus sur un seul port. Vu
+l'utilisation que nous en faisons (pas de haute performance), ça sera
+très bien.</p>
+<p>L'installation sur une debian est simplissime. Installer le paquet
+<code>sslh</code>, arrêter apache, modifier les fichiers suivants:</p>
+<div class="includefile panel panel-primary"><div class="includefilename panel-heading">sslh.diff <a href="src/hack/sslh.diff"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre><span class="gh">diff --git a/apache2/ports.conf b/apache2/ports.conf</span>
+<span class="gh">index 0693a44..76242fe 100644</span>
+<span class="gd">--- a/apache2/ports.conf</span>
+<span class="gi">+++ b/apache2/ports.conf</span>
+<span class="gu">@@ -14,7 +14,7 @@ Listen 80</span>
+     # to &lt;VirtualHost *:443&gt;
+     # Server Name Indication for SSL named virtual hosts is currently not
+     # supported by MSIE on Windows XP.
+<span class="gd">-    Listen 443</span>
+<span class="gi">+    Listen 127.0.0.1:443</span>
+ &lt;/IfModule&gt;
+ 
+ &lt;IfModule mod_gnutls.c&gt;
+<span class="gh">diff --git a/default/sslh b/default/sslh</span>
+<span class="gh">index 48b8fa4..ce6ad3a 100644</span>
+<span class="gd">--- a/default/sslh</span>
+<span class="gi">+++ b/default/sslh</span>
+<span class="gu">@@ -9,9 +9,9 @@</span>
+ # Once configuration ready, you *must* set RUN to yes here
+ # and try to start sslh (standalone mode only)
+ 
+<span class="gd">-RUN=no</span>
+<span class="gi">+RUN=yes</span>
+ 
+ # binary to use: forked (sslh) or single-thread (sslh-select) version
+ DAEMON=/usr/sbin/sslh
+ 
+<span class="gd">-DAEMON_OPTS=&quot;--user sslh --listen 0.0.0.0:443 --ssh 127.0.0.1:22 --ssl 127.0.0.1:443 --pidfile /var/run/sslh/sslh.pid&quot;</span>
+<span class="gi">+DAEMON_OPTS=&quot;--user sslh --listen 192.168.1.42:443 --ssh 127.0.0.1:22 --ssl 127.0.0.1:443 --pidfile /var/run/sslh/sslh.pid&quot;</span>
+</pre></div>
+
+
+</div></div>
+
+<p>On redémarre les services par:</p>
+<div class="highlight"><pre>bash# service sslh start
+bash# service apache2 restart
+</pre></div>
+
+
+<p>J'ai choisi <code>inetd</code> parce que au final, je ne
+suis pas sûr de me connecter si souvent que ça au serveur (et surtout,
+pas en rafale à 1000 connexions par seconde).</p>
+<p>Voici les fichiers complets:</p>
+<div class="includefile panel panel-primary"><div class="includefilename panel-heading">/etc/apache2/ports.conf <a href="src/hack/ports.conf"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre># If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default
+# This is also true if you have upgraded from before 2.2.9-3 (i.e. from
+# Debian etch). See /usr/share/doc/apache2.2-common/NEWS.Debian.gz and
+# README.Debian.gz
+
+NameVirtualHost *:80
+Listen 80
+
+<span class="nt">&lt;IfModule</span> <span class="err">mod_ssl.c</span><span class="nt">&gt;</span>
+    # If you add NameVirtualHost *:443 here, you will also have to change
+    # the VirtualHost statement in /etc/apache2/sites-available/default-ssl
+    # to <span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
+    # Server Name Indication for SSL named virtual hosts is currently not
+    # supported by MSIE on Windows XP.
+    Listen 127.0.0.1:443
+<span class="nt">&lt;/IfModule&gt;</span>
+
+<span class="nt">&lt;IfModule</span> <span class="err">mod_gnutls.c</span><span class="nt">&gt;</span>
+    Listen 443
+<span class="nt">&lt;/IfModule&gt;</span>
+</pre></div>
+
+
+</div></div>
+
+<div class="includefile panel panel-primary"><div class="includefilename panel-heading">/etc/default/sslh <a href="src/hack/sslh"><span class="glyphicon glyphicon-download-alt pull-right">Téléchargement</span></a></div><div class="includedfile panel-body">
+
+<div class="highlight"><pre># Default options for sslh initscript
+# sourced by /etc/init.d/sslh
+
+# Disabled by default, to force yourself
+# to read the configuration:
+# - /usr/share/doc/sslh/README.Debian (quick start)
+# - /usr/share/doc/sslh/README, at &quot;Configuration&quot; section
+# - sslh(8) via &quot;man sslh&quot; for more configuration details.
+# Once configuration ready, you *must* set RUN to yes here
+# and try to start sslh (standalone mode only)
+
+RUN=yes
+
+# binary to use: forked (sslh) or single-thread (sslh-select) version
+DAEMON=/usr/sbin/sslh
+
+DAEMON_OPTS=&quot;--user sslh --listen 192.168.1.42:443 --ssh 127.0.0.1:22 --ssl 127.0.0.1:443 --pidfile /var/run/sslh/sslh.pid&quot;
+</pre></div>
+
+
+</div></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

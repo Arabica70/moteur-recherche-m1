@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+<!-- 2016-09-14 mer. 18:17 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Analyse de contenu : Introduction au langage python</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Joseph Le Roux" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Analyse de contenu : Introduction au langage python</h1>
+<div id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline10">1. Généralités</a>
+<ul>
+<li><a href="#orgheadline4">1.1. Pourquoi Python ?</a></li>
+<li><a href="#orgheadline9">1.2. Python</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline16">2. Exemples</a>
+<ul>
+<li><a href="#orgheadline11">2.1. "bonjour tout le monde"</a></li>
+<li><a href="#orgheadline13">2.2. Afficher un tableau</a></li>
+<li><a href="#orgheadline14">2.3. Définir une fonction</a></li>
+<li><a href="#orgheadline15">2.4. Tri rapide \\ listes en compréhension</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline42">3. En détails</a>
+<ul>
+<li><a href="#orgheadline17">3.1. <i>Lancer</i> un programme python</a></li>
+<li><a href="#orgheadline22">3.2. Les types</a></li>
+<li><a href="#orgheadline25">3.3. Listes</a></li>
+<li><a href="#orgheadline27">3.4. Listes (2)</a></li>
+<li><a href="#orgheadline31">3.5. Passage par valeur / passage par référence</a></li>
+<li><a href="#orgheadline33">3.6. Chaînes</a></li>
+<li><a href="#orgheadline35">3.7. Chaînes (2) \\ =join, split, strip, upper, lower</a></li>
+<li><a href="#orgheadline37">3.8. Fichiers</a></li>
+<li><a href="#orgheadline38">3.9. Expressions régulières</a></li>
+<li><a href="#orgheadline39">3.10. Expressions régulières (2)</a></li>
+<li><a href="#orgheadline40">3.11. Expressions régulières (3)</a></li>
+<li><a href="#orgheadline41">3.12. Expressions régulières (4) \\ groupement</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">1</span> Généralités</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">1.1</span> Pourquoi Python ?</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><ol class="org-ol"><li><a id="orgheadline1"></a>Langage Populaire<br  /><div class="outline-text-4" id="text-1-1-1">
+<p>
+Utile pour tout programmeur
+</p>
+</div></li>
+
+<li><a id="orgheadline2"></a>Facile à apprendre<br  /><div class="outline-text-4" id="text-1-1-2">
+<p>
+Cours d'algo en python (IUT Villetaneuse)
+</p>
+</div></li>
+
+<li><a id="orgheadline3"></a>Code facile à lire/écrire/maintenir<br  /><div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>plus concis par rapport à java/C++</li>
+<li>pas de listes de mots clés à apprendre</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">1.2</span> Python</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><ol class="org-ol"><li><a id="orgheadline5"></a>Langage de scripts<br  /><div class="outline-text-4" id="text-1-2-1">
+<p>
+comme perl, bash, ruby
+</p>
+</div></li>
+
+<li><a id="orgheadline6"></a>Langage impératifs<br  /><div class="outline-text-4" id="text-1-2-2">
+<p>
+comme le C, go, pascal, fortran
+</p>
+</div></li>
+
+<li><a id="orgheadline7"></a>avec une couche d'objets<br  /><div class="outline-text-4" id="text-1-2-3">
+<p>
+comme java
+</p>
+</div></li>
+
+<li><a id="orgheadline8"></a>et des constructions fonctionnelles<br  /><div class="outline-text-4" id="text-1-2-4">
+<p>
+scala, haskell, ML
+</p>
+</div></li></ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><span class="section-number-2">2</span> Exemples</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">2.1</span> "bonjour tout le monde"</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+1 ligne !
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">print 'bonjour tout le monde'
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">2.2</span> Afficher un tableau</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python">for i in range(0,len(tab)):
+    print tab[i]
+</pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre class="src src-python">for i in range(len(tab)):
+    print tab[i]
+</pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre class="src src-python">for e in tab:
+    print e
+</pre>
+</div>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline12"></a>Tabulation !!!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_alertblock">B_alertblock</span></span><br  /><div class="outline-text-4" id="text-2-2-1">
+<p>
+Les tabulations sont obligatoires !
+</p>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">2.3</span> Définir une fonction</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+
+<pre class="src src-python"># definition
+def print_hello(user):
+    print 'hello ' + user
+
+# utilisation
+print_hello('Sam')
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-python">def retourne(tab): # inverse un tableau
+    if tab == []:
+        return []
+    else:  # concatenation de
+        # 1. retourne appliquee a tab sans le 1er element
+        # 2. le premier element de tab
+        return retourne(tab[1:]) + tab[0]
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">2.4</span> Tri rapide \\ listes en compréhension</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+
+<pre class="src src-python">def tri_rapide(tab):
+    if tab == []:
+        return []
+    else:
+        pivot = tab[0]
+        # on selectionne les elements plus petits que pivot
+        pp = [x for x in tab if x &lt; pivot]
+        # on selectionne les elements plus grands que pivot
+        pg = [x for x in tab if x &gt; pivot]
+        return tri_rapide(pp) + [pivot] + tri_rapide(pg)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline42" class="outline-2">
+<h2 id="orgheadline42"><span class="section-number-2">3</span> En détails</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">3.1</span> <i>Lancer</i> un programme python</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+3 façons :
+</p>
+
+<ol class="org-ol">
+<li>Utiliser l'interpréteur</li>
+
+<li>Dans un fichier <code>foo.py</code>
+<ul class="org-ul">
+<li>lancer la commande
+<ul class="org-ul">
+<li><code>python foo.py</code></li>
+</ul></li>
+</ul></li>
+
+<li>Faire un exécutable
+<ul class="org-ul">
+<li>ajouter la première ligne
+<ul class="org-ul">
+<li><code>#! /usr/bin/python</code></li>
+</ul></li>
+
+<li>rendre <code>foo.py</code> exécutable
+<ul class="org-ul">
+<li><code>chmod +x foo.py</code></li>
+</ul></li>
+
+<li>le lancer directement
+<ul class="org-ul">
+<li><code>./foo.py</code></li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgheadline22" class="outline-3">
+<h3 id="orgheadline22"><span class="section-number-3">3.2</span> Les types</h3>
+<div class="outline-text-3" id="text-3-2">
+</div><ol class="org-ol"><li><a id="orgheadline18"></a>types atomiques<br  /><div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li><code>int, float, bool, string, list</code> &hellip;</li>
+</ul>
+</div></li>
+
+
+<li><a id="orgheadline19"></a>Entiers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span>&#xa0;<span class="BMCOL">BMCOL</span></span><br  /><div class="outline-text-4" id="text-3-2-2">
+<pre class="example">
+&gt;&gt;&gt; a = 2
+&gt;&gt;&gt; b = 8
+&gt;&gt;&gt; a * b
+16
+&gt;&gt;&gt; type(3)
+&lt;type 'int'&gt;
+&gt;&gt;&gt; a *= 3
+&gt;&gt;&gt; a
+6
+</pre>
+</div></li>
+
+
+<li><a id="orgheadline20"></a>Flottants&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span>&#xa0;<span class="BMCOL">BMCOL</span></span><br  /><div class="outline-text-4" id="text-3-2-3">
+<pre class="example">
+&gt;&gt;&gt; c = 2.8
+&gt;&gt;&gt; c
+2.8
+&gt;&gt; type (c+a)
+&lt;type 'float'&gt;
+&gt;&gt;&gt; 5/2
+2
+&gt;&gt;&gt; 5/2.
+2.5
+</pre>
+</div></li>
+
+
+<li><a id="orgheadline21"></a>Chaînes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span>&#xa0;<span class="BMCOL">BMCOL</span></span><br  /><div class="outline-text-4" id="text-3-2-4">
+<pre class="example">
+&gt;&gt;&gt; d = 'salut'
+&gt;&gt;&gt; type(d)
+&lt;type 'str'&gt;
+&gt;&gt; s + " toto"
+'salut toto
+&gt;&gt;&gt; len(s)
+5
+&gt;&gt;&gt; s[0]
+'s'
+&gt;&gt;&gt; s[-1]
+'t'
+</pre>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline25" class="outline-3">
+<h3 id="orgheadline25"><span class="section-number-3">3.3</span> Listes</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><ol class="org-ol"><li><a id="orgheadline23"></a>tableaux hétérogènes de taille variable&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_block">B_block</span></span><br  /><div class="outline-text-4" id="text-3-3-1">
+<pre class="example">
+&gt;&gt;&gt; l = [1, 'python', [2.5, '4']]
+</pre>
+</div></li>
+
+
+<li><a id="orgheadline24"></a>fonctions 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-3-2">
+<pre class="example">
+&gt;&gt;&gt; len(l)
+3
+&gt;&gt;&gt; a[2][1]
+'4'
+&gt;&gt;&gt; a[3]
+IndexError
+&gt;&gt;&gt; a[-2]
+'python'
+&gt;&gt;&gt; a[1:2]
+['python']
+</pre>
+</div></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline27" class="outline-3">
+<h3 id="orgheadline27"><span class="section-number-3">3.4</span> Listes (2)</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><ol class="org-ol"><li><a id="orgheadline26"></a><code>extend</code> et <code>append</code> modifient la liste !&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-4-1">
+<pre class="example">
+&gt;&gt;&gt; l = [1, 'python', [2.5, '4']]
+&gt;&gt;&gt; l + [2]
+[1, 'python', [2.5, '4'], 2]
+&gt;&gt;&gt; l.extend([3, true])
+&gt;&gt;&gt; l
+[1, 'python', [2.5, '4'], 3, True]
+&gt;&gt;&gt; l.append('5')
+&gt;&gt;&gt; l
+[1, 'python', [2.5, '4'], 3, True, 5]
+&gt;&gt;&gt; l[2].append('ok')
+&gt;&gt;&gt; l
+[1, 'python', [2.5, '4', 'ok'], 3, True, 5]
+&gt;&gt;&gt; [1, 2, 3] *2
+[1, 2, 3, 1, 2, 3]
+</pre>
+</div></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31"><span class="section-number-3">3.5</span> Passage par valeur / passage par référence</h3>
+<div class="outline-text-3" id="text-3-5">
+</div><ol class="org-ol"><li><a id="orgheadline28"></a>Pour les types atomiques : <b>par valeur</b><br  /></li>
+
+<li><a id="orgheadline29"></a>Pour les types complexes : <b>par référence</b><br  /></li>
+
+<li><a id="orgheadline30"></a>comparaisons&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-5-3">
+<pre class="example">
+&gt;&gt;&gt; a = b = [1,2]
+&gt;&gt;&gt; a == b
+True
+&gt;&gt;&gt; a is b
+True
+&gt;&gt;&gt; b[1] = 5
+&gt;&gt;&gt; a
+[1,5]
+&gt;&gt;&gt; a = 4
+&gt;&gt;&gt; b
+[1,5]
+&gt;&gt;&gt; a is b
+False
+</pre>
+</div></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline33" class="outline-3">
+<h3 id="orgheadline33"><span class="section-number-3">3.6</span> Chaînes</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+les chaînes sont <i>immutables</i> !
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline32"></a>exemples&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-6-1">
+<pre class="example">
+&gt;&gt;&gt; 'une chaine'
+'une chaine'
+&gt;&gt;&gt; 'l'alcool'
+SyntaxError
+&gt;&gt;&gt; "l'alcool"
+"l'alcool"
+&gt;&gt;&gt; s = "qwerty"
+&gt;&gt;&gt; s[0] = 'G'
+TypeError
+</pre>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><span class="section-number-3">3.7</span> Chaînes (2) \\ =join, split, strip, upper, lower</h3>
+<div class="outline-text-3" id="text-3-7">
+</div><ol class="org-ol"><li><a id="orgheadline34"></a>Exemples&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-7-1">
+<pre class="example">
+&gt;&gt;&gt; s = "Un exemple de chaine de caracteres.\n"
+&gt;&gt;&gt; mots = s.split()
+&gt;&gt;&gt; mots
+['Un, 'exemple', 'de', 'chaine', 'de', 'caracteres.']
+&gt;&gt;&gt; s.strip()
+"Un exemple de chaine de caracteres."
+&gt;&gt;&gt; ' '.join(words)
+"Un exemple de chaine de caracteres."
+s.upper()
+"UN EXEMPLE DE CHAINE DE CARACTERES.\n"
+</pre>
+</div></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline37" class="outline-3">
+<h3 id="orgheadline37"><span class="section-number-3">3.8</span> Fichiers</h3>
+<div class="outline-text-3" id="text-3-8">
+</div><ol class="org-ol"><li><a id="orgheadline36"></a>exemples&#xa0;&#xa0;&#xa0;<span class="tag"><span class="B_exampleblock">B_exampleblock</span></span><br  /><div class="outline-text-4" id="text-3-8-1">
+<div class="org-src-container">
+
+<pre class="src src-python">from sys import *
+for line in stdin:
+  print line.split()
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-python"># copie de fichier
+f = open("fic.in", "rt")
+g = open("fic.out", "wt")
+for line in f:
+  print &gt;&gt; g, line,
+g.close()
+</pre>
+</div>
+</div></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline38" class="outline-3">
+<h3 id="orgheadline38"><span class="section-number-3">3.9</span> Expressions régulières</h3>
+<div class="outline-text-3" id="text-3-9">
+<div class="org-src-container">
+
+<pre class="src src-python"># pat : expression reguliere
+# str : chaine de la recherche
+# retourne la premiere occurrence trouvee
+match = re.search(pat, str)
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-python">str = 'an example word:cat!!'
+match = re.search(r'word:\w\w\w', str)
+if match:
+    print 'found', match.group() ## 'found word:cat'
+else:
+    print 'did not find'
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline39" class="outline-3">
+<h3 id="orgheadline39"><span class="section-number-3">3.10</span> Expressions régulières (2)</h3>
+<div class="outline-text-3" id="text-3-10">
+<div class="org-src-container">
+
+<pre class="src src-python">## Si trouve, match.group() est le texte trouve
+match = re.search(r'iii', 'piiig')
+# =&gt; trouve, match.group() == "iii"
+match = re.search(r'igs', 'piiig')
+# =&gt;  pas trouve, match == None
+
+## . = tout caractere sauf  \n
+match = re.search(r'..g', 'piiig')
+# =&gt;  trouve, match.group() == "iig"
+
+## \d = chiffre, \w = lettre
+match = re.search(r'\d\d\d', 'p123g')
+# =&gt;  trouve, match.group() == "123"
+match = re.search(r'\w\w\w', '@@abcd!!')
+# =&gt;  trouve, match.group() == "abc"
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgheadline40" class="outline-3">
+<h3 id="orgheadline40"><span class="section-number-3">3.11</span> Expressions régulières (3)</h3>
+<div class="outline-text-3" id="text-3-11">
+<div class="org-src-container">
+
+<pre class="src src-python">## Une liste contenant des adresses
+str = 'purple alice@google.com, blah monkey bob@abc.com blah dishwasher'
+
+## re.findall() retourne la liste des adresses trouvees
+emails = re.findall(r'[\w\.-]+@[\w\.-]+', str)
+## ['alice@google.com', 'bob@abc.com']
+for email in emails:
+  print email
+</pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre class="src src-python"># ouvrir le fichier
+f = open('test.txt', 'r')
+strings = re.findall(r'some pattern', f.read())
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline41" class="outline-3">
+<h3 id="orgheadline41"><span class="section-number-3">3.12</span> Expressions régulières (4) \\ groupement</h3>
+<div class="outline-text-3" id="text-3-12">
+<div class="org-src-container">
+
+<pre class="src src-python">str = 'purple alice-b@google.com monkey dishwasher'
+match = re.search('([\w.-]+)@([\w.-]+)', str)
+if match:
+  print match.group()   # 'alice-b@google.com' (le match)
+  print match.group(1)  # 'alice-b' (le login, group 1)
+  print match.group(2)  # 'google.com' (le serveur, group 2)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2014</p>
+<p class="author">Auteur: Joseph Le Roux</p>
+<p class="date">Created: 2016-09-14 mer. 18:17</p>
+<p class="creator">Emacs 24.4.50.1 (Org mode 8.2.7c)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<B>Alignement avec des familles de s&ecaute;quences
+    prot&eacute;iques</B>
+Pierre Nicod&egrave;me
+(1997)
+
+<h2>R&eacute;sum&eacute;&nbsp;:</h2>
+
+<P>
+Nous &eacute;tudions les probl&egrave;mes math&eacute;matiques et algorithmiques
+li&eacute;s &agrave; l'alignement de s&eacute;quences.
+Un mod&egrave;le   construit sur un sch&eacute;ma
+de scores additif  est utilis&eacute; par
+les biologistes pour comparer entre elles des s&eacute;quences d'ADN ou des
+s&eacute;quences de prot&eacute;ines. Dans ce mod&egrave;le un score est associ&eacute; &agrave; 
+l'appariement de deux lettres de l'alphabet consid&eacute;r&eacute;.
+<P>
+Karlin et Altschul ont formalis&eacute;
+cette approche au moyen d'un  mod&egrave;le de marche al&eacute;atoire.
+La loi asymptotique du score de l'alignement optimal est une loi
+ des valeurs extr&ecircumflex;mes. Le mod&egrave;le  utilise
+la factorisation de Wiener-Hopf et l'identit&eacute; de Spitzer.
+Nous donnons une d&eacute;monstration simple dans le cas o&ugrave; les
+incr&eacute;ments sont discrets, ce qui est le cas des applications
+biologiques.
+<P>
+Nous &eacute;tudions ensuite 
+le cas o&ugrave; l'on cherche &agrave; aligner un alignement
+multiple,
+compos&eacute; d'un ensemble de s&eacute;quences pr&eacute;alablement align&eacute;es,
+et une s&eacute;quence. Nous consid&eacute;rons alors le cas des prot&eacute;ines et
+construisons des graphes d'alignement qui mod&eacute;lisent le niveau de
+conservation des acides amin&eacute;s pour les positions de l'alignement
+multiple.
+<P>
+L'alignement optimal recherch&eacute; correspond &agrave; pr&eacute;sent &agrave; un
+chemin de score maximal dans ces graphes, pour un choix donn&eacute; des 
+positions relatives de l'alignement multiple et de la s&eacute;quence.
+Nous proposons un algorithme qui est une extension de l'algorithme
+d'alignement s&eacute;quence &agrave; s&eacute;quence BLAST. Nous v&eacute;rifions
+exp&eacute;rimentalement que la loi des valeurs extr&ecircumflex;mes reste v&eacute;rifi&eacute;e dans ce
+cadre &eacute;tendu. Nous comparons l'efficacit&eacute; de ce nouvel algorithme
+avec celles d'algorithmes classiques pour la recherche de similarit&eacute;s.
+<P>
+Nous appliquons les r&eacute;sultats obtenus &agrave; la base de familles de
+s&eacute;quences prot&eacute;iques ProDom. Nous utilisons l'approche de Waterman
+et Vingron pour montrer  que la
+m&eacute;thode des approximations Poissonniennes s'applique tr&egrave;s 
+efficacement aux
+calibrations probabilistes des familles de ProDom pour cet
+algorithme.
+
+<h2>Mots-Cl&eacute;s:</h2>
+  Alignement de s&eacute;quences.   Factorisation de Wiener-Hopf.
+  Familles de prot&eacute;ines.   Algorithme BLAST.
+  Alignement multiple.   Base ProDom.
+  Approximations de Poisson.   Calibrations probabilistes.

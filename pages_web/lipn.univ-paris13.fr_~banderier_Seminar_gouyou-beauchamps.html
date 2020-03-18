@@ -1,0 +1,1159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>Enumeration of Remarkable Families of Polyominoes</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea gouyou -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>Enumeration of Remarkable Families of Polyominoes</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Dominique Gouyou-Beauchamps</FONT></I></FONT><BR>
+<BR>
+
+ LRI, Université de Paris Sud (Orsay)<BR>
+<BR>
+<A HREF="../../seminars/seminars.html">Algorithms Seminar</A><BR>
+<BR>
+Mars 2, 1998<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</A>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="gouyou.ps">postscript</A> and in <A HREF="gouyou.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+Polyominoes are objects sprung from recreative mathematics and from different 
+domains in physics (such as Ising's model;
+its generalisation, Pott's model; directed percolation and branched
+polymer problems)&nbsp;[<A HREF="#Hakim"><CITE>14</CITE></A><CITE>, </CITE><A HREF="#Privman2"><CITE>20</CITE></A><CITE>, </CITE><A HREF="#Privman1"><CITE>21</CITE></A><CITE>, </CITE><A HREF="#Viennot"><CITE>25</CITE></A>]. 
+Two great classes of problems relative to polyominoes are
+<UL>
+<LI>
+ tiling problems;
+
+<LI> enumeration problems.
+</UL>
+David Klarner began to study polyomino tilings in 1965. 
+There are still open questions in this 
+field&nbsp;[<A HREF="#Grunbaum"><CITE>12</CITE></A><CITE>, </CITE><A HREF="#Klarner81"><CITE>15</CITE></A><CITE>, </CITE><A HREF="#Klarner65"><CITE>16</CITE></A><CITE>, </CITE><A HREF="#Klarner"><CITE>17</CITE></A>], however
+several (un)decidability results are known&nbsp;[<A HREF="#Nivat"><CITE>1</CITE></A><CITE>, </CITE><A HREF="#Berger"><CITE>2</CITE></A>]. 
+What is more, aperiodic tilings are today a new spring of inspiration in
+noncommutative geometry&nbsp;[<A HREF="#Connes"><CITE>8</CITE></A>].
+In the remainder, we only consider enumeration problems.
+Exact asymptotics of polyominoes on a square lattice is still unknown. 
+Accurate results are then limited to special 
+families of polyominoes, for which we know a generative grammar. We are 
+therefore brought back to the study of a functional equation which 
+defines the generating function. Nevertheless, obtaining of a closed 
+form (<EM>i.e.</EM>, an explicit solution) or even any form of solution 
+often remains difficult. We will show several methods to obtain them.<BR>
+<BR>
+<!--TOC section Definitions-->
+
+<H2>2&nbsp;&nbsp; Definitions</H2><!--SEC END -->
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+ <IMG SRC="gouyou001.gif"></DIV>
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>A polyomino is a connected set on a lattice.
+A polyomino is said to be convex if it is both column-convex and row-convex.
+A polyomino is said to be directed if, for each couple of points of the 
+polyomino, there exists
+a path only made of North and West steps which links this two points.<BR>
+<BR>
+One can find in previous summaries&nbsp;[<A HREF="#sem2"><CITE>4</CITE></A><CITE>, </CITE><A HREF="#sem3"><CITE>13</CITE></A>] how to obtain 
+functional equations satisfied by the generating functions 
+(most of the methods are tricky decompositions&nbsp;[<A HREF="#mbm"><CITE>5</CITE></A>] of polyominoes
+into very regular smaller pieces, such as ``strata'' or ``wasp-waist'' 
+decompositions). For results in dimension greater than&nbsp;2, 
+see&nbsp;[<A HREF="#mbm3d2"><CITE>3</CITE></A><CITE>, </CITE><A HREF="#mbm3d1"><CITE>6</CITE></A>].<BR>
+<BR>
+<!--TOC section Differential Equation Method-->
+
+<H2>3&nbsp;&nbsp; Differential Equation Method</H2><!--SEC END -->
+Enumeration of convex polyominoes with perimeter 2<I>n</I> on the honeycomb 
+(or ``hexagonal'') lattice can be solved with this method.
+Let <I>P</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> the number of such polyominoes with perimeter 2<I>n</I>+6, 
+Enting&nbsp;[<A HREF="#Enting"><CITE>10</CITE></A>] gives the following result.
+The generating function <I>P</I>(<I>x</I>)=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>n</I>=0</FONT></SUB><SUP><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></SUP><I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB><I>x</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> satisfies
+the differential equation
+<DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><I>P</I>''(<I>x</I>) (<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>-7<I>x</I><SUP><FONT SIZE=2>4</FONT></SUP>-2<I>x</I><SUP><FONT SIZE=2>5</FONT></SUP>+12<I>x</I><SUP><FONT SIZE=2>6</FONT></SUP>+8<I>x</I><SUP><FONT SIZE=2>7</FONT></SUP>)+<I>P</I>'(<I>x</I>)(-11<I>x</I>-4<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+53<I>x</I><SUP><FONT SIZE=2>3</FONT></SUP>+22<I>x</I><SUP><FONT SIZE=2>4</FONT></SUP>-40<I>x</I><SUP><FONT SIZE=2>5</FONT></SUP>-16<I>x</I><SUP><FONT SIZE=2>6</FONT></SUP>)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>+<I>P</I>(<I>x</I>)(20+22<I>x</I>-52<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>-20<I>x</I><SUP><FONT SIZE=2>3</FONT></SUP>-16<I>x</I><SUP><FONT SIZE=2>4</FONT></SUP>-32<I>x</I><SUP><FONT SIZE=2>5</FONT></SUP>)=20+22<I>x</I>-52<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+8<I>x</I><SUP><FONT SIZE=2>3</FONT></SUP>+4<I>x</I><SUP><FONT SIZE=2>4</FONT></SUP>+8<I>x</I><SUP><FONT SIZE=2>5</FONT></SUP></TD>
+</TR></TABLE></DIV>
+which leads to
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I>(<I>x</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1-2<I>x</I>+<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>-<I>x</I><SUP><FONT SIZE=2>4</FONT></SUP>-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> (1-4<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(1+<I>x</I>)<SUP><FONT SIZE=2>2</FONT></SUP> (1-2<I>x</I>)<SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+Let us mention that the package GFUN in Maple is able to make
+such translations (recurrences, differential equations, algebraic equations, 
+ closed forms), see&nbsp;[<A HREF="#salvy"><CITE>23</CITE></A>].<BR>
+<BR>
+<!--TOC section Temperley's Method-->
+
+<H2>4&nbsp;&nbsp; Temperley's Method</H2><!--SEC END -->
+
+We are going to illustrate Temperley's method&nbsp;[<A HREF="#Temperley"><CITE>24</CITE></A>] with the
+enumeration of column convex polyominoes (on a square lattice) 
+with respect to perimeter&nbsp;[<A HREF="#Brak"><CITE>7</CITE></A>].
+The generating function <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>G</I>(<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> 2</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>y</I><SUP><FONT SIZE=2>2<I>n</I></FONT></SUP></TD>
+</TR></TABLE></DIV> can be rewritten as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>G</I>(<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>r</I> <FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>(<I>y</I>)</TD>
+</TR></TABLE></DIV> where the <I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB> satisfy a recurrence 
+<DIV ALIGN=center><I>g</I><SUB><FONT SIZE=2><I>r</I>+4</FONT></SUB>-2(1+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)<I>g</I><SUB><FONT SIZE=2><I>r</I>+3</FONT></SUB>+(1+3<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>+3<I>y</I><SUP><FONT SIZE=2>4</FONT></SUP>-<I>y</I><SUP><FONT SIZE=2>6</FONT></SUP>)<I>g</I><SUB><FONT SIZE=2><I>r</I>+2</FONT></SUB>-2<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>(1+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)<I>g</I><SUB><FONT SIZE=2><I>r</I>+1</FONT></SUB>+<I>y</I><SUP><FONT SIZE=2>4</FONT></SUP><I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>=0</DIV>
+and <I>g</I><SUB><FONT SIZE=2>1</FONT></SUB>, <I>g</I><SUB><FONT SIZE=2>2</FONT></SUB>, <I>g</I><SUB><FONT SIZE=2>3</FONT></SUB>, <I>g</I><SUB><FONT SIZE=2>4</FONT></SUB>, the ``initial conditions'', are known.<BR>
+<BR>
+If we ``guess'' that <I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB> has the shape <FONT FACE=symbol>l</FONT><SUP><FONT SIZE=2><I>r</I></FONT></SUP> (or is a linear combination of such 
+monomials), 
+we can obtain <FONT FACE=symbol>l</FONT> by solving the fourth degree equation associated
+to the recurrence formula, and we find, as the equation easily splits:
+<DIV ALIGN=center>(<FONT FACE=symbol>l</FONT><SUP><FONT SIZE=2>2</FONT></SUP>-<FONT FACE=symbol>l</FONT>(1+<I>y</I>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>-<I>y</I><SUP><FONT SIZE=2>3</FONT></SUP>)+<I>y</I><SUP><FONT SIZE=2>4</FONT></SUP>)(<FONT FACE=symbol>l</FONT><SUP><FONT SIZE=2>2</FONT></SUP>-<FONT FACE=symbol>l</FONT> (1-<I>y</I>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>+<I>y</I><SUP><FONT SIZE=2>3</FONT></SUP>)+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)=0.</DIV>
+So solving the two second degree equations gives four values (closed
+ forms) 
+<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>1</FONT></SUB>, <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>2</FONT></SUB>, <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>3</FONT></SUB>, <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>4</FONT></SUB>, two of which are <I>O</I>(1) at 0. 
+We then have to find the <I>A</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB> such that <I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>j</I>=1</FONT></SUB><SUP><FONT SIZE=2>4</FONT></SUP> <I>A</I><SUB><FONT SIZE=2><I>j</I></FONT></SUB> <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>j</I></FONT></SUB><SUP><FONT SIZE=2><I>r</I></FONT></SUP>.
+But <I>g</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB>=<I>O</I>(<I>y</I><SUP><FONT SIZE=2>2<I>r</I>+2</FONT></SUP>) at 0, so <I>A</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>=0 if <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>i</I></FONT></SUB>=<I>O</I>(1).
+There are still two coefficients to determine, say <I>A</I><SUB><FONT SIZE=2>2</FONT></SUB> and <I>A</I><SUB><FONT SIZE=2>4</FONT></SUB>.
+They can be found by solving a system involving 
+<I>g</I><SUB><FONT SIZE=2>1</FONT></SUB>, <I>g</I><SUB><FONT SIZE=2>2</FONT></SUB>, <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>2</FONT></SUB>, <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>4</FONT></SUB>, <I>A</I><SUB><FONT SIZE=2>2</FONT></SUB>, <I>A</I><SUB><FONT SIZE=2>4</FONT></SUB> and one finally obtains a closed form
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>G</I>(<I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>A</I><SUB><FONT SIZE=2>2</FONT></SUB> <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>2</FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>2</FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>A</I><SUB><FONT SIZE=2>4</FONT></SUB> <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>4</FONT></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>4</FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+A very similar method is applied for 
+unidirectional-convex polygons on the honeycomb lattice in&nbsp;[<A HREF="#Lin"><CITE>19</CITE></A>].<BR>
+<BR>
+<!--TOC section Kernel Method-->
+
+<H2>5&nbsp;&nbsp; Kernel Method</H2><!--SEC END -->
+In his talk, Dominique Gouyou-Beauchamps has also presented an
+ exploitation of the ``kernel method'' for the enumeration of 
+parallelogram polyominoes
+with respect to horizontal and vertical half-perimeter, area and first column 
+height, respectively marked by <I>x</I>, <I>y</I>, <I>q</I>, <I>s</I>.<BR>
+<BR>
+Remember that the generating function <I>P</I> with respect to 
+horizontal and vertical half-perimeter is easy to obtain: 
+The wasp-waist decomposition directly leads to <I>P</I>=<I>xy</I>+<I>xP</I>+<I>yP</I>+<I>P</I><SUP><FONT SIZE=2>2</FONT></SUP> so 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I>(<I>x</I>, <I>y</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1-<I>x</I>-<I>y</I>-(1-2<I>x</I>-2<I>y</I>+<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>-2<I>xy</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+The full generating function <I>P</I>(<I>x</I>, <I>y</I>, <I>q</I>, <I>s</I>) satisfies a more 
+intricate equation (obtained by a strata decomposition), namely
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I>(<I>x</I>, <I>y</I>, <I>q</I>, <I>s</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>xysq</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<I>ysq</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>xsq</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(1-<I>sq</I>)(1-<I>ysq</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>P</I>(<I>x</I>, <I>y</I>, <I>q</I>, 1)-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>xsq</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(1-<I>sq</I>)(1-<I>ysq</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>P</I>(<I>x</I>, <I>y</I>, <I>q</I>, <I>sq</I>).</TD>
+</TR></TABLE></DIV>
+When <I>q</I>=1, this can be rewritten
+<DIV ALIGN=center>(1-(1-<I>x</I>-<I>y</I>)<I>s</I>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>) <I>P</I>(<I>x</I>, <I>y</I>, 1, <I>s</I>) =<I>xsP</I>(<I>x</I>, <I>y</I>, 1, 1)+<I>xys</I>(1-<I>s</I>).</DIV><BR>
+It is typically the type of equation on which the kernel method applies. 
+This method belongs to mathematical folklore (see&nbsp;[<A HREF="#Knuth"><CITE>18</CITE></A>], 
+exercise 2.2.1.4 for an early example).
+It works as follows: If one cancels the kernel (1-(1-<I>x</I>-<I>y</I>)<I>s</I>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>), 
+<EM>i.e.</EM>, one finds <I>s</I><SUB><FONT SIZE=2>0</FONT></SUB> such that (1-(1-<I>x</I>-<I>y</I>)<I>s</I><SUB><FONT SIZE=2>0</FONT></SUB>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)=0, 
+then one gets 0=<I>xs</I><SUB><FONT SIZE=2>0</FONT></SUB><I>P</I>(<I>x</I>, <I>y</I>, 1, 1)+<I>xys</I><SUB><FONT SIZE=2>0</FONT></SUB>(1-<I>s</I><SUB><FONT SIZE=2>0</FONT></SUB>), from which follows
+a closed form for <I>P</I>(<I>x</I>, <I>y</I>, 1, 1)
+and finally one obtains a closed form for <I>P</I>(<I>x</I>, <I>y</I>, 1, <I>s</I>), <EM>viz.,</EM> 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I>(<I>x</I>, <I>y</I>, 1, <I>s</I>) =</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>xs</I> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1-<I>x</I>-<I>y</I>-(1-2<I>x</I>-2<I>y</I>-2<I>xy</I>+<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>+<I>xys</I>(1-<I>s</I>)</TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-(1-<I>x</I>-<I>y</I>)<I>s</I>+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+<!--TOC section Physicists' Guesses-->
+
+<H2>6&nbsp;&nbsp; Physicists' Guesses</H2><!--SEC END -->
+We have already mentioned that polyominoes are present in physical 
+problems and in fact the first people who found interesting results 
+on this subject where physicists. They sometimes base their works
+on empirical results. For example, in&nbsp;[<A HREF="#Dhar"><CITE>9</CITE></A>], the authors are doing as if 
+<DIV ALIGN=center><I>N</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB><SUP><FONT SIZE=2><I>s</I></FONT></SUP>=<I>N</I><SUB><FONT SIZE=2><I>r</I>-1</FONT></SUB><SUP><FONT SIZE=2><I>s</I>-1</FONT></SUP>+<I>N</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB><SUP><FONT SIZE=2><I>s</I>-1</FONT></SUP>+<I>N</I><SUB><FONT SIZE=2><I>r</I>+1</FONT></SUB><SUP><FONT SIZE=2><I>s</I>-1</FONT></SUP></DIV>
+(<I>N</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB><SUP><FONT SIZE=2><I>s</I></FONT></SUP> is the number of 
+directed animals of size <I>s</I> with a ``compact source'' of size <I>r</I>)
+was a recurrence formula satisfied by the <I>N</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB><SUP><FONT SIZE=2><I>s</I></FONT></SUP>
+although it is only empirically verified for the first values. 
+Nevertheless, they go on and find that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>N</I><SUB><FONT SIZE=2><I>r</I></FONT></SUB><SUP><FONT SIZE=2><I>s</I></FONT></SUP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2<FONT FACE=symbol>p</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>2 <FONT FACE=symbol>p</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> (1+<I>e</I><SUP><FONT SIZE=2><I>it</I></FONT></SUP>) <I>e</I><SUP><FONT SIZE=2>-<I>irt</I></FONT></SUP> (1+2 cos <I>t</I>)<SUP><FONT SIZE=2><I>s</I>-1</FONT></SUP> <I>dt</I>
+&nbsp;&nbsp; and in particular</TD>
+<TD NOWRAP> &nbsp;&nbsp; 
+<I>N</I><SUB><FONT SIZE=2>1</FONT></SUB><SUP><FONT SIZE=2><I>s</I></FONT></SUP>=(<I>s</I>-1)!</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>ë</FONT> <I>s</I>/2<FONT FACE=symbol>û</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>q</I>=0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>s</I>-<I>q</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>q</I>!<SUP><FONT SIZE=2>2</FONT></SUP> (<I>s</I>-2<I>q</I>)!</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+Another example of a typical physicist's method is&nbsp;[<A HREF="#Hakim"><CITE>14</CITE></A>] (enumeration of
+directed animals on a strip of width <I>k</I>); 
+they consider a transfer matrix as an operator acting on a spin space
+and are drawing their inspiration from standard techniques on integrable systems.<BR>
+<BR>
+When <I>k</I> tends to infinity, they obtain:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>0<FONT FACE=symbol>£</FONT> <I>i</I> <FONT FACE=symbol>£</FONT> <I>n</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>n</I>-1</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>i</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>i</I></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>ë</FONT> <I>i</I>/2 <FONT FACE=symbol>û</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+ &nbsp;&nbsp; and thus</TD>
+<TD NOWRAP> &nbsp;&nbsp; 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> <I>o</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> <I>t</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> = </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP> (</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1+<I>t</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-3<I>t</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>)<SUP><FONT SIZE=2>1/2</FONT></SUP> -1</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Analysis of singularities gives <DIV ALIGN=center><I>a</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> ~ 3<SUP><FONT SIZE=2><I>n</I></FONT></SUP> <I>n</I><SUP><FONT SIZE=2>-1/2</FONT></SUP>.</DIV><BR>
+<!--TOC section Matricial and Continued Fraction Method-->
+
+<H2>7&nbsp;&nbsp; Matricial and Continued Fraction Method</H2><!--SEC END -->
+We will show on a simple example (Dyck paths) how this method works.
+Let <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>d</I><SUB><FONT SIZE=2><I>h</I></FONT></SUB>(<I>x</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>l</I><FONT FACE=symbol>³</FONT> 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>a</I><SUB><FONT SIZE=2><I>h</I>, <I>l</I></FONT></SUB> <I>x</I><SUP><FONT SIZE=2><I>l</I></FONT></SUP></TD>
+</TR></TABLE></DIV>
+the ordinary generating function of Dyck paths which end at height <I>h</I>.<BR>
+<BR>
+A path of length <I>n</I> which ends at height <I>h</I> is 
+either a path of length <I>n</I>-1 which ends at height <I>h</I>-1 followed by 
+a NE step, 
+or a path of length <I>n</I>-1 which ends at height <I>h</I>+1 followed by 
+a SE step. Thus one obtains the following infinite system<BR>
+<BR>
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>ï<BR>ï<BR>ï<BR>ï<BR>í<BR>ï<BR>ï<BR>ï<BR>ï<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)=1+<I>x</I> <I>d</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>d</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)=<I>xd</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)+<I>xd</I><SUB><FONT SIZE=2>2</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>d</I><SUB><FONT SIZE=2>2</FONT></SUB>(<I>x</I>)=<I>xd</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)+<I>xd</I><SUB><FONT SIZE=2>3</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ·<BR>·<BR>·</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>d</I><SUB><FONT SIZE=2><I>h</I></FONT></SUB>(<I>x</I>)=<I>xd</I><SUB><FONT SIZE=2><I>h</I>-1</FONT></SUB>(<I>x</I>)+<I>xd</I><SUB><FONT SIZE=2><I>h</I>+1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ·<BR>·<BR>·</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><BR>
+which can be written as
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>	
+<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>d</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>d</I><SUB><FONT SIZE=2>2</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><I>d</I><SUB><FONT SIZE=2>3</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>·<BR>·<BR>·</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>-1</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>·<BR>·<BR>·</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV><BR>
+With an analog of Cramer's formula for infinite matrices, one has<BR>
+<BR>
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+ <I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>det
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>	
+0	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>det 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP>-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>	
+<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>0	</TD>
+<TD ALIGN=center NOWRAP>	0	</TD>
+<TD ALIGN=center NOWRAP>	<I>x</I>	</TD>
+<TD ALIGN=center NOWRAP>	-1	</TD>
+<TD ALIGN=center NOWRAP>	...</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·<BR>·<BR>·	</TD>
+<TD ALIGN=center NOWRAP>	·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>®</FONT> <FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>det
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>(</TD>
+<TD NOWRAP>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I>× <I>k</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>det</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>(</TD>
+<TD NOWRAP>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>k</I>× <I>k</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>®</FONT>
+<FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>P</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+where ()<SUB><FONT SIZE=2><I>k</I> × <I>k</I></FONT></SUB>
+stands for the <I>k</I>× <I>k</I> truncated associated matrices.
+The special structure of these matrices gives the recurrence 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><I>P</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)=-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)=-<I>P</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> <I>P</I><SUB><FONT SIZE=2><I>k</I>-2</FONT></SUB>(<I>x</I>)
+&nbsp;&nbsp;</TD>
+<TD ALIGN=left NOWRAP>with <I>P</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)=-1,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><I>Q</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)=-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP><I>Q</I><SUB><FONT SIZE=2><I>k</I>-2</FONT></SUB>(<I>x</I>) &nbsp;&nbsp;</TD>
+<TD ALIGN=left NOWRAP>with <I>Q</I><SUB><FONT SIZE=2>1</FONT></SUB>(<I>x</I>)=-1 and <I>Q</I><SUB><FONT SIZE=2>2</FONT></SUB>(<I>x</I>)=1-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>.</TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+from which follows
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>P</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> <I>Q</I><SUB><FONT SIZE=2><I>k</I>-2</FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I>-2</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>-<I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>P</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I>-1</FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+and then
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center>lim</TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>®</FONT> <FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>P</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>Q</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+hence <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP><I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+&nbsp;&nbsp; <I>i</I>.<I>e</I>., &nbsp;&nbsp; <I>d</I><SUB><FONT SIZE=2>0</FONT></SUB>(<I>x</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1-(1-4<I>x</I><SUP><FONT SIZE=2>2</FONT></SUP>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2 <I>x</I><SUP><FONT SIZE=2>2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+In fact the continued fraction is a special case
+ of a much more general result that we will express in the next section.<BR>
+<BR>
+<!--TOC section Multicontinued Fractions Theorem-->
+
+<H2>8&nbsp;&nbsp; Multicontinued Fractions Theorem</H2><!--SEC END -->
+We will need the following notations. Let 
+(<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>l</I>, <I>k</I></FONT></SUB>)<SUB><FONT SIZE=2>0<FONT FACE=symbol>£</FONT> <I>k</I> <FONT FACE=symbol>£</FONT> <I>l</I></FONT></SUB> be a family of elements of a 
+commutative field and let (<I>P</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>)<SUB><FONT SIZE=2><I>k</I><FONT FACE=symbol>³</FONT> 0</FONT></SUB> be a family of monic polynomials
+which satisfy a recurrence relation:
+ <DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I><SUB><FONT SIZE=2><I>k</I>+1</FONT></SUB>(<I>x</I>)=<I>xP</I><SUB><FONT SIZE=2><I>k</I></FONT></SUB>(<I>x</I>)-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>k</I>, <I>k</I>-<I>i</I></FONT></SUB> <I>P</I><SUB><FONT SIZE=2><I>k</I>-<I>i</I></FONT></SUB>(<I>x</I>).</TD>
+</TR></TABLE></DIV>
+One then defines a multicontinued fraction by
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>L</I>(<FONT FACE=symbol>l</FONT>, <I>t</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1-<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2>0, 0</FONT></SUB><I>t</I>
+-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>p</I>, 0</FONT></SUB><I>t</I><SUP><FONT SIZE=2><I>p</I>+1</FONT></SUP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP> 
+1-<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>i</I>, <I>i</I></FONT></SUB><I>t</I>
+-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>q</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>q</I>+<I>i</I>, 0</FONT></SUB><I>t</I><SUP><FONT SIZE=2><I>q</I>+1</FONT></SUP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2><I>q</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>i</I>=1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>·&nbsp;&nbsp;<BR>&nbsp;·&nbsp;<BR>&nbsp;&nbsp;·</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV>
+Let <FONT FACE=symbol>d</FONT> be the operator defined by <FONT FACE=symbol>d</FONT>(<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>k</I>, <I>l</I></FONT></SUB>)=<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>k</I>+1, <I>l</I>+1</FONT></SUB>.
+We note <I>P</I><SUP><FONT SIZE=2>*</FONT></SUP> the reciprocal polynomial of <I>P</I>:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>P</I><SUP><FONT SIZE=2>*</FONT></SUP>(<I>x</I>):= <I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>deg</FONT><FONT SIZE=2>(<I>P</I>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>P</I>(</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>x</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>).</TD>
+</TR></TABLE></DIV><BR>
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Roblet, Viennot]&nbsp;&nbsp;</FONT><EM>
+If one sets </EM><EM><FONT FACE=symbol>l</FONT></EM><SUB><EM><FONT SIZE=2><I>i</I>, <I>j</I></FONT></EM></SUB><EM>:=0</EM><EM> in </EM><EM><I>L</I>(<FONT FACE=symbol>l</FONT>, <I>t</I>)</EM><EM> for </EM><EM><I>i</I><FONT FACE=symbol>³</FONT> <I>k</I>+1</EM><EM> and </EM><EM><I>j</I><FONT FACE=symbol>£</FONT> <I>i</I></EM><EM>, 
+one gets a rational fraction </EM><EM><I>L</I></EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><EM>(<I>t</I>)</EM><EM>, it is the </EM><EM><I>k</I></EM><EM>-th convergent of the 
+multicontinued fraction </EM><EM><I>L</I>(<FONT FACE=symbol>l</FONT>, <I>t</I>)</EM><EM> and we have
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>L</I></EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><EM>(<I>t</I>)=</EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><FONT FACE=symbol>d</FONT> <I>P</I></EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><SUP><EM><FONT SIZE=2>*</FONT></EM></SUP><EM>(<I>t</I>)</EM></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM><I>P</I></EM><SUB><EM><FONT SIZE=2><I>k</I>+1</FONT></EM></SUB><SUP><EM><FONT SIZE=2>*</FONT></EM></SUP><EM> (<I>t</I>)</EM></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV><EM>
+and the following approximation near </EM><EM><I>t</I>=0</EM><EM> holds
+</EM><DIV ALIGN=center><EM><I>L</I>(<FONT FACE=symbol>l</FONT>, <I>t</I>)=<I>L</I></EM><SUB><EM><FONT SIZE=2><I>k</I></FONT></EM></SUB><EM>(<I>t</I>)+<I>O</I>(<I>t</I></EM><SUP><EM><FONT SIZE=2><I>k</I>+1</FONT></EM></SUP><EM>).</EM></DIV><EM>
+</EM></DIV><BR>
+For a deeper understanding of links between continued fractions 
+and combinatorics, see&nbsp;[<A HREF="#Flajolet"><CITE>11</CITE></A><CITE>, </CITE><A HREF="#Roblet"><CITE>22</CITE></A>].
+The multicontinued fraction method allows to find the generating functions of 
+diagonally convex directed, diagonally convex, parallelogram, 
+vertically convex directed, vertically convex polyominoes
+and remains to be exploited to obtain generating functions of other
+classes of polyominoes or directed animals.<BR>
+<BR>
+You are now ready to try the different kinds of methods presented here
+on your favourite class of polyominoes or even on other classes 
+of combinatorial objects!<BR>
+<BR>
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Nivat"><FONT COLOR=purple>[1]</FONT></A><DD>
+Beauquier (Danièle), Nivat (Maurice), Remila (Éric), and Robson
+ (Mike).&nbsp;--
+Tiling figures of the plane with two bars. <EM>Computational
+ Geometry. Theory and Applications</EM>, vol.&nbsp;5, n&deg;1, 1995,
+ pp.&nbsp;1--25.<BR>
+<BR>
+
+<DT><A NAME="Berger"><FONT COLOR=purple>[2]</FONT></A><DD>
+Berger (Robert).&nbsp;--
+The undecidability of the domino problem. <EM>Memoirs of the
+ American Mathematical Society</EM>, vol.&nbsp;66, 1966, p.&nbsp;72.<BR>
+<BR>
+
+<DT><A NAME="mbm3d2"><FONT COLOR=purple>[3]</FONT></A><DD>
+Bousquet-Mélou (M.) and Guttmann (A.&nbsp;J.).&nbsp;--
+Three-dimensional self-avoiding convex polygons. <EM>Physical Review
+ E. Statistical Physics, Plasmas, Fluids, and Related Interdisciplinary
+ Topics. Third Series</EM>, vol.&nbsp;55, n&deg;6, part A, 1997,
+ pp.&nbsp;R6323--R6326.<BR>
+<BR>
+
+<DT><A NAME="sem2"><FONT COLOR=purple>[4]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+Counting convex polyominoes according to their area. In <EM>Algorithms seminar 1995-1996</EM>.&nbsp;--
+INRIA, 1996. Available at <EM>http://pauillac.inria.fr/algo/seminars/sem95-96/bousquet1.ps</EM>.<BR>
+<BR>
+
+<DT><A NAME="mbm"><FONT COLOR=purple>[5]</FONT></A><DD>
+Bousquet-Mélou (Mireille).&nbsp;--
+A method for the enumeration of various classes of column-convex
+ polygons. <EM>Discrete Mathematics</EM>, vol.&nbsp;154, n&deg;1-3,
+ 1996, pp.&nbsp;1--25.<BR>
+<BR>
+
+<DT><A NAME="mbm3d1"><FONT COLOR=purple>[6]</FONT></A><DD>
+Bousquet-Mélou (Mireille) and Guttmann (Anthony&nbsp;J.).&nbsp;--
+Enumeration of three-dimensional convex polygons. <EM>Annals of
+ Combinatorics</EM>, vol.&nbsp;1, n&deg;1, 1997, pp.&nbsp;27--53.<BR>
+<BR>
+
+<DT><A NAME="Brak"><FONT COLOR=purple>[7]</FONT></A><DD>
+Brak (R.), Guttmann (A.&nbsp;J.), and Enting (I.&nbsp;G.).&nbsp;--
+Exact solution of the row-convex polygon perimeter generating
+ function. <EM>Journal of Physics. A. Mathematical and General</EM>, vol.&nbsp;23,
+ n&deg;12, 1990, pp.&nbsp;2319--2326.<BR>
+<BR>
+
+<DT><A NAME="Connes"><FONT COLOR=purple>[8]</FONT></A><DD>
+Connes (Alain).&nbsp;--
+<EM>Noncommutative geometry</EM>.&nbsp;--
+Academic Press Inc., San Diego, CA, 1994, xiv+661p.<BR>
+<BR>
+
+<DT><A NAME="Dhar"><FONT COLOR=purple>[9]</FONT></A><DD>
+Dhar (Deepak), Phani (Mohan&nbsp;K.), and Barma (Mustansir).&nbsp;--
+Enumeration of directed site animals on two-dimensional lattices.
+ <EM>Journal of Physics. A. Mathematical and General</EM>, vol.&nbsp;15, n&deg;6,
+ 1982, pp.&nbsp;L279--L284.<BR>
+<BR>
+
+<DT><A NAME="Enting"><FONT COLOR=purple>[10]</FONT></A><DD>
+Enting (I.&nbsp;G.) and Guttmann (A.&nbsp;J.).&nbsp;--
+Polygons on the honeycomb lattice. <EM>Journal of Physics. A.
+ Mathematical and General</EM>, vol.&nbsp;22, n&deg;9, 1989,
+ pp.&nbsp;1371--1384.<BR>
+<BR>
+
+<DT><A NAME="Flajolet"><FONT COLOR=purple>[11]</FONT></A><DD>
+Flajolet (P.).&nbsp;--
+Combinatorial aspects of continued fractions. <EM>Discrete
+ Mathematics</EM>, n&deg;2, 1980, pp.&nbsp;125--161.<BR>
+<BR>
+
+<DT><A NAME="Grunbaum"><FONT COLOR=purple>[12]</FONT></A><DD>
+Grünbaum (Branko) and Shephard (G.&nbsp;C.).&nbsp;--
+<EM>Tilings and patterns</EM>.&nbsp;--
+W. H. Freeman and Company, New York, 1989, <EM>A
+ Series of Books in the Mathematical Sciences</EM>, xii+446p. An introduction.<BR>
+<BR>
+
+<DT><A NAME="sem3"><FONT COLOR=purple>[13]</FONT></A><DD>
+Guttmann (Tony).&nbsp;--
+Staircase polygons, elliptic integrals and Heun functions. In <EM>Algorithms seminar 1996-1997</EM>.&nbsp;--
+1997. Available at <EM>http://pauillac.inria.fr/algo/seminars/sem96-97/guttmann.ps</EM>.<BR>
+<BR>
+
+<DT><A NAME="Hakim"><FONT COLOR=purple>[14]</FONT></A><DD>
+Hakim (V.) and Nadal (J.&nbsp;P.).&nbsp;--
+Exact results for 2D directed animals on a strip of finite width.
+ <EM>Journal of Physics. A. Mathematical and General</EM>, vol.&nbsp;16, n&deg;7,
+ 1983, pp.&nbsp;L213--L218.<BR>
+<BR>
+
+<DT><A NAME="Klarner81"><FONT COLOR=purple>[15]</FONT></A><DD>
+Klarner (D.).&nbsp;--
+My life among the polyominoes. <EM>Nieuw Archief voor Wiskunde.
+ Derde Serie</EM>, vol.&nbsp;29, n&deg;2, 1981, pp.&nbsp;156--177.<BR>
+<BR>
+
+<DT><A NAME="Klarner65"><FONT COLOR=purple>[16]</FONT></A><DD>
+Klarner (David&nbsp;A.).&nbsp;--
+Some results concerning polyominoes. <EM>The Fibonacci Quarterly</EM>,
+ vol.&nbsp;3, 1965, pp.&nbsp;9--20.<BR>
+<BR>
+
+<DT><A NAME="Klarner"><FONT COLOR=purple>[17]</FONT></A><DD>
+Klarner (David&nbsp;A.).&nbsp;--
+Packing a rectangle with congruent <I>n</I>-ominoes. <EM>Journal of
+ Combinatorial Theory</EM>, vol.&nbsp;7, 1969, pp.&nbsp;107--115.<BR>
+<BR>
+
+<DT><A NAME="Knuth"><FONT COLOR=purple>[18]</FONT></A><DD>
+Knuth (Donald&nbsp;E.).&nbsp;--
+<EM>The art of computer programming</EM>.&nbsp;--
+Addison-Wesley Publishing Co., Reading, Mass.-London-Amsterdam,
+ 1973, second edition, xxii+634p. Volume 1: Fundamental
+ algorithms, Addison-Wesley Series in Computer Science and Information
+ Processing.<BR>
+<BR>
+
+<DT><A NAME="Lin"><FONT COLOR=purple>[19]</FONT></A><DD>
+Lin (K.&nbsp;Y.) and Wu (F.&nbsp;Y.).&nbsp;--
+Unidirectional-convex polygons on the honeycomb lattice. <EM>Journal
+ of Physics. A. Mathematical and General</EM>, vol.&nbsp;23, n&deg;21,
+ 1990, pp.&nbsp;5003--5010.<BR>
+<BR>
+
+<DT><A NAME="Privman2"><FONT COLOR=purple>[20]</FONT></A><DD>
+Privman (V.) and Svrakic (N.&nbsp;M.).&nbsp;--
+Difference equations in statistical mechanics. I. Cluster
+ statistics models. <EM>Journal of Statistical Physics</EM>, vol.&nbsp;51, n&deg;5-6,
+ 1988, pp.&nbsp;1091--1110.&nbsp;--
+New directions in statistical mechanics (Santa Barbara, CA, 1987).<BR>
+<BR>
+
+<DT><A NAME="Privman1"><FONT COLOR=purple>[21]</FONT></A><DD>
+Privman (V.) and Svrakic (N.&nbsp;M.).&nbsp;--
+<EM>Directed models of polymers, interfaces, and clusters: scaling
+ and finite-size properties</EM>.&nbsp;--
+Springer-Verlag, Berlin, 1989, <EM>Lecture Notes in
+ Physics</EM>, vol.&nbsp;338, vi+120p.<BR>
+<BR>
+
+<DT><A NAME="Roblet"><FONT COLOR=purple>[22]</FONT></A><DD>
+Roblet (Emmanuel) and Viennot (Xavier&nbsp;Gérard).&nbsp;--
+Théorie combinatoire des T-fractions et approximants de Padé
+ en deux points. In <EM>Proceedings of the 5th Conference on Formal Power
+ Series and Algebraic Combinatorics (Florence, 1993)</EM>, vol.&nbsp;153,
+ pp.&nbsp;271--288.&nbsp;--
+1996.<BR>
+<BR>
+
+<DT><A NAME="salvy"><FONT COLOR=purple>[23]</FONT></A><DD>
+Salvy (Bruno) and Zimmermann (Paul).&nbsp;--
+Gfun: a Maple package for the manipulation of generating and
+ holonomic functions in one variable. <EM>ACM Transactions on Mathematical
+ Software</EM>, vol.&nbsp;20, n&deg;2, 1994, pp.&nbsp;163--177.&nbsp;--
+ftp://ftp.inria.fr/INRIA/publication/publi-ps-gz/RT/RT-0143.ps.gz.<BR>
+<BR>
+
+<DT><A NAME="Temperley"><FONT COLOR=purple>[24]</FONT></A><DD>
+Temperley (H. N.&nbsp;V.).&nbsp;--
+Combinatorial problems suggested by the statistical mechanics of
+ domains and of rubber-like molecules. <EM>Physical Review (2)</EM>, vol.&nbsp;103,
+ 1956, pp.&nbsp;1--16.<BR>
+<BR>
+
+<DT><A NAME="Viennot"><FONT COLOR=purple>[25]</FONT></A><DD>
+Viennot (Gérard).&nbsp;--
+Problèmes combinatoires posés par la physique statistique. <EM>Astérisque</EM>, n&deg;121-122, 1985, pp.&nbsp;225--246.&nbsp;--
+Seminar Bourbaki, Vol. 1983/84.</DL>
+
+
+ <!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+</HTML>
+

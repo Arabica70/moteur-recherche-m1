@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>Panda project -- Objectives</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+</head>
+
+<body>
+<div class="navbar">
+<a href="http://www.agence-nationale-recherche.fr/"><img style="border:0;width:140px;height:60px" src="img/ANR.jpg" alt="ANR"></a>
+<h2>Panda project</h2>
+<a class="home" href="http://www.lipn.univ-paris13.fr/~mazza/Panda/">Home page</a>
+<ul>
+	<li class="button">Objectives</li>
+<li><a class="button" href="?page=part">Participants</a></li>
+<li><a class="button" href="?page=meet">Meetings</a></li>
+<li><a class="button" href="?page=docs">Publications</a></li>
+</ul>
+<p>
+	<a href="http://www.inria.fr"><img style="border:0;width:165px;height:50px" src="img/INRIA.jpg" alt="INRIA"></a><br>
+	<a href="http://www.cea.fr"><img style="border:0;width:80px;height:80px" src="img/CEA.png" alt="CEA"></a>
+	<a href="http://www.univ-provence.fr"><img style="border:0;width:80px;height:80px" src="img/Aix-Marseille1.gif" alt="Universit&eacute; Aix-Marseille 1"></a><br>
+	<a href="http://www.univ-paris13.fr"><img style="border:0;width:165px;height:50px" src="img/Paris13.gif" alt="Universit&eacute; Paris 13"></a><br>
+	<a href="http://www.airbus.com"><img style="border:0;width:165px;height:30px" src="img/Airbus.jpg" alt="Airbus"></a>
+</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/valid-html401.png" alt="Valid HTML 4.01!"></a>
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a><br>
+	Webmaster: <a href="http://www.lipn.univ-paris13.fr/~mazza">Damiano Mazza</a>
+</p>
+</div>
+<div>
+<table border="0" width="100%">
+<tr>
+<td>
+<h3>Objectives</h3>
+<p>
+The Panda project has the following main objectives:
+</p>
+<ul>
+	<li>Give the theoretical tools for comparing the models of concurrent programs at hand, in particular newer ones, such as the geometric models for concurrency.</li>
+	<li>Compare several rising models to more classical ones:
+	<ul>
+		<li>geometric models vs transition systems, Mazurkiewicz traces and event structures;</li>
+		<li>models based on higher order categories vs rewriting systems, event structures, and Mazurkiewicz traces.</li> 
+	</ul></li>
+	<li>Bring together models for concurrency completing each other so we can take into account various aspects of parallelism. In particular, we think the interaction between spatial/separation logics and geometric models will raise breakthrough in understanding concurrent tasks behaviour.</li>
+	<li>Implement a common platform for the static analysis of concurrent programs, based on the existing ALCOOL analyzer (developed by CEA LIST). In particular we wish to prove the adequacy of our approach on a representative piece of code (provided by Airbus). For instance, in order to adress the lack of primitive synchronization notions of languages like PROMELA, ALCOOL offers an input language natively provided with a wide range synchronization mechanisms.</li> 
+	<li>Develop a comprehensive framework for probabilistic concurrent systems that would apply to several models of concurrency; understand how usual concepts and tools from probability theory such as limit theorems apply to those models. A challenging part is to deal with asynchrony in terms of partial orders together with probability.</li>
+</ul>
+<p>
+Panda deals with several implementation issues, and in particular with applications to fault detection in industrial parallel and distributed software. The industrial needs for an 
+efficient toolbox for verifying and certifying the analysis of parallel avionics programs (detection of typical parallel properties: race conditions, deadlocks, etc.) is clearly increasing and our project addresses this concern.
+</p>
+</td>
+<td style="vertical-align: top; padding-left:20px">
+	<a href="http://www.lipn.univ-paris13.fr/~mazza/Panda/"><img style="border-style:none" src="img/Panda.gif" alt="Panda"></a>
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>

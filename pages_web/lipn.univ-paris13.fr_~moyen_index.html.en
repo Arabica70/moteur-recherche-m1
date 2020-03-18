@@ -1,0 +1,204 @@
+<!doctype html system>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Jean-Yves Moyen">
+   <title>Page professionnelle de Jean-Yves Moyen</title>
+</head>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000FF" vlink="#FF0000" alink="#000088">
+
+<center><b><font size="+2">Jean-Yves Moyen</font></b>
+<br><b><font size="+1">(<a
+href="http://www-lipn.univ-paris13.fr/LCR/?lang=uk">LCR team</a>)</font></b>
+<p><br>
+
+<p>E-mail: Jean-Yves.Moyen `at` lipn.univ-paris13.fr</center>
+
+<table cellspacing=0 cellpadding=0 cols=2 width="100%" >
+<tr>
+<td><a href="http://www-lipn.univ-paris13.fr/"><acronym
+title="Laboratoire d'Informatique de Paris Nord">LIPN</acronym></a></td>
+
+<td> <a href="index.html.fr">Version fran&ccedil;aise</a></td>
+</tr>
+
+<tr>
+  <td><!--99, avenue J.-B. Clément-->
+    <a href="http://diku.dk/">Diku</a>
+  </td>
+
+<td></td>
+</tr>
+
+<tr>
+  <td><!--93430 Villetaneuse-->
+    Office 24.5.32
+  </td>
+
+<td><a href="https://www.researchgate.net/profile/Jean_Yves_Moyen">ResearchGate</a></td>
+</tr>
+
+<tr>
+  <td><!--France-->
+    Njalsgade 128-132
+  </td>
+
+<td></td>
+</tr>
+
+<tr>
+  <td>
+  <!--Tel : (33)1 49 40 44 43-->
+    DK-2300 Copenhagen S
+  </td>
+
+<td>ORCID: <a href="http://orcid.org/0000-0002-6883-6993">0000-0002-6883-6993</a></td>
+</tr>
+
+<tr>
+  <td>
+    <!--Fax : (33)1 48 26 07 12-->
+  </td>
+
+
+<td>ResearcherID: <a href="http://www.researcherid.com/rid/O-5322-2015">O-5322-2015</a></td>
+</tr>
+</table>
+
+<hr>
+<center><h2>Marie Curie fellowship</h2></center>
+
+From September 2015 to August 2017, IÂ was MSCA fellow in Copenhagen, under 
+<a href="walgo">grant 65522 "Walgo"</a>.
+
+<hr>
+<center><h2>Doctoral Dissertation</h2></center>
+I have submitted my <a href="papiers/Habilitation_JY_Moyen.pdf">Doctoral Dissertation<a> (<i>doktordisputats</i>) at the University of Copenhagen.
+
+</p>
+
+<hr>
+<p>I am a former student of
+the <a href="http://www.ens-lyon.fr">&Eacute;cole Normale
+Sup&eacute;rieure de Lyon</a> (1997-2001), I defended my PhDthesis in
+Nancy on the 17<sup>th</sup> december 2003 (my supervisor was
+Jean-Yves Marion). From September 2006 on, I am Associate Professor
+(<i>Maître de conférences</i>) at University Paris 13. In 2015, I got
+a European Marie Curie fellowship. I took 2 sabbatical years and
+between September 2015 and August 2017, I'll be Associate Professor at
+the University of Copenhagen (Denmark).  You can download
+my <a href="cv.pdf">resume</a> (in french).</p> <hr>
+
+
+<center><h2>Research</h2></center>
+My principal research topic is the automatic analysis of algorithms'
+complexity, especially the inplicit computationnal complexity
+theory. The idea is, given an algorithm, to try and find its
+complexity and, if possible, another algorithm computing hte same
+function more efficiently.
+
+<ul>
+  <li>Between September 2015 and August 2017, I'll be Associate
+    Professor at the University of Copenhagen.</li>
+  <li>Since September 2006, I a member of
+    the <a href="http://www-lipn.univ-paris13.fr/LCR/?lang=fr">LCR</a>
+    team
+    from <a href="http://www-lipn.univ-paris13.fr/"><acronym title="Laboratoire
+    d'Informatique de Paris Nord">LIPN</acronym></a>.</li>
+  <li>I defended my PhDthesis on the 17<sup>th</sup> December 2003, my
+    supervisor was <a href="http://www.loria.fr/~marionjy/">Jean-Yves
+    Marion</a>. (<a href="papiers/these_jym.ps">.ps</a>, <a href="papiers/these_jym.pdf">.pdf</a>, <a href="papiers/these_jym.bib">bibT<sub>E</sub>X</a>, <a href="papiers/resume_these.html.en">abstract</a>)</li>
+</ul>
+
+<a href="publications.html">List of publications</a>.
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+<h5>Analysing the complexity of term rewriting systems</h5>
+<ul><p><li>Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/MM_LPAR.ps">Efficient First Order Program Interpreter
+with Time Bound Certifications</a><br>
+<i><acronym title="Lecture Notes in Artificial Intelligence">
+LNAI</acronym> 1955</i>, proceedings of <acronym title=
+"Logic for Programming and Automated Reasoning">
+LPAR</acronym>'2001<br>
+(<a href="papiers/MM_LPAR.bib">bibT<sub>E</sub>X</a>)
+</li></p>
+
+<p><li>Guillaume Bonfante, Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/BMM_PSI.ps">On lexicographic termination ordering
+with space bound certifications</a><br>
+<i><acronym title="Lecture Notes in Computer Science"> LNCS</acronym>
+2244</i>, proceedings of
+<acronym title="Perspectives of System Informatics">PSI</acronym>
+2001.<br>
+(<a href="papiers/BMM_PSI.bib">bibT<sub>E</sub>X</a>)
+</li></p>
+
+<p><li>Guillaume Bonfante, Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/appsem_court.ps">On complexity analysis by
+quasi-interpretations</a><br>
+proceedings of <acronym title="APPlied SEMantics">APPSEM</acronym>
+2004.<br>
+(<a href="papiers/appsem_court.bib">bibT<sub>E</sub>X</a>)
+</li></p>
+
+<p><li>Guillaume Bonfante, Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/appsemTCS.ps">Quasi-interpretations: a way to control resources</a><br>
+Submitted to <i><acronym
+title="Theoretical Computer Science">TCS</acronym></i>.<br>
+(<a href="papiers/appsemTCS.bib">bibT<sub>E</sub>X</a>)
+</li></p>
+
+<p><li>Guillaume Bonfante, Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/BMM_RTA.ps">Quasi-interpretations and small space
+bounds</a><br>
+<i><acronym title="Lecture Notes in Computer Science"> LNCS</acronym>
+3467</i>, proceedings of <acronym title="Rewriting Techniques and
+Application">RTA'05</acronym>.<br>
+(<a href="papiers/BMM_RTA.bib">bibT<sub>E</sub>X</a>)
+</li></p></ul>
+
+
+<p><h5>ICAR</h5> (Implicit Complexity AnalyseR) is a systme based on
+the results precented in the two previous papers. You can <a
+href="papiers/icar.tgz">download it</a> (you will need both <a
+href="http://caml.inria.fr">Ocaml</a> and <a
+href="http://www.mupad.de">Mupad</a>). This software has been
+presented at the
+<acronym title="Implicit Computer Complexity">ICC</acronym> 2001 and
+RULE 2001workshops.</p>
+
+<ul><p><li>Jean-Yves Moyen<br>
+<a href="papiers/Moyen_ICC.ps">An Analyser of Rewriting Systems
+Complexity</a><br>
+<i><acronym title="Basic Research In Computer Science">BRICS</acronym>
+Notes Series NS-01-3</i>, proceedings of
+<acronym title="Implicit Computer Complexity">ICC</acronym> 2001<br>
+(<a href="papiers/Moyen_ICC.bib">bibT<sub>E</sub>X</a>)</p></li>
+
+<p><li>Jean-Yves Moyen<br>
+<a href="papiers/Moyen_RULE.ps">System Presentation: An analyser of
+rewriting systems complexity</a><br>
+<i><acronym title="Electronics Notes in Theoretical Computer Science">
+ENTCS</acronym> 59-4</i>, proceedings of RULE 2001.<br>
+(<a href="papiers/Moyen_RULE.bib">bibT<sub>E</sub>X</a>)</li></p></ul>
+
+<h5>Analysing programs via Petri Nets</h5>
+<ul><p><li>Jean-Yves Marion, Jean-Yves Moyen<br>
+<a href="papiers/MM_penpa.ps">Termination and resource analysis of
+assembly programs by Petri Nets</a><br>
+<i>Research report</i>
+(<a href="papiers/MM_penpa.bib">bibT<sub>E</sub>X</a>)</li></p></ul>
+
+</body>
+</html>
+-->

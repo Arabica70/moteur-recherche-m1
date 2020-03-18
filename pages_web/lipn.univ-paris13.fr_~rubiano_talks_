@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page perso Thomas Rubiano - Talks</title>
+    <link rel="stylesheet" href="/~rubiano/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <!-- <meta name="generator" content="nanoc 3.8.0"> -->
+  </head>
+  <body>
+    <div id="main">
+      
+<h3 id="elica-talk">ELICA2015</h3>
+
+<p>A short presentation of Non Size Increasing programs and LLVM tool chain <a href="./elica_presentation.pdf">here</a></p>
+
+<h3 id="DICE-talk">DICE2016</h3>
+
+<p>A less short presentation of a Static Analysis: Detection of Non Size Increasing programs with a LLVM pass <a href="./NSI_SLIDES_DICE2016.pdf">here</a> and you can find <a href="https://github.com/ThomasRuby/NSIDetectionPass">the pass on github</a></p>
+
+<h3 id="onzieme-journee-compilation">Journées compilation 2016</h3>
+
+<p>A short presentation of my work on Loop Invariant Block Motion: an idea of composition of statements with some loop peeling <a href="./aussois_talk.pdf">here</a></p>
+
+<h3 id="midTermDef">Mid Term Defense</h3>
+
+<p>A 30 mins presentation which resumes my work done on NSI detection and Loop Invariant Block Motion <a href="./midTermDef.pdf">here</a></p>
+
+<h3 id="DICE-talk"><a href="http://cbr.uibk.ac.at/events/dice-fopara/program.php">DICE2017</a> and <a href="http://www.cs.bham.ac.uk/~zeilbern/lola2017/">LOLA2017</a></h3>
+
+<p>Loop Quasi-Invariants Chunk Motion presentation with a LLVM pass <a href="./DICE2017.pdf">here</a> and you can find <a href="https://github.com/ThomasRuby/lqicm_pass">the pass on github</a></p>
+
+    </div>
+    <div id="sidebar">
+      <h2><a href="/~rubiano/">About me</a></h2>
+      <h2>Research</h2>
+      <ul>
+        <li><a href="/~rubiano/subject/">PhD Thesis</a></li>
+        <li><a href="/~rubiano/talks/">Talks</a></li>
+      </ul>
+      <h2>Teaching</h2>
+      <ul>
+        <li><a href="/~rubiano/ING1/">Ingénieur Première année</a></li>
+        <li><a href="/~rubiano/L1/">Licence Première année</a></li>
+      </ul>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://fsf.org/">Free Software Foundation</a></li>
+        <li><a href="http://framasoft.org/">Framasoft</a></li>
+        <li><a href="http://www.april.org/">April</a></li>
+        <li><a href="http://www.laquadrature.net/">La Quadrature du Net</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

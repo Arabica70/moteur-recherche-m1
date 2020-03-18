@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Christophe Fouquer&eacute; -- LIPN</title>
+  <meta name="keywords" content="Natural Language, Linear Logic, Non-Commutative Logic">
+  <meta name="description" content="Christophe Fouquer&eacute;">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script language="JavaScript" src="AntiSpambotMailto.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	function toggle(id)
+	{
+		var item = document.getElementById(id);
+		if (item.className == 'hidden') item.className = 'visible';
+		else item.className = 'hidden';
+	}
+	function hide(id)
+	{
+		var item = document.getElementById(id);
+		item.className = 'hidden';
+	}
+	</script>
+</head>
+
+
+<body bgcolor="white" background="images/sandston.gif" text="#383838" link="#3366CC" vlink="#3366CC" alink="#3366CC">
+
+<center>
+<h1>L2 : Syst&eacute;me et R&eacute;seaux</h1>
+</center>
+
+
+<p><b>Cours et TD, TP sur l'ENT</b></p>
+
+<p><b>Anciens Examens</b> :</p>
+<ul>
+	<li><a href="EXAMENS/L2Mars11.pdf">Mars 2011</a>
+	<li><a href="EXAMENS/Mai2011.pdf">Mai 2011</a> (Exercices 2, 3 et 4: <a href="EXAMENS/Mai2011-Corr234.pdf">correction</a>)
+	<li><a href="EXAMENS/L2Juin11.pdf">Juin 2011</a>
+	<li><a href="EXAMENS/L2Mars12.pdf">Mars 2012</a> (<a href="EXAMENS/L2Mars12_Correction.pdf">correction</a>)
+	<li>Juin 2012: <a href="EXAMENS/L2Juin12Systemes.pdf">Partie Syst&egrave;mes</a> et <a href="EXAMENS/L2Juin12Reseaux.pdf">Partie R&eacute;seaux</a> (avec <a href="EXAMENS/client_Juin2012.pdf">(client)</a> et <a href="EXAMENS/serveur_Juin2012.pdf">(serveur)</a>)
+	<li><a href="EXAMENS/L2Mars13.pdf">Mars 2013</a> (<a href="EXAMENS/L2Mars13CORR.pdf">correction</a>)
+	<li><a href="EXAMENS/L2Mai13.pdf">Mai 2013</a> et <a href="EXAMENS/AnnexeExo3.pdf">annexe</a> (<a href="EXAMENS/L2Mai13Correction.pdf">correction</a> et <a href="EXAMENS/AnnexeExo3Correction.pdf">correction annexe</a>)
+     <li><a href="EXAMENS/L2Mars14.pdf">Mars 2014</a>
+     <li><a href="EXAMENS/L2Mai14.pdf">Mai 2014</a>
+     <li><a href="EXAMENS/L2Juillet14.pdf">Juillet 2014</a>
+     <li><a href="EXAMENS/L2Mars15.pdf">Mars 2015</a>
+     <li><a href="EXAMENS/L2Mai15.pdf">Mai 2015</a> <!-- (<a href="EXAMENS/L2Mai15correction.pdf">correction</a>) -->
+     <li><a href="EXAMENS/L2Juin16.pdf">Juin 2016</a>
+     <li><a href="EXAMENS/L2Juin17.pdf">Juin 2017</a>
+</ul>
+
+<p>T&eacute;l&eacute;phone : </p>
+<ul>
+  <li>bureau/office +33 1 4940 2861</li>
+  <li>fax +33 1 4826 0712</li>
+</ul>
+
+<p>Mail :
+   <tt>christophe.fouquereATlipnDOTuniv-paris13DOTfr</tt>
+</p>
+
+<P><I>Christophe Fouquer&eacute;<BR>
+Laboratoire d'Informatique de l'universit&eacute; Paris Nord<BR> 
+A204, Institut Galil&eacute;e<BR>
+Universit&eacute; Paris 13<BR>
+99, Avenue J.B. Cl&eacute;ment<br>
+93430 VILLETANEUSE<br>
+FRANCE
+</i>
+</p>
+
+</body>
+</html>
+

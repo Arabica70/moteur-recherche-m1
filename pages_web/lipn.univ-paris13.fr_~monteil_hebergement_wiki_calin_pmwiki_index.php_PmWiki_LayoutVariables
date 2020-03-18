@@ -1,0 +1,314 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Layout Variables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.LayoutVariables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=search&amp;q=link=PmWiki.LayoutVariables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Layout Variables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables'>I18n Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LinkVariables'>Link Variables</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p>Variable substitutions in the skin template are all managed by the FmtPageName() function from pmwiki.php. Pmwiki variable substitutions available on pages are managed by the  substitutions from stdmarkup.php or superseded in local/config files. 
+</p>
+<p class='vspace'>:{$ActionSkin:This array is used to override the current skin when performing a given action. The most common use is to set @@$}ActionSkin[&lsquo;print&rsquo;]=&lsquo;foo&rsquo;<code> to use the &lsquo;foo&rsquo; skin when printing, regardless of what the </code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#Skin'><code class='varlink'>&#036;Skin</code></a>@@ variable is set to.
+</p>
+<div class='vspace'></div><dl><dt><a name='WikiTitle' id='WikiTitle'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#WikiTitle'><code class='varlink'>&#036;WikiTitle</code></a></dt><dd>A variable which contains the Wiki title as displayed in the browser tab and at the top of the browser window.
+<div class='vspace'></div></dd><dt><a name='EnablePageTitlePriority' id='EnablePageTitlePriority'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnablePageTitlePriority'><code class='varlink'>&#036;EnablePageTitlePriority</code></a></dt><dd>A variable defining how to treat multiple <code> (:title ...:) </code> <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageDirectives'>page directives</a>  (added in PmWiki 2.2.9).
+</dd></dl><div class='indent'><code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnablePageTitlePriority'><code class='varlink'>&#036;EnablePageTitlePriority</code></a> = 0;</code> # PmWiki default, last encountered title wins (the title may be changed from included pages or GroupFooter).
+</div><div class='indent'><code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnablePageTitlePriority'><code class='varlink'>&#036;EnablePageTitlePriority</code></a> = 1;</code> # First title wins; if a title is defined in the page, directives from included pages cannot change it.
+</div><div class='vspace'></div><dl><dt><a name='EnableDiffInline' id='EnableDiffInline'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnableDiffInline'><code class='varlink'>&#036;EnableDiffInline</code></a></dt><dd>If set to 0, this variable switches off the word-level highlighting on the markup in the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageHistory'>page history</a>.
+</dd></dl><div class='indent'><code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnableDiffInline'><code class='varlink'>&#036;EnableDiffInline</code></a> = 0;</code> # Disable colors, show plain text differences
+</div><div class='vspace'></div><dl><dt><a name='HTMLTagAttr' id='HTMLTagAttr'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLTagAttr'><code class='varlink'>&#036;HTMLTagAttr</code></a></dt><dd>A string containing attributes of the <code>&lt;html&hellip;&gt;</code> tag in the skin template, default empty. For example, to add a &ldquo;lang&rdquo; attribute, set in config.php: <pre class='escaped'>
+$HTMLTagAttr = 'lang="en" xml:lang="en"';</pre>
+</dd></dl><div class='indent'>For this variable to work in a custom skin, add it in the template file, for example:<pre class='escaped'>
+&lt;html xmlns="http://www.w3.org/1999/xhtml" $HTMLTagAttr&gt;</pre>
+</div><div class='vspace'></div><dl><dt><a name='HTMLStylesFmt' id='HTMLStylesFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLStylesFmt'><code class='varlink'>&#036;HTMLStylesFmt</code></a></dt><dd>An array of CSS statements to be included in the page&rsquo;s output along with other HTML headers.  This array provides an easy place for scripts to add custom CSS statements.
+<div class='vspace'></div></dd><dt><a name='HTMLHeaderFmt' id='HTMLHeaderFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLHeaderFmt'><code class='varlink'>&#036;HTMLHeaderFmt</code></a></dt><dd>An array of HTML text to be included in the page&rsquo;s &lt;head&gt; section, at the point where the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SkinTemplates'>skin template</a> specifies a <code class='escaped'>&lt;!--HTMLHeader--&gt;</code> directive.  This array provides an easy place for scripts to add custom HTML headers.
+</dd></dl><div class='vspace'></div><div class='indent'>For example, if you want to specify a logo for all the pages of your wiki (a png image for Firefox (and others&hellip;), an ico for Internet Explorer):
+<div class='indent'><pre class='escaped'> 
+$HTMLHeaderFmt['logo'] =
+  '&lt;link href="http://path/to/logo.png" type="image/png" rel="icon" /&gt;
+  &lt;link href="http://path/to/logo.ico" type="image/x-icon" rel="shortcut icon" /&gt;';
+</pre>
+</div><div class='vspace'></div></div><div class='indent'>Another example, if you want to get the rss notification on some browsers (the rss icon in firefox for instance):
+<div class='indent'><pre class='escaped'> 
+$HTMLHeaderFmt['rss'] =
+  '&lt;link rel="alternate" type="application/rss+xml" title="Rss All recent Changes" 
+     href="$ScriptUrl/Site/AllRecentChanges?action=rss" /&gt;';
+</pre>
+</div></div><p class='vspace'>:{$HTMLFooterFmt:Like $}HTMLHeaderFmt above, this contains an array of HTML text to be included near the end of an HTML document, at the point where the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SkinTemplates'>skin template</a> specifies a <code class='escaped'>&lt;!--HTMLFooter--&gt;</code> directive (usually just before a closing &lt;/body&gt; tag).  Primarily used by scripts to add custom HTML output after the body of the page output. 
+</p>
+<p class='vspace'>:{$MetaRobots:Sets the value of the <code class='escaped'>&lt;meta name='robots' ... /&gt;</code> tag generated by PmWiki to control search engine robots accessing the site.  PmWiki's default setting tells robots to not index anything but the normal page view, and to not index pages in the PmWiki [[wiki group]].  Explicitly setting $}MetaRobots overrides this default.
+</p><pre>       # never index this site
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MetaRobots'><code class='varlink'>&#036;MetaRobots</code></a> = &lsquo;noindex,nofollow&rsquo;;
+       # disable the robots tag entirely
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MetaRobots'><code class='varlink'>&#036;MetaRobots</code></a> = &lsquo;&thinsp;&rsquo;;
+</pre><div class='vspace'></div><dl><dt><a name='MessagesFmt' id='MessagesFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MessagesFmt'><code class='varlink'>&#036;MessagesFmt</code></a></dt><dd>An array of HTML text to be displayed at the point of any <code class='escaped'>(:messages:)</code> markup.  Commonly used for displaying messages with respect to editing pages.
+<div class='vspace'></div></dd><dt><a name='RecentChangesFmt' id='RecentChangesFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#RecentChangesFmt'><code class='varlink'>&#036;RecentChangesFmt</code></a></dt><dd>An array specifying the format of the RecentChanges listing.
+</dd></dl><div class='vspace'></div><div class='indent'>The key of the array specifies the page where changes will be logged, as in
+<div class='indent'><pre class='escaped'>
+$RecentChangesFmt['$SiteGroup.AllRecentChanges']
+</pre>
+</div></div><div class='indent'>The value of the array specifies the format in which the changes will be logged, as in
+<div class='indent'><pre class='escaped'>
+'* [[{$Group}.{$Name}]]  . . . $CurrentTime $[by] $AuthorLink: [=$ChangeSummary=]'
+</pre>
+</div></div><div class='indent'>Note the two consecutive spaces before the three dots (<code>. . .</code>). The two spaces separate two parts of the format: the first part doesn&rsquo;t change (e.g. a link to the changed page) and the second part does change (e.g. the date and author of the change). Upon saving a page, PmWiki removes a line that matches the first part and adds a line with the current format before the first line with 2 spaces. This way, any line without two consecutive spaces stays at the top of the recent changes page.
+<div class='vspace'></div></div><div class='indent'>You can use and adapt the following to change the format (put it in config.php):
+<div class='indent'><pre class='escaped'>
+$RecentChangesFmt['$SiteGroup.AllRecentChanges'] = 
+  '* [[{$Group}.{$Name}]]  . . . $CurrentTime $[by] $AuthorLink: [=$ChangeSummary=]';
+$RecentChangesFmt['$Group.RecentChanges'] =
+  '* [[{$Group}/{$Name}]]  . . . $CurrentTime $[by] $AuthorLink: [=$ChangeSummary=]';
+</pre>
+</div><div class='vspace'></div></div><div class='indent'>Note that changes made to the format will only affect new edits. In other words, you will need to edit a page for your new format to be visible.  Note also that you need to have two spaces between the page name and the other information about the edit.
+<div class='vspace'></div></div><div class='indent'>Also note that this variable has other uses, such as not reporting at all to RecentChanges and AllRecentChanges as found here <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Questions' rel='nofollow'>PmWiki Questions</a>.
+</div><p class='vspace'>:{$RecentUploadsFmt:An array specifying the format for uploaded files at the RecentChanges listing. It is similar to $}RecentChangesFmt. If enabled, newly uploaded files will be logged to the RecentChanges pages. Default is disabled. See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/RecentUploadsLog' rel='nofollow'>Cookbook:RecentUploadsLog</a> for more information.
+</p>
+<div class='vspace'></div><dl><dt><a name='DraftRecentChangesFmt' id='DraftRecentChangesFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#DraftRecentChangesFmt'><code class='varlink'>&#036;DraftRecentChangesFmt</code></a></dt><dd>An array specifying the format of the RecentChanges listing when saving Draft pages.
+</dd></dl><div class='vspace'></div><div class='indent'>{$RecentChangesFmt is set to $}DraftRecentChangesFmt when a Draft page is saved.  For example, you could save drafts in a separate Recent Draft Changes page and not list in the normal group&rsquo;s Recent Changes page:
+<div class='indent'><pre class='escaped'>
+$DraftRecentChangesFmt['$Group.RecentDraftChanges'] =
+  '* [[{$Group}/{$Name}]]  . . . $CurrentTime $[by] $AuthorLink: [=$ChangeSummary=]';
+$DraftRecentChangesFmt['$Group.RecentChanges'] = '';
+</pre>
+</div></div><div class='vspace'></div><dl><dt><a name='RCLinesMax' id='RCLinesMax'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#RCLinesMax'><code class='varlink'>&#036;RCLinesMax</code></a></dt><dd>The maximum number of lines to be stored in RecentChanges pages.  The default is zero, meaning &ldquo;no limit&rdquo;.
+</dd></dl><pre>       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#RCLinesMax'><code class='varlink'>&#036;RCLinesMax</code></a> = 1000;       # maintain at most 1000 recent changes
+</pre><div class='vspace'></div><dl><dt><a name='PageRedirectFmt' id='PageRedirectFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#PageRedirectFmt'><code class='varlink'>&#036;PageRedirectFmt</code></a></dt><dd>The text to be used when a page is redirected via the <code class='escaped'>(:redirect:)</code> markup.
+<div class='indent'><pre class='escaped'>
+$PageRedirectFmt = '&lt;p&gt;&lt;i&gt;redirected from $FullName&lt;/p&gt;';
+$PageRedirectFmt = '';
+</pre>
+</div></dd></dl><div class='indent'>For display options, see also the FAQ on <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PageDirectives#faq' rel='nofollow'>PageDirectives</a>.
+</div><div class='vspace'></div><dl><dt><a name='WikiStyle' id='WikiStyle'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#WikiStyle'><code class='varlink'>&#036;WikiStyle</code></a></dt><dd>An array which contains the predefined WikiStyles which can be used on a textpage.<br clear='all' />See: <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomWikiStyles'>PmWiki.CustomWikiStyles</a>
+<div class='vspace'></div></dd><dt><a name='WikiStyleApply' id='WikiStyleApply'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#WikiStyleApply'><code class='varlink'>&#036;WikiStyleApply</code></a></dt><dd>An array which defines the scope of wiki styling per HTML element. Default settings are:
+</dd></dl><div class='indent'><pre class='escaped'>
+'item' =&gt; 'li|dt',
+'list' =&gt; 'ul|ol|dl',
+'div' =&gt; 'div',
+'pre' =&gt; 'pre',
+'img' =&gt; 'img',
+'block' =&gt; 'p(?!\\sclass=)|div|ul|ol|dl|li|dt|pre|h[1-6]',
+'p' =&gt; 'p(?!\\sclass=)'
+</pre>
+<div class='vspace'></div></div><div class='indent'>This defines that we can apply wiki styling on:
+</div><ul><li>LI elements using the <em>item</em> keyword
+</li><li>UL, OL, DL elements using the <em>list</em> keyword
+</li><li>etc.
+</li></ul><div class='vspace'></div><div class='indent'>An example of applying scope to an LI element is below. For more information refer to <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles#Scope'>WikiStyle scope</a>.
+</div><table class='markup horiz' align='center'>
+      <tr><td class='markup1' valign='top'><pre>* %apply=item red%Here is a red styled list item
+* This item would not be styled.
+</pre></td><td 
+        class='markup2' valign='top'><ul><li  style='color: red;'>Here is a red styled list item
+</li><li>This item would not be styled.
+</li></ul>
+</td></tr></table>
+<div class='vspace'></div><div class='indent'>You can <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiStyles#WikiStyleApply'>add additional HTML elements to &#036;WikiStyleApply</a> to apply wiki styles to other HTML elements. For example to allow styling on table rows, or anchor tags.
+</div><p class='vspace'>:{$MaxIncludes:Controls the number of times that pages can be included via the <code class='escaped'>(:include:)</code> and other directives, used to control recursion and otherwise pose a sanity check on page contents.  $}MaxIncludes defaults to 50, but can be set to any value by the wiki administrator.
+</p><pre>       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MaxIncludes'><code class='varlink'>&#036;MaxIncludes</code></a> = 50;            # default
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MaxIncludes'><code class='varlink'>&#036;MaxIncludes</code></a> = 1000;          # allow lots of includes
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#MaxIncludes'><code class='varlink'>&#036;MaxIncludes</code></a> = 0;             # turn off includes
+</pre><p class='vspace'>:{$Skin:Lists the name(s) of skins to load, unless overridden by $}ActionSkin. Normally <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#Skin'><code class='varlink'>&#036;Skin</code></a> contains a single string which is the name of a skin directory, but it may also be an array of names, in which case the first skin found from the list is used.
+</p>
+<div class='vspace'></div><dl><dt><a name='SkinDirUrl' id='SkinDirUrl'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#SkinDirUrl'><code class='varlink'>&#036;SkinDirUrl</code></a></dt><dd>Set by <em>scripts/skins.php</em> to be the base url of the current skin&rsquo;s directory (i.e., within a &lsquo;pub/skins/&rsquo; directory).  This variable is typically used inside of a skin .tmpl file to provide access to .css files and graphic images associated with the skin.
+<div class='vspace'></div></dd><dt><a name='SkinLibDirs' id='SkinLibDirs'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#SkinLibDirs'><code class='varlink'>&#036;SkinLibDirs</code></a></dt><dd>An array which, given the filesystem path (array key) to a skin (or a directory containing several skins), provides the corresponding URL (array value).
+</dd></dl><div class='vspace'></div><div class='indent'>The array key is the directory containing the skin.tmpl and skin.php files, as seen by the PmWiki program. It does not have to be publicly accessible.
+<div class='vspace'></div></div><div class='indent'>The value is the URL (web address) of the directory containing the .css, .gif, and other files which appear in the HTML code sent by PMWiki to the browser. This directory must be publicly accessible.
+<div class='vspace'></div></div><div class='indent'>By default <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#SkinLibDirs'><code class='varlink'>&#036;SkinLibDirs</code></a> is set to:<br /><pre class='escaped'>
+$SkinLibDirs = array(
+  "./pub/skins/\$Skin" =&gt; "$PubDirUrl/skins/\$Skin",
+  "$FarmD/pub/skins/\$Skin" =&gt; "$FarmPubDirUrl/skins/\$Skin");
+</pre>
+<div class='vspace'></div></div><div class='indent'>Extra details: When PMWiki is searching for a skin it looks for a directory named for the skin in the array index/keys, and if it finds it then it will use the files in that directory and also the files in the matching array value url. The two sides normally point to the same publicly accessible directory, but they do not have to.
+</div><div class='vspace'></div><dl><dt><a name='PageLogoUrl' id='PageLogoUrl'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#PageLogoUrl'><code class='varlink'>&#036;PageLogoUrl</code></a></dt><dd> is the url that refers to a logo image which most skins display somewhere in the page&rsquo;s header (top left usually).
+<div class='vspace'></div></dd><dt><a name='EnablePathInfo' id='EnablePathInfo'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnablePathInfo'><code class='varlink'>&#036;EnablePathInfo</code></a></dt><dd>Changes the handling of the page URL. When set to <code>1</code> page URL will be <code>&hellip;wiki.php/Main/Main</code>, when set to <code>0</code> (default) it will be <code>&hellip;wiki.php?n=Main.Main</code>.
+</dd></dl><p class='vspace'>:{$EnableFixedUrlRedirect:When PmWiki is given a partial page name (e.g., just the name of a WikiGroup), it uses $}PagePathFmt in order to make a complete page name from the partial one, then issues a &ldquo;redirect&rdquo; to the browser to tell it to reload the page with the correct full page name.  Setting <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnableFixedUrlRedirect'><code class='varlink'>&#036;EnableFixedUrlRedirect</code></a>=0; blocks the redirect, so that PmWiki continues processing with the adjusted page name rather than issuing the redirect. 
+</p>
+<div class='vspace'></div><dl><dt><a name='GroupHeaderFmt' id='GroupHeaderFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupHeaderFmt'><code class='varlink'>&#036;GroupHeaderFmt</code></a></dt><dd>Defines the markup placed at the top of every page. Default value is:
+</dd></dl><pre>       <code class='escaped'>$GroupHeaderFmt = '(:include {$Group}.GroupHeader self=0 basepage={*$FullName}:)(:nl:)';</code>
+</pre><div class='vspace'></div><dl><dt><a name='GroupPrintHeaderFmt' id='GroupPrintHeaderFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupPrintHeaderFmt'><code class='varlink'>&#036;GroupPrintHeaderFmt</code></a></dt><dd>Defines the markup placed at the top of every page when <code class='escaped'>action=print</code>. Default value is:
+</dd></dl><pre>       <code class='escaped'>SDV($GroupPrintHeaderFmt,'(:include $Group.GroupPrintHeader basepage={*$FullName}:)(:nl:)');</code>
+</pre><div class='vspace'></div><dl><dt><a name='GroupFooterFmt' id='GroupFooterFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupFooterFmt'><code class='varlink'>&#036;GroupFooterFmt</code></a></dt><dd>Defines the markup placed at the bottom of every page. Default value is:
+</dd></dl><pre>       <code class='escaped'>$GroupFooterFmt = '(:nl:)(:include {$Group}.GroupFooter self=0 basepage={*$FullName}:)';</code>
+</pre><div class='vspace'></div><dl><dt><a name='GroupPrintFooterFmt' id='GroupPrintFooterFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#GroupPrintFooterFmt'><code class='varlink'>&#036;GroupPrintFooterFmt</code></a></dt><dd>Defines the markup placed at the bottom of every page when <code class='escaped'>action=print</code>. Default value is:
+</dd></dl><pre>       <code class='escaped'>SDV($GroupPrintFooterFmt,'(:nl:)(:include $Group.GroupPrintFooter basepage={*$FullName}:)');</code>
+</pre><div class='vspace'></div><dl><dt><a name='PageNotFoundHeaderFmt' id='PageNotFoundHeaderFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#PageNotFoundHeaderFmt'><code class='varlink'>&#036;PageNotFoundHeaderFmt</code></a></dt><dd>Specifies the HTTP header to send when attempting to browse a page that doesn&rsquo;t exist.  Some webserver packages (notably Microsoft&rsquo;s &ldquo;Personal Web Server&rdquo;) require that this variable be changed in order to work.
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+# default
+$PageNotFoundHeaderFmt = 'HTTP/1.1 404 Not Found';
+# return all pages as found
+$PageNotFoundHeaderFmt = 'HTTP/1.1 200 Ok';
+</pre>
+</div></dd></dl><div class='vspace'></div><div class='indent'>Beware when expecting to return the content of a Group(header|footer) for an non existent page!  By default PmWiki returns 404 (because the page does not exist), despite there is some content to show.  Firefox shows the content, while Internet Explorer displays its default 404 page.  <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#PageNotFoundHeaderFmt'><code class='varlink'>&#036;PageNotFoundHeaderFmt</code></a> MUST be set to return 200 as described above in order to get the expected behaviour with all browsers.
+</div><div class='vspace'></div><dl><dt><a name='HTMLVSpace' id='HTMLVSpace'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLVSpace'><code class='varlink'>&#036;HTMLVSpace</code></a></dt><dd>Setting <code class='escaped'>$HTMLVSpace = '';</code> in a local customizationfile (e.g., <code class='escaped'>local/config.php</code>) prevents insertion of spacer paragraphs (<code class='escaped'>&lt;p class='vspace'&gt;&lt;/p&gt;</code>) in generated HTML code. To limit this change to a single skin, place the <code class='escaped'>$HTMLVSpace = '';</code> statement in a skin.php file, preceded by the statement <code class='escaped'>global $HTMLVSpace;</code>.
+</dd></dl><p class='vspace'>:{$HTMLPNewline:This variable allows to enable linebreaks by default, i.e. without having the directive (:linebreaks:) in a page or in a GroupHeader. To enable line breaks, add to config.php such a line:<br />  @@$}HTMLPNewline = &lsquo;&lt;br/&gt;&rsquo;; @@
+</p>
+<p class='vspace'>:{$SimpleTableDefaultClassName:This variable can contain a CSS classname to be used for [[tables|simple tables]], if a "class=" attribute is not defined in the wiki page (default unset):<br />@@  $}SimpleTableDefaultClassName = &ldquo;wikisimpletable&rdquo;;@@<br />See for sample code <a class='urllink' href='http://www.pmwiki.org/wiki/PITS/00638' rel='nofollow'>PITS:00638</a>.
+</p>
+<p class='vspace'>:{$TableCellAttrFmt:For [[Tables]], defines the HTML attributes given to each @@&lt;td&gt;@@ or @@&lt;th&gt;@@ cell in the output.  Can contain references to $}TableCellCount which holds the horizontal column number of the current cell.
+</p>
+<p class='vspace'>:{$TableCellAlignFmt:For [[Tables]], defines the HTML attributes for alignment of each @@&lt;td&gt;@@ or @@&lt;th&gt;@@ cell. Default is @@" align='%s'"@@ where %s will be replaced with 'center', 'left' or 'right'. For a valid HTML5 output you may want to change this in config.php:<br />@@$}TableCellAlignFmt = &ldquo; class=&lsquo;%s&rsquo;&thinsp;&rdquo;;@@<br />then define the CSS classes td.center, td.right and td.left (also th).
+</p>
+<p class='vspace'>:{$TableRowAttrFmt:For [[Tables]], defines the HTML attributes given to each @@&lt;tr&gt;@@ element in the output.  Can contain references to $}TableRowCount to give the absolute row number within the table, or {$TableRowIndex to provide a repeating row index from 1 to $}TableRowIndexMax.
+</p><pre>       # Give each row a unique CSS class based on row number (tr1, tr2, tr3, &hellip; )
+       {$TableRowAttrFmt = "class='tr\$}TableRowCount&rsquo;&thinsp;&rdquo;;
+       # Give each row alternating CSS classes (ti1, ti2, ti1, ti2, ti1, &hellip; )
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#TableRowIndexMax'><code class='varlink'>&#036;TableRowIndexMax</code></a> = 2;
+       {$TableRowAttrFmt = "class='ti\$}TableRowIndex&rsquo;&thinsp;&rdquo;;
+</pre><p class='vspace'>:{$TableRowIndexMax:The maximum value for $}TableRowIndex in <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Tables'>Tables</a>.
+</p><pre>       # Set rows indexes as 1, 2, 3, 1, 2, 3, 1, 2, &hellip;
+       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#TableRowIndexMax'><code class='varlink'>&#036;TableRowIndexMax</code></a> = 3;
+</pre><div class='vspace'></div><dl><dt><a name='EnableTableAutoValignTop' id='EnableTableAutoValignTop'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnableTableAutoValignTop'><code class='varlink'>&#036;EnableTableAutoValignTop</code></a></dt><dd><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>Advanced tables</a> are intended for layout, and automatically insert the <code>valign=&lsquo;top&rsquo;</code> attribute if there is no <code>valign</code> attribute defined in the markup source. Setting this variable to 0 in config.php will prevent the automatic addition.
+</dd></dl><pre>       <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#EnableTableAutoValignTop'><code class='varlink'>&#036;EnableTableAutoValignTop</code></a> = 0; # disable automatic valign=&lsquo;top&rsquo; attr
+</pre><div class='vspace'></div><dl><dt>{$FmtV['$}TableCellCount&rsquo;]</dt><dd>PMWiki internal variable - Horizontal column number of the current cell. For use in {$TableCellAttrFmt and $}TableRowAttrFmt.  Administrators can use in {$TableCellAttrFmt and/or $}TableRowAttrFmt.
+</dd></dl><pre>       <code class='escaped'>Example: $TableCellAttrFmt = 'class=col\$TableCellCount';</code> 
+</pre><div class='vspace'></div><dl><dt>{$FmtV['$}TableRowCount&rsquo;]</dt><dd>PMWiki internal variable - Current row number.  Administrators can use in {$TableCellAttrFmt and/or $}TableRowAttrFmt.
+</dd></dl><pre>       <code class='escaped'>Example: TableRowAttrFmt = "class='row\$TableRowCount'";</code> 
+</pre><div class='vspace'></div><dl><dt>{$FmtV['$}TableRowIndex&rsquo;]</dt><dd>PMWiki internal variable - Row index number derived from {$TableRowIndexMax.  (1,2,3,1,2,3,...). Administrators can use in $}TableCellAttrFmt and/or <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#TableRowAttrFmt'><code class='varlink'>&#036;TableRowAttrFmt</code></a>.
+</dd></dl><pre>       <code class='escaped'>Example: $TableRowAttrFmt = "class='ind\$TableRowIndex'";</code>
+</pre><p class='vspace'>See also: <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables'>Edit Variables</a>
+ 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables'>I18n Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LinkVariables'>Link Variables</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/LayoutVariables' rel='nofollow'>PmWiki:LayoutVariables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/LayoutVariables-Talk' rel='nofollow'>PmWiki:LayoutVariables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on December 23, 2017, at 08:22 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

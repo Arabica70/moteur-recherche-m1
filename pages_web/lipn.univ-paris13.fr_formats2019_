@@ -1,0 +1,1283 @@
+<!DOCTYPE HTML>
+<!--
+	TXT by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>FORMATS 2019</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	<script>
+	function abstract(){
+	    $("div[class='abstract']").toggle("slow");
+	}
+	</script>
+	<style>
+    .abstract { display:none; }
+    .award { font-style: normal; font-weight: bold; color: #D0A000; margin-left: .5em;}
+    .title { font-style: italic; }
+    .slides { font-style: normal; font-size: smaller; color: #808080; margin-left: 1em;}
+    .slides a { color: #808080}
+    .authors { font-weight: bold; }
+    tr.break {background-color:#f0fff8;border:0;}
+    tr.daterow {background-color:#d0d0d0;}
+	tr.daterow th {font-size: larger; font-weight: bold;}
+    tr.event {background-color:#f0f0f0;border:0;}
+    tr.keynote {background-color:#ffffd0;border:0;}
+    tr.regulartalk {border-top: 1px solid #f0f8ff;}
+    tr.session {background-color:#f0f8ff;border:0; font-weight: bold;}
+    td.time {background-color:#f0f8ff;border:2px solid white;}
+	</style>
+	
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">FORMATS 2019</a></h1>
+							<p>Amsterdam (27-29 August 2019)</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="#header">Home</a></li>
+						<li><a href="#important">Important dates</a></li>
+						<li><a href="#speakers">Invited speakers</a></li>
+						<li><a href="#call">Call for papers</a></li>
+<!-- 						<li><a href="#submission">Submission</a></li> -->
+						<li><a href="#program">Program</a></li>
+						<li><a href="#committees">Committees</a></li>
+						<li><a href="#venue">Venue and registration</a></li>
+					</ul>
+				</nav>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<h2>FORMATS 2019</h2>
+						<p>17th International Conference on Formal Modeling and Analysis of Timed Systems</p>
+						<a href="#important" class="button scrolly">Important dates</a>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row gtr-200">
+						<!--
+							<div class="col-12">
+
+								< ! - - Highlight - - >
+									<section class="box highlight">
+										<ul class="special">
+											<li><a href="#" class="icon fa-search"><span class="label">Magnifier</span></a></li>
+											<li><a href="#" class="icon fa-tablet"><span class="label">Tablet</span></a></li>
+											<li><a href="#" class="icon fa-flask"><span class="label">Flask</span></a></li>
+											<li><a href="#" class="icon fa-cog"><span class="label">Cog?</span></a></li>
+										</ul>
+										<header>
+											<h2>A random assortment of icons in circles</h2>
+											<p>And some text that attempts to explain their significance</p>
+										</header>
+										<p>
+											Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis eget mi. Etiam eu<br />
+											ante risus. Aliquam erat volutpat. Aliquam luctus et mattis lectus amet pulvinar. Nam nec turpis consequat.
+										</p>
+									</section>
+
+							</div>
+						-->
+							<div class="col-12">
+
+								<!-- Important dates -->
+									<section class="box features">
+										<h2 class="major" id="important"><span>Important dates</span></h2>
+										<div>
+											<div class="row">
+												<div class="col-2 col-5-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<span class="image featured"><img src="images/abstract.jpg" alt="abstract" /></span>
+															<h3>Abstract submission</h3>
+															<p>
+																<span style="text-decoration: line-through;">9 May 2019</span> 20 May 2019 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a>
+															</p>
+														</section>
+
+												</div>
+												<div class="col-2 col-5-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<span class="image featured"><img src="images/paper.jpg" alt="paper" /></span>
+															<h3>Paper submission</h3>
+															<p>
+																<span style="text-decoration: line-through;">13 May 2019</span> 20 May 2019 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a>
+															</p>
+														</section>
+
+												</div>
+												<div class="col-2 col-5-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<span class="image featured"><img src="images/notification.jpg" alt="notification" /></span>
+															<h3>Notification</h3>
+															<p>
+																23 June 2019
+															</p>
+														</section>
+
+												</div>
+												<div class="col-2 col-5-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<span class="image featured"><img src="images/camera.jpg" alt="camera-ready" /></span>
+															<h3>Camera-ready</h3>
+															<p>
+																8 July 2019
+															</p>
+														</section>
+
+												</div>
+												<div class="col-2 col-5-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<span class="image featured"><img src="images/conference.jpg" alt="conference" /></span>
+															<h3>Conference</h3>
+															<p>
+																27-29 August 2019
+															</p>
+														</section>
+
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><a href="https://event.cwi.nl/concur2019/participation.html" class="button large">Register</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+							
+							<div class="col-12">
+
+								<!-- Invited speakers -->
+									<section class="box features" id="speakers">
+										<h2 class="major"><span>Invited speakers</span></h2>
+										<div>
+											<div class="row">
+												<div class="col-4 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="http://people.rennes.inria.fr/Nathalie.Bertrand/" class="image featured"><img src="images/nat-grenoble-jan19.png" alt="Nathalie Bertrand" /></a>
+															<h3><a href="http://people.rennes.inria.fr/Nathalie.Bertrand/">Nathalie Bertrand</a></h3>
+															<p>
+																FORMATS invited speaker
+															</p>
+															<p>
+																When are dense-time stochastic systems tameable?
+															</p>
+														</section>
+
+												</div>
+												<div class="col-4 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="http://www.cs.ox.ac.uk/marta.kwiatkowska/" class="image featured"><img src="images/marta-2014-mid.jpg" alt="Marta Kwiatkowska" /></a>
+															<h3><a href="http://www.cs.ox.ac.uk/marta.kwiatkowska/">Marta Kwiatkowska</a></h3>
+															<p>
+																CONCUR + FORMATS invited speaker
+															</p>
+															<p>
+																Title: <a href="https://event.cwi.nl/concur2019/program.html">Safety verification for deep neural networks with provable guarantees</a>
+															</p>
+														</section>
+
+												</div>
+												<div class="col-4 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="http://people.cs.aau.dk/~kgl/" class="image featured"><img src="images/kim-larsen.jpg" alt="Kim G. Larsen" /></a>
+															<h3><a href="http://people.cs.aau.dk/~kgl/">Kim Larsen</a></h3>
+															<p>
+																CONCUR + FORMATS invited speaker
+															</p>
+															<p>
+																Title: <a href="https://event.cwi.nl/concur2019/program.html">Synthesis of Safe, Optimal and Compact Strategies for Stochastic Hybrid Games</a>
+															</p>
+														</section>
+
+												</div>
+
+											</div>
+										</div>
+									</section>
+
+							</div>
+							
+							<div class="col-12">
+
+								<!-- Call for papers -->
+									<section class="box blog" id="call">
+										<h2 class="major"><span>Call for papers</span></h2>
+										<div>
+											<div class="row">
+												<div class="content">
+
+													<!-- Featured Post -->
+														<article class="box post">
+															<header>
+																<h3>Call for papers</h3>
+																<p>Objectives</p>
+															</header>
+															<p>
+																
+
+Control and analysis of the timing of computations is crucial to many domains of system engineering, be it, e. g., for ensuring timely response to stimuli originating in an uncooperative environment, or for synchronising components in VLSI.  Reflecting this broad scope, timing aspects of systems from a variety of domains have been treated independently by different communities in computer science and control.  Researchers interested in semantics, verification and performance analysis study models such as timed automata and timed Petri nets, the digital design community focuses on propagation and switching delays, while designers of embedded controllers have to take account of the time taken by controllers to compute their responses after sampling the environment, as well as of the dynamics of the controlled process during this span.
+</p>
+
+<p>
+
+Timing-related questions in these separate disciplines do have their particularities.  However, there is a growing awareness that there are basic problems (of both scientific and engineering level) that are common to all of them.  In particular, all these sub-disciplines treat systems whose behaviour depends upon combinations of logical and temporal constraints; namely, constraints on the temporal distances between occurrences of successive events.  Often, these constraints cannot be separated, as the intrinsic dynamics of processes couples them, necessitating models, methods, and tools facilitating their combined analysis.  Reflecting this, FORMATS 2019 promotes submissions on hybrid discrete-continuous systems, and will promote a special session on this topic.
+
+															</p>
+															
+															
+															<header>
+																<p>Topics of interest</p>
+															</header>
+
+															<p>The aim of FORMATS is to promote the study of fundamental and practical aspects of timed systems, and to bring together researchers from different disciplines that share interests in modelling and analysis of timed systems and, as a generalisation, of hybrid systems.
+															<b>In 2019, FORMATS aims at being more inclusive w.r.t. applications, notably real-time systems.</b>
+
+															
+															</p><p>Typical topics include (but are not limited to):</p>
+<h4>Foundations and Semantics:</h4>
+<p>Theoretical foundations of timed systems and languages; new models and logics for analysis and comparison of existing models (like automata, Petri nets, max-plus models, network calculus, or process algebras involving quantitative time; hybrid automata; probabilistic automata and logics).</p>
+<h4>Methods and Tools:</h4>
+<p>Techniques, algorithms, data structures, and software tools for verification, synthesis, learning, online monitoring and runtime verification of timed or hybrid systems and for resolving temporal constraints (scheduling, worst-case execution time analysis, optimisation, model checking, testing, constraint solving).</p>
+<h4>Applications:</h4>
+<p>Adaptation and specialisation of timing technology in application domains in which timing plays an important role (real-time software, embedded control, hardware circuits, biological systems, and problems of scheduling in manufacturing and telecommunications).</p>
+
+
+														</article>
+
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><a href="FORMATS19-CfP.pdf" class="button large">CfP in PDF</a></li>
+														<li><a href="FORMATS19-CfP.md" class="button alt large">CfP in txt</a></li>
+													</ul>
+												</div>
+
+											</div>
+										</div>
+									</section>
+											
+								<!-- Submission -->
+									<section class="box blog" id="submission">
+										<h2 class="major"><span>Submission</span></h2>
+										<div>
+											<div class="row">
+												<div class="col-9 col-12-medium">
+													<div class="content">
+
+														<!-- Featured Post -->
+															<article class="box post">
+																<header>
+																	<h3>Format and submission</h3>
+																	<p>Springer LNCS</p>
+																</header>
+																<a href="#" class="image featured"><img src="images/submit.jpg" alt="submission" /></a>
+																
+																<p>
+																FORMATS 2019 solicits high-quality papers reporting research results and/or experience reports related to the topics mentioned above.  Submitted papers must contain original, unpublished contributions, not submitted for publication elsewhere.  The papers should be submitted electronically in PDF, following the Springer LNCS style and ethical guidelines.  In particular, every author has contributed sufficiently to the intellectual scientific work.  Submissions should not exceed 15 pages in length (not including the bibliography, which is thus not restricted), but may be supplemented with a clearly marked appendix, which will be reviewed at the discretion of the program committee.
+																
+																<em>Authors should consult <a href="ftp://ftp.springernature.com/cs-proceeding/svproc/guidelines/Springer_Guidelines_for_Authors_of_Proceedings.pdf">Springer’s authors’ guidelines</a>
+ and use their proceedings templates, either for
+ <a href="ftp://ftp.springernature.com/cs-proceeding/llncs/llncs2e.zip">LaTeX</a> or
+ for
+ <a href="ftp://ftp.springernature.com/cs-proceeding/llncs/word/splnproc1703.zip">Word</a>,
+ for the preparation of their papers. Springer encourages authors to
+ include their <a href="https://en.wikipedia.org/wiki/ORCID">ORCIDs</a> in their papers. In addition,
+ the corresponding author of each paper, acting on behalf of all of the
+ authors of that paper, must complete and sign a Consent-to-Publish form.
+ The corresponding author signing the copyright form should match the
+ corresponding author marked on the paper. Once the files have been sent
+ to Springer, changes relating to the authorship of the papers cannot be
+ made.</em></p>
+
+<p><b>New this year</b>: FORMATS also sollicits <em>tool papers</em>. Tool papers should describe a tool, focusing on its usage rather than on the underlying theory. The tool should be available online and come with a (possibly minimal) documentation.</p>
+
+<p>Each paper will undergo a thorough review process.</p>
+
+<p><em>We strongly encourage authors to add line numbers to their submitted paper (for example using the LaTeX <a href="https://www.ctan.org/pkg/lineno">lineno</a> package).</em></p>
+
+
+															<header>
+																<p>Special sessions</p>
+															</header>
+															
+																<p>FORMATS 2019 will contain two special sessions.
+																	Papers submitted into special sessions will undergo the same review process as regular papers, but will be presented in a special slot during the conference.
+																</p>
+																<ol>
+																	<li>Special session on data-driven and stochastic approaches to real-time, including monitoring and big data (chaired by Martin Fränzle)</li>
+																	<li>Special session on timed systems and probabilities (chaired by Nathalie Bertrand)</li>
+																</ol>
+																
+															<header>
+																<p>Publication</p>
+															</header>
+																<p>Publication of the proceedings of FORMATS 2019 will be hosted by Springer in the Lecture Notes in Computer Science series (to be confirmed).
+																During the conference, participants have free online access to the proceedings from a webpage.
+																</p>
+																
+																
+																
+															<header>
+																<p>Oded Maler Award</p>
+															</header>
+															
+<p>Following the tradition started in 2018, FORMATS 2019 will award a best paper award in memory of Oded Maler. In 2019, this prize comes with a cash award sponsored by DENSO.</p>
+
+										<img style="height:4em" src="images/denso.png" alt="Denso">
+
+																<p><a href="https://easychair.org/conferences/?conf=formats2019" class="button">Submit your paper</a></p>
+																
+
+														</article>
+
+													</div>
+												</div>
+												<div class="col-3 col-12-medium">
+													<div class="sidebar">
+
+														<!-- Archives -->
+															<ul class="divided">
+																<li>
+																	<article class="box post-summary">
+																		<h3>Regular papers</h3>
+																		<ul class="meta">
+																			<li class="icon fa-book">15 pages LNCS + references</li>
+																		</ul>
+																	</article>
+																</li>
+																<li>
+																	<article class="box post-summary">
+																		<h3>Tool papers</h3>
+																		<ul class="meta">
+																			<li class="icon fa-book">5 pages LNCS + references</li>
+																		</ul>
+																	</article>
+																</li>
+															</ul>
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</section>
+
+								<!-- Submission -->
+									<section class="box blog" id="program">
+										<h2 class="major"><span>Program</span></h2>
+										<div>
+											<div class="row">
+												<div class="content">
+
+													<!-- Featured Post -->
+														<article class="box post">
+															<header>
+																<h3>Program</h3>
+															</header>
+															<a href="#" class="image featured"><img src="images/annie-spratt-746981-unsplash.jpg" alt="Vintage page sheet background" /></a>
+																
+			      <p>
+        <a href="javascript:abstract();">Show abstracts</a>
+      </p>
+			      <p>
+        <a href="FORMATS19.ics">Download the program as an ICS file</a>
+      </p>
+      
+      <p><b>The online proceedings are available <a href="https://link.springer.com/book/10.1007/978-3-030-29662-9">here</a>.</b></p>
+
+			<table>
+				<!-- ************************************************************ -->
+				<tr class="daterow">
+					<th>
+						Tuesday, 27 August, 2019
+					</th>
+					<td>
+						FORMATS, Euler Room
+					</td>
+				</tr>
+				<tr class="event">
+					<td>
+						08:30&ndash;09:00
+					</td>
+					<td>
+						Opening
+					</td>
+				</tr>
+				<tr class="keynote">
+					<td>
+						09:00&ndash;10:00
+					</td>
+					<td>
+						<div class="authors">Keynote: <a href="http://www.cs.ox.ac.uk/marta.kwiatkowska/">Marta Kwiatkovska</a> (room: Turing) (chair: Jos Baeten)</div>
+						<div class="title"><a href="https://event.cwi.nl/concur2019/program.html">Safety verification for deep neural networks with provable guarantees</a></div>
+						<div class="abstract">
+						Computing systems are becoming ever more complex, with decisions increasingly often based on deep learning components. A wide variety of applications are being developed, many of them safety-critical, such as self-driving cars and medical diagnosis. Since deep learning is unstable with respect to adversarial perturbations, there is a need for rigorous software development methodologies that encompass machine learning components. This lecture will describe progress with developing automated verification techniques for deep neural networks to ensure safety and robustness of their decisions with respect to input perturbations. The techniques exploit Lipschitz continuity of the networks and aim to approximate, for a given set of inputs, the reachable set of network outputs in terms of lower and upper bounds, in anytime manner, with provable guarantees. We develop novel algorithms based on feature-guided search, games, global optimisation and Bayesian methods, and evaluate them on state-of-the-art networks. The lecture will conclude with an overview of the challenges in this field.
+						</div>
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						10:00&ndash;10:30
+					</td>
+					<td>
+						Coffee break
+					</td>
+				</tr>
+				<tr class="session">
+					<td>
+						10:30&ndash;12:30
+					</td>
+					<td>
+						Special session on data-driven and stochastic approaches to real-time, including monitoring and big data (Chair: Martin Fränzle)
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						10:30&ndash;10:32
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a> and <a href="http://wwwhome.ewi.utwente.nl/~marielle/">Mariëlle Stoelinga</a></div>
+						<div class="title">
+						<a href="https://link.springer.com/content/pdf/bfm%3A978-3-030-29662-9%2F1.pdf">Welcome words</a>
+							<span class="slides"><a href="slides/FORMATS19-opening.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/2019">bib</a>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						10:32&ndash;11:00
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="http://group-mmm.org/~mwaga/">Masaki Waga</a>*</div>
+						<div class="title">
+						<a href="https://doi.org/10.1007/978-3-030-29662-9_1">Online Quantitative Timed Pattern Matching with Semiring-Valued Weighted Automata</a>
+							<span class="award">🏆 best paper award</span>
+							<span class="slides"><a href="slides/Waga.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Waga19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						<em>Monitoring</em> of a signal plays an essential role in the runtime verification of cyber-physical systems. <em>Qualitative timed pattern matching</em> is one of the mathematical formulations of monitoring, which gives a Boolean verdict for each sub-signal according to the satisfaction of the given specification. There are two orthogonal directions of extension of the qualitative timed pattern matching. One direction on the result is <em>quantitative</em>: what engineers want is often not a qualitative verdict but the <em>quantitative measurement</em> of the satisfaction of the specification. The other direction on the algorithm is <em>online</em> checking: the monitor returns some verdicts before obtaining the entire signal, which enables to monitor a running system. It is desired from application viewpoints. In this paper, we conduct these two extensions, taking an automata-based approach. This is the first <em>quantitative</em> and <em>online</em> timed pattern matching algorithm to the best of our knowledge. More specifically, we employ what we call <em>timed symbolic weighted automata</em> to specify quantitative specifications to be monitored, and we obtain an online algorithm using the <em>shortest distance</em> of a weighted variant of the zone graph and <em>dynamic programming</em>. Moreover, our problem setting is <em>semiring-based</em> and therefore general. Our experimental results confirm the scalability of our algorithm for specifications with a time-bound.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:00&ndash;11:30
+					</td>
+					<td class="talk">
+						<div class="authors">Mahmoud Salem, Gonzalo Carvajal*, Tong Liu and Sebastian Fischmeister</div>
+						<div class="title">
+						<a href="https://doi.org/10.1007/978-3-030-29662-9_2">Assessing the Robustness of Arrival Curves Models for Real-time Systems</a>
+							<span class="slides">
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/SalemCLF19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Design of real-time systems is prone to uncertainty due to software and hardware changes throughout their deployment. In this context, both industry and academia have shown interest in new trace mining approaches for diagnosis and prognosis of complex embedded systems. Trace mining techniques construct empirical models that mainly target achieving high accuracy in detecting anomalies. However, when applied to safety-critical systems, such models lack in providing theoretical bounds on the system resilience to variations from these anomalies.
+<br/>
+The paper presents the first work to derive robustness criteria on a trace mining approach that constructs arrival-curves models from datasets of traces collected from real-time systems. Through abstracting arrival-curves models to the demand-bound functions of a sporadic task under an EDF scheduler, the paper enables designers to quantify the permissible change to the parameters of a given task model by relating to the variation expressed within the empirical model. We evaluate the approach on an industrial cyber-physical system that generates traces of timestamped QNX events.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:30&ndash;12:00
+					</td>
+					<td class="talk">
+						<div class="authors">Rehab Massoud*, Hoang Le and <a href="http://www.informatik.uni-bremen.de/agra/">Rolf Drechsler</a></div>
+						<div class="title">
+						<a href="https://doi.org/10.1007/978-3-030-29662-9_3">Property-Driven Timestamps Encoding for Timeprints-Based Tracing and Monitoring</a>
+							<span class="slides">
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/MassoudLD19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Timeprints are temporal regularly-logged signatures, describing a signal’s temporal behavior.
+They have been recently used in on-chip signals tracing and temporal properties checking.
+Timeprints are generated by aggregations of encoded timestamps marking where signal changes took place.
+This paper describes different timestamps encoding mechanisms, and shows how some system’s temporal properties can be used to create more efficient timestamps.
+The efficiency of a timestamps-encoding is introduced in terms of the number of collisions in the timeprints-reconstruction solution space.
+We show how using property-based timestamps encoding reduces the number of such collisions leading to faster reconstruction and less properties checking time. 
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						12:00&ndash;12:30
+					</td>
+					<td class="talk">
+						<div class="authors">Thomas Ferrère, <a href="http://www-verimag.imag.fr/~maler">Oded Maler</a> and Dejan Nickovic*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_4">Mixed-Time Signal Temporal Logic</a>
+							<span class="slides">
+							<a href="slides/mtstl.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/FerrereMN19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						 We present Mixed-time Signal Temporal Logic (MX-STL), a specification formalism which extends STL by capturing
+the discrete/continuous time duality found in many cyber-physical systems (CPS), as well as mixed-signal designs.
+In MX-STL, properties of components with continuous dynamics are
+expressed in STL, while specifications of components with discrete dynamics are written in LTL. To combine the two layers, we parameterize
+the logic with a sampling period T and introduce two interface operators that map signals, properties and their satisfaction signals across the two time domains. We show that MX-STL has the expressive power of STL supplemented with an implicit T-periodic clock signal. We develop and implement an algorithm for monitoring MX-STL formulas and illustrate the approach using a mixed-signal example.
+						</div>
+					</td>
+				</tr>
+
+				<tr class="break">
+					<td>
+						12:30&ndash;13:30
+					</td>
+					<td>
+						Lunch break
+					</td>
+				</tr>
+				
+				<tr class="session">
+					<td>
+						13:30&ndash;15:00
+					</td>
+					<td>
+						Timed systems (Chair: Didier Lime)
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						13:30&ndash;14:00
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="http://www.laas.fr/~dalzilio/">Silvano Dal Zilio</a>, Éric Lubat*, Didier Le Botlan, <a href="http://homepages.laas.fr/ypencole/home.html">Yannick Pencolé</a> and <a href="http://homepages.laas.fr/chaillet/">Audine Subias</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_5">A State Class Construction for Computing the Intersection of Time Petri Nets Languages</a>
+							<span class="slides">
+								<a href="slides/formats2019_EricLUBAT.pdf">slides</a>
+								<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/LubatDBPS19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						We propose a new method for computing the language intersection of
+two Time Petri nets (TPN); that is the sequence of labels
+in timed traces common to the execution of two TPN. Our approach is
+based on a new product construction between nets and relies on the State
+Class construction, a widely used method for checking the behavior of
+TPN. We prove that this new construct does not add additional expressive
+power, and yet that it can leads to very concise representation of the
+result. We have implemented our approach in a new tool, called Twina.
+We report on some experimental results obtained with this tool and show
+how to apply our approach on two interesting problems: first, to define
+an equivalent of the twin-plant diagnosability methods for TPN; then as
+a way to check timed properties without interfering with a system.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						14:00&ndash;14:30
+					</td>
+					<td class="talk">
+						<div class="authors">Anne Bouillard*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_6">Stability and performance bounds in cyclic networks using network calculus</a>
+							<span class="slides">
+							<a href="slides/formats2019-slides-bouillard.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Bouillard19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						With the development of real-time networks and of new wireless communication technologies having strong requirements on latencies and reliability, there is a need to compute deterministic performance bounds. This paper focuses on the performance guarantees and stability conditions in networks with cyclic dependencies in the network calculus framework.
+<br/>
+Two kinds of techniques exist: backlog-based techniques compute backlog bounds for each server, and obtain good stability bounds at the detriments of the performance bounds; flow-based techniques compute performance bounds for each flow and obtain better performance bounds for low bandwidth usage, but poor stability conditions.
+<br/>
+In this article, we propose a unified framework that combines the two techniques and improve at the same time stability conditions and performance bounds. To do this, we first propose an algorithm that computes tight backlog bounds in trees for a set of flows at a server, and then develop a linear program based on this algorithm that computes performances bounds for cyclic networks. An implementation of these algorithms is provided in the Python package NCBounds and is used for numerical experiments showing the efficiency of the approach.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						14:30&ndash;15:00
+					</td>
+					<td class="talk">
+						<div class="authors">Alexey Bakhirkin, Nicolas Basset, Oded Maler and José-Ignacio Requeno Jarabo*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_7">ParetoLib: A Python Library for Parameter Synthesis</a> [tool paper]
+							<span class="slides">
+							<a href="slides/paretolib.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/BakhirkinBMJ19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						This paper presents ParetoLib, a Python library that implements a new method for inferring the Pareto front in multi-criteria optimization problems. The tool can be applied in the parameter synthesis of temporal logic predicates where the influence of parameters is monotone. ParetoLib currently provides support for the parameter synthesis of standard (STL) and extended (STLe) Signal Temporal Logic specifications. The tool is easily upgradeable for synthesizing parameters in other temporal logics in the near future. An example illustrates the usage and performance of our tool. ParetoLib is free and publicly available on Internet.
+						</div>
+					</td>
+				</tr>
+
+				<tr class="break">
+					<td>
+						15:00&ndash;15:30
+					</td>
+					<td>
+						Coffee break
+					</td>
+				</tr>
+				<tr class="session">
+					<td>
+						15:30&ndash;17:00
+					</td>
+					<td>
+						Linear and non-linear systems (Chair: Majid Zamani)
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						15:30&ndash;16:00
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="https://sites.google.com/site/academichkong/">Hui Kong</a>*, <a href="http://www.eziobartocci.com">Ezio Bartocci</a>, Yu Jiang and <a href="http://www.ist.ac.at/~tah">Thomas Henzinger</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_8">Piecewise Robust Barrier Tubes for Nonlinear Hybrid Systems with Uncertainty</a>
+							<span class="slides">
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/KongB0H19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Piecewise Barrier Tubes (PBT) is a new technique for flowpipe overapproximation
+for nonlinear systems with polynomial dynamics, which leverages a combination of
+barrier certificates. PBT has advantages over traditional time-step based methods
+in dealing with those nonlinear dynamical systems in which there is a large difference
+in speed between trajectories, producing an overapproximation that is time
+independent.
+However, the existing approach for PBT is not efficient due to
+the application of interval methods for enclosure-box computation, and it can only deal
+with continuous dynamical systems without uncertainty. In this paper, we extend the
+approach with the ability to handle both continuous and hybrid dynamical systems
+with uncertainty that can reside in parameters and/or noise.
+We also improve the efficiency of the method significantly, by avoiding
+the use of interval-based methods for the enclosure-box computation without loosing soundness.
+We have developed a C++ prototype implementing the proposed approach and
+we evaluate it on several benchmarks. The experiments show that
+our approach is more efficient and precise than other methods in the literature.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						16:00&ndash;16:30
+					</td>
+					<td class="talk">
+						<div class="authors">Muhammad Syifa’Ul Mufid*, <a href="http://sites.google.com/site/diekyadzkiya">Dieky Adzkiya</a> and <a href="http://www.cs.ox.ac.uk/people/alessandro.abate">Alessandro Abate</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_9">Bounded Model Checking of Max-Plus Linear Systems via Predicate Abstractions</a>
+							<span class="slides">
+							<a href="slides/BMC-MPL.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/MufidAA19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						This paper introduces the abstraction of max-plus linear (MPL) systems via predicates. Predicates are automatically selected from system matrix, as well as from the specifications under consideration. We focus on verifying time-diference specifcations, which encompass the relation between successive events in MPL systems. We implement a bounded model checking (BMC) procedure over a predicate abstraction of the given MPL system, to verify the satisfaction of time-difference specifications. Our predicate abstractions are experimentally shown to improve on existing MPL abstractions algorithms. Furthermore, with focus on the BMC algorithm, we can provide an explicit upper bound on the completeness threshold by means of the transient and the cyclicity of the underlying MPL system.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						16:30&ndash;17:00
+					</td>
+					<td class="talk">
+						<div class="authors">Hoang-Dung Tran, Luan Nguyen, Nathaniel Hamilton, Weiming Xiang and Taylor Johnson*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_10">Reachability Analysis for High-Index Linear Differential Algebraic Equations</a>
+							<span class="slides">
+							<a href="slides/formats2019-2019-08-27.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/TranNHXJ19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Reachability analysis is a fundamental problem for safety verification and falsification of Cyber-Physical Systems (CPS) whose dynamics follow physical laws usually represented as differential equations. In the last two decades, numerous reachability analysis methods and tools have been proposed for a common class of dynamics in CPS known as ordinary differential equations (ODE). However, there is lack of methods dealing with differential algebraic equations (DAE) which is a more general class of dynamics that is widely used to describe a variety of problems from engineering and science such as multibody mechanics, electrical circuit design, incompressible fluids, molecular dynamics and chemical process control. Reachability analysis for DAE systems is more complex than ODE systems, especially for high-index DAEs because they contain both a differential part (i.e., ODE) and algebraic constraints (AC). In this paper, we propose a scalable reachability analysis for a class of high-index large linear DAEs. In our approach, a high-index linear DAE is first decoupled into one ODE and one or several AC subsystems based on the well-known Marz decoupling method utilizing admissible projectors. Then, the discrete reachable set of the DAE, represented as a list of star-sets, is computed using simulation. Unlike ODE reachability analysis where the initial condition is freely defined by a user, in DAE cases, the consistency of the initial condition is an essential requirement to guarantee a feasible solution. Therefore, a thorough check for the consistency is invoked before computing the discrete reachable set. Our approach successfully verifies (or falsifies) a wide range of practical, high-index linear DAE systems in which the number of state variables varies from several to thousands.
+						</div>
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						17:00&ndash;17:30
+					</td>
+					<td>
+						Check your emails or take a nap or attend CONCUR
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						17:30&ndash;19:00
+					</td>
+					<td>
+						Drinks (with CONCUR)
+					</td>
+				</tr>
+				
+				<!-- ************************************************************ -->
+				
+				<tr class="daterow">
+					<th>
+						Wednesday, 28 August, 2019
+					</th>
+					<td>
+						FORMATS, Euler Room
+					</td>
+				</tr>
+				<tr class="event">
+					<td>
+						08:30&ndash;09:00
+					</td>
+					<td>
+						Opening
+					</td>
+				</tr>
+				<tr class="keynote">
+					<td>
+						09:00&ndash;10:00
+					</td>
+					<td>
+						<div class="authors">Keynote: <a href="http://people.rennes.inria.fr/Nathalie.Bertrand/">Nathalie Bertrand</a> (room: Euler) (chair: Étienne André)</div>
+						<div class="title">When are dense-time stochastic systems tameable?</div>
+						<div class="abstract">
+<p>Many applications, such as communication protocols, require models
+which integrate both real-time constraints, and randomization. The
+verification of such models is a challenging task since they combine
+dense-time and probabilities. To verify stochastic real-time systems,
+we propose a framework to perform the analysis of general stochastic
+transition systems (STSs). This methodology relies on two pillars: a
+<em>decisiveness</em> and <em>abstraction</em>.</p>
+
+<p>Decisiveness was introduced for denumerable Markov
+chains [<a href="https://www.doi.org/10.2168/LMCS-3(4:7)2007">ABM07</a>], and roughly speaking, it allows one to lift
+most analysis techniques from finite Markov chains to denumerable
+ones, and therefore to adapt existing verification algorithms to
+infinite-state models. We explain how to generalize this central
+notion to dense-time stochastic models.</p>
+
+<p>In order to exploit decisiveness, we define a notion of abstraction,
+ and we give general transfer properties from the abstract model to
+ the concrete one. These are central to come up with qualitative and
+ quantitative verification algorithms for STS.</p>
+
+<p>Our methodology applies for instance to stochastic timed automata
+(STA) and generalized semi-Markov processes (GSMP), two existing
+models combining dense-time and probabilities. This allows us on the
+one hand to recover existing results from the literature on these two
+models --with less effort and a unified view-- and on the other hand
+to derive new approximation algorithms for STA and GSMP.</p>
+
+<p>The interested reader can refer to <a href="https://www.doi.org/10.1016/j.jlamp.2018.03.004">a joint article with Patricia
+Bouyer, Thomas Brihaye and Pierre Carlier</a> for further details.</p>
+
+
+<p>Bio: Nathalie Bertrand obtained her PhD from ENS Cachan in 2006, supervised by
+Philippe Schnoebelen. She spent a year at TU Dresden working with Christel
+Baier, and was in 2007 hired junior research scientist at Inria Rennes. Her
+expertise is in model checking specifically for probabilistic systems.</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						10:00&ndash;10:30
+					</td>
+					<td>
+						Coffee break
+					</td>
+				</tr>
+				<tr class="session">
+					<td>
+						10:30&ndash;12:30
+					</td>
+					<td>
+						Timed automata (chair: Martin Fränzle)
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						10:30&ndash;11:00
+					</td>
+					<td class="talk">
+						<div class="authors">Amnon Rosenmann*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_11">The Timestamp of Timed Automata</a>
+							<span class="slides">
+							<a href="slides/timestamp_ta.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Rosenmann19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Let eNTA be the class of non-deterministic timed automata with silent transitions. Given an automaton A in eNTA, we effectively compute its timestamp: the set of all pairs (time value, action) of all observable timed traces of A. We show that the timestamp is eventually periodic and that one can compute a simple deterministic timed automaton with the same timestamp as that of A. As a consequence, we have a partial method, not bounded by time or number of steps, for the general language non-inclusion problem for eNTA. We also show that the language of A is periodic with respect to suffixes.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:00&ndash;11:30
+					</td>
+					<td class="talk">
+						<div class="authors">Amnon Rosenmann*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_12">On the Distance between Timed Automata</a>
+							<span class="slides">
+							<a href="slides/ta_distance-slides.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Rosenmann19a">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Some fundamental problems in the class of non-deterministic timed automata, like the problem of inclusion of the language accepted by timed automaton A (e.g., the implementation) in the language accepted by B (e.g., the specification) are, in general, undecidable. However, one can effectively construct deterministic approximate timed automata, that differ from the original automata by at most 1/2 time unit on each occurrence of an event, compare their languages and project the results to the original automata. We define the distance between timed automata as the limit on how far away a timed trace of one timed automaton can be from the closest timed trace of the other timed automaton. We then show how one can decide under some restriction whether the distance between two timed automata is infinite.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:30&ndash;12:00
+					</td>
+					<td class="talk">
+						<div class="authors">Martin Tappler*, <a href="http://www.ist.tugraz.at/aichernig">Bernhard K. Aichernig</a>, Kim Guldstrand Larsen and Florian Lorber</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_13">Time to Learn - Learning Timed Automata from Tests</a>
+							<span class="slides">
+							<a href="slides/formats_2019_presentation_tappler.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/TapplerALL19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Model learning has gained increasing interest in recent years. It derives behavioural models from test data of black-box systems. The main advantage offered by such techniques is that they enable model-based analysis without access to the internals of a system. Applications range from fully automated testing over model checking to system understanding. Current work focuses on learning variations of finite state machines. However, most techniques consider discrete time. In this paper, we present a novel method for learning timed automata, finite state machines extended with real-valued clocks. The learning method generates a model consistent with a set of timed traces collected via testing. This generation is based on genetic programming, a search-based technique for automatic program creation. We evaluate our approach on 44 timed systems, comprising of four systems from the literature (two industrial and two academic) and 40 randomly generated examples.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						12:00&ndash;12:30
+					</td>
+					<td class="talk">
+						<div class="authors">Simon Wimmer*</div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_14">Munta: A Verified Model Checker for Timed Automata</a> [tool paper]
+							<span class="slides">
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Wimmer19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Munta is a mechanically verified model checker for timed automata, a popular formalism for modeling real-time systems.
+Our goal is two-fold: first, we want to provide a reference implementation that is fast enough to test other model checkers against it on reasonably sized benchmarks; second, the tool should be practical enough so that it can easily be used for experimentation.
+Munta can be compiled to Standard ML or OCaml and additionally features a web-based GUI.
+Its modeling language has a simple semantics but provides the most commonly used timed automata modeling features.
+						</div>
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						12:30&ndash;13:15
+					</td>
+					<td>
+						Lunch break
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						13:15&ndash;21:00
+					</td>
+					<td>
+						<a href="https://event.cwi.nl/concur2019/participation.html#social">Excursion and banquet</a> (with CONCUR)
+					</td>
+				</tr>
+				
+				<!-- ************************************************************ -->
+				
+				<tr class="daterow">
+					<th>
+						Thursday, 29 August, 2019
+					</th>
+					<td>
+						FORMATS, Euler Room
+					</td>
+				</tr>
+				<tr class="event">
+					<td>
+						08:30&ndash;09:00
+					</td>
+					<td>
+						Opening
+					</td>
+				</tr>
+				<tr class="keynote">
+					<td>
+						09:00&ndash;10:00
+					</td>
+					<td>
+						<div class="authors">Keynote: Kim G. Larsen (room: Turing) (chair: Mariëlle Stoelinga)</div>
+						<div class="title"><a href="https://event.cwi.nl/concur2019/program.html">Synthesis of Safe, Optimal and Compact Strategies for Stochastic Hybrid Games</a></div>
+						<div class="abstract">UPPAAL Stratego is a recent branch of the verification tool UPPAAL
+						allowing for synthesis of safe and optimal strategies for stochastic
+						timed (hybrid) games. We describe newly developed learning methods,
+						allowing for synthesis of significantly better strategies and with
+						much improved convergence behaviour. Also, we describe novel use of
+						decision trees for learning orders-of-magnitude more compact
+						strategy representation. In both cases, the seek for optimality
+						does not compromise safety.</div>
+					</td>
+				</tr>
+				<tr class="break">
+					<td>
+						10:00&ndash;10:30
+					</td>
+					<td>
+						Coffee break
+					</td>
+				</tr>
+				<tr class="session">
+					<td>
+						10:30&ndash;12:00
+					</td>
+					<td>
+						Special session on timed systems and probabilities (chair: Nathalie Bertrand)
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						10:30&ndash;11:00
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="https://www.mw.tum.de/en/cps/members/msc-bingzhuo-zhong/">Bingzhuo Zhong</a>*, <a href="https://sites.google.com/site/zamani1362/">Majid Zamani</a> and <a href="https://www.mw.tum.de/en/cps/members/prof-dr-marco-caccamo/">Marco Caccamo</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_15">Sandboxing Controllers for Stochastic Cyber-Physical Systems</a>
+							<span class="slides">
+							<a href="slides/Safe-visor-architecture-for-sandboxing-unverified-controllers-in-stochastic-Cyber-physical Systems-FORMATS2019.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/ZhongZC19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Current cyber-physical systems (CPS) are expected to accomplish complex tasks. To achieve this goal, high performance, but unverified controllers (e.g. deep neural network, black-box controllers from third parties) are applied, which makes it very challenging to keep the overall CPS safe. By sandboxing these controllers, we are not only able to use them but also to enforce safety properties over the controlled physical systems at the same time. However, current available solutions for sandboxing controllers are just applicable to deterministic (a.k.a. non-stochastic) systems, possibly affected by bounded disturbances. In this paper, for the first time we propose a novel solution for sandboxing unverified complex controllers for CPS operating in noisy environments (a.k.a. stochastic CPS). Moreover, we also provide probabilistic guarantees on their safety. Here, the unverified control input is observed at each time instant and checked whether it violates the maximal tolerable probability of reaching the unsafe set. If this probability exceeds a given threshold, the unverified control input will be rejected, and the advisory input provided by the optimal safety controller will be used to maintain the probabilistic safety guarantee. The proposed approach is illustrated empirically and the results indicate that the expected safety probability is guaranteed.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:00&ndash;11:30
+					</td>
+					<td class="talk">
+						<div class="authors">Andrea Marin, <a href="http://www.dimi.uniud.it/piazza">Carla Piazza</a> and <a href="http://www.dsi.unive.it/~srossi">Sabina Rossi</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_16">Proportional Lumpability</a>
+							<span class="slides">
+							<a href="slides/slides-piazza.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/MarinPR19">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						We deal with the lumpability approach to cope with the state-space explosion problem inherent to the computation of the performance indices of large stochastic models using a state aggregation technique. The lumpability method applies to Markov chains exhibiting some structural regularity and allows one to efficiently compute the exact values of the performance indices when the model is actually lumpable. The notion of quasi-lumpability is based on the idea that a Markov chain can be altered by relatively small perturbations of the transition rates in such a way that the new resulting Markov chain is lumpable. In this case only upper and lower bounds on the performance indices can be derived.
+In this paper we introduce a novel notion of quasi lumpability, named proportional lumpability, which extends the original definition of lumpability but, differently than the general definition of quasi lumpability, it allows one to derive exact performance indices for the original process.
+						</div>
+					</td>
+				</tr>
+				<tr class="regulartalk">
+					<td class="time">
+						11:30&ndash;12:00
+					</td>
+					<td class="talk">
+						<div class="authors"><a href="http://www.cs.huji.ac.il/~shibashis/">Shibashis Guha</a>* and <a href="http://www.ashutoshtrivedi.com">Ashutosh Trivedi</a></div>
+						<div class="title"><a href="https://doi.org/10.1007/978-3-030-29662-9_17">Expected Reachability-Price Games</a>
+							<span class="slides">
+							<a href="slides/slides-shibashis.pdf">slides</a>
+							<a href="https://dblp.uni-trier.de/rec/bibtex1/conf/formats/Guha019">bib</a>
+							</span>
+						</div>
+						<div class="abstract">
+						Abstract: Probabilistic timed automata(PTA) model real-time systems with non-deterministic and stochastic behavior. They extend Alur-Dill timed automata by allowing probabilistic transitions and a price structure on the locations and transitions. Thus, a PTA can be considered as a Markov decision process (MDP) with uncountably many states and transitions. Expected reachability-price games are turn-based games where two games, Player MIN and Player MAX, move a token along the infinite configuration space of PTA. The objective of player MIN is to minimize the expected price to reach a target location, while the goal of the MAX player is the opposite. The undecidability of computing the value in the expected reachability-price games follows form the undecidability of the corresponding problem on timed automata. The key contribution of this work is to recover decidability for 1-clock binary-priced PTA.
+						</div>
+					</td>
+				</tr>
+				<tr class="session">
+					<td>
+						12:00&ndash;12:15
+					</td>
+					<td>
+						Closing session
+					</td>
+				</tr>
+	
+				<tr class="break">
+					<td>
+						12:30&ndash;13:30
+					</td>
+					<td>
+						Lunch break
+					</td>
+				</tr>
+			</table>
+			
+			
+				<p>* speaker</p>
+				
+			      <p>
+        <a href="FORMATS19.ics">Download the program as an ICS file</a>
+      </p>
+																
+																																
+													</article>
+
+												</div>
+											</div>
+
+										</div>
+									</section>
+
+								<!-- Blog -->
+									<section class="box blog" id="committees">
+										<h2 class="major"><span>Committees</span></h2>
+										<div>
+											<div class="row">
+												<div class="col-6 col-12-medium">
+													<div class="content">
+
+														<!-- Featured Post -->
+															<article class="box post">
+																<header>
+																	<h3>Program committee</h3>
+																</header>
+																
+																<ul>
+																	<li><a href="https://www.cs.ox.ac.uk/people/alessandro.abate/">Alessandro Abate</a> (England)</li>
+																	<li><a href="https://www.cse.iitb.ac.in/~akshayss/">S. Akshay</a> (India)</li>
+																	<li><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a> (France) <em>co-chair</em></li>
+																	<li><a href="http://www.di.unito.it/~bini/">Enrico Bini</a> (Italy)</li>
+																	<li><a href="https://www.sergiybogomolov.com/">Sergiy Bogomolov</a> (Australia)</li>
+																	<li><a href="http://science.mq.edu.au/~fcassez/">Franck Cassez</a> (Australia)</li>
+																	<li><a href="http://www-bcf.usc.edu/~jdeshmuk/">Jyotirmoy Deshmukh</a> (USA)</li>
+																	<li><a href="https://uol.de/hs/mitarbeiterinnen-und-mitarbeiter/prof-dr-martin-fraenzle/">Martin Fränzle</a> (Germany)</li>
+																	<li><a href="http://www.dcs.bbk.ac.uk/~tingting/">Tingting Han</a> (England)</li>
+																	<li><a href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a> (Japan)</li>
+																	<li><a href="http://www.dnjansen.eu/">David N. Jansen</a> (China)</li>
+																	<li><a href="https://www7.in.tum.de/~kretinsk/">Jan Křetínský</a> (Germany)</li>
+																	<li><a href="http://pagesperso.ls2n.fr/~lime-d/">Didier Lime</a> (France)</li>
+																	<li><a href="http://people.cs.aau.dk/~bnielsen/">Brian Nielsen</a> (Denmark)</li>
+																	<li><a href="http://folk.uio.no/peterol/">Peter Csaba Ölveczky</a> (Norway)</li>
+																	<li><a href="http://people.cs.ksu.edu/~pprabhakar/">Pavithra Prabhakar</a> (USA)</li>
+																	<li><a href="http://www.informatik.uni-leipzig.de/~quaas/">Karin Quaas</a> (Germany)</li>
+																	<li><a href="http://pageperso.lif.univ-mrs.fr/~pierre-alain.reynier/">Pierre-Alain Reynier</a> (France)</li>
+																	<li><a href="http://software.imdea.org/~cesar/">César Sánchez</a> (Spain)</li>
+																	<li><a href="http://people.irisa.fr/Ocan.Sankur/">Ocan Sankur</a> (France)</li>
+																	<li><a href="https://www.uni-salzburg.at/index.php?id=53965&amp;L=1">Ana Sokolova</a> (Austria)</li>
+																	<li><a href="http://www.cis.upenn.edu/~sokolsky/">Oleg Sokolsky</a> (USA)</li>
+																	<li><a href="people.cs.aau.dk/~srba/">Jiří Srba</a> (Denmark)</li>
+																	<li><a href="http://wwwhome.ewi.utwente.nl/~marielle/">Mariëlle Stoelinga</a> (The Netherlands) <em>co-chair</em></li>
+																	<li><a href="http://people.sutd.edu.sg/~sunjun/">Jun Sun</a> (Singapore)</li>
+																	<li><a href="https://people.ee.ethz.ch/~thiele/pmwiki/pmwiki.php/Site/Home">Lothar Thiele</a> (Switzerland)</li>
+																	<li><a href="https://stlab.dinfo.unifi.it/vicario/">Enrico Vicario</a> (Italy)</li>
+																	<li><a href="http://www.cs.ox.ac.uk/james.worrell/">James Worrell</a> (England)</li>
+																	<li><a href="http://user.it.uu.se/~yi/">Wang Yi</a> (Sweden)</li>
+																																	</ul>
+															</article>
+
+													</div>
+												</div>
+												<div class="col-6 col-12-medium">
+													<div class="content">
+
+														<!-- Featured Post -->
+															<article class="box post">
+																<header>
+																	<h3>General chair</h3>
+																</header>
+																
+																<ul>
+																	<li><a href="https://www.cwi.nl/people/jos-baeten">Jos Baeten</a> (The Netherlands)</li>
+																</ul>
+																
+																
+																<header>
+																	<h3>Steering committee</h3>
+																</header>
+																
+																<ul>
+																	<li><a href="http://www.cis.upenn.edu/~alur/">Rajeev Alur</a> (USA)</li>
+																	<li><a href="https://www.irif.fr/~asarin/">Eugene Asarin</a> (France)</li>
+																	<li><a href="https://uol.de/hs/mitarbeiterinnen-und-mitarbeiter/prof-dr-martin-fraenzle/">Martin Fränzle</a> (Germany)</li>
+																	<li><a href="http://pub.ist.ac.at/~tah/">Thomas A. Henzinger</a> (Austria)</li>
+																	<li><a href="http://www-i2.informatik.rwth-aachen.de/~katoen/">Joost-Pieter Katoen</a> (Germany)</li>
+																	<li><a href="http://people.cs.aau.dk/~kgl/">Kim G. Larsen</a> (Denmark)</li>
+																	<li><a href="http://www-verimag.imag.fr/~maler/">Oded Maler</a> (France) <em>(1957-2018)</em></li>
+																	<li><a href="http://wwwhome.ewi.utwente.nl/~marielle/">Mariëlle Stoelinga</a> (The Netherlands)</li>
+																	<li><a href="https://people.ee.ethz.ch/~thiele/pmwiki/pmwiki.php/Site/Home">Lothar Thiele</a> (Switzerland)</li>
+																	<li><a href="http://user.it.uu.se/~yi/">Wang Yi</a> (Sweden)</li>
+																</ul>
+															</article>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+
+								<!-- Blog -->
+									<section class="box blog" id="venue">
+										<h2 class="major"><span>Venue: Amsterdam</span></h2>
+										<div>
+											<div class="row">
+												<div class="content">
+
+													<!-- Featured Post -->
+														<article class="box post">
+															<header>
+																<h3>Venue</h3>
+																<p>CONCUR + FORMATS + FMICS 2019</p>
+															</header>
+															<a href="https://en.wikivoyage.org/wiki/Amsterdam" class="image featured"><img src="images/amsterdam.jpg" alt="Amsterdam" /></a>
+															<p>
+																FORMATS 2019 takes place in <a href="https://en.wikipedia.org/wiki/Amsterdam_Science_Park">Amsterdam Science Park</a> from 27th to 29th August 2019, and is colocated with <a href="https://event.cwi.nl/concur2019/">CONCUR 2019</a>, <a href="https://fmics2019.fsa.win.tue.nl/">FMICS 2019</a> and several workshops.</p>
+																<p>The venue is located less than 15 minutes from <a href="https://en.wikipedia.org/wiki/Amsterdam_Centraal_station">Amsterdam Centraal</a>.
+																
+															</p>
+															
+														</article>
+														
+														<article class="box post">
+															<header>
+																<h3>Registration</h3>
+															</header>
+																<p>For the registration and other practical information, please see the <a href="https://event.cwi.nl/concur2019/participation.html">CONCUR registration Website</a>.</p>
+															
+														</article>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><a href="https://event.cwi.nl/concur2019/participation.html" class="button large">More information on the CONCUR Website</a></li>
+													</ul>
+												</div>
+
+												<div class="col-12">
+													<section class="box highlight">
+														<ul class="special">
+															<li><a href="#" class="icon fa-search"><span class="label">Magnifier</span></a></li>
+															<li><a href="#" class="icon fa-tablet"><span class="label">Tablet</span></a></li>
+															<li><a href="#" class="icon fa-flask"><span class="label">Flask</span></a></li>
+															<li><a href="#" class="icon fa-cog"><span class="label">Cog?</span></a></li>
+														</ul>
+														<span style="font-size:x-small">Some fancy but useless icons</span>
+													</section>
+												</div>
+
+												
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+														
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section>
+										<h2 class="major"><span>Get in touch</span></h2>
+										
+										<p>Email: formats2019 ((at)) easychair.org</p>
+																</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section>
+										<h2 class="major"><span>Logos</span></h2>
+
+										<a href="https://en.wikipedia.org/wiki/Lecture_Notes_in_Computer_Science"><img style="height:4em" src="images/LNCS-Logo.jpg" alt="Springer LNCS"></a>
+										
+										<img style="height:4em" src="images/denso.png" alt="Denso">
+										
+									</section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; <a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></li>
+									<li>Design: TXT by <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+								<ul class="menu">
+									<li>Unsplash Graphics: <a href="https://unsplash.com/photos/dEimVaV1qRs">Adrien Olichon</a></li>
+									<li><a href="https://unsplash.com/photos/HmORQ3_8yuM">Chad Peltola</a></li>
+									<li><a href="https://unsplash.com/photos/qo9WAXpAeM8">rawpixel</a></li>
+									<li><a href="https://unsplash.com/photos/K_uHXjdbpDQ">tobias</a></li>
+									<li><a href="https://unsplash.com/photos/RdmLSJR-tq8">Thought Catalog</a></li>
+									<li><a href="https://unsplash.com/photos/XiRRlYq99OE">rawpixel</a></li>
+									<li><a href="https://unsplash.com/photos/htqCupyYlCQ">Steve Johnson</a></li>
+									<li><a href="https://unsplash.com/photos/5cFwQ-WMcJU">Annie Spratt</a></li>
+								</ul>
+								
+								<ul class="menu">
+									<li>Part of the <a href="http://www.formats-conference.org/">FORMATS conference series</a></li>
+								</ul>
+								
+								
+								<ul class="menu">
+									<li>Referenced by <a href="https://www.conferences-computer.science/">Conferences in computer science</a></li>
+								</ul>
+							</div>
+
+					</div>
+				</footer>
+
+		</div>
+		
+			
+<!-- Begin Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

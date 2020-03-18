@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>M&#233;thode de Shanks</TITLE>
+<META NAME="description" CONTENT="M&#233;thode de Shanks">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node32.html">
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html476"
+ HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html473"
+ HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html467"
+ HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html475"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html477"
+ HREF="node32.html">Et maintenant, extrayons&nbsp;!</A>
+<B> Up:</B> <A NAME="tex2html474"
+ HREF="node29.html">Extraction de racine carr&#233;e</A>
+<B> Previous:</B> <A NAME="tex2html468"
+ HREF="node30.html">M&#233;thode de Zassenhauss-Cantor</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00620000000000000000">
+M&#233;thode de Shanks</A>
+</H1>
+On &#233;crit toujours <IMG WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.gif"
+ ALT="$\char93 {\mathbb K}-1= 2^k q$"> avec <I>q</I> impair.
+Or 
+<P ALIGN="CENTER"><IMG WIDTH="495" HEIGHT="29"
+ SRC="img240.gif"
+ ALT="\begin{displaymath}
+(u^\frac{q+1} {2})^2=u.u^q \Longleftrightarrow u=(u^\frac{q+...
+ ...ongleftrightarrow 
+\sqrt{u}= u^\frac{q+1}{2} \sqrt{(u^q)^{-1}}.\end{displaymath}"></P>
+Pour trouver la racine carr&#233;e de <I>u</I>, on est donc ramen&#233;, 
+d'apr&#232;s la formule magique ci-dessus, &#224; &#233;laborer 
+un algorithme d'extraction de racine carr&#233;e de <I>u</I><SUP>-<I>q</I></SUP>
+qui est &#233;l&#233;ment d'un sous-groupe <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="${\mathbb G}$"> cyclique, d'ordre 2<SUP><I>k</I></SUP>.
+<P><IMG WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img197.gif"
+ ALT="$\omega$"> &#233;tant un g&#233;n&#233;rateur de <IMG WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="${\mathbb G}$">, voici l'algorithme&nbsp;:
+<P>
+<P>
+<BR>
+<P><SMALL><TT>DEBUT
+<BR>
+(<IMG WIDTH="208" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img241.gif"
+ ALT="$x,z,h,a)~:=(u^q,u^\frac{q+1}{2},k,\omega$">)&nbsp;;
+<BR>
+On calcule le plus petit <I>j</I> tel que <I>x<SUP>2</SUP></I><SUP><I>j</I></SUP>=1&nbsp;;
+<BR>
+Si <I>j</I>=<I>k</I> alors on s'arr&#234;te car <I>u</I> n'est donc pas un carr&#233;&nbsp;;
+<BR>
+tant que <IMG WIDTH="43" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img242.gif"
+ ALT="$j\not = 0$"> (* <I>ux</I>=<I>z<SUP>2</SUP></I>, Ord(<I>a</I>)=2<SUP><I>h</I></SUP>, Ord <I>x</I>=2<SUP><I>j</I></SUP>, <I>j</I> &lt;<I>h</I> *)
+<BR>
+  (<I>x</I>,<I>z</I>,<I>h</I>,<I>a</I>)&nbsp;:=(<I>x</I> <I>a<SUP>2</SUP></I><SUP><I>h</I>-<I>j</I></SUP>,<I>z</I> <I>a<SUP>2</SUP></I><SUP><I>h</I>-<I>j</I>-1</SUP>,<I>j</I>,<I>a<SUP>2</SUP></I><SUP><I>h</I>-<I>j</I></SUP>)&nbsp;;
+<BR>
+Calculer le plus petit <I>j</I> tel que <I>x<SUP>2</SUP></I><SUP><I>j</I></SUP>=1&nbsp;;
+<BR>
+fin(tant que)
+<BR>
+Retourner z&nbsp;; (* <I>x</I>=1 et <I>z</I> est une racine carr&#233;e de <I>u</I> *)
+<BR>
+FIN
+<BR>
+</SMALL></TT>
+<P>
+<BR><HR>
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

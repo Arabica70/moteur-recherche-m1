@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>ImpRator: Inverse Method for Policy with Reward AbstracT behaviOR</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="ImpRator: Implementation of the Inverse Method for Markov Decision Processes" />
+	<meta name="keywords" content="ImpRator, tool, software, prototype, Markov Decision Process, Parametric Markov Decision Process, optimal policy, parameter synthesis" />
+	<meta name="robots" content="index,follow" />
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="../../etienne.css" />
+</head>
+
+
+<body>
+
+<h1>ImpRator</h1>
+
+<p>This tool (standing for <em>Inverse Method for Policy with Reward AbstracT behaviOR</em>)
+is an implementation of the inverse method in the framework of Parametric Markov Decision Processes.</p>
+
+<p>ImpRator takes as an input a Parametric Markov Decision Process, and a reference valuation for each parameter.
+It outputs a constraint on the parameters such that, for all parameter valuation satisfying the constraint,
+each optimal policy for the reference valuation is also optimal for this new parameter valuation (and conversely).</p>
+
+<p>ImpRator uses matrix inversion to compute the parametric value in the algorithm.
+Note that ImpRator also allows the use of Markov Decision Processes with no absorbing state, by adding a discount.</p>
+
+<p>ImpRator has been developed in <a href="http://caml.inria.fr/">OCaml</a>
+by <span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> at the <a href="http://www.lsv.fr/">Laboratoire Spécification et Vérification, ENS Cachan, France</a>.
+It is provided under the <a href="http://www.gnu.org/licenses/gpl.html">GNU-GPL license</a>.</p>
+
+
+
+<h2>Using ImpRator</h2>
+
+<p>ImpRator takes as input a text file describing a Parametric Markov Decision Process,
+including the reference value for each parameter.</p>
+
+<p>The syntax is described in a functional style, with OCaml-style (possibly nested) comments.
+Note that the name of the input file is hard-coded at the top of the file <span class="code">IMPERATOR.ml</span>.
+This could be very easily improved.</p>
+
+<p>Hence, the call syntax is directly:</p>
+
+<p class="code">./IMPRATOR</p>
+
+<p>The result is given directly in the terminal.</p>
+
+
+
+<h2>Download and Install</h2>
+
+<table class="tableau">
+	<tr>
+		<th>Version</th>
+		<th>Release</th>
+		<th>Source (tar.bz2)</th>
+		<th>Source (zip)</th>
+		<th>Binary</th>
+	</tr>
+
+	<tr>
+		<td class="centre">0.1</td>
+		<td class="centre">22nd April 2009</td>
+		<td class="centre"><a href="ImpRator.tar.bz2"><span class="code">ImpRator.tar.bz2</span></a> (29Ko)</td>
+		<td class="centre"><a href="ImpRator.zip"><span class="code">ImpRator.zip</span></a> (39Ko)</td>
+		<td class="centre"><a href="ImpRator"><span class="code">ImpRator</span></a> (204Ko)</td>
+	</tr>
+</table>
+
+<p>The binary is a standalone binary for <a href="http://www.ubuntu.com/">Ubuntu</a>;
+it has been compiled using Ubuntu&nbsp;10.10.
+If it doesn’t work, please compile the source code.</p>
+
+
+
+
+<h2>Examples</h2>
+
+<table class="tableau">
+	<tr>
+		<th>Name</th>
+		<th>File</th>
+	</tr>
+
+
+	<tr>
+		<td>Example from INFINITY’09 paper</td>
+		<td><a href="examples/ExampleINFINITY2009.imp"><span class="code">ExampleINFINITY2009.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Sample example</td>
+		<td><a href="examples/sampleExample.imp"><span class="code">sampleExample.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Sample example with 2 costs</td>
+		<td><a href="examples/sampleExample2Costs.imp"><span class="code">sampleExample2Costs.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Sample example with 2 costs and no loop</td>
+		<td><a href="examples/sampleExample2CostsNoLoop.imp"><span class="code">sampleExample2CostsNoLoop.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Toy example</td>
+		<td><a href="examples/exToy.imp"><span class="code">exToy.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Example from "Sample solution for the MDP problem"</td>
+		<td><a href="examples/exMDP.imp"><span class="code">exMDP.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Paris to LSV</td>
+		<td><a href="examples/ParisLSV.imp"><span class="code">ParisLSV.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Paris to Bologna</td>
+		<td><a href="examples/ParisBologna.imp"><span class="code">ParisBologna.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Rennes to LSV</td>
+		<td><a href="examples/RennesLSV.imp"><span class="code">RennesLSV.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Example from Rutgers</td>
+		<td><a href="examples/exRutgers.imp"><span class="code">exRutgers.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>From slides "Markov Decision Process" by Stachniss and Burgard</td>
+		<td><a href="examples/exSlidesMDP.imp"><span class="code">exSlidesMDP.imp</span></a></td>
+	</tr>
+	<tr>
+		<td>Dynamic Power Managment</td>
+		<td><a href="examples/DynamicPowerManagment.imp"><span class="code">DynamicPowerManagment.imp</span></a></td>
+	</tr>
+</table>
+
+
+<h2>Contact</h2>
+
+<ul>
+	<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> (developer)</li>
+</ul>
+
+
+<h2>References</h2>
+
+<div class="publications">
+	<ul>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>. <span class="titre"><a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-phd.pdf">An Inverse Method for the Synthesis of Timing Parameters in Concurrent Systems</a></span>. Ph.D. thesis, <a href="http://www.lsv.fr/">Laboratoire Spécification et Vérification, ENS Cachan, France</a>, December 2010. 268&nbsp;pages. <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-phd.pdf">PDF</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=andre-phd2010">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2010-12-08-an-inverse-method-for-the-synthesis-of-timing-parameters-in-concurrent-systems.pdf">Slides</a>]</span></li>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> and <span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span>. <span class="titre"><a href="http://arxiv.org/pdf/0911.3276v1">An Inverse Method for Policy-Iteration Based Algorithms</a></span>. In&nbsp;Azadeh Farzan and Axel Legay (eds.), <span class="conference"><abbr title="11th International Workshop on Verification of Infinite-State Systems, Bologna, Italy, 31st August 2009"><a href="http://www.cs.toronto.edu/infinity2009/">INFINITY’09</a></abbr></span>, <a href="https://www.doi.org/10.4204/EPTCS.10.4">Electronic Proceedings in Theoretical Computer Science 10, pages&nbsp;44–61</a>, 2009. <span class="DOI">DOI:  <a href="https://www.doi.org/10.4204/EPTCS.10.4">10.4204/EPTCS.10.4</a></span> <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="http://arxiv.org/pdf/0911.3276v1">PDF (published version)</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=AF-infinity09">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2009-08-31_An_Inverse_Method_for_Markov_Decision_Processes.pdf">Slides</a>]</span></li>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>. <span class="titre"><a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-etr09.pdf">Une méthode inverse pour les plus courts chemins</a></span>. <span class="conference"><abbr title="6e École Temps Réel, Paris, France, September 2009"><a href="http://etr09.telecom-paristech.fr/">ETR’09</a></abbr></span>, 2009. <span class="langue">(Français)</span> <span style="font-size:smaller">[<a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-etr09.pdf">PDF</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=andre-ETR09">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2009-09-03-Une_methode_inverse_pour_les_processus_de_decision_markoviens.pdf">Slides</a>]</span></li>
+	</ul>
+</div>
+
+
+<div id="bas">
+	<p>This page makes use of
+	<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+		and
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+</div>
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.breizh-partitions.fr/chiffres/" : "http://www.breizh-partitions.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.breizh-partitions.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+
+
+</body>
+
+</html>

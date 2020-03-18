@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="tp.css">
+  <title>Sujet de TP: AJAX et JSON</title>
+</head>
+
+<body>
+  <header>Sujet de TP: AJAX et JSON</header>
+
+  <main>
+    
+
+
+    <article class="exercice">
+      <header><h2>Exercice: fenetre de discussion</h2></header>
+      Créez une page permettant à 
+      <ul>
+	<li>créez une table Conversation contenant les colonnes <code>(User,Message,idMessage)</code>
+	    où <code>idMessage</code> s'auto incrémente.</li>
+	<li>Créer une page <code>HTML</code> contenant une fenetre de dialogue. Cette fenetre contient, entre autre, 
+	  un formulaire	dans lequel l'utilisateur doit spécifier un nom. La zone qui contiendra les messages
+	  doit permettre de les faire défiler si le nombre de message déborde de la zone.
+	</li>
+	<li>Créer un script <code>PHP</code> qui reçoit avec la méthode POST les informations 
+	    (User,Message) et ajoute cette entrée dans la base de donnée.
+	    Ce script stocke dans la variable <code>$_SESSION</code> l'identifiant du message ajouté.</li>
+	<li>Utiliser AJAX pour appeler le script <code>PHP</code> qui ajoute un message dans la base de données.</li>
+	<li>Créer un script <code>PHP</code> qui renvoie la liste des messages de la base de données, triés dans l'ordre chronologique inverse
+	  (on utilisera l'identifiant du message), et mis en forme de la manière suivante: le nom de l'auteur appara\^it dans une balise de type <code>span</code>,
+	  auquel on ajoutera une classe qui permet de distinguer si l'auteur est le m\^eme que l'utilisateur stocké dans <code>$_SESSION</code> ou non.
+	  Le message appara\^it dans une balise de type span.
+	<li>Utiliser Jquery et AJAX (et PHP) pour récupérer à intervalle régulier (toutes les secondes)
+	  les messages de la base de données et les place dans la fenetre de dialogue.
+	</li>
+      </ul>
+    </article>
+
+
+
+  </main>
+
+<footer>Auteur: Julien David (2017)</footer>
+
+</body>
+
+</html>

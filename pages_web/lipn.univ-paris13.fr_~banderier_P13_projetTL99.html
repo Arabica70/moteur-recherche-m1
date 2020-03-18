@@ -1,0 +1,69 @@
+<HTML>
+<TITLE>Projet TL 99</TITLE>
+<H1>Projet TL (1998-1999)</H1>
+
+Je demande en premier lieu à ceux qui ont décidé de faire ce projet
+de se manifester en m'envoyant un mail me donnant les noms
+contistuant les binômes. Je rappelle à ceux qui ont fait le projet
+Caml, qu'ils ont tout à gagner à faire également le projet Lex/Yacc, 
+du moins s'ils ne sont pas trop pris dans leurs révisions :-)
+<P>
+
+Pour ceux qui ont (presque) fini leur projet,
+attention, il se peut que la compilation ne passe pas sur les pentiums
+II (comme c'est le cas des Gateway 300) : apparition du message "divide
+by zero", ceci est lié au fait que vous utilisez l'unité crt... 
+Dans ce cas, allez compiler sur les machines IPC. 
+Pour ceux qui compilent chez eux, il faut avoir le compilateur de
+Turbo Pascal 7 (une version plus ancienne pourrait ne pas marcher)
+avec un ordinateur qui ne soit pas un Pentium II...
+Dans tous les cas, n'oubliez pas de nous fournir 
+une disquette avec votre fichier compilé et prêt à l'usage.<P>
+
+Vous trouverez ci-après quelques indications de Marcel Masseron.<P>
+
+Le projet distribué cette année est le même que celui de l'an
+ dernier, avec de minimes modifications afin d'interdire la simple recopie
+d'une solution antérieure !
+Vous devrez fournir les sources (i.e. les deux fichiers GALLEX.L et GAL.Y).
+L'application de <A HREF="GAL.EXE">GAL.EXE</A> à un programme en langage Galileo (suffixe .GAL)
+donne, lorsque tout s'est bien passé, un fichier qui contient le Pcode
+correspondant (suffixe .PCO).
+Les erreurs lexicales sont traitées mais pas les erreurs syntaxiques !
+(c'est pas très facile, comme vous savez).<BR>
+Voici des programmes qui vont vous aider :
+<LI> <A HREF="PCODEMAP.EXE">PCODEMAP.EXE</A> :  
+pour traduire un Pcode en clair (on obtient
+		un fichier texte qui porte le suffixe .MAP),
+		(en dehors de son interêt propre, 
+		il peut servir pour localiser les erreurs syntaxiques).
+<LI> <A HREF="PCODE.EXE">PCODE.EXE</A> : 
+pour interprêter le Pcode (fichier .PCO),
+	(ce programme comporte beaucoup de tests qui sont inutiles en règle
+		générale !).<BR>
+Vous trouverez des versions plus récentes sous 
+Mexique/Logiciels/LexYacc/Projet/Legall.
+
+<!---QUELQUES REMARQUES SUR LE SUJET.
+Pour vous aider également, il vous est proposé des ''schémas de
+programmes''
+qui sont, plus qu'une bonne base, mais qui n'avaient
+jamais été testés : autant dire qu'ils comportent quelques erreurs.
+
+Par exemple, dans le fichier GALLEX.L :
+- les guillemets simples doivent être remplacés par des guillements
+doubles,
+- il faut limiter la longueur des identificateurs (par exemple a 25
+caractères)
+		pour que la table  ne soit pas énorme au point de faire sortir 
+		le segment des données de la limite acceptée par Turbo
+		Pascal
+		(voyez la fonction rechercher).
+
+Dans le fichier GAL.Y :
+	- le premier paramètre  de la procédure reprendre est declaré en Var :
+il faut donc introduire une variable temporaire à cet effet (ici listetmp) ;
+	les applications de reprendre qui sont signalées dans le schéma de
+		GAL.Y sont fautives à ce point de vue.--!>
+
+</HTML>

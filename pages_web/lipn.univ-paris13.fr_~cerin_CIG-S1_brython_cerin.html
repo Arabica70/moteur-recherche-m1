@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html>
+<meta charset="iso-8859-1">
+<head>
+<style>
+body,td,th{
+    font-family:sans-serif;
+    font-size:12px;
+}
+td {
+    border-style:solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #000;
+    padding:3px;
+}
+
+th {
+    border-style:solid;
+    border-width: 1px;
+    border-color: #000;
+    background-color: #61D7A4;
+    padding: 4px;
+}
+
+span{font-size:15px;
+    margin-left:10px;}
+a.sort_link{
+    margin-left:10px;
+    font-size: 15px;
+    text-decoration:none;
+}
+
+</style>
+
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython.js">
+</script>
+
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython_stdlib.js">
+</script>
+
+
+<style>
+table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+colgroup, tbody { border: solid medium; }
+td { border: solid thin; height: 1.8em; width: 12em; text-align: center; padding: 0; }
+</style>
+</head>
+
+<body onLoad="brython()">
+
+  <h1>Introduction</h1>
+
+  <p>Pour interpréter cette page il est préférable d'utiliser Firefox
+  ou Firefox Nightly. J'ai eu des problèmes avec Chrome et Safari pour
+  interpréter. Cette page constitue une page d'exemples pour
+  utiliser <a href="https://www.brython.info">Brython</a>, souvent
+  issus de codes déjà en circulation par ailleurs. Brython permet de
+  mixer HTML, CSS, Javascript... et Python. C'est un environement de
+  programmation "coté client". En effet, c'est la navigateur qui
+  interprète le texte de la page HTML. Il n'y a rien d'exécuté du coté
+  serveur.</p>
+
+  <h1>Text and Input boxes with Alert</h1>
+  
+<script type="text/python">
+from browser import document, alert
+
+def echo(event):
+    alert("Vous avez saisi : "+document["zone"].value)
+
+document["mybutton"].bind("click", echo)
+</script>
+
+<input id="zone"><button id="mybutton">click !</button>
+
+<p>
+  
+
+<h1>Grid / Table drawing</h1>
+
+<table id="table">
+    <thead>
+        <tr>
+            <th b-code="for field in fields:">
+                {field} <span b-on="click:sort">&uparrow;&downarrow;</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr b-code="for country in countries">
+            <td b-code="for i, item in enumerate(country):"
+                class="{'num' if i >= 2 else False}">{item}</td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/python">
+from browser import document
+from browser.template import Template
+
+def sort(evt, elt):
+    # get reference to the arrow
+    arrow = evt.target
+
+    # get title cell
+    th = arrow.closest('TH')
+
+    # get column of title cell
+    column = th.index("th")
+
+    # elt.data.order is a table with the sort order to apply to each column.
+    if not hasattr(elt.data, "order"):
+        elt.data.order = [0 for _ in elt.data.fields]
+
+    order = elt.data.order[column]
+
+    if True:
+        key = lambda x: x[column]
+    else:
+        key = lambda x: float(x[column])
+
+    # Changing the value of attribute "countries" will trigger re-rendering
+    # the template
+    elt.data.countries.sort(key=key, reverse=order)
+
+    # next time, sort this column the other way
+    elt.data.order[column] = 1 - order
+
+fields = ["Nom", "Capitale", "Superficie", "Population"]
+
+lines = [
+    "Allemagne", "Berlin", 357026, 81.8,
+    "Autriche", "Vienne", 83871, 8.40,
+    "Belgique", "Bruxelles", 30518, 10.91,
+    "Bulgarie", "Sofia", 110944, 7.50,
+    "Chypre", "Nicosie", 9251, 0.80,
+    "Danemark", "Copenhague", 43098, 5.56,
+    "Espagne", "Madrid", 505997, 46.15,
+    "Estonie", "Tallinn", 43698, 1.34,
+    "Finlande", "Helsinki", 338144, 5.37,
+    "France", "Paris", 544000, 65.07,
+    "Grèce", "Athènes", 131625, 11.32,
+    "Hongrie", "Budapest", 93029, 9.98,
+    "Irlande", "Dublin", 69797, 4.48,
+    "Italie", "Rome", 301336, 60.62,
+    "Lettonie", "Riga", 64589, 2.22,
+    "Lituanie", "Vilnius", 62678, 3.24,
+    "Luxembourg", "Luxembourg", 2586, 0.51,
+    "Malte", "La Valette", 315, 0.41,
+    "Pays-Bas", "Amsterdam", 41528, 16.65,
+    "Pologne", "Varsovie", 312685, 38.20,
+    "Portugal", "Lisbonne", 91946, 10.63,
+    "République tchèque", "Prague", 78867, 10.53,
+    "Roumanie", "Bucarest", 238391, 21.41,
+    "Royaume-Uni", "Londres", 243820, 62.43,
+    "Slovaquie", "Bratislava", 49034, 5.43,
+    "Slovénie", "Ljubljana", 20273, 2.05,
+    "Suède", "Stockholm", 441369, 9.41
+]
+
+countries = [[lines[4 * i + j] for j in range(4)]
+    for i in range(len(lines) // 4)]
+
+Template(document["table"], [sort]).render(fields=fields, countries=countries)
+</script>
+
+<h1>Yet two others examples</h1>
+
+<script type="text/python">
+from browser import document, html, alert
+#from random import choice
+
+current_cell = None
+
+def make_grid (grid):
+    # returns an HTML table with 9 rows and 9 columns
+    global current_cell
+
+    t = html.TABLE()
+    for i in range(3):
+        cg = html.COLGROUP()
+        for j in range(3):
+           cg <= html.COL()
+           t <= cg
+
+    srow = -1
+    for i,val in enumerate(grid):
+        row, column = divmod(i, 9)
+        if row > srow:
+            if row % 3 == 0:
+                tb = html.TBODY()
+                t <= tb
+            line = html.TR()
+            tb <= line
+            srow = row
+        if val == "0":
+            val = " "
+        cell = html.TD(val, id="i%s" %i)
+        #cell.bind("click", entry)
+        cell.style.contentEditable = True
+        if column % 3 == 0:
+            cell.style.borderLeftWidth = "1px"
+        if column == 8:
+            cell.style.borderRightWidth = "1px"
+        line <= cell
+
+    current_cell = None
+    return t
+
+# example from http://magictour.free.fr/msk_009
+#grids = [line.replace(".", "0").strip() for line in open("sudoku_grids.txt")]
+grids = [line.replace(".", "0").strip() for line in ".....5....2...4.1..3..8..2......84..8..6......9..1.7.5..6......95...3.6...3.....1"]
+
+puzzle = html.SPAN(style={"float":"left"})
+puzzle <= make_grid(grids)
+
+document <= puzzle
+from browser.html import A,B,BR
+
+#document <= BR() + BR()
+document <= B("Note: ")+"the table declared at the begining of the HTML page is displayed at the bottom of the page. "
+document <= "To stack elements, please read the documentation of the "+A("DOM",href="https://brython.info/static_doc/en/dom_api.html")+" for Brython. "
+document <= B("Brython")+" is an implementation of "
+document <= A("Python",href="http://www.python.org")+" for web browsers."
+</script>
+
+<script type="text/python">
+from browser import document
+from browser.html import TABLE, TR, TH, TD
+
+lines = [ ['Morrissey','vocals'],
+    ['Johnny Marr','guitar'],
+    ['Mike Joyce','the drums'],
+    ['Andy Rourke','the bass guitar']
+    ]
+t = TABLE()
+for line in lines:
+    t <= TR(TD(line[0])+TD(line[1]))
+document['zone1'].text = ''
+document['zone1'] <= t
+</script>
+
+<table width="100%">
+<tr>
+<td style="width:50%;">
+<p>Paragraphe 1</p>
+<p>Paragraphe 2<p>
+</td>
+<td id="zone1" style="background-color:#FF7400;text-align:center;">Initial 
+content never displayed because of zone1 id<p>
+</td>
+</tr>
+</table>
+
+<hr>
+<p></p>
+<p></p>
+  
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>The Local Limit Theorem for Random Walks on Free Groups</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/local/bin/hevea lalley -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>The Local Limit Theorem for Random Walks on Free Groups</B></FONT><BR>
+<BR>
+
+ <FONT SIZE=4><I><FONT COLOR=maroon>Steve Lalley</FONT></I></FONT><BR>
+<BR>
+
+ Purdue University<BR>
+<BR>
+<A HREF="../../seminars.html">Algorithms Seminar</A><BR>
+<BR>
+May 31, 1999<BR>
+<BR>
+[summary by <A HREF="../">Cyril Banderier</a>]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="lalley.ps">postscript</A> and in <A HREF="lalley.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<DIV ALIGN=center><B>Abstract</B></DIV>
+ <BLOCKQUOTE><BR>
+Local limit theorems and saddlepoint approximations
+ are given for random walks on a free group whose step 
+distributions have finite support.
+These are derived by exploiting a set of algebraic relations 
+among certain generating functions that arise naturally in 
+connection with the
+transition probabilities of the random walks. 
+Basic tools involved in the analysis are the elementary 
+theory of algebraic functions, the
+Perron-Frobenius theory of nonnegative matrices, and standard
+techniques of singularity analysis. 
+</BLOCKQUOTE><BR><BR>
+<BR>
+<!--TOC section Walks on Groups-->
+
+<H2>1&nbsp;&nbsp; Walks on Groups</H2><!--SEC END -->
+
+<BLOCKQUOTE><DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV>
+<DIV ALIGN=center>
+ <IMG SRC="lalley001.gif"></DIV>
+<BR>
+<DIV ALIGN=center>Figure 1: A representation (Cayley graph) of the infinite free group
+ <B><I>Z</I></B> * <B><I>Z</I></B></DIV><BR>
+
+<DIV ALIGN=center><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE>Let <B><I>G</I></B> be a the free group with generators <I>a</I><SUB><FONT SIZE=2>1</FONT></SUB>,..., <I>a</I><SUB><FONT SIZE=2><I>L</I></FONT></SUB>.
+For example, the free group <B><I>Z</I></B> * <B><I>Z</I></B> has two generators <I>a</I> and <I>b</I>.
+The word <I>a</I> <I>b</I> <I>a</I> <I>a</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>b</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>a</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>a</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>b</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>a</I> <I>a</I> corresponds 
+to the point <I>B</I>, the associated reduced word is 
+<I>a</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>b</I><SUP><FONT SIZE=2>_</FONT></SUP> <I>a</I> <I>a</I>. <BR>
+<BR>
+A finite-range random walk {<I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>}<SUB><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> 0</FONT></SUB> is a Markov chain on 
+<B><I>G</I></B> with <I>Z</I><SUB><FONT SIZE=2>0</FONT></SUB>:=<I>e</I> (the identity of the group, the ``origin'',
+the starting point) and transition probabilities
+<DIV ALIGN=center>Pr{<I>Z</I><SUB><FONT SIZE=2><I>n</I>+1</FONT></SUB>=<I>yx</I>|<I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=<I>y</I>}=<I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> &nbsp;&nbsp;&nbsp;&nbsp; <FONT FACE=symbol>"</FONT> <I>x</I>,<I>y</I> <FONT FACE=symbol>Î</FONT> <B><I>G</I></B>, <I>n</I><FONT FACE=symbol>³</FONT> 0,</DIV>
+where <I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> for <I>x</I><FONT FACE=symbol>Î</FONT> <B><I>G</I></B> is a probability distribution with finite
+support (in other words, <I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> is the probability of the ``jump'' <I>x</I>).<BR>
+<BR>
+Note <I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>) the probability of being in <I>x</I> after <I>n</I> steps.
+It is assumed that the random walk is irreducible and aperiodic, that
+is, that
+<DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>"</FONT> <I>x</I> <FONT FACE=symbol>Î</FONT> <B><I>G</I></B></TD>
+<TD NOWRAP> &nbsp;&nbsp;&nbsp;&nbsp; </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>) &gt;0 &nbsp;&nbsp;&nbsp;&nbsp;
+(irreducibility);</TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP>GCD{<I>n</I>;
+<I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>e</I>)&gt;0}=1 &nbsp;&nbsp;&nbsp;&nbsp; (aperiodicity).</TD>
+</TR></TABLE></DIV>
+Another important condition is the following:
+<DIV ALIGN=center>Positivity: &nbsp;&nbsp;&nbsp;&nbsp; <I>p</I><SUB><FONT SIZE=2><I>e</I></FONT></SUB>&gt;0  and  <I>p</I><SUB><FONT SIZE=2><I>g</I></FONT></SUB>&gt;0  for all
+ generators <I>g</I> of <B><I>G</I></B> (and their inverses).</DIV>
+Similarly to the random walk in the Euclidian case <B><I>Z</I></B><SUP><FONT SIZE=2><I>d</I></FONT></SUP>,
+ a local limit theorem is given by the asymptotics 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>)~</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>B</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> <I>R</I><SUP><FONT SIZE=2>-<I>n</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(2 <FONT FACE=symbol>p</FONT> <I>R</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP><I>n</I><SUP><FONT SIZE=2>3/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.</TD>
+</TR></TABLE></DIV><BR>
+Similar results were already known
+when all the steps are of size one (<EM>nearest neighbour</EM> 
+random walk&nbsp;[<A HREF="#Ge"><CITE>3</CITE></A>])
+or when all the words at a same distance from the origin are 
+equiprobable (the so-called <EM>isotropic</EM> random walk&nbsp;[<A HREF="#Fi"><CITE>2</CITE></A><CITE>, </CITE><A HREF="#Pi"><CITE>8</CITE></A><CITE>, </CITE><A HREF="#Sa"><CITE>9</CITE></A>]).<BR>
+<BR>
+<!--TOC section Singularity Analysis-->
+
+<H2>2&nbsp;&nbsp; Singularity Analysis</H2><!--SEC END -->
+
+This section is devoted to the analysis of some probability generating
+functions (PGF) related to the walk.
+For <I>x</I><FONT FACE=symbol>Î</FONT> <B><I>G</I></B> and <I>z</I><FONT FACE=symbol>Î</FONT> <B><I>C</I></B> (|<I>z</I>|&lt;1), define 
+<UL>
+<LI>
+ the random variable coding where one is after <I>n</I> steps: <I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, 
+
+<LI> the PGF to reach <I>x</I> in <I>n</I> steps: <I>G</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>):=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB>
+<I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>)<I>z</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>,
+
+<LI> the PGF of the excursions (Green's function): <I>G</I>(<I>z</I>):=<I>G</I><SUB><FONT SIZE=2><I>e</I></FONT></SUB>(<I>z</I>),
+
+<LI> the first time <I>x</I> is reached: <I>T</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>:=inf{<I>n</I><FONT FACE=symbol>³</FONT> 0: <I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=<I>x</I>},
+
+<LI> the PGF to reach <I>x</I> for the first time in <I>n</I> steps: 
+<I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>):=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>n</I></FONT></SUB> Pr{<I>T</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>=<I>n</I>} <I>z</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP>.
+</UL>Note that aperiodicity and irreducibility imply that for all
+sufficiently large <I>n</I><FONT FACE=symbol>³</FONT> 1, <I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>e</I>)&gt;0 and <I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>y</I>)&gt;0, for any
+(inverse of a) generator <I>y</I>.<BR>
+<BR>
+The following (combinatorially trivial) relations 
+<DIV ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><I>G</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>)=<I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>)<I>G</I>(<I>x</I>),</TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>G</I>(<I>z</I>)=1+<I>z</I></TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><I>p</I><SUB><FONT SIZE=2><I>e</I></FONT></SUB>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>x</I><FONT FACE=symbol>¹</FONT> <I>e</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>
+<I>F</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>x</I></FONT><SUP><FONT SIZE=2>-1</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>z</I>)</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><I>G</I>(<I>z</I>)=</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP>1-<I>zp</I><SUB><FONT SIZE=2><I>e</I></FONT></SUB>-<I>z</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>x</I><FONT FACE=symbol>¹</FONT> <I>e</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>
+<I>F</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>x</I></FONT><SUP><FONT SIZE=2>-</FONT></SUP><FONT SIZE=2>1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>z</I>)</TD>
+<TD NOWRAP><FONT FACE=symbol>
+ö<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>-1</FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+allow to prove that all of the functions <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> and <I>G</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> have the same radius of
+convergence <I>R</I>, 1&lt;<I>R</I>&lt;<FONT FACE=symbol>¥</FONT> (the less obvious is that <I>R</I> is <I><FONT COLOR=maroon>strictly</FONT></I> greater than 1).<BR>
+<BR>
+Let <B><I>B</I></B> 
+be the set of points at distance <FONT FACE=symbol>£</FONT> <I>K</I>, 
+where <I>K</I> is such that there is no smaller ball in which
+the support of the step distribution {<I>p</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>} is contained.
+Define now
+<UL>
+<LI>
+ the first time that <I>x</I> is exceeded: <FONT FACE=symbol>t</FONT><SUB><FONT SIZE=2><I>x</I></FONT></SUB>
+
+<LI> the PGF to go from <I>a</I> to <I>xb</I> while <I>x</I> as never been
+exceeded before:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUP><FONT SIZE=2><I>ab</I></FONT></SUP>=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> Pr {<I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=<I>xb</I>|<I>Z</I><SUB><FONT SIZE=2>0</FONT></SUB>=<I>a</I>  and  <I>Z</I><SUB><FONT SIZE=2><I>i</I>&lt;<I>n</I></FONT></SUB><FONT FACE=symbol>Ï</FONT><I>x</I><B><I>B</I></B> } <I>z</I><SUP><FONT SIZE=2><I>n</I></FONT></SUP> </TD>
+</TR></TABLE></DIV>
+
+<LI> the PGF to go from <I>x</I> to the origin: <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUP><SUB><FONT SIZE=2>-1</FONT></SUB></SUP>(<I>z</I>)
+</UL>
+			
+The formula
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>"</FONT> <I>x</I><FONT FACE=symbol>¹</FONT> <I>e</I> &nbsp;&nbsp;&nbsp;&nbsp; <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>b</I><FONT FACE=symbol>Î</FONT> </FONT><FONT SIZE=2><B><I>B</I></B></FONT><FONT SIZE=2>-{<I>e</I>}</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUP><FONT SIZE=2><I>eb</I></FONT></SUP> (<I>z</I>)
+<I>F</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><I>b</I></FONT><SUP><FONT SIZE=2>-1</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>z</I>)</TD>
+</TR></TABLE></DIV>
+leads to an expression of <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>=<I>uH</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>(<I>z</I>)<I>v</I>=<I>u</I> <I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2>1</FONT></SUB></SUB>(<I>z</I>)··· <I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2><I>m</I></FONT></SUB></SUB>(<I>z</I>)<I>v</I>
+ where <I>u</I> is the projection on <I>e</I> and <I>v</I> a vector whose entries
+ are the <I>F</I><SUB><FONT SIZE=2><I>b</I></FONT></SUB><SUP><SUB><FONT SIZE=2>-1</FONT></SUB></SUP>(<I>z</I>) for <I>b</I><FONT FACE=symbol>Î</FONT> <B><I>B</I></B>
+and where the product of matrices is over <I>x</I><SUB><FONT SIZE=2>1</FONT></SUB>··· <I>x</I><SUB><FONT SIZE=2><I>m</I></FONT></SUB>, the 
+reduced word associated to <I>x</I>.<BR>
+<BR>
+It is then proven by the Markov property that all the non-constant <I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2><I>i</I></FONT></SUB></SUB><SUP><FONT SIZE=2><I>ab</I></FONT></SUP> 
+ satisfy polynomial relations (<I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2><I>i</I></FONT></SUB></SUB>=<I>Q</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>(<I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2>1</FONT></SUB></SUB>, <I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2>2</FONT></SUB></SUB>,
+ ...), see&nbsp;[<A HREF="#La93"><CITE>6</CITE></A>] for exact relations)
+and that they have the same radius of convergence.<BR>
+<BR>
+By elimination (Gröbner basis or resultants),
+the functions <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> and <I>G</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> are algebraic.
+Their Puiseux expansion leads to an
+algebraic singularity with exponent 1/2.<BR>
+<BR>
+Here is a sketch of the proof that the exponent is indeed <FONT FACE=symbol>a</FONT>=1/2.
+Define <I>J</I><SUB><FONT SIZE=2><I>z</I></FONT></SUB> the Jacobian matrix (<FONT FACE=symbol>¶</FONT> <I>Q</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB> / <FONT FACE=symbol>¶</FONT>
+<I>H</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB><SUB><SUB><FONT SIZE=2><I>j</I></FONT></SUB></SUB>), the polynomials <I>Q</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>
+ have nonnegative coefficients, thus there exists <I>n</I>
+such that <I>J</I><SUB><FONT SIZE=2><I>z</I></FONT></SUB><SUP><FONT SIZE=2><I>n</I></FONT></SUP> is an aperiodic and irreducible 
+matrix with strictly positive coefficients.
+By the Perron-Frobenius theorem, <I>J</I><SUB><FONT SIZE=2><I>z</I></FONT></SUB> has a positive eigenvalue
+<FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>z</I></FONT></SUB> of multiplicity&nbsp;1. The function <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>z</I></FONT></SUB> is
+increasing and real-analytic and <FONT FACE=symbol>l</FONT><SUB><FONT SIZE=2><I>R</I></FONT></SUB>=1/<I>R</I>.
+Considering a left eigenvector of <I>J</I><SUB><FONT SIZE=2><I>R</I></FONT></SUB> and using the shape of the
+<I>Q</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB> yields to the relations
+(<I>R</I>-<I>z</I>)(<I>C</I>+···)=<I>C</I>'(<I>R</I>-<I>z</I>)<SUP><FONT SIZE=2>2<FONT FACE=symbol>a</FONT></FONT></SUP>+···,
+thus 2<FONT FACE=symbol>a</FONT>=1.<BR>
+<BR>
+As <I>z</I>=<I>R</I> is the dominant singularity of <I>F</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB> and <I>G</I><SUB><FONT SIZE=2><I>x</I></FONT></SUB>,
+one has the two following theorems:<BR>
+<BR>
+<DIV ALIGN=left><B>Theorem&nbsp;1</B>&nbsp;&nbsp;<FONT COLOR=purple>[Local limit theorem, access]&nbsp;&nbsp;</FONT><EM>
+Assuming irreducibility and aperiodicity,
+one has, for a positive constant </EM><EM><I>B</I></EM><SUB><EM><FONT SIZE=2><I>x</I></FONT></EM></SUB><EM>:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM><I>p</I></EM><SUP><EM><FONT SIZE=2>*<I>n</I></FONT></EM></SUP><EM>(<I>x</I>)~ </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>B</I></EM><SUB><EM><FONT SIZE=2><I>x</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>(2<FONT FACE=symbol>p</FONT> <I>R</I>)</EM><SUP><EM><FONT SIZE=2>1/2</FONT></EM></SUP><EM><I>R</I></EM><SUP><EM><FONT SIZE=2><I>n</I></FONT></EM></SUP><EM> <I>n</I></EM><SUP><EM><FONT SIZE=2>3/2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<DIV ALIGN=left><B>Theorem&nbsp;2</B>&nbsp;&nbsp;<FONT COLOR=purple>[Local limit theorem, first access]&nbsp;&nbsp;</FONT><EM>
+Assuming positivity, one has, for a positive constant </EM><EM><I>A</I></EM><SUB><EM><FONT SIZE=2><I>x</I></FONT></EM></SUB><EM>:
+</EM><DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><EM>Pr</EM><EM> {</EM><EM><I>x</I></EM><EM> is reached for the first time after </EM><EM><I>n</I></EM><EM> steps</EM><EM>}
+~ </EM></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><EM><I>A</I></EM><SUB><EM><FONT SIZE=2><I>x</I></FONT></EM></SUB></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><EM>(2<FONT FACE=symbol>p</FONT> <I>R</I>)</EM><SUP><EM><FONT SIZE=2>1/2</FONT></EM></SUP><EM><I>R</I></EM><SUP><EM><FONT SIZE=2><I>n</I></FONT></EM></SUP><EM> <I>n</I></EM><SUP><EM><FONT SIZE=2>3/2</FONT></EM></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><EM>.</EM></TD>
+</TR></TABLE></DIV><EM>
+</EM></DIV><BR>
+<!--TOC section Saddlepoint Approximations-->
+
+<H2>3&nbsp;&nbsp; Saddlepoint Approximations</H2><!--SEC END -->
+The probability to reach a point <I>x</I> at a distance <I>m</I> 
+of the origin in <I>n</I> steps is
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>)~ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>exp(<I>n</I><FONT FACE=symbol>b</FONT>(<I>m</I>/<I>n</I>))</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>(</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>..</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT FACE=symbol>y</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>(<I>m</I>/<I>n</I>))<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>C</I>(<I>m</I>/<I>n</I>)</TD>
+</TR></TABLE></DIV>
+for appropriate functions <FONT FACE=symbol>b</FONT>, <I>C</I> and <FONT FACE=symbol>y</FONT><SUP><FONT SIZE=2>..</FONT></SUP> (see the correct
+definitions / notations in&nbsp;[<A HREF="#La93"><CITE>6</CITE></A>]).<BR>
+<BR>
+This uniform asymptotics in <I>x</I> and <I>n</I> corresponds to the 
+classical saddlepoint approximation (sharp
+large deviations theorems) for sums of iid random vectors in <B><I>R</I></B><SUP><FONT SIZE=2><I>d</I></FONT></SUP>.<BR>
+<BR>
+The saddlepoint approximations are of interest for another reason. 
+For large <I>n</I>, nearly all the mass in the probability distribution 
+<I>p</I><SUP><FONT SIZE=2>*<I>n</I></FONT></SUP>(<I>x</I>) is concentrated in the region |<I>x</I>|<FONT FACE=symbol>³</FONT> <FONT FACE=symbol>e</FONT> <I>n</I>,
+where the local limit approximations are not accurate.
+This contrasts with the situation for finite range random walk
+in Euclidean space. In fact, Guivarch&nbsp;[<A HREF="#Gu"><CITE>4</CITE></A>] has shown that 
+for random walks in <B><I>G</I></B>, the distance from the origin 
+grows linearly in <I>n</I>. Sawyer and Steger&nbsp;[<A HREF="#St"><CITE>10</CITE></A>] have further shown 
+that (|<I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>|-<I>n</I><FONT FACE=symbol>b</FONT>)/(<I>n</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP> converges in law to a normal
+distribution.<BR>
+<BR>
+Finally, S. Lalley, using a special matrix product and results on Ruelle's
+Perron-Frobenius operators, derives a saddlepoint approximation,
+uniformly for <I>m</I>/<I>n</I> in a given compact
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>Pr{|<I>Z</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>|=<I>m</I>}~ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>exp(<I>nB</I>(<I>m</I>/<I>n</I>))</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(2 <FONT FACE=symbol>p</FONT> <I>m</I> <I>D</I>(<I>m</I>/<I>n</I>))<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><I>C</I>(<I>m</I>/<I>n</I>).</TD>
+</TR></TABLE></DIV><BR>
+
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Ca"><FONT COLOR=purple>[1]</FONT></A><DD>
+Cartwright (Donald&nbsp;I.) and Sawyer (Stanley).&nbsp;--
+The Martin boundary for general isotropic random walks in a tree.
+ <EM>Journal of Theoretical Probability</EM>, vol.&nbsp;4, n&deg;1,
+ 1991, pp.&nbsp;111--136.<BR>
+<BR>
+
+<DT><A NAME="Fi"><FONT COLOR=purple>[2]</FONT></A><DD>
+Figà-Talamanca (Alessandro) and Picardello (Massimo&nbsp;A.).&nbsp;--
+<EM>Harmonic analysis on free groups</EM>.&nbsp;--
+Marcel Dekker Inc., New York, 1983, viii+145p.<BR>
+<BR>
+
+<DT><A NAME="Ge"><FONT COLOR=purple>[3]</FONT></A><DD>
+Gerl (Peter) and Woess (Wolfgang).&nbsp;--
+Local limits and harmonic functions for nonisotropic random walks on
+ free groups. <EM>Probability Theory and Related Fields</EM>, vol.&nbsp;71, n&deg;3,
+ 1986, pp.&nbsp;341--355.<BR>
+<BR>
+
+<DT><A NAME="Gu"><FONT COLOR=purple>[4]</FONT></A><DD>
+Guivarc'h (Y.).&nbsp;--
+Sur la loi des grands nombres et le rayon spectral d'une marche
+ aléatoire. In <EM>Conference on Random Walks (Kleebach, 1979)</EM>,
+ pp.&nbsp;47--98, 3.&nbsp;--
+Société Mathématique de France, Paris, 1980.<BR>
+<BR>
+
+<DT><A NAME="La91"><FONT COLOR=purple>[5]</FONT></A><DD>
+Lalley (Steven&nbsp;P.).&nbsp;--
+Saddle-point approximations and space-time Martin boundary for
+ nearest-neighbor random walk on a homogeneous tree. <EM>Journal of
+ Theoretical Probability</EM>, vol.&nbsp;4, n&deg;4, 1991, pp.&nbsp;701--723.<BR>
+<BR>
+
+<DT><A NAME="La93"><FONT COLOR=purple>[6]</FONT></A><DD>
+Lalley (Steven&nbsp;P.).&nbsp;--
+Finite range random walk on free groups and homogeneous trees. <EM>The Annals of Probability</EM>, vol.&nbsp;21, n&deg;4, 1993,
+ pp.&nbsp;2087--2130.<BR>
+<BR>
+
+<DT><A NAME="MR94m:60051"><FONT COLOR=purple>[7]</FONT></A><DD>
+Lalley (Steven&nbsp;P.) and Hueter (Irene).&nbsp;--
+Anisotropic branching random walks on homogeneous trees. <EM>Preprint</EM>, 1999.<BR>
+<BR>
+
+<DT><A NAME="Pi"><FONT COLOR=purple>[8]</FONT></A><DD>
+Picardello (Massimo&nbsp;A.).&nbsp;--
+Spherical functions and local limit theorems on free groups. <EM>Annali di Matematica Pura ed Applicata. Serie Quarta</EM>, vol.&nbsp;133,
+ 1983, pp.&nbsp;177--191.<BR>
+<BR>
+
+<DT><A NAME="Sa"><FONT COLOR=purple>[9]</FONT></A><DD>
+Sawyer (Stanley).&nbsp;--
+Isotropic random walks in a tree. <EM>Zeitschrift für
+ Wahrscheinlichkeitstheorie und Verwandte Gebiete</EM>, vol.&nbsp;42, n&deg;4,
+ 1978, pp.&nbsp;279--292.<BR>
+<BR>
+
+<DT><A NAME="St"><FONT COLOR=purple>[10]</FONT></A><DD>
+Sawyer (Stanley) and Steger (Tim).&nbsp;--
+The rate of escape for anisotropic random walks in a tree. <EM>Probability Theory and Related Fields</EM>, vol.&nbsp;76, n&deg;2,
+ 1987, pp.&nbsp;207--230.<BR>
+<BR>
+
+<DT><A NAME="Se"><FONT COLOR=purple>[11]</FONT></A><DD>
+Seneta (E.).&nbsp;--
+<EM>Nonnegative matrices and </EM><EM>M</EM><EM>arkov chains</EM>.&nbsp;--
+Springer-Verlag, New York, 1981, second edition,
+ xiii+279p.</DL>
+
+
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+
+<!--FOOTER-->
+<HR SIZE=2>
+<BLOCKQUOTE><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.
+</EM></BLOCKQUOTE></BODY>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: Cyril Banderier's homepage -->
+<!-- URL: http://algo.inria.fr/banderier/ -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABjaFAsxTYuto9ZrQFeInbJ7dzDg", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABjaFAsxTYuto9ZrQFeInbJ7dzDg"><img
+src="http://m1.nedstatbasic.net/n?id=ABjaFAsxTYuto9ZrQFeInbJ7dzDg"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript"></script>
+<script type="text/javascript"> _uacct = "UA-3376402-1";
+  urchinTracker();</script>
+</HTML>
+

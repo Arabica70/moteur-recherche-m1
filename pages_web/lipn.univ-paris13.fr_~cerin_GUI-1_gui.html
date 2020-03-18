@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Quelques compl&eacute;ments sur les interfaces graphiques</h1>
+
+<h2>1- Page d'information du cours</h2>
+
+<p>Voir
+&agrave; <a href="https://www-info.iutv.univ-paris13.fr/dokuwiki/doku.php?id=m2105:start">l'adresse
+suivante</a> pour trouver le cours et les &eacute;nonc&eacute;s des TP.
+</p>
+
+<p>Concernant le fil conducteur des exercices (Station
+m&eacute;t&eacute;o), vous pouvez consulter, &agrave; titre
+informatif, l'interface d'acc&egrave;s aux informations
+  m&eacute;t&eacute;orologiques mondiale sur la page
+  <a href="http://worldweather.wmo.int/fr/dataguide.html">du Syst&egrave;me
+  d'Information M&eacute;t&eacute;orologique Mondial (WWIS) </a>.
+</p>
+
+<p>Vous aurez alors les moyens de construire votre propre interface
+graphique qui propose la m&eacute;t&eacute;o de toutes les villes du
+monde. Il faudra &ecirc;tre capable d'effectuer une requ&ecirc;te
+(curl ?), puis de parser/analyser un fichier XML. Voici un exemple de
+requ&ecirc;te <tt>curl</tt> pour la ville de New York :
+</p>
+
+<pre>
+  $ curl http://worldweather.wmo.int/fr/json/278_fr.xml
+  {"city":{"lang":"fr","cityName":"New York City, New York","cityLatitude":"40.650000000","cityLongitude":"-73.780000000","cityId":278,"isCapital":false,"stationName":"New York City, New York","tourismURL":"","tourismBoardName":"","isDep":false,"timeZone":"-0400","isDST":"Y","member":{"memId":93,"memName":"Etats-Unis","shortMemName":"","url":"www.nws.noaa.gov\/","orgName":"National Weather Service","logo":"usa_logo.png","ra":4},"forecast":{"issueDate":"2019-04-17 22:40:00","timeZone":"Local","forecastDay":[{"forecastDate":"2019-04-18","wxdesc":"","weather":"pluie fine","minTemp":"9","maxTemp":"17","minTempF":"48","maxTempF":"63","weatherIcon":1502},{"forecastDate":"2019-04-19","wxdesc":"","weather":"Petite averse","minTemp":"14","maxTemp":"21","minTempF":"57","maxTempF":"69","weatherIcon":1201},{"forecastDate":"2019-04-20","wxdesc":"","weather":"Averse de pluie","minTemp":"16","maxTemp":"19","minTempF":"60","maxTempF":"66","weatherIcon":901},{"forecastDate":"2019-04-21","wxdesc":"","weather":"Petite averse","minTemp":"11","maxTemp":"17","minTempF":"52","maxTempF":"63","weatherIcon":1201},{"forecastDate":"2019-04-22","wxdesc":"","weather":"Ensoleill\u00e9","minTemp":"11","maxTemp":"21","minTempF":"52","maxTempF":"70","weatherIcon":2402},{"forecastDate":"2019-04-23","wxdesc":"","weather":"P\u00e9riode ensoleill\u00e9e","minTemp":"12","maxTemp":"18","minTempF":"54","maxTempF":"65","weatherIcon":2201},{"forecastDate":"2019-04-24","wxdesc":"","weather":"Petite averse","minTemp":"10","maxTemp":"16","minTempF":"50","maxTempF":"61","weatherIcon":1201}]},"climate":{"raintype":"Rainfall","raindef":"","rainunit":"inch","datab":1981,"datae":2010,"tempb":"","tempe":"","rdayb":"","rdaye":"","rainfallb":"","rainfalle":"","climatefromclino":"","climateMonth":[{"month":1,"maxTemp":"3.5","minTemp":"-2.8","meanTemp":null,"maxTempF":"38.3","minTempF":"26.9","meanTempF":null,"raindays":"10.4","rainfall":"92.7","climateFromMemDate":"2014-01-06"},{"month":2,"maxTemp":"5.3","minTemp":"-1.7","meanTemp":null,"maxTempF":"41.6","minTempF":"28.9","meanTempF":null,"raindays":"9.2","rainfall":"78.5","climateFromMemDate":"2014-01-06"},{"month":3,"maxTemp":"9.8","minTemp":"1.8","meanTemp":null,"maxTempF":"49.7","minTempF":"35.2","meanTempF":null,"raindays":"10.9","rainfall":"110.7","climateFromMemDate":"2014-01-06"},{"month":4,"maxTemp":"16.2","minTemp":"7.1","meanTemp":null,"maxTempF":"61.2","minTempF":"44.8","meanTempF":null,"raindays":"11.5","rainfall":"114.3","climateFromMemDate":"2014-01-06"},{"month":5,"maxTemp":"21.6","minTemp":"12.2","meanTemp":null,"maxTempF":"70.8","minTempF":"54.0","meanTempF":null,"raindays":"11.1","rainfall":"106.4","climateFromMemDate":"2014-01-06"},{"month":6,"maxTemp":"26.3","minTemp":"17.6","meanTemp":null,"maxTempF":"79.3","minTempF":"63.6","meanTempF":null,"raindays":"11.2","rainfall":"112.0","climateFromMemDate":"2014-01-06"},{"month":7,"maxTemp":"28.9","minTemp":"20.4","meanTemp":null,"maxTempF":"84.1","minTempF":"68.8","meanTempF":null,"raindays":"10.4","rainfall":"116.8","climateFromMemDate":"2014-01-06"},{"month":8,"maxTemp":"28.1","minTemp":"19.9","meanTemp":null,"maxTempF":"82.6","minTempF":"67.8","meanTempF":null,"raindays":"9.5","rainfall":"112.8","climateFromMemDate":"2014-01-06"},{"month":9,"maxTemp":"24.0","minTemp":"16.0","meanTemp":null,"maxTempF":"75.2","minTempF":"60.8","meanTempF":null,"raindays":"8.7","rainfall":"108.7","climateFromMemDate":"2014-01-06"},{"month":10,"maxTemp":"17.7","minTemp":"10.0","meanTemp":null,"maxTempF":"63.8","minTempF":"50.0","meanTempF":null,"raindays":"8.9","rainfall":"111.8","climateFromMemDate":"2014-01-06"},{"month":11,"maxTemp":"12.1","minTemp":"5.3","meanTemp":null,"maxTempF":"53.8","minTempF":"41.6","meanTempF":null,"raindays":"9.6","rainfall":"102.1","climateFromMemDate":"2014-01-06"},{"month":12,"maxTemp":"6.1","minTemp":"0.0","meanTemp":null,"maxTempF":"43.0","minTempF":"32.0","meanTempF":null,"raindays":"10.6","rainfall":"101.6","climateFromMemDate":"2014-01-06"}]}}}macbook-de-christophe:~ christophecerin$ 
+</pre>
+
+<h2>2- Cours introductif</h2>
+
+<p>Voir <a href="http://lipn.univ-paris13.fr/~cerin/GUI-1/GUI-1.pdf">cette
+pr&eacute;sentation</a> introduisant l'histoire et des vieux outils
+(ncurses, X11, Python Tkinter). Ce polycopi&eacute; propose
+&eacute;galement des exercices de programmation. Il y a aussi des
+&eacute;l&eacute;ments introductifs &agrave; Swing sur
+la <a href="https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/MasterInfo/Cours/Swing/">page
+suivante</a> &agrave; l'IRIF. Une &eacute;dition du livre <a href="https://www.csie.ntu.edu.tw/~r93020/eBook/OReilly.Java.Swing.2nd.2002.pdf">Java Swing, 2nd edition</a>
+chez O'Reilly est &agrave; lire avec profit !</p>
+
+<h2>3- Quelques discussions et corrections des exercices Java</h2>
+
+<h3>Vers des corrections</h3>
+
+<p>Veuillez suivre
+ce <a href="http://lipn.univ-paris13.fr/~cerin/GUI-1/java/">lien</a>
+qui fournit des codes Java illustrant ou compl&eacute;tant les
+solutions des exercices vues en TP. Ces solutions utilisent les
+biblioth&egrave;ques Swing et Awt.</p>
+
+<p>Je vous conseille d'examiner les codes propos&eacute;s sous l'angle
+MVC (Model View Controler) tel que ce concept est
+pr&eacute;sent&eacute; <a href="https://www.cs.wcupa.edu/rkline/java/mvc-design.html#mvc">ici</a>
+ou <a href="https://martinfowler.com/eaaDev/uiArchs.html">ici</a>
+(plus &eacute;labor&eacute;) ou encore
+ce <a href="https://stackoverflow.com/questions/25502552/correctly-implementing-the-mvc-pattern-in-gui-development-using-swing-in-java">post</a>. Il
+s'agit pour l'&eacute;tudiant de rep&eacute;rer les parties de code
+relatives &agrave; la View, au Model et au Controler. Attention,
+certains codes ne contiennent pas de partie controler (ce sont alors
+des exemples qui se concentrent sur autre chose).</p>
+
+<h3>Discussion sur le plan m&eacute;thodologique</h3>
+
+<p>
+Les difficult&eacute;s que vous rencontrez sont souvent de nature
+m&eacute;thodologique. Sur le plan technique, il y a toujours un moyen
+pour trouver une documentation sur le comment &eacute;crire, d'un
+point de vue syntaxique, tel ou tel appel &agrave; une m&eacute;thode
+ou fonction Java. Certes, vous rencontrez d'autres probl&egrave;mes
+li&eacute;s au fait que le cours sur les interfaces graphiques en Java
+arrive un peu en m&ecirc;me temps que les cours introductifs &agrave;
+Java. Ce n'est pas grave si nous prenons un peu de recul.
+</p>
+
+<p>
+Pour la feuille de TP concernant la <code>VueStationMeteo</code> vous avez un peu
+de mal avec les panneaux et la politique de placement dans chacun des
+panneaux. Nous pouvons toujours commencer par simplifier le sujet pour
+construire seulement un panneau nord (avant d'attaquer le sujet avec
+tous les panneaux).</p>
+
+<p>Nous pouvons alors ne consid&eacute;rer que <code>JPanel
+getPanneauNord(){ }</code> qui est appel&eacute;e
+par <code>intialise()</code>.  Dans ce panneau, placer au d&eacute;but
+seulement 2 <code>JLabels</code> et 2 zones de
+saisie <code>JTextField</code>. Il convient alors de bien faire la
+distinction entre la politique <code>Flow</code> pour les
+&eacute;l&eacute;ments plac&eacute;s &agrave; l'int&eacute;rieur de ce
+panneau et la politique de placement dans la fen&ecirc;tre qui permet
+de positionner le panneau Nord (politique au niveau de la
+fen&ecirc;tre)</p>
+
+<p>D'ou viennent les difficult&eacute;s ?  De la relation, au niveau
+de l'API, entre les &eacute;v&ecirc;nements qui ont &eacute;t&eacute;
+impliqu&eacute;s. Autrement dit, quel est le composant &agrave; la
+source de l'&eacute;v&ecirc;nement alors que je suis en train de
+programmer un certain "composant" ? Par exemple, lorsqu'un composant
+fen&ecirc;tre re&ccedil;oit un &eacute;v&eacute;nement FOCUS_LOST, ce
+composant ne peut pas savoir de quel composant il obtient le
+focus. Cet exemple grossit le trait - il a vocation &agrave;
+illustrer le propos.
+</p>
+
+<p>Il convient alors d'observer et de comprendre comment le
+Syst&egrave;me (API+&eacute;v&ecirc;nements) est organis&eacute; de
+mani&egrave;re hi&eacute;rarchique. Pour notre TD/TP :
+<ul>
+<li> le constructeur de la fen&ecirc;tre appelle <code>initialise()</code>
+
+<li> et <code>initialise()</code> appelle <code>getPanneauXXX()</code>
+4 fois et place ces 4 panneaux dans la fen&ecirc;tre (selon
+BorderLayout)
+
+<li> et au niveau de chaque panneau, les &eacute;l&eacute;ments
+graphiques sont plac&eacute;s selon une autre politique qui est propre
+au panneau !
+</ul>
+
+</p>
+
+<h2>4- GTK sur MacOs</h2>
+
+<p>Si vous voulez installer <a href="https://www.gtk.org">GTK</a> sur
+MacOs, veuillez
+suivre <a href="https://wiki.gnome.org/Projects/GTK+/OSX/Building">ce
+lien</a>. Si vous &ecirc;tes sous Linux, GTK est plus facilement accessible.</p>
+
+<h2>4- Programmation en Go et GTK</h2>
+
+<p>Le langage de programmation <a href="https://golang.org">Go</a> est pouss&eacute; par Google.
+Il ressemble &agrave; du Java. Pour pousser &agrave; l'adoption, la documentation dit :
+
+<pre>
+Go is expressive, concise, clean, and efficient. Its concurrency
+mechanisms make it easy to write programs that get the most out of
+multicore and networked machines, while its novel type system enables
+flexible and modular program construction. Go compiles quickly to
+machine code yet has the convenience of garbage collection and the
+power of run-time reflection. It's a fast, statically typed, compiled
+language that feels like a dynamically typed, interpreted language.
+</pre>
+</p>
+
+<p>Pour pouvoir construire des interfaces graphiques avec Go et GTK,
+il faut suivre
+cette <a href="https://mattn.github.io/go-gtk/">installation</a>. La
+m&eacute;thode de construction que je recommande est :
+<pre>
+# go get github.com/mattn/go-gtk/gtk
+# cd $HOME/go/src/go-gtk
+# make install
+# make example
+# ./example/demo/demo
+</pre>
+</p>
+<p>
+Note : je suppose que la variable d'environnement GOPATH est $HOME/go
+</p>
+
+<p>L'ex&eacute;cution de l'exemple, via la ligne de commande <kbd>./example/demo/demo</kbd> donne l'interface graphique :
+<center>
+<figure>
+  <img src="GTK.png" width="45%">
+  <figcaption>Interfa&ccedil;age Go et GTK</figcaption>
+</figure>
+</center>
+</p>
+
+<p>
+Le code source de l'exemple est :
+<pre>
+<textarea>
+package main
+
+import (
+        "fmt"
+        "github.com/mattn/go-gtk/gdkpixbuf"
+        "github.com/mattn/go-gtk/glib"
+        "github.com/mattn/go-gtk/gtk"
+        "os"
+        "os/exec"
+        "path/filepath"
+        "regexp"
+        "sort"
+        "strings"
+)
+
+func uniq(strings []string) (ret []string) {
+        return
+}
+
+func authors() []string {
+        if b, err := exec.Command("git", "log").Output(); err == nil {
+                lines := strings.Split(string(b), "\n")
+
+                var a []string
+                r := regexp.MustCompile(`^Author:\s*([^ <]+).*$`)
+                for _, e := range lines {
+                        ms := r.FindStringSubmatch(e)
+                        if ms == nil {
+                                continue
+                        }
+                        a = append(a, ms[1])
+                }
+                sort.Strings(a)
+                var p string
+                lines = []string{}
+                for _, e := range a {
+                        if p == e {
+                                continue
+                        }
+                        lines = append(lines, e)
+                        p = e
+                }
+                return lines
+        }
+        return []string{"Yasuhiro Matsumoto <mattn.jp@gmail.com>"}
+}
+
+func main() {
+        gtk.Init(&os.Args)
+
+        window := gtk.NewWindow(gtk.WINDOW_TOPLEVEL)
+        window.SetPosition(gtk.WIN_POS_CENTER)
+        window.SetTitle("GTK Go!")
+        window.SetIconName("gtk-dialog-info")
+        window.Connect("destroy", func(ctx *glib.CallbackContext) {
+                fmt.Println("got destroy!", ctx.Data().(string))
+                gtk.MainQuit()
+        }, "foo")
+
+        //--------------------------------------------------------
+        // GtkVBox
+        //--------------------------------------------------------
+        vbox := gtk.NewVBox(false, 1)
+
+        //--------------------------------------------------------
+        // GtkMenuBar
+        //--------------------------------------------------------
+        menubar := gtk.NewMenuBar()
+        vbox.PackStart(menubar, false, false, 0)
+
+        //--------------------------------------------------------
+        // GtkVPaned
+        //--------------------------------------------------------
+        vpaned := gtk.NewVPaned()
+        vbox.Add(vpaned)
+
+        //--------------------------------------------------------
+        // GtkFrame
+        //--------------------------------------------------------
+        frame1 := gtk.NewFrame("Demo")
+        framebox1 := gtk.NewVBox(false, 1)
+        frame1.Add(framebox1)
+
+        frame2 := gtk.NewFrame("Demo")
+        framebox2 := gtk.NewVBox(false, 1)
+        frame2.Add(framebox2)
+
+        vpaned.Pack1(frame1, false, false)
+        vpaned.Pack2(frame2, false, false)
+
+        //--------------------------------------------------------
+        // GtkImage
+        //--------------------------------------------------------
+        dir, _ := filepath.Split(os.Args[0])
+        imagefile := filepath.Join(dir, "../../data/go-gtk-logo.png")
+
+        label := gtk.NewLabel("Go Binding for GTK")
+        label.ModifyFontEasy("DejaVu Serif 15")
+        framebox1.PackStart(label, false, true, 0)
+
+        //--------------------------------------------------------
+        // GtkEntry
+        //--------------------------------------------------------
+        entry := gtk.NewEntry()
+        entry.SetText("Hello world")
+        framebox1.Add(entry)
+
+        image := gtk.NewImageFromFile(imagefile)
+        framebox1.Add(image)
+
+        //--------------------------------------------------------
+        // GtkScale
+        //--------------------------------------------------------
+        scale := gtk.NewHScaleWithRange(0, 100, 1)
+        scale.Connect("value-changed", func() {
+                fmt.Println("scale:", int(scale.GetValue()))
+        })
+        framebox2.Add(scale)
+
+        //--------------------------------------------------------
+        // GtkHBox
+        //--------------------------------------------------------
+        buttons := gtk.NewHBox(false, 1)
+
+        //--------------------------------------------------------
+        // GtkButton
+        //--------------------------------------------------------
+        button := gtk.NewButtonWithLabel("Button with label")
+        button.Clicked(func() {
+                fmt.Println("button clicked:", button.GetLabel())
+                messagedialog := gtk.NewMessageDialog(
+                        button.GetTopLevelAsWindow(),
+                        gtk.DIALOG_MODAL,
+                        gtk.MESSAGE_INFO,
+                        gtk.BUTTONS_OK,
+                        entry.GetText())
+                messagedialog.Response(func() {
+                        fmt.Println("Dialog OK!")
+
+                        //--------------------------------------------------------
+                        // GtkFileChooserDialog
+                        //--------------------------------------------------------
+                        filechooserdialog := gtk.NewFileChooserDialog(
+                                "Choose File...",
+                                button.GetTopLevelAsWindow(),
+                                gtk.FILE_CHOOSER_ACTION_OPEN,
+                                gtk.STOCK_OK,
+                                gtk.RESPONSE_ACCEPT)
+                        filter := gtk.NewFileFilter()
+                        filter.AddPattern("*.go")
+                        filechooserdialog.AddFilter(filter)
+                        filechooserdialog.Response(func() {
+                                fmt.Println(filechooserdialog.GetFilename())
+                                filechooserdialog.Destroy()
+                        })
+                        filechooserdialog.Run()
+                        messagedialog.Destroy()
+                })
+                messagedialog.Run()
+        })
+        buttons.Add(button)
+
+        //--------------------------------------------------------
+        // GtkFontButton
+        //--------------------------------------------------------
+        fontbutton := gtk.NewFontButton()
+        fontbutton.Connect("font-set", func() {
+                fmt.Println("title:", fontbutton.GetTitle())
+                fmt.Println("fontname:", fontbutton.GetFontName())
+                fmt.Println("use_size:", fontbutton.GetUseSize())
+                fmt.Println("show_size:", fontbutton.GetShowSize())
+        })
+        buttons.Add(fontbutton)
+        framebox2.PackStart(buttons, false, false, 0)
+
+        buttons = gtk.NewHBox(false, 1)
+
+        //--------------------------------------------------------
+        // GtkToggleButton
+        //--------------------------------------------------------
+        togglebutton := gtk.NewToggleButtonWithLabel("ToggleButton with label")
+        togglebutton.Connect("toggled", func() {
+                if togglebutton.GetActive() {
+                        togglebutton.SetLabel("ToggleButton ON!")
+                } else {
+                        togglebutton.SetLabel("ToggleButton OFF!")
+                }
+        })
+        buttons.Add(togglebutton)
+
+        //--------------------------------------------------------
+        // GtkCheckButton
+        //--------------------------------------------------------
+        checkbutton := gtk.NewCheckButtonWithLabel("CheckButton with label")
+        checkbutton.Connect("toggled", func() {
+                if checkbutton.GetActive() {
+                        checkbutton.SetLabel("CheckButton CHECKED!")
+                } else {
+                        checkbutton.SetLabel("CheckButton UNCHECKED!")
+                }
+        })
+        buttons.Add(checkbutton)
+
+        //--------------------------------------------------------
+        // GtkRadioButton
+        //--------------------------------------------------------
+        buttonbox := gtk.NewVBox(false, 1)
+        radiofirst := gtk.NewRadioButtonWithLabel(nil, "Radio1")
+        buttonbox.Add(radiofirst)
+        buttonbox.Add(gtk.NewRadioButtonWithLabel(radiofirst.GetGroup(), "Radio2"))
+        buttonbox.Add(gtk.NewRadioButtonWithLabel(radiofirst.GetGroup(), "Radio3"))
+        buttons.Add(buttonbox)
+        //radiobutton.SetMode(false);
+        radiofirst.SetActive(true)
+
+        framebox2.PackStart(buttons, false, false, 0)
+
+        //--------------------------------------------------------
+        // GtkVSeparator
+        //--------------------------------------------------------
+        vsep := gtk.NewVSeparator()
+        framebox2.PackStart(vsep, false, false, 0)
+
+        //--------------------------------------------------------
+        // GtkComboBoxEntry
+        //--------------------------------------------------------
+        combos := gtk.NewHBox(false, 1)
+        comboboxentry := gtk.NewComboBoxText()
+        comboboxentry.AppendText("Monkey")
+        comboboxentry.AppendText("Tiger")
+        comboboxentry.AppendText("Elephant")
+        comboboxentry.Connect("changed", func() {
+                fmt.Println("value:", comboboxentry.GetActiveText())
+        })
+        combos.Add(comboboxentry)
+
+        //--------------------------------------------------------
+        // GtkComboBox
+        //--------------------------------------------------------
+        combobox := gtk.NewComboBoxText()
+        combobox.AppendText("Peach")
+        combobox.AppendText("Banana")
+        combobox.AppendText("Apple")
+        combobox.SetActive(1)
+        combobox.Connect("changed", func() {
+                fmt.Println("value:", combobox.GetActiveText())
+        })
+        combos.Add(combobox)
+
+        framebox2.PackStart(combos, false, false, 0)
+
+        //--------------------------------------------------------
+        // GtkTextView
+        //--------------------------------------------------------
+        swin := gtk.NewScrolledWindow(nil, nil)
+        swin.SetPolicy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        swin.SetShadowType(gtk.SHADOW_IN)
+        textview := gtk.NewTextView()
+        var start, end gtk.TextIter
+        buffer := textview.GetBuffer()
+        buffer.GetStartIter(&start)
+        buffer.Insert(&start, "Hello ")
+        buffer.GetEndIter(&end)
+        buffer.Insert(&end, "World!")
+        tag := buffer.CreateTag("bold", map[string]string{
+                "background": "#FF0000", "weight": "700"})
+        buffer.GetStartIter(&start)
+        buffer.GetEndIter(&end)
+        buffer.ApplyTag(tag, &start, &end)
+        swin.Add(textview)
+        framebox2.Add(swin)
+
+        buffer.Connect("changed", func() {
+                fmt.Println("changed")
+        })
+
+        //--------------------------------------------------------
+        // GtkMenuItem
+        //--------------------------------------------------------
+        cascademenu := gtk.NewMenuItemWithMnemonic("_File")
+        menubar.Append(cascademenu)
+        submenu := gtk.NewMenu()
+        cascademenu.SetSubmenu(submenu)
+
+        var menuitem *gtk.MenuItem
+        menuitem = gtk.NewMenuItemWithMnemonic("E_xit")
+        menuitem.Connect("activate", func() {
+                gtk.MainQuit()
+        })
+        submenu.Append(menuitem)
+
+        cascademenu = gtk.NewMenuItemWithMnemonic("_View")
+        menubar.Append(cascademenu)
+        submenu = gtk.NewMenu()
+        cascademenu.SetSubmenu(submenu)
+
+        checkmenuitem := gtk.NewCheckMenuItemWithMnemonic("_Disable")
+        checkmenuitem.Connect("activate", func() {
+                vpaned.SetSensitive(!checkmenuitem.GetActive())
+        })
+        submenu.Append(checkmenuitem)
+
+        menuitem = gtk.NewMenuItemWithMnemonic("_Font")
+        menuitem.Connect("activate", func() {
+                fsd := gtk.NewFontSelectionDialog("Font")
+                fsd.SetFontName(fontbutton.GetFontName())
+                fsd.Response(func() {
+                        fmt.Println(fsd.GetFontName())
+                        fontbutton.SetFontName(fsd.GetFontName())
+                        fsd.Destroy()
+                })
+                fsd.SetTransientFor(window)
+                fsd.Run()
+        })
+        submenu.Append(menuitem)
+
+        cascademenu = gtk.NewMenuItemWithMnemonic("_Help")
+        menubar.Append(cascademenu)
+        submenu = gtk.NewMenu()
+        cascademenu.SetSubmenu(submenu)
+
+        menuitem = gtk.NewMenuItemWithMnemonic("_About")
+        menuitem.Connect("activate", func() {
+                dialog := gtk.NewAboutDialog()
+                dialog.SetName("Go-Gtk Demo!")
+                dialog.SetProgramName("demo")
+                dialog.SetAuthors(authors())
+                dir, _ := filepath.Split(os.Args[0])
+                imagefile := filepath.Join(dir, "../../data/mattn-logo.png")
+                pixbuf, _ := gdkpixbuf.NewPixbufFromFile(imagefile)
+                dialog.SetLogo(pixbuf)
+                dialog.SetLicense("The library is available under the same terms and conditions as the Go, the BSD style license, and the LGPL (Lesser GNU Public License). The idea is that if you can use Go (and Gtk) in a project, you should also be able to use go-gtk.")
+                dialog.SetWrapLicense(true)
+                dialog.Run()
+                dialog.Destroy()
+        })
+        submenu.Append(menuitem)
+
+        //--------------------------------------------------------
+        // GtkStatusbar
+        //--------------------------------------------------------
+        statusbar := gtk.NewStatusbar()
+        context_id := statusbar.GetContextId("go-gtk")
+        statusbar.Push(context_id, "GTK binding for Go!")
+
+        framebox2.PackStart(statusbar, false, false, 0)
+
+        //--------------------------------------------------------
+        // Event
+        //--------------------------------------------------------
+        window.Add(vbox)
+        window.SetSizeRequest(600, 600)
+        window.ShowAll()
+        gtk.Main()
+}
+</textarea>
+</pre>
+</p>
+
+<h2>5- JavaFX</h2>
+
+<p>Avec l'apparition de Java 8 en mars
+2014, <a href="https://docs.oracle.com/javase/8/javafx/api/toc.htm">JavaFX</a>
+devient la biblioth&egrave;que de cr&eacute;ation d'interface
+graphique officielle du langage Java, pour toutes sortes
+d'applications (applications mobiles, applications sur poste de
+travail, applications Web), le d&eacute;veloppement de son
+pr&eacute;d&eacute;cesseur <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/swing/">Swing</a>
+&eacute;tant abandonn&eacute; (sauf pour les corrections de
+bogues).</p>
+
+<p>De nombreux tutoriels existent,
+dont <a href="https://docs.oracle.com/javafx/2/">celui-ci</a> (en
+anglais). Cette page explique comment installer, utiliser... et
+concevoir une application JavaFX.</p>
+
+<hr>
+
+<p>
+Christophe C&eacute;rin<br>
+christophe.cerin@lipn.univ-paris13.fr<br>
+March 8, 2018
+</p>
+
+<p>
+</p>
+<hr>
+</body>
+</html>

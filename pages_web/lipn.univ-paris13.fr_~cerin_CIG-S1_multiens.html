@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multi Ensemble</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython_stdlib.js">
+	</script>
+	<!-- <link rel = "stylesheet" href = "style.css" -->
+	
+</head>
+<body onload = "brython()">
+  <style>
+    body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+  </style>
+	<script type="text/python">
+	from browser import document, alert, svg
+        from random import *
+	
+	class MultiEns:
+	        def __init__(self,l):
+	                r = Random()
+	                if l == []:
+	                     self.ens = [r.randint(0, 100) for i in range(5)]
+	                else:
+	                     self.ens = l
+		def ajout(self,x):
+	                if x != None:
+	                     self.ens = self.ens + [x]
+			return self.ens
+	        def app(self,x,l):
+			if(l == [] or x == None):
+				return False
+			elif (l[0] == x):
+				return True
+			else:
+				return MultiEns(self.ens).app(x,l[1:])
+		def sup(self,x,l):
+			if(l == [] or x == None):
+				return [];
+			else:
+				if(l[0] == x):
+					self.ens = l[1:]
+					return self.ens
+				else:
+					self.ens = [l[0]] + MultiEns(self.ens).sup(x,l[1:])
+					return self.ens
+		def supt(self,x,l):
+			if(l == [] or x == None):
+				return [];
+			else:
+				if(l[0] == x):
+					self.ens = MultiEns(self.ens).supt(x,l[1:])
+					return self.ens
+				else:
+					self.ens = [l[0]] + MultiEns(self.ens).supt(x,l[1:])
+					return self.ens
+		def card(self,l):
+			if(l == []):
+				return 0
+	                else:
+				return 1 + MultiEns(self.ens).card(l[1:])
+		def nb_occ(self,x,l):
+			if(l == [] or x == None):
+				return 0
+			else:
+				if(l[0] == x):
+					return 1 + MultiEns(self.ens).nb_occ(x,l[1:])
+				else:
+					return MultiEns(self.ens).nb_occ(x,l[1:])
+	l = MultiEns([])
+	def ajout(ev):
+	        x = document["zone"].value
+	        if x != "":
+		      l.ajout(int(document["zone"].value))
+	              alert("L'element " + document["zone"].value + " a ete ajoute")
+	        else:
+	              alert("Ajout impossible, veuillez saisir une valeur")
+	def affichage(ev):
+		alert("le multi ensemble est : " + str(l.ens))
+	def sup(ev):
+	        x = document["zone"].value
+	        if x !="":
+		        l.sup(int(document["zone"].value),l.ens)
+	                alert("L'element " + document["zone"].value + " a ete supprime")
+	        else:
+	                alert("Supression impossible, veuillez saisir une valeur")
+	def draw(ev):
+	        r=Random()
+	        panel = document['panel']
+	        document['panel'].clear()
+	        for i in l.ens:
+	            xx = r.randint(10,440)
+	            yy = r.randint(15,190) 
+	            titre = svg.text(str(i), x=xx, y=yy, font_size=22,text_anchor="middle")
+	            cercle = svg.circle(cx=xx, cy=yy+8, r=7,stroke="black",stroke_width="2",fill="red")
+	            panel <= cercle
+		    panel <= titre
+	def supt(ev):
+		x = document["zone"].value
+		if x !="":
+		    l.supt(int(document["zone"].value),l.ens)
+		    alert("Toutes les occurences de " + document["zone"].value + " ont ete supprime")
+		else:
+		    alert("Suppresion impossible, veuillez saisir une valeur")	     
+	def app(ev):
+		x = document["zone"].value
+		if x != "":	     
+		        if l.app(int(document["zone"].value),l.ens):
+			       alert("L'element " + document["zone"].value + " appartient au multi ensemble")
+		        else:
+			     alert("L'element " + document["zone"].value + " n'appartient pas au multi ensemble")
+		else:
+		        alert("Veuillez saisir une valeur")	     
+	
+	def nb_occ(ev):
+	        x = document["zone"].value
+		if x != "":
+		     alert("Le nombre d'occurences de " + document["zone"].value +  " est : " + str(l.nb_occ(int(document["zone"].value),l.ens)))
+		else:
+		     alert("Veuillez saisir une valeur")
+	def card(ev):
+	     alert("Le cardinal du multi ensemble est : " + str(l.card(l.ens)))
+
+	document["ajouter"].bind("click", ajout)
+	document["afficher"].bind("click", affichage)
+	document["sup"].bind("click", sup)
+	document["supt"].bind("click", supt)
+	document["app"].bind("click", app)
+	document["nb"].bind("click", nb_occ)
+	document["card"].bind("click", card)
+	document["draw"].bind("click", draw)
+	
+	</script>
+	<h1>Le type Multi-ensemble</h1>
+	<div class = "div1">
+		<p id = "label">Saisissez un nombre<p>
+	</div>
+	<div class = "div2">
+		<input id="zone">
+	</div>
+        <div>
+	<button id="ajouter">Ajouter</button>
+	<button id="sup">Supprimer une fois</button>
+	<button id="supt">Supprimer toutes les occurences</button>
+        </div>
+        <div>
+	<button id="app">Test d'appartenance</button>
+	<button id="nb">Le nombre d'occurences</button>
+	<button id="card">Cardinal</button>
+	</div>
+	<div>
+	<button id="afficher">Afficher le Multi Ensemble</button>
+	<button id="draw">DRAW en mode graphique</button>
+	</div>
+
+	<h4>Dessin du Multi-ensemble</h4>
+
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	     width="455" height="210" style="border-style:solid;border-width:1;border-color:#000;">
+	  <g id="panel">
+	  </g>
+	  </svg>
+	
+	<h4>Pr&eacute;par&eacute; par : Brahim Erraji</h4>
+	<h5><A HREF="mailto:brahim.erraji@um6p.ma">brahim.erraji@um6p.ma</a></h5>
+	
+	<!--
+	<input id="zone">
+	<button id="mybutton">click !</button>
+	-->
+</body>
+</html>
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>Collodi project -- Home page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+<script type="text/javascript">
+	function mouseOver()
+	{
+		document.swapimg.src = "img/me.icecream.jpg";
+	}
+	function mouseOut()
+	{
+		document.swapimg.src  = "img/me.jpg";
+	}
+</script>
+</head>
+
+<body>
+<div class="navbar">
+<h2>Collodi project</h2>
+<a class="home" href="http://www.lipn.univ-paris13.fr/~mazza/Collodi/">Home page</a>
+<ul>
+	<li><a class="button" href="?page=obj">Objectives</a></li>
+<li><a class="button" href="?page=part">Participants</a></li>
+</ul>
+<p>
+	<a href="http://www.digiteo.fr"><img style="border:0" src="img/digiteo.png" alt="Digiteo"></a><br>
+	<a href="http://www.iledefrance.fr"><img style="border:0" src="img/idf.gif" alt="IdF"></a>
+</p>
+<p>
+	<a href="http://www-lipn.univ-paris13.fr"><img style="border:0" src="img/logo-lipn.png" alt="LIPN"></a>
+	<a href="http://www.pps.jussieu.fr"><img style="border:0" src="img/logo-pps.png" alt="PPS"></a>
+</p>
+<!--p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/valid-html401.png" alt="Valid HTML 4.01!"></a>
+</p>
+<p>
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a>
+</p-->
+</div>
+<div>
+<table border="0" width="100%">
+<tr>
+<td>
+<h3>Collodi:<br>
+Complexit&eacute; &amp; concurrence &agrave; travers la ludique et la logique lin&eacute;aire diff&eacute;rentielle</h3>
+<font style="font-color: c0c0c0; font-size: large">(Complexity and concurrency through ludics and differential linear logic)</font>
+<!--p style="margin:1em;">
+<a style="font-size: large; font-color: c0c0c0;" href="?page=pdoc">!!! The results for the post-doctoral call are available !!!</a>
+</p-->
+<p>
+Collodi is a 12-month research project in theoretical computer science, starting in October 2009 and jointly developed at the <a href="http://www-lipn.univ-paris13.fr">Laboratoire d'Informatique de Paris Nord</a> (<a href="http://www.univ-paris13.fr">Universit&eacute; Paris 13</a>) and the laboratory <a href="http://www.pps.jussieu.fr">Preuves, Programmes et Syst&egrave;mes</a> (<a href="http://www.univ-paris-diderot.fr">Universit&eacute; Paris 7</a>).
+</p>
+<p>
+Financial support is provided by the <a href="http://www.iledefrance.fr">R&eacute;gion &Icirc;le-de-France</a>, via the <a href="http://www.digiteo.fr">Digiteo</a> consortium.
+</p>
+<p>
+<a href="?page=obj">The aim of Collodi</a> is to use ludics and differential linear logic, two theories belonging to the offspring of linear logic proof theory, to provide new foundations and richer, deeper structure to the theory of computational complexity and to concurrency theory.
+</p>
+<p>
+The project counts <a href="?page=part">10 permanent or Ph.D. student members and 3 post-doctoral fellows</a>, supported by the grants provided by Digiteo/&Icirc;le-de-France.
+</p>
+<p>
+For those who do not know, Collodi is also the pen name of <a href="http://en.wikipedia.org/wiki/Carlo_Collodi">Carlo Lorenzini</a>, the author of <i>The Adventures of Pinocchio</i>.
+</p>
+<p>
+For any further information, comment or request about the project and this web site, please contact<br>
+<img style="border:0;margin:10px" src="img/email.gif" alt="damiano DOT mazza AT lipn DOT univ DASH paris13 DOT fr">
+</p>
+</td>
+<td style="vertical-align: top">
+	<!--<img id="swapimg" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/me.jpg" alt="Me">-->
+	<img id="swapimg" src="img/pinocchio.jpg" alt="Pinocchio">
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>

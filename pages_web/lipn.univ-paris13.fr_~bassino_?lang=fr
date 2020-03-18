@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE> Page personnelle de Frédérique Bassino</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="LANG" content="fr">
+<META name="DESCRIPTION" content=" Page personnelle de Frédérique Bassino">
+</HEAD>
+
+<BODY>
+<P>
+<A style="z-index: 1; position:absolute;  left:5%;  top:20px; margin-left:10px;  width: 142px;  height: 37px;
+  background: url(/common/logoP13Petit.GIF) no-repeat top right;" href="http://www.univ-paris13.fr"></a>
+
+<A style="z-index: 1; position:absolute; right:5%;  top:20px; width: 70px; height: 70px;
+ background: url(/common/cnrs.png) no-repeat top right;" href="http://www.cnrs.fr"></a>
+<P>
+
+<H1 style="position:relative; text-align: center;">
+<a href="/?lang=fr">LIPN</a> : <a href="/CALIN/?lang=fr">CALIN</a></H1>
+<p><BR><p>
+<a style="position:absolute; right:20%;  top:45px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/uk.png) no-repeat top right;" href="./?lang=uk"></a>
+
+<a style="position:absolute; right:20%;  top:25px; margin-right:10px;  width: 20px;  height: 20px;
+  background: transparent url(/images/flags/fr.png) no-repeat top right" href="./?lang=fr"></a>
+
+
+<P>
+<H1 style="text-align:center"> Page personnelle de Frédérique Bassino</H1>
+<P><br>
+<div style="margin-left: auto;  margin-right: auto;   width: 670px; text-align: left;">
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><img src="fbassino.jpg"  width="220" alt="frederique.bassino"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Frédérique Bassino<br>
+Laboratoire d'Informatique de Paris-Nord<br>
+UMR CNRS 7030<br>
+Institut Galilée - Université Paris 13<br>
+99, avenue Jean-Baptiste Clément <br>
+93430 Villetaneuse <br>
+France<br><br>
+Bureau :   A 208<br>
+Tél :    +33 1 49 40 35 79<br>
+Courriel : frederique.bassino <i> at </i>lipn.univ-paris13.fr<br><br>
+</td>
+</tr>
+</table>
+</div>
+
+<P>
+<UL> 
+  <LI> Directrice du <a href="http://lipn.univ-paris13.fr/"> Laboratoire d'Informatique de Paris Nord (LIPN UMR CNRS 7030)</a>
+ <BR>
+<LI> Co-responsable du <B> <A HREF="http://aleanetwork.net/">GDRI Aleanetwork</A></B>.
+<BR>
+<BR>
+<BR>
+<LI> Co-responsable 
+du <B> <A HREF="http://igm.univ-mlv.fr/~josuatv/webalea/"> Groupe de
+travail ALEA </A> </B>du <A HREF="http://www.gdr-im.fr/"> GdR Informatique
+    Mathématique</A> (2012-2018)</B>.
+<BR>
+<LI>Responsable de l'équipe <B> <A HREF="/CALIN/">Combinatoire,
+      Algorithmique et Interactions - CALIN </A></B>
+      du <a href="http://lipn.univ-paris13.fr/">LIPN</a> (2010-2017).
+<BR>
+<LI>Responsable de l'axe 3 :<EM> Physique mathématique, Physique statistique, Combinatoire </EM>  du <B> <A HREF="http://mathstic.univ-paris13.fr/"> Fédération de recherche MathSTIC </A></B>
+      de l'Université Paris 13</a> (FR3734) (2013-2017).
+<BR>
+<LI> Présidente de la  <B> <A HREF="http://www.labri.fr/perso/gimbert/cn6/">
+Section 6 </A> </B>  (Sciences de l'information : fondements de l'informatique, calculs, algorithmes, représentations, exploitations)  du  <B> <A HREF="http://www.cnrs.fr/comitenational/accueil.html"> Comité National de la Recherche Scientifique - CoNRS</A> </B> (2012-2016).
+<BR>
+<LI> Membre du Bureau de la  <B> <A HREF="http://www.cnrs.fr/comitenational/cn/coordination.htm"> Conférence des Présidents du Comité National - CPCN</A> </B> (2012-2016).
+<BR>
+<Li> Responsable  de la <B> <A HREF="http://www.cnrs.fr/comitenational/struc_coord/c3n.htm">  Coordination des responsables des instances du CoNRS - C3N </A> </B> (2014-2016).
+
+<BR><BR><BR>
+<LI><a name="anr_magnum"></a>
+Responsable locale du <A HREF="http://www.lix.polytechnique.fr/~rossin/ANR/Magnum/www"><B>projet ANR  MAGNUM</B> : Méthodes Algorithmiques pour la Génération aléatoire Non Uniforme, 
+Modèles et applications.</A> (décembre 2010 - juin 2015)
+<BR>
+
+<LI><a name="anr_gamma"></a>
+Responsable du <A HREF="http://www-apr.lip6.fr/anrGamma/"><B>projet ANR  GAMMA</B> : Génération Aléatoire: Modèles, Méthodes et Algorithmes.</A>
+(novembre 2007- octobre 2010)
+<BR>
+<BR>
+<LI> Un  court <B> <A HREF="/~bassino/cv.pdf"> Curriculum Vitae </A></B> (octobre 2017).
+</UL> 
+
+
+<H2> <IMG SRC="TableOfContents.gif" alt=""> Domaines de recherche : Combinatoire et algorithmique</H2> 
+<P>
+Mots clés : Combinatoire énumérative et analytique -Analyse en moyenne d'algorithmes - Automates finis - Permutations à motifs exclus.
+</P>
+
+<P>
+Mes travaux de recherche se situent à la croisée entre combinatoire,
+algorithmique et informatique théorique.  Leur fil directeur est
+l'étude des propriétés quantitatives des structures combinatoires
+discrètes qui sont omniprésentes en informatique. Je m'intéresse en
+particulier aux mots, automates, langages et permutations.  Mon but
+est de parvenir à quantifier des propriétés
+"métriques", ou algébriques de ces structures, en m'appuyant sur des
+analyses combinatoires fines. Cette analyse est une étape-clé
+pour pouvoir ensuite simuler ces structures et analyser avec précision
+le comportement d'algorithmes les manipulant.
+</P>
+
+
+
+<H2> <IMG SRC="Alphabetical.gif" alt=""><a href="/~bassino/publications.html">Publications</a></H2>
+<P>
+
+<H2><IMG SRC="http://www-lipn.univ-paris13.fr/~bassino/h_travail-01.gif"  alt="">Doctorants</H2>
+<P>
+<UL>
+<LI> <a href="http://igm.univ-mlv.fr/~jdavid01/"> Julien David</a> (oct. 2007- sept. 2010) <EM> Génération aléatoire d'automates et analyse d'algorithmes de minimisation</EM>
+<LI>  <a href="http://www-lipn.univ-paris13.fr/~aitmous"> Omar Aît Mous</a> (oct. 2008 - juin 2012)<EM> Analyse d'algorithmes de recherche de motifs</EM>
+<LI>  <a href="https://lipn.univ-paris13.fr/~demourgues/"> Quentin de Mourgues </a> (oct. 2013 - dec. 2017) <EM>A combinatorial approach to Rauzy-type dynamics</EM>
+<LI>   <a href="https://lipn.univ-paris13.fr/~rakotoarimalala/"> Tsinjo Tony Rakotoarimalala </a>(oct. 2015 - juil. 2019)<EM> Complexité de la recherche de motifs dans un texte aléatoire</EM>
+<LI>  Nicolas Dub (dec. 2016 -)<EM> Classification et énumération des triangulations en dimension 3</EM>
+</UL>
+
+
+<H2> Séminaires et conférences</H2> 
+<P>
+<UL>
+<LI><a href="https://lipn.univ-paris13.fr/~banderier/Seminaires/"> Séminaires de Combinatoire </a> au LIPN
+<LI><a href="http://semflajolet.math.cnrs.fr/"> Séminaire de Combinatoire Philippe Flajolet </a> à l'IHP (organisatrice)
+</UL>
+<P>

@@ -1,0 +1,430 @@
+<html>
+	<head>
+		<!-- CHANGE TITLE AND META ACCORDINGLY -->
+		<title>Rado Rakotonarivo - Université Paris 13</title>
+		<meta name="theme-color" content="#ffffff">
+		<meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../css/code.css">
+	</head>
+	<body>
+
+		<div class="container" style="width: 100%">
+
+			<div class="wow fadeInUp content-card" style="margin-top: 10;">
+			  <span class="text-subtitle" style="font-size: 2em; font-weight: 300; color: #333">Correction sur les listes chaînées</span><br>
+			  Voici le code source de certaines des fonctions que l'on a vus pour les TD5, TD6 et TD7 sur les listes chaînées.
+			</div>
+
+
+			<!-- OTHER APPS BY YOU -->
+			<div class="wow fadeInUp content-card" style="margin-top: 10; font-family: 'monospace'">
+				<span class="text-description" style="font-size: 1.1em">liste.h</span><br>
+					<div class="code-source" style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #009999">#ifndef LISTE_H</span>
+<span style="color: #009999">#define LISTE_H</span>
+
+<span style="color: #006699; font-weight: bold">struct</span> maillon_s {
+  <span style="color: #007788; font-weight: bold">int</span> val;
+  <span style="color: #006699; font-weight: bold">struct</span> maillon_s<span style="color: #555555">*</span> suivant;
+};
+<span style="color: #006699; font-weight: bold">typedef</span> <span style="color: #006699; font-weight: bold">struct</span> maillon_s <span style="color: #007788; font-weight: bold">maillon_t</span>;
+
+<span style="color: #006699; font-weight: bold">struct</span> liste_s {
+  <span style="color: #007788; font-weight: bold">int</span> taille;
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> debut;
+};
+<span style="color: #006699; font-weight: bold">typedef</span> <span style="color: #006699; font-weight: bold">struct</span> liste_s <span style="color: #007788; font-weight: bold">liste_t</span>;
+
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_maillon</span>(<span style="color: #007788; font-weight: bold">int</span> val);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">maillon_detruire</span>(<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m);
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">initialiser_liste</span>();
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_liste_circulaire</span>(<span style="color: #007788; font-weight: bold">int</span> n);
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_aleatoire</span>(<span style="color: #007788; font-weight: bold">int</span> n);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_liste</span>(<span style="color: #007788; font-weight: bold">liste_t</span> l);
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">election</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">int</span> m);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">ajouter_debut</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m);
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">extraire_debut</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">inserer_dans_trie</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m);
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">tri_liste</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l);
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">liste_detruire</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l);
+
+<span style="color: #009999">#endif</span>
+</pre></td></tr></table></div>
+      </div>
+
+			<div class="wow fadeInUp content-card" style="margin-top: 10;">
+				<span class="text-description" style="font-size: 1.1em">liste.c</span></br>
+				<!-- LISTE.C -->
+
+<!-- HTML generated using hilite.me --><div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #009999">#include&lt;stdio.h&gt;</span>
+<span style="color: #009999">#include&lt;stdlib.h&gt;</span>
+<span style="color: #009999">#include&lt;time.h&gt;</span>
+
+<span style="color: #009999">#include&quot;liste.h&quot;</span>
+
+
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">initialiser_liste</span>() {
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l <span style="color: #555555">=</span> malloc(<span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">liste_t</span>));
+  l<span style="color: #555555">-&gt;</span>debut <span style="color: #555555">=</span> <span style="color: #336666">NULL</span>;
+  l<span style="color: #555555">-&gt;</span>taille <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>;
+  <span style="color: #006699; font-weight: bold">return</span> l;
+}
+
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_maillon</span>(<span style="color: #007788; font-weight: bold">int</span> val) {
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> res <span style="color: #555555">=</span> malloc(<span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">maillon_t</span>));
+  res<span style="color: #555555">-&gt;</span>val <span style="color: #555555">=</span> val;
+  res<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> <span style="color: #336666">NULL</span>;
+  <span style="color: #006699; font-weight: bold">return</span> res;
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">maillon_detruire</span>(<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m) {
+  free(m);
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">liste_detruire</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l){
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> l<span style="color: #555555">-&gt;</span>taille; i<span style="color: #555555">++</span>) {
+    maillon_detruire(extraire_debut(l));
+  }
+  free(l);
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">affiche_liste</span>(<span style="color: #007788; font-weight: bold">liste_t</span> l) {
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m <span style="color: #555555">=</span> l.debut;
+  <span style="color: #006699; font-weight: bold">while</span>(m <span style="color: #555555">!=</span> <span style="color: #336666">NULL</span>){
+    printf(<span style="color: #CC3300">&quot;%d &quot;</span>,m<span style="color: #555555">-&gt;</span>val);
+    m <span style="color: #555555">=</span> m<span style="color: #555555">-&gt;</span>suivant;
+  }
+  printf(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+}
+
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">ajouter_debut</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m) {
+  m<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> l<span style="color: #555555">-&gt;</span>debut;
+  l<span style="color: #555555">-&gt;</span>debut <span style="color: #555555">=</span> m;
+  l<span style="color: #555555">-&gt;</span>taille<span style="color: #555555">++</span>;
+}
+
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">extraire_debut</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l) {
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m <span style="color: #555555">=</span> l<span style="color: #555555">-&gt;</span>debut;
+  <span style="color: #006699; font-weight: bold">if</span> (m <span style="color: #555555">!=</span> <span style="color: #336666">NULL</span>){
+    l<span style="color: #555555">-&gt;</span>debut <span style="color: #555555">=</span> m<span style="color: #555555">-&gt;</span>suivant;
+    m<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> <span style="color: #336666">NULL</span>;
+    l<span style="color: #555555">-&gt;</span>taille<span style="color: #555555">--</span>;
+  }
+  <span style="color: #006699; font-weight: bold">return</span> m;
+}
+
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_liste_circulaire</span>(<span style="color: #007788; font-weight: bold">int</span> n) {
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l <span style="color: #555555">=</span> malloc(<span style="color: #006699; font-weight: bold">sizeof</span>(<span style="color: #007788; font-weight: bold">liste_t</span>));
+  <span style="color: #0099FF; font-style: italic">//on cree le premier maillon</span>
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> m <span style="color: #555555">=</span> creer_maillon(<span style="color: #FF6600">1</span>);
+  l<span style="color: #555555">-&gt;</span>debut <span style="color: #555555">=</span> m;
+  l<span style="color: #555555">-&gt;</span>taille <span style="color: #555555">=</span> n;
+
+  m<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> m;
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> temp <span style="color: #555555">=</span> m;
+
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>; i <span style="color: #555555">&lt;=</span> n; i<span style="color: #555555">++</span>) {
+    temp <span style="color: #555555">=</span> (temp<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> creer_maillon(i));
+    temp<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> m;
+  }
+  <span style="color: #006699; font-weight: bold">return</span> l;
+}
+
+<span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">election</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">int</span> m) {
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> cur <span style="color: #555555">=</span> l<span style="color: #555555">-&gt;</span>debut;
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> temp;
+  printf(<span style="color: #CC3300">&quot;Valeurs détruite: &quot;</span>);
+  <span style="color: #006699; font-weight: bold">while</span> (cur <span style="color: #555555">!=</span> cur<span style="color: #555555">-&gt;</span>suivant){
+    <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>; i <span style="color: #555555">&lt;</span> m; i<span style="color: #555555">++</span>)
+      cur <span style="color: #555555">=</span> cur <span style="color: #555555">-&gt;</span>suivant;
+    temp <span style="color: #555555">=</span> cur<span style="color: #555555">-&gt;</span>suivant;
+    cur<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> cur<span style="color: #555555">-&gt;</span>suivant<span style="color: #555555">-&gt;</span>suivant;
+    printf(<span style="color: #CC3300">&quot;%d &quot;</span>, temp<span style="color: #555555">-&gt;</span>val);
+    maillon_detruire(temp);
+  }
+  printf(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+  <span style="color: #006699; font-weight: bold">return</span> cur;
+}
+
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">creer_aleatoire</span>(<span style="color: #007788; font-weight: bold">int</span> n) {
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l <span style="color: #555555">=</span> initialiser_liste();
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> temp;
+  srand(time(<span style="color: #336666">NULL</span>));
+  <span style="color: #006699; font-weight: bold">for</span> (<span style="color: #007788; font-weight: bold">size_t</span> i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>; i <span style="color: #555555">&lt;</span> n; i<span style="color: #555555">++</span>) {
+    temp <span style="color: #555555">=</span> creer_maillon(rand()<span style="color: #555555">%</span><span style="color: #FF6600">100</span>);
+    ajouter_debut(l,temp);
+  }
+  <span style="color: #006699; font-weight: bold">return</span> l;
+}
+
+<span style="color: #0099FF; font-style: italic">// Cette fonction prend une liste déjà triée et insère un maillon à sa bonne place</span>
+<span style="color: #007788; font-weight: bold">void</span> <span style="color: #CC00FF">inserer_dans_trie</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l, <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> nouveau) {
+  <span style="color: #0099FF; font-style: italic">// On créer deux curseur prec et cur (l&#39;idée est que prec-&gt;suiv = cur)</span>
+  <span style="color: #0099FF; font-style: italic">// Et on cherchera à insérer le nouveau maillon à la bonne place dans une liste déjà triée</span>
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> prec;
+  <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> cur;
+  cur <span style="color: #555555">=</span> l<span style="color: #555555">-&gt;</span>debut;
+  <span style="color: #0099FF; font-style: italic">//si on a une liste vide ou que la valeur du nouveau maillon est plus petite que celui du debut de la liste</span>
+  <span style="color: #006699; font-weight: bold">if</span> (cur <span style="color: #555555">==</span> <span style="color: #336666">NULL</span> <span style="color: #555555">||</span> cur<span style="color: #555555">-&gt;</span>val <span style="color: #555555">&gt;=</span> nouveau<span style="color: #555555">-&gt;</span>val) {
+    ajouter_debut(l,nouveau);
+  }
+  <span style="color: #0099FF; font-style: italic">// sinon</span>
+  <span style="color: #006699; font-weight: bold">else</span> {
+    <span style="color: #0099FF; font-style: italic">// tant qu&#39;on n&#39;atteint pas la fin de la liste et que la valeur du curseur est plus petite que celle du nouveau maillon, on va déplacer le curseur</span>
+    <span style="color: #006699; font-weight: bold">while</span> (cur <span style="color: #555555">!=</span> <span style="color: #336666">NULL</span> <span style="color: #555555">&amp;&amp;</span> cur<span style="color: #555555">-&gt;</span>val <span style="color: #555555">&lt;</span> nouveau<span style="color: #555555">-&gt;</span>val) {
+      prec <span style="color: #555555">=</span> cur;
+      cur <span style="color: #555555">=</span> cur<span style="color: #555555">-&gt;</span>suivant;
+    }
+    nouveau<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> cur;
+    prec<span style="color: #555555">-&gt;</span>suivant <span style="color: #555555">=</span> nouveau;
+    l<span style="color: #555555">-&gt;</span>taille<span style="color: #555555">++</span>;
+  }
+}
+
+<span style="color: #0099FF; font-style: italic">// Cette fonction prend une liste quelconque et renvoie une nouvelle liste avec les mêmes valeurs mais cette fois-ci triée</span>
+<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> <span style="color: #CC00FF">tri_liste</span>(<span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l) {
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> tri <span style="color: #555555">=</span> initialiser_liste();
+  <span style="color: #0099FF; font-style: italic">// tant que la liste l n&#39;est pas vide, on insère dans res le maillon &quot;début&quot; de la liste l avec la fonction inserer_dans_trie</span>
+  <span style="color: #006699; font-weight: bold">while</span> (l<span style="color: #555555">-&gt;</span>debut <span style="color: #555555">!=</span> <span style="color: #336666">NULL</span>) {
+    <span style="color: #007788; font-weight: bold">maillon_t</span><span style="color: #555555">*</span> nouveau <span style="color: #555555">=</span> extraire_debut(l);
+    inserer_dans_trie(tri,nouveau);
+  }
+  <span style="color: #006699; font-weight: bold">return</span> tri;
+}
+</pre></td></tr></table></div>
+
+</div>
+<div class="wow fadeInUp content-card" style="margin-top: 10;">
+	<span class="text-description" style="font-size: 1.1em">main_tri.c</span></br>
+
+<!-- MAIN_TRI.C-->
+
+<!-- HTML generated using hilite.me -->
+<div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #009999">#include&lt;stdio.h&gt;</span>
+<span style="color: #009999">#include&lt;stdlib.h&gt;</span>
+
+<span style="color: #009999">#include&quot;liste.h&quot;</span>
+
+
+<span style="color: #007788; font-weight: bold">int</span> <span style="color: #CC00FF">main</span>(<span style="color: #007788; font-weight: bold">int</span> argc, <span style="color: #007788; font-weight: bold">char</span> <span style="color: #006699; font-weight: bold">const</span> <span style="color: #555555">*</span>argv[]) {
+<span style="color: #006699; font-weight: bold">if</span> (argc <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2</span>) printf(<span style="color: #CC3300">&quot;Trop peu d&#39;argument</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+<span style="color: #006699; font-weight: bold">else</span> {
+  <span style="color: #007788; font-weight: bold">int</span> n <span style="color: #555555">=</span> atoi(argv[<span style="color: #FF6600">1</span>]);
+
+  printf(<span style="color: #CC3300">&quot;Une liste aleatoire de taille %d:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>,n);
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> l <span style="color: #555555">=</span> creer_aleatoire(n);
+  affiche_liste(<span style="color: #555555">*</span>l);
+
+  printf(<span style="color: #CC3300">&quot;Une nouvelle liste avec les memes valeurs triees:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>);
+  <span style="color: #007788; font-weight: bold">liste_t</span><span style="color: #555555">*</span> tri <span style="color: #555555">=</span> tri_liste(l);
+  affiche_liste(<span style="color: #555555">*</span>tri);
+
+  liste_detruire(l);
+  liste_detruire(tri);
+}
+<span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">0</span>;
+}
+</pre></td></tr></table></div>
+</div>
+
+<div class="wow fadeInUp content-card" style="margin-top: 10;">
+	<span class="text-description" style="font-size: 1.1em">Exemple d'exécution:</span></br>
+	<!-- HTML generated using hilite.me --><div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">prompt$ .<span style="color: #555555">/</span>run <span style="color: #FF6600">10</span>
+Une liste aleatoire de taille <span style="color: #FF6600">10</span><span style="color: #555555">:</span>
+<span style="color: #FF6600">33</span> <span style="color: #FF6600">22</span> <span style="color: #FF6600">62</span> <span style="color: #FF6600">40</span> <span style="color: #FF6600">74</span> <span style="color: #FF6600">14</span> <span style="color: #FF6600">87</span> <span style="color: #FF6600">47</span> <span style="color: #FF6600">25</span> <span style="color: #FF6600">46</span>
+Une nouvelle liste avec les memes valeurs triees<span style="color: #555555">:</span>
+<span style="color: #FF6600">14</span> <span style="color: #FF6600">22</span> <span style="color: #FF6600">25</span> <span style="color: #FF6600">33</span> <span style="color: #FF6600">40</span> <span style="color: #FF6600">46</span> <span style="color: #FF6600">47</span> <span style="color: #FF6600">62</span> <span style="color: #FF6600">74</span> <span style="color: #FF6600">87</span>
+</pre></div>
+
+</div>
+		<!-- SPACE BELOW DETAILS -->
+		<div class="empty-space">
+		</div>
+
+	</body>
+</html>

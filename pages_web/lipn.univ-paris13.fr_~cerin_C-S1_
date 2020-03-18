@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /~cerin/C-S1</title>
+ </head>
+ <body>
+<h1>Index of /~cerin/C-S1</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/~cerin/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BinarySearch.cpp">BinarySearch.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">800 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Cor.c">Cor.c</a></td><td align="right">2018-01-09 09:25  </td><td align="right">2.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Ex4.c">Ex4.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Exercice11.cpp">Exercice11.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Exercice11V2.cpp">Exercice11V2.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="OperateurBitBit.cpp">OperateurBitBit.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">888 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="OperateurTilde.cpp">OperateurTilde.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">877 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="README">README</a></td><td align="right">2017-12-15 16:54  </td><td align="right">385 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="SPIM/">SPIM/</a></td><td align="right">2018-12-03 13:47  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="TriBulle.cpp">TriBulle.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="a.out">a.out</a></td><td align="right">2017-12-15 16:54  </td><td align="right">9.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ascii.c">ascii.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">5.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="chaine.c">chaine.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">732 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="cube.c">cube.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo1.c">exo1.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">222 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo2.c">exo2.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">225 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo3.c">exo3.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">234 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo4.c">exo4.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">335 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo5.c">exo5.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">266 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="exo15_tp1.c">exo15_tp1.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">893 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fichiers_binaire.c">fichiers_binaire.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">2.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="flush.c">flush.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">341 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="lancer">lancer</a></td><td align="right">2017-12-15 16:54  </td><td align="right"> 25K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="malloc.c">malloc.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">806 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="monnaie.cpp">monnaie.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="motif.cpp">motif.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="notes.cpp">notes.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="polynome.c">polynome.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="polynome.cpp">polynome.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">3.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="random.cpp">random.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="repertoire1.c">repertoire1.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">701 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="repertoire2.c">repertoire2.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="sizeof.cpp">sizeof.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="spline.c">spline.c</a></td><td align="right">2018-01-23 08:04  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="test.c">test.c</a></td><td align="right">2017-12-15 16:54  </td><td align="right">642 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tokenizer.cpp">tokenizer.cpp</a></td><td align="right">2017-12-15 16:54  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

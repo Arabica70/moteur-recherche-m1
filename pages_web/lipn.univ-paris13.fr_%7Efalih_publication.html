@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Issam Falih</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="shortcut icon" href="../favicon.ico">
+
+        <!--CSS styles-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">  
+        <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
+        <link rel="stylesheet" href="academicons-1.8.6/css/academicons.css">
+        <link rel="stylesheet" href="academicons-1.8.6/css/academicons.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link id="theme-style" rel="stylesheet" href="css/styles/default.css">
+
+        
+        <!--/CSS styles-->
+        <!--Javascript files-->
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+        
+        <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
+        <script type="text/javascript" src="js/jquery.dropdownit.js"></script>
+
+        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+        <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+        <script type="text/javascript" src="js/masonry.min.js"></script>
+
+        <script type="text/javascript" src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
+
+        <script type="text/javascript" src="js/magnific-popup.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+
+        <script type="text/javascript" src="academicons-1.8.6/bower.json"></script>
+
+        <!--/Javascript files-->
+
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+
+            <div id="sidebar">
+                <div id="main-nav">
+                    <div id="nav-container">
+                        <div id="profile" class="clearfix">
+                            <div class="portrate hidden-xs"><img alt="image" src="img/personal/Photo.jpg" class="img-responsive"></div>
+                            <div class="title">
+                                <h2>Issam Falih</h2>
+                                <h3>Ph.D. </h3>
+                            </div>
+                            
+                        </div>
+                            <ul id="navigation">
+                            <li>
+                              <a href="index.html">
+                                <div class="icon icon-user"></div>
+                                <div class="text">About Me</div>
+                              </a>
+                            </li>  
+                            
+                            
+                            <li>
+                              <a href="education.html">
+                                <div class="icon icon-book"></div>
+                                <div class="text">Education</div>
+                              </a>
+                            </li>
+                            
+                            <li>
+                              <a href="teaching.html">
+                                <div class="icon icon-time"></div>
+                                <div class="text">Teaching</div>
+                              </a>
+                            </li>
+
+                            <li class="currentmenu">
+                              <a href="publication.html">
+                                <div class="icon icon-leaf"></div>
+                                <div class="text">Publications</div>
+                              </a>
+                            </li> 
+                            
+                            <li>
+                              <a href="software.html">
+                                <div class="icon icon-code"></div>
+                                <div class="text">Software</div>
+                              </a>
+                            </li> 
+
+                            <li>
+				 <a href="datasets.html">
+                                <div class="icon icon-search"></div>
+                                <div class="text">Data</div>
+                              </a>
+                            </li> 
+
+                            <li>
+                              <a href="contact.html">
+                                  <div class="icon icon-calendar"></div>
+                                  <div class="text">Contact & Meet Me</div>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href=#>
+                                  <div class="icon icon-download-alt"></div>
+                                  <div class="text">CVitae</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+                
+                <div class="social-icons">
+                    <ul>
+			<li><a href="https://www.linkedin.com/in/issamfalih/"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="https://www.researchgate.net/profile/Issam_Falih"><i class="ai ai-researchgate"></i></a></li>
+                        <li><a href="https://dblp.uni-trier.de/pers/hd/f/Falih:Issam"><i class="ai ai-dblp"></i></a></li>
+                    </ul>
+                </div>    
+            </div>
+
+            <div id="main">
+            
+                <div id="publications" class="page">
+                    <div class="page-container">
+                        <div class="pageheader">
+                            <div class="headercontent">
+                                <div class="section-container">
+                                    
+                                    <h2 class="title">Publications</h2>
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagecontents">                            
+                            <div class="section color-1" id="filters">
+                                <div class="section-container">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-3">
+                                            <h3>Filter by type:</h3>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+                                                <option class="filter" value="all" selected>All types</option>
+                                             <!--   <option class="filter" value="jpaper">Jounal Papers</option>-->
+                                                <option class="filter" value="cpaper">Conference Papers</option>
+                                                <option class="filter" value="workshop">Workshop</option>
+                                              <!--  <option class="filter" value="bookchapter">Book Chapters</option>-->
+                                             <!--   <option class="filter" value="book">Books</option>-->
+                                                <!-- <option class="filter" value="report">Reports</option>
+                                                <option class="filter" value="tpaper">Technical Papers</option> -->
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-md-3" id="sort">
+                                            <span>Sort by year:</span>
+                                            <div class="btn-group pull-right"> 
+                                                <button type="button" data-sort="data-year" data-order="desc" class="sort btn btn-default"><i class="icon-sort-by-order"></i></button>
+                                                <button type="button" data-sort="data-year" data-order="asc" class="sort btn btn-default"><i class="icon-sort-by-order-alt"></i></button>
+                                            </div>
+                                        </div> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section color-2" id="pub-grid">
+                                <div class="section-container">                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="pitems">
+
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+
+
+<!----      2018 WCCI IJCNN           ----------------------------------------------------------------------------------------------------------    -->
+<div class="item mix cpaper" data-year="2018">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="http://www.ecomp.poli.br/~wcci2018/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Collaborative Multi-View Attributed Networks Mining</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati, Younès Bennani and Basarab Matei</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span> IEEE World Congress on Computational Intelligence, IEEE International Joint Conference on Neural Network, July 8-13, 2018, Rio de Janeiro, Brazil.</div>                                                        
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Graph clustering techniques are very useful for detecting densely connected groups in large graphs. Many
+existing graph clustering methods mainly focus on the topological structure, but ignore the vertex properties. Existing
+graph clustering methods have been recently extended to deal with nodes attribute. In this paper we propose a new method
+which uses the nodes attributes information along with the topological structure of the network in the clustering process.
+In order to use the information about the attributes nodes, the collaborative clustering can be employed in the model. The aim
+of collaborative clustering is to reveal the common underlying  structure of data spread across multiple sites by applying
+different clustering algorithms and therefore improve the final clustering result. The purpose of this article is to introduce
+a new attributed collaborative multi-view networks based on community detection in networks and topological collaborative
+learning. The idea consists in modifying databases by adding virtual points which convey clustering information, to change
+the position of centers of the clustering solution. Experimental results demonstrate the effectiveness of the proposed method
+through comparisons with the state-of-the-</p>
+    </div> 
+</div>
+
+
+
+<!----      2018 INNS BDDL           ----------------------------------------------------------------------------------------------------------    -->
+<div class="item mix cpaper" data-year="2018">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="http://innsbigdata2018.org/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Topological Multi-View Clustering for Collaborative Filtering </h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati and Younès Bennani</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span> The 3rd INNS Conference on Big Data and Deep Learning, April 17-19, 2018, Sanur, Bali, Indonesia.</div>                                                        
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Collaborative filtering is a well-known technique for  recommender systems. Collaborative filtering  models use the available preferences of a group of users to make recommendations or predictions of the unknown preferences for other users.   
+Collaborative filtering suffers from the data sparsity problem when users only rate a small set of items which makes the computation of users similarity imprecise and reduce consequently the accuracy of the recommended items.
+Clustering techniques include multiplex network clustering can be used to deal with this problem.
+In this paper, we propose a collaborative filtering system based on clustering  multiplex network that predict the rate value that a user would give to an item. This approach looks, in a first step, for users having the same behavior or sharing the same characteristics. Then, use the ratings from those similar users found in the first step to predict other ratings. The proposed approach has been validated on MovieLens dataset and the obtained results have shown very promising performances.</p>
+    </div> 
+</div>
+
+
+
+<!----      2018 MatNet WWW           ----------------------------------------------------------------------------------------------------------    -->
+<div class="item mix workshop" data-year="2018">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="https://www2018.thewebconf.org/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Community Detection in Attributed Network</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati, Younès Bennani</div>
+        <div class="pubcite"><span class="label label-primary">Workshop</span> International Workshop on Attributed Network Mining, WWW'2018, April 23-27, 2018, Lyon, France.</div>                                                        
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Graph clustering techniques are very useful for detecting densely connected groups in large graphs. Many existing graph clustering
+methods mainly focus on the topological structure, but ignore the vertex properties. Existing graph clustering methods have been
+recently extended to deal with nodes attribute. First we motivate the interest in the study of this issue. Then we review the main
+approaches proposed to deal with this problem. We propose a comparative study of some existing attributed network community detection algorithm on both synthetic data and on real world data.</p>
+    </div> 
+</div>
+
+<!----      2017 Complex Network            ----------------------------------------------------------------------------------------------------------    -->
+<div class="item mix cpaper" data-year="2018">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+          <!--  <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>-->
+            <a href="http://past.complexnetworks.org/index2017.html" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">ANCA: Attributed Network Clustering Algorithm</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati, Younès Bennani</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span> 6th International Conference on Complex Networks and Their Applications, November 29 - December 01, 2017, Lyon, France.</div>                                                        
+    </div>
+  <!--  <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Graph clustering techniques are very useful for detecting densely connected groups in large graphs. Many existing graph clustering methods mainly focus
+on the topological structure, but ignore the vertex properties. Existing graph clustering methods have been recently extended to deal with nodes attribute. In this
+paper we propose a new method which uses the nodes attributes information along with the topological structure of the network in the clustering process. Experimental
+results demonstrate the effectiveness of the proposed method through comparisons with the state-of-the-art graph clustering methods.</p>
+    </div> -->
+</div>
+
+
+<!----    2017 ISI             ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2017">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+        <!--    <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="http://payment.isi2017.org/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Multiplex Network Clustering based Collaborative Filtering</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati, Younès Bennani</div>
+        <div class="pubcite"><span class="label label-primary">Poster</span> 61st International Statistical Institute World Statistics Congress, July 16-21, 2017, Marrakech, Kingdom of Morocco</div>                                                        
+    </div>
+    <!-- <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Dans cet article, nous proposons une approche de recommandation qui consiste à prédire la note qui sera donnée par un utilisateur à un produit. La
+détection de communautés dans les réseaux multiplexes est une étape primordiale dans cette approche. Celle-ci a été validée sur le jeu de données MovieLens et le résultat obtenu montre que l'utilisation de la détection de communautés pour la recommandation est une piste encourageante.</p>
+    </div> -->
+</div>
+
+<!----     2015 ASONAM            ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix cpaper" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="http://asonam.cpsc.ucalgary.ca/2015/AcceptedExhibitsAndDemos.phphttp://asonam.cpsc.ucalgary.ca/2015/AcceptedExhibitsAndDemos.php" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>
+        </div>
+        <h4 class="pubtitle">MUNA: A Multiplex Network Analysis Library</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM), August 25-28, 2015, Paris, France  </div>
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Multiplex network model has been recently proposed as a mean to capture high level complexity in real world interaction networks. This model, in spite of its simplicity, allows handling multi-relationnal, heterogeneous, dynamic and even attributed networks. However, it requiers redefining and adapting almost all basic metrics and algorithms generally used to analyse complex networks. In this work we present MUNA: a MUltiplex Network Analysis library that we have developed in both R and Python on top of igraph network analysis package. In its current version, MUN A provides primitives to build, edit and modify multiplex networks. It also provides a bunch of functions that allow to provide basic metrics about multiplex networks. However, the most interesting functionality provided by MUNA is probably the wide variety of available community detection algorithms. Actually, the library implements different approaches for community detection including: partition aggregation approaches, layer aggregation approaches and direct multiplex approaches such as the GenLouvain and MuxLicod algorithms. It also offer an extended list of multiplex community evaluation indexes.</p>
+    </div>
+</div>
+
+<!----    2015 ICONIP          ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix cpaper" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="www.iconip2015.org" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>
+        </div>
+        <h4 class="pubtitle">A Recommendation System based on Unsupervised Topological Learning</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Nistor Grozavu, Rushed Kanawati, Younès Bennani</div>
+        <div class="pubcite"><span class="label label-warning">Conference Papers</span> International Conference on Neural Information Processing (ICONIP), November 9-12, 2015, Istanbul, Turkey</div>
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Recommendation systems provide the facility to understand a person's taste and find new, desirable content for them based on aggregation between their likes and rating of different items. In this paper, we propose a recommendation system that predict the note given by a user to an item. This recommendation system is mainly based on unsupervised topological learning. The proposed approach has been validated on MovieLens dataset and the obtained results have show very promising performances.</p>
+    </div>
+</div>
+
+<!----     2016 AAFD SFC             ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix cpaper" data-year="2016">
+    <div class="pubmain">
+        <div class="pubassets">
+        <!--    <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="https://aafd-sfc-2016.sciencesconf.org/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>
+        </div>
+        <h4 class="pubtitle">Clustering dans les graphes attribués</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Rushed Kanawati, Nistor Grozavu and Younès Bennani</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span> Conférence Conjointe Francophone sur la Science des Données, May 22-26, 2016, Marrakech, Kingdom of Morocco</div>
+    </div>
+  <!--  <div class="pubdetails">
+        <h4>Abstract</h4>
+    </div> -->
+</div>
+ 
+
+<!----    2016 MARAMI           ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2016">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+         <!--   <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="https://lipn.univ-paris13.fr/~kanawati/marami2016/MARAMI16/Accueil.html" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Analyse des réseaux d'interaction entre entreprises cotées en bourses</h4>
+        <div class="pubauthor">Soumya Sellami, <strong>Issam Falih </strong> Tristan Auvray and Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-primary">Workshop</span> Modèles et Analyses Réseau : Approches Mathématiques et Informatiques - Journée thématique : Fouille de grands graphes (MARAMI-JFGG),  October 12-14, 2016, Cergy, France</div>                                                        
+    </div>
+   <!-- <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Dans cet article, nous proposons une approche de recommandation qui consiste à prédire la note qui sera donnée par un utilisateur à un produit. La
+détection de communautés dans les réseaux multiplexes est une étape primordiale dans cette approche. Celle-ci a été validée sur le jeu de données MovieLens et le résultat obtenu montre que l'utilisation de la détection de communautés pour la recommandation est une piste encourageante.</p>
+    </div>-->
+</div>
+
+
+<!----    2015 MARAMI           ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+          <!--  <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="https://www.pantheonsorbonne.fr/fileadmin/CRI/rescom/Re%cc%81sume%cc%81s-ResCom.pdf" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">MuxLicod : Une approche de détection de communautés dans les réseaux multiplexes</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Manel Hmimida and Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-primary">Workshop</span> Journées non-thématiques ResCom,  January 15-16, 2015, Paris, France</div>                                                        
+    </div>
+   <!-- <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Dans cet article, nous proposons une approche de recommandation qui consiste à prédire la note qui sera donnée par un utilisateur à un produit. La
+détection de communautés dans les réseaux multiplexes est une étape primordiale dans cette approche. Celle-ci a été validée sur le jeu de données MovieLens et le résultat obtenu montre que l'utilisation de la détection de communautés pour la recommandation est une piste encourageante.</p>
+    </div>-->
+</div>
+
+<!----    2015 MARAMI           ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+         <!--   <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="http://marami.mines-ales.fr/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+        <h4 class="pubtitle">Détection de communautés dans les réseaux multiplexes : Application au calcul de recommandation</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong></div>
+        <div class="pubcite"><span class="label label-primary">Workshop</span> Modèles et Analyses Réseau : Approches Mathématiques et Informatiques - Journée thématique : Fouille de grands graphes (MARAMI-JFGG),  October 14-16, 2015, Nîmes, France</div>                                                        
+    </div>
+   <!-- <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Dans cet article, nous proposons une approche de recommandation qui consiste à prédire la note qui sera donnée par un utilisateur à un produit. La
+détection de communautés dans les réseaux multiplexes est une étape primordiale dans cette approche. Celle-ci a été validée sur le jeu de données MovieLens et le résultat obtenu montre que l'utilisation de la détection de communautés pour la recommandation est une piste encourageante.</p>
+    </div>-->
+</div>
+
+
+
+<!----     2015 SFC            ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix cpaper" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">
+         <!--   <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="https://sfc2015.sciencesconf.org/" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>
+        </div>
+        <h4 class="pubtitle">Approches de clustering pour la recommandation</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>, Rushed Kanawati, Nistor Grozavu and Younès Bennani</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span>Société Française de Classification (SFC), November 9-11, 2015, Nantes, France</div>
+    </div>
+  <!--  <div class="pubdetails">
+        <h4>Abstract</h4>
+    </div> -->
+</div>
+ 
+
+
+<!----    2015 EGC             ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix cpaper" data-year="2015">
+    <div class="pubmain">
+        <div class="pubassets">                                                            
+            <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a>
+            <a href="http://editions-rnti.fr/?autid=1201493" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                            
+        </div>
+
+        <h4 class="pubtitle">Une approche centrée graine pour la détection de communautés dans les réseaux multiplexes</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>,  Manel Hmimida, Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-warning">Conference Paper</span>Extraction et la Gestion des Connaissances (EGC), January 27-30, 2015, Luxembourg, Pages 377-382</div>                                                        
+    </div>
+    <div class="pubdetails">
+        <h4>Abstract</h4>
+        <p>Nous nous intéressons dans ce travail au problème de détection de communautés dans les réseaux multiplexes. Le modèle de réseau multiplexe a été récemment introduit afin de faciliter la modélisation des réseaux multirelationnels, des réseaux dynamiques et/ou des réseaux attribués. Les approches existantes pour la détection de communautés dans ce genre de graphes sont, pour la plupart, basées sur des schémas d’agrégation de couches ou d’agrégation de partitions. Nous proposons ici une nouvelle approche centrée graine qui permet de prendre en compte directement la nature multi-couche d’un réseau multiplexe. Des expérimentations effectuées sur différents réseaux multiplexes montrent que notre approche surpasse les approches de l’état de l’art en termes de qualité des communautés identifiées.</p>
+    </div>
+</div>                                                          
+                                                
+
+
+<!----    2014 ECCS             ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2014">
+    <div class="pubmain">
+        <div class="pubassets">
+         <!--   <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+	    <a href="http://www.complex-systems.meduniwien.ac.at/events/multiplex2014/Multiplex_2014.html" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+            <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                          
+        </div>
+        <h4 class="pubtitle"> Community detection in multiplex network: A comparative study</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>,  Manel Hmimida, Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-primary"> Workshop</span> European conference on complex systems (ECCS'14), September 22-26, 2014, Lucca, Italy</strong> </div>                                                         
+    </div>
+</div>
+
+
+<!----    2014 MARAMI              ----------------------------------------------------------------------------------------------------------    -->
+
+<div class="item mix workshop" data-year="2014">
+    <div class="pubmain">
+        <div class="pubassets">
+        <!--    <a href="#" class="pubcollapse">
+                <i class="icon-expand-alt"></i>
+            </a> -->
+            <a href="http://lipn.univ-paris13.fr/jfgg14/JFGG14/Papiers_acceptes.html" class="tooltips" title="External link" target="_blank">
+                <i class="icon-external-link"></i>
+            </a>
+	    <a href=# class="tooltips" title="Download" target="_blank">
+                <i class="icon-cloud-download"></i>
+            </a>                                                           
+        </div>
+        <h4 class="pubtitle">Détection de communautés dans les réseaux multiplexes : Etude comparative</h4>
+        <div class="pubauthor"><strong>Issam Falih </strong>,  Manel Hmimida, Rushed Kanawati</div>
+        <div class="pubcite"><span class="label label-primary">Workshop</span> Modèles et Analyses Réseau : Approches Mathématiques et Informatiques-Journée thématique : Fouille de grands graphes (MARAMI-JFGG), October 15-17, 2014, Paris, France</div>                                                        
+    </div>
+</div>
+
+
+
+
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+<!----                 ----------------------------------------------------------------------------------------------------------    -->
+
+
+                
+            </div>
+        </div>
+    </body>
+</html>
+

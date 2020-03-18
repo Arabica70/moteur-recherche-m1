@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="tp.css">
+  <title>Sujet de TP: PHP et les bases de données</title>
+</head>
+
+<body>
+  <header>Sujet de TP: PHP et les bases de données</header>
+
+  <main>
+    
+
+
+    <article class="exercice">
+      <header><h2>Exercice 0: Mise en place</h2></header>
+      <ul>
+      <li>
+      La connexion à la base de donnée se fait avec la commande :<br/>
+      <code>mysql -h marseille -u E"numéro étudiant" -p BDE"numéro étudiant"</code><br/>
+      Utilisez le script SQL suivant pour initialiser une base de données pour le site Web : <a href="../doc/creation_2017.sql">CreationBD</a>. <br/>
+      Si nécessaire, créez une nouvelle base de données. <br/>
+      </li>
+      <li>Interface phpMyAdmin:
+	<ul>
+	  <li><code>http://10.11.10.13/phpmyadmin</code> </li>
+	  <li>user: E"numéro étudiant" (sans les guillemets) </li>
+	  <li>pass: INE étudiant. </li>
+	</ul>
+      </li>
+      </ul>
+    </article>
+    
+    <article class="exercice">
+      <header><h2>Exercice 1: le premier script</h2></header>
+      
+      <ul>
+	<li>Créez un script test.php dans le répertoire <code>~/public_html/php/</code> 
+	  qu'il génère une page HTML5 minimale affichant le numéro de version de l’interpréteur PHP utilisée. </li>
+	<li>Vérifiez avec un navigateur qu'il est bien exécuté avec l'URL 
+	  <code>http://marseille/~"numero étudiant"/test.php.</code> </li>
+      </ul>
+     
+    </article>
+
+    <article class="exercice">
+      <header><h2>Exercice 2: formulaire et PHP</h2></header>
+      
+      <p>
+	Utilisez la méthode <code>POST</code> et le formulaire décrit dans <code>inscription.html</code>
+	pour ajouter un utilisateur dans la base de données. Le code <code>PHP</code> sera inscrit dans un répertoire 
+	<code>~/public_html/php/</code> dans un fichier <code>inscription.php</code>.
+	<ul>
+	  <li>Utiliser un filtre pour savoir si l'adresse mail est bien au bon format</li>
+	  <li>N'ajoutez pas le mot de passe en clair dans la base de donnée!!! Encryptez le en md5</li>
+	  <li>Vérifier que les champs ne sont pas vides.</li>
+	  <li>Vérifier que l'utilisateur n'est pas déjà présent dans la base.</li>
+	  <li>Empêcher l'utilisateur d'injecter du code dans la base de donnée.</li>
+	  <li>Si l'insertion fonctionne, afficher une nouvelle page. Sinon réafficher le formulaire</li>
+	</ul>
+      </p>
+      <div class="attention">
+	 On utilisera pour communiquer avec la base de donnée, on utilisera la classe 
+	 <a href="http://php.net/manual/fr/pdo.connections.php">PDO</a>.
+      </div>
+    </article>
+
+    <article class="exercice">
+      <header><h2>Exercice 3: Connexion</h2></header>
+      
+      <ul>
+	<li>
+	  Créez un page <code>connexion.php</code> qui permet à un utilisateur de se connecter. 
+	  Vous utiliserez des cookies afin de retenir quel utilisateur est connecté
+	  (voir.  <code>http://php.net/manual/fr/features.cookies.php</code>).
+	</li>
+	<li>
+	  Pour afficher la page de profil d'un utilisateur, on utilisera la méthode <code>GET</code> afin de 
+	  récupérer l'identifiant de l'utilisateur dont il faut afficher la page et les cookies pour connaitre 
+	  l'utilisateur qui souhaite accéder la page web.
+	</li>
+	<li>
+	  Modifier la page précédente et remplacez l’utilisation de cookies par une session PHP. 
+	</li>
+      </ul>
+    </article>
+  </main>
+
+<footer>Auteur: Julien David (2015)</footer>
+
+</body>
+
+</html>

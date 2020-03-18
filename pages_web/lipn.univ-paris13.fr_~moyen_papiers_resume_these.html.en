@@ -1,0 +1,40 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Jean-Yves Moyen">
+   <title>Page professionnelle de Jean-Yves Moyen</title>
+</head>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000FF" vlink="#FF0000"
+alink="#000088">
+
+<b>Title:</b> <i>Analyse de la complexit&eacute; et transformation de
+programmes</i> (Complexity analysis and programs transformation)<br>
+
+<p><b>Abstract:</b></p>
+
+<p>This thesis is about automatic analysis of the complexity of
+programs, especially the complexity of the function computed rather
+than the complexity of the algorithm implemented.</p>
+
+<p>First, termination orderings are restricted by the mean of
+quasi-interpretations, allowing one to give a bound on the complexity
+of the computed function. The system itself may compute in a time
+significantly larger than this bound, so it may be necessary to
+automatically transform the system in order to achieve the bound. In
+this way, a characterisation of both Ptime and Pspace are
+obtained.</p>
+
+<p>Then, a small assembly-like language is studied via Petri
+nets. This allows a single analysis to do at the same time a
+termination proof close to the Size-Change Principle, a proof of the
+Non-Size Increasingness of the program and a simplification similar to
+Deforestation. Moreover, this technique is able to prove the
+termination of a wide class of programs. Especially, the termination
+of algorithms such as Euclid's one or the ``<i>Divide and
+Conquer</i>'' algorithms is obtained in a fully automated way.</p>
+
+<b>Keywords:</b> Termination, Complexity, Rewriting,
+Petri nets, Deforestation.
+
+</body>

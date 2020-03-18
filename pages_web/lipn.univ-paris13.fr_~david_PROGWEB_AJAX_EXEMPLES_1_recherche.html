@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="latin1"/>
+    <meta name="keywords" content="AJAX,recherche"/>    
+    <link href="1_moteur.css" rel="stylesheet" style="text/css"/>
+    <script src="jquery-2.2.1.min.js"></script>
+  </head>
+  
+  <body>
+    <form>
+      <input id="search" type="text"/>       
+      <input type="submit" value="Recherche"/>
+      <div id="proposition"/>
+        <ul ></ul>
+      </div>
+    </form>
+
+    <script>
+      $("#search").keyup(function(){
+      $.get("1_proposition.php",
+                  {val:$(this).val()},
+                  function(result){
+                    $("#proposition").css("width",$("#search").css("width"));
+                    $("#proposition ul").html(result);
+                    if(result)                      
+                      $("#proposition").show();
+                    else
+                      $("#proposition").hide();
+                  });
+      });  
+
+      $("#search").blur(function(){
+        $("#proposition").hide();
+      });
+    </script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Custom Markup </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.CustomMarkup' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=search&amp;q=link=PmWiki.CustomMarkup'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Custom Markup</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Security'>Security</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomWikiStyles'>Custom wiki styles</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>administrators (intermediate) </span>
+</div>
+<h2>Introduction</h2>
+<p>PmWiki&rsquo;s markup translation engine is handled by a set of rules; each rule searches for a specific pattern in the markup text and replaces it with some replacement text.  Internally, this is accomplished by using PHP&rsquo;s &ldquo;<a class='urllink' href='http://www.php.net/preg_replace' rel='nofollow'>preg_replace</a>&rdquo; function.
+</p>
+<p class='vspace'>Rules are added to the translation engine via PmWiki&rsquo;s Markup() or <a href='#php55'>Markup_e()</a> functions, which look like
+</p><div class='indent'><pre class='escaped'>Markup($name, $when, $pattern, $replace); # if no evaluation is needed, or if PHP &lt; 5.5
+Markup($name, $when, $pattern, $replace_function); # if evaluation is needed
+
+# DEPRECATED, will not work as of PHP 7.2
+Markup_e($name, $when, $pattern, $replace); # if evaluation is needed and 5.5&lt;=PHP&lt;=7.1</pre>
+</div><div class='vspace'></div><ul><li><code class='escaped'>$name</code> is a unique name (a string) given to the rule
+</li><li><code class='escaped'>$when</code> says when the rule should be applied relative to other rules
+</li><li><code class='escaped'>$pattern</code> is the pattern to be searched for in the markup text
+</li><li><code class='escaped'>$replace</code> is what the pattern should be replaced with.
+</li><li><code class='escaped'>$replace_function</code> is the name of the function which should be called with the match, and should return the replacement.
+</li></ul><p class='vspace'>For example, here&rsquo;s the code that creates the rule for <code class='escaped'>''emphasized text''</code> (in <em>scripts/stdmarkup.php</em>):
+</p><div class='indent'><code class='escaped'>Markup("em", "inline", "/''(.*?)''/", "&lt;em&gt;$1&lt;/em&gt;");</code>
+</div><p class='vspace'>Basically this statement says to create a rule called &ldquo;em&rdquo; to be performed with the other &ldquo;inline&rdquo; markups, and the rule replaces any text inside two pairs of single quotes with the same text ($1) surrounded by <code class='escaped'>&lt;em&gt;</code> and <code class='escaped'>&lt;/em&gt;</code>.
+</p>
+<div class='vspace'></div><h3>Sequence in which rules are applied</h3>
+<p>The first two parameters to Markup() are used to specify the sequence in which rules should be applied.  The first parameter provides a name for a rule &mdash; &ldquo;<code class='escaped'>em</code>&rdquo; in the example above.  We could&rsquo;ve chosen other names such as &ldquo;<code class='escaped'>''</code>&rdquo;, or even &ldquo;<code class='escaped'>twosinglequotes</code>&rdquo;.  In general PmWiki uses the markup itself to name the rule (i.e., PmWiki uses &ldquo;<code class='escaped'>''</code>&rdquo; instead of &ldquo;<code class='escaped'>em</code>&rdquo;), but to keep this example easier to read later on we&rsquo;ll use a mnemonic name for now.
+</p>
+<p class='vspace'>The second parameter says that this rule is to be done along with the other &ldquo;inline&rdquo; markups.  PmWiki divides the translation process into a number of phases:
+</p>
+<div class='vspace'></div><pre> _begin      start of translation
+   {$var}    <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables'>Page Text Variables</a> happen here.
+ fulltext    translations to be performed on the full text            
+ split       conversion of the full markup text into lines to be processed
+ directives  directive processing
+ inline      inline markups
+ links       conversion of <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Links'>links</a>, url-links, and WikiWords     
+ block       block markups
+ style       style handling       
+ _end        end of translation
+</pre><p class='vspace'>This argument is normally specified as a left-angle bracket (&ldquo;before&rdquo;) or a right-angle bracket (&ldquo;after&rdquo;) followed by the name of another rule. 
+</p>
+<p class='vspace'>Thus, specifying &ldquo;inline&rdquo; for the second parameter says that this rule should be applied when the other &ldquo;inline&rdquo; rules are being performed.  If we want a rule to be performed with the directives &mdash; i.e., before inline rules are processed, we would specify &ldquo;directives&rdquo; or &ldquo;&lt;inline&rdquo; for the second parameter.
+</p>
+<div class='vspace'></div><h5>{$var} and (:if ...:) conditionals</h5>
+<p>A significant rule in terms of ordering is &ldquo;{$var}&rdquo; which substitutes variables &mdash; if you say &ldquo;&lt;{$var}&rdquo; then your markup will be processed before variables are substituted whereas if you say &ldquo;&gt;{$var}&rdquo; then your markup will be processed after variables are substituted.  This happens before conditional (:if...:) expressions, which is why page text variables are processed even if they are defined inside (:if false:).
+</p>
+<div class='vspace'></div><h3>Markup regular expression definition</h3>
+<p>The third parameter is a Perl-compatible regular expression. Basically, it is a slash, a <a class='urllink' href='http://www.php.net/manual/en/reference.pcre.pattern.syntax.php' rel='nofollow'>regular expression</a>, another slash, and a set of optional <a class='urllink' href='http://www.php.net/manual/en/reference.pcre.pattern.modifiers.php' rel='nofollow'>modifiers</a>.
+</p>
+<p class='vspace'>The example uses the pattern string <code class='escaped'>"/''(.*?)''/"</code>, which uses <code class='escaped'>''(.*?)''</code> as the regular expression and no options. (The regular expression says &ldquo;find two single quotes in succession, then as few arbitrary characters as are needed to make the match find something, then two additional single quotes in succession&rdquo;; the parentheses &ldquo;capture&rdquo; a part of the wikitext for later use.)
+</p>
+<div class='vspace'></div><h3>Replacement text</h3>
+<p>The fourth parameter is the replacement text that should be inserted instead of the marked-up wikitext. You can use <code class='escaped'>$1</code>, <code class='escaped'>$2</code>, etc. to insert the text from the first, second etc. parenthesised part of the regular expression.
+</p>
+<p class='vspace'>In the example, we have <code class='escaped'>"&lt;em&gt;$1&lt;/em&gt;"</code>, which is an <code class='escaped'>&lt;em&gt;</code>, the text matched by the first parentheses (i.e. by the <code class='escaped'>.*?</code> section of the pattern), and <code class='escaped'>&lt;/em&gt;</code>.
+</p>
+<p class='vspace'>Here&rsquo;s a rule for <code class='escaped'>@@monospaced@@</code> text:
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>Markup("@@", "inline", "/@@(.*?)@@/", "&lt;code&gt;$1&lt;/code&gt;");</code>
+</div><p class='vspace'>and for a <code class='escaped'>[:comment ...:]</code> directive that is simply removed from the output:
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>Markup("comment", "directives", "/\\[:comment .*?:\\]/", '');</code>
+</div><p class='vspace'>Okay, now how about the rule for <code class='escaped'>'''strong emphasis'''</code>?  We have to be a bit careful here, because although this translation should be performed along with other inline markup, we also have to make sure that the rule for <code class='escaped'>'''</code> is handled <em>before</em> the rule for <code class='escaped'>''</code>, because <code class='escaped'>'''</code> also contains <code class='escaped'>''</code>. The second parameter to Markup() can be used to specify the new rule&rsquo;s relationship to any other rule:
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>Markup("strong", "&lt;em", "/'''(.*?)'''/", "&lt;strong&gt;$1&lt;/strong&gt;");</code>
+</div><p class='vspace'>This creates a rule called &ldquo;strong&rdquo;, and the second parameter &ldquo;&lt;em&rdquo; says to be sure that this rule is processed before the &ldquo;em&rdquo; rule we defined above.  If we wanted to do something after the &ldquo;em&rdquo; rule, we would use &ldquo;&gt;em&rdquo; instead.  Thus, it&rsquo;s possible to add rules at any point in PmWiki&rsquo;s markup translation process in an extensible manner.  (In fact, the &ldquo;inline&rdquo;, &ldquo;block&rdquo;, &ldquo;directives&rdquo;, etc., phases above are just placeholder rules used to provide an overall sequence for other rules.  Thus one can use &ldquo;&lt;inline&rdquo; to specify rules that should be handled before any other inline rules.)             
+</p>
+<p class='vspace'>If you want to disable available markup just call e.g.:
+</p>
+<div class='vspace'></div><div class='indent'><code class='escaped'>DisableMarkup("strong");</code>
+</div><p class='vspace'>PmWiki&rsquo;s default markup rules are defined in the <em>scripts/stdmarkup.php</em> file.  To see the entire translation table as the program is running, the scripts/diag.php module adds &ldquo;<code class='escaped'>?action=ruleset</code>&rdquo;, which displays the set of defined markup rules in the sequence in which they will be processed.  You can see it at <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=ruleset'>CustomMarkup?action=ruleset</a>. You must first enable the action by setting <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DebugVariables#EnableDiag'><code class='varlink'>&#036;EnableDiag</code></a> = 1 in your configuration file.
+</p>
+<div class='vspace'></div><h2>Other common examples</h2>
+<h3>Define a custom markup to produce a specific HTML or Javascript sequence</h3>
+<p>Suppose an admin wants to have a simple &ldquo;<code class='escaped'>(:example:)</code>&rdquo; markup that will always produce a fixed HTML string in the output, such as for a webring, Google AdSense display, or Javascript.  The Markup() call to do this would be:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+Markup('example', 'directives',
+  '/\\(:example:\\)/',
+  Keep("&lt;div class='example'&gt;&lt;p&gt;Here is a 
+    &lt;a target='_blank' href='http://www.example.com'&gt;link&lt;/a&gt; to
+    &lt;em&gt;example.com&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;") );
+</pre>
+</div><div class='vspace'></div><ul><li>The first argument is a unique name for the markup (&ldquo;example&rdquo;).
+</li><li>The second argument says to perform this markup along with other directives.
+</li><li>The third argument is the pattern to look for &ldquo;(:example:)&rdquo;.
+</li><li>The fourth argument is the HTML that &ldquo;(:example:)&rdquo; is to be replaced with.  We use the Keep() function here to prevent the output from being further processed by PmWiki&rsquo;s markup rule &mdash; in the above example, we don&rsquo;t want the <a class='urllink' href='http://www.example.com' rel='nofollow'>http://www.example.com</a> url to be again converted to a link.
+</li></ul><p class='vspace'><a name='random' id='random'></a>
+</p><h3>Define a markup to call a custom function that returns content</h3>
+<div class='indent'><span  style='color: red;'> The /e modifier has been deprecated and should not be used in ongoing development. See <a style='color: red' href='#php55'>below</a> for more details.</span>
+</div><p class='vspace'>For older PHP versions (&lt; 7.2) an &lsquo;e&rsquo; option on the <code class='escaped'>$pattern</code> parameter causes the <code class='escaped'>$replace</code> parameter to be treated as a PHP expression to be evaluated instead of replacement text. To avoid using the deprecated e/ parameter, a markup to produce a random number between 1 and 100 might now look like:
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+Markup('random', 'directives',
+  '/\\(:random:\\)/',
+  "MyRandomFunction");
+function MyRandomFunction() {
+  return rand(1, 100);
+}
+</pre>
+</div><p class='vspace'>This calls the PHP built-in rand() function and substitutes the directive with the result.  Any function can be called, including functions defined in a <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>local customization</a> file or in <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/Cookbook' rel='nofollow'>Cookbook</a> recipes.
+</p>
+<p class='vspace'>Arguments can also be passed by using regular expression capturing parentheses, thus
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>
+Markup('randomargs', 'directives',
+  '/\\(:random (\\d+) (\\d+):\\)/',
+  "MyRandomFunction");
+function MyRandomFunction($m) {
+  return rand($m[1], $m[2]);
+}
+</pre>
+</div><p class='vspace'>will cause the markup <code class='escaped'>(:random 50 100:)</code> to generate a random number between 50 and 100.
+</p>
+<div class='vspace'></div><div class='indent'><span  style='font-style: italic; color: green;'> Note: the /e modifier in regular expressions is deprecated since PHP version 5.5, and removed since PHP version 7. The reason for this is, that malicious authors could pass strings that could cause arbitrary and undesirable PHP functions to be executed.</span>
+</div><p class='vspace'>For a PmWiki function to help with parsing arbitrary sequences of arguments and key=value pairs, see <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/ParseArgs' rel='nofollow'>Cookbook:ParseArgs</a>.
+</p>
+<p class='vspace'><a name='php55' id='php55'></a>
+</p><h2>Migration to PHP 5.5 and <code>Markup_e()</code></h2>
+<p>Since PHP version 5.5, the <code>/e</code> evaluation modifier is deprecated and some hosting providers don&rsquo;t allow its use.
+</p>
+<p class='vspace'>Recent <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ReleaseNotes'>versions</a> of the PmWiki core (2.2.58 and newer) allow new ways to define markup rules without being dependent on the <code>/e</code> eval modifier. The historical ways to define markup rules are not removed and work, but may be incompatible with PHP 5.5 installations.
+</p>
+<p class='vspace'><em>Note: whether your replacement pattern needs evaluation or not, you must use <span  style='color: green;'><code>Markup()</code></span> and <span  style='color: red;'>not <code>Markup_e()</code>.</span></em> The latter is deprecated and should no longer be used for new recipes and customizations, and old recipes using <code>Markup_e</code> should be upgraded to the new format.
+</p>
+<p class='vspace'>The examples below all require PmWiki 2.2.58 (2013&ndash;12&ndash;25) or newer but the latest version is recommended.
+</p>
+<div class='vspace'></div><div class='frame' > 
+<p>THE SHORT ANSWER: If your markup regular expression (the 3rd argument) contains an &ldquo;e&rdquo; after the closing slash (i.e., <code>/regex/e</code> or <code>/regex/se</code> or etc) AND your 4th argument is entirely surrounded with double-quotes then you may be able to get away with simply following these simple steps:
+</p>
+<div class='vspace'></div><ol><li>Delete the &ldquo;e&rdquo; from after the closing slash in the 3rd argument
+</li><li>Create a new replacement function with $m as argument.
+</li><li>In your function, the previous occurrences of &lsquo;{$1', '$}2&rsquo;, etc. are now found as {$m[1], $}m[2], etc. You should no longer need to call <code><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Functions#PSS' title=" PSS($string)">PSS()</a></code>.
+</li><li>In your function, call @@extract({$GLOBALS['MarkupToHTML']);@@ in order to get the current $}pagename and $markupid.
+</li><li>Set the name of the replacement function as 4th argument of the Markup() call.
+</li></ol><p class='vspace'>In some cases this will not suffice - it depends on how quoting was done - but in many cases following these simple steps will result in PHP 5.5+ compatibility. 
+</p>
+<p class='vspace'>If you try those steps and are still having problems then continue to read below for a deeper understanding.
+</p></div>
+<p class='vspace'>The following is acceptable for PHP 5.5+ (compatible with PmWiki 2.2.58+, will also work in PHP 5.4 and older)
+</p><ul><li><code>Markup({$name, $}when, {$pattern, $}replace)</code>; 
+<ul><li><code>$pattern</code> can no longer have an &ldquo;<code>/e</code>&rdquo; modifier
+</li><li><code>$replace</code> can be a function name (callback) which will be called with the array of matches as argument
+</li><li>instead of a string, the fourth parameter can be a definition of an anonymous function (note you can use anon functions this way since <a class='urllink' href='http://php.net/manual/en/functions.anonymous.php' rel='nofollow'>PHP 5.3.0+</a>).
+</li></ul><div class='vspace'></div></li><li><code>Markup_e({$name, $}when, {$pattern, $}replace)</code>; <span  style='color: red;'> DEPRECATED, should no longer be used</span>
+</li></ul><p class='vspace'>Examples:
+</p>
+<div class='vspace'></div><ul><li>For PHP 5.4 and older, this was acceptable:<pre class='escaped'>
+Markup('randomargs', 'directives',
+  '/\\(:random (\\d+) (\\d+):\\)/e',
+  "rand('$1', '$2')"
+  );</pre>
+<div class='vspace'></div></li><li>For PHP 5.5 and newer, $replace is callback, we call Markup():<pre class='escaped'>
+Markup('randomargs', 'directives',
+  '/\\(:random (\\d+) (\\d+):\\)/',
+  "MyRandom"
+  );
+function MyRandom($m) { # $m = matches
+  return rand($m[1], $m[2]);
+}
+</pre>
+<span  style='font-style: italic; color: green;'> This will also work in PHP 5.4 and older</span>
+</li></ul><p class='vspace'>Other example:
+</p><ul><li>PHP 5.4 or older: <pre class='escaped'>
+Markup('Maxi:','&lt;links',
+  "/\\b([Mm]axi:)([^\\s\"\\|\\[\\]]+)(\"([^\"]*)\")?/e",
+  "Keep(LinkMaxi(\$pagename,'$1','$2','$4','$1$2'),'L')"
+  );
+</pre>
+<div class='vspace'></div></li><li>PHP 5.5 or newer, PmWiki 2.2.58+, $replace is a function name: <pre class='escaped'>
+Markup('Maxi:','&lt;links',
+  "/\\b([Mm]axi:)([^\\s\"\\|\\[\\]]+)(\"([^\"]*)\")?/",
+  "LinkMaxi"
+  );
+function LinkMaxi($m) {
+  extract($GLOBALS['MarkupToHTML']); # to get $pagename
+  # do stuff with $m[1], $m[2], etc.
+  return Keep($out, 'L');
+}
+</pre>
+<span  style='font-style: italic; color: green;'> This will also work in PHP 5.4 and older</span>
+<div class='vspace'></div></li><li>$replace can also be a callback function, we call Markup(): <pre class='escaped'>
+Markup('Maxi:','&lt;links',
+  "/\\b([Mm]axi:)([^\\s\"\\|\\[\\]]+)(\"([^\"]*)\")?/",
+  "CallbackMaxi"
+);
+function CallbackMaxi($m) {
+  extract($GLOBALS["MarkupToHTML"]); # to get $pagename
+  return Keep(LinkMaxi($pagename,$m[1],$m[2],$m[4],$m[1].$m[2]),'L');
+}
+</pre>
+<span  style='font-style: italic; color: green;'> This will also work in PHP 5.4 and older</span>
+</li></ul><p class='vspace'>The above may seem complicated, but it is actually simpler to use your own callback function:
+</p><div class='frame' ><pre class='escaped'>
+Markup('mykey', 'directives', 
+  '/\\(:mydirective (.*?) (.*?):\\)/i',
+  'MyFunction'
+);
+function MyFunction($m) {
+  extract($GLOBALS["MarkupToHTML"]);
+
+  # ... do stuff with $m (the matches), drop PSS() ...
+
+  return $out; # or return Keep($html);
+}
+</pre> 
+</div>
+<p class='vspace'>If you have any questions about the new way to define custom markup, you can ask us <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/CustomMarkup-Talk' rel='nofollow'>at the talk page</a> or on the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MailingLists'>mailing lists</a>.
+</p>
+<div class='vspace'></div><h2>FAQ</h2>
+<div class='faq' > <a name='faq' id='faq'></a> 
+<p class='question'>Q How can I embed JavaScript into a page&rsquo;s output?</p>
+<p> There are several ways to do this. The <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/JavaScript' rel='nofollow'>Cookbook:JavaScript</a> recipe describes a simple means for embedding static JavaScript into web pages using <b class='selflink'>custom markup</b>.  For editing JavaScript directly in wiki pages (which can pose various security risks), see the <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/JavaScript-Editable' rel='nofollow'>JavaScript-Editable</a> recipe.  For JavaScript that is to appear in headers or footers of pages, the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Skins'>skin</a> template can be modified directly, or &lt;script&gt; statements can be inserted using the <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLHeaderFmt'><code class='varlink'>&#036;HTMLHeaderFmt</code></a> array.
+</p>
+<p class='vspace question'>Q How would I create a markup (<em>(:nodiscussion:)</em>) that will set a page variable (<em>{$HideDiscussion}</em>) which can be used by <em>(:if enabled HideDiscussion:)</em> in .PageActions?</p>
+<p> Add the following section of code to your config.php
+</p><div class='indent'><pre class='escaped'>
+SDV($HideDiscussion, 0); 	#define var name
+Markup('hideDiscussion', '&lt;{$var}',
+ '/\\(:nodiscussion:\\)/', 'setHideDiscussion'); 
+function setHideDiscussion() { 
+  global $HideDiscussion; 
+  $HideDiscussion = true;
+} 
+</pre>
+</div><p class='vspace'>This will enable the <code>(:if enabled HideDiscussion:)</code> markup to be used.  If you want to print the current value of {$HideDiscussion} (for testing purposes) on the page, you&rsquo;ll also need to add the line:  <br /><code>$FmtPV['$HideDiscussion'] = '$GLOBALS["HideDiscussion"]';</code>
+</p>
+<p class='vspace question'>Q It appears that (.*?) does not match newlines in these functions, making the above example inoperable if the text to be wrappen in &lt;em&gt; contains new lines.</p>
+<p> If you include the &ldquo;s&rdquo; modifier on the regular expression then the dot (.) will match newlines.  Thus your regular expression will be &ldquo;/STUFF(.*?)/s&rdquo;.  That s at the very end is what you are looking for.  If you start getting into multi-line regexes you may be forced to look at the m option as well - let&rsquo;s anchors (^ and $) match not begin/end of strings but also begin/end of lines (i.e., right before/after a newline). Also make sure your markup is executed during the fulltext phase.
+</p>
+<p class='vspace question'>Q How can the text returned by my markup function be re-processed by the markup engine?</p>
+<p> If the result of your markup contains more markup that should be processed, you have two options. First is to select a &ldquo;when&rdquo; argument that is processed earlier than the markup in your result. For example, if your markup may return [[links]], your &ldquo;when&rdquo; argument could be <code>&ldquo;&lt;links&rdquo;</code> and your markup will be processed before the links markup. The second option is to call the PRR() function in your markup definition or inside your markup function. In this case, after your markup is processed, PmWiki will restart all markups from the beginning. 
+</p>
+<p class='vspace question'>Q How do I get started writing recipes and creating my own custom markup?</p>
+<p> <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/CustomMarkupAlt' rel='nofollow'>(alternate) Introduction to custom markup for Beginners</a>
+</p>
+<p class='vspace question'>Q How do I make a rule that runs once at the end of all other rule processing?</p>
+<p> Use this statement instead of the usual <code>Markup()</code> call:
+</p><dl><dd><div class='indent'><code>{$MarkupFrameBase['posteval']['myfooter'] = "\$}out = onetimerule(\$out);&rdquo;;</code>
+</div></dd></dl><p> 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Security'>Security</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomWikiStyles'>Custom wiki styles</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/CustomMarkup' rel='nofollow'>PmWiki:CustomMarkup</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/CustomMarkup-Talk' rel='nofollow'>PmWiki:CustomMarkup-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/CustomMarkup?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on December 21, 2017, at 09:53 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

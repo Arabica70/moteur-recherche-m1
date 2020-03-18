@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>Elica project -- Welcome!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+</head>
+
+<body>
+<table>
+	<tr>
+		<td style="vertical-align: top">
+<div class="navbar">
+<a href="http://www.agence-nationale-recherche.fr/"><img style="border:0;width:165px;height:70px" src="img/ANR.jpg" alt="ANR"></a>
+<h2>Elica project</h2>
+<a class="home" href="http://lipn.univ-paris13.fr/~mazza/Elica/">Home page</a>
+<ul>
+	<li><a class="button" href="?page=obj">Objectives</a></li>
+<li><a class="button" href="?page=part">Participants</a></li>
+<li><a class="button" href="?page=meet">Meetings</a></li>
+</ul>
+<p>
+	<a href="http://www.univ-paris13.fr"><img style="border:0;width:225px;height:70px" src="img/Paris13.gif" alt="Universit&eacute; Paris 13"></a><br>
+	<a href="http://www.ens-lyon.eu"><img style="border:0;width:225px;height:70px" src="img/ENSLyon.png" alt="ENS Lyon"></a>
+	<a href="http://www.inria.fr"><img style="border:0;width:225px;height:70px" src="img/Inria.jpg" alt="Inria"></a><br>
+	<a href="http://welcome.univ-lorraine.fr/en"><img  style="border:0;width:70px;height:70px" src="img/UL.jpg" alt="Universit&eacute; de Lorraine"></a>&nbsp;<a href="http://www.unibo.it/en/homepage"><img  style="border:0;width:70px;height:70px" src="img/UnivBologna.png" alt="Universit&agrave; di Bologna"></a>&nbsp;<a href="http://www.cnrs.fr/index.php"><img  style="border:0;width:70px;height:70px" src="img/CNRS.gif" alt="CNRS"></a>
+</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/valid-html401.png" alt="Valid HTML 4.01!"></a>
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a><br>
+	Webmaster: <a href="http://www.lipn.univ-paris13.fr/~mazza">Damiano Mazza</a>
+</p>
+</div>
+    	</td>
+		<td style="vertical-align: top">
+<div>
+<table border="0" width="100%">
+<tr>
+<td>
+<h3>ANR-14-CE25-0005 Elica:<br>
+Expanding Logical Ideas for Complexity Analysis</h3>
+<p>
+Elica was a research project in computer science, which started in February 2015 and ended in September 2019. It was jointly developed by several academic <a href="?page=part">partners</a> in France and Italy.
+</p>
+<p>
+Financial support was provided by the <a href="http://www.agence-nationale-recherche.fr/">Agence Nationale de la Recherche</a> (ANR), under contract number  <a href="http://www.agence-nationale-recherche.fr/?Project=ANR-14-CE25-0005">ANR-14-CE25-0005</a>. Elica was selected as part of ANR's 2014 call for projects, under the program <a href="http://www.agence-nationale-recherche.fr/en/funded-projects/?tx_lwmsuivibilan_pi1[Programme]=2120140705"><i>Fondements du num&eacute;rique</i></a>.
+</p>
+<p>
+<a href="?page=obj">The aim of Elica</a> was to develop logical methods for static complexity analysis, improve their expressiveness and extend their application to non-deterministic and concurrent programming paradigms. 
+</p>
+<p>
+The project involved <a href="?page=part">24 permanent members</a>, plus a Ph.D. student and several post-doctoral researchers supported or co-supported by the ANR.
+</p>
+<p>
+You may use the navigation bar on the left to explore the contents of this web site. For any further information, comment or request about the project, please contact <a href="http://lipn.univ-paris13.fr/~mazza/">Damiano Mazza</a>, Elica's scientific leader.
+</p>
+</td>
+<td style="vertical-align: top; padding-left:20px">
+	<img src="img/Elica.png" alt="Elica" width="250">
+</td>
+</tr>
+</table>
+</div>
+		</td>
+	</tr>
+</table>
+</body>
+
+</html>

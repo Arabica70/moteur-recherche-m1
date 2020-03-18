@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Journées ALÉA 2012</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen, tv, projection" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  <script type='text/javascript' src='js/jquery-1.2.3.min.js'></script>
+
+</head>
+
+
+<body>
+   <div id="menu">
+
+
+  <!-- Menu -->
+  
+   <!-- <object type="text/html" data="menu.php"> -->
+
+   <!--   </div> -->
+
+   <script type="text/javascript" >
+<!--
+    var ic = 42;     // Number of alternative images
+    
+    function pickRandom(range) {
+    if (Math.random)
+    return Math.round(Math.random() * (range-1));
+    else {
+    var now = new Date();
+    return (now.getTime() / 1000) % range;
+    }
+    }
+    var choice = pickRandom(ic);
+
+    function changePortrait()
+    {
+    var newchoice = pickRandom(ic);
+    $('portrait').innerHTML = '<IMG BORDER=0 SRC="images/pics/image'+$newchoice+'.jpg" WIDTH=110 >';
+    timeoutID = window.setTimeout("changePortrait()",5000);
+    }
+    timer = window.setTimeout("changePortrait()",5000);
+
+    // -->
+</script>
+
+   <span id="cirm"><script type="text/javascript" >document.writeln('<img src="images/pics/image'+choice+'.jpg" width="110" alt="CIRM"/>');</script></span>
+
+
+
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+    </ul>
+
+    <div class="spacer"></div>
+    <ul>
+      <li><a href="programme.html">Programme</a></li>
+    <!--  <li><a href="idee.html">Boîte à idée</a></li>-->
+      <li><a href="http://www.cirm.univ-mrs.fr/index.html/spip.php?rubrique2&EX=liste_participants&annee=2012&id_renc=787&num_semaine=0">Participants</a></li>
+      <li>Inscriptions (closes !)</li>
+	      <li><a href="planning.php">Planning</a></li>
+      <!--<li><a href="propositions.php">Appel à contributions</a></li>-->
+     <!--<li><a href="programme.php">Programme</a></li>-->
+      <!--<li><a href="problemes.php">Problèmes ouverts</a></li>-->
+      <!--<li><a href="inscriptions.php">Inscriptions</a></li>-->
+
+    </ul>
+      
+    <div class="spacer"></div>
+    <ul>
+      <li><a href="http://algo.inria.fr/pfac/PFAC/Tributes.html">Hommage à Philippe Flajolet</a></li>
+      </ul>
+
+    
+    <div class="spacer"></div>
+    <ul>
+      <li><a href="http://www.cirm.univ-mrs.fr/Site_test/spip.php?rubrique2&EX=info_rencontre&annee=2012&id_renc=787"><acronym title="Centre International de Rencontres Mathématiques">CIRM</acronym></a> </li>
+    </ul>
+  </div>
+
+  <div id="main">
+
+  <!-- Main -->
+
+  <h1>Inscriptions</h1>
+  L'édition 2012 des Rencontres ALÉA se dérouleront au CIRM à <em>Marseille-Luminy</em> du 05 au 09 mars 2012.
+  <br><br>
+  Les inscriptions sont closes. Victime de leur succès, les journées ALEA ont vu cette année l'inscription d'un nombre record de participants
+et il est physiquement impossible de prendre de nouveaux inscrits (il n'y a tout simplement plus de place dans l'amphi !).  
+<br><br>
+  Nous avons par ailleurs une dizaine de personnes en liste d'attente en cas de désistement, 
+  donc il sera impossible de satisfaire tout nouvelle inscription, 
+  nous invitons nos collègues qui ne pourront participer à ALEA cette année à s'inscrire moins tardivement l'an prochain pour ALEA 2013 ! ;-)
+<br><br>
+Si vous avez besoin d'un justificatif d'inscription, vous pouvez utiliser le fichier suivant <a href="inscrits.pdf">inscrits.pdf</a>.
+<br>
+
+
+
+  <div id="pied-de-page">
+  <!-- Pied de page -->
+
+  </div>
+</div>
+    <script type='text/javascript'>
+      <!--
+      var pre = 'mai' + 'lto';
+      var a = new Array();
+      a.push('alea2012' + '@' + 'lipn');
+      a.push('univ-paris13');
+      a.push('fr');
+      var b = a.join('.');
+      $("#emailAddress").empty().append('<a href=\'' + pre + ':' + b + '\'>' + b + '<\/a>');
+      //-->
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+    Télécharger le fichier archive JML4cv1.zip
+    Extraire le répertoire JML4c du fichier archive: unzip JML4cv1.zip
+    Se placer dans le répertoire JML4c: cd JML4c
+    Exécuter le script d'installation: ./install
+    Recharger votre fichier .bashrc : source $HOME/.bashrc

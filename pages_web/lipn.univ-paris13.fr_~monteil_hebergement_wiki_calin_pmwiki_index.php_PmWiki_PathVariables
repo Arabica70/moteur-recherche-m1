@@ -1,0 +1,224 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Path Variables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.PathVariables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=search&amp;q=link=PmWiki.PathVariables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Path Variables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PagelistVariables'>Pagelist Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SecurityVariables'>Security Variables</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p class='vspace'>When dealing with file or path variables, one has to recognize the difference between working with URLs and files on disk.  For example:
+</p><ul><li>The include() statements are used to include other files (on disk) into the currently running PmWiki script.  Thus they require paths on the server&rsquo;s filesystem. 
+</li><li>The {$ScriptUrl and $}PubDirUrl variables are used to tell a <em>browser</em>, connecting via the webserver, how to execute the pmwiki script ({$ScriptUrl) and the base url for getting files from PmWiki's pub/ directory ($}PubDirUrl).
+</li></ul><p class='vspace'>Note that a browser needs a URL (<a class='urllink' href='http://example.com/pmwiki/pub' rel='nofollow'>http://example.com/pmwiki/pub</a>) while an include statement requires a server file path (<a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#FarmD'><code class='varlink'>&#036;FarmD</code></a>/scripts/something.php).
+</p>
+<div class='vspace'></div><dl><dt><a name='FarmD' id='FarmD'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#FarmD'><code class='varlink'>&#036;FarmD</code></a></dt><dd> The directory on the server where the farm is located (i.e., the directory containing the farm&rsquo;s copy of <em>pmwiki.php</em> and the <em>scripts/</em> directory).  This directory is automatically determined by pmwiki.php when it runs, and can be used to distinguish the farm&rsquo;s <em>cookbook/</em> and <em>pub/</em> subdirectories from a field&rsquo;s subdirectories.
+</dd></dl><p class='vspace'>:{$FarmPubDirUrl: is the url that refers to the @@pub@@ directory for an entire farm. It defaults to the same value as $}PubDirUrl. 
+</p>
+<div class='vspace'></div><dl><dt><a name='PageCSSListFmt' id='PageCSSListFmt'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#PageCSSListFmt'><code class='varlink'>&#036;PageCSSListFmt</code></a></dt><dd> is an associative array which PmWiki uses to find any local css configuration files. It consists of a set of (<em>key</em>,<em>value</em>) pairs <span  style='color: green;'> that point to the same file</span>. The <em>key</em> is a possible path to a file on disk holding the css data, while the <em>value</em> is the coresponding URL for that <span  style='color: green;'>same file</span>. They keys are tested in turn, and for each named file that exists, the browser is instructed to load the corresponding URL. This allows for PMWiki to only load the css file if it exists. (<a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/WhySeeIfCSSExists' rel='nofollow'>Why see if a CSS exists?</a>)  The default value for this variable is:
+</dd></dl><div class='vspace'></div><div class='indent'><pre class='escaped'>
+$PageCSSListFmt = array(
+  'pub/css/local.css' =&gt; '$PubDirUrl/css/local.css',
+  'pub/css/{$Group}.css' =&gt; '$PubDirUrl/css/{$Group}.css',
+  'pub/css/{$FullName}.css' =&gt; '$PubDirUrl/css/{$FullName}.css');
+</pre>
+<div class='vspace'></div></div><div class='indent'>Note that the default (as of version pmwiki-2.1.beta26) makes no reference to <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#FarmPubDirUrl'><code class='varlink'>&#036;FarmPubDirUrl</code></a> for css configuration files. If you wish to be able to place css configuration files in both the field&rsquo;s <code>pub</code> directory, and the farm&rsquo;s <code>pub</code> directory, you may want to add these lines to your <code>local/config.php</code> file (as described in <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/SharedPages' rel='nofollow'>Cookbook:SharedPages</a>):
+<div class='vspace'></div></div><div class='indent'>       <span  style='color: green;'># this adds farm.css to all wikis</span>
+</div><div class='indent'><pre class='escaped'>
+$PageCSSListFmt = array(
+  '$FarmD/pub/css/farm.css' =&gt; '$FarmPubDirUrl/css/farm.css',
+  'pub/css/local.css' =&gt; '$PubDirUrl/css/local.css',
+  'pub/css/$Group.css' =&gt; '$PubDirUrl/css/$Group.css',
+  'pub/css/$FullName.css' =&gt; '$PubDirUrl/css/$FullName.css');
+</pre>
+<div class='vspace'></div></div><div class='indent'>       <span  style='color: green;'># this enables farm css files in a similar manner to a local wiki</span>
+</div><div class='indent'><pre class='escaped'>
+$PageCSSListFmt = array(
+  '$FarmD/pub/css/local.css' =&gt; '$FarmPubDirUrl/css/local.css',
+  '$FarmD/pub/css/$Group.css' =&gt; '$FarmPubDirUrl/css/$Group.css',
+  '$FarmD/pub/css/$FullName.css' =&gt; '$FarmPubDirUrl/css/$FullName.css',
+  'pub/css/local.css' =&gt; '$PubDirUrl/css/local.css',
+  'pub/css/$Group.css' =&gt; '$PubDirUrl/css/$Group.css',
+  'pub/css/$FullName.css' =&gt; '$PubDirUrl/css/$FullName.css');
+</pre>
+<div class='vspace'></div></div><div class='indent'>Note the difference between CSS configuration files and CSS files associated with a skin. Skin files, including associated CSS, can be put in either the farm or the field <code>pub/skins</code> directory, and the program will find them.
+</div><div class='vspace'></div><dl><dt><a name='PubDirUrl' id='PubDirUrl'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#PubDirUrl'><code class='varlink'>&#036;PubDirUrl</code></a></dt><dd> is the URL that refers to the <code>pub</code> directory. That directory contains all the files and subdirectories that must be directly accessible from a browser (e.g. CSS and HTML files). Most prominent here is the <code>skins</code> subdirectory.
+</dd></dl><div class='indent'>The following may work for you<sup><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/CleanUrls#multiviews' rel='nofollow'>[1]</a></sup>
+</div><div class='indent'><pre class='escaped'>  $ScriptUrl = 'http://'.$_SERVER['HTTP_HOST'].'/pmwiki/pmwiki.php';
+  $PubDirUrl = 'http://'.$_SERVER['HTTP_HOST'].'/pmwiki/pub';</pre>
+</div><p class='vspace'><span class='rfloat'><a class='urllink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php' rel='nofollow'>https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php</a></span>
+:{$ScriptUrl: is the URL that you want people's browsers to use when accessing PmWiki, either as a field or farm.  It's used whenever PmWiki needs to generate a link to another PmWiki page or action. PmWiki is usually fairly good about "guessing" the correct value for $}ScriptUrl on its own, but sometimes an admin needs to set it explicitly because of URL manipulations by the webserver (such as <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/CleanUrls' rel='nofollow'>Cookbook:CleanUrls</a>, mod_rewrite, bizarre PHP configurations, and so on).
+</p>
+<div class='vspace'></div><dl><dt><a name='SkinDir' id='SkinDir'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#SkinDir'><code class='varlink'>&#036;SkinDir</code></a></dt><dd>Set by <em>scripts/skins.php</em> to be the base url of the current skin&rsquo;s directory (i.e., within a &lsquo;pub/skins/&rsquo; directory).  This variable is typically used inside of a skin .tmpl file to provide access to .css files and graphic images associated with the skin. See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SkinTemplates#security' title="Security Note">security note</a> regarding use.
+<div class='vspace'></div></dd><dt><a name='SkinDirUrl' id='SkinDirUrl'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#SkinDirUrl'><code class='varlink'>&#036;SkinDirUrl</code></a></dt><dd>Set by <em>scripts/skins.php</em> to be the base path of the current skin&rsquo;s directory (i.e., within a &lsquo;pub/skins/&rsquo; directory).  This variable is typically used inside of a skin .tmpl file to provide access to secondary files. See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SkinTemplates#security' title="Security Note">security note</a> regarding use.
+<div class='vspace'></div></dd><dt><a name='WorkDir' id='WorkDir'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WorkDir'><code class='varlink'>&#036;WorkDir</code></a></dt><dd> This variable is a string that gives a local path to a directory where the pmwiki engine can create temporary files etc. 
+</dd></dl><div class='indent'>PmWiki needs this for a variety of things, such as building merged edits, caching mailposts entries, keeping track of the last modification time of the site, other types of cache, etc.  Do not confuse this variable with {$WikiDir; the reason that both $}WorkDir and <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WikiDir'><code class='varlink'>&#036;WikiDir</code></a> refer by default to the directory <code class='escaped'>wiki.d/</code> is merely to simplify things for the administrator. 
+</div><div class='vspace'></div><dl><dt><a name='WikiDir' id='WikiDir'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WikiDir'><code class='varlink'>&#036;WikiDir</code></a></dt><dd> A PageStore-object that refers to how wiki pages are stored. 
+</dd></dl><div class='indent'>This can be a simple reference to a directory (typically <em>wiki.d/</em>), or something more advanced such as a MySQL backend or a .dbm-file.  Do not confuse this variable with {$WorkDir; the reason that both $}WorkDir and <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WikiDir'><code class='varlink'>&#036;WikiDir</code></a> refer by default to the directory <code class='escaped'>wiki.d/</code> is merely to simplify things for the administrator.
+</div><div class='indent'>To store groups of pages in subdirectories add <code class='escaped'>$WikiDir = new PageStore('wiki.d/$Group/$FullName');</code> to the start of your config file. <sup><a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/PerGroupSubDirectories' rel='nofollow'>[2]</a></sup>
+</div><div class='vspace'></div><dl><dt><a name='WikiLibDirs' id='WikiLibDirs'></a><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WikiLibDirs'><code class='varlink'>&#036;WikiLibDirs</code></a></dt><dd> An array of PageStore objects that specify where to look for pages.  
+</dd></dl><div class='indent'>By default it is set up to look in <em>wiki.d/</em> and <em>wikilib.d/</em>, but can be changed to look other places.  
+</div><div class='indent'>For example, to exclude the pages that are bundled in the PmWiki distribution, use the line below.  (Note that some features such as editing and search rely on having certain pages available, so you may need to copy them to the <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#WikiDir'><code class='varlink'>&#036;WikiDir</code></a>.)
+</div><div class='indent'><code class='escaped'>$WikiLibDirs = array(&amp;$WikiDir); </code>
+</div><div class='indent'>Another example
+</div><div class='indent'><pre class='escaped'>
+ 	## for any page name, use the version located in wiki.d if it exists,
+ 	## use the version located in wikilib2.d, if a wiki.d version does not, and
+ 	## the version located in wikilib.d, if neither of the above exists
+	$WikiLibDirs = array(&amp;$WikiDir,
+	    new PageStore('wikilib2.d/{$FullName}'),
+	    new PageStore('$FarmD/wikilib.d/{$FullName}'));
+</pre>
+</div><div class='indent'>See also <a class='urllink' href='http://www.pmwiki.org/wiki/Category/CustomPageStore' rel='nofollow'>CustomPageStore</a>.
+</div><p class='vspace'>:{$LocalDir: The filesystem location of the ''local/'' directory, holding [[local customization(s)]] and [[(PmWiki:)per group customizations]] files.  Typically set in a [[WikiFarm(s)]]'s ''farmconfig.php''.  (Note that farm configuration files always occur in ''$}FarmD/local/farmconfig.php&prime;, regardless of any setting for <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables#LocalDir'><code class='varlink'>&#036;LocalDir</code></a>.)
+</p>
+<div class='vspace'></div><h2>See also</h2>
+<ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables'>Layout Variables</a> for URL layout options
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LinkVariables'>Link Variables</a> - variables that control the display of links in pages
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables'>Edit Variables</a> - variables used when editing pages
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UploadVariables'>Upload Variables</a> - variables used for uploads/attachments
+</li></ul><p> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PagelistVariables'>Pagelist Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SecurityVariables'>Security Variables</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PathVariables' rel='nofollow'>PmWiki:PathVariables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PathVariables-Talk' rel='nofollow'>PmWiki:PathVariables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PathVariables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on January 08, 2015, at 05:58 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

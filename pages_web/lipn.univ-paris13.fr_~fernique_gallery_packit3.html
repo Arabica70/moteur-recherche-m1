@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PackIt!</title>
+    <script>
+// doc : https://www.w3schools.com/js/default.asp
+    const SCALE=50;
+    var canvas;
+    var threeDiscs
+    var ctx;
+ //   var N=1+Math.floor(Math.random() * 164);
+    var N=83;
+    
+    const all_radii = [[0.154700538379251529, 0.414213562373095049], [0.154700538379251529, 0.280776406404415137], [0.154700538379251529, 0.545151042122572688], [0.154700538379251529, 0.533296416660312868], [0.154700538379251529, 0.386106104858538542], [0.414213562373095049, 0.533296416660312868], [0.280776406404415137, 0.414213562373095049], [0.280776406404415137, 0.533296416660312868], [0.280776406404415137, 0.386106104858538542], [0.101020514433643804, 0.154700538379251529], [0.101020514433643804, 0.414213562373095049], [0.101020514433643804, 0.280776406404415137], [0.101020514433643804, 0.545151042122572688], [0.101020514433643804, 0.533296416660312868], [0.101020514433643804, 0.386106104858538542], [0.386106104858538542, 0.414213562373095049], [0.386106104858538542, 0.545151042122572688], [0.386106104858538542, 0.533296416660312868], [0.349198186208549876, 0.552451680903396591], [0.121445475478722674, 0.533296416660312868], [0.0887960255391841563, 0.280776406404415137], [0.130951707187432400, 0.637555977231945793], [0.0475738856157163281, 0.101020514433643804], [0.122612239019470128, 0.545151042122572688], [0.104582251107422635, 0.386106104858538542], [0.0627817202946815402, 0.154700538379251529], [0.108194187554387836, 0.414213562373095049], [0.112756932211843735, 0.637555977231945793], [0.100271927818851696, 0.545151042122572688], [0.0587396061229241589, 0.280776406404415137], [0.0764779270520426225, 0.386106104858538542], [0.0235272127644080235, 0.101020514433643804], [0.0986047319261016842, 0.533296416660312868], [0.0704646739524593198, 0.349198186208549876], [0.0717967697244908259, 0.0784805014496167068], [0.0571909584179366341, 0.0659794596063369027], [0.0843351597143720230, 0.545151042122572688], [0.0156279279702336463, 0.101020514433643804], [0.0597308222931316570, 0.386106104858538542], [0.0540211474075207921, 0.349198186208549876], [0.0550714387192593154, 0.545151042122572688], [0.0102051443364380361, 0.101020514433643804], [0.0390046373387799807, 0.386106104858538542], [0.0352761804100830494, 0.349198186208549876], [0.376571299762771346, 0.699742550952798669], [0.331151043314867762, 0.457156469689586556], [0.386662055694070733, 0.769298403500544498], [0.294092381267183227, 0.320328165466898640], [0.375660537066046562, 0.693796124359600459], [0.351519607547389051, 0.553553067320734910], [0.637945197451569955, 0.792000040246949399], [0.610306293263152793, 0.711747554990752886], [0.651050185882609199, 0.834306042853017440], [0.635014533102744124, 0.786662839819061604], [0.608673091573640297, 0.840201315644043077], [0.616367985367686619, 0.879994427834377776], [0.608352919750364307, 0.838586081031539114], [0.590997312758030803, 0.755568734347419550], [0.321758144746492167, 0.618033988749894848], [0.290477988609663961, 0.514718625761429707], [0.187672642712108627, 0.250000000000000000], [0.193001171434319573, 0.261203874963741443], [0.337336386388065242, 0.674017709104933946], [0.285714285714285714, 0.500000000000000000], [0.224744871391589049, 0.333333333333333333], [0.508858356021725552, 0.593296018955963327], [0.263855780458146667, 0.824850098587685727], [0.185857423631834697, 0.335807554849725171], [0.225106539715640317, 0.532019513393324571], [0.268265998366715787, 0.867106545873734369], [0.141339613190270210, 0.188680335229173958], [0.203274716377117595, 0.413347875706130468], [0.263653565491467979, 0.822964943120327489], [0.253941511070058111, 0.737452780602963003], [0.166312747397789022, 0.263299086070183923], [0.445998946481323396, 0.499691643086758980], [0.568863454452677600, 0.793580425528854854], [0.545069126933275898, 0.729593514636950553], [0.500000000000000000, 0.618033988749894848], [0.291004407231496811, 0.529887598867372557], [0.370613886475475735, 0.807085711629923603], [0.333333333333333333, 0.666666666666666667], [0.249038376398374331, 0.414213562373095049], [0.357117093046857652, 0.753869337559507062], [0.215250437021530197, 0.333333333333333333], [0.374714857587202101, 0.823825879015890098], [0.356275531839902940, 0.750643808536314277], [0.307773698387228124, 0.581454860741966241], [0.167591852654208647, 0.235075644507106806], [0.330870727436824627, 0.658088330263302216], [0.267949192431122706, 0.464101615137754587], [0.165044415620955097, 0.230292578846117922], [0.557834176356743972, 0.691972216846413545], [0.204000332217989591, 0.485190752848450664], [0.248062246553321487, 0.736554958131814120], [0.219223593595584863, 0.561552812808830275], [0.175341123294127840, 0.364736896667050740], [0.262214265146432455, 0.840519106592239798], [0.237537891152274379, 0.667499000439907065], [0.145671849236743436, 0.265449448698383669], [0.233520053018082588, 0.642793739681405637], [0.236587142638926064, 0.661573808990794704], [0.198014939105638317, 0.457696103418106021], [0.275177532879816848, 0.948799485096395612], [0.117184047015321117, 0.188926620791699649], [0.216432006663528120, 0.546813534968236567], [0.166666666666666667, 0.333333333333333333], [0.246875878363465214, 0.728439618110468115], [0.123914110557906728, 0.205569430400590312], [0.496825581401081991, 0.778894406483336798], [0.409603621971198689, 0.490565567457479579], [0.510373180114027585, 0.835555687821101408], [0.399158151877948480, 0.463264316587501278], [0.496006612881432712, 0.775589120063450249], [0.464101615137754587, 0.656546769224165067], [0.561910545219342523, 0.787962594464213811], [0.536428109566216121, 0.723779957591629568], [0.364081600666191579, 0.373318506304923886], [0.534565155169094038, 0.719223593595584863], [0.483738053796394448, 0.601778331440876969], [0.311444953761926090, 0.689841818530919182], [0.245949183901163804, 0.513659986098264996], [0.545480109184478883, 0.733046227080816816], [0.440242604734799153, 0.565682646814842777], [0.196786046655934455, 0.610609382738811244], [0.148125371920172035, 0.423023385758115231], [0.426703873632246776, 0.591038097886382213], [0.309138820064654737, 0.396018902958250792], [0.400692120137819186, 0.476679054764397015], [0.477507044055604658, 0.737119192008158592], [0.425011229060344380, 0.548819554604455665], [0.194145720502372268, 0.575385121578770503], [0.259471295216848699, 0.882603594290253666], [0.240919140645878760, 0.787692560789385252], [0.103129253335369042, 0.253692957768908367], [0.166168703609150106, 0.464796038496168271], [0.252889396954483517, 0.848180825583016791], [0.151397107515757986, 0.410835723572867603], [0.252651224910741303, 0.846950920129200512], [0.228713553878169055, 0.728713553878169055], [0.113036856894603995, 0.283696541145374148], [0.240204793535676543, 0.784166927715887665], [0.208266186867181636, 0.635670694582708408], [0.484497111574535122, 0.865150094997890823], [0.299248244959374161, 0.438404629116061038], [0.468169191758784436, 0.822209677040300027], [0.294232742711225570, 0.415072217728363446], [0.432422645434030688, 0.706661595922310871], [0.496248308979823728, 0.866146505334871323], [0.181626634418670301, 0.225946609219405246], [0.387709325414709550, 0.604594991138659780], [0.295015796051573277, 0.416532373734363272], [0.212460564611961751, 0.357427012887969423], [0.291987313333691865, 0.596437884013012990], [0.305050413672733647, 0.643586232617854170], [0.127731959337750320, 0.175072772407126443], [0.254205052010317533, 0.473302772694006152], [0.181115633698191100, 0.282452086326301644], [0.261819503286043020, 0.632088195726952183], [0.0898202788755453174, 0.216845335437475117], [0.256776953821938977, 0.619914404421775021], [0.144642624683666834, 0.349198186208549876], [0.284405068022730028, 0.533296416660312868], [0.149077924209032760, 0.386106104858538542]];
+    
+    var radii = [all_radii[N-1][0],all_radii[N-1][1],1];
+
+    const prec = 0.0001; // below this floats are considered as 0
+    const colors = ["#e41010","#5599ff","#ffd42a"];
+    var currentDisc = 0;
+    
+    // list (x,y,radius index)
+    var packing = [];
+    
+    function angle(x,y,z)
+    {
+        return Math.acos((Math.pow(y+x,2)+Math.pow(y+z,2)-Math.pow(x+z,2))/2/(y+x)/(y+z))
+    }
+    
+    function free(x,y,r) // is it possible to add here a disc in the packing?
+    {
+        for (i=0; i<packing.length; i++)
+            {
+                if (Math.pow(x-packing[i][0],2)+Math.pow(y-packing[i][1],2)<Math.pow(SCALE*(radii[packing[i][2]]+radii[r]),2)-prec)
+                    return false;
+            }
+        return true;
+    }
+    
+    function neighboor(i,j) // are the discs i and j neighboor in packing?
+    {
+    return Math.abs(Math.pow(packing[j][0]-packing[i][0],2)+Math.pow(packing[j][1]-packing[i][1],2)-Math.pow(SCALE*(radii[packing[i][2]]+radii[packing[j][2]]),2))<prec;
+    }
+    
+    function add(x,y,r)
+    {
+        if (packing.length==1)
+        {
+            // on colle le 2eme disque au premier (selon angle clic)
+            var f=(SCALE*(radii[packing[0][2]]+radii[r]))/Math.sqrt(Math.pow(x-packing[0][0],2)+Math.pow(y-packing[0][1],2));
+            x=packing[0][0]+(x-packing[0][0])*f;
+            y=packing[0][1]+(y-packing[0][1])*f;
+        }
+        if (packing.length>1)
+        {
+            var d1 = 0, d2 = 0, i1, i2;
+            // cherche le disque le plus près
+            for (i=0; i<packing.length; i++)
+            {
+                var di=Math.pow(x-packing[i][0],2)+Math.pow(y-packing[i][1],2)-Math.pow(SCALE*(radii[r]+radii[packing[i][2]]),2);
+                if (d1==0 || di<d1) {d1=di; i1=i}
+            }
+            // cherche le second disque le plus près parmi les voisins du premier
+            for (i=0; i<packing.length; i++)
+            {
+                var di=Math.pow(x-packing[i][0],2)+Math.pow(y-packing[i][1],2)-Math.pow(SCALE*(radii[r]+radii[packing[i][2]]),2);
+                if (i!=i1 && neighboor(i,i1) && (d2==0 || di<d2)) {d2=di; i2=i}
+            }
+//            console.log(i1,i2)
+            // colle dessus            
+            var a=angle(radii[packing[i2][2]],radii[packing[i1][2]],radii[r]);
+            if ((packing[i2][0]-packing[i1][0])*(y-packing[i1][1])-(packing[i2][1]-packing[i1][1])*(x-packing[i1][0])<0)
+                a=-a;            
+            var f = (radii[packing[i1][2]]+radii[r])/(radii[packing[i1][2]]+radii[packing[i2][2]]);
+            var vx=f*(packing[i2][0]-packing[i1][0]);
+            var vy=f*(packing[i2][1]-packing[i1][1]);
+            var vxr=vx*Math.cos(a)-vy*Math.sin(a);
+            var vyr=vx*Math.sin(a)+vy*Math.cos(a);
+            x=packing[i1][0]+vxr;
+            y=packing[i1][1]+vyr;
+        }
+        if (free(x,y,r))
+        {
+            packing.push([x,y,r]);
+            draw(x,y,r);
+//            ctx.strokeText(packing.length-1,x,y);
+        }
+    }
+    
+    // on clique sur un disque existant ?
+    function find(x,y)
+    {
+        for (i=0; i<packing.length; i++)
+        {
+            if (Math.pow(packing[i][0]-x,2)+Math.pow(packing[i][1]-y,2)<Math.pow(Math.round(SCALE*radii[packing[i][2]]),2))
+                return i;
+        }
+        return (-1);
+    }
+    
+    function draw(x,y,r)
+    {
+        ctx.beginPath();
+        ctx.arc(Math.round(x),Math.round(y),Math.round(SCALE*radii[r]), 0, 2 * Math.PI);
+        ctx.strokeStyle = "black";
+        ctx.stroke()
+        ctx.fillStyle = colors[r];
+        ctx.fill();
+    }
+    
+    function erase(x,y,r)
+    {
+        ctx.beginPath();
+        ctx.arc(Math.round(x),Math.round(y),Math.round(SCALE*radii[r]), 0, 2 * Math.PI);
+        ctx.strokeStyle = "white";
+        ctx.stroke()
+        ctx.fillStyle = "white";
+        ctx.fill();
+    }
+    
+    function repaint()
+    {
+        ctx.rect(0,0,canvas.width,canvas.height);
+        ctx.fillStyle = "white";
+        ctx.fill();
+        for (i=0; i<packing.length; i++)
+        {
+            draw(packing[i][0],packing[i][1],packing[i][2]);
+//            ctx.strokeText(i,Math.floor(packing[i][0]),Math.floor(packing[i][1]));
+        }
+    }
+    
+    function clique(e){
+        switch (e.which) {
+            case 1: // clic gauche
+                var x = e.clientX - threeDiscs.offsetParent.offsetLeft - threeDiscs.offsetLeft + window.scrollX;
+                var y = e.clientY - threeDiscs.offsetParent.offsetTop - threeDiscs.offsetTop + window.scrollY;
+                if (x>=0 && x<threeDiscs.width && y>=0 && y<threeDiscs.height)
+                {
+                    currentDisc=Math.floor(x/2/SCALE);
+                    drawCurrentDisc();
+                }
+                var x = e.clientX - canvas.offsetLeft + window.scrollX;
+                var y = e.clientY - canvas.offsetTop + window.scrollY;
+                if (x<0 || x>canvas.width || y<0 || y>canvas.height) break;
+                var i=find(x,y);
+                if (i>=0)
+                {
+//                    erase(packing[i][0],packing[i][1],packing[i][2]);
+                    packing.splice(i,1);
+                    repaint();
+                }
+                else
+                    add(x,y,currentDisc);
+                break
+            default:
+                currentDisc=(currentDisc+1) % 3;
+                drawCurrentDisc();
+        }
+    }
+        
+    function init()
+    {
+        document.getElementById("N").value=N;
+        document.getElementById('N2').innerHTML=N;
+
+        canvas=document.getElementById('canvas');
+        canvas.style.border = "1px solid black";
+        canvas.oncontextmenu = function(){return false}; // pour utiliser le clic droit
+//        canvas.width = 1000;
+//        canvas.height= 600;
+        canvas.width = document.getElementById('table').clientWidth;
+        canvas.height = window.innerHeight-document.getElementById("table").clientHeight-document.getElementById("bouton").clientHeight-30; //30: <br> et <p> dans le body?
+        ctx=canvas.getContext('2d');
+        threeDiscs=document.getElementById('currentDisc')
+        threeDiscs.width = 6*(SCALE+1);
+        threeDiscs.height = 2*(SCALE+1);
+//        document.getElementById('currentDisc').style.border = "1px solid black";
+        drawCurrentDisc();
+        document.onmousedown = clique;
+    }
+
+    function drawCurrentDisc()
+    {
+        var ctx=document.getElementById('currentDisc').getContext('2d');
+        ctx.rect(0,0,6*(SCALE+1),2*(SCALE+1));
+        ctx.fillStyle = "white";
+        ctx.fill();
+        for (i=0; i<3; i++)
+        {
+            ctx.beginPath();
+            ctx.arc(i*2*(SCALE+1)+SCALE,SCALE+1,Math.round(SCALE*radii[i]), 0, 2 * Math.PI);
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.fillStyle = colors[i];
+            ctx.fill();
+        }
+        ctx.beginPath();
+        ctx.rect(currentDisc*2*(SCALE+1),0,2*(SCALE+1),2*(SCALE+1));
+        ctx.stroke();
+    }
+        
+    function reinit()
+    {
+        N=document.getElementById("N").value;
+        document.getElementById('N2').innerHTML=N;
+//        console.log(N);
+        radii = [all_radii[N-1][0],all_radii[N-1][1],1];
+        drawCurrentDisc();
+        packing = [];
+        repaint();
+    }
+    
+    function generateCode()
+    {
+    try{
+        //console.log(packing);
+        var s='[';
+        var c=['s','r','1'];
+        // liste des disques traités
+        var p2=[0];
+        // premier disque
+        s+=c[packing[0][2]]+', ';
+        //ctx.strokeText(0,Math.floor(packing[0][0]),Math.floor(packing[0][1]));
+        // un disque adjacent
+        for (i=1; i<packing.length; i++)
+            if (neighboor(i,0))
+            {
+                p2.push(i);
+                s+=c[packing[i][2]];
+                //ctx.strokeText(i,Math.floor(packing[i][0]),Math.floor(packing[i][1]));
+                break;
+            }
+        var i=1;
+        somethingDone=false;
+        // tant qu'on n'a pas traité tous les disques
+        while (p2.length<packing.length)
+        {
+            // cherche un disque i non traité
+            while (i<packing.length && p2.includes(i)) i+=1;
+            if (i==packing.length) // on a tout essayé ?
+            {
+                if (somethingDone) // si on a traité au moins un disque -> on boucle
+                {
+                    i=1;
+                    somethingDone=false;
+                }
+                else throw("Error: non-compact packing."); // sinon : erreur
+            }
+            else // si i non traité, on lui cherche deux voisins déjà traités et voisins entre eux
+            {
+                var v=[]
+                for (j=0; j<p2.length; j++)
+                {
+                    if (neighboor(i,p2[j])) // p2[j] premier voisin de i
+                    {
+                        for (k=j+1; k<p2.length; k++) // cherche p2[k] voisin de p2[j] et i
+                        {
+                            if (neighboor(p2[k],i) && neighboor(p2[k],p2[j])) v=[p2[j],p2[k]]
+                        }
+                    }
+                }
+                if (v.length==2) // ok triangle trouvé
+                {
+                    // change orientation triangle si indirecte
+                    if ((packing[v[1]][0]-packing[v[0]][0])*(packing[i][1]-packing[v[0]][1])-(packing[v[1]][1]-packing[v[0]][1])*(packing[i][0]-packing[v[0]][0])<0)
+                    {
+                        v.push(v[0]);
+                        v.splice(0,1);
+                    }
+                    // on traite
+                    p2.push(i);
+                    s+=', ('+p2.indexOf(v[0])+','+p2.indexOf(v[1])+','+c[packing[i][2]]+')';
+                    somethingDone=true;
+//                    ctx.strokeText(p2.length-1,Math.floor(packing[i][0]),Math.floor(packing[i][1]));
+                }
+                else i+=1; // sinon : passe aux disques suivants
+            }
+        }
+        s+=']'
+        document.getElementById('code').innerHTML = s;
+    }
+        catch(e) {document.getElementById('code').innerHTML = e;}
+    }
+    </script>
+</head>
+
+    
+<body onload="init();">
+    <table width=100% id="table">
+    <tr>
+    <td colspan=2>
+    <h1 align=center>
+    Compact packings with three sizes of discs
+    </h1>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <canvas id="currentDisc"></canvas>
+    </td>
+    <td align=right>
+    <p>
+    Click to put a new disc.<br>
+    Click on a disc to delete it.<br>
+    Right click to change next disc size.<br><br>
+    Pack discs such that each hole is delimited by only three discs!
+    </p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        Case <input id="N" type="range" max="164" min="1" step="1" onchange="javascript:reinit()">
+        <var id="N2"> </var>
+    </td>
+    <td align=right>
+    <input id="clear" type="button" value="Clear" onclick="javascript:reinit()" >
+    </td>
+    </table>
+    <canvas id="canvas" style="left:50px;"></canvas>
+    </br>
+    <input id="bouton" type="button" value="Generate code" onclick="javascript:generateCode()" >
+    <p id="code"> </p>
+</body>
+ 
+</html>

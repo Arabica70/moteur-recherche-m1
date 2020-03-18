@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--	_________________________________________________
+		_______________ENTETE _________________________
+-->
+<head>
+<!-- jeu de caract&egrave;res -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/lipnPopUp.css">
+<title>Analyse structurelle : les enjeux</title>
+<meta name="author" content="Sophie Toulouse">
+<meta name="date" content="10/29/2004">
+<meta name="keywords" lang="en" content="LIPN, computer sciences, polynomial approximation, differential approximation, local optima">
+<meta name="keywords" lang="fr" content="LIPN, informatique théorique, approximation polynomiale, approximation differentielle, optima locaux">
+<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html">
+</head>
+
+<BODY class="popup">
+
+<p class="popup">
+L'étude structurelle vise à déterminer les propriétés intrinsèques des problèmes qui permettent de garantir (ou, au contrainte, d'interdire) un certain degré d'approximation.<br>
+</p>
+
+<p class="popup">
+Tout d'abord, l'approche locale à partir de voisinages <span class="math">h</span>-bornés&nbsp;: à la lumiére des exemples présentés [MPT03], cette approche pose trois axes d'étude. Quelle est l'influence de la taille du voisinage (ex.&nbsp;: positive pour Max<span class="math">K3</span>-free Partial Subgraph, nulle pour Max<span class="math">k</span>Sat)&nbsp;? Quelle est l'influence des solutions opposées (ex.&nbsp;: pour MinDS, les optima locaux vis-à-vis du voisinage <span class="math">h</span>-borné sont une 0-approximation tandis que la prise en compte de la solution opposée produit une 1/2-approximation&nbsp;; pour Min2CCSP, on améliore le rapport classique d'approximation locaux de 1/4 à 1/3)&nbsp;? Quelle est l'influence de la fonction objectif considérée (ex.&nbsp;: pour Max<span class="math">k</span>Sat, en considérant conjointement les solutions opposées et un objectif altéré, le rapport de <span class="math">k/(k+1)</span> est porté à <span class="math">2k/(2k+1)</span>)&nbsp;? <br>
+</p>
+
+<p class="popup">
+De plus, la diversité des problèmes [MPT03] dont nous avons montré qu'ils avaient des optima locaux de qualité garantie (ex.&nbsp;: MinMS(<span class="math">k</span>) admet un schéma d'approximation et garantit la qualité de ses optima locaux&nbsp;; MinTSP(<span class="math">k</span>) n'admet pas de schéma d'approximation mais garantit la qualité de ses optima locaux&nbsp;; enfin MaxKS(<span class="math">k</span>){0,1}, bien que polynomial, ne garantit pas la qualité de ses optima locaux) incite à poursuivre dans la voie de la caractérisation des problèmes se comportant bien, de par leur modèle mathématique ou leurs propriétés combinatoires, plutôt que d'apporter des réponses de façon isolée. Par exemple, nous avons établi que les problèmes de partitionnement héréditaires ont tous des optima locaux de qualité différentielle garantie&nbsp;; or, cette famillle comporte des problèmes de statut hétérogène vis-à-vis de leur degré d'approximation&nbsp;: MinBP qui admet un schéma différentiel d'approximation, MinC qui "n'est qu"'approximable à rapport constant. Cette volonté de caractérisation a également motivé l'étude des problèmes radiaux.<br>
+</p>
+
+<p class="popup">
+Mais la notion d'optimalité locale pourrait garantir la qualité des solutions au-delà des voisinages de type <span class="math">h</span>-bornés. Par exemple, la couverture d'ensemble considérée dans [BMPS04] est le complémentaire d'un optimum 2-local pour un certain objectif&nbsp;; aller chercher la solution approchée dans un ensemble complémentaire est une voie à systématiser. Autre voie prometteuse&nbsp;: l'identification d'un problème maître "difficile" et d'un sous-problème "facile" quand la solution du problème maître est connue (c'est le cas des problèmes de localisation d'émetteurs et d'arbre couvrant de profondeur&nbsp;<span class="math">k</span>)&nbsp;; alors, appliquer la notion de voisinage au seul problème maître pourrait mener à de nouvelles caractérisations <span class="em">a priori</span> du degré d'approximation des problèmes d'optimisation combinatoire.<br>
+</p>
+
+<p class="popup">
+Enfin, au-delà même de l'approche locale, c'est la confrontation des approches heuristiques simples à des modèles génériques qu'il conviendrait de faire&nbsp;: je pense notamment aux techniques de réparation ou de décomposition, qui s'avèrent souvent très efficaces et dont il semblerait pertinent de généraliser la portée (plutôt, une fois encore, que d'en faire l'analyse pour des problèmes spécifiques).
+
+
+<hr>
+
+<p class="popup">
+[BMPS04] C. Bazgan, J. Monnot, V. Th. Paschos, F. Serrière<br>
+Differential approximations for min set cover<br>
+(soumis)
+</p>
+
+<p class="popup">
+[MPT03] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Approximation polynomiale des problèmes NP-difficiles - Optima locaux et rapport différentiel<br>
+Hermes Science, janvier 2003
+</p>
+
+
+</BODY>
+</HTML>

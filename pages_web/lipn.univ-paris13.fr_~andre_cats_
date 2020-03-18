@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>CATS: Compositional Analysis of Timed Systems</title>
+	<meta name="author" content="The CATS team" />
+	<meta name="description" content="CATS (Compositional Analysis of Timed Systems) is a joint project between Paris 13 (France), HCMUT (Vietnam) and Singapore" />
+	<meta name="keywords" content="CATS, STIC Asie, project, Paris 13, France, Singapore, HCMUT, Vietnam" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="CATS.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<div id="header">
+		<div style="float:right;">
+			<img class="drapeau" src="images/france.png" alt="France" title="France" />
+			<img class="drapeau" src="images/singapore.png" alt="Singapore" title="Singapore" />
+			<img class="drapeau" src="images/vietnam.png" alt="Việt Nam" title="Việt Nam" />
+		</div>
+		<h1><a href="./">CATS</a></h1>
+		<h2>Compositional Analysis of Timed Systems</h2>
+		<h3>STIC Asie project (2013–2014)</h3>
+		<img src="images/cats.jpg" width="1024" alt="CATS" title="'Catcollage1.jpg' by 'Katia from Porto Alegre, Brazil' – Licence CC-BY 2.0" />
+	</div> <!-- end header -->
+	  
+	<div id="menuleft">
+		<ul>
+			<li><a href="./">Home</a></li>
+			<li><a href="meeting1.php">Meeting 1 (April 2013)</a></li>
+			<li><a href="meeting2.php">Meeting 2 (July 2013)</a></li>
+			<li><a href="meeting3.php">Meeting 3 (October 2013)</a></li>
+			<li><a href="achievements.php">Achievements</a></li>
+			<li><a href="bibliography.php">Bibliography</a></li>
+		</ul>
+	</div> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>Participants</h3>
+		<ul>
+			<li><a href="https://lipn.univ-paris13.fr/~andre/">Étienne andré</a></li>
+			<li><a href="http://www.comp.nus.edu.sg/~dongjs/">Dong Jin-Song</a></li>
+			<li>Lê Đình Thuận</li>
+			<li><a href="https://sites.google.com/site/shangweilin/">Lin Shang-Wei (林尚威)</a></li>
+			<li><a href="http://www.ntu.edu.sg/home/yangliu/">Liu Yang (刘杨)</a></li>
+			<li>Nguyễn Hữu Vũ</li>
+			<li><a href="http://www.comp.nus.edu.sg/~nguyent9/">Nguyễn Trường Khanh</a></li>
+			<li><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a> (co-PI)</li>
+			<li><a href="http://www.cse.hcmut.edu.vn/~qttho/doku.php?id=start">Quản Thành Thơ</a> (co-PI)</li>
+			<li><a href="http://www.sutd.edu.sg/faculty/sunj/">Sun Jun</a></li>
+			<li>Wu Zhimin</li>
+		</ul> 
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+		<h2>Overview</h2>
+		
+		<p>This Web page is dedicated to the project CATS (Compositional Analysis of Timed Systems) taking place in 2013−2014.</p>
+		
+		<p>It involves scientists from
+			<a href="http://www.hcmut.edu.vn/">Hồ Chí Minh City University of Technology</a>,
+			<a href="https://lipn.univ-paris13.fr/"><abbr title="Laboratoire d’Informatique de Paris Nord, Sorbonne Paris Cité, Université Paris 13, France">LIPN</abbr></a>,
+			<a href="http://www.ntu.edu.sg/"><abbr title="Nanyang Technology University, Singapore">NTU</abbr></a>,
+			<a href="http://www.nus.edu.sg/"><abbr title="National University of Singapore, Singapore">NUS</abbr></a>
+			and <a href="http://www.sutd.edu.sg/"><abbr title="Singapore University of Technology and Design">SUTD</abbr></a>.</p>
+
+		<p>This project is mainly supported by the <a href="http://www.diplomatie.gouv.fr/fr/enjeux-internationaux/echanges-scientifiques-recherche/partenariats-scientifiques-20601/partenariats-scientifiques-20152/article/technologies-de-l-information-et">STIC Asie program</a> by <a href="http://www.diplomatie.gouv.fr/">Ministère français des affaires étrangères</a> and <a href="http://www.cnrs.fr">CNRS</a>.</p>
+		
+		
+		<h2>Goal</h2>
+		
+		<p>The main challenge for verification is state explosion, viz., the explosion of the number of possible states to consider in order to be able to formally verifying a system. A possible way to reduce state explosion is to consider modular or compositional verification: each subpart of the global system is verified separately and, after some additional operations, one is able to prove the correctness of the global system. Real-time systems are more complex than untimed systems and suffer from clock explosion. Most compositional techniques developed for untimed systems have had very limited success with timed systems.</p>
+		
+
+		<p>Timed automata and time Petri nets are two established modeling formalisms for timed systems. Based on previous work, we shall attempt to combine our expertise to identify a class of timed automata and of time Petri nets, expressive enough to be practical, and that make compositional verification more successful.</p>
+
+		<p>Collaboration is sought on both the theory and tool implementation, and these techniques and algorithms should be implemented. Different tools developed at LIPN and at NUS can be used as a basis for our implementations.</p>
+
+		<p>Evaluation of our techniques will be performed in the framework of automated assistance of frail aging people, in collaboration with Singapore hospitals.</p>
+
+
+
+
+
+	<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+ 
+ 
+
+	<div style="text-align:center; margin-top:50px">
+		<p>
+			<a href="http://www.diplomatie.gouv.fr/fr/enjeux-internationaux/echanges-scientifiques-recherche/partenariats-scientifiques-20601/partenariats-scientifiques-20152/article/technologies-de-l-information-et"><img src="images/republique-francaise.png" height="80" alt="STIC Asie" title="STIC Asie" style="margin-right:50px" /></a>
+		
+			<a href="http://www.cnrs.fr"><img src="images/cnrs.jpg" height="80" alt="Centre National de la Recherche Scientifique, France" title="Centre National de la Recherche Scientifique, France"/></a>
+
+		</p>
+		
+		<p>
+			<a href="http://www.hcmut.edu.vn/"><img src="images/hcmut.gif" height="50" alt="Hồ Chí Minh City University of Technology" title="Hồ Chí Minh City University of Technology" style="margin-right:10px" /></a>
+
+			<a href="http://lipn.univ-paris13.fr/"><img src="images/lipn.jpg" height="50" alt="Laboratoire d’Informatique de Paris Nord, Sorbonne Paris Cité, Université Paris 13, France" title="Laboratoire d’Informatique de Paris Nord, Sorbonne Paris Cité, Université Paris 13, France" style="margin-right:10px" /></a>
+			
+			<a href="http://www.ntu.edu.sg/"><img src="images/ntu.jpg" height="50" alt="Nanyang Technology University, Singapore" title="Nanyang Technology University, Singapore" style="margin-right:10px" /></a>
+			
+			<a href="http://www.nus.edu.sg/"><img src="images/nus.jpg" height="50" alt="National University of Singapore, Singapore" title="National University of Singapore, Singapore" style="margin-right:10px" /></a>
+			
+			<a href="http://www.sutd.edu.sg/"><img src="images/sutd.jpg" height="50" alt="Singapore University of Technology and Design" title="Singapore University of Technology and Design"/></a>
+		</p>
+	
+	</div>
+		
+		
+	<div id="footer">
+		<p>Design: <a href="https://lipn.univ-paris13.fr/~andre/">Étienne andré</a> (Creative Commons CC-BY-NC 3.0)</p>
+		<p>This page makes use of
+		<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+			and
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+	</div> <!-- end footer -->
+	
+</div> <!--end container-->
+
+</body>
+</html>
+ 

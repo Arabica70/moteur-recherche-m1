@@ -1,0 +1,211 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Incremental construction of Alpha lattices</title>
+    <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/">
+    <style type="text/css" title="Amaya theme">
+/* Modern style for Amaya Editor Lite */
+
+/* default rules for the whole document */
+body {
+    font-size: 12pt;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+    background-color: white;
+    line-height: 1.2em;
+    margin-left: 4em;
+    margin-right: 2em;
+   }
+
+/* paragraphs */
+p  {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+   }
+
+/* headings */
+h1 {
+    font-size: 180%;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;
+    text-align: left;
+    padding: 0;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+   }
+h2 {
+    font-size: 150%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.1em;
+   }
+h3 {
+    font-size: 130%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.3em;
+    margin-bottom: 1.1em;
+   }
+h4 {
+    font-size: 110%;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+   }
+h5 {
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+/* divisions */
+div {
+    padding: 0;
+    margin-top: 0em;
+    margin-bottom: 0em;
+   }
+
+/* lists */
+ul, ol {
+    padding: 0 0 0 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+li {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+   }
+li p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+dl {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+   }
+dl dl {
+    margin-top: 0em;
+    margin-bottom: 0em;
+   }
+dt {
+    padding: 0;
+    font-weight: bold;
+    margin-top: .3em;
+    margin-bottom: .3em;
+   }
+dd {
+    padding: 0;
+    margin-top: .3em;
+    margin-left: 3em;
+    margin-bottom: .3em;
+   }
+dl p {
+    margin-top: .3em;
+    margin-bottom: .3em;
+   }
+
+/* inline */
+strong {
+    font-weight: bold;
+   }
+em {
+    font-style: italic;
+   }
+code {
+    font-family: Courier New, Courier, monospace;
+   }
+ins {
+    background-color: yellow;
+    text-decoration: underline;
+   }
+del {
+    text-decoration: line-through;
+   }
+
+/* anchors */
+a[href] {
+    color: blue;
+    text-decoration: underline;
+   }
+
+/* end */
+  </style>
+  </head>
+  <body>
+    <h1>Incremental construction of Alpha lattices </h1>
+    <p>The current version of the extension of Galicia is to be found
+      in:</p>
+    <ul>
+      <li><a href="./software/AlphaCAP2010.jar">jar file</a> for direct
+        testing (New version, used for demonstration at <a
+          href="http://cap10.isima.fr/index.php?page=programme">CAP 2010</a>)</li>
+      <li>a <a href="./datasets/animaux.rcf">simple dataset</a>
+        (animals) for testing</li>
+    </ul>
+    <p>To experiment incremental construction of alpha lattices and
+      corresponding rules:</p>
+    <ul>
+      <li>open a relational family (.rcf) as <a
+          href="./datasets/essayFlyPartition.rcf">essayFlyPartition.rcf</a></li>
+      <li>menu alpha - item "show alpha window"</li>
+      <li>select an alpha value (e.g. 60%) (corresponding to a minsupp
+        threshold for frequent lattices of each relation)</li>
+      <li>select one or several relations on the leftmost table (e.g.
+        mammals, animals, insects)</li>
+      <li>button "build lattice" to build the lattices</li>
+      <li>select the lattices built on the rightmost table</li>
+      <li>button "show lattice" to see the lattices (in separate
+        windows) (right click on each node to see the intents (frequent
+        closed terms), the frequent extents</li>
+      <li> button "merge lattice" to merge these frequent lattices and
+        obtain the corresponding alpha lattice</li>
+      <li>button "generators" to build the generators (minimal terms for
+        each node), necessary for rules</li>
+      <li>button "generic basis" to obtain the exact rules (previously
+        define minimal support for rules)
+        (a rule from a generator to a closed term of the same node)</li>
+      <li>button "informative basis" to obtain the approximate rules
+        (previously also define confidence support for rules)
+        (approximate rules from a generator of a node to a closed term
+        to another, lower, node)
+        <br>
+        (note that there is a bug that makes sometimes appears rules
+        with support lower than minsupp)</li>
+      <li>button "show lattice" to see the alpha lattice) (right click
+        on each node to see the intent I(alpha closed terms), the alpha
+        extent E, and the set of generators G))</li>
+    </ul>
+    <p></p>
+  </body>
+</html>

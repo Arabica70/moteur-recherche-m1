@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>Exercises - C# Graphical Interface</title>
+<style type="text/css">
+
+
+body {
+	/* font-family: "Adobe Caslon Pro", "Minion Pro", serif; */
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 13pt;
+	background-color: #eee;
+}
+
+table {
+	background-color: #f8f8ff;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #ccc solid;
+}
+
+th, td {
+	padding: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px #aaa solid;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+th {
+	background-color: #eef;
+	text-align: left;
+}
+
+.document {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	width: 900px;
+	background-color: white;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+}
+
+.large {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.med {
+	font-size: 120%;
+}
+
+.cmd {
+	border: 1pt #ccc solid;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	background-color: #fee;
+   font-family: monospace;
+	font-weight: bold;
+	/* font-size: 110%; */
+}
+
+
+.literal-block {
+	border: 1px #999 dashed;
+	padding: 5px;
+	background-color: #e8e8e8;
+}
+
+.literal {
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #e8e8e8;
+}
+
+.exercise {
+	font-weight: bold;
+	border: 1pt #ccc solid;
+	background-color: #efe;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+}
+
+.update {
+	font-size: 65%;
+   text-align: right;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="exercises-c-graphical-interface">
+<h1 class="title">Exercises - C# Graphical Interface</h1>
+
+<p><span class="update">(last update: Thu Sep 29 08:33:19 CEST 2016)</span></p>
+<div class="section" id="exercise-the-ecologist-programmer-s-pet">
+<h1>1&nbsp;&nbsp;&nbsp;Exercise - The Ecologist Programmer's Pet</h1>
+<p>Write an application that displays a main (modal) form.
+The form will contain:</p>
+<ul class="simple">
+<li>One <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.button%28v=vs.110%29.aspx">Button</a>, labelled &quot;New question&quot;</li>
+<li>Four <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.label%28v=vs.110%29.aspx">Label</a></li>
+</ul>
+<p>When the user clicks on the button, your application will display a second
+(modal) form showing:</p>
+<ul class="simple">
+<li>One <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.groupbox%28v=vs.110%29.aspx">GroupBox</a> (labelled &quot;Pet&quot;) containing three <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.radiobutton%28v=vs.110%29.aspx">RadioButton</a>,
+labelled &quot;Cat&quot;, &quot;Dog&quot;, &quot;Platypus&quot;.</li>
+<li>One <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.checkbox%28v=vs.110%29.aspx">CheckBox</a> labelled &quot;Are you an ecologist?&quot;.</li>
+<li>One <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.combobox%28v=vs.110%29.aspx">ComboBox</a> (labelled &quot;Choose favorite language&quot;) displaying a
+(non-editable) list of programming languages: &quot;C&quot;, &quot;C#&quot;, &quot;Java&quot;, &quot;Python&quot;.</li>
+<li>Two <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.button%28v=vs.110%29.aspx">Button</a>, &quot;Accept&quot;, and &quot;Cancel&quot;.</li>
+</ul>
+<p>If the user clicks on &quot;Cancel&quot;:</p>
+<ul class="simple">
+<li>the second form will close and one of the four <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.label%28v=vs.110%29.aspx">Label</a> in the first form will
+show &quot;User cancelled&quot;.</li>
+</ul>
+<p>If the user clicks on &quot;Accept&quot;:</p>
+<ul class="simple">
+<li>one of the labels will show &quot;Accepted&quot;, and the remaining three will show the
+pet, the choice, and the programming language selected by the user.</li>
+</ul>
+</div>
+<div class="section" id="exercise-timer">
+<h1>2&nbsp;&nbsp;&nbsp;Exercise - Timer</h1>
+<p>We will write an application making use of the <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.Timer%28v=vs.110%29.aspx">Timer</a> component.
+Our application will have one single main window, with two buttons, labelled
+&quot;Start&quot; and &quot;Stop&quot;. It will also have one <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.label%28v=vs.110%29.aspx">Label</a> that will display a number.</p>
+<p>When the user clicks on &quot;Start&quot;, the application will start a timer that tick 4
+times per second.
+Every time the <tt class="docutils literal">Tick</tt> event arrives, the application will increment
+the number displayed by the label.
+When the user clicks on &quot;Stop&quot;, the number on screen stop incrementing.</p>
+</div>
+<div class="section" id="exercise-background-worker-progress-bar">
+<h1>3&nbsp;&nbsp;&nbsp;Exercise - Background Worker + Progress Bar</h1>
+<p>Write an application which displays one single form with two buttons, one
+progress bar and one label.
+The buttons will start and stop a background worker (<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.backgroundworker%28v=vs.110%29.aspx">BackgroundWorker</a>) which
+will execute the following code:</p>
+<pre class="literal-block">
+for i from 1 to 1000
+  sleep 500 milliseconds
+  report progress
+</pre>
+<p>Buttons:</p>
+<ul class="simple">
+<li>&quot;Start&quot;: it will start the background worker</li>
+<li>&quot;Stop&quot;: it will stop the background worker</li>
+</ul>
+<p>Progress bar:</p>
+<ul class="simple">
+<li>Whenever the worker reports progress, advance the progress bar</li>
+</ul>
+<p>Label :</p>
+<ul class="simple">
+<li>It will display the value of variable <tt class="docutils literal">i</tt> in the loop</li>
+</ul>
+<p>Extra: fix the window size to 500 pixels (horizontally) and 200 pixels
+(vertically), and prevent the user from resizing the window</p>
+</div>
+<div class="section" id="exercise-picture-display-with-zoom">
+<h1>4&nbsp;&nbsp;&nbsp;Exercise - Picture Display with Zoom</h1>
+<p>We will write a program that can display images in BMP format.
+It will have a menu bar with the following entries:</p>
+<ul class="simple">
+<li>&quot;File&quot;, with submenus &quot;Open ...&quot; and &quot;Quit&quot;</li>
+<li>&quot;Help&quot;, with submenus &quot;Help&quot; and &quot;About&quot;</li>
+</ul>
+<div class="line-block">
+<div class="line">File &gt; Open will display an <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.openfiledialog%28v=vs.110%29.aspx">OpenFileDialog</a> and load the picture.</div>
+<div class="line">File &gt; Quit will terminate the application</div>
+<div class="line">Help &gt; Help will show an information message (<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.messagebox%28v=vs.110%29.aspx">MessageBox</a>) saying that there is no help to show</div>
+<div class="line">Help &gt; About will show your name</div>
+</div>
+<p>The window will have a status bar (<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.windows.forms.StatusStrip%28v=vs.110%29.aspx">StatusStrip</a>) showing the
+coordinates of the mouse as you move it over the picture.</p>
+<p>A mouse click with the left button will zoom in,
+a right click will zoom out.</p>
+</div>
+</div>
+</body>
+</html>

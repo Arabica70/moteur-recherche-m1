@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--	_________________________________________________
+		_______________ENTETE _________________________
+-->
+<head>
+<!-- jeu de caract&egrave;res -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/lipnPopUp.css">
+<title>Rapport différentiel : les enjeux</title>
+<meta name="author" content="Sophie Toulouse">
+<meta name="date" content="10/29/2004">
+<meta name="keywords" lang="en" content="LIPN, computer sciences, polynomial approximation, differential approximation, local optima">
+<meta name="keywords" lang="fr" content="LIPN, informatique théorique, approximation polynomiale, approximation differentielle, optima locaux">
+<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html">
+</head>
+
+<BODY class="popup">
+
+<h3 class="alt">Ce qui motive le différentiel</h3>
+<p class="popup">
+Si la littérature classique est très fournie, en revanche la connaissance des classes d'approximation différentielle reste insatisfaisante. Or, une telle connaissance semble fondamentale&nbsp;:
+<br>
+<br>
+-	Premièrement, la référence à la pire solution rend pertinent le degré d'approximation, tandis qu'en classique, un rapport constant d'approximation peut situer la valeur d'une solution approchée <span class="em">en-deçà</span> de la pire solution, mettant à défaut la notion de garantie de performance.
+<br>
+<br>
+-	Deuxièmement, il est mathématiquement satisfaisant que les problèmes 
+</p>
+<p class="math">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#928;&nbsp;:&nbsp;{max f(<span class="math">x</span>) | <span class="math">x</span> &#8712; <span class="math">X</span>}	et 	&#928;(<span class="math">k</span>, <span class="math">K</span>)&nbsp;:&nbsp;{max  <span class="math">k</span>f(<span class="math">x</span>) + <span class="math">K</span> | <span class="math">x</span> &#8712; <span class="math">X</span>} (pour <span class="math">k</span> > 0)	<br>
+ou &#928;&nbsp;:&nbsp;{max f(<span class="math">x</span>) | <span class="math">x</span> &#8712; <span class="math">X</span>}	et 	&#928;(<span class="math">k</span>, <span class="math">K</span>)&nbsp;:&nbsp;{min   <span class="math">k</span>f(<span class="math">x</span>) + <span class="math">K</span> | <span class="math">x</span> &#8712; <span class="math">X</span>} (pour <span class="math">k</span> < 0)
+</p>
+<p class="popup">
+soient équivalents à approcher (ce qui n'est pas le cas en classique).
+
+Ainsi, le rapport différentiel, non seulement offre une interprétation plus robuste de la notion de garantie de performance, mais apporte également une vision réduite de la classe des problèmes difficiles d'optimisation combinatoire par la relation d'équivalence induite par la transformation affine.
+</p>
+
+<h3 class="alt">Les enjeux en différentiel</h3>
+
+<p class="popup">
+La classification des problèmes, d'optimisation, de décision de comptage etc., est l'enjeu majeur de la théorie de la complexité. En approximation différentielle, la connaissance est encore insatisfaisante, et ce notamment concernant des grandes familles de problème tels les problèmes de logique&nbsp;: en effet, les seuls résultats connus à ce jour sont très faibles, puisque d'un côté, la restriction de Max2CCSP aux instances sur lesquelles la pire affectation satisfait au plus l clauses est 1/3-approximable [MPT03], tandis que de l'autre, MaxSat et MinSat sont non approximables à rapport différentiel constant [BP02], [MPT03].
+</p>
+
+<p class="popup">
+Une limite à laquelle nous sommes confrontés aujourd'hui pour la classification différentielle est celle du manque d'outils pertinents de réduction. D'une part, on parvient à transporter les schémas (non complets) d'approximation (très joli résultat de [ABDP03]), d'autre part, l'approximation à rapport dépendant de la taille de l'instance [BEP04]&nbsp;; mais on ne sait pas (en dehors de relations triviales) transporter le degré constant d'approximation. La raison essentielle de ces résistances est que les outils actuels se fondent sur la seule évaluation des solutions et non sur la structure des problèmes&nbsp;; or, le rapport différentiel est très exigeant et demande, pour rapprocher deux problèmes vis-à-vis de leur degré d'approximation, une similitude de leurs domaines de solutions. Aussi, demander une relation en termes de valeur est trop pauvre par rapport à la réalité du lien qui se cache derrière deux problèmes réductibles l'un à l'autre.
+</p>
+
+<p class="popup">
+&Agrave; l'état actuel des connaissances, les réductions connues sont essentiellement des réductions affines (bien que plusieurs réductions continues ont malgré tout été proposées), c'est-à-dire que les deux problèmes que l'on rapproche ne diffèrent finalement que par une transformation affine de leur fonction objectif&nbsp;; or, c'est justement la stabilité du rapport différentiel sous transformation affine de la fonction objectif qui en a motivé l'étude. En ce sens, ces réductions sont non pertinentes&nbsp;: la définition même du rapport différentiel réduit la classe des problèmes difficiles d'optimisation combinatoire sous la relation d'équivalence induite par la transformation affine.<br>
+</p>
+
+<p class="popup">
+Pour ces raisons, l'identification de conditions nécessaires et suffisantes d'ordre structurel permettrait de lever certaines de ces résistances et permettrait certainement, d'une part, de déterminer des problèmes complets pour l'approximation différentielle à rapport constant, d'autre part,  de  décider du statut de certains problèmes de logique et plus généralementr, de problèmes de la classe MaxSNP. Le but d'une telle démarche n'est pas de multiplier les outils mais, au contraire, de s'arrêter aux conditions strictement nécessaires à la propagation d'une structure ou d'une valeur
+</p>
+
+<hr>
+
+<p class="popup">
+[ABDP03] G. Ausiello, C. Bazgan, M. Demange, V. Th. Paschos,<br>
+Completeness in differential approximation classes (extended abstract), <br>
+Proc. MFCS'03, LNCS, Springer-Verlag, 2003
+</p>
+
+<p class="popup">
+[BEP04] C. Bazgan, B. Escoffier, V. Th. Paschos,<br>
+Poly-APX- and PTAS-completeness in standard and differential approximation (extended abstract)<br>
+Proc. ISAAC'04, LNCS, Springer-Verlag, 2004
+</p>
+
+<p class="popup">
+[BP02] C. Bazgan, V. Th. Paschos,<br>
+Differential approximation for optimal satisfiability and related problems,<br>
+Proc. Balkan Conference on Operational Research, 2002.
+</p>
+
+<p class="popup">
+[MPT03] J. Monnot, V. Th. Paschos, S. Toulouse,<br>
+Approximation polynomiale des problèmes NP-difficiles - Optima locaux et rapport différentiel<br>
+Hermes Science, janvier 2003
+</p>
+
+
+</BODY>
+</HTML>

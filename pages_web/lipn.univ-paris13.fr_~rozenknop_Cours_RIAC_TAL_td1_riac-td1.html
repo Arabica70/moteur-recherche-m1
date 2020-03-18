@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-09-14 mer. 18:08 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Introduction au Traitement Automatique des Langues / TD 1</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Joseph Leroux, révisé par Antoine Rozenknop" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Introduction au Traitement Automatique des Langues / TD 1</h1>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">1</span> Mise en jambe : <i>les noms de bébés</i></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La sécurité sociale des États-Unis publie les prénoms les plus
+donnés par année de naissance (cf. <a href="http://www.socialsecurity.gov/OACT/babynames/">site</a>).
+</p>
+
+<p>
+Vous trouverez dans le <a href="http://lipn.univ-paris13.fr/~rozenknop/Cours/RIAC_TAL/td1/babies">répertoire du TD</a> des pages html
+<code>baby1993.html</code>, <code>baby1994.html</code> &hellip; telles qu'elles sont fournies par
+l'administration américaine.
+</p>
+
+<p>
+Regardez ces fichiers pendant quelque temps et essayez d'imaginer
+comment on peut extraire l'information du format html.
+</p>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1"><span class="section-number-3">1.1</span> Première partie</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Dans le fichier <a href="./noms2bebe.py"><code>noms2bebe.py</code></a>, complétez la fonction
+<code>extraire_noms(nom_fichier)</code> qui prend en entrée un nom de fichier et
+qui renvoie une liste de données. Cette liste, de la forme
+<code>['2006', 'Aaliyah 91', 'Abagail 895', 'Aaron 57', ...]</code> contient
+en première position l'année, puis des chaînes de la forme "<code>Prénom
+   rang</code>" triées dans l'ordre alphabétique.
+</p>
+
+<p>
+Cette liste contient les prénoms masculins et féminins. Comme
+certains prénoms sont unisexes, ils peuvent être présents plusieurs
+fois dans le fichier html. Faites en sorte que dans ce cas, la
+liste ne contienne que l'entrée de rang minimal.
+</p>
+
+<p>
+La fonction <code>main()</code> appelle la fonction <code>extraire_noms()</code> sur
+chacun des arguments de la ligne de commande et affiche son
+résultat. Pour afficher la liste retournée par <code>extraire_noms</code>, on
+peut utiliser une instruction de la forme :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">texte = '\n'.join(liste) + '\n'
+</pre>
+</div>
+
+<p>
+Le texte affiché doit être de la forme :
+</p>
+
+<pre class="example">
+2006
+Aaliyah 91
+Aaron 57
+Abagail 895
+Abbey 695
+Abbie 650
+...
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2"><span class="section-number-3">1.2</span> Deuxième partie</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Au lieu d'écrire le texte sur la sortie standard, on peut vouloir
+l'écrire dans un fichier. Faites en
+sorte que si le programme <code>noms2bebe.py</code> est appelé
+avec le drapeau <code>--summaryfile</code>, alors pour chaque fichier
+<code>foo.html</code> passé en arguments de la ligne de commande, il écrive sa
+liste de prénoms dans le fichier 
+<code>foo.html.summary</code>.
+</p>
+
+
+<p>
+Une fois le programme modifié, essayez de générer tous les
+fichiers d'un coup :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-bash">python ./noms2bebe.py --summaryfile baby*.html
+</pre>
+</div>
+
+<p>
+On peut ensuite voir l'évolution des prénoms au fil du temps :
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-bash">grep 'Aaron' *.summary
+</pre>
+</div>
+
+<p>
+On peut maintenant utiliser ces données pour créer un fichier CSV
+pour un tableur, pour créer des graphiques etc.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">2</span> Distance d'édition</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Écrivez un programme qui définit la fonction <code>distance_dl(s1,s2)</code>
+qui calcule la distance d'édition de Damerau-Levenshtein entre la
+chaîne s1 et la chaîne s2.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">3</span> Expressions régulières et psychanalyse</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Lancez l'éditeur de texte emacs puis entrez la commande 
+'<code>Alt + x doctor</code>'. Essayez de comprendre comment les expressions
+régulières sont utilisées.
+</p>
+
+<hr  />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Joseph Leroux, révisé par Antoine Rozenknop</p>
+<p class="date">Created: 2016-09-14 mer. 18:08</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

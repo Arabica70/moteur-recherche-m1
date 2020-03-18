@@ -1,0 +1,116 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="Author" content="Jean-Yves Moyen">
+   <title>MSCA project Walgo</title>
+</head>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000FF" vlink="#FF0000" alink="#000088">
+
+<center><b><font size=+2>Jean-Yves Moyen</font></b>
+<br><b><font size=+1>MSCA project Walgo</font></b>
+<p><br>
+<p>E-mail: Jean-Yves.Moyen `at` lipn.univ-paris13.fr
+</center>
+
+<hr>
+
+From September 2015 to August 2017, I was a MSCA fellow funded by
+grant number 65522 "Walgo". Here is the list of publications and work
+done during that period.
+
+<h5>Habilitation Thesis</h5>
+I submitted my Habilitation thesis (Danish <i>Doktordisputats</i>,
+equivalent to the French <i>Habilitation à Diriger des Recherches</i>)
+in February 2017.
+<br><a href="papers/Habilitation_JY_Moyen.pdf">Implicit Complexity, in
+    Theory and Practice</a>
+
+
+<h5>Equivalences between programs</h5>
+Walgo focused on the study of the equivalences between programs,
+assuming that "implementing the same Algorithm" is such an equivalence
+and trying to get insights into it.
+
+<ul>
+  <li>James Avery, <b>Jean-Yves Moyen</b>, Jakob Grue Simonsen, Pavel
+  Růžička,
+    <a href="papers/AMRS-lattice.pdf">Chains, Antichains, and
+      Complements in Infinite Partition Lattices</a>, under revision
+    at <i>Algebra Universalis</i>.
+  </li>
+
+  <li><b>Jean-Yves Moyen</b>, Jakob Grue Simonsen,
+    <a href="papers/MS-Dice16.pdf">More intensional versions of Rice’s
+    Theorem</a>, <i>Dice 2016</i>
+    (<a href="papers/MS-Dice16-slides.pdf">slides</a>).
+  </li>
+
+  <li><b>Jean-Yves Moyen</b>, Jakob Grue Simonsen,
+    <a href="papers/MS-Dice17.pdf">Computability in the Lattice of
+    Equivalence Relations</a>, <i>Dice
+    2017</i> (<a href="papers/MS-Dice17-slides.pdf">slides</a>).
+  </li>
+</ul>
+
+<h5>Implicit Complexity and Compilation</h5>
+I supervised the PhD. of Thomas Rubiano, working on bringing ideas
+from Implicit Complexity into the mainstream compiler LLVM.
+<ul>
+  <li><b>Jean-Yves Moyen</b>, Thomas Rubiano,
+    <a href="papers/MR-Dice16.pdf">Detection of Non-Size Increasing
+      Programs in Compilers</a>, <i>Dice 2016</i>.
+  </li>
+
+  <li><b>Jean-Yves Moyen</b>, Thomas Rubiano, Thomas Seiller,
+    <a href="papers/MRS-Dice17.pdf">Loop Quasi-Invariant Chunk
+    Motion</a>, <i>Dice 2017</i>.
+  </li>
+
+  <li><b>Jean-Yves Moyen</b>, Thomas Rubiano, Thomas Seiller,
+    <a href="papers/MRS-ATVA17.pdf">Loop Quasi-Invariant Chunk
+    Motion</a>, <i>ATVA 2017</i>.
+  </li>
+</ul>
+
+<h5>Formal Proofs of Implicit Complexity</h5>
+We made a formal proof (in the proof assistant Coq) of my former
+result on Quasi-Interpretations.
+<ul>
+  <li>Hugo Ferée, Samuel Hym, Micaela Mayero, <b>Jean-Yves Moyen</b>,
+  David Nowak, <a href="papers/FHMMN-Coq.pdf">Formal Proof of
+  Polynomial-Time Complexity with Quasi-Interpretations</a>,
+  <i>CPP 2018</i>.
+  </li>
+</ul>
+
+<h5>Miscellaneous</h5>
+
+Some technical stuff I've done during that time frame, not directly
+related to Walgo but still of interest. All this
+is <a href="http://creativecommons.org/licenses/by-nc/4.0">@CC
+BY-NC</a> and comes with no warranty. Use at your own risk.
+
+<ul>
+  <li>I wrote a <a href="../MSCA2014">LaTeX template</a> for the MSCA
+    application.<br> The EU only provides a Word template and I'm way
+    more comfortable using LaTeX. So I made this template. Beware that
+    it was done for the 2014 application and the template has changed
+    since, hence you'll need to adapt it to the current application.
+  </li>
+
+  <li>I toyed with <i>Optional Contents Groups</i> to try and
+  implement working <a href="../Hypertext_proof">Hypertext proofs</a>
+  in LaTeX, following some ideas by Leslie Lamport on Structured
+  proofs.
+  </li>
+
+  <li>I toyed with ways to implement a
+  truly <a href="../Unicode_keyboard">Unicode keyboard</a> that
+  doesn't use long sequences of keys to input potentially tens of
+  thousand of various characters.
+  </li>
+</ul>
+
+</body>
+</html>

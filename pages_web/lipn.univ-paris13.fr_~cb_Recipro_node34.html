@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>R&#233;sidus d&#233;mocratiques</TITLE>
+<META NAME="description" CONTENT="R&#233;sidus d&#233;mocratiques">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node33.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html510"
+ HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html507"
+ HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html501"
+ HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html509"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html511"
+ HREF="node35.html">Crit&#232;re de P&#233;pin sur</A>
+<B> Up:</B> <A NAME="tex2html508"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<B> Previous:</B> <A NAME="tex2html502"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00710000000000000000">
+R&#233;sidus d&#233;mocratiques</A>
+</H1>
+Hardy ne pouvait deviner que, peu de temps apr&#232;s sa mort, l'av&#232;nement de
+ l'informatique devait d&#233;mentir ses propos, &#224; un
+point tel, qu'aux USA, les militaires ont interdit la divulgation de certaines
+ avanc&#233;es en th&#233;orie des nombres, les classant comme
+``technologies sensibles''. L'inventeur, en 1984, du programme de codage
+ <I>Pretty Good Privacy</I>, Philipp Zimmermann est m&#234;me menac&#233; de prison 
+pour avoir distribu&#233; (librement) son programme en dehors des USA via Internet.
+ En France, les outils servant au codage des informations sont toujours 
+consid&#233;r&#233;s comme des ``armes de guerre de deuxi&#232;me cat&#233;gorie qui 
+peuvent mettre en p&#233;ril la D&#233;fense et la S&#233;curit&#233; nationale'' 
+[Science et Vie Micro d'avril 1997]. Ainsi, l'auteur de ce TER, pour avoir 
+consciencieusement appliqu&#233; une d&#233;marche scientifique d'exp&#233;rimentation
+ de P.G.P., est passible d'une amende de 6000 &#224; 300 000F et/ou 1 &#224; 3 mois 
+d'emprisonnement (confer les lois du 29/12/90, 11/07/91 et 28/12/92). Dans la
+ plupart des autres pays, l'utilisation est d&#233;sormais l&#233;gale, seule 
+l'exportation est parfois interdite, aux &#201;tats-Unis par exemple.
+<P>
+Rappelons la recette du syst&#232;me de codage &#224; clef publique R.S.A., invent&#233; 
+par Ron Rivest, Adi Shamir et Len Adleman en 1977&nbsp;:
+prenez deux nombres premiers <I>p</I> et <I>q</I>&nbsp;; vous obtenez ainsi un entier <I>n</I>=<I>pq</I>.
+Prenez maintenant un entier <I>e</I>, qui est appel&#233; la clef, tel que 
+<IMG WIDTH="101" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.gif"
+ ALT="$2<e<\varphi(n)$"> et qui soit &#233;tranger avec <IMG WIDTH="165" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img254.gif"
+ ALT="$\varphi(n)=(p-1)(q-1)$">&nbsp;;
+on peut donc appliquer le th&#233;or&#232;me de B&#233;zout pour trouver 
+<IMG WIDTH="102" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.gif"
+ ALT="$1<d<\varphi(n)$"> et <I>k</I> tels que <IMG WIDTH="118" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img256.gif"
+ ALT="$ed+\varphi(n)k=1$">.Vous rendez publics <I>n</I> et <I>d</I> (par exemple, ils peuvent &#234;tre mis dans 
+l'annuaire &#224; c&#244;t&#233; de votre num&#233;ro de t&#233;l&#233;phone).
+La formule magique <IMG WIDTH="135" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img257.gif"
+ ALT="$M^{ed} {\ \bmod \ } n=M$"> (cons&#233;quence du th&#233;or&#232;me 
+d'Euler <IMG WIDTH="129" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img258.gif"
+ ALT="$a^{\varphi(n)} \equiv 1 {\ \bmod \ } n$">)est alors &#224; la base de ce codage. D&#232;s ce moment, on peut vous envoyer 
+un message par <IMG WIDTH="123" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img259.gif"
+ ALT="$C=M^d {\ \bmod\ } n$"> que vous seul pourrez d&#233;crypter
+en calculant <IMG WIDTH="123" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img260.gif"
+ ALT="$C^e {\ \bmod\ } n=M$">, de plus, vous pouvez certifier que vous 
+&#234;tes bien l'auteur de vos messages par <IMG WIDTH="117" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img261.gif"
+ ALT="$C=M^e {\bmod \ } n$">, vous seul 
+pouvant fournir un tel C, ce que tout chacun pourra v&#233;rifier
+ en calculant <IMG WIDTH="123" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img262.gif"
+ ALT="$C^d {\ \bmod \ } n=M$">.<P>
+Il ne faut pas n&#233;gliger la cryptographie comme fondement math&#233;matique des 
+d&#233;mocraties de demain, on peut penser non seulement, comme c'est d&#233;j&#224; 
+le cas depuis une vingtaine d'ann&#233;e, aux applications bancaires,
+et aux &#233;changes, plus r&#233;cents, de courrier avec signature num&#233;rique
+ mais &#233;galement
+&#224; des possibilit&#233;s de d&#233;mocraties directes avec vote &#233;lectronique.
+Nombreux sont les pessimistes qui craignent une soci&#233;t&#233; 
+``Big Brotheris&#233;e'' et d'autres, pour un point de vue tout &#224; fait oppos&#233;,
+semblant raviver le poncif anarchistes versus ultras&#233;curitaires, avancent que 
+ces outils de confidentialit&#233; serviront avant tout &#224; des organisations
+ mafieuses. Ils pourront arguer de cette r&#233;cente affaire basque o&#249; 
+l'E.T.A. a demand&#233; la plus forte ran&#231;on de tous les temps, communiquant
+ par E-mail crypt&#233; avec la famille pour tenir la police &#224; l'&#233;cart.
+Mais sont-ce bien de tels arguments qu'il faille avancer pour justifier 
+l'interdiction de la cryptographie&nbsp;?
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html510"
+ HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html507"
+ HREF="node33.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html501"
+ HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html509"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html511"
+ HREF="node35.html">Crit&#232;re de P&#233;pin sur</A>
+<B> Up:</B> <A NAME="tex2html508"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<B> Previous:</B> <A NAME="tex2html502"
+ HREF="node33.html">R&#233;ciprocit&#233; et tests de</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

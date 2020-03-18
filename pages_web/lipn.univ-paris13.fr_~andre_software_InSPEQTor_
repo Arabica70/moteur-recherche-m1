@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>InSPEQTor: INference of Shortest Paths with EQuivalent Time-abstract behaviOR</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="InSPEQTor: Implementation of the Inverse Method for Directed Weighted Graphs" />
+	<meta name="keywords" content="InSPEQTor, tool, software, prototype, Directed Weighted Graphs, Parametric Directed Weighted Graphs, oriented graph, valued graph, shortest path, circuit of maximal mean, Max-Plus algebra, parameter synthesis, constraint" />
+	<meta name="robots" content="index,follow" />
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="../../etienne.css" />
+</head>
+
+
+<body>
+
+<h1>InSPEQTor</h1>
+
+<p>This tool (standing for <em>INference of Shortest Paths with EQuivalent Time-abstract behaviOR</em>)
+is an implementation of the inverse method in the framework of Parametric Directed Weighted Graphs.</p>
+
+<p>InSPEQTor takes as an input a Parametric Directed Weighted Graph, and a reference valuation for each parameter.
+It can synthesize two constraints on the weights of the graph seen as parameters:</p>
+
+<ul>
+	<li>either a constraint guaranteeing the preservation of <b>shortest paths</b>, or</li>
+	<li>a constraint guaranteeing the preservation of <b>circuits of maximal mean</b>.</li>
+</ul>
+
+<p>In the first case,
+each <b>shortest path</b> in the graph instantiated with the reference valuation
+is also a shortest path for any parameter valuation satisfying the constraint (and conversely).</p>
+
+
+<p>In the second case (coming from the Max−Plus Algebra),
+each <b>circuit of maximal mean</b> in the graph instantiated with the reference valuation
+is also a circuit of maximal mean for any parameter valuation satisfying the constraint (and conversely).</p>
+
+
+<p>InSPEQTor has been developed in <a href="http://caml.inria.fr/">OCaml</a>
+by <span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> at the <a href="http://www.lsv.fr/">Laboratoire Spécification et Vérification, ENS Cachan, France</a>.
+It is provided under the <a href="http://www.gnu.org/licenses/gpl.html">GNU-GPL license</a>.</p>
+
+
+
+<h2>Using InSPEQTor</h2>
+
+<p>InSPEQTor takes as input a text file describing a Parametric Directed Weighted Graph,
+including the reference value for each parameter.</p>
+
+<p>The syntax is described in a functional style, with OCaml-style (possibly nested) comments.</p>
+
+<p>The call syntax is:</p>
+
+<p class="code">./INSPEQTOR [file.ins]</p>
+
+<p>The result is given directly in the terminal.</p>
+
+<p>By default, InSPEQTor synthesize constraints guaranteeing the preservation of shortest paths.
+To run InSPEQTor in order to synthesize constraints guaranteeing the preservation of circuits of maximal mean,
+use option <span class="code">-maxplus</span>.</p>
+
+
+<h2>Download and Install</h2>
+
+<table class="tableau">
+	<tr>
+		<th>Version</th>
+		<th>Release</th>
+		<th>Source (tar.bz2)</th>
+		<th>Source (zip)</th>
+		<th>Binary</th>
+	</tr>
+
+	<tr>
+		<td class="centre">0.2</td>
+		<td class="centre">13th September 2010</td>
+		<td class="centre"><a href="InSPEQTor.tar.bz2"><span class="code">InSPEQTor.tar.bz2</span></a> (26Ko)</td>
+		<td class="centre"><a href="InSPEQTor.zip"><span class="code">InSPEQTor.zip</span></a> (34Ko)</td>
+		<td class="centre"><a href="INSPEQTOR"><span class="code">INSPEQTOR</span></a> (201Ko)</td>
+	</tr>
+
+	<tr>
+		<td class="centre">0.1</td>
+		<td class="centre">25th May 2009</td>
+		<td class="centre">−</td>
+		<td class="centre">−</td>
+		<td class="centre">−</td>
+	</tr>
+</table>
+
+
+<p>The binary is a standalone binary for <a href="http://www.ubuntu.com/">Ubuntu</a>;
+it has been compiled using Ubuntu&nbsp;10.10.
+If it doesn’t work, please compile the source code.</p>
+
+
+
+
+<h2>Examples</h2>
+
+<table class="tableau">
+	<tr>
+		<th>Name</th>
+		<th>File</th>
+	</tr>
+
+
+	<tr>
+		<td>Toy example</td>
+		<td><a href="examples/exemple.ins"><span class="code">exemple.ins</span></a></td>
+	</tr>
+	<tr>
+		<td>Example from book "Initiation à l’algorithmique" p.551</td>
+		<td><a href="examples/exLivralgo.ins"><span class="code">exLivralgo.ins</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Place d’Italie to LSV</td>
+		<td><a href="examples/PlacedItalieLSV.ins"><span class="code">PlacedItalieLSV.ins</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Rennes to LSV</td>
+		<td><a href="examples/RennesLSV.ins"><span class="code">RennesLSV.ins</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Rennes to LSV (alternative version)</td>
+		<td><a href="examples/RennesLSV2.ins"><span class="code">RennesLSV2.ins</span></a></td>
+	</tr>
+	<tr>
+		<td>Going from Rennes to LSV (Ph.D. thesis manuscript version)</td>
+		<td><a href="examples/RennesLSVthese.ins"><span class="code">RennesLSVthese.ins</span></a></td>
+	</tr>
+</table>
+
+
+<h2>Contact</h2>
+
+<ul>
+	<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> (developer)</li>
+</ul>
+
+
+<h2>References</h2>
+
+<div class="publications">
+	<ul>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>. <span class="titre"><a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-phd.pdf">An Inverse Method for the Synthesis of Timing Parameters in Concurrent Systems</a></span>. Ph.D. thesis, <a href="http://www.lsv.fr/">Laboratoire Spécification et Vérification, ENS Cachan, France</a>, December 2010. 268&nbsp;pages. <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-phd.pdf">PDF</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=andre-phd2010">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2010-12-08-an-inverse-method-for-the-synthesis-of-timing-parameters-in-concurrent-systems.pdf">Slides</a>]</span></li>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span> and <span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span>. <span class="titre"><a href="http://arxiv.org/pdf/0911.3276v1">An Inverse Method for Policy-Iteration Based Algorithms</a></span>. In&nbsp;Azadeh Farzan and Axel Legay (eds.), <span class="conference"><abbr title="11th International Workshop on Verification of Infinite-State Systems, Bologna, Italy, 31st August 2009"><a href="http://www.cs.toronto.edu/infinity2009/">INFINITY’09</a></abbr></span>, <a href="https://www.doi.org/10.4204/EPTCS.10.4">Electronic Proceedings in Theoretical Computer Science 10, pages&nbsp;44–61</a>, 2009. <span class="DOI">DOI:  <a href="https://www.doi.org/10.4204/EPTCS.10.4">10.4204/EPTCS.10.4</a></span> <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="http://arxiv.org/pdf/0911.3276v1">PDF (published version)</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=AF-infinity09">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2009-08-31_An_Inverse_Method_for_Markov_Decision_Processes.pdf">Slides</a>]</span></li>
+		<li><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>. <span class="titre"><a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-etr09.pdf">Une méthode inverse pour les plus courts chemins</a></span>. <span class="conference"><abbr title="6e École Temps Réel, Paris, France, September 2009"><a href="http://etr09.telecom-paristech.fr/">ETR’09</a></abbr></span>, 2009. <span class="langue">(Français)</span> <span style="font-size:smaller">[<a href="http://www.lsv.fr/Publis/PAPERS/PDF/andre-etr09.pdf">PDF</a> | <a href="http://www.lsv.fr/~andre/publications-etienne-andre.php?onlykey=andre-ETR09">BibTeX</a> | <a href="https://lipn.univ-paris13.fr/~andre/documents/2009-09-03-Une_methode_inverse_pour_les_processus_de_decision_markoviens.pdf">Slides</a>]</span></li>
+	</ul>
+</div>
+
+
+<div id="bas">
+	<p>This page makes use of
+	<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+		and
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+</div>
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.breizh-partitions.fr/chiffres/" : "http://www.breizh-partitions.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.breizh-partitions.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+
+
+</body>
+
+</html>

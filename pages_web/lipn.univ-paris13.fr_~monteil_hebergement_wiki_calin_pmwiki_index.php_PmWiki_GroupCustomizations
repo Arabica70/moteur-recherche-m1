@@ -1,0 +1,243 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Group Customizations </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.GroupCustomizations' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=search&amp;q=link=PmWiki.GroupCustomizations'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Group Customizations</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>Local customizations</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Skins'>Skins</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' ><span class='frame rfloat' style='font-size: smaller; background-color: #ffffcc; clear: right;'>administrators (intermediate) </span>
+</div>
+<p>One of the purposes of <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Wiki Groups</a> is to allow a <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>Wiki Administrator</a> to customize the features of PmWiki on a per-group basis.  Here is where <em>per group customizations</em> come into play.
+</p>
+<div class='vspace'></div><ul><li>The <em>local/</em> subdirectory is used to hold local configuration files.  
+</li><li>The <em>pub/css/</em> subdirectory is used to hold local css files.
+</li></ul><p class='vspace'>To perform <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>local customizations</a> for a particular WikiGroup, 
+</p><ul><li>place the customizations in a file called &ldquo;<em>&lt;groupname&gt;.php</em>&rdquo; (where <em>&lt;groupname&gt;</em> is the actual name of the page group in question) in the <em>local/</em> subdirectory  
+</li><li>place the css customizations in a file called &ldquo;<em>&lt;groupname&gt;.css</em>&rdquo; (where <em>&lt;groupname&gt;</em> is the actual name of the page group in question) in the <em>pub/css/</em> subdirectory.
+</li></ul><p>These files will be automatically processed after processing any local customizations in the <em>config.php</em> and <em>local.css</em> files.
+</p>
+<p class='vspace'>For example, to change the image displayed in the upper-left corner of pages in the &ldquo;GroupName&rdquo; WikiGroup, one could create <em>local/GroupName.php</em> containing
+</p><div class='indent'><pre class='escaped'>
+&lt;?php
+  $PageLogoUrl = "/myimages/chess.gif";
+</pre>
+</div><p>The example&rsquo;s effect would cause all pages in the GroupName <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Wiki Group</a> to use &ldquo;/myimages/chess.gif&rdquo; as the logo image instead of the default.
+</p>
+<p class='vspace'>To add markup to the beginning or end of each page in a wiki group, see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupHeaders'>Group headers</a>.
+</p>
+<div class='vspace'></div><h3>Per-page customizations</h3>
+<p><a name='PerPage' id='PerPage'></a> PmWiki also allows per-page customizations, simply use the full name of the page to be customized instead of the group.  For example, one can use the file <em>local/Chess.HomePage.php</em> to set local customizations for Chess.HomePage.
+</p>
+<p class='vspace'>Almost any customization that would be placed in <em>config.php</em> can be used as a per-group or per-page customization. 
+</p>
+<p class='vspace'>An important exception to this is setting <strong>per-group or per-page customizations for recipe scripts</strong> included in config.php. Most recipe scripts would need any customization variables defined before the script is included. Instead of using a per-group or per-page customization php file, use a per-group or per-page conditional statement in config.php, before including the recipe script. Example:
+</p>
+<div class='vspace'></div><div class='frame' > 
+<div class='indent'><pre class='escaped'>
+## Inclusion of per-page and per-group local php scripts
+$pagename = ResolvePageName($pagename);
+include_once("$FarmD/scripts/pgcust.php");
+
+$page = PageVar($pagename, '$FullName');
+$group = PageVar($pagename, '$Group');
+//per-group customizations:
+if($group=='GroupName') {
+   $RecipeVariable = 'valueA';
+   etc. ...
+}
+//per-page customizations:
+if($page=='GroupName.PageName) {
+   $RecipeVariable = 'valueB';
+   etc. ...
+}
+//include recipe after variables are set:
+include_once('cookbook/recipescript.php');</pre>
+</div></div>
+<p><em>Required reading: <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations#configphp-order' title=" ">Order of the commands in config.php</a>.</em>
+</p>
+<p class='vspace'><span  style='color: red;'> Note that this method cannot be used to set <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SecurityVariables#DefaultPasswords'><code class='varlink'>&#036;DefaultPasswords</code></a>, you should use Group or Page attributes. See <a style='color: red' class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Passwords'>Passwords</a> and <a style='color: red' class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PasswordsAdmin'>PasswordsAdmin</a> for more information.</span>
+</p>
+<p class='vspace'><a name='processingorder' id='processingorder'></a>
+</p><h3>Processing order</h3>
+<p>For all local customizations, PmWiki first processes the <em>local/config.php</em> file, and then looks for a per-page customization file in the <em>local/</em> subdirectory to process, followed by any per-group customization file.  If no per-page or per-group customizations are loaded, then PmWiki loads <em>local/default.php</em>.  If a per-page customization wants to have the per-group customizations loaded first, it can do so directly by using PHP&rsquo;s <code class='escaped'>include_once()</code> function.
+For more information see <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/wiki%20cascades' rel='nofollow'>wiki cascades</a>.
+</p>
+<div class='vspace'></div><h3>Custom CSS styles per group or per-page</h3>
+<p>To apply CSS styles to pages of a specific group named <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupName?action=edit' title='Create page'>Group Name</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupName?action=edit'>?</a>, create a file named <em>GroupName.css</em> in the <em>pub/css/</em> directory and add the CSS style rules there. To apply styles to a specific page, create a file <em>GroupName.PageName.css</em> in this directory with your style rules. Any CSS rules to be applied for all wiki pages can be put into <em>pub/css/local.css</em>.
+</p>
+<div class='vspace'></div><div class='indent'><pre class='escaped'>/pub/css/GroupName.css:
+
+  body { background: #F4C4B4; }
+</pre>
+</div><div class='vspace'></div><h3>Preventing group-Level configurations</h3>
+<p>Any customization file can set <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#EnablePGCust'><code class='varlink'>&#036;EnablePGCust</code></a>=0; to prevent later page/group/default customizations from being automatically loaded.  If a per-page customization needs to have the per-group customizations loaded first, it can do so directly by using PHP&rsquo;s <code class='escaped'>include_once()</code> function.
+</p>
+<div class='vspace'></div><h3>Authentication</h3>
+<p>Any passwords required for a group should be set in the group&rsquo;s <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupAttributes?action=edit' title='Create page'>Group Attributes</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupAttributes?action=edit'>?</a> page (see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PasswordsAdmin'>Passwords Administration</a>) and not in a group customization file.
+</p>
+<div class='vspace'></div><h3>Consider Wiki Farms</h3>
+<p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Wiki Groups</a> are an easy way to host multiple sites in a single PmWiki installation by giving each site its own group.  Another approach is to use <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiFarms'>Wiki Farms</a>, which allows each site to have its own set of <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiGroup'>Wiki Group</a> and local customization files. Read about 
+</p>
+<p class='vspace'>If you are looking for nested group levels, you may want to consider <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/HierarchicalGroups' rel='nofollow'>Pm&rsquo;s design considerations on hierarchical groups</a>.
+</p>
+<div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<p class='question'>Q How can I apply CSS styles to a particular group or page?</p>
+<p class='vspace'> Simply create a <em>pub/css/Group.css</em> or <em>pub/css/Group.Page.css</em> file containing the custom CSS styles for that group or page. See also <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/LocalCSS' rel='nofollow'>Cookbook:LocalCSS</a>.
+</p>
+<p class='vspace question'>Q Why shouldn&rsquo;t passwords be set in group (or page) customization files? Why shouldn&rsquo;t group or page passwords be set in config.php?</p>
+<p class='vspace'> The reason for this advice is that per-group customization files are only loaded for the current page. So, if <code>$DefaultPasswords['read']</code> is set in <em>local/GroupA.php</em>, then someone could use a page in another group to view the contents of pages in GroupA. For example, Main.WikiSandbox could contain:
+</p>
+<div class='vspace'></div><dl><dd><div class='indent'>(:include GroupA.SomePage:)
+</div></dd></dl><p class='vspace'>and because the <em>GroupA.php</em> file wasn&rsquo;t loaded (we&rsquo;re looking at Main.WikiSandbox &rarr; <em>local/Main.php</em>), there&rsquo;s no read password set.
+</p>
+<p class='vspace'>The same is true for page customization files.
+</p>
+<p class='vspace question'>Q Isn&rsquo;t that processing order strange? Why not load per page configuration last (that is after global configuration an per group configuration)?</p>
+<p class='vspace'> Many times what we want to do is to enable a certain capability for a group of pages, but disable it on a specific page, as if it was never enabled.  If the per-group config file is processed first, then it becomes very difficult/tedious for the per-page one to &ldquo;undo&rdquo; the effects of the per-group page. So, we load the per-page file before the per-group.
+</p>
+<p class='vspace'>If a per-page customization wants the per-group customizations to be performed first, it can use the techniques given <a href='#processingorder'>above</a> (using <em>include_once()</em> or setting <code>$EnablePGCust = 0;</code>).
+ 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>Local customizations</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Skins'>Skins</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/GroupCustomizations' rel='nofollow'>PmWiki:GroupCustomizations</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/GroupCustomizations-Talk' rel='nofollow'>PmWiki:GroupCustomizations-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupCustomizations?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on January 08, 2018, at 12:13 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

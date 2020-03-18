@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>HO Complexity Workshop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link type="text/css" rel="stylesheet" href="stylesheets/navbar.css">
+</head>
+
+<body>
+<div class="navbar">
+<a href="http://www.ihp.fr/"><img style="border:0;width:140px;height:107px" src="img/IHP.png" alt="IHP"></a>
+<h4>Thematic trimester:
+<b style="color:#4080f0; font-style:normal; font-size:125%">Semantics of proofs and certified mathematics</b></h4>
+<!--a class="home" href="http://lipn.univ-paris13.fr/~mazza/HOComplexity/">Home page</a-->
+<!--ul>
+	<li><a class="button" href="?page=part">Participants</a></li>
+<li><a class="button" href="?page=prog">Program</a></li>
+</ul-->
+<p>
+	<a href="https://ihp2014.pps.univ-paris-diderot.fr/"><img style="border:0;width:250px;height:250px" src="img/ParisMapTrimester.png" alt="INRIA"></a>
+</p>
+<p>&nbsp;</p>
+<p>
+	<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="img/valid-html401.png" alt="Valid HTML 4.01!"></a>
+	<a href="http://jigsaw.w3.org/css-validator/"><img style="border:0;width:88px;height:31px" src="img/valid-css.png" alt="Valid CSS!"></a><br>
+	Webmaster: <a href="http://lipn.univ-paris13.fr/~mazza">Damiano Mazza</a>
+</p>
+</div>
+<div style="margin:25pt">
+<table border="0" width="100%">
+<tr>
+<td>
+<h1 style="font-size:175%">Workshop on
+Higher Order Computation:<br> Types, Complexity, Applications</h1>
+<h3>Institut Henri Poincar&eacute;, 16-18 June 2014</h3>
+<p>
+In the context of the <a href="http://www.ihp.fr/">IHP</a> thematic trimester <a href="https://ihp2014.pps.univ-paris-diderot.fr/">Semantics of proofs and certified mathematics</a>, we organize an informal workshop on "Higher-order computation: types, complexity, applications", which will be focused on the development of logical and type-based methods for quantitative properties of computation: (implicit) computational complexity, higher-order languages for non-deterministic and probabilistic computation, with their applications to program certification, security, etc.</p>
+
+<p>The idea is to organize a true workshop, focusing primarily on discussing ideas and developing new collaborations, rather than on talks.  It is also thought as an occasion to participate to the other events of the IHP trimester.  In fact, the workshop falls just after the <a href="https://ihp2014.pps.univ-paris-diderot.fr/doku.php?id=workshop_3">Semantics of proofs and programs week</a> and just before the <a href="https://ihp2014.pps.univ-paris-diderot.fr/doku.php?id=workshop_4">Abstraction and Verification in Semantics week</a>. Of the main workshops of the trimester, these are the ones that are thematically closer to the subject of our workshop.</p>
+
+<p>Financial support is provided by the <a href="http://www.agence-nationale-recherche.fr/">Agence Nationale de la Recherche</a> (ANR), via the <a href="http://www.logoi.fr">Logoi</a> project.</p>
+
+<h3>Logistic details</h3>
+<p>The workshop will be held in Paris, at the <a href="http://www.ihp.fr">Institut Henri Poincar&eacute;</a>.</p>
+<p>There is no attendance fee.</p>
+<p>Coffee breaks will be provided but participants will have to pay for their meals and accommodation.</p>
+<p>For lunch, the custom of IHP meetings is to let participants wander off from the Institute and eat in one of the neighboring restaurants.
+<!--p>No social dinner is planned at the moment but, if project funds permit, we are keen on organizing one.</p-->
+<p>A few useful links from the IHP website:
+<ul>
+	<li><a href="http://www.ihp.fr/en/ihp/acces">how to get there;</a></li>
+	<li><a href="http://www.ihp.fr/en/ihp/hotels">a list of hotels in the neighborhood;</a></li>
+	<li><a href="http://www.ihp.fr/en/ihp/restaurants">a list of restaurants in the neighborhood.</a></li>
+</ul>
+
+<h3>Program</h3>
+<table style="border-collapse:collapse">
+	<col span="1" style="width:200px">
+	<tr style="color:#4080f0">
+		<td>Monday, June 16</td><td>amphi Perrin, Laboratoire de Chimie Physique (just in front of IHP)</td><td></td>
+	</tr>
+	<tr>
+		<td>9:00-9:45</td><td>Beniamino Accattoli: <i><a href="#accattoli">Beta-reduction is invariant, indeed</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>9:45-10:30</td><td>Ulrich Sch&ouml;pp: <i><a href="#schoepp">Call-by-Value in a Basic Logic for Interaction</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>10:30-11:00</td><td>Coffee break</td><td></td>
+	</tr>
+	<tr>
+		<td>11:00-11:45</td><td>Simona Ronchi Della Rocca: <i><a href="#ronchi">Intersection Types and Computational Complexity</a>
+</i></td><td></td>
+	</tr>
+	<tr>
+		<td>11:45-12:30</td><td>Robin Cockett: <i>Kleene's minimalization as a construction: linking implicit complexity
+settings to Turing categories</i></td><td></td>
+	</tr>
+	<tr>
+		<td>12:30-14:00</td><td>Lunch</td><td></td>
+	</tr>
+	<tr>
+		<td>14:00-14:40</td><td>Marc Bagnol: <i><a href="#bagnol">Unification and Logarithmic space</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>14:40-15:20</td><td>Thomas Seiller: <i><a href="#seiller">Graphings and Complexity</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>15:20-16:00</td><td>Damiano Mazza: <i>The infinitary affine lambda-calculus and bounded depth circuits</i></td><td></td>
+	</tr>
+	<tr>
+		<td>16:00-16:30</td><td>Coffee break</td><td></td>
+	</tr>
+	<tr>
+		<td>16:30-18:00</td><td>Free discussion</td><td></td>
+	</tr>
+	<tr style="color:#4080f0">
+		<td style="padding-top:20px">Tuesday, June 17</td><td style="padding-top:20px">amphi Darboux, IHP</td><td></td>
+	</tr>
+	<tr>
+		<td>9:00-9:45</td><td>Norman Danner: <i><a href="#danner">Ramified structural recursion and corecursion</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>9:45-10:30</td><td>Ale&#353; Bizjak: <i><a href="#bizjak">Step-indexed logical relations for probability</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>10:30-11:15</td><td>Jan Hoffmann: <i><a href="#hoffmann">End-to-End Verification of Stack-Space Bounds for C Programs</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>11:15-11:45</td><td>Coffee break</td><td></td>
+	</tr>
+	<tr>
+		<td>11:45-12:30</td><td>Bruce Kapron: <i>Type-2 Polynomial Time and Composability</i></td><td></td>
+	</tr>
+	<tr>
+		<td>12:30-14:00</td><td>Lunch</td><td></td>
+	</tr>
+	<tr>
+		<td>14:00-16:15</td><td>Free discussion</td><td></td>
+	</tr>
+	<tr>
+		<td>16:15-16:45</td><td>Coffee break</td><td></td>
+	</tr>
+	<tr>
+		<td>16:45-18:00</td><td>Free discussion</td><td></td>
+	</tr>
+	<tr style="color:#4080f0">
+		<td style="padding-top:20px">Wednesday, June 18</td><td style="padding-top:20px">amphi Darboux, IHP</td><td></td>
+	</tr>
+	<tr>
+		<td>9:00-9:45</td><td>Akitoshi Kawamura: <i>Iteration in computable analysis
+</i></td><td></td>
+	</tr>
+	<tr>
+		<td>9:45-10:30</td><td>Kazushige Terui: <i><a href="#terui">Models of linear logic for higher order real computation</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>10:30-11:15</td><td>Marco Gaboardi: <i><a href="#gaboardi">Type checking linear dependent types for sensitivity</a></i></td><td></td>
+	</tr>
+	<tr>
+		<td>11:15-11:45</td><td>Coffee break</td><td></td>
+	</tr>
+	<tr>
+		<td>11:45-12:30</td><td>Ugo Dal Lago/Patrick Baillot: <i>Subrecursive linear dependent types and computational security</i></td><td></td>
+	</tr>
+	<tr>
+		<td>12:30-14:00</td><td>Lunch</td><td></td>
+	</tr>
+	<tr>
+		<td>14:00-15:45</td><td>Free discussion</td><td></td>
+	</tr>
+	<tr>
+		<td>15:45</td><td>End of workshop</td><td></td>
+	</tr>
+</table>
+
+</td>
+<td style="vertical-align: top; padding-left:20px; font-size:75%">
+	Financially supported by<br>
+	<a href="http://www.agence-nationale-recherche.fr/"><img src="img/ANR.jpg" alt="ANR" height="80" width="190"></a><br>
+	Project <a href="http://www.logoi.fr">Logoi</a>
+	<h4 style="color:#4080f0">Organizers:</h4>
+	<ul>
+		<li><a href="http://perso.ens-lyon.fr/patrick.baillot/">Patrick Baillot</a></li>
+		<li><a href="http://www.cs.unibo.it/~dallago/">Ugo Dal Lago</a></li>
+		<li><a href="http://www.loria.fr/~marionjy/">Jean-Yves Marion</a></li>
+		<li><a href="http://lipn.univ-paris13.fr/~mazza/">Damiano Mazza</a></li>
+	</ul>
+	<h4 style="color:#4080f0">Planned participants:</h4>
+	<ul>
+		<li><a href="https://docs.google.com/document/d/1gFDWjvFYKUSTUitfPaD1mt0KORGxzUKEDUiWWmX6-f8/edit?usp=sharing">See the list</a></li>
+	</ul>
+</td>
+</tr>
+</table>
+
+<h3>Abstracts</h3>
+
+<ul>
+<li><a id="accattoli">
+Beniamino Accattoli: <i>Beta-reduction is invariant, indeed</i> (joint work with Ugo Dal Lago)</a>
+<p>The invariance thesis is the refinement of Church thesis stating that
+"reasonable" computational models are not only equivalent but also
+polynomially related. It is the starting point for a
+machine-independent definition of (super)polynomial complexity
+classes.</p>
+<p>Does lambda-calculus satisfy the invariance thesis? Is it a reasonable
+machine model? What should we count as a reasonable measure of
+complexity of a lambda-term?</p>
+<p>The general problem - though having been solved in particular cases as
+weak or head reduction - has been open for a long time. Ugo Dal Lago
+and I recently provided a full solution, that is in itself quite
+surprising: a reasonable complexity measure is the length of the
+leftmost-outermost derivation to normal form. The surprise comes from
+the fact that leftmost-outermost derivations are a standard concept
+(in the theory of lambda-calculus) that at first sight is totally
+unrelated to complexity theory, and even considered particularly
+inefficient.</p>
+<p>In this talk I will survey the subtleties of the problem and the ideas
+behind the solution, in particular the new and crucial notion of useful
+evaluation and useful normal form.</p>
+</li>
+
+<li><a id="bagnol">
+Marc Bagnol: <i>Unification and Logarithmic space</i> (joint work with Cl&eacute;ment Aubert)</a>
+<p>I will present an algebraic characterization of the complexity
+classes Logspace and NLogspace, using an algebra with a composition
+law based on unification. This bridge between unification and
+complexity classes is inspired from proof theory and more specifically
+linear logic and Geometry of Interaction.</p>
+</li>
+
+<li><a id="bizjak">
+Ale&#353; Bizjak: <i>Step-indexed logical relations for probability</i> (joint work with Lars Birkedal)</a>
+<p>Step-indexed  logical  relations  are  an operationally  based  technique  for reasoning about equality in programming languages. They have been successfully used to reason about equality in  higher-order languages with features such as higher-order store, concurrency and nondeterminism.</p>
+<p>We show how to extend the technique to languages with probabilistic choice. To construct the  logical relation  we employ biorthogonality.  We show  that the resulting logical  relation is sound  and complete with respect  to contextual equivalence.</p>
+<p>We argue  that the  logical relation  is useful  for reasoning  about concrete equivalences between probabilistic programs by  showing proofs of some example equivalences.</p>
+<p>Finally, we discuss some analogies between step-indexed logical relations for may, must and probabilistic testing.</p>
+</li>
+
+<li><a id="danner">
+Norman Danner: <i>Ramified structural recursion and corecursion</i> (joint work with Jim Royer)</a>
+<p>We develop a fairly simple higher-order formalism that permits us to formulate general notions of inductively- and coinductively-defined data.  The syntax makes it straightforward to add a version of Bellantoni and Cook's safe/normal distinctions in the type system, and the semantics incorporates sharing of values and a memoized version of structural recursion.  When restricted to inductively-defined data, the type-1 functions capture an appropriate notion of polynomial-time computability.  Coinductively-defined data poses a number of challenges, and our formalism lets us investigate reasonable notions of feasibility in this setting.</p>
+</li>
+
+<li><a id="gaboardi">
+Marco Gaboardi: <i>Relational Refinement Types for Probabilistic Computations</i></a>
+<p>Recent works have shown the power of linear indexed type systems for capturing complex safety properties. These systems combine linear type systems with a language of indices that appear in the types, allowing more fine-grained analysis. For example, linear indexed types have been fruitfully applied to verify differential privacy in the Fuzz type system. A natural way to enhance the expressiveness of this approach is by allowing the indices to depend on runtime information, in the spirit of dependent types. This approach is used in DFuzz, an extension of Fuzz. The DFuzz type system relies on an index-level language supporting real and natural number arithmetic over con- stants and dependent variables. Moreover, DFuzz uses a subtyping mechanism to semantically manipulate indices. By themselves, lin- earity, dependency, and subtyping each require delicate handling when performing type checking or type inference; their combination increases this challenge substantially, as the features can interact in non-trivial ways. In this talk, I will present the type-checking problem for DFuzz. I will show how one can reduce type checking for (a simple extension of) DFuzz to constraint solving over a first-order theory of naturals and real numbers which, although undecidable, can often be handled in practice by standard numeric solvers.</p>
+</li>
+
+<li><a id="hoffmann">
+Jan Hoffmann: <i>End-to-End Verification of Stack-Space Bounds for C Programs</i> (joint work with Quentin Carbonneaux, Tahina Ramananandro, and Zhong Shao)</a>
+<p>Verified compilers guarantee the preservation of semantic properties and thus enable formal verification of programs at the source level. However, important quantitative properties such as memory and time usage still have to be verified at the machine level where interactive proofs tend to be more tedious and automation is more challenging.</p>
+<p>In this talk, I describe a framework that enables the formal verification of stack-space bounds of compiled machine code at the C level.  It consists of a verified CompCert-based compiler that preserves quantitative properties, a verified quantitative program logic for interactive stack-bound development, and a verified stack analyzer that automatically derives stack bounds during compilation.</p>
+<p>Stack-space bounds can be proved at the source level without taking into account low-level details that depend on the implementation of the compiler.  The compiler fills in these low-level details during compilation and generates a concrete stack-space bound that applies to the produced machine code.  The verified stack analyze generates a derivation in the quantitative logic to ensure soundness as well as interoperability with interactively developed stack bounds.</p>
+<p>In an experimental evaluation, the developed framework is used to obtain verified stack-space bounds for micro benchmarks as well as real system code.  The examples include the verified operating-system kernel CertiKOS, parts of the MiBench embedded benchmark suite, and programs from the CompCert benchmarks.  The derived bounds are close to the measured stack-space usage of executions of the compiled programs on a Linux x86 system.</p>
+</li>
+
+<li><a id="schoepp">
+Ulrich Sch&ouml;pp: <i>Call-by-Value in a Basic Logic for Interaction</i></a>
+<p>In game semantics and related approaches to programming
+language semantics, programs are modeled by interaction dialogues. Such
+models have recently been used by a number of authors for the design of
+compilation methods, in particular for applications where resource
+control is important. The work in this area has focused on call-by-name
+languages. In this talk I will consider the compilation of call-by-value
+into a first-order target language by means of an interpretation in an
+interactive model. The main result is that Plotkin’s standard
+call-by-value CPS-translation and its soundness proof can be refined to
+target this intermediate language. This refined CPS-translation amounts
+to a direct compilation of the source language into a first-order language.</p>
+</li>
+
+<li><a id="ronchi">
+Simona Ronchi Della Rocca: <i>Intersection Types and Computational Complexity
+</i></a>
+<p>Intersection types have been introduced for reasoning about qualitative properties of terms. Classically intersection enjoys idempotency, associativity and commutativity. Breaking one (or more) of these properties allows for proving quantitative properties. In particular non-associative intersection type assignment offers a setting suitable for the characterization of polynomial functions.</p>
+</li>
+
+<li><a id="seiller">
+Thomas Seiller: <i>Graphings and Complexity</i></a>
+<p>The aim of Implicit Computational Complexity is to study algorithmic
+complexity only in terms of restrictions of languages and
+computational principles. Based on recent work about realizability
+models for linear logic, I propose a new approach where we consider
+semantical restrictions instead of syntactical ones. This leads to a
+hierarchy of models mirroring subtle distinctions about computational
+principles. As an illustration of the method, I obtain
+characterizations of the set of regular languages and the set of
+logarithmic space predicates.</p>
+</li>
+
+<li><a id="terui">
+Kazushige Terui: <i>Models of linear logic for higher order real computation</i> (joint work with Kei Matsumoto)</a>
+<p>There have been a number of works trying to model real number
+computation in domain theory. We will follow the same line,
+but based on concrete (REL-like) models of linear logic.</p>
+<p>Our approach has two advantages: concreteness and access to linearity.
+For instance, one can directly define a coherence space
+for rational Cauchy sequences in which every maximal clique
+expresses a real number. As in domain theory,
+stable maps there just correspond to real continuous functions, while
+a remarkable fact is that linear maps correspond to uniformly continuous ones.</p>
+<p>In this talk, we will report some partial elementary results obtained so far
+and discuss potential future directions. Any suggestion will be appreciated.</p>
+</li>
+</ul>
+
+</div>
+</body>
+
+</html>

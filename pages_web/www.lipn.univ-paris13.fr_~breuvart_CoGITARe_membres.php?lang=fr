@@ -1,0 +1,91 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CoGITARe ANRJCJC</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=indexCogitare.php?lang=fr>Index</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Membres et associés <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li class="active"><a href="#">liste des membres</a></li>
+	         <li><a href=../?lang=fr>Flavien Breuvart</a></li>
+             <li><a href=http://www.jaime-arias.fr/pages/talks.html>Jaime Arias</a></li>
+             <li><a href=https://www.di.ens.fr/~feret/>Jérôme Feret</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~manzonetto>Giulio Manzonetto</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mazza>Damiano Mazza</a></li>
+             <li><a href=http://yann.regis-gianas.org>Yann Régis-Gianas</a></li>
+             <li><a href=https://www.seiller.org/>Thomas Seiller</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~loddo>Jean-Vincent Loddo</a></li>
+             <li><a href=https://lipn.univ-paris13.fr/~mayero>Micaela Mayero</a></li>
+            </ul>
+	  <li><a href=stages.php?lang=fr>Positions</a></li>
+	  <li><a href=../articles/Cogitare.pdf?lang=fr>Proposition</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Évènements <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+    	     <li><a href=kickoff.php?lang=fr>Kickoff</a></li>
+	         <li><a href=journee_inferencing_subtypes.php?lang=fr>journee1</a></li>
+           </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+<div class="publications">
+   <h2> Coordinator : <a href=".."> Flavien Breuvart  </a></h2>
+</div>
+
+<div class="publications">
+   <h2> Official members </h2>
+	<UL TYPE=square>
+       <LI> <B><a href="http://www.jaime-arias.fr/pages/talks.html"> Jaime Arias : </a></B> Engineer (IR2-CNRS) in the team LoVe of the LIPN.
+	  <LI> <B><a href="https://www.di.ens.fr/~feret/"> Jérôme Feret : </a></B> Resercher (CR1-Inria) in the project-team Antique of École Normal Supereur. 
+	  <LI> <B><a href="https://lipn.univ-paris13.fr/~manzonetto"> Giulio Manzonetto : </a></B> Associate professor (MCF) in the team LoVe of the LIPN.
+	  <LI> <B><a href="https://lipn.univ-paris13.fr/~mazza"> Damiano Mazza : </a></B> Researcher (CR1-CNRS) in the team LoVe of the LIPN.
+	  <LI> <B><a href="http://yann.regis-gianas.org"> Yann Régis-Gianas : </a></B> Researcher (CR1-CNRS) in the team LoVe of the LIPN.
+	  <LI> <B><a href="https://www.seiller.org/"> Thomas Seiller : </a></B> Researcher (CR1-CNRS) in the team LoVe of the LIPN.
+	</UL>
+</div>
+
+<div class="publications">
+   <h2> Associated members </h2>
+	<UL TYPE=square>
+       <LI> <B><a href="https://lipn.univ-paris13.fr/~loddo"> Jean-Vincent Loddo : </a></B> Associate professor (MCF) in the team LoVe of the LIPN.
+       <LI> <B><a href="https://lipn.univ-paris13.fr/~mayero">Micaela Mayero  : </a></B> Associate professor (MCF) in the team LoVe of the LIPN.
+	</UL>
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

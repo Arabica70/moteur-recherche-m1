@@ -1,0 +1,64 @@
+# _________________
+# jeu de puissance4
+# _________________
+
+all: puissance4_jeu.exe puissance4_console.exe
+
+# _________________
+# modèle
+case.h: 
+case.c: case.h
+case.o: case.c
+	gcc -c case.c -o case.o -Wall --pedantic 
+
+dim.h: 
+dim.c: dim.h
+dim.o: dim.c
+	gcc -c dim.c -o dim.o -Wall --pedantic 
+
+partie.h: case.h dim.h
+partie.c: partie.h case.h dim.h
+partie.o: partie.c
+	gcc -c partie.c -o partie.o -Wall --pedantic 
+
+# _________________
+# gtk 
+
+# interface
+puissance4_ig.h: 
+puissance4_ig.c: puissance4_ig.h
+puissance4_ig.o: puissance4_ig.c
+	gcc -c puissance4_ig.c -o puissance4_ig.o -Wall --pedantic `pkg-config gtk+-2.0 --cflags` 
+
+# contrôleur
+puissance4_ctr.h: puissance4_ig.h partie.h
+puissance4_ctr.c: puissance4_ctr.h
+puissance4_ctr.o: puissance4_ctr.c
+	gcc -c puissance4_ctr.c -o puissance4_ctr.o -Wall --pedantic `pkg-config gtk+-2.0 --cflags` 
+
+# jeu & exécutable
+puissance4_jeu.c: puissance4_ctr.h
+puissance4_jeu.o: puissance4_jeu.c
+	gcc -c puissance4_jeu.c -o puissance4_jeu.o -Wall --pedantic `pkg-config gtk+-2.0 --cflags` 
+
+puissance4_jeu.exe: puissance4_jeu.o puissance4_ctr.o puissance4_ig.o partie.o dim.o case.o
+	gcc puissance4_jeu.o puissance4_ctr.o puissance4_ig.o partie.o dim.o case.o -o puissance4_jeu.exe `pkg-config gtk+-2.0 --libs` 
+
+# _________________
+# console 
+
+# jeu & exécutable console
+puissance4_console.c: partie.h
+puissance4_console.o: puissance4_console.c
+	gcc -c puissance4_console.c -o puissance4_console.o -Wall --pedantic 
+
+puissance4_console.exe: puissance4_console.o partie.o dim.o case.o
+	gcc puissance4_console.o partie.o dim.o case.o -o puissance4_console.exe
+
+# nettoyage
+clean: 
+	rm *.o
+
+mrproper: clean
+	rm *.exe
+

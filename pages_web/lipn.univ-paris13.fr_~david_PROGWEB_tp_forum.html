@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="tp.css">
+    <title>Sujet de TP: FORUM</title>
+  </head>
+
+  <body>
+    <header>Sujet de TP: FORUM</header>
+
+    <main>
+           
+      <article class="exercice">
+	<header><h2>Exercice 1: Inscription et connexion</h2></header>
+	
+	<ul>
+	  <li>Connectez vous sur phpmyadmin et éxecutez le script <a href="TP_FORUM.sql">suivant</a> </li>
+	  <li>Créez une page HTML contenant un formulaire contenant trois champs:
+	    <ol>
+	      <li>Le nom de l'utilisateur,</li>
+	      <li>Son mot de passe,</li>
+	      <li>La vérification du mot de passe.</li>
+	    </ol>
+	  </li>
+	  <li>Le formulaire appelle un script qui vérifie que les trois champs sont bien remplis, que le mot de passe et sa vérification son les memes.
+	    Si c'est le cas, on insère l'utilisateur et son mot de passe dans la base de données, dans la table Utilisateurs, puis affiche une page de connexion.
+	    Sinon, le script renvoie faux.
+	  </li>
+	  <li>Ecrire une page de connexion à l'aide d'un formulaire, qui appelle un script php qui vérifie que le login et le mot de passe apparait dans la base de données.
+	    Si c'est le cas, on initialise le champ "user" dans la superglobale <code>$_SESSION</code>. Sinon on renvoie faux.
+	  </li>
+	</ul>
+	
+      </article>
+
+
+      <article class="exercice">
+	<header><h2>Exercice 2: forum</h2></header>
+
+	<p>Créer une page <code>forum.php</code>  dans laquelle on place:
+	<ul>
+	  <li> Un formulaire permettant d'ajouter un nouveau sujet. </li>
+	  <li> La liste des sujet déjà crée. Pour chacun dans sujet, il lien permet de rapeller la page <code>forum.php</code> avec la méthode get et le nom du sujet.</li>
+	  <li> Si le champ 'sujet' existe dans la superglobale <code>$_GET</code>, au lieu d'afficher le formulaire et la liste précédement évoqués, on affiche la liste
+	    des messages sur ce sujet. De plus, on ajoute un formulaire permettant d'ajouter un message dans la base de données.</li>
+	</ul>
+	
+      </article>
+
+
+    </main>
+
+      <footer>Auteur: Julien David (2017)</footer>
+
+  </body>
+
+</html>

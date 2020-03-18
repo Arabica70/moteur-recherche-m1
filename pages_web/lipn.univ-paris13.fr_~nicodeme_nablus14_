@@ -1,0 +1,281 @@
+<html>
+<head>
+<link rel="canonical" href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/">
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+  <meta name="description" content="Page of the 2005 Colloquium of the LIX - Ecole polytechnique">
+  <meta http-equiv="content-language" content="fr">
+  <meta name="keywords" lang="fr" content="Nablus, Random Structures">
+  <meta name="robots" content="all">
+  <meta name="rating" content="general">
+
+  <title>CIMPA Summer School 2014 - Nablus, Palestine</title>
+
+
+
+<!-- ====================================================================== -->
+<!-- Corps de la page                                                       -->
+<!-- ====================================================================== -->
+
+
+
+    <link
+      rel="stylesheet"
+      href="../style/skin.css">
+
+<style>
+    h3 { 
+        background-color: #aaaaff;
+        padding: 10px 100px 10px 100px;
+        text-align: center;
+        color: white;
+    }
+</style>
+
+</head>
+
+<body>
+    <table width="100%" height="100%">
+        <tr>
+    <td valign=top width=25% class="droite">
+    <div align="center">
+    <br><br>
+    </div>
+
+    <br><br>
+
+<ul class="listemenu">
+<li><a class=menu href="#description">Description</a><br><br>
+<li><a class=menu href="#practical">Practical Informations</a><br><br>
+<li><a class=menu href="#accomodat">Accommodation</a><br><br>
+<li><a class=menu href="#sciecommittee">Scientific Committee</a><br><br>
+<li><a class=menu href="#orgacommittee">Organizing Committee</a><br><br>
+<li><a class=menu href="#talks">List of the courses</a><br><br>
+<li><a class=menu href="#program">Program</a><br><br>
+<li><a class=menu href="#supports">Sponsors</a><br><br>
+<li><a class=menu href="#report">Scientific Report</a><br><br>
+<br><br>
+</ul>
+</HEAD>
+
+
+<P>
+
+<A style="position: absolute; left:4%; width: 340px; height: 340px;
+ background: url(http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/veryshortposter.png) no-repeat top left 4%;" href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/poster_Nablus.pdf"></a>
+
+    
+    </td>
+    <td valign=top width=75% class="gauche">
+<a name="top"></a>
+
+<br><br><br><br>
+
+<div align="center"><font color="blue" size="+3">
+CIMPA Summer School 2014 - Nablus<br> "Random structures, Analytic and Probabilistic Approaches"</font>
+
+<br><br>
+<font color="red" size="+2">
+Location:<br> University An Najah, Nablus, Palestine<br>
+Dates: August 18-27, 2014<br>
+</font>
+
+<!- Planning : PDF ou HTML - Actes : PDF ->
+</div>
+<font face="Verdana">
+<h3><font color=red> PROCEEDINGS </font></h3>
+<a href="https://hal.archives-ouvertes.fr/hal-01214113">https://hal.archives-ouvertes.fr/hal-01214113</a>
+<a name="description"></a>
+<h3>Description</h3>
+<font face="Verdana">
+We wish to gather in this school Palestinian students interested in the study of Random
+Structures.
+Since the seventies this is a topic considered both in Theoretical 
+Computer Science and in Probability. In particular, the analysis  of the mean behaviour
+of algorithms and structures  used in computer software and hardware rests on both
+approaches; as examples, the mean behaviour of trees or sort algorithms can be analyzed
+by these methods. The field of science named "Analytic Combinatorics" by Flajolet 
+develops extensively these methods, using combinatorics of structures, generating
+functions and analysis in the complex plane. In general, analytic approaches provide
+fast exact and asymptotic computations of moments of random variables and can also
+provide limit laws; however the probabilistic approach disposes of powerful convergence
+methods such as martingales and there are cases that can be solved by continuous
+ approaches while discrete ones fail.
+<font size=4>
+<ul>
+<li> <a href="http://lipn.univ-paris13.fr/~nicodeme/talks/intro_AC.pdf">Introductory talk to the School</a> (November 2013)
+<li> <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/introana.pdf">A short introduction to the analytic approach</a>
+<li> <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/naplousIntroProba21sep12.pdf">A short introduction to the probabilistic approach</a>
+</ul>
+</font size>
+<a name="practical"></a>
+
+<h3>Pratical Informations</h3>
+
+<p>We are scheduling  7 courses of approximately 6 hours and 3 hours of exercices, within an overall duration of 9 days for the school.
+There will be a free day with an excursion in the midst of the school, and one
+afternoon will be left for free discussions</p>
+<p> The <font color=red> Opening Ceremony </font> will take place in the 
+		      <a href="http://www.najah.edu/page/2529">old campus</a><font color=red> of An Najah University, Zager Al-Masri Auditorium</font> on Monday, August 18th at 6pm</p>
+<p>The courses will be given at An Najah University, Nablus, 
+<font color=red><a href="http://www.najah.edu/page/2530">new campus</a>, uphill</font> 
+either in the
+<font color=magenta> Korean building</font> or in the
+<font color=magenta> science building</font></p>
+
+<p>The number of students will be around 40; there will be 7 main lecturers and 1 assistant.
+</p>
+<a name="accomodat"></a> 
+<h3>Accommodation</h3>
+The participants, lecturers and assistants,  will be accommodated at 
+<li>
+<b><a href="http://www.alyasmeen.com/">Hotel Al Yasmeen, Nablus</a></b>
+</li>
+<p><font color="blue">If you live in Nablus and you prefer to spend the nights at home</font><font color="red"> select <b>"Home"</b> on the switch accommodation in the registration interface.</font> We can in this case provide you with a maximum of 30 shekels daily for your transportation costs, <font color="red">on condition that you give a receipt of your transportation costs</font>.
+</p>
+<li>
+ All the participants
+ will take together their lunch and dinner
+at the restaurant of the University.
+</li>
+
+<font color="green" size="+1">
+<p><b> The accommodation costs of the Palestinian students (hotel, meals) will be fully taken in charge by the school.
+</b></p>
+<p>Therefore, there will be no fees for participation of the students.</p>
+</font>
+
+
+
+<a name="orgacommittee"></a>
+<h3>Organizing committee :</h3>
+
+<ul>
+<li><a href="http://lipn.univ-paris13.fr/~nicodeme/">Pierre Nicodeme</a></li> 
+<li>Naji Qatanani (local organizer)</li>
+<li>Miss Reem Minawi (secretary of the Math department, An Najah)</li>
+</ul>
+
+<a name="sciecommittee"></a>
+<h3>Scientific committee</h3>
+
+<ul>
+
+<li>
+Fr&eacute;d&eacute;rique Bassino, LIPN, University Paris13
+</li>
+<li>
+Brigitte Chauvin, LMV, University of Versailles
+</li>
+<li>
+Naji Qatanani, University An Najah, Nablus
+</li>
+<li>
+Pierre Nicod&egrave;me, LIPN, University Paris13
+</li>
+
+</ul>
+
+
+<a name="talks"></a>
+<h3>List of the courses</h3>
+</font face>
+<font size=3>
+<ul>
+<li>
+<a href="http://lipn.univ-paris13.fr/~banderier/?lang=uk">Cyril Banderier</a>
+<font face="Verdana"> - Limit Laws in Analytic Combinatorics and Random Walks - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/banderier.html">summary</a>
+</li>
+<li>
+<a href="http://chauvin.perso.math.cnrs.fr">Brigitte Chauvin</a>
+<font face="Verdana"> - Random trees and Probability - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/chauvin.html">summary</a>,
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/BCcoursCIMPA2014.pdf">course.pdf</a>,
+
+</li>
+<li>
+<a href="http://people.bath.ac.uk/cdm37/index.html">Cecile Mailler</a>
+									     <font face="Verdana"> - Markov chains, Martingales
+and Discrete Random
+Structures - </font>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/mailler.html">summary</a>,
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/cours_MC_mart.pdf">course.pdf</a>,
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/exosmailler.pdf">exercices.pdf</a>
+
+</li>
+<li>
+   <a href="http://lipn.univ-paris13.fr/~nicodeme/?lang=uk">Pierre Nicod&egrave;me</a>
+<font face="Verdana"> - Introduction to Analytic Combinatorics - </font>
+										  <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/morcrette.html">summary</a>,</br>
+										  <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/latinschool.pdf">slides.pdf</a>,
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/exosnico.pdf">exercices.pdf</a><br>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/gentle.pdf">A Gentle Introduction to Analytic Combinatorics</a> from J&eacute;r&eacute;mie Lumbroso and Basile Morcrette
+
+</li>
+<li>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/?lang=uk">Pierre Nicod&egrave;me</a>
+<font face="Verdana"> - Statistics of words and motifs - </font>
+									       <a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/nicodeme.html">summary</a><br>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/automat.pdf">Automaton Approach</a><br>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/language.pdf">Language Approach</a><br>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/inc_excl.pdf">Analytic Inclusion-Exclusion</a><br>
+
+</li>
+<li>
+<a href="http://pouyanne.perso.math.cnrs.fr">Nicolas Pouyanne</a>
+<font face="Verdana"> - Analysis of Urn Models - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/pouyanne.html">summary</a>,
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/coursPouyanne.pdf">course.pdf</a>,
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/exospouyanne.pdf">exercices.pdf</a>
+
+</li>
+<li>
+<a href="http://staff.najah.edu/subhi-ruzieh">Subhi Ruzieh</a>
+<font face="Verdana"> - Eigenvalues of Graphs - </font>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/ruzieh.html">summary</a>
+</li>
+</br></br>
+<li>
+<a href="https://team.inria.fr/rap/members/eugene">Sarah Eugene</a>
+<font face="Verdana"> - Exercices - </font>
+</li>
+</ul>
+</font>
+<a name="photos"></a>
+<h3 Photos</h3>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/PHOTlistPHP.html">Set of photos of Nablus and Jerusalem</a>
+<a name="program"></a>
+<h3 Program</h3>
+<a href="http://lipn.univ-paris13.fr/~nicodeme/program.pdf">Nablus 2014 Summer School Program</a> 
+
+<a name="supports"></a>
+<h3><font face=verdana>Sponsors</font></h3>
+<ul>
+<li><a href="http://www.cimpa-icpam.org/?lang=en">CIMPA</a>
+<li><a href="http://www.ictp.it/">ICTP</a>
+<li><a href="http://www.mathunion.org/">IMU-CDC</a>
+<li><a href="http://www.cnrs.fr">CNRS</a>
+<li><a href="http://www.univ-paris13.fr/">University Paris13</a>
+<li><a href="http://www.uvsq.fr/">University of Versailles Saint-Quentin-en-Yvelines</a>
+<li><a href="http://www.bath.ac.uk">University of Bath, U.K </a> :
+ <a href="http://people.bath.ac.uk/maspm/coll.html">EPSRC - M&ouml;rters Project </a>
+<li><a href="http://www.inria.fr/en">INRIA</a>
+<li>French Consulate, Jerusalem
+</ul>
+<font face=verdana>
+<a name="report"></a>
+<h3>Scientific Report</h3>
+</font>
+<ul>
+<li><a href="http://lipn.univ-paris13.fr/~nicodeme/nablus14/nafiles/report.pdf">CIMPA Nablus14 Summer School Scientific Report</a>
+</ul>
+
+
+<br><br> 
+
+
+<BR>
+
+
+</body>
+</html>

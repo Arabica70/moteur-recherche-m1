@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html>
+<meta charset="iso-8859-1">
+<head>
+<style>
+body,td,th{
+    font-family:sans-serif;
+    font-size:12px;
+}
+td {
+    border-style:solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #000;
+    padding:3px;
+}
+
+th {
+    border-style:solid;
+    border-width: 1px;
+    border-color: #000;
+    background-color: #61D7A4;
+    padding: 4px;
+}
+
+span{font-size:15px;
+    margin-left:10px;}
+a.sort_link{
+    margin-left:10px;
+    font-size: 15px;
+    text-decoration:none;
+}
+
+</style>
+
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython.js">
+</script>
+
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.0/brython_stdlib.js">
+</script>
+
+
+<style>
+table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+colgroup, tbody { border: solid medium; }
+td { border: solid thin; height: 1.8em; width: 12em; text-align: center; padding: 0; }
+</style>
+</head>
+
+<body onLoad="brython()">
+
+<h1>Weather Station</h1>
+  
+<script type="text/python">
+from browser import document as doc
+from browser import html, alert, ajax
+from browser.html import TABLE, TR, TH, TD
+#import ast
+from browser.local_storage import storage
+import json
+import sys
+#import requests
+
+#Traceback (most recent call last):
+#NotImplementedError: posix.system is not implemented
+#import os
+#os.system('cat weather_station.py')
+
+#Traceback (most recent call last):
+#NotImplementedError: posix.pipe is not implemented
+#from subprocess import Popen, PIPE
+#process = Popen(['cat', 'weather_station.py'], stdout=PIPE, stderr=PIPE)
+#stdout, stderr = process.communicate()
+#print stdout
+
+def unicode_to_char(text):
+    text=text.replace("\u00e0", "&agrave;")
+    text=text.replace("\u00e4", "&auml;")
+    text=text.replace("\u00e2", "&acirc;")
+    text=text.replace("\u00e7", "&ccedil;")
+    text=text.replace("\u00e8", "&egrave;")
+    text=text.replace("\u00e9", "&eacute;")
+    text=text.replace("\u00ea", "&ecirc;")
+    text=text.replace("\u00eb", "&euml;")
+    text=text.replace("\u00ee", "&icirc;")
+    text=text.replace("\u00ef", "&iuml")
+    text=text.replace("\u00f4", "&ocirc;")
+    text=text.replace("\u00f6", "&ouml;")
+    text=text.replace("\u00f9", "&ugrave;")
+    text=text.replace("\u00fb", "&ucirc;")
+    text=text.replace("\u00fc", "&uuml;")
+    text=text.replace("\u200b", "")
+    return text
+
+def make_grid (dic):
+    # print the city name
+    doc["panel"] <= html.H4(dic['city']['cityName'])
+
+    # returns an HTML table
+    table = TABLE()
+
+    # header row
+    table <= TR(TH(f"{i}") for i in ['Date','Min Temp (°C)','Max Temp (°C)','Weather'])
+
+    # table rows
+    for l in dic['city']['forecast']['forecastDay']:
+	thedate = l['forecastDate']
+        mintt	= l['minTemp']
+        maxtt	= l['maxTemp']
+        forecast= l['weather']
+        table <= TR(TD(f"{i}") for i in [thedate,mintt,maxtt,forecast])
+
+    return table
+
+#for l in exDict["city"]["forecast"]["forecastDay"]:
+#    print("<tr>")
+#    print "<td>",l["forecastDate"],"</td><td>   Min Temp:",l["minTemp"],"</td>"
+#    print "<td>   Max Temp:",l["maxTemp"],"</td>"
+#    print "<td>   Forecast:",l["weather"].decode('UTF-8'),"</td>"
+#    #print "   Forecast:",l["weather"].decode('ISO-8859-1')
+#    #print "   Forecast:",l["weather"]
+#    print("</tr>")
+
+def update_select(ev):
+    # selects / deselects options in the SELECT box
+    # ev.target is the checkbox we just clicked
+    rank = choices.index(ev.target.value)
+    sel.options[rank].selected = ev.target.checked
+
+def on_complete(req):
+    if req.status == 200 or req.status == 0:
+	mydata = str(req.text[7:len(req.text)-8])
+	#doc["panel"] <= mydata
+	#storage["brython_test"] = json.dumps(mydata)
+        #mydico = json.loads(storage["brython_test"])
+	#mydico = json.loads(storage['brython_test'])
+        #mydico = json.loads(mydata)
+	#doc["panel"] <= html.BR();doc["panel"] <= html.BR();
+	doc["panel"] <= make_grid(eval(mydata))
+	#s= "{'city':'Paris','Alt':12}"
+	#doc["panel"] <= str(type(eval(s)))
+    else:
+        doc["panel"] <= "ERROR: " + req.text		
+
+def show_selected(ev):
+    alert([(option.value,dico[option.value]) for option in sel if option.selected])
+    doc["panel"] <= html.H2("The city/cities for which you want the weather")
+    for i in [(option.value,dico[option.value]) for option in sel if option.selected]:
+        doc["panel"] <= 'City: ' + i[0] + ' -- City code: ' + i[1]
+        doc["panel"] <= html.BR()
+    doc["panel"] <= html.H2("Here we are!")
+    # We iterate over les selected value
+    for i in [(option.value,dico[option.value]) for option in sel if option.selected]:
+        # send a GET request to the url
+        #req.open('GET',"http://worldweather.wmo.int/fr/json/"+"278"+"_fr.xml",True)
+        #Due to browser security restrictions, most Ajax requests are
+        #subject to the same origin policy; the request can
+        #not successfully retrieve data from a different
+        #domain, subdomain, port, or protocol.
+        # Need for the use of a proxy: https://github.com/gr2m/CORS-Proxy
+        # But this tool is not working TODAY, so it is impossible to do
+        #req.open('GET',"http://localhost:1337/lipn.univ-paris13.fr/~cerin/GUI-1/TD2/testEnsValMeteo.txt",True)
+
+        req = ajax.ajax()
+	req.bind('complete',on_complete)
+	req.open('POST',i[1]+"_fr.xml",True)
+        req.set_header('Access-Control-Allow-Origin', '*');
+        req.set_header('Access-Control-Allow-Headers', 'X-Requested-With');
+        req.set_header('content-type','plain/text')
+	req.send({})
+
+        #ajax.get("http://worldweather.wmo.int/fr/json/"+"278"+"_fr.xml",data={},oncomplete=on_complete)
+        # The methods Popen and requests are not implemented in Brython
+        #data = Popen(["curl", "-k", "http://worldweather.wmo.int/fr/json/"+"278"+"_fr.xml"])
+        #res = requests.post("http://worldweather.wmo.int/fr/json/"+"278"+"_fr.xml")
+        #data = res.text()
+        #data = ""
+        # Replace some fake chars
+        #data=data.replace(":null", ":None")
+        #data=data.replace(":false", ":False")
+        #data=data.replace(":true", ":True")
+        #convert accentuated char
+        #data=unicode_to_char(data)
+        # Do the convert from str to dict()
+        #exDict=ast.literal_eval(data)
+		    
+def update_checkboxes(ev):
+    # updates checkboxes when the selection has changed
+    selected = [option.value for option in sel if option.selected]
+    for elt in doc.get(selector='input[type="checkbox"]'):
+        elt.checked = elt.value in selected
+
+dico = {
+    "Pekin":"237",
+    "Changsha":"554",
+    "Chengdu":"547",
+    "Guangzhou":"241",
+    "Harbin":"540",
+    "Jinan":"551",
+    "Kunming":"238",
+    "Lhasa":"236",
+    "Nanjing":"350",
+    "Shanghai":"240",
+    "Shenzhen":"1854",
+    "Tianjin":"353",
+    "Urumqi":"543",
+    "Wuhan":"351",
+    "Wuxi":"1862",
+    "Xi'An":"239",
+    "Fukuoka":"185",
+    "Nagoya":"355",
+    "Naha":"186",
+    "Osaka":"184",
+    "Sapporo":"181",
+    "Sendai":"182",
+    "Tokyo":"183",
+    "Bordeaux":"1050",
+    "Brest":"1051",
+    "Clermont Ferrand":"1052",
+    "Lille":"1053",
+    "Lyon":"1054",
+    "Marseille":"1055",
+    "Nantes":"1056",
+    "Nice":"902",
+    "Paris":"194",
+    "Strasbourg":"1057",
+    "Toulouse":"1058",
+}
+
+# In Python 2.x
+#choices = dico.keys()
+# In Python 3
+choices = list()
+for i in dico.keys():
+    choices.append(i)
+
+sel = html.SELECT(size=34, multiple=True)
+for item in choices:
+    sel <= html.OPTION(item)
+sel.bind("change", update_checkboxes)
+
+i=0
+for item in choices:
+	   chbox = html.INPUT(Type="checkbox", value=item)
+	   chbox.bind("click", update_select)
+	   doc["panel"] <= item + chbox
+	   i = i + 1
+	   if i > 9:
+	      i = 0
+	      doc["panel"] <= html.BR()
+
+doc["panel"] <= html.BR()
+doc["panel"] <= html.BR()
+doc["panel"] <= sel
+doc["panel"] <= html.BR()				
+doc["panel"] <= html.BR()
+b_show = html.BUTTON("show weather")
+b_show.bind("click", show_selected)
+doc["panel"] <= b_show
+doc["panel"] <= html.BR()
+doc["panel"] <= html.BR()
+</script>
+
+<div id="panel"></div>
+     
+<hr>
+<p></p>
+<p></p>
+  
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>CiE 2016: Pursuit of the Universal - Twelveth Computability in Europe Conference  </title>
+	<meta name="author" content="Paulin de Naurois" />
+	<meta name="description" content="Comptability in Europe (CiE) will take place in Paris, France, in July 2016" />
+	<meta name="keywords" content="CiE 2016 conference, Call for Paper, Venue, Organization, Registration, Program" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="CiE2016.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<img style="float:right;" src="cie_logo.233x180.jpg" alt="CiE" height="100" title="Computability in Europe" />
+		<h1><a href="index.php">CiE 2016: Pursuit of the Universal</a></h1>
+		<h2>June 27th 2016 - July 1st 2016, Paris, France</h2>
+		<img src="Photos-Paris/thumb_IMG_9696_1024.jpg" width="1024" height="256" alt="Paris" title="Photo: Paulin de Naurois" />
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="call-for-paper.php">Call for papers</a></li>
+			<li><a href="registration.php">Registration</a></li>
+			<li><a href="invited-speakers.php">Invited Speakers</a></li>
+			<li><a href="contributed.php">Contributed Papers</a></li>
+			<li><a href="program.php">Program</a></li>
+			<li><a href="venue.php">Venue </a></a></li>
+			<li><a href="grants.php">Grants </a></a></li>
+			<li><a href="social-event.php">Social Event </a></a></li>
+			<li><a href="practical.php">Practical Information </a></a></li>
+			<li><a href="committees.php">Committees, PC Chairs</a></li>
+			<li><a href="Women-in-Computability.php">CiE Women in Computability</a></li>
+			<!-- <li><a href="pictures.php">Pictures</a></li> -->
+			<li><a href="past.php">Past editions</a></li>
+			<li><a href="satellite.php">Satellite Events</a></li>
+			<li><a href="poster.php">Poster - Pictures</a></li>
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>Important dates</h3>
+		<p><strong>Extended Submission deadline</strong><br />January 10, 2016  <a href="https://www.easychair.org/conferences/?conf=cie2016"><abbr title="Easychair submission interface">Submit your article here</abbr></a></p>
+		<p><strong>Notification	</strong><br />March 20, 2016</p>
+		<p><strong>Final version deadline</strong><br />April 17, 2016</p>
+		<p><strong>Informal Presentations Submission deadline</strong><br />April 23, 2016 <a href="https://www.easychair.org/conferences/?conf=cie2016"><abbr title="Easychair submission interface">Submit your article here</abbr></a></p>
+		<p><strong>Conference</strong><br />June 27, 2016 - July 1, 2016</p>
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+		<h2>S Barry Cooper, 1943--2015</h2>
+
+		<p>Barry Cooper, a founding member and former president of the
+Association Computability in Europe, has died on
+Monday, 26 October 2015, after a short period of illness.</p>
+
+		<p>Born on 9 October 1943, Barry had been a leading figure in the UK logic scene all of his academic life.  He was a major figure in computability theory, and in particular degree theory.  Over the last two decades, Barry had developed a vision of the breadth and interdisciplinarity of the subject, which made him the motor and spirit of a movement which started even before the 1st Computability in Europe conference 2005 in Amsterdam, and turned into the Association Computability in Europe in 2008.  Barry had been PC co-chair of three CiE conferences (CiE 2005 in Amsterdam, CiE 2007 in Siena, and the very successful Turing Centenary CiE 2012 conference in Cambridge), active on most committees of the Association CiE (CiE Board, CiE Conference Series Steering Committee, CiE Publications Committee, CiE Book Series Sub-Committee (chair)), and had been the founding president of the Association CiE from 2012 until summer 2015.  Most importantly, Barry had been very influential in shaping our computability thinking in much broader, interdisciplinary terms, which had been key to the success of the movement.  His vision will continue to live in us; his stimulating remarks and kindness will be very much missed.</p>
+		
+		<p> </p>
+		<p>Arnold Beckmann</p>
+		<p>Chair of CiE Conference Series.</p>
+
+		<h2>Presentation of the Conference</h2>
+		<p>The conference series CiE-CS ("Computability in Europe") is an interdisciplinary annual conference series promoting the development of computability-related science, ranging over mathematics, computer science, and applications in various natural and engineering sciences such as physics and biology. The conference scope also includes the study of philosophy and history of computing as it relates to questions of computability. </p>
+		
+		<p>CiE 2016's Motto is: "Pursuit of the Universal". The year 2016 brings the eightieth anniversary of the publication of Alan Turing's seminal paper featuring the Universal Turing Machine. Just as the semantics of the machine gave rise to Incomputability, and pointed to future directions in proof theory, AI, generalised computability, the underlying role of typed information and natural language, and the computability and definability underpinning  bioinformatics: so our conference subtitle honours Turing's role in anticipating the quest for universal computational frameworks across a wide spectrum of scientific and humanist disciplines.</p>
+
+		
+		<h2>Venue</h2>
+		
+		<p>CiE 2016 will take place from June 27th 2016 to July 1st 2016 in Paris, France. It is organized by Université Paris 13 and Université Paris 7, and will be hosted by  Université Paris 7 (Université Paris Diderot).</p>
+		
+
+		<h2>Support</h2>
+		
+		<p>CiE 2016 is supported by the Following institutions: CNRS, Université Paris 13, Université Paris 7 (Université Paris Diderot), LIPN, PPS, LIAFA, Équipe de Logique Mathématique de Jussieu.</p>
+		
+		<h2>Publications</h2>
+		
+		<p>Invited papers of plenary and special session speakers, together with selected contributed accepted papers will be published in our LNCS conference proceedings that will be available at the conference and at Springerlink.</p>
+		
+		<!-- <h3>Post-conference publication in the association journal.</h3> -->
+		<p> Since 2012, the Association CiE has its own journal, <a href="http://www.computability.de/journal/">Computability</a>. All authors of papers presented at CiE 2016 are encouraged to submit the journal versions of their papers to this journal where they will be refereed as standard submissions (with no special treatment due to the fact that they were presented at a CiE conference).</p>
+		
+
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<!-- <img src="images/verimag.png" alt="Verimag" title="Verimag">-->
+			<!-- <img src="images/lipn.jpg" alt="LIPN" title="LIPN">-->
+			<!-- <img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR">-->
+			<!-- <a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>-->
+			<img src="images/cnrs.png" alt="CNRS" title="CNRS">
+			<img src="images/paris13.png" alt="Université Paris 13" title="Université Paris 13">
+			<img src="images/logo_paris_diderot.jpg" alt="Université Paris 7" title="Université Paris 7">
+			<img src="images/logosorbonnepariscit.jpg" alt="USPC" title="USPC">
+			<img src="images/769px-Eatcslogo.jpg" alt="EATCS" title="EATCS">
+			<!-- <img src="images/gdrim.jpg" alt="GdR IM CNRS" title="GdR IM">-->
+		</div>
+		
+		<div id="sponsors-labos">
+			<!-- <img src="images/verimag.png" alt="Verimag" title="Verimag">-->
+			<img src="images/lipn-2.png" alt="LIPN" title="LIPN">
+			<img src="images/Irif.png" alt="Irif" title="Irif">
+			<img src="images/IM.png" alt="IM" title="Institut de Mathématiques">
+			<img src="images/anr.png" alt="ANR" title="Agence Nationale de la Recherche - ANR 12 JS02 006 01">
+			<!-- <img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR">-->
+			<!-- <a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>-->
+			<!-- <img src="images/gdrim.jpg" alt="GdR IM CNRS" title="GdR IM">-->
+		</div>
+		
+		<div id="contact">
+			<p> Contact: Paulin de Naurois. Email: denaurois [ at ] lipn.univ-paris13.fr </p>
+		</div>
+		
+		<div id="copyright">
+			<p>Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)</p>
+			<p>Title font: <a href="https://fontlibrary.org/en/font/bretan">Coval</a> (SIL Open Font); Main banner: Paulin de Naurois</p>
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+</body>
+</html>
+ 

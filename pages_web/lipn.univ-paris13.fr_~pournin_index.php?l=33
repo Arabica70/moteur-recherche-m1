@@ -1,0 +1,142 @@
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="lipn.png">
+
+ 
+<title>Lionel Pournin - The 4-dimensional cube</title>
+<meta name="author" content="Lionel Pournin">
+<meta name="description" content="Lionel Pournin, discrete and computational geometry">
+<meta name="keywords" content="Lionel Pournin, discrete geometry, polytopes, operations research, triangulations, flip-graph connectivity, k-regularity, weak regularity">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div style="width=470;font-size:26px;font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">
+Lionel Pournin - The 4-dimensional cube
+</div>
+
+<hr align=left noshade size=2 width=200 style="margin-bottom:-5px;">
+
+<table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:120px;">
+      <p style="margin-top:20px;font-size:18px;"><a href="http://lipn.univ-paris13.fr/~pournin/">Main</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=2">Teaching</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=3">Research</a></p>
+<p style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;margin-top:-16px;"><span class="sp4">[<a href="index.php?l=32" style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;">Flip-graphs</a>]</span></p>
+<p style="font: 14px 'HelveticaNeue-Light',  'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300;margin-top:-14px;"><span class="sp4">[<a href="index.php?l=33" style="font: 14px 'HelveticaNeue-Light',  'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Tesseract</a>]</span></p>
+<p style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 300; margin-top:-14px;"><span class="sp4">[<a href="index.php?l=31" style="font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Simulation</a>]</span></p>
+<p style="margin-top:0px;font-size:18px;"><a href="index.php?l=4">Publications</a></p>
+<!--
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=6">Talks</a></p>
+-->
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=5">Links</a></p>
+      </div>
+    </td>
+    <td valign="top">
+      <div style="clear:both;float:left;width:730px;">
+  <p align="justify">
+    The square is the 2-dimensional analog of the cube. As can be seen on the right, a square can be triangulated in two ways. These two triangulations are obtained from each other by a flip.
+  </p>
+  <p align="justify">
+    There are 74 ways to triangulate the usual (3-dimensional) cube [1], i.e. to decompose it into a set of tetrahedra that intersect along common faces and whose vertices are also vertices of the cube. These 74 triangulations can be partitioned into 6 symmetry classes [1,2]. All these triangulations are regular and, as a consequence, each of them can be transformed into any other triangulation of the cube by performing a sequence of flips.
+  </p>
+  <p align="justify">
+    What about the 4-dimensional cube? Until recently, the number of its triangulations was unknown. Indeed, the only method fast enough to possibly allow for their enumeration consists in exploring the flip-graph of the 4-dimensional cube, <i>under the assumption that this graph is connected</i>. I proved the connectedness of this graph in [3]. Part of this proof is computer-assisted: Proposition 3 from [3] is obtained using an algorithm you will find several implementations of <a href="http://www.liafa.univ-paris-diderot.fr/~lionel/Proposition3.zip">here</a>.
+
+  </p>
+  <p align="justify">
+ The number of triangulations of the 4-dimensional cube is found as a consequence using <a href="http://www.rambau.wm.uni-bayreuth.de/TOPCOM/">TOPCOM</a>: there are 92&thinsp;487&thinsp;256 such triangulations, partitioned into 247&thinsp;451 symmetry classes. These numbers are reported within sequences <a href="http://oeis.org/A238820">A238820</a> and <a href="http://oeis.org/A238821">A238821</a> in the <a href="http://oeis.org/">Online Encyclopedia of Integer Sequences</a>:
+  </p>
+
+  <p align="center">
+    <table style="width:700; border-collapse: collapse; margin-top: 15px">
+      <tr>
+        <td width="280" style="border-right: 1px solid; border-bottom: 1px solid;" align="center">dimension</td>
+        <td width="80" style="border-bottom: 1px solid;" align="center">0</td> 
+        <td width="80" style="border-bottom: 1px solid;" align="center">1</td>
+        <td width="80" style="border-bottom: 1px solid;" align="center">2</td>
+        <td width="80" style="border-bottom: 1px solid;" align="center">3</td>
+        <td width="80" style="border-bottom: 1px solid;" align="center">4</td>
+      </tr>
+      <tr>
+        <td width="280" style="border-right: 1px solid;" align="center">number of triangulations (A238820)</td>
+        <td width="80" style="" align="center">1</td> 
+        <td width="80" style="" align="center">1</td>
+        <td width="80" style="" align="center">2</td>
+        <td width="80" style="" align="center">74</td>
+        <td width="80" style="" align="center">92&thinsp;487&thinsp;256</td>
+      </tr>
+      <tr>
+        <td width="280" style="border-right: 1px solid;" align="center">number of symmetry classes (A238821)</td>
+        <td width="80" style="" align="center">1</td>
+        <td width="80" style="" align="center">1</td>
+        <td width="80" style="" align="center">1</td>
+        <td width="80" style="" align="center">6</td>
+        <td width="80" style="" align="center">247&thinsp;451</td>
+      </tr>
+    </table>
+  </p>
+
+  <p align="justify">
+    These numbers are yet unknown for cubes of dimension larger than 4. It is an interesting problem to find them: after all, they may be thought of as distant relatives of Catalan numbers as they also count the triangulations of a structured set of points.
+  </p>
+</div>
+
+<div style="float:right;width:185px;margin-top:5px">
+<div style="float:right;width:170px">
+  <p align="justify">
+    <img align=left src="squares.svg" width="170", border=0 style="margin-bottom:5px;">
+    <font size=2>The two triangulations of a square are related by a flip.</font>
+  </p>
+
+  <p align="justify">
+    <img align=left src="cubes.svg" width="170", border=0 style="margin-bottom:5px;">
+    <font size=2>The six triangulations, up to symmetry, of a cube [1].</font>
+  </p>
+</div>
+</div>
+
+<div style="clear:both;float:left;width:780px;">
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[1]</h3>
+  </div>
+  <div style="float:right;width:740px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://dx.doi.org/10.1007/BF02711494">Nonregular triangulations of products of simplices</a><br>J. A. De Loera, Discrete Comput. Geom. <b>15</b>(3), 253-264 (1996)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[2]</h3>
+  </div>
+  <div style="float:right;width:740px;margin-top:-4px;" align="left" valign="top">
+    <h3><a href="http://www.springer.com/mathematics/geometry/book/978-3-642-12970-4">Triangulations: structures for algorithms and applications</a><br>J. A. De Loera, J. Rambau, F. Santos, Algorithms and Computation in Mathematics <b>25</b>, Springer (2010)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>[3]</h3>  
+  </div>
+  <div style="float:right;width:740px;margin-top:-4px;" align="left" valign="top">
+        <h3><a href="http://dx.doi.org/10.1007/s00454-013-9488-y">The flip-graph of the 4-dimensional cube is connected</a><br>L. Pournin, Discrete Comput. Geom. <b>49</b>(3), 511-530 (2013)</h3>
+  </div>
+</div>
+
+    </td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6627459; 
+var sc_invisible=1; 
+var sc_security="1f468d45"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

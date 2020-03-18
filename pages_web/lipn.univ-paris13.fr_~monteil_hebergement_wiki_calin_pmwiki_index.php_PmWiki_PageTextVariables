@@ -1,0 +1,368 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Page Text Variables </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.PageTextVariables' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=search&amp;q=link=PmWiki.PageTextVariables'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Page Text Variables</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupExpressions'>Markup expressions</a> &rarr;</span> 
+</p></div>
+<div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a></span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<div  style='display: none;' > 
+<p><a name='singleline' id='singleline'></a>
+<span style='font-size:83%'><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FullName?action=edit' title='Create page'>Full Name</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/FullName?action=edit'>?</a>,</span> <a name='singlelineend' id='singlelineend'></a>
+</p></div>
+<div class='vspace'></div><div class='frame rfloat noprint' style='font-size: smaller; clear: right;' > 
+<h4>Table of contents</h4>
+<ul><li><a href='#defining'>Defining page text variables</a>
+</li><li><a href='#usage'>Usage</a>
+<ul><li><a href='#usagesamepage'>On the same page</a>
+</li><li><a href='#usageotherpage'>From other pages</a>
+</li><li><a href='#usageincludedpage'>On included pages</a>
+</li><li><a href='#pagelists'>With pagelists</a>
+</li><li><a href='#templates'>In templates</a>
+</li><li><a href='#conditionals'>With conditionals</a>
+</li><li><a href='#withincode'>Within code</a>
+</li></ul></li></ul></div>
+<p class='vspace'>Page text variables are string variables created in the wiki text of a page, and can be automatically made available for inclusion in other pages. In the default installation, PageTextVariables can only have a name containing basic Latin/Roman (ASCII) letters, digits, dash and underscore. This is a limitation for international wikis (experimental recipe for international PTV : <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/InternationalPTVs' rel='nofollow'>Cookbook:InternationalPTVs</a>). 
+</p>
+<p class='vspace'><a name='defining' id='defining'></a>
+</p><h2>Defining Page Text Variables</h2>
+<p>There are three ways to define automated Page Text Variables (<a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PageTextVariables-Talk#new_patterns' rel='nofollow'>more patterns</a> can be defined if needed) :
+</p>
+<div class='vspace'></div><ul><li>use a <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TextFormattingRules#DefinitionLists' title=" Definition Lists">definition list</a> - the normal pmwiki markup for a definition list will create a page text variable
+</li></ul><table class='markup horiz' align='center'><caption>Example definition list:</caption>
+      <tr><td class='markup1' valign='top'><pre>:Name: Crisses
+"{$:Name}"
+</pre></td><td 
+        class='markup2' valign='top'><dl><dt>Name</dt><dd> Crisses
+</dd></dl><p>&ldquo;Crisses&rdquo;
+</p>
+</td></tr></table>
+<div class='indent'>This creates a new variable that can be accessed by <code class='escaped'>{$:Name}</code> (becomes: &ldquo;Crisses&rdquo;) in the page.
+</div><div class='vspace'></div><ul><li>use a simple colon delimiter in normal text
+</li></ul><table class='markup horiz' align='center'><caption>Example colon delimited:</caption>
+      <tr><td class='markup1' valign='top'><pre>Address: 1313 Mockingbird Lane
+
+"{$:Address}"
+</pre></td><td 
+        class='markup2' valign='top'><p>Address: 1313 Mockingbird Lane
+</p>
+<p class='vspace'>&ldquo;1313 Mockingbird Lane&rdquo;
+</p>
+</td></tr></table>
+<div class='indent'>This creates the <code class='escaped'>{$:Address}</code> variable (variable markup becomes: &ldquo;1313 Mockingbird Lane&rdquo;) in the page.
+</div><div class='vspace'></div><ul><li>hidden <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageDirectives'>directive</a> form - PmWiki markup that doesn&rsquo;t render on the page, but defines the variable
+</li></ul><table class='markup horiz' align='center'><caption>Example directive:</caption>
+      <tr><td class='markup1' valign='top'><pre>(:Country: Transylvania :)
+"{$:Country}"
+</pre></td><td 
+        class='markup2' valign='top'><p>&ldquo;Transylvania &ldquo;
+</p>
+</td></tr></table>
+<div class='indent'>This creates the <code class='escaped'>{$:Country}</code> variable (variable markup becomes: &ldquo;Transylvania &ldquo;) in the page.
+</div><p class='vspace'><a name='usage' id='usage'></a>
+</p><h2>Usage</h2>
+<p><a name='usagesamepage' id='usagesamepage'></a>
+</p><h3>Usage on the same page</h3>
+<p>On the same page you can resolve page text variables through the <code class='escaped'>{$:Var}</code> format (shown above).
+</p>
+<p class='vspace'><a name='specialreferences' id='specialreferences'></a>
+</p><h3>Usage in headers and footers: special references</h3>
+<p>If you want a GroupHeader, GroupFooter, SideBar, etc to call on page text variable in the main page, you need to include special reference information.  
+To explicitly reference the page text variable from the page being displayed add an asterisk to the page text variable&rsquo;s markup:  <code class='escaped'>{*$:Address}</code> on the GroupFooter or GroupHeader page.  
+</p><table class='markup horiz' align='center'><caption>Example</caption>
+      <tr><td class='markup1' valign='top'><pre>{*$:Mountain} \\
+{*$Namespaced}
+</pre></td><td 
+        class='markup2' valign='top'><p>Mt Ruapehu <br />Page Text Variables
+</p>
+</td></tr></table>
+<p>To include a page text variable <em>from</em> a header or footer see <a href='#usageotherpage'>usage from other pages</a> below.
+</p><div class='outdent'>Special references also apply to <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables#specialreferences'>page variables</a> and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageListTemplates#specialreferences'>page list templates</a>.
+</div><p class='vspace'><a name='usageotherpage' id='usageotherpage'></a>
+</p><h3>Usage from other pages</h3>
+<p>If you want to pull the data from another page, use the <code class='escaped'>{Group/PageName$:Var}</code> format.
+</p><table class='markup horiz' align='center'><caption>Example:</caption>
+      <tr><td class='markup1' valign='top'><pre>Suburb: Khandallah
+(:Lake:Taupo:)
+:Mountain:Mt Ruapehu
+
+-&gt;"{PmWiki/PageTextVariables$:Suburb}"
+-&gt;"{{$FullName}$:Lake}"
+-&gt;"{PmWiki/PageTextVariables$:Mountain}"
+</pre></td><td 
+        class='markup2' valign='top'><p>Suburb: Khandallah
+</p><dl><dt>Mountain</dt><dd>Mt Ruapehu
+</dd></dl><div class='vspace'></div><div class='indent'>&ldquo;Khandallah&rdquo;
+</div><div class='indent'>&ldquo;Taupo&rdquo;
+</div><div class='indent'>&ldquo;Mt Ruapehu&rdquo;
+</div>
+</td></tr></table>
+<p class='vspace'><a name='usageincludedpage' id='usageincludedpage'></a>
+</p><h3>Usage from included pages</h3>
+<p>Page text variables are never <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages'>included</a> from their source page.
+See <a href='#usageotherpage'>Usage from other pages</a> above to refer to a page text variable on another page.
+</p>
+<p class='vspace'><a name='pagelists' id='pagelists'></a>
+</p><h3>Usage with pagelists</h3>
+<p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>Page lists</a> can also access the page text variables:
+</p><table class='markup horiz' align='center'><caption>Example:</caption>
+      <tr><td class='markup1' valign='top'><pre>(:pagelist group=PmWiki order=$:Summary count=6 fmt=#singleline:)
+</pre></td><td 
+        class='markup2' valign='top'><div class='fpltemplate'><p><span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PatrickMichaud'>Patrick Michaud</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>Wiki Administrator</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiFarmTerminology'>Wiki Farm Terminology</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWiki'>PmWiki</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'>Wiki Sandbox</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SpecialCharacters'>Special Characters</a>,</span> 
+</p>
+</div>
+</td></tr></table>
+<p class='vspace'>And to create pagelist formats (such as those documented at <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/PageListTemplates'>Site.Page List Templates</a>, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>Page Lists</a>, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageListTemplates'>Page List Templates</a>, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page Variables</a>.  Store custom pagelists at <a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/LocalTemplates?action=edit' title='Create page'>Site.Local Templates</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/LocalTemplates?action=edit'>?</a>).
+</p>
+<p class='vspace'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>Page lists</a> can also use page text variables to select pages :
+</p><table class='markup horiz' align='center'><caption>Example:</caption>
+      <tr><td class='markup1' valign='top'><pre>(:pagelist group=PmWiki $:City=Paris count=8 fmt=#singleline order=-name:)
+</pre></td><td 
+        class='markup2' valign='top'><div class='fpltemplate'></div>
+</td></tr></table>
+<div class='indent'>lists pages having &lsquo;$:City&rsquo; set to &lsquo;Paris&rsquo;.
+</div><div class='vspace'></div><table class='markup horiz' align='center'><caption>Example: multiple selections with spaces</caption>
+      <tr><td class='markup1' valign='top'><pre>(:pagelist group=PmWiki $:City="Addis Ababa,Paris" order=-$:Version count=8 fmt=#singleline:)
+</pre></td><td 
+        class='markup2' valign='top'><div class='fpltemplate'></div>
+</td></tr></table>
+<div class='indent'>&lsquo;quotes&rsquo; must surround <em>all</em> the selections.
+</div><div class='vspace'></div><ul><li>When using page text variables for selection or ordering, don&rsquo;t put the curly braces around the variable name. The curly forms do a replacement before the pagelist command is evaluated. 
+</li><li>Link markup within the contents of a hidden page text variable directive (as opposed to other ways of specifying PTVs) will not be cached as a link on the page and thus won&rsquo;t be seen by pagelist&rsquo;s link= option. If you want the link to be found by link=, you need to specify the PTV using non-directive markup, or else put the link on the page even if it&rsquo;s hidden within a false conditional: <code class='escaped'>(:Linkme: [[PageToLink]]:) (:if false:){$:Linkme}(:ifend:)</code>
+</li></ul><p class='vspace'>The page text variable value is always the text that is written in the page. 
+It is only evaluated when the variable is printed/output to HTML. 
+To sort by a page text variable variable, all values in all pages are the not-yet-evaluated text strings, and the pagelist order function does what it can with them. It does not process/evaluate the text at this point.
+</p>
+<p class='vspace'>E.g. With a page name in to format &ldquo;yyyyMonth&rdquo; it is simpler to use a <code>PageVariable</code> calculated in <code>config.php</code>, not a <code>PageTextVariable</code>:
+</p><div class='indent'><code class='escaped'>  $FmtPV['$NameToYearMonth'] = 'strftime("%Y%m", strtotime($name))';</code>
+</div><p>Then use <code class='escaped'>(:pagelist order=$NameToYearMonth:)</code>
+</p>
+<p class='vspace'>An alternative is writing in the wiki page:
+</p><div class='indent'><code class='escaped'>(:MonthNum:07:)</code>
+</div><p>as the markup expression that follows won&rsquo;t work:
+</p><div class='indent'><code class='escaped'>(:MonthNum:{(ftime fmt=%m when="{$Namespaced}")}:)</code>
+</div><p class='vspace'><a name='set' id='set'></a>
+</p><h3>Testing if set or not set</h3>
+<table border='0' cellpadding='4' rules='all' ><tr ><td  align='center'><strong>=-</strong></td><td  align='left'>PTV is set (is not empty), eg <code class='escaped'>(:pagelist $:Var=- :)</code></td></tr>
+<tr ><td  align='center'><strong>=-?*</strong></td><td  align='left'>PTV is not set (is empty), ie not one character followed by 0 or more characters, eg. <code class='escaped'>(:pagelist $:Var=-?* :) </code></td></tr>
+<tr ><td  align='center'><strong>=*</strong></td><td  align='left'>display <em>all</em> pages, regardless of the page text variable (slow)</td></tr>
+<tr ><td  align='center'><strong>=-*</strong></td><td  align='left'>display <em>no</em> pages, regardless of the page text variable (slow)</td></tr>
+</table>
+<p class='vspace'><span style='font-size:83%'>Tip : <code class='escaped'>(:if ! equal "{$:PTV}" "":)</code> will test if PTV is empty/unset or not.</span>
+</p>
+<div class='vspace'></div><table class='markup horiz' align='center'><caption>Example: Pages without a summary</caption>
+      <tr><td class='markup1' valign='top'><pre>(:pagelist group=PmWiki $:Summary=-?* count=6  fmt=#singleline:)
+</pre></td><td 
+        class='markup2' valign='top'><div class='fpltemplate'><p><span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PatrickMichaud'>Patrick Michaud</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWiki'>PmWiki</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SpecialCharacters'>Special Characters</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiAdministrator'>Wiki Administrator</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiFarmTerminology'>Wiki Farm Terminology</a>,</span> 
+<span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiSandbox'>Wiki Sandbox</a>,</span> 
+</p>
+</div>
+</td></tr></table>
+<p class='vspace'><a name='templates' id='templates'></a>
+</p><h3>Use page text variable in a template</h3>
+<p>Display pages by Audience page text variable.
+</p><table class='markup horiz' align='center'><caption>Example:</caption>
+      <tr><td class='markup1' valign='top'><pre>&gt;&gt;comment&lt;&lt;
+[[#byaudience]]
+(:if ! equal '{=$:Audience}' '{&lt;$:Audience}':)
+-&lt;'''{=$:Audience}''':  
+(:ifend:)
+[[{=$Name}]]
+[[#byaudienceend]]
+&gt;&gt;&lt;&lt;
+(:pagelist group=PmWiki count=10 fmt=#byaudience order=-$:Audience:)
+</pre></td><td 
+        class='markup2' valign='top'><div  style='display: none;' > 
+<p><a name='byaudience' id='byaudience'></a>
+</p><div class='outdent'><strong>{=$:Audience}</strong>:  
+</div><p><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Name?action=edit' title='Create page'>{=&#036;Name}</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Name?action=edit'>?</a>
+<a name='byaudienceend' id='byaudienceend'></a>
+</p></div>
+<div class='fpltemplate'><div class='outdent'><strong>visitors (intermediate) </strong>:  
+</div><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/AccessKeys'>AccessKeys</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WebFeeds'>WebFeeds</a>
+</p><div class='outdent'><strong>authors, admins (intermediate) </strong>:  
+</div><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>PageLists</a>
+</p><div class='outdent'><strong>authors, admins (advanced) </strong>:  
+</div><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ConditionalMarkup'>ConditionalMarkup</a>
+</p><div class='outdent'><strong>authors (intermediate) </strong>:  
+</div><p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/IncludeOtherPages'>IncludeOtherPages</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/TableDirectives'>TableDirectives</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/GroupHeaders'>GroupHeaders</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Uploads'>Uploads</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>PageVariables</a>
+<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Categories'>Categories</a>
+</p>
+</div>
+</td></tr></table>
+<p class='vspace'><a name='conditionals' id='conditionals'></a>
+</p><h3>Use page text variables in <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ConditionalMarkup'>conditional markup</a></h3>
+<p>Page text variables will be assigned/evaluated <strong>before</strong> any conditional markup is evaluated. This effectively means that you cannot declare a PTV within an if&hellip;else condition; and also that a PTV will have a value even if it is set within a <code class='escaped'>(:if false:)....(:if:)</code> condition.
+</p>
+<p class='vspace'><a name='withincode' id='withincode'></a>
+</p><h3>Usage - from within code (developers only)</h3>
+<p>The standard <code>PageVar({$pagename,$}varname)</code> function can return page text variables, but remember to include the dollar and colon like this:
+</p>
+<div class='vspace'></div><div class='indent'><code>{$var=PageVar($}pagename,&rsquo;$:City&rsquo;)</code>
+</div><p class='vspace'>It works by caching all page (text) variables it finds in a page (in <code>&#36;PCache</code>) and returns the one requested.
+ 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/MarkupExpressions'>Markup expressions</a> &rarr;</span> 
+</p></div>
+<div style='clear:right; float:right; font-size:smaller; background-color:#ddd;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>Page Variables</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Variables'>Variables</a></span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PageTextVariables' rel='nofollow'>PmWiki:PageTextVariables</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/PageTextVariables-Talk' rel='nofollow'>PmWiki:PageTextVariables-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageTextVariables?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on July 17, 2016, at 12:04 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

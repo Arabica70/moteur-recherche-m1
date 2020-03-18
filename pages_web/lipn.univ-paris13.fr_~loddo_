@@ -1,0 +1,203 @@
+<html>
+<title>Jean-Vincent Loddo home page</title>
+<body bgcolor=#ffffff>
+<H1>Jean-Vincent Loddo</H1>
+<table border=4><tr><td><img src="photo.jpg"></td></tr></table>
+<H3>Maître de conférences<br></H3>
+
+<A HREF="http://www.iutv.univ-paris13.fr/iutv/index.php">IUT de Villetaneuse</A> - 
+<A HREF="http://www-gtr.iutv.univ-paris13.fr/">Département R&T</A> 
+<br>
+
+<A HREF="http://www-lipn.univ-paris13.fr/">Laboratoire d'Informatique de Paris Nord (LIPN)</A> - 
+Équipe <A HREF="http://www-lipn.univ-paris13.fr/equipes/LCR/">LCR</A>
+<br>
+
+<A HREF="http://www.univ-paris13.fr/">Université Paris Nord</A> (Paris 13)
+<br><br>
+Docteur en informatique de l'Université Paris 7 (ancien thésard de <A HREF="http://www.pps.jussieu.fr/">PPS</A>
+et du <A HREF="http://www.di.ens.fr">LIENS</A>).<br>
+
+<em>Laurea in scienze dell'informazione</em> de l'Université de Pise.
+
+<hr>
+<!-- --------------------------------------------------------------------------------- -->
+<H3>Centres d'intérêts</H3>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI>Sémantique des langages de programmation.</LI>  
+<LI>Intégration des paradigmes logique et fonctionnel.</LI>  
+<LI>Théorie de jeux combinatoire. </LI>  
+<LI>Programmation web modulaire.</LI>  
+<LI>Logiciels libres (partisan utilisateur et développeur).</LI>  
+
+</ul> 
+
+<hr>
+<!-- --------------------------------------------------------------------------------- -->
+<H3>Enseignements à Paris 13</H3>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI><em>Réseaux, architecture TCP/IP</em>. Cours, TD, TP. <em>Niveaux DUT, LicPro</em>. IUT de Villetaneuse, Dép. R&T. 2003-présent.</LI>  
+<LI><em>Unix et programmation shell</em>. Cours, TD, TP. <em>Niveaux DUT, LicPro</em>. IUT de Villetaneuse, Dép. R&T. 2003-présent. <a href="files/COURS-UNIX-LICPRO/">Documents</a></LI>  
+<LI><em>Bases de programmation (avec Python)</em>. Cours, TD, TP. <em>Niveau DUT (M1207)</em>. IUT de Villetaneuse, Dép. R&T. 2015-présent. <a href="files/COURS-PROG-PYTHON-DUT/">Documents</a></LI>
+<LI><em>Bases de programmation (avec C)</em>. Cours, TD, TP. <em>Niveau DUT (M1207)</em>. IUT de Villetaneuse, Dép. R&T. 2006, 2013, 2014. <a href="files/COURS-PROG-DUT/">Documents</a></LI>
+<LI><em>Programmation Java</em>. Cours, TD, TP. <em>Niveau DUT</em>. IUT de Villetaneuse, Dép. R&T. 2004.</LI>
+<LI><em>Programmation OCaml</em>. Cours, TD, TP. <em>Niveau Master</em>. Institut Galilée. 2009.</LI>
+<LI><em>Programmation fonctionnelle avancée</em>. Cours. <em>Niveau Master</em>. Institut Galilée. 2010, 2013.</LI>
+<LI><em>Paradigmes de programmation</em>. Cours, TD, TP. <em>Niveau école ingénieurs</em>. Institut Galilée. 2011, 2012.</LI>
+<LI><em>Projets tutorés</em>. Coordinateur. <em>Niveaux DUT, S3-S4</em>. IUT de Villetaneuse, Dép. R&T. 2016-2017. <a href="files/PROJETS-TUTORES/">Documents</a></LI>  
+</ul> 
+
+<hr>
+<!-- --------------------------------------------------------------------------------- -->
+<H3>Projets et développements<br></H3>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI><a href="http://www.marionnet.org"><em>Marionnet</em></a>. Logiciel de simulation de réseaux virtuels. 
+Initiateur et responsable du projet à Paris 13. Développé avec <a href="http://www-lipn.univ-paris13.fr/~saiu/">Luca Saiu</a>.
+(<a href="http://www.marionnet.org">site web</a>, <a href="http://launchpad.net/marionnet">launchpad</a>, 
+<a href="http://en.wikipedia.org/wiki/Marionnet">wikipedia</a>).    
+</LI>
+
+<LI><a href="http://launchpad.net/ocamlbricks"><em>Ocamlbricks</em></a>. Bibliothèque OCaml généraliste, complément 
+des bibliothèques standards. Développé avec Luca Saiu. (<a href="http://launchpad.net/ocamlbricks">launchpad</a>).   
+</LI>
+
+<LI><em>Rimmel</em>. 
+Programmation logique en OCaml. Extension de syntaxe Camlp4 et runtime. <u>À publier</u> sur une forge.    
+</LI>
+
+<LI><em>Pagurus</em>. 
+Programmation reactive en OCaml. Extension de syntaxe Camlp4 et runtime. <u>À publier</u> sur une forge.    
+</LI>
+</ul>
+<H4>Anciens projets</H4>
+<ul>
+<LI><a href="http://www.demolinux.org"><em>Demolinux</em></a>. Ancêtre des live-cd GNU/Linux à la Knoppix
+(<a href="http://fr.wikipedia.org/wiki/DemoLinux">wikipedia</a>), pour la promotion du 
+<a href="http://fr.wikipedia.org/wiki/Logiciel_libre">logiciel libre</a>. 
+Développé avec <a href="http://www.dicosmo.org">Roberto Di Cosmo</a> et 
+<a href="http://www.pps.jussieu.fr/~balat/">Vincent Balat</a>. 1998-2002.</LI>
+
+<LI><a href="iutoppix/"><em>Iutoppix</em></a>. Live-cd GNU/Linux dérivé de <a href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a> 
+pour l'enseignement à l'IUT. 2004-2008.</LI>
+
+</ul>
+
+<hr>
+<!-- --------------------------------------------------------------------------------- -->
+<H3>Encadrements</H3>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI><em>Luca Saiu</em>. <a href="http://ageinghacker.net/publications/#phd-thesis">PhD Thesis</a>. <a href="http://www.gnu.org/software/epsilon/">GNU epsilon</a>, an extensible programming language. Co-encadrant avec <a href="http://www-lipn.univ-paris13.fr/~fouquere/">Christophe Fouqueré</a>. 2008-2012.</LI>
+
+</ul>
+
+<hr>
+<!-- --------------------------------------------------------------------------------- -->
+<H3>Publications</H3>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI>J.-V. Loddo, L. Saiu. <em>How to Correctly Prune Tropical Trees</em>. 
+In proceedings of the 10th International Conference on Artificial Intelligence 
+and Symbolic Computation (AISC'2010). France 2010.    
+<a href="files/loddo-saiu--tropical-trees--aisc-2010.pdf">pdf</a></LI>
+
+<LI>J.-V. Loddo, L. Saiu. <em>Marionnet: a virtual network laboratory and simulation tool</em>. 
+1th International Conference on Simulation Tools and Techniques for Communications, 
+Networks and Systems (SimulationWorks'2008).
+Marseille, France, 2008.
+<a href="files/loddo-saiu--marionnet--simulationworks-2008.pdf">pdf</a></LI>
+
+<LI>P. Coupey, C. Fouqueré, J.-V. Loddo. <em>Tree Components Programming: An Application to XML</em>. 
+In proceedings of the 
+4th International Colloquium of Theoretical Aspects of Computing (ICTAC'2007). Macau, China, 2007.
+<a href="files/coupey-fouquere-loddo--tree-components--ictac-2007.pdf">pdf</a></LI>
+
+<LI>J.-V. Loddo, L. Saiu. <em>Status report: marionnet or "how to implement a virtual network laboratory 
+in six months and be happy"</em>. ACM SIGPLAN Workshop on ML (ML'2007), Freiburg (Germany), 2007.
+<a href="files/loddo-saiu--how-to-implement--ml-2007.pdf">pdf</a></LI>
+
+<LI>R. Di Cosmo, J.-V. Loddo. <I>Playing Logic Programs
+with the Alpha-Beta Algorithm</I>. In proceedings of the 7th International
+Conference on Logic for Programming and Automated Reasoning (LPAR'2000).
+St. Gilles, Ile de la Réunion, France 2000.
+<a href="files/dicosmo-loddo--playing-logic-program--lpar-2000.ps.gz">ps.gz</a></LI>
+
+<LI hspace=10>R. Di Cosmo, J.-V. Loddo and S. Nicolet.
+<I>A Game Semantics Foundation for Logic Programming</I>. In proceedings
+of the 6th International Conference on Algebraic and Logic Programming
+(PLIP 98). Pisa, Italy 1998, LNCS, Springer-Verlag.
+<a href="files/dicosmo-loddo-nicolet--game-semantics--plip-1998.ps.gz">ps.gz (short)</a>,
+<a href="files/dicosmo-loddo-nicolet--game-semantics--plip-1998-long.ps.gz">ps.gz (long)</a></LI>
+
+<LI>P. Degano, J.-V. Loddo and C. Priami. <I>Mobile
+Processes with Local Clocks</I>. In Proceedings of Workshop on Analysis
+and Verification of Multiple-Agent Languages, Stockholm 1996.
+<a href="files/degano-loddo-priami--mobile-processes--1996.ps.gz">ps.gz</a></LI>
+
+</ul>
+<!-- --------------------------------------------------------------------------------- -->
+<H4>Pédagogiques</H4>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI>F. Butelle, J.-V. Loddo. <em>Tirer les ficelles de l'architecture TCP/IP avec Marionnet</em>. Journée Réseaux (JRES'2011). Toulouse, 2011.
+<a href="files/butelle-loddo--tirer-les-ficelles--JRES-2011.pdf">pdf</a></LI>
+
+<LI>R. Kanawati, J.-V. Loddo. <em>Le routage IP statique avec Marionnet : retour d'expérience</em>. 
+Colloque international sur l'enseignement des Technologies et des Sciences de l'Information et des Systèmes (CETSIS'2010), 
+Grenoble, 2010. Selectionné pour <a href="http://www.j3ea.org/">J3EA</a>.
+<a href="files/kanawati-loddo--routage-statique--cetsis-2009.pdf">pdf</a></LI>
+
+<LI>J.-V. Loddo. <em>Marionnet : un logiciel graphique pour l'apprentissage et l'enseignement 
+des réseaux locaux d'ordinateurs</em>. Premier Workshop pédagogique "Réseaux & Télécoms", 
+Saint-Pierre de la Réunion (France), 2007.
+<a href="files/loddo--marionnet--wprt-2007.pdf">pdf</a></LI>
+
+<LI>J.-V. Loddo, T. Hamon. <em> Marionnet/Iutoppix : un environnement pédagogique pour la 
+simulation de réseaux locaux</em>. 3ième conférence internationale en Environnement Informatique 
+pour l'Apprentissage Humain (EIAH'2007). Lausanne, 2007.
+<a href="files/loddo-hamon--marionnet-sur-iutoppix--eiah-2007.pdf">pdf</a></LI>
+
+</ul>
+
+<!-- --------------------------------------------------------------------------------- -->
+<H4>Thèse</H4>
+<!-- --------------------------------------------------------------------------------- -->
+<ul>
+
+<LI>J.-V. Loddo. <I>Généralisation des Jeux Combinatoires et Applications
+aux Langages Logiques</I>. Rapport de thèse. PPS, Université Paris 7, France 2002.  
+<a href="files/these.ps.gz">ps.gz</a>,
+<a href="files/these.pdf">pdf</a>,
+<a href="files/these-abstract.ps.gz">abstract (ps.gz)</a>.
+Sous la direction de Roberto Di Cosmo. 
+Prix de thèse <A href="http://www-lipn.univ-paris13.fr/~petrucci/afit/afit.html">AFIT</a> 2002.</LI>
+
+<LI>J.-V. Loddo. <I>A Generalization of Combinatorial Game Theory
+and its Application to Constrained Logic Programming</I>. Unpublished draft.	
+<a href="files/loddo--unpublished-draft-thesis-2003.ps.gz">ps.gz</a></LI>
+
+</ul>
+
+<hr>
+<br>
+<i>Jean-Vincent Loddo<br>
+LIPN - Institut Galil&eacute;e<br>
+Avenue J.B. Cl&eacute;ment<br>
+93430 VILLETANEUSE<br>
+FRANCE<br>
+Tel 	: +33 1 49 40 36 84<br>
+Fax 	: +33 1 48 26 07 12<br>
+E-mail 	: nom@lipn.univ-paris13.fr<br><br>
+</i>
+<hr>
+</body>
+</html>

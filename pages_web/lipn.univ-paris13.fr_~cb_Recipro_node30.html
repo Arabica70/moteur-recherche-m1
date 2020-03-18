@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>M&#233;thode de Zassenhauss-Cantor</TITLE>
+<META NAME="description" CONTENT="M&#233;thode de Zassenhauss-Cantor">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node31.html">
+<LINK REL="previous" HREF="node29.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html465"
+ HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html462"
+ HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html456"
+ HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html464"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html466"
+ HREF="node31.html">M&#233;thode de Shanks</A>
+<B> Up:</B> <A NAME="tex2html463"
+ HREF="node29.html">Extraction de racine carr&#233;e</A>
+<B> Previous:</B> <A NAME="tex2html457"
+ HREF="node29.html">Extraction de racine carr&#233;e</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00610000000000000000">
+M&#233;thode de Zassenhauss-Cantor</A>
+</H1>
+En voici l'algorithme, sachant que <IMG WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.gif"
+ ALT="$\char93 {\mathbb K}-1= 2^k q$"> avec <I>q</I> impair et
+que la norme est d&#233;finie par
+
+<P ALIGN="CENTER"><IMG WIDTH="340" HEIGHT="28"
+ SRC="img233.gif"
+ ALT="\begin{displaymath}
+N(a+b\overline{X})=(a+b\overline{X})(a+b\overline{X})^\sigma=a^2- ub^2.\end{displaymath}"></P>
+<P><P></P>
+<P><SMALL><TT>
+DEBUT
+<BR>
+r&#233;p&#233;ter
+<BR>
+choisir ``au hasard'' <IMG WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.gif"
+ ALT="$t \in {\mathbb K}$">&nbsp;;
+<BR>
+<IMG WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.gif"
+ ALT="$y~:=t+\overline{X}$">&nbsp;;
+<BR>
+si <I>N</I>(<I>y</I>)=0 alors retourner <I>t</I>&nbsp;; 
+ (* <IMG WIDTH="201" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img236.gif"
+ ALT="$N(y)=t^2-u \Longrightarrow t= \sqrt{u}$"> *)
+<BR>
+sinon <IMG WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img237.gif"
+ ALT="$z=a+b \overline{X}~:=y^q$">&nbsp;;
+<BR>
+tant que <IMG WIDTH="46" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.gif"
+ ALT="$z \not \in {\mathbb K}$">
+<BR>
+Si N(<I>z</I>-1)=0 alors retourner (<I>a</I>-1) <I>b<SUP>-1</SUP></I>
+<BR>
+sinon si N(<I>z</I>+1)=0 alors retourner (<I>a</I>+1)<I>b<SUP>-1</SUP></I>&nbsp;;
+<BR>
+  <I>z</I>&nbsp;:=<I>z<SUP>2</SUP></I>&nbsp;;
+<BR>
+fin( tant que )
+<BR>
+ (* le <IMG WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.gif"
+ ALT="$y=t+\overline{X}$"> &#233;tait d&#233;favorable, on va en essayer un autre *)
+<BR>
+fin( r&#233;p&#233;ter )
+<BR>
+FIN
+<BR>
+</SMALL></TT>
+<P>
+<BR><HR>
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="tp.css">
+  <title>Sujet de TP: les classes en PHP</title>
+</head>
+
+<body>
+  <header>Sujet de TP: les classes en PHP</header>
+
+  <main>
+    
+
+
+    <article class="exercice">
+      <header><h2>Exercice 1: La classe Automate</h2></header>
+      Créer une classe automate permettant de gérer des automates déterministes et contenant:
+      <ul>
+	<li>un constructeur, qui prend en entrée le nombre d'états, initialise tous les états comme étant non-finals,
+	  et l'état 0 comme initial.</li>
+	<li>une méthode <code>isFinal</code> qui prend en paramètre un état, renvoie true s'il est final et false sinon.</li>
+	<li>une méthode <code>setFinal</code> qui prend en paramètre un état et le rend final dans l'automate</li>
+	<li>une méthode <code>setTransition</code> qui prend en paramètres deux états et une lettre 
+	  et ajoute la transition associée dans l'automate.</li>
+	<li>une méthode <code>printAutomaton</code> qui affiche produit le code html permettant d'afficher 
+	  les informations relative à un automate (un tableau de transitions).</li>
+	<li>une méthode <code>recognized</code> qui teste si un mot est reconnu par l'automate.</li>
+      </ul>
+    </article>
+
+    <article class="exercice">
+      <header><h2>Exercice 2: page web associé</h2></header>
+      <ul>
+	<li>Créez une page web dans laquelle on initialise en PHP l'automate déterministe suivant:<br/>
+	  	<img id="automate" src="automate.png" alt="automate"/>
+	</li>
+	<li>Utilisez la méthode <code>printAutomaton</code> pour "afficher" l'automate sur la page Web.
+	<li>Tester à l'aide des méthodes de la classe Automate si les mots suivants sont reconnus
+	  et afficher le résultat sur la page web:
+	  <ol>
+	    <li>abba</li>
+	    <li>aabbba</li>
+	    <li>bacaa</li>	      
+	  </ol>
+	</li>
+      </ul>
+    </article>
+
+
+
+  </main>
+
+<footer>Auteur: Julien David (2015)</footer>
+
+</body>
+
+</html>

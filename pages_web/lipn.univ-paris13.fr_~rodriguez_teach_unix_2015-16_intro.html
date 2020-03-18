@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Introduction to Unix</title>
+<style type="text/css">
+
+
+body {
+	/* font-family: "Adobe Caslon Pro", "Minion Pro", serif; */
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 13pt;
+	background-color: #eee;
+}
+
+table {
+	background-color: #f8f8ff;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #ccc solid;
+}
+
+th, td {
+	padding: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px #aaa solid;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+th {
+	background-color: #eef;
+	text-align: left;
+}
+
+.document {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	width: 800px;
+	background-color: white;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+}
+
+.large {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.med {
+	font-size: 120%;
+}
+
+.cmd {
+	border: 1pt #ccc solid;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	background-color: #fee;
+   font-family: monospace;
+	font-weight: bold;
+	/* font-size: 110%; */
+}
+
+
+.literal-block {
+	border: 1px #999 dashed;
+	padding: 5px;
+	background-color: #e8e8e8;
+}
+
+.literal {
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #e8e8e8;
+}
+
+</style>
+</head>
+<body>
+<div class="document" id="introduction-to-unix">
+<h1 class="title">Introduction to Unix</h1>
+
+<!-- This course {{{ -->
+<div class="section" id="this-course">
+<h1>1&nbsp;&nbsp;&nbsp;This course</h1>
+<div class="section" id="contact">
+<h2>1.1&nbsp;&nbsp;&nbsp;Contact</h2>
+<p>These lecture notes are designed to support an intensive introduction to
+the Unix operating system</p>
+<!-- And more in particular Linux! -->
+<ul>
+<li><div class="first line-block">
+<div class="line"><strong>Objectives</strong>:</div>
+<div class="line">- Learning the fundamental concepts behind the design of Unix</div>
+<div class="line">- Learning how to effectively use a Unix machine</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Contact info</strong>:</div>
+<div class="line">César Rodríguez &lt;<a class="reference external" href="mailto:cesar.rodriguez&#64;lipn.fr">cesar.rodriguez&#64;lipn.fr</a>&gt;</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Course web page</strong>:</div>
+<div class="line"><a class="reference external" href="http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2015-16/">http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2015-16/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Additional material</strong>:</div>
+<div class="line"><a class="reference external" href="http://www.doc.ic.ac.uk/~wjk/UnixIntro/">http://www.doc.ic.ac.uk/~wjk/UnixIntro/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Debian Virtual Machine</strong>:</div>
+<div class="line">Available <a class="reference external" href="vm/">here</a>.</div>
+</div>
+</li>
+</ul>
+<!-- - **Evaluation**: -->
+<!-- - **Recommended background**: -->
+<!-- - **Schedule** -->
+</div>
+<div class="section" id="syllabus">
+<h2>1.2&nbsp;&nbsp;&nbsp;Syllabus</h2>
+<ul class="simple">
+<li>Unix file system</li>
+<li>Users and groups</li>
+<li>Processes</li>
+<li>Signals</li>
+<li>Networking</li>
+<li>System administration (system start-up, package installation, text editors)</li>
+<li>Shell scripting</li>
+</ul>
+<!-- - Stream editing -->
+<!-- }}} -->
+<!-- Introduction {{{ -->
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>2&nbsp;&nbsp;&nbsp;Introduction</h1>
+<div class="section" id="what-is-an-operating-system">
+<h2>2.1&nbsp;&nbsp;&nbsp;What is an operating system?</h2>
+<p>You should already be familiar by now
+(cf. &quot;Administration de Windows&quot; course),
+but here is a tentative definition:</p>
+<ul class="simple">
+<li>A set of software pieces whose goal is masking the ugly details of
+hardware resources by means of clean, high-level abstractions (e.g.,
+files, processes, printers) enabling us
+to use and manage those resources easily and efficiently.</li>
+</ul>
+<p>That is, the operating system presents computing hardware as an
+<cite>extended and virtual machine</cite></p>
+</div>
+<div class="section" id="brief-history-of-unix">
+<h2>2.2&nbsp;&nbsp;&nbsp;Brief history of Unix</h2>
+<ul class="simple">
+<li><cite>Multics</cite>: high availability and scalability;
+many novel ideas, not a commercial success</li>
+<li>Ken Thompson writes <cite>Unix</cite> in assembler for the PDP7; Dennis Ritchie
+writes the first C compiler; they rewrite Unix in C, beginning of
+portability and expansion</li>
+<li>80s: AT&amp;T version (System V), and Berkeley version (BSD); industrial
+adoption and new branches</li>
+<li>1988: first POSIX standard</li>
+<li>1991: Linus Torvalds writes Linux and releases it as free software</li>
+<li>Many Linux distributions appear</li>
+<li>Linux everywhere:
+Android,
+network equipment (routers, access points),
+tablets,
+GPS navigation devices,
+Raspberry Pi,
+UAV autopilots,
+etc.</li>
+</ul>
+</div>
+<div class="section" id="architecture-of-a-typical-unix-system">
+<h2>2.3&nbsp;&nbsp;&nbsp;Architecture of a typical Unix system</h2>
+<ul class="simple">
+<li>User programs<ul>
+<li>Interact directly with the user</li>
+<li>Compilers, text editors, web browsers, games, ...</li>
+</ul>
+</li>
+<li>System tools<ul>
+<li>Standard programs serving to do very basic operations: copying files,
+renaming files, searching the file system, printing, remote access
+client/servers, etc.</li>
+<li>Examples: ls, cp, find, grep, ssh, httpd</li>
+<li><strong>Design principle</strong>: tools that perform single, specific tasks but which
+can easily be combined with others to solve more complex problems
+(rather than monolitic applications designed for a purpose)</li>
+<li>Among them we have the <cite>shell</cite></li>
+</ul>
+</li>
+<li>The kernel<ul>
+<li>Loaded directly in memory by the <cite>boot loader</cite></li>
+<li>Provides most of the abstractions that present hardware in a unified
+and clean way</li>
+<li>Technically, <cite>device drivers</cite> play the central role in building these
+abstractions</li>
+<li><cite>Kernel mode</cite> vs <cite>user mode</cite></li>
+</ul>
+</li>
+<li>Hardware<ul>
+<li>These are the <cite>computing resources</cite> managed by the operating system</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="the-shells">
+<h2>2.4&nbsp;&nbsp;&nbsp;The shells</h2>
+<p>Shells are are regular, ordinary processes.</p>
+<ul class="simple">
+<li>They enable the user to execute other programs</li>
+<li>Internal and external commands; the command <tt class="docutils literal">type</tt></li>
+</ul>
+<p>Several shells are available:</p>
+<ul class="simple">
+<li><tt class="docutils literal">sh</tt>, the Bourne shell</li>
+<li><tt class="docutils literal">bash</tt>, the Bourne again shell</li>
+<li><tt class="docutils literal">csh</tt>, the C shell</li>
+</ul>
+<p>In this tutorial we will <strong>uniquely focus</strong> on the <tt class="docutils literal">bash</tt> shell.</p>
+</div>
+<div class="section" id="first-steps-with-the-terminal">
+<h2>2.5&nbsp;&nbsp;&nbsp;First Steps with the Terminal</h2>
+<ul>
+<li><p class="first">The prompt (description)</p>
+</li>
+<li><p class="first">Commands, options, long, short options, abbreviated options</p>
+</li>
+<li><p class="first">Special characters:</p>
+<pre class="literal-block">
+'
+&quot;
+`cmd`
+|
+&gt;
+;
+</pre>
+</li>
+</ul>
+<p><em>Exercise</em>.
+Enter the following commands in the terminal and try to interpret the output.
+What are the following commands for?</p>
+<pre class="literal-block">
+echo hello world
+passwd
+date
+ls
+ls -l
+hostname
+uname -a
+dmesg | less (you may need to press q to quit)
+uptime
+w
+who
+id
+df
+du -s -h /tmp
+top (you may need to press q to quit)
+echo $SHELL
+echo {con,pre}-{sent,fer}/{s,ed}
+man &quot;automatic door&quot;
+man ls (you may need to press q to quit)
+man who (idem)
+man man (idem)
+clear
+cal 2014
+bc -l (type quit or press Ctrl-d to quit)
+echo 5+4 | bc -l
+time sleep 5
+history
+</pre>
+</div>
+<div class="section" id="getting-help">
+<h2>2.6&nbsp;&nbsp;&nbsp;Getting Help</h2>
+<p>For <strong>external commands</strong>, the main source of documentation is
+the <em>manual</em>, or the <em>man pages</em>. Use the command <tt class="docutils literal">man</tt> to get access to the
+manual pages (manpages) of each (documented) command in the system.
+For instance, type:</p>
+<pre class="literal-block">
+man ls
+</pre>
+<p>The manual pages can be searched using the option <tt class="docutils literal"><span class="pre">-k</span></tt> (<tt class="docutils literal">k</tt> for <em>keyword</em>)
+of the command <tt class="docutils literal">man</tt>. For instance, search for all man pages whose
+description contains the keyword &quot;search&quot;:</p>
+<pre class="literal-block">
+$ man -k search
+apropos(1)               - search the whatis database for strings
+grep(1), egrep(1), ...   - file pattern searcher
+ldapsearch(1)            - LDAP search tool
+leaks(1)                 - Search a process's memory for unreferenced ...
+lkbib(1)                 - search bibliographic databases
+...
+</pre>
+<p>The manual is organized in sections:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Section</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>General commands</td>
+</tr>
+<tr><td>2</td>
+<td>System calls</td>
+</tr>
+<tr><td>3</td>
+<td>Library functions, covering in particular the C standard library</td>
+</tr>
+<tr><td>4</td>
+<td>Special files (usually devices, those found in /dev) and drivers</td>
+</tr>
+<tr><td>5</td>
+<td>File formats and conventions</td>
+</tr>
+<tr><td>6</td>
+<td>Games and screensavers</td>
+</tr>
+<tr><td>7</td>
+<td>Conventions, Protocols, and Miscellanea</td>
+</tr>
+<tr><td>8</td>
+<td>Administration and privileged commands and daemons</td>
+</tr>
+</tbody>
+</table>
+<p>An online copy of most manpages available in Linux can be found at
+<a class="reference external" href="http://linux.die.net/man/">http://linux.die.net/man/</a>.</p>
+<p>For <strong>internal commands</strong> (or <em>shell builtins</em>) use the command <tt class="docutils literal">help</tt>.</p>
+<!-- }}} -->
+<!-- File system {{{ -->
+</div>
+</div>
+<div class="section" id="file-system">
+<h1>3&nbsp;&nbsp;&nbsp;File System</h1>
+<!-- - types
+- hierarchy
+  - tree
+  - absolute, relative paths
+  - . and ..
+- commands to move/rm/cp files/folders (no content)
+  - pwd
+  - ls
+  - cd
+  - cp, mv, rm
+  - mkdir, rmdir
+  - find
+  - du -s -h /tmp
+  - df
+  - viewing file contents: cat, more, less
+- mounting/dismounting media, command mount
+- Hard and Soft links
+  - inode, ls -i
+  - ln, ln -s
+
+- permissions
+- commands:
+  - chmod, chgrp
+
+- Shell tricks: wildcards
+
+- Handling file contents
+  - cat
+  - file
+  - hexdump
+  - head/tail
+  - wc
+  - sort
+  - uniq
+  - tar, gzip
+  - zip, unzip
+
+- Regular expressions
+- commands:
+  - grep
+
+- Summary table, with all commands, important options -->
+<div class="section" id="types-of-files">
+<h2>3.1&nbsp;&nbsp;&nbsp;Types of files</h2>
+<p><strong>Ordinary files</strong></p>
+<ul class="simple">
+<li>Contain text, data, or program information, etc.</li>
+</ul>
+<p><strong>Directories</strong></p>
+<ul class="simple">
+<li>Contain entries that point to files or other directories.</li>
+<li>Directories do not contain files, they contain entries that point to them</li>
+</ul>
+<p><strong>Devices</strong></p>
+<ul class="simple">
+<li>Are abstractions of hardware devices, provide easy access to them</li>
+<li>There are two types<ul>
+<li>Block-oriented: transfer data in blocks (disk)</li>
+<li>Character-oriented: transfer data in characters (terminals, mouses, modems, etc)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hard and soft links</strong></p>
+<ul class="simple">
+<li>Are pointers to other files</li>
+</ul>
+</div>
+<div class="section" id="standard-filesystem-hierarchy">
+<h2>3.2&nbsp;&nbsp;&nbsp;Standard Filesystem hierarchy</h2>
+<img alt="fig/fs.png" src="fig/fs.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Directory</th>
+<th class="head">Function</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>/</td>
+<td>The root directory</td>
+</tr>
+<tr><td>/bin</td>
+<td>Essential command binaries that need to be available in single
+user mode; for all users, e.g., cat, ls, cp.</td>
+</tr>
+<tr><td>/boot</td>
+<td>Boot loader files, e.g., kernels, initrd.</td>
+</tr>
+<tr><td>/dev</td>
+<td>Essential devices, e.g., /dev/null.</td>
+</tr>
+<tr><td>/etc</td>
+<td>System-wide configuration files</td>
+</tr>
+<tr><td>/home</td>
+<td>Users' home directories, containing saved files, personal
+settings, etc.</td>
+</tr>
+<tr><td>/lib</td>
+<td>Libraries essential for the binaries in /bin/ and /sbin/.</td>
+</tr>
+<tr><td>/media</td>
+<td>Mount points for removable media such as CD-ROMs</td>
+</tr>
+<tr><td>/mnt</td>
+<td>Temporarily mounted filesystems.</td>
+</tr>
+<tr><td>/opt</td>
+<td>Optional application software packages.</td>
+</tr>
+<tr><td>/proc</td>
+<td>Virtual filesystem providing information about processes and
+kernel information as files. In Linux, corresponds to a
+procfs mount.</td>
+</tr>
+<tr><td>/root</td>
+<td>Home directory for the root user.</td>
+</tr>
+<tr><td>/run</td>
+<td>Information about the running system since last boot, e.g.,
+currently logged-in users and running daemons.</td>
+</tr>
+<tr><td>/sbin</td>
+<td>Essential system binaries, e.g., init, ip, mount.</td>
+</tr>
+<tr><td>/srv</td>
+<td>Site-specific data which are served by the system.</td>
+</tr>
+<tr><td>/tmp</td>
+<td>Temporary files, often not preserved between system reboots.</td>
+</tr>
+<tr><td>/usr</td>
+<td>Secondary hierarchy for read-only user data; contains the
+majority of (multi-)user utilities and applications.</td>
+</tr>
+<tr><td>/usr/bin</td>
+<td>Non-essential command binaries (not needed in single user
+mode); for all users.</td>
+</tr>
+<tr><td>/usr/include</td>
+<td>Standard include files.</td>
+</tr>
+<tr><td>/usr/lib</td>
+<td>Libraries for the binaries in /usr/bin/ and /usr/sbin/.</td>
+</tr>
+<tr><td>/usr/src</td>
+<td>Source code, e.g., the kernel source code with its header
+files.</td>
+</tr>
+<tr><td>/var</td>
+<td>Variable files-files whose content is expected to
+continually change during normal operation of the system
+(logs, spool files, and temporary e-mail files).</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Absolute and relative paths</li>
+<li><tt class="docutils literal">.</tt> and <tt class="docutils literal">..</tt></li>
+</ul>
+</div>
+<div class="section" id="commands-browsing-and-copying-files-and-directories">
+<h2>3.3&nbsp;&nbsp;&nbsp;Commands: Browsing and Copying Files and Directories</h2>
+<p>The following commands (with the exception of cat, more and less) only allow to
+copy, move and remove files and folders.</p>
+<dl class="docutils">
+<dt><span class="cmd">pwd</span> --- Print Working Directory</dt>
+<dd><p class="first">This is an <em>internal command</em> of the shell.
+It prints the current directory from which relative paths will be interpreted.</p>
+<p>The current working directory is also usually visible in the shell's
+<em>prompt</em>:</p>
+<pre class="last literal-block">
+cesar&#64;gaia:/usr/bin$ pwd
+/usr/bin
+</pre>
+</dd>
+</dl>
+<p><span class="cmd">ls [-lihdR] [path1, path2, ...]</span> -- List directory contents</p>
+<p><span class="cmd">cd [path]</span> -- Change directory</p>
+<p><span class="cmd">cp source target</span> -- Copy files</p>
+<p><span class="cmd">mv source destination</span> -- Move files</p>
+<p><span class="cmd">rm path</span> -- Remove files</p>
+<p><span class="cmd">mkdir dir</span> -- Make new directories</p>
+<p><span class="cmd">rmdir dir</span> -- Remove directories</p>
+<p><span class="cmd">cat [path1, path2, ...]</span> -- Concatenate and print files</p>
+<p><span class="cmd">more [path...]</span> and <span class="cmd">less [path...]</span> -- Paginate large files in the screen</p>
+<p>For all the above commands, see Section 2.4 of
+<a class="reference external" href="http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture2.html">http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture2.html</a></p>
+<dl class="docutils">
+<dt><span class="cmd">find [path...] [expression]</span> -- Search for files in a directory hierarchy</dt>
+<dd><p class="first">The command <tt class="docutils literal">find</tt> searches for files and directories within the tree(s) starting
+at one (or more) directory path(s). The argument <tt class="docutils literal">[expression]</tt> instructs
+<tt class="docutils literal">find</tt> which files are to be searched for.</p>
+<ul class="simple">
+<li>If the <tt class="docutils literal">path</tt> is missing, then the current folder <tt class="docutils literal">.</tt> is assumed.</li>
+<li>If the <tt class="docutils literal">expression</tt> is missing, then <tt class="docutils literal"><span class="pre">-print</span></tt> is assumed.</li>
+</ul>
+<p>Examples:</p>
+<pre class="literal-block">
+$ find /usr/
+/usr/
+/usr/bin
+/usr/bin/env
+/usr/bin/tzselect
+/usr/bin/test
+...
+
+$ find /path/to/dir1 /path/to/dir2
+...
+</pre>
+<p class="last">We will revisit the command <tt class="docutils literal">find</tt> later in this chapter.</p>
+</dd>
+<dt><span class="cmd">du [path...]</span> -- Estimate size of files in disk</dt>
+<dd><p class="first">The command <tt class="docutils literal">du</tt> (disk usage) recursively estimates the size of a the files
+present in the subtree pointed by the given <tt class="docutils literal">path</tt>.</p>
+<p>Important options:
+<tt class="docutils literal"><span class="pre">-s</span></tt>
+<tt class="docutils literal"><span class="pre">-h</span></tt></p>
+<p>Example:</p>
+<pre class="last literal-block">
+$ du -sh /tmp
+82M  /tmp/
+</pre>
+</dd>
+<dt><span class="cmd">df</span> -- Report the file system disk space usage</dt>
+<dd><p class="first">Displays the available free and and used space within a disk.</p>
+<p class="last">Important options:
+<tt class="docutils literal"><span class="pre">-h</span></tt></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="hard-and-soft-links">
+<h2>3.4&nbsp;&nbsp;&nbsp;Hard and Soft links</h2>
+<p>Every file and directory in the file system is uniquely identified by an
+<em>index node</em>, usually abbreviated as <em>inode</em>. Option <tt class="docutils literal"><span class="pre">-i</span></tt> of the command
+<tt class="docutils literal">ls</tt> displays such number:</p>
+<pre class="literal-block">
+$ ls -li /usr/bin/
+total 19424
+396972 -rwxr-xr-x 1 root root      6216 Dec 11  2012 addpart
+402848 lrwxrwxrwx 1 root root         6 Jun 18  2012 apropos -&gt; whatis
+397423 -rwxr-xr-x 1 root root    122080 Oct 17  2014 apt-cache
+...
+</pre>
+<p>In the UNIX file system it is possible to make appear the same file within two
+directories. This is called a <strong>hard link</strong>, and it is possible due to the
+internal structure in which directories are stored.
+We use the command <tt class="docutils literal">ln</tt> to achieve this:</p>
+<pre class="literal-block">
+ln original destination
+</pre>
+<p>Obseve that this does <strong>not</strong> create a copy of the file <tt class="docutils literal">original</tt>, it only
+creates a second directory entry that refers to the same <tt class="docutils literal">original</tt> file.
+Both the
+original and destination file share the same inode, in contrast to copying a
+file with <tt class="docutils literal">cp</tt>.</p>
+<p>The UNIX file system provides a second way of creating directory entries that
+refer to the same file. These are called <strong>soft links</strong>:</p>
+<pre class="literal-block">
+ln -s original destination
+</pre>
+<p>In this case <tt class="docutils literal">ln</tt> creates a new file (new inode, new directory entry) but the
+file is marked with an special flag and stores only the absolute path to access
+the original file. Soft links are very similar to Windows' shortcuts.</p>
+<p><strong>Exercise</strong>.
+Copy a file with <tt class="docutils literal">cp</tt>, with <tt class="docutils literal">ln</tt> (hard link) and with <tt class="docutils literal">ln <span class="pre">-s</span></tt> (soft link).
+What happens if you now remove the original file? And the destination file?</p>
+</div>
+<div class="section" id="mounting-new-disks">
+<h2>3.5&nbsp;&nbsp;&nbsp;Mounting New Disks</h2>
+<p>Mounting and dismouting disks allows to insert and remove subtrees from the root
+filesystem (main tree).</p>
+<p>Run the command <tt class="docutils literal">mount</tt> without arguments to display the mounted file
+systems:</p>
+<pre class="literal-block">
+$ mount
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,relatime,size=10240k,nr_inodes=13785,mode=755)
+/dev/disk/by-uuid/bdc...07f on / type ext4 (rw,relatime,...)
+...
+</pre>
+<p>The file <tt class="docutils literal">/etc/fstab</tt> contains a list of devices and mount points known to the
+system. Traditionally, this file was used to know where to automatically mount
+removable media such as CD-ROMs or floppy disks:</p>
+<pre class="literal-block">
+$ cat /etc/fstab
+/dev/fd0   /mnt/floppy  auto    rw,user,noauto  0 0
+/dev/hdc   /mnt/cdrom   iso9660 ro,user,noauto  0 0
+</pre>
+<p><span class="cmd">mount [-t vfstype] [-o options] device dir</span></p>
+<blockquote>
+Attaches the file system stored in the disk designated by the file <tt class="docutils literal">device</tt>
+to the directory <tt class="docutils literal">dir</tt> (mount point).</blockquote>
+<dl class="docutils">
+<dt><span class="cmd">umount {dir|device}</span></dt>
+<dd><p class="first">Deattaches a currently attached filesystem, provided the mount point or the
+device storing the file system.</p>
+<p class="last">It is very important to unmount (non read-only) file systems before removing
+the associated device from the system (USB disk, floppy, etc).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="file-and-directory-permissions">
+<h2>3.6&nbsp;&nbsp;&nbsp;File and Directory Permissions</h2>
+<p>Each file and directory in a UNIX file system belongs to a user and to a group.</p>
+<p>It additionally contains metadata stating whether the owner user, the owner
+group, or any other user in the system can</p>
+<ul class="simple">
+<li><strong>read</strong>: reading a file, listing the contents of a directory</li>
+<li><strong>write</strong>: writing a file, creating new entries in the directory</li>
+<li><strong>execute</strong>: executing a binary file, <em>crossing</em> the directory in a path</li>
+</ul>
+<p>Finally, two more metadata flags are associated to every file:</p>
+<ul class="simple">
+<li><strong>Set UID bit</strong>: set User ID to file owner when executing</li>
+<li><strong>Set GID bit</strong>: set Group ID to file group when executing</li>
+<li><strong>Sticky bit</strong>: restricts when a file can be removed/renamed</li>
+</ul>
+<p>Only the owner of a file can update the access rights.</p>
+<p>See Section 3.2 in <a class="reference external" href="http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture3.html">http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture3.html</a>
+for details.</p>
+<p>Relevant commands :</p>
+<ul class="simple">
+<li><tt class="docutils literal">id</tt>, displaying who you are and which groups you (effectively) belong to</li>
+<li><tt class="docutils literal">ls <span class="pre">-l</span></tt>, displaying permissions</li>
+</ul>
+<p>Important inode medata fields:</p>
+<ul class="simple">
+<li>Owner</li>
+<li>Group</li>
+<li>Access rights: owner, group, others</li>
+<li>Timestamps: last read, last update, last inode update</li>
+<li>File size</li>
+<li>Link count</li>
+</ul>
+<!-- Ejercicio:
+copiar /bin/ls al HOME
+desde una terminal root cambiarle el usuario
+intentar ejecutarlo
+cambiarle el nombre (se puede porque tengo w en el directorio)
+cambiarle el permiso (no se puede porque soy others) -->
+</div>
+<div class="section" id="commands-modifying-permissions">
+<h2>3.7&nbsp;&nbsp;&nbsp;Commands: Modifying Permissions</h2>
+<p><span class="cmd">chmod mode path</span> -- Change file mode bits</p>
+<dl class="docutils">
+<dt><span class="cmd">chown [owner][:group] [path...]</span> -- Change the owner and group of a file</dt>
+<dd><p class="first">Examples:</p>
+<pre class="last literal-block">
+chown cesar /tmp
+chown :floppy /tmp /bin/ls
+chown cesar:audio /bin/cp
+</pre>
+</dd>
+</dl>
+<ul class="simple">
+<li>Examples</li>
+</ul>
+</div>
+<div class="section" id="shell-tricks-specifying-multiple-files-with-wildcards">
+<h2>3.8&nbsp;&nbsp;&nbsp;Shell Tricks: Specifying Multiple Files with Wildcards</h2>
+<p>The shell interprets certain characters in a special way. Among those we find
+the following:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">?</tt></dt>
+<dd>Matches a single character.</dd>
+<dt><tt class="docutils literal">*</tt></dt>
+<dd>Matches zero or more characters.</dd>
+<dt><tt class="docutils literal">[abx89]</tt></dt>
+<dd>Matches all characters enclosed between <tt class="docutils literal">[</tt> and <tt class="docutils literal">]</tt>, in this case a, b,
+x, 8, and 9. It is possible to use hyphens to define classes, as in
+<tt class="docutils literal"><span class="pre">[a-z0-9]</span></tt>: all low-case letters and all 10 digits.</dd>
+<dt><tt class="docutils literal">{one,two,three}</tt></dt>
+<dd>Matches the words one, two and three.</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">???</span></tt></dt>
+<dd>Matches all file names three-letters long.</dd>
+<dt><tt class="docutils literal">*</tt></dt>
+<dd>Matches all files in the current folder.</dd>
+<dt><tt class="docutils literal">*a*</tt></dt>
+<dd>Matches all file names which contain the letter a.</dd>
+<dt><tt class="docutils literal"><span class="pre">j*.png</span></tt></dt>
+<dd>Matches all files whose name starts with <tt class="docutils literal">j</tt> and ends with <tt class="docutils literal">.png</tt></dd>
+<dt><tt class="docutils literal"><span class="pre">[A-Z]*</span></tt></dt>
+<dd>Matches all files whose name starts with a capital letter.</dd>
+<dt><tt class="docutils literal"><span class="pre">{/usr,}{/bin,/lib}/file</span></tt></dt>
+<dd>Expands to <tt class="docutils literal">/usr/bin/file /usr/lib/file /bin/file /lib/file</tt>.</dd>
+</dl>
+</div>
+<div class="section" id="commands-handling-file-contents">
+<h2>3.9&nbsp;&nbsp;&nbsp;Commands: Handling File Contents</h2>
+<p><span class="cmd">cat [path...]</span> -- Concatenate and print files</p>
+<p><span class="cmd">file [path...]</span> -- Guesses the type of a file</p>
+<p><span class="cmd">hexdump -C [path...]</span> -- Prints in hexadecimal a binary file</p>
+<p><span class="cmd">head -n number [path...]</span> -- Prints the first <tt class="docutils literal">number</tt> lines of a file</p>
+<p><span class="cmd">tail -n number [-f] [path...]</span> -- Prints the last lines of a file</p>
+<p><span class="cmd">wc [-c] [-w] [-l] [path...]</span> -- Prints number of characters, words, lines in a file</p>
+<p><span class="cmd">sort [-n] [-r] [-u] [path...]</span> -- Sorts the lines of a text file</p>
+<ul class="simple">
+<li>Examples</li>
+</ul>
+<!-- FIXME - find (revisited, more syntax) -->
+</div>
+<div class="section" id="commands-archiving-and-compressing-files">
+<h2>3.10&nbsp;&nbsp;&nbsp;Commands: Archiving and Compressing Files</h2>
+<div class="section" id="archiving">
+<h3>3.10.1&nbsp;&nbsp;&nbsp;Archiving</h3>
+<p>Creating a tar file:</p>
+<pre class="literal-block">
+tar cvf file.tar folder1/ folder2/
+</pre>
+<ul class="simple">
+<li><tt class="docutils literal">c</tt> for <strong>create</strong></li>
+<li><tt class="docutils literal">v</tt> for <strong>verbose</strong> (optional)</li>
+<li><tt class="docutils literal">f</tt> for <strong>file</strong> (i.e., the following argument is the tar file to create)</li>
+</ul>
+<p>This creates the file <tt class="docutils literal">archive.tar</tt>.</p>
+<p>Listing the contents of a tar file:</p>
+<pre class="literal-block">
+tar tvf file.tar
+</pre>
+<ul class="simple">
+<li><tt class="docutils literal">t</tt> for <strong>table</strong> or <strong>list</strong></li>
+</ul>
+<p>Extracting the files packed in a tar file:</p>
+<pre class="literal-block">
+tar xvf file.tar
+</pre>
+<ul class="simple">
+<li><tt class="docutils literal">x</tt> for <strong>extract</strong></li>
+</ul>
+<p>This will recreate the directory structure packed into the tar file.</p>
+</div>
+<div class="section" id="compressing">
+<h3>3.10.2&nbsp;&nbsp;&nbsp;Compressing</h3>
+<p>Any file can be compressed with the <tt class="docutils literal">gzip</tt> and <tt class="docutils literal">gunzip</tt> tools:</p>
+<pre class="literal-block">
+$ ls -lh
+total 112K
+-rw-r--r-- 1 cesar cesar 112K Sep  9 18:52 file.txt
+$ gzip file.txt
+$ ls -lh
+total 52K
+-rw-r--r-- 1 cesar cesar 51K Sep  9 18:52 file.txt.gz
+</pre>
+<p>Uncompressing:</p>
+<pre class="literal-block">
+$ gunzip file.txt.gz
+$ ls -lh
+total 112K
+-rw-r--r-- 1 cesar cesar 112K Sep  9 18:52 file.txt
+</pre>
+<p>The <tt class="docutils literal">tar</tt> tool can also automatically compress and decompress tar files with
+the flag <tt class="docutils literal">z</tt>. For instance, creating and compressing a tar file, and
+subsequently decompressing it (in the <tt class="docutils literal">/tmp</tt> directory):</p>
+<pre class="literal-block">
+tar czvf file.tar.gz folder1/ folder2/
+tar xzvf file.tar.gz -C /tmp
+</pre>
+<p>The commands <tt class="docutils literal">zip</tt> and <tt class="docutils literal">unzip</tt> can produce and unpack the usual <tt class="docutils literal">.zip</tt>
+files that are popular among Windows users.</p>
+</div>
+</div>
+<div class="section" id="regular-expressions">
+<h2>3.11&nbsp;&nbsp;&nbsp;Regular Expressions</h2>
+<p>A regular expression is an expression that denotes a set of character strings.
+Just like an arithmetic expression is the result of combining basic operators
+(such as <tt class="docutils literal">+</tt> or <tt class="docutils literal">/</tt>) with basic terms (numbers) to denote a number,
+a regular expression combines basic operators (see below) with basic terms
+(strings) to denote a set of strings.</p>
+<p>Often regular expressions are evaluated over the lines of a text file, with the
+pourpose of discarding those not denoted by the expression.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">^</tt></dt>
+<dd>Matches the beggining of a line.
+Example: <tt class="docutils literal">^a</tt> matches any line starting with a.</dd>
+<dt><tt class="docutils literal">$</tt></dt>
+<dd>Matches the end of a line.
+Example: <tt class="docutils literal">^a$</tt> matches any line containing exactly the character a.</dd>
+<dt><tt class="docutils literal">?</tt></dt>
+<dd>The preceding item is optional (matched at most once).
+Example: <tt class="docutils literal"><span class="pre">ab?$</span></tt> matches any line ending either by <tt class="docutils literal">a</tt> or by <tt class="docutils literal">ab</tt>.</dd>
+<dt><tt class="docutils literal">*</tt></dt>
+<dd>The preceding item will be matched zero or more times.
+Example: <tt class="docutils literal"><span class="pre">a(bc)*z</span></tt> matches <tt class="docutils literal">az</tt>, <tt class="docutils literal">abcz</tt>, <tt class="docutils literal">abcbcz</tt>...</dd>
+<dt><tt class="docutils literal">+</tt></dt>
+<dd>The preceding item will be matched one or more times.</dd>
+</dl>
+<p>The tool <tt class="docutils literal">grep</tt> prints the lines of a file that match a given regular
+expression:</p>
+<p><span class="cmd">grep [-iqvR] [-ABC num] [--color] expression [files...]</span></p>
+<ul class="simple">
+<li>Important: use <tt class="docutils literal">'</tt> around the <tt class="docutils literal">expression</tt> to prevent the shell from
+interpretting the special characters of a regular expression</li>
+<li>Still, to use some of the above operators with <tt class="docutils literal">grep</tt> they have to be
+<em>escaped</em> using a backslash <tt class="docutils literal">\</tt></li>
+</ul>
+<!-- Summary
+- - - - - - -
+table with all commands and important options -->
+<!-- }}} -->
+<!-- Users and Groups {{{ -->
+</div>
+</div>
+<div class="section" id="users-and-groups">
+<h1>4&nbsp;&nbsp;&nbsp;Users and Groups</h1>
+<ul class="simple">
+<li>Users</li>
+<li>Groups</li>
+<li>Superuser (root)</li>
+<li>Becoming superuser, <tt class="docutils literal">su</tt>, prompt</li>
+</ul>
+<div class="section" id="system-files">
+<h2>4.1&nbsp;&nbsp;&nbsp;System Files</h2>
+<ul class="simple">
+<li><tt class="docutils literal">/etc/passwd</tt></li>
+<li><tt class="docutils literal">/etc/shadow</tt></li>
+<li><tt class="docutils literal">/etc/group</tt></li>
+</ul>
+</div>
+<div class="section" id="commands-managing-users-and-groups">
+<h2>4.2&nbsp;&nbsp;&nbsp;Commands: Managing Users and Groups</h2>
+<p><span class="cmd">adduser username</span> -- Interactively adds a user to the system</p>
+<p><span class="cmd">addgroup group</span> -- Adds a group to the system</p>
+<p><span class="cmd">passwd</span> -- Modifies user's password</p>
+<p>To remove users and groups, use the commands <tt class="docutils literal">deluser</tt> and <tt class="docutils literal">delgroup</tt>.</p>
+<!-- }}} -->
+<!-- Processes {{{ -->
+</div>
+</div>
+<div class="section" id="processes">
+<h1>5&nbsp;&nbsp;&nbsp;Processes</h1>
+<ul class="simple">
+<li>A <em>program</em> is a binary file, containing executable instructions and data</li>
+<li>A <em>process</em> is an instance of a program in execution</li>
+<li>Processes are created with the system call <tt class="docutils literal">fork</tt>.</li>
+<li>The <em>parent process</em> uses the system call <tt class="docutils literal">wait</tt> to wait for children to
+terminate and receive their <em>exit code</em></li>
+</ul>
+<p>Processes thus form a <em>tree</em>, where the root of the tree is the so-called <em>init</em>
+process, with PID 1.</p>
+<div class="section" id="process-attributes">
+<h2>5.1&nbsp;&nbsp;&nbsp;Process Attributes</h2>
+<p>Here are the main attributes that each process has:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><strong>PID</strong></td>
+<td>Process ID, an integer number that uniquely identifies the
+process</td>
+</tr>
+<tr><td><strong>PPID</strong></td>
+<td>Process ID of the parent process</td>
+</tr>
+<tr><td><strong>State</strong></td>
+<td>Scheduling state,
+essentially <em>runnable</em>, <em>sleeping</em>, or <em>stopped</em>
+(see below)</td>
+</tr>
+<tr><td><strong>Priority</strong></td>
+<td>Positive or negative integer affecting the process
+scheduling</td>
+</tr>
+<tr><td><strong>UID</strong></td>
+<td>ID of the user owning the process</td>
+</tr>
+<tr><td><strong>File descriptor table</strong></td>
+<td>Table describing the files currently opened by the process</td>
+</tr>
+<tr><td><strong>Environment variables</strong></td>
+<td>List of pairs <tt class="docutils literal">variable=value</tt> communicated to the
+process from the parent process</td>
+</tr>
+<tr><td><strong>PGID</strong></td>
+<td>Process Group ID, an integer number uniquely identifying
+the <em>process group</em> to which the process belongs</td>
+</tr>
+<tr><td><strong>SID</strong></td>
+<td>Session ID, unique integer identifying the <em>session</em></td>
+</tr>
+<tr><td><strong>Controlling Terminal</strong></td>
+<td>The terminal from which the process was started.
+Relevant for signal management.</td>
+</tr>
+</tbody>
+</table>
+<!-- Informacion sobre los tres ultimos campos:
+https://spin0r.wordpress.com/2012/12/25/terminally-confused-part-six/
+man 7 credentials -->
+<p>The attribute <strong>state</strong> can have the following values:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="94%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">State</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><strong>R</strong></td>
+<td>Running or <em>runnable</em> (on run queue)</td>
+</tr>
+<tr><td><strong>D</strong></td>
+<td>Uninterruptible <em>sleep</em> (usually IO)</td>
+</tr>
+<tr><td><strong>S</strong></td>
+<td>Interruptible <em>sleep</em> (waiting for an event to complete)</td>
+</tr>
+<tr><td><strong>T</strong></td>
+<td><em>Stopped</em>, either by a job control signal or because it is being traced.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>priority</strong> is an integer ranging from -20 to 19. The (numerically) lower
+this value is, the most favourable the operating system scheduler will be to
+run the process in the presence of other processes in the <strong>runnable</strong> state.</p>
+<p>The <strong>UID</strong> is used to determine the process permission to, for instance, access
+files.</p>
+<p>The content of the <strong>file descriptor table</strong> and the <strong>environment variables</strong>
+for a given process can be retrieved from the <tt class="docutils literal">/proc</tt> file system (as well as
+the values of most its the attributes):</p>
+<ul class="simple">
+<li><tt class="docutils literal">/proc/PID/fd/</tt>:     file descriptor table</li>
+<li><tt class="docutils literal">/proc/PID/environ</tt>: environment variables</li>
+</ul>
+<p>See the manpages <tt class="docutils literal">proc(5)</tt> and <tt class="docutils literal">ps(1)</tt> for more information.</p>
+<p>A process belongs to a <strong>proces group</strong>, identified by the attribute <strong>PGID</strong>.
+A <strong>session</strong> is a set of process groups. Each process group is in at most one
+session.
+A session is associated with zero or one <strong>controlling terminal</strong> (every
+terminal is associated with exactly one session).</p>
+<p>These three notions are mechanisms offered by Unix to implement useful features
+of the system. For instance:</p>
+<ul class="simple">
+<li>Whenever the user logs out, all processes initiated by him/her and currently
+running should be killed. Unix achieves this by sending the <tt class="docutils literal">SIGHUP</tt> signal
+to all processes in the session associated to the controlling terminal.
+The default handler for <tt class="docutils literal">SIGHUP</tt> terminates the process.</li>
+<li>Whenever the user types Ctrl+C, Unix sends the signal <tt class="docutils literal">SIGINT</tt> to every
+process in the so-called <em>foreground process group</em> (see below).
+The default handler for <tt class="docutils literal">SIGINT</tt> terminates the process.</li>
+</ul>
+<p>A process (beloging to a group which is in a session)
+without controlling terminal is called a <strong>daemon</strong>.</p>
+</div>
+<div class="section" id="file-descriptors-shell-redirections-and-pipelines">
+<h2>5.2&nbsp;&nbsp;&nbsp;File Descriptors, Shell Redirections, and Pipelines</h2>
+<p>Whenever a process opens a file, the operating system assigns a number to the
+file and returns it to the process, which will use it to identify the opened
+file in subsequent operations. This integer is called the <strong>file descriptor</strong>.</p>
+<p>File descriptors are indexes of a table which maps them to opened files.
+The same file can be opened twice, thus being accessible via two file
+descriptors.
+Such table is the <strong>file descriptor table</strong>.</p>
+<p>By default, the first three file descriptors (indexes 0, 1, and 2 of the table)
+are opened and have specific well-known names:</p>
+<ul class="simple">
+<li><strong>0</strong>, standard input, or <strong>stdin</strong> (open read-only)</li>
+<li><strong>1</strong>, standard output, or <strong>stdout</strong> (open write-only)</li>
+<li><strong>2</strong>, standard error output, or <strong>stderr</strong> (open write-only)</li>
+</ul>
+<p>When the shell forks a new command, by default all three descriptors access
+a single file: the device file associated with the terminal, a special
+character-oriented device file located in the <tt class="docutils literal">/dev/</tt> directory.
+(In turn, such device file represents the keyboard and the screen for a phisical
+user; or the endpoints of a TCP connection for a remote user; other
+configurations are possible.)</p>
+<p>The shell provides mechanisms change such default behaviour, called
+<strong>redirections</strong> and <strong>pipes</strong>.</p>
+<p>Redirect standard output to file <tt class="docutils literal">out</tt>;
+leave unmodified standard input and error output (i.e., they are still attached
+to the terminal device):</p>
+<pre class="literal-block">
+$ COMMAND &gt; out
+</pre>
+<p>Read standard input from file <tt class="docutils literal">f</tt> instead of the terminal (they keyboard);
+leave unmodified standard and error output:</p>
+<pre class="literal-block">
+$ COMMAND &lt; f
+</pre>
+<p>Redirect standard error output:</p>
+<pre class="literal-block">
+$ COMMAND 2&gt; out
+</pre>
+<p>Of course we can combine the previous operators:</p>
+<pre class="literal-block">
+$ COMMAND &lt; in &gt; out
+</pre>
+<p>Other redirections are possible:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Redirection</th>
+<th class="head">Explanation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">[n]&lt; file</tt></td>
+<td>Redirect file <tt class="docutils literal">file</tt> to stdin; <tt class="docutils literal">n</tt> is 0 if missing</td>
+</tr>
+<tr><td><tt class="docutils literal">[n]&gt; file</tt></td>
+<td>Truncate file <tt class="docutils literal">file</tt> and redirect stdout to it;
+<tt class="docutils literal">n</tt> is 1 if missing</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">[n]&gt;&gt;</span> file</tt></td>
+<td>Open <tt class="docutils literal">file</tt> for writing and <strong>append</strong> stdout output to it;
+<tt class="docutils literal">n</tt> is 1 if missing</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">[n]&gt;&amp;m</span></tt></td>
+<td>Redirect output to descriptor <tt class="docutils literal">n</tt> to descriptor <tt class="docutils literal">m</tt>;
+<tt class="docutils literal">n</tt> is 1 if missing</td>
+</tr>
+</tbody>
+</table>
+<p>(More information in the <tt class="docutils literal">bash(1)</tt> manpage, section &quot;Redirections&quot;.)</p>
+<p>Apart from redirecting input or output to a file, it is also possible to
+redirect inputs or outputs to <em>another process</em>, using a <strong>pipe</strong>.</p>
+<p>Redirect the standard output of <tt class="docutils literal">cmd1</tt> to the standard intput of <tt class="docutils literal">cmd2</tt>;
+leave unmodified the other inputs or outputs of both processes:</p>
+<pre class="literal-block">
+$ cmd1 | cmd2
+</pre>
+<p>The shell will create one process for executing the program <tt class="docutils literal">cmd1</tt> and another one
+for executing <tt class="docutils literal">cmd2</tt>. The operating system provides a specific system
+call (see manpage <tt class="docutils literal">pipe(2)</tt>) giving access to a channel-like data structure
+allowing to implement this functionality. The shell will connect both ends of
+this channel to the corresponding descriptors of both processes and then will
+let each process execute the corresponding program (which will transparently use
+the pipe instad of the terminal).</p>
+</div>
+<div class="section" id="environment-variables-and-shell-s-variables">
+<h2>5.3&nbsp;&nbsp;&nbsp;Environment Variables and Shell's Variables</h2>
+<p>UNIX provides a mechanism to communicate a number of pairs of form
+<tt class="docutils literal">variable=value</tt> to a process. This is usually employed to transfer
+configurations to a newly created process. Usually a process receives at least
+the following variables:</p>
+<ul class="simple">
+<li><tt class="docutils literal">USER</tt>: The name of the logged-in user</li>
+<li><tt class="docutils literal">HOME</tt>: His her home directory</li>
+<li><tt class="docutils literal">PATH</tt>: A list of directory that the shell will search for programs to
+execute upon typing an incomplete pathname as command</li>
+<li><tt class="docutils literal">PWD</tt>: The current working directory</li>
+</ul>
+<p>See <tt class="docutils literal">environ(7)</tt> for more information.</p>
+<p>A copy of this <strong>environment table</strong> is passed to every child process forked by
+a process.
+A process can, before or after forking new processes, modify this table using
+specific functions of the C library.</p>
+<p>The shell provides a mechanism to store and update the so-called <strong>shell
+variables</strong>, a list of pairs <tt class="docutils literal">variable=value</tt> different from the envioronment
+table. You set a shell variable using the syntax:</p>
+<pre class="literal-block">
+$ TEST=&quot;hello world&quot;
+$ echo $TEST
+hello world
+</pre>
+<p>The variable is subsequently available using the syntax <tt class="docutils literal">$VAR</tt>, as shown
+above. A shell variable is by default not copied to the shell's environment
+table, and so it is not visible in the environment table if subsequently forked
+processes.</p>
+<p>However, a variable can be copied to the environment table.
+The internal command <tt class="docutils literal">export</tt> copies a shell variable to the shell's
+environment, thus modifying the environment table that subsequent commands will
+receive:</p>
+<pre class="literal-block">
+$ TEST=&quot;hello world&quot;
+$ env | grep TEST
+$ export TEST
+$ env | grep TEST
+TEST=hello world
+$ export -n TEST
+$ env | grep TEST
+</pre>
+<p>The (external) command <tt class="docutils literal">env</tt>, run without arguments, allows you to see the
+environment being passed to a command. Observe that <tt class="docutils literal">export <span class="pre">-n</span></tt> removes the
+variable from the shell's environment table.</p>
+<p>It is also possible unset a shell variable (it will also be removed from the
+shell's environment):</p>
+<pre class="literal-block">
+$ unset TEST
+</pre>
+<!-- allows the user to define and access shell variables. -->
+<!-- For instance, the ``PATH`` variable stores a list of directories that will be -->
+<!-- searched for executable files whenever you type a command at the prompt:: -->
+<!--  -->
+<!-- cesar@gaia:~$ echo $PATH -->
+<!-- /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/... -->
+<!--  -->
+<!-- Shell's variables should not be confused with the shell's environment (which -->
+<!-- will be passed to children processes whenever the shell forks a new command). -->
+</div>
+<div class="section" id="commands-processes-management">
+<h2>5.4&nbsp;&nbsp;&nbsp;Commands: Processes Management</h2>
+<p><span class="cmd">ps [axuj] [PID]</span> -- Report a snapshot of the current processes</p>
+<p>By default <tt class="docutils literal">ps</tt> only selects processes from the calling user that have
+controlling terminal.</p>
+<ul class="simple">
+<li><tt class="docutils literal">a</tt>: lift the filter &quot;only your processes&quot;</li>
+<li><tt class="docutils literal">x</tt>: lift the filter &quot;only processes with controlling terminal&quot;</li>
+</ul>
+<p>In combination both options (<tt class="docutils literal">ax</tt>) select <em>all</em> running processes. Options
+<tt class="docutils literal">u</tt> and <tt class="docutils literal">j</tt> select the columns to display:</p>
+<ul class="simple">
+<li><tt class="docutils literal">u</tt>: display &quot;user-oriented&quot; format</li>
+<li><tt class="docutils literal">j</tt>: display &quot;BSD job control format&quot;</li>
+</ul>
+<p><span class="cmd">pstree</span> -- Visually display the tree of processes</p>
+<p><span class="cmd">top</span> -- Interactively display running processes</p>
+<p><span class="cmd">nice -n prio command</span> -- run a program with modified scheduling priority</p>
+<p><span class="cmd">kill -9 PID</span> -- send signal 9 (<tt class="docutils literal">KILL</tt>) to process <tt class="docutils literal">PID</tt></p>
+<p><span class="cmd">killall -9 name</span> -- kill a process by name</p>
+<p><span class="cmd">sleep nr</span> -- waits for <tt class="docutils literal">nr</tt> seconds</p>
+<p><span class="cmd">true</span> and <span class="cmd">false</span>
+(internal commands)</p>
+</div>
+<div class="section" id="shell-tricks-foreground-and-background-commands">
+<h2>5.5&nbsp;&nbsp;&nbsp;Shell Tricks: Foreground and Background commands</h2>
+<p>By default, whenever the user executes a command, the shell waits for the
+command to finish before it shows again the prompt, asking for a new command.
+We say that such command is a <strong>foreground command</strong>.
+The shell also offers a mechanism to launch <strong>background commands</strong>. In this
+case, the command will be executed in the background and the shell will
+immediately display the prompt, potentially before the command finishes.
+This is useful, e.g., to run commands that take long time to execute.</p>
+<p>The operator <tt class="docutils literal">&amp;</tt> tells the shell to start a background command. The internal
+command <tt class="docutils literal">jobs</tt> lists the currently running commands:</p>
+<pre class="literal-block">
+$ find / &gt; output.txt 2&gt; errors.txt &amp;
+[1] 14785
+$ jobs
+[1]+  Running                 find / &gt; output.txt 2&gt; errors.txt &amp;
+$ ps u
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+1087     14785 10.4  0.2  11904  1180 pts/3    D    14:55   0:02 find /
+1087     14799  0.0  0.6  79396  3040 pts/3    R+   14:55   0:00 ps u
+1087     22536  0.0  1.3  82920  6736 pts/3    Ss   11:34   0:00 -bash
+</pre>
+<p>Observe that immediately after entering the <tt class="docutils literal">find</tt> command, the shell launcehs
+job number <tt class="docutils literal">[1]</tt> and prints the PID of the process (wich we see below after
+running <tt class="docutils literal">ps</tt>).</p>
+<p>A command launched in background can be brought to foreground using the internal
+command <tt class="docutils literal">fg</tt>:</p>
+<pre class="literal-block">
+$ jobs
+[1]+  Running                 find / &gt; output.txt 2&gt; errors.txt &amp;
+$ fg 1
+find / &gt; output.txt 2&gt; errors.txt
+</pre>
+<p>Observe that now the shell does not show the prompt and instead waits for
+<tt class="docutils literal">find</tt> to finish.</p>
+<p>It is also possible to put in the background a command launched as a foreground
+processes (using the <tt class="docutils literal">bg</tt> command).
+To learn about it we first need to learn about suspending (temporarily stopping) the
+execution of commands and also about signals (next chapter).</p>
+<p>When a process in background terminates the shell will display so in the
+terminal. The process could naturally terminate, or could be killed by a signal:</p>
+<pre class="literal-block">
+$ find / &gt; output.txt 2&gt; errors.txt &amp;
+[1] 16585
+$ kill 16585
+[1]+  Terminated              find / &gt; output.txt 2&gt; errors.txt
+</pre>
+<p>It can also be brought to foreground, with <tt class="docutils literal">fg</tt>, and terminated with Ctrl+C.</p>
+<p>Process groups are the enabling mechanism that UNIX provides to implement
+foreground and background process management.
+Without entering details, each shell job (foreground or background), corresponds
+to a process group.
+Recall that a command could require launching several
+process, for instance a command using pipes. It therefore corresponds to a
+process group, not only one process</p>
+<!-- - A foreground command corresponds to one unique foreground process groups
+- Mention sessions here or perhaps latter, as the student still doesn't
+  understand why they are useful (which expected shell functionality they help
+  to implement)
+- The session contains zero or more background process groups -->
+<p>The <tt class="docutils literal">bash</tt> shell provides relevant informations about the notions learned in
+this chapter via certain shell (pseudo-)variables (which it automatically
+updates):</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">$</tt></dt>
+<dd>PID of the shell</dd>
+<dt><tt class="docutils literal">?</tt></dt>
+<dd>Exit status of the last executed command</dd>
+<dt><tt class="docutils literal">!</tt></dt>
+<dd>PID of the most recently executed background command</dd>
+</dl>
+<p>Examples:</p>
+<pre class="literal-block">
+$ sleep 100 &amp;
+[1] 18399
+$ sleep 200 &amp;
+[2] 18400
+$ echo $!
+18400
+$ false
+$ echo $?
+1
+$ true
+$ echo $?
+0
+</pre>
+<!-- }}} -->
+<!-- Signals {{{ -->
+</div>
+</div>
+<div class="section" id="signals">
+<h1>6&nbsp;&nbsp;&nbsp;Signals</h1>
+<p>Signals are a UNIX mechanism for asycnhronous inter-process communication.
+A signal is a notification sent to a process that stops its normal flow of
+execution to run, if registered, the signal handler associated to the signal.</p>
+<p>Signals are sent in UNIX for various reasons, including:</p>
+<ul class="simple">
+<li>Certain hardware interrupts trigger the sending of a signal to a process</li>
+<li>Harware failures: power loss, illegal memory access, illegal CPU instruction</li>
+<li>Notifications related to asynchronous input/output</li>
+<li>Termination of child process, suspension of a process</li>
+</ul>
+<p>The manpage <tt class="docutils literal">signal(7)</tt> provides a general introduction to signal management
+in UNIX, as well as additional pointers to the manual.</p>
+<ul class="simple">
+<li>Principle: handler defined for a signal</li>
+<li>Default actions: ignore, terminate, core, stop, continue</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="14%" />
+<col width="11%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Signal</th>
+<th class="head">Value</th>
+<th class="head">Action</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>SIGHUP</td>
+<td>1</td>
+<td>Term</td>
+<td>Hangup detected on controlling terminal
+or death of controlling process</td>
+</tr>
+<tr><td>SIGINT</td>
+<td>2</td>
+<td>Term</td>
+<td>Interrupt from keyboard</td>
+</tr>
+<tr><td>SIGQUIT</td>
+<td>3</td>
+<td>Core</td>
+<td>Quit from keyboard</td>
+</tr>
+<tr><td>SIGILL</td>
+<td>4</td>
+<td>Core</td>
+<td>Illegal Instruction</td>
+</tr>
+<tr><td>SIGABRT</td>
+<td>6</td>
+<td>Core</td>
+<td>Abort signal from <tt class="docutils literal">abort(3)</tt></td>
+</tr>
+<tr><td>SIGFPE</td>
+<td>8</td>
+<td>Core</td>
+<td>Floating point exception</td>
+</tr>
+<tr><td>SIGKILL</td>
+<td>9</td>
+<td>Term</td>
+<td>Kill signal</td>
+</tr>
+<tr><td>SIGSEGV</td>
+<td>11</td>
+<td>Core</td>
+<td>Invalid memory reference</td>
+</tr>
+<tr><td>SIGPIPE</td>
+<td>13</td>
+<td>Term</td>
+<td>Broken pipe: write to pipe with no
+readers</td>
+</tr>
+<tr><td>SIGALRM</td>
+<td>14</td>
+<td>Term</td>
+<td>Timer signal from <tt class="docutils literal">alarm(2)</tt></td>
+</tr>
+<tr><td>SIGTERM</td>
+<td>15</td>
+<td>Term</td>
+<td>Termination signal</td>
+</tr>
+<tr><td>SIGUSR1</td>
+<td>30,10,16</td>
+<td>Term</td>
+<td>User-defined signal 1</td>
+</tr>
+<tr><td>SIGUSR2</td>
+<td>31,12,17</td>
+<td>Term</td>
+<td>User-defined signal 2</td>
+</tr>
+<tr><td>SIGCHLD</td>
+<td>20,17,18</td>
+<td>Ign</td>
+<td>Child stopped or terminated</td>
+</tr>
+<tr><td>SIGCONT</td>
+<td>19,18,25</td>
+<td>Cont</td>
+<td>Continue if stopped</td>
+</tr>
+<tr><td>SIGSTOP</td>
+<td>17,19,23</td>
+<td>Stop</td>
+<td>Stop process</td>
+</tr>
+<tr><td>SIGTSTP</td>
+<td>18,20,24</td>
+<td>Stop</td>
+<td>Stop typed at tty</td>
+</tr>
+<tr><td>SIGTTIN</td>
+<td>21,21,26</td>
+<td>Stop</td>
+<td>tty input for background process</td>
+</tr>
+<tr><td>SIGTTOU</td>
+<td>22,22,27</td>
+<td>Stop</td>
+<td>tty output for background process</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="commands-signal-management">
+<h2>6.1&nbsp;&nbsp;&nbsp;Commands: Signal Management</h2>
+<p><span class="cmd">kill -signal pid</span> -- send signal <tt class="docutils literal">signal</tt> (number or name) to process <tt class="docutils literal">pid</tt></p>
+<p><span class="cmd">trap handler signal</span> -- sets shell function <tt class="docutils literal">handler</tt> as handler of signal <tt class="docutils literal">signal</tt> (number of name)</p>
+</div>
+<div class="section" id="shell-tricks-job-control-revisited">
+<h2>6.2&nbsp;&nbsp;&nbsp;Shell Tricks: Job Control Revisited</h2>
+<p>We already know that typing Ctrl+C while a command executes in foreground
+normally terminates the command. In fact, what happens in this case is that the
+kernel sends a <tt class="docutils literal">SIGTERM</tt> signal to all processes in the foreground process
+group associated to that terminal. The default action for <tt class="docutils literal">SIGTERM</tt> is to
+terminate the process, although it is possible to define an alternative hanlder
+or even ignore this signal.</p>
+<!-- Specifically:
+- Upon reception of the ctrl+C, the kernel identifies the session associated to
+terminal, ie, that for which that terminal is the controllig terminal
+- identifies the foreground process group
+- sends SIGTERM to all of them -->
+<p>In contrast, the signal <tt class="docutils literal">SIGKILL</tt> cannot be ignored or caught, and will
+invariably terminate the process.</p>
+<p>Processes in UNIX can also be suspended (temporarily paused) and restarted
+by means of, respectively, signals <tt class="docutils literal">SIGSTP</tt> and <tt class="docutils literal">SIGCONT</tt>.
+Upon reception of <tt class="docutils literal">SIGSTP</tt>, the process execution stops indefinitely.
+The process can choose to ignore or catch (define a handler for) <tt class="docutils literal">SIGSTP</tt>,
+thus overriding its default behaviour.
+Signal <tt class="docutils literal">SIGSTOP</tt> also stops the process, but cannot be caught or overriden.
+Process execution resumes upon reception of <tt class="docutils literal">SIGCONT</tt>.</p>
+<p>There are several ways of sending signals <tt class="docutils literal">SIGSTP</tt> and <tt class="docutils literal">SIGCONT</tt> to a
+process. One way is of course manually doing it with the <tt class="docutils literal">kill</tt> command.
+UNIX (more specifically, the kernel together with the shell)
+provides a less cumbersome way:</p>
+<ul class="simple">
+<li>Whenever a process runs in the foreground and the user types Ctrl+Z, the
+signal <tt class="docutils literal">SIGSTP</tt> is sent to every process in the foreground process group</li>
+<li>Two shell commands allow to to resume a suspended processes:<ul>
+<li>Internal command <tt class="docutils literal">fg</tt> resumes an stopped job in the <strong>foreground</strong></li>
+<li>Internal command <tt class="docutils literal">bg</tt> resumes an stopped job in the <strong>background</strong></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre class="literal-block">
+$ sleep 200
+^Z
+[1]+  Stopped                 sleep 200
+$ jobs
+[1]+  Stopped                 sleep 200
+$ bg 1
+[1]+ sleep 200 &amp;
+$ fg 1
+sleep 200
+^C
+</pre>
+<!-- }}} -->
+<!-- Networking {{{ -->
+</div>
+</div>
+<div class="section" id="networking-and-remote-access">
+<h1>7&nbsp;&nbsp;&nbsp;Networking and Remote Access</h1>
+<ul class="simple">
+<li>Priviledged ports</li>
+</ul>
+<p><span class="cmd">netstat [-tuanlp]</span> -- Print network connections, routing tables, interface statistics, etc.</p>
+<p><span class="cmd">netcat</span> -- Establish arbitrary TCP and UDP connections and listens</p>
+<p>Can act as a TCP client and server.
+As a client:</p>
+<pre class="literal-block">
+netcat -v www.google.fr 80
+</pre>
+<p>As a server:</p>
+<pre class="literal-block">
+netcat -vnl 1234
+</pre>
+<div class="section" id="configuring-the-network-interfaces">
+<h2>7.1&nbsp;&nbsp;&nbsp;Configuring the network interfaces</h2>
+<pre class="literal-block">
+ifconfig -a
+ifconfig eth0 [up|down]
+ifconfig eth0 192.168.0.2 netmask 255.0.0.0
+</pre>
+</div>
+<div class="section" id="ip-route-table">
+<h2>7.2&nbsp;&nbsp;&nbsp;IP route table</h2>
+<pre class="literal-block">
+route -n
+route add default gw 192.168.1.1 eth0
+</pre>
+</div>
+<div class="section" id="dns">
+<h2>7.3&nbsp;&nbsp;&nbsp;DNS</h2>
+<pre class="literal-block">
+dig
+/etc/resolv.conf
+</pre>
+</div>
+<div class="section" id="dhcp-arp">
+<h2>7.4&nbsp;&nbsp;&nbsp;DHCP, ARP</h2>
+<pre class="literal-block">
+dhclient eth0
+arp -na
+</pre>
+</div>
+<div class="section" id="remote-access">
+<h2>7.5&nbsp;&nbsp;&nbsp;Remote Access</h2>
+<pre class="literal-block">
+ssh [-Xv] [-p port] user&#64;host
+</pre>
+<!-- }}} -->
+<!-- Administration {{{ -->
+</div>
+</div>
+<div class="section" id="system-administration">
+<h1>8&nbsp;&nbsp;&nbsp;System Administration</h1>
+<div class="section" id="system-boot">
+<h2>8.1&nbsp;&nbsp;&nbsp;System boot</h2>
+<ul class="simple">
+<li>relevant files</li>
+<li>init</li>
+<li>runlevels</li>
+<li>cron, at (aside)</li>
+</ul>
+</div>
+<div class="section" id="debian-package-managers">
+<h2>8.2&nbsp;&nbsp;&nbsp;Debian package managers</h2>
+<!-- Debian provides a standard and well-established way to install new software on
+the system.
+(This will be too long ...) -->
+<p>The Debian package management tools are essentially composed of two main
+collections of tools:</p>
+<ul class="simple">
+<li>the <tt class="docutils literal">dpkg</tt> tool (the main Debian package management program)</li>
+<li>the APT (<em>Advanced Package Tool</em>) toolset</li>
+</ul>
+<p>Packages are files with extension <tt class="docutils literal">.deb</tt>. They contain</p>
+<ul class="simple">
+<li>Control information about the package (name, version, description, packages it
+depends on, conflicts with, cryptographic sums, and others)</li>
+<li>Scripts to execute upon, for instance, installation, upgrade, or removal of
+the package</li>
+<li>The actual contents to be installed</li>
+</ul>
+<p>The <tt class="docutils literal">dpkg(1)</tt> program is the actual tool that performs basic operations with
+the package, including</p>
+<ul class="simple">
+<li>Installing / uninstalling the package</li>
+<li>Printing control information</li>
+<li>Unpacking (without installing) the package</li>
+</ul>
+<p>The APT toolset mainly includes two tools, <tt class="docutils literal"><span class="pre">apt-get(1)</span></tt> and <tt class="docutils literal"><span class="pre">apt-cache(1)</span></tt>.
+While the first is the tool used to install and uninstall packages, together with
+the packages they depend on, the second serves to query the package list
+currently known by your system.</p>
+<ul class="simple">
+<li>Sources of software defined in the file <tt class="docutils literal">/etc/apt/sources.list</tt></li>
+</ul>
+<p>Here we give a list of the most commonly used commands:</p>
+<ul>
+<li><p class="first">Displaying the list of installed packages:</p>
+<pre class="literal-block">
+dpkg -l
+</pre>
+</li>
+<li><p class="first">Displaying the list of (installed) files for the package <tt class="docutils literal">wget</tt>:</p>
+<pre class="literal-block">
+dpkg -L wget
+</pre>
+</li>
+<li><p class="first">Searching for the keyword <tt class="docutils literal">tcp</tt> in the (local) list of candidate packages
+for installation:</p>
+<pre class="literal-block">
+apt-cache search tcp
+</pre>
+</li>
+<li><p class="first">Displaying the (control) information for the package <tt class="docutils literal">netcat</tt>:</p>
+<pre class="literal-block">
+apt-cache show netcat
+</pre>
+</li>
+<li><p class="first">Updating the list of packages known by your system:</p>
+<pre class="literal-block">
+apt-get update
+</pre>
+</li>
+<li><p class="first">Installing package <tt class="docutils literal">netcat</tt>:</p>
+<pre class="literal-block">
+apt-get install netcat
+</pre>
+</li>
+<li><p class="first">Uninstalling package <tt class="docutils literal">python3</tt>:</p>
+<pre class="literal-block">
+apt-get remove python3
+</pre>
+</li>
+<li><p class="first">Updating to its latest version any package currently installed:</p>
+<pre class="literal-block">
+apt-get upgrade
+</pre>
+</li>
+</ul>
+<p>Quite often the problem is not actually installing a package, but knowing which
+package provides the command you are searching for.
+For Debian and Ubuntu, two search-inside-the-package search engines are
+fortunately provided, where you can actually search for packages providing files
+of a given name:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://packages.debian.org">https://packages.debian.org</a></li>
+<li><a class="reference external" href="https://packages.ubuntu.org">https://packages.ubuntu.org</a></li>
+</ul>
+<!-- }}} -->
+<!-- Shell scripting {{{ -->
+</div>
+</div>
+<div class="section" id="shell-scripting">
+<h1>9&nbsp;&nbsp;&nbsp;Shell scripting</h1>
+<ul class="simple">
+<li>Text Editors: Basic notions of vi</li>
+<li>Shell variables and environment variables</li>
+<li>Command line substitution</li>
+<li>true, false, test, expr</li>
+<li>if, while, case</li>
+<li>set -x</li>
+</ul>
+<p>Follow <a class="reference external" href="http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture8.html">http://www.doc.ic.ac.uk/~wjk/UnixIntro/Lecture8.html</a>.</p>
+<p><strong>Exercise</strong>.
+Write a script that receives only one argument, a path to a directory.
+Your script will determine the type of the file for each file recursively found in the directory,
+with the followng simplifications:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Type of file</th>
+<th class="head">Your script will print</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Ordinary files</td>
+<td>&quot;ordinary&quot;</td>
+</tr>
+<tr><td>Directories</td>
+<td>&quot;directory&quot;</td>
+</tr>
+<tr><td>Device (character)</td>
+<td>&quot;char&quot;</td>
+</tr>
+<tr><td>Device (block)</td>
+<td>&quot;block&quot;</td>
+</tr>
+<tr><td>Soft link</td>
+<td>&quot;link&quot;</td>
+</tr>
+<tr><td>Any other type</td>
+<td>&quot;other&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>The output format of the script should look like this:</p>
+<pre class="literal-block">
+directory    .
+ordinary     ./script.sh
+directory    ./mydir/
+link         ./mydir/mylink
+char         ./mydir/ttys003
+...
+</pre>
+<p>On the following situations, your script should print <strong>to the standard error
+output</strong> an error message and terminate with exit code 1:</p>
+<ul class="simple">
+<li>If the script receives zero or more than one command-line argument</li>
+<li>If the argument passed to the script is not a file or a directory</li>
+</ul>
+<!-- }}} -->
+</div>
+</div>
+</body>
+</html>

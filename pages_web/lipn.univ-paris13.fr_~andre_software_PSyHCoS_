@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>PSyHCoS: Parameter Synthesis for Hierarchical Concurrent Systems</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="PSyHCoS: a tool for Parameter Synthesis for Hierarchical Concurrent Systems" />
+	<meta name="keywords" content="PSTCSP, Timed CSP, CSP, Communicating sequential processes, real-time systems, tool, prototype, software, verification, parameter synthesis, parametric model checking" />
+	<meta name="robots" content="index,follow" />
+	
+	<link rel="icon" type="image/png" href="psyhcos.png" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="../../etienne.css" />
+</head>
+
+
+<body>
+
+
+<h1>PSyHCoS: Parameter Synthesis for Hierarchical Concurrent Systems</h1>
+
+<div id="boites">
+	<div style="text-align: center">
+	<h2>Screenshots</h2>
+		<p style="text-align: center"><a href="images/psyhcos-simulator.jpg"><img src="images/psyhcos-simulator-small.jpg" alt="Simulator" width="250"/></a></p>
+		<p>Simulator</p>
+		
+		<p style="text-align: center"><a href="images/psyhcos-verification.jpg"><img src="images/psyhcos-verification-small.jpg" alt="Verification window" width="250"/></a></p>
+		<p>Verification window and editor</p>
+	</div>
+</div>
+
+<p><b><span style="color:red">New!</span></b> The slides of the CAV 2013 presentation are now available <a href="http://lipn.univ-paris13.fr/~andre/documents/2013-07-18-CAV-PSyHCoS.pdf">here</a>.</p>
+
+
+<p>PSyHCoS <a href="#ALSDL13">[ALSDL13]</a> is a tool that groups techniques of parameter synthesis for Parametric Stateful Timed CSP (in short: PSTCSP).
+PSTCSP is the modeling language of PSyHCoS.</p>
+
+<p>In particular, PSyHCoS implements the <b>inverse method</b> initially defined in the setting of timed automata in <a href="#ACEF09">[ACEF09]</a>, and extended for PSTCSP <a href="#ALSD12">[ALSD12]</a>, as well as further model checking algorithms.</p>
+
+
+<p style="text-align: center"><img src="images/psyhcos-architecture.png" alt="Architecture of PSyHCoS" /><br />
+<em>Architecture of PSyHCoS</em></p>
+
+
+
+
+<h2>Features</h2>
+
+<p>PSyHCoS comes with:</p>
+<ul>
+	<li>An intuitive and user-friendly editor for PSTCSP</li>
+	<li>A complete graphical simulator for educational and debugging purpose</li>
+	<li>An efficient verification engine</li>
+</ul>
+
+<p>Among the verification and synthesis algorithms, PSyHCoS features:</p>
+<ul>
+	<li>Synthesis of timing parameters using the inverse method for PSTCSP <a href="#ALSD12">[ALSD12]</a></li>
+	<li>Full parametric reachability analysis</li>
+	<li>LTL checking</li>
+	<li>Refinement checking</li>
+	<li>Deadlock freeness checking</li>
+</ul>
+
+
+<h2>Download and Install</h2>
+
+<!--<p>Download the source code:
+<span class="code"><a href="">.zip</a></span> (181Ko).</p>-->
+
+<p>PSyHCoS can be executed under Windows.
+It has been tested under Windows XP and 7 (natively) using a 32 bits architecture.
+Note that you need a .NET framework installed, that can be downloaded for free from the Microsoft Web site; PSyHCoS has been developed and tested using the 3.5 .NET framework, but it may work for other versions as well.</p>
+
+<p>PSyHCoS can also be executed under Linux and Mac (using, e.g., Mono).</p>
+
+<p><b>Note that the binary will probably not work properly on 64 bits systems.</b> If you meet an "unknown parsing error", please switch to a 32 bits system.
+(This comes from the polyhedra.dll file; we are currently working on a 64 bits version of this DLL.)</p>
+
+<p>In case you meet any problem when executing (or compiling) PSyHCoS, please contact us, and we will do our best to help you.</p>
+
+
+
+<h3>Download</h3>
+
+<ul>
+	<li>Binaries: <a href="PSyHCoS.zip" rel="nofollow">PSyHCoS.zip</a></li>
+	<li>Complete source code: <a href="PSyHCoS-source.zip" rel="nofollow">PSyHCoS-source.zip</a></li>
+</ul>
+
+
+<h3>Run</h3>
+
+<p>On Windows (we tested the tool on XP, 7 and 8), download the binaries, unzip the file, and simply run the binary Psyhcos.exe.
+Make sure a .NET framework is installed.</p>
+
+<p>On other platforms, first install mono, download the binaries, unzip the file, and then simply run the binary Psyhcos.exe.</p>
+
+
+<h3>Compile</h3>
+
+<p>There is no particular need to compile PSyHCoS, since we provide binaries for all platforms. However, if you wish to modify PSyHCoS’ code, you will have to compile it.</p>
+
+<p>Since PSyHCoS is developed in a .NET framework, it can be only compiled (as far as we know) in a Microsoft Visual Studio environment. We provide the MVS project file (PSyHCoS.sln), so you only need to open it and compile.</p>
+
+<p>The constraint solving engine partially relies on the <a href="http://bugseng.com/products/ppl/">Parma Polyhedra Library</a>.<br />
+	PSyHCoS is distributed under the GNU General Public License.</p>
+
+
+
+<h2>User Manual</h2>
+
+<p>Download the <a href="PSyHCoS-user-manual.pdf" rel="nofollow">user manual</a>, that also summarizes PSyHCoS’ features and internal architecture.</p>
+
+<p>It contains a brief introduction to the tool, presents the input syntax for PSTCSP (and its extensions allowed by PSyHCoS), and describes commands for verification and parameter synthesis.</p>
+
+
+
+<h2>Experiments</h2>
+
+<p>We give below a list of experiments; some of them are related to the paper <a href="#ALSD12">[ALSD12]</a>.
+For all experiments, we give the PSyHCoS sources and binaries, the models, and the experiments data.</p>
+
+
+
+
+<h3>Description of the models</h3>
+
+
+
+<h4>M<sub>ex</sub></h4>
+
+<p>M<sub>ex</sub> is a sample PSTCSP model mentioned in <a href="#ALSD12">[ALSD12]</a>, adapted from Example 2 in <a href="#SLDZ09">[SLDZ09]</a>.
+<br/>We consider the following reference parameter valuation:
+<br/><span class="code">u<sub>1</sub> = 1, u<sub>2</sub> = 2</span></p>
+
+
+
+
+<h4>M<sub>ex</sub>’</h4>
+
+<p>M<sub>ex</sub>’ is the same model as M<sub>ex</sub>, but with a different reference parameter valuation.
+<br/><span class="code">u<sub>1</sub> = 2, u<sub>2</sub> = 1</span></p>
+
+
+<h4>Bridge</h4>
+
+<p>This case study refers to the bridge crossing puzzle.
+	The following description is borrowed from <a href="http://nielsenhayden.com/makinglight/archives/013067.html">this Web page</a>.</p>
+
+<div style="font-style:italic">
+	<p>The sun has set as the King, the Queen, the Knight and the Lady arrive at the bridge right outside the castle walls. They have just returned from a long and dangerous trip across the realm. Scouts have spotted the King’s arch enemy closing in on the castle. It is estimated that the King’s foe will arrive accompanied by merciless troops in 17 minutes. That means that all four member of our Royal party must cross the bridge and rest safely together on the bridge’s other side before disaster strikes!</p>
+
+	<p>It’s not as easy as it seems. Only two people can cross the bridge at once (it’s not as sturdy as it used to be) and those crossing the bridge must carry the torch (so that they can see!). The torch can’t be thrown across the bridge… it’s windy tonight and the torch would probably blow out… leaving our Royal friends to stumble in the dark.</p>
+
+	<p>To make matters worse each person takes a different amount of time to cross the bridge. If two people cross the bridge together it will take them the longer of the two travel times to cross. In other words, the Knight can cross the bridge in one minute, but the Queen requires ten minutes. Therefore, if the Knight and Queen cross the bridge together a precious ten minutes will have past.</p>
+</div>
+
+<p>Our parametrization of this problem was performed by considering that the time in which they must cross the bridge is constant and known (viz., 17 minutes), whereas the amount of time needed by each of the 4 characters is unkown, hence parametric.
+As a consequence, our constraint guarantees that, for any valuation (including real-valued) satisfying the constraint output by our method, the four persons will be safe in at most 17 minutes.</p>
+
+<p>Hence, we consider the following reference parameter valuation, conform to the original non-parametric model:
+<br/><span class="code">KNIGHT = 1,
+	LADY = 2,
+	KING = 5,
+	QUEEN = 10</span></p>
+
+
+
+
+<h4>Fischer</h4>
+
+<p>This case study refers to the Fischer mutual exclusion protocol, as described in <a href="#ALSD12">[ALSD12]</a>.
+<br />Fischer<sub>i</sub> has i protocols in parallel.
+<br />We consider the following reference parameter valuation:
+<br/><span class="code">epsilon = 3, delta = 4</span></p>
+
+
+
+<h4>Jobshop</h4>
+
+<p>This case study refers to a tentative translation into PSTCSP of the jobshop scheduling problem with 2 jobs and 4 tasks of <a href="#AM01">[AM01]</a>, and that we converted to PSTCSP.
+<br />We consider the following reference parameter valuation:
+<br/><span class="code">d11 = 3,
+	d12 = 6,
+	d13 = 1,
+	d14 = 7,
+	d21 = 10,
+	d22 = 8,
+	d23 = 5,
+	d24 = 4</span></p>
+
+
+
+<h4>RCS</h4>
+
+<p>This case study is a parameterized version of the railway control system from the STCSP module of <a href="http://www.comp.nus.edu.sg/~pat/">PAT</a>.
+	The following description is borrowed from <a href="http://www.comp.nus.edu.sg/~pat/rts/">this Web page</a>.</p>
+
+<div style="font-style:italic">
+	<p>This system automatically controls trains passing a critical point such as a bridge. It uses a computer to guide trains from several tracks crossing a single bridge instead of building many bridges. Obviously, a safety-property of such a system is to avoid the situation where more than one train is crossing the bridge at the same time. Our model consists of three components: a train, a gate and a controller. The gate is lowered to allow trains to cross the bridge and up when there is no train crossing the bridge. The controller monitors the approaching of a train, and instructs the gate to be lowered within the appropriate time. The train is modeled abstractly with nearing, entering and leaving behaviors.</p>
+</div>
+
+<p>RCS<sub>i</sub> has i trains.
+<br />We consider the following reference parameter valuation, conform to the original non-parametric model:
+<br/><span class="code">Wait11 = 11,
+	Wait10 = 10,
+	Wait4 = 4,
+	Wait1 = 1</span></p>
+
+
+
+
+<h4>TrainAHV</h4>
+
+<p>This case study is a tentative translation into PSTCSP of the train example from <a href="#AHV93">[AHV93]</a>.
+<br/>It consists of a train, a gate and a controller. Of course, the train should not cross when the gate is not closed.
+<br />We consider the following reference parameter valuation:
+<br/><span class="code">a = 4,
+	b = 6,
+	c = 1,
+	d = 2,
+	e = 2,
+	f = 3</span></p>
+
+
+<h3>Experiment results</h3>
+
+<p>All experiments were performed on a Windows XP machine with an Intel Quad Core 2.4 GHz processor with 4 GiB memory.
+|U|, |S|, |T|, |X|, t represent the number of parameters, the number of states, the number of transitions, the maximum number of clocks used, and the computation time in seconds, respectively.</p>
+
+
+
+<p>The model in the PSTCSP syntax is available by clicking on a case study name.
+The exact output as given by PSyHCoS for each experiment is available by clicking on "log".</p>
+
+<p>Deadlock-freeness was checked using the optimization mentioned in <a href="#ALSD12">[ALSD12]</a>, viz., the same as in ReachAll+ and IM+.</p>
+
+
+<div style="text-align:center">
+	<table class="tableau">
+		<tr>
+			<th rowspan="2">Model</th>
+			<th></th>
+			<th colspan="5">reachAll</th>
+			<th colspan="5">reachAll+</th>
+			<th colspan="3">Deadlock-freeness</th>
+			<th colspan="5">IM</th>
+			<th colspan="5">IM+</th>
+		</tr>
+
+		<tr>
+			<th>|U|</th>
+			<th>|S|</th>
+			<th>|T|</th>
+			<th>|X|</th>
+			<th>t</th>
+			<th>log</th>
+			<th>|S|</th>
+			<th>|T|</th>
+			<th>|X|</th>
+			<th>t</th>
+			<th>log</th>
+			<th>Valid?</th>
+			<th>t</th>
+			<th>log</th>
+			<th>|S|</th>
+			<th>|T|</th>
+			<th>|X|</th>
+			<th>t</th>
+			<th>log</th>
+			<th>|S|</th>
+			<th>|T|</th>
+			<th>|X|</th>
+			<th>t</th>
+			<th>log</th>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Mex.par">M<sub>ex</sub></a></td>
+			<td>2</td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.008</td>
+			<td><a href="experiments/MexReachAll.log">log</a></td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.006</td>
+			<td><a href="experiments/MexReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>0.054</td>
+			<td><a href="experiments/MexDeadlock.log">log</a></td>
+			<td>3</td>
+			<td>5</td>
+			<td>2</td>
+			<td>0.004</td>
+			<td><a href="experiments/MexIM.log">log</a></td>
+			<td>3</td>
+			<td>5</td>
+			<td>2</td>
+			<td>0.005</td>
+			<td><a href="experiments/MexIMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Mex.par">M<sub>ex</sub>’</a></td>
+			<td>2</td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.008</td>
+			<td><a href="experiments/MexReachAll.log">log</a></td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.006</td>
+			<td><a href="experiments/MexReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>0.054</td>
+			<td><a href="experiments/MexDeadlock.log">log</a></td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.016</td>
+			<td><a href="experiments/Mex2IM.log">log</a></td>
+			<td>8</td>
+			<td>14</td>
+			<td>2</td>
+			<td>0.008</td>
+			<td><a href="experiments/Mex2IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/BridgeCrossing.par">Bridge</a></td>
+			<td>4</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>2799</td>
+			<td>5459</td>
+			<td>2</td>
+			<td>253</td>
+			<td><a href="experiments/BridgeIM.log">log</a></td>
+			<td>2799</td>
+			<td>5459</td>
+			<td>2</td>
+			<td>455</td>
+			<td><a href="experiments/BridgeIMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Fischer.par">Fischer<sub>2</sub></a></td>
+			<td>2</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>44</td>
+			<td>75</td>
+			<td>2</td>
+			<td>0.086</td>
+			<td><a href="experiments/Fischer2IM.log">log</a></td>
+			<td>45</td>
+			<td>77</td>
+			<td>2</td>
+			<td>0.103</td>
+			<td><a href="experiments/Fischer2IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Fischer.par">Fischer<sub>3</sub></a></td>
+			<td>2</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>870</td>
+			<td>2004</td>
+			<td>3</td>
+			<td>3.38</td>
+			<td><a href="experiments/Fischer3IM.log">log</a></td>
+			<td>313</td>
+			<td>730</td>
+			<td>3</td>
+			<td>0.723</td>
+			<td><a href="experiments/Fischer3IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Fischer.par">Fischer<sub>4</sub></a></td>
+			<td>2</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>11081</td>
+			<td>31452</td>
+			<td>4</td>
+			<td>41.9</td>
+			<td><a href="experiments/Fischer4IM.log">log</a></td>
+			<td>1987</td>
+			<td>5781</td>
+			<td>4</td>
+			<td>8.65</td>
+			<td><a href="experiments/Fischer4IMOpt.log">log</a></td>
+		</tr>
+		
+		<tr>
+			<td><a href="experiments/Fischer.par">Fischer<sub>5</sub></a></td>
+			<td>2</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>133363</td>
+			<td>447473</td>
+			<td>5</td>
+			<td>1176</td>
+			<td><a href="experiments/Fischer5IM.log">log</a></td>
+			<td>12689</td>
+			<td>43801</td>
+			<td>5</td>
+			<td>84.5</td>
+			<td><a href="experiments/Fischer5IMOpt.log">log</a></td>
+		</tr>
+		
+		<tr>
+			<td><a href="experiments/Fischer.par">Fischer<sub>6</sub></a></td>
+			<td>2</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>−</td>
+			<td>M.O.</td>
+			<td>−</td>
+			<td>86058</td>
+			<td>342178</td>
+			<td>6</td>
+			<td>1144</td>
+			<td><a href="experiments/Fischer6IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/Jobshop.par">Jobshop</a></td>
+			<td>8</td>
+			<td>13578</td>
+			<td>20262</td>
+			<td>2</td>
+			<td>21.0</td>
+			<td><a href="experiments/JobshopReachAll.log">log</a></td>
+			<td>11872</td>
+			<td>17387</td>
+			<td>2</td>
+			<td>18.1</td>
+			<td><a href="experiments/JobshopReachAllOpt.log">log</a></td>
+			<td class="no">No</td>
+			<td>0.068</td>
+			<td><a href="experiments/JobshopDeadlock.log">log</a></td>
+			<td>1112</td>
+			<td>1902</td>
+			<td>2</td>
+			<td>17.1</td>
+			<td><a href="experiments/JobshopIM.log">log</a></td>
+			<td>877</td>
+			<td>1497</td>
+			<td>2</td>
+			<td>22.8</td>
+			<td><a href="experiments/JobshopIMOpt.log">log</a></td>
+		</tr>
+		
+		<tr>
+			<td><a href="experiments/RCS.par">RCS<sub>2</sub></a></td>
+			<td>4</td>
+			<td>52</td>
+			<td>64</td>
+			<td>4</td>
+			<td>0.038</td>
+			<td><a href="experiments/RCS2ReachAll.log">log</a></td>
+			<td>52</td>
+			<td>64</td>
+			<td>4</td>
+			<td>0.059</td>
+			<td><a href="experiments/RCS2ReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>0.110</td>
+			<td><a href="experiments/RCS2Deadlock.log">log</a></td>
+			<td>52</td>
+			<td>64</td>
+			<td>4</td>
+			<td>0.091</td>
+			<td><a href="experiments/RCS2IM.log">log</a></td>
+			<td>52</td>
+			<td>64</td>
+			<td>4</td>
+			<td>0.147</td>
+			<td><a href="experiments/RCS2IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/RCS.par">RCS<sub>3</sub></a></td>
+			<td>4</td>
+			<td>233</td>
+			<td>296</td>
+			<td>4</td>
+			<td>0.186</td>
+			<td><a href="experiments/RCS3ReachAll.log">log</a></td>
+			<td>233</td>
+			<td>296</td>
+			<td>4</td>
+			<td>0.300</td>
+			<td><a href="experiments/RCS3ReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>0.359</td>
+			<td><a href="experiments/RCS3Deadlock.log">log</a></td>
+			<td>233</td>
+			<td>296</td>
+			<td>4</td>
+			<td>0.310</td>
+			<td><a href="experiments/RCS3IM.log">log</a></td>
+			<td>233</td>
+			<td>296</td>
+			<td>4</td>
+			<td>0.513</td>
+			<td><a href="experiments/RCS3IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/RCS.par">RCS<sub>4</sub></a></td>
+			<td>4</td>
+			<td>1070</td>
+			<td>1374</td>
+			<td>4</td>
+			<td>1.74</td>
+			<td><a href="experiments/RCS4ReachAll.log">log</a></td>
+			<td>1070</td>
+			<td>1374</td>
+			<td>4</td>
+			<td>1.58</td>
+			<td><a href="experiments/RCS4ReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>1.77</td>
+			<td><a href="experiments/RCS4Deadlock.log">log</a></td>
+			<td>1070</td>
+			<td>1374</td>
+			<td>4</td>
+			<td>1.40</td>
+			<td><a href="experiments/RCS4IM.log">log</a></td>
+			<td>1070</td>
+			<td>1374</td>
+			<td>4</td>
+			<td>2.38</td>
+			<td><a href="experiments/RCS4IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/RCS.par">RCS<sub>5</sub></a></td>
+			<td>4</td>
+			<td>5567</td>
+			<td>7172</td>
+			<td>4</td>
+			<td>10.5</td>
+			<td><a href="experiments/RCS5ReachAll.log">log</a></td>
+			<td>5567</td>
+			<td>7172</td>
+			<td>4</td>
+			<td>9.54</td>
+			<td><a href="experiments/RCS5ReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>9.00</td>
+			<td><a href="experiments/RCS5Deadlock.log">log</a></td>
+			<td>5567</td>
+			<td>7172</td>
+			<td>4</td>
+			<td>7.83</td>
+			<td><a href="experiments/RCS5IM.log">log</a></td>
+			<td>5567</td>
+			<td>7172</td>
+			<td>4</td>
+			<td>16.7</td>
+			<td><a href="experiments/RCS5IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/RCS.par">RCS<sub>6</sub></a></td>
+			<td>4</td>
+			<td>33716</td>
+			<td>43472</td>
+			<td>4</td>
+			<td>91.7</td>
+			<td><a href="experiments/RCS6ReachAll.log">log</a></td>
+			<td>33716</td>
+			<td>43472</td>
+			<td>4</td>
+			<td>54.5</td>
+			<td><a href="experiments/RCS6ReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>56.3</td>
+			<td><a href="experiments/RCS6Deadlock.log">log</a></td>
+			<td>33716</td>
+			<td>43472</td>
+			<td>4</td>
+			<td>60.4</td>
+			<td><a href="experiments/RCS6IM.log">log</a></td>
+			<td>33716</td>
+			<td>43472</td>
+			<td>4</td>
+			<td>91.3</td>
+			<td><a href="experiments/RCS6IMOpt.log">log</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="experiments/TrAHV.par">TrAHV</a></td>
+			<td>7</td>
+			<td>7216</td>
+			<td>13361</td>
+			<td>6</td>
+			<td>14.2</td>
+			<td><a href="experiments/TrAHVReachAll.log">log</a></td>
+			<td>7216</td>
+			<td>13361</td>
+			<td>6</td>
+			<td>15.8</td>
+			<td><a href="experiments/TrAHVReachAllOpt.log">log</a></td>
+			<td class="yes">Yes</td>
+			<td>16.2</td>
+			<td><a href="experiments/TrAHVDeadlock.log">log</a></td>
+			<td>227</td>
+			<td>321</td>
+			<td>6</td>
+			<td>0.555</td>
+			<td><a href="experiments/TrAHVIM.log">log</a></td>
+			<td>227</td>
+			<td>321</td>
+			<td>6</td>
+			<td>0.655</td>
+			<td><a href="experiments/TrAHVIMOpt.log">log</a></td>
+		</tr>
+
+
+
+	</table>
+
+</div>
+
+
+<h2>References</h2>
+
+<dl>
+	<dt id="ACEF09">[ACEF09]</dt>
+		<dd><span class="auteur"><a href="http://www-lipn.univ-paris13.fr/~andre/">Étienne André</a></span>, <span class="auteur"><a href="http://www.lsv.ens-cachan.fr/~chatain/">Thomas Chatain</a></span>, <span class="auteur"><a href="http://www-asim.lip6.fr/~ema/">Emmanuelle Encrenaz</a></span> and <span class="auteur"><a href="http://www.lsv.ens-cachan.fr/~fribourg/">Laurent Fribourg</a></span>. <span class="titre"><a href="http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/ACEF-ijfcs09.pdf">An Inverse Method for Parametric Timed Automata</a></span>. <span class="journal">International Journal of Foundations of Computer Science</span> 20(5), <a href="http://dx.doi.org/10.1142/S0129054109006905">pages&nbsp;819–836</a>, 2009. <img src="http://www-lipn.univ-paris13.fr/~andre/drapeaux/drapeau-royaume-uni.png" alt="Flag United Kingdom" title="English" class="drapeau" /> <span style="font-size:smaller">[<a href="http://www.worldscinet.com/ijfcs/20/preserved-docs/2005/S0129054109006905.pdf">PDF (published version)</a> | 
+<a href="http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/ACEF-ijfcs09.pdf">PDF (author version)</a> | <a href="http://www.lsv.ens-cachan.fr/~andre/publications-etienne-andre.php?onlykey=ACEF-ijfcs09">BibTeX</a>]</span></dd>
+
+	<dt id="AHV93">[AHV93]</dt>
+		<dd>Rajeev Alur, Thomas A. Henzinger and Moshe Y. Vardi. <em>Parametric real-time reasoning</em>. In STOC’93, pages 592–601. ACM, 1993.</dd>
+
+	<dt id="ALSD12">[ALSD12]</dt>
+		<dd><span class="auteur"><a href="http://www-lipn.univ-paris13.fr/~andre/">Étienne André</a></span>, <span class="auteur"><a href="http://www.comp.nus.edu.sg/~liuyang/">Liu Yang</a></span>, <span class="auteur"><a href="http://www.sutd.edu.sg/faculty/sunj/">Sun Jun</a></span> and <span class="auteur"><a href="http://www.comp.nus.edu.sg/~dongjs/">Dong Jin Song</a></span>. <span class="titre"><a href="http://www-lipn.univ-paris13.fr/~andre/documents/parameter-synthesis-for-hierarchical-concurrent-real-time-systems.pdf">Parameter Synthesis for Hierarchical Concurrent Real-Time Systems</a></span>. In&nbsp;Karin Breitman, Isabelle Perseil, Marc Pouzet (eds.), <span class="conference"><abbr title="17th IEEE International Conference on Engineering of Complex Computer Systems, Paris, France, July 2012"><a href="http://www.iceccs.org/2012/">ICECCS’12</a></abbr></span>, IEEE Computer Society, pages 253–262, July 2012. <img src="http://www-lipn.univ-paris13.fr/~andre/drapeaux/drapeau-royaume-uni.png" alt="Flag United 
+Kingdom" title="English" 
+class="drapeau" /> <span style="font-size:smaller">[<a href="http://www-lipn.univ-paris13.fr/~andre/documents/parameter-synthesis-for-hierarchical-concurrent-real-time-systems.pdf">PDF (author version)</a> | <a href="http://www.comp.nus.edu.sg/~pat/par/PSTCSP.pdf">PDF (long author version)</a> | <a href="http://www-lipn.univ-paris13.fr/~andre/documents/ALSD12.bib">BibTeX</a>]</span></dd>
+
+	<dt id="ALSDL13">[ALSDL13]</dt>
+		<dd><span class="auteur"><a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>, <span class="auteur"><a href="http://www.ntu.edu.sg/home/yangliu/">Liu Yang (刘杨)</a></span>, <span class="auteur"><a href="http://www.sutd.edu.sg/faculty/sunj/">Sun Jun</a></span>, <span class="auteur"><a href="http://www.comp.nus.edu.sg/~dongjs/">Dong Jin Song</a></span> and <span class="auteur"><a href="http://sites.google.com/site/shangweilin/">Lin Shang-Wei (林尚威)</a></span>. <span class="titre"><a href="http://lipn.univ-paris13.fr/~andre/documents/CAV13-PSyHCoS-parameter-synthesis-for-hierarchical-concurrent-real-time-systems.pdf">PSyHCoS: Parameter Synthesis for Hierarchical Concurrent Real-Time Systems</a></span>. In&nbsp;Natasha Sharygina and Helmut Veith (eds.), <span class="conference"><abbr title="25th International Conference on Computer Aided Verification, Saint Petersburg, Russia, July 2013"><a href="http://cav2013.forsyte.at/">CAV’13</a></abbr></span>, LNCS 8044, Springer, pages&nbsp;984–989, July 2013. Acceptance rate:  <abbr title="Submitted papers:  209 − Accepted papers:  70">33%</abbr>. <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="http://lipn.univ-paris13.fr/~andre/documents/CAV13-PSyHCoS-parameter-synthesis-for-hierarchical-concurrent-real-time-systems.pdf">PDF (author version)</a> | <a href="http://lipn.univ-paris13.fr/~andre/documents/ALSDL13.bib">BibTeX</a> | <a href="http://lipn.univ-paris13.fr/~andre/documents/2013-07-18-CAV-PSyHCoS.pdf">Slides</a>]</span></dd>
+
+
+	<dt id="AM01">[AM01]</dt>
+		<dd>Yasmina Abdeddaïm and Oded Maler. <em>Job-shop scheduling using timed automata</em>. In CAV’01, volume 2102 of LNCS, pages 478–492. Springer Berlin / Heidelberg, 2001.</dd>
+
+	<dt id="SLDZ09">[SLDZ09]</dt>
+		<dd>Jun Sun, Yang Liu, Jin-Song Dong, and Xian Zhang. <em>Verifying Stateful Timed CSP using implicit clocks and zone abstraction</em>. In ICFEM’09, volume 5885 of LNCS, pages 581–600. Springer, 2009.</dd>
+</dl>
+
+
+
+
+<h2>Contact</h2>
+
+<ul>
+	<li><a href="http://www-lipn.univ-paris13.fr/~andre/">Étienne André</a> (Université Paris 13, Sorbonne Paris Cité, France)</li>
+</ul>
+
+
+
+<div id="bas">
+	<p>This page makes use of
+	<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+		and
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+
+
+	<p>Content and CSS can be reused and modified under the terms of license <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a> (CC BY 3.0).</p>
+	
+	<a href="https://creativecommons.org/licenses/by/3.0/"><img src="../../images/cc-by.png" width="100" alt="Creative Commons Attribution 3.0 Unported" title="Creative Commons Attribution 3.0 Unported" /></a>
+
+</div>
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.breizh-partitions.fr/chiffres/" : "http://www.breizh-partitions.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.breizh-partitions.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+
+</body>
+
+</html>

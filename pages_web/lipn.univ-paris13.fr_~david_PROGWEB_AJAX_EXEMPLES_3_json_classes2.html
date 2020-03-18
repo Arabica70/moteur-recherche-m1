@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="jquery-2.2.1.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <select>
+	<option value="0"></option>
+	<option value="1">Watson Bosquet</option>
+	<option value="2">Arinjaka Randriambololona</option>
+      </select>
+    </form>
+
+    <p></p>
+
+
+    <script>
+      $("select").change(function(){
+        $.post("3_json_classes.php",{value: $(this).val()},function(obj){
+           $("p").html(obj.prenom+" "+obj.nom+" est étudiant en "+obj.annee+". ");
+           if(obj.age===undefined)
+             $("p").append("Son age est confidentiel.");
+           else
+             $("p").append("Il a "+obj.age+" ans.");
+        },"json");
+      });
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>JAC 2008</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="JAC 2008"/>
+            <meta property="og:url" content="./jac2008.html"/>
+            <meta property="og:description" content="À l'occasion du départ à la retraite de mon directeur de thèse Jacques Mazoyer a été organisée une conférence très sérieuse sur les thématiques qui lui sont chères, liées en particulier aux automates cellulaires. De nombreux intervenants extérieurs étaient là (venant de France bien sûr, mais aussi de Finlande ..."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li class="active">
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./jac2008.html"
+         rel="bookmark"
+         title="Permalink to JAC 2008">
+        JAC 2008
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>sam. 26 avril 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/photo.html">photo</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>À l'occasion du départ à la retraite de mon directeur de thèse Jacques
+Mazoyer a été organisée une conférence très sérieuse sur les thématiques
+qui lui sont chères, liées en particulier aux automates cellulaires. De
+nombreux intervenants extérieurs étaient là (venant de France bien sûr,
+mais aussi de Finlande, de Russie, d'Italie, du Maroc et du Chili).</p>
+<p>Je n'ai mis dans cet article que les photographies de la conférence
+proprement dites ainsi qu'une analyse personnelle de ce que j'ai appris
+sur le domaine des automates cellulaires en 2008. L'article détaillé est
+sur une <a href="./dm08.html">autre page</a>.</p>
+<p>Les automates cellulaires sont un domaine qui est en pleine mutation (et
+en expansion). On peut distinguer plusieurs thèmes dans les exposés que
+nous avons vu. Un automate cellulaire, c'est (au sens large) tout un tas
+de petites cellules qui, toutes en même temps, regardent leurs voisines
+et changent d'état (de couleur, par exemple : les exposés sur les
+automates cellulaires sont souvent très colorés). Le changement se fait
+toujours de la même façon, et pour toutes les cellules
+simultanément. C'est un très ancien système qui permet de calculer tout
+ce qu'il est possible de calculer avec un ordinateur, et peut-être même
+plus... C'est un des premiers modèles de machine parallèle.</p>
+<p>Remarque : dans les paragraphes suivants, je ne cite pas tout le monde,
+et je le sais !</p>
+<h2>Automates cellulaires et classification algorithmique</h2>
+<p>C'est un peu la façon ancienne de voir les automates cellulaire, et qui
+a subi une véritable percée sous l'influence de <a href="http://en.wikipedia.org/wiki/Jarkko_Kari">Jarkko
+Kari</a> qui a réussi notamment à
+prouver que l'inversion des automates cellulaires en 2D est
+indécidable. Les recherches des propriétés dans cette direction, et la
+généralisation à des sous-classes d'automates cellulaires, continuent
+bon train. Je mets dedans les travaux d'Ollinger et autres sur
+l'universalité intrinsèque, par exemple. Jarkko Kari sera probablement
+responsable de l'organisation de JAC 2010 (en Finlande).</p>
+<h2>Automates cellulaires et topologie</h2>
+<p>Principalement emmenée par l'école italienne (Cattaneo et d'autres), il
+s'agit de regarder le comportement des automates cellulaires en cas de
+perturbation de la configuration initiale. Les résultats, encore une
+fois, sont très prometteurs, et amènent des classifications des
+automates en fonction de leur comportement (auto-stabilisants,
+chaotiques, etc.).</p>
+<h2>Automates cellulaires et signaux</h2>
+<p>Je crois que c'est le point fort de l'approche de
+<a href="http://en.wikipedia.org/wiki/Firing_squad_synchronization_problem">Mazoyer</a>
+et de gens comme Terrier, Durand-Lose ou à une autre époque,
+moi-même. Il s'agit de faire une relation entre un modèle de calcul AC
+et un modèle basé sur des signaux qui se rencontrent (et lorsqu'ils se
+rencontrent, ils peuvent réemettre d'autres signaux, avec des angles
+définis, etc.). J'ai assisté avec plaisir à une tentative de
+paléo-informatique (Jean-Baptiste Yunès a tenté de reconstruire la
+preuve de la synchronisation de la ligne de fusiliers de Goto, perdue
+complètement, à partir de dessins).</p>
+<h2>Automates cellulaires et pavages</h2>
+<p>Avec l'arrivée des tuiles de Wang (comparez cela à des pièces de puzzle
+non orientables, que l'on ne peut pas tourner du tout) et leur lien avec
+les automates cellulaires, il est devenu possible de faire une deuxième
+connexion forte avec des problèmes de géométrie. C'est à ce titre que
+nous avons eu un exposé de Maurice Nivat, mais c'est aussi le domaine de
+Bruno Durand (pavages quasi-périodiques, par exemple).</p>
+<h2>Automates cellulaires et informatique expérimentale</h2>
+<p>C'est une tactique très explorée et qui donne parfois des résultats
+théoriques très intéressants : on se limite aux automates
+cellulaires les plus basiques (cela a beaucoup été fait sur le jeu de la
+vie, mais les plus sérieux s'intéressent aux 256 automates cellulaires
+de la classification de Wolfram — deux états, 3 voisins) et on fait des
+études expérimentales (perturbabilité, universalité, etc.). C'est dans
+cette lignée que nous avons eu le plaisir d'un exposé d'<a href="http://en.wikipedia.org/wiki/Eric_Goles">Éric
+Golès</a>. Les résultats qu'on
+arrive à obtenir (j'ai notamment très apprécié un exposé sur de la
+propagation d'erreur et la synchronisation forcée) sont très surprenants
+et témoignent de la vitalité d'un domaine qui utilise des outils très
+abstraits (indécidabilité, hiérarchie de calcul) mais s'accomode aussi
+d'expérimentations pratiques.</p>
+<p>J'aimerais ajouter que les exposés étaient tous d'un excellent
+niveau. Le mien était toutefois hors-sujet.</p>
+<div id="gallery">
+  <h2>Photographies issues de la conférence JAC 2008</h2>
+  <p>Ces photographies sont issues de la conférence qui a eu lieu à Uzès, à
+l'<a href="http://www.hoteldentraigues.com/">hôtel du Général d'Entraigues</a>.  Je
+ne commente pas beaucoup les photos.</p>
+  <div class="row">
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-expose.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-expose.jpg"></a>
+      <div class="caption"><p>Un exposé pris au hasard.  On y distingue Alexander Shen (chair), Serge Grigorieff, Nicolas Ollinger, Bruno Durand, Jacques Mazoyer, Marianne Delorme et Victor Poupet (debout).</p></div>
+    </div>
+    
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-mazoyer-discours.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-mazoyer-discours.jpg"></a>
+      <div class="caption"><p><strong>Jacques Mazoyer</strong>, discours du dîner officiel</p></div>
+    </div>
+    
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-goles.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-goles.jpg"></a>
+      <div class="caption"><p>Éric Golès relate ses expériences</p></div>
+    </div>
+    
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-mazoyer-explication.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-mazoyer-explication.jpg"></a>
+      <div class="caption"><p>Jacques Mazoyer explique un algorithme à Guillaume Theyssier.</p></div>
+    </div>
+    </div><div class="row">
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-jcdubacq.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-jcdubacq.jpg"></a>
+      <div class="caption"><p>Mon exposé s'est bien passé.</p></div>
+    </div>
+    
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-martin.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-martin.jpg"></a>
+      <div class="caption"><p>Jacques Mazoyer discute avec ses deux ex-thésards Bruno Martin et Bruno Martin.</p></div>
+    </div>
+    
+    <div class="post-it col-md-3">
+      <a class="thumbnail" href="images/gallery/jac2008/uzes-jcdubacq2.jpg"><img src="thumbnails/gallery/jac2008/thumbnail_square_uzes-jcdubacq2.jpg"></a>
+      <div class="caption"><p>Apparition furtive d'un copain et d'un co-auteur dans l'exposé (moins de 10 secondes).</p></div>
+    </div>
+    
+  </div>
+</div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

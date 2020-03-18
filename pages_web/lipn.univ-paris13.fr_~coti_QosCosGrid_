@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="verify-v1"
+    content="MiRUGn7ybJr0YPufOrjYyA3ioPLbA9fJqx6dAX+IMPE=" />
+    <meta name="description" content="ma page web" />
+    <meta name="keywords" lang="fr" content="CV, camille coti, mpi,
+					     tolérance aux fautes,
+					     openmpi, open-mpi,
+					     qoscosgrid, tp mpi,
+					     grille, cluster, grappe,
+					     qcg ompi" /> 
+    <meta name="keywords" lang="en" content="resume, camille coti, mpi, fault
+					     tolerance, openmpi,
+					     open-mpi, qoscosgrid, mpi
+					     lab, grid, grid
+					     computing, cluster,
+					     qcg ompi" /> 
+    <title>Camille Coti: QosCosGrid Resources</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_clair.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/code.css"/> 
+  </head>
+  
+  <body>
+   <div class="marge" id="nav"><div class="titre_marge">Links</div><ul><li>Home <a href="http://www-lipn.univ-paris13.fr/~coti/index_fr.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="en français" /></a> / <a href="http://www-lipn.univ-paris13.fr/~coti/index.php"><img src="http://www-lipn.univ-paris13.fr/~coti/images/us_flag.jpg" height="10" alt="in English" /></a>
+</li><li><a href="http://www.github.com/coti">My GitHub homepage</a></li><li><a href="http://www.open-mpi.org">Open MPI</a></li><li><a href="http://mpich-v.lri.fr">MPICH-V</a></li><li><a href="https://bountyfactory.io">Bug Bounty</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/QosCosGrid">QosCosGrid</a></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/doc">Some documents</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><a href="http://www-lipn.univ-paris13.fr/~coti/cours">Teaching</a><img src="http://www-lipn.univ-paris13.fr/~coti/images/france_flag.png" height="10" alt="in French" /></li><li><style>
+  .strava-badge- { display: inline-block; height: 32px; }
+  .strava-badge- img { visibility: hidden; height: 32px; }
+  .strava-badge-:hover { background-position: 0 -47px; }
+  .strava-badge-follow { height: 32px; width: 32px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+</style>
+<a href="http://strava.com/athletes/2676650/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" /></a><a href="http://www.strava.com/athletes/2676650">My Strava profile</a></li></ul></div> 
+    <div class="infos">
+      <p>The goal of this page is to put together various resources
+      related to the <a href="http://www.qoscosgrid.eu">QosCosGrid
+      project</a> that might be useful for QosCosGrid people and maybe
+      some others. The FAQ is a compilation of the most frequent
+      questions we receive and tries to help you find answers
+      quickly. Some <a href="#docu">docs</a> are available here, and
+      can be useful for people unrelated to the QosCosGrid project.</p>
+
+      <p>The <acronym title="Quasi-Opportunistic Supercomputing for
+	Complex Systems in Grid Environment">QosCosGrid</acronym>
+	project provides high-performance computing software for solving
+	complex system problems on a computational grid. Partners
+	involved in this project are academics as well as industrial 
+	actors.</p>
+    </div>
+
+    <div class="separateur">      
+      What I am doing in QosCosGrid
+    </div>
+
+    <div class="main">
+      <p>At the beginning of the project, I participated to the design
+	of the whole QosCosGrid system. Before the beginning of the
+	project, use-case partners were requested to answer
+	questionnaires in order to give us hints about their requests
+	in terms of computation environments. We analyzed those
+	questionnaires and designed the architecture of the system
+	regarding common characteristics of target applications.
+      </p>
+
+      <p>I am working on the middleware part of the QosCosGrid stack,
+	which means that I am in charge of providing a programming and
+	execution environment to our use-cases. Use-cases are our
+	complex systems partners, who need computational power and
+	data storage facilities to run simulations. I am working on
+	the MPI side of the QosCosGrid organisation. I designed and
+	implemented (with <a href="http://www.lri.fr/~rezmerit">Ala
+	Rezmerita</a>) QCG-OMPI, a specifically modified version
+	of <a href="http://www.openmpi.org">OpenMPI</a>. You can check
+	out <a href="../index.php#publis">my publications</a> and an
+	<a href="./qcgompi.php">introduction to QCG-OMPI</a> for
+	more information.
+      </p>
+    </div>
+    
+    <div class="separateur">
+      MPI Lab
+    </div>
+    <div class="main">
+      <p>When the QosCosGrid project started, not all the use-case
+	partners where familiar with MPI. Therefore, we organized some
+	sort of a workshop during a technical meeting to introduce
+	them to it.</p>
+
+      <p>Since pretty much all of them were using MS Windows, it first
+	explains how to prepare their working environment with
+	Cygwin. We provide a bundle with everything needed for this
+	lab, including Cygwin and emacs.</p>
+
+      <p>We used machines on the experimental
+	platform <a href="http://www.grid5000.fr">Grid5000</a>. However,  
+	it can be done on any cluster with any MPI implementation
+	installed on it.</p>
+
+      <p>The <a href="./introLab.php">lab page is here</a>. For
+	people who never used MPI, I added some small and basic
+	examples in the begining of the page. The lab itself consists
+	of the implementation of an ant colony simulation, which is a
+	model of cellular automata which quite common for complex
+	systems.</p>  
+    </div>
+
+    <div class="separateur"><a name="docu" />
+      QCG-OMPI documentation
+    </div>
+    <div class="main">
+      <p><a href="./qcgompi.php">Introdution to QCG-OMPI</a>: an
+	    overview of the system and its features.</p> 
+
+      <p><a href="./howto.php">QCG-OMPI Howto</a>: a short guide on
+	how to install and use QCG-OMPI for administrators and
+	users.</p> 
+	      
+      <p>I put together the most common questions we are asked, and
+	provide answers in the <a href="./FAQ.php">QCG-OMPI
+	FAQ</a>. If you can't ind what you are looking for, send me an
+	email, and maybe I'll add it into the FAQ. <i>outdated</i></p>
+
+      <p>I have created an image featuring QCG-OMPI for Opteron-based
+	machines on Grid5000. The documentation on how to use the
+	image and how to use QCG-OMPI on this image
+	is on the <a href="./g5k.php">QCG-OMPI on Grid'5000</a>
+	page.</p> 
+
+      <p>A little documentation	of
+	the <a href="./topologyExample.php">topolgy-discovery
+	features</a>, and how to use them to write a grid-enabled
+	helloWorld.</p> 
+
+    </div>
+    
+
+
+    
+ <!-- APRES CETTE LIGNE ON NE TOUCHE PLUS -->
+     
+    
+    <!-- MOUCHARD GOOGLE ET W3C -->
+    <div class="marge_w3c">
+      <a href="http://validator.w3.org/check?uri=referer">
+	<img
+	   src="http://www.w3.org/Icons/valid-xhtml10-blue"
+	   alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+      </a>
+    </div>
+  
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-9116769-2");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>	   
+  </body>
+</html>

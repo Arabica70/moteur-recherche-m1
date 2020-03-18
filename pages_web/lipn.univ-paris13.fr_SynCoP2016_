@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>SynCoP 2016: 3rd International Workshop on Synthesis of Complex Parameters</title>
+	<meta name="author" content="Étienne André" />
+	<meta name="description" content="SynCoP 2016 (3rd International Workshop on Synthesis of Continuous Parameters) will take place in Eindhoven, The Netherlands in April 2016" />
+	<meta name="keywords" content="SynCoP, workshop, conference, call for papers, parametric timed automata, hybrid automata, parametric verification, probabilistic systems, regular model checking, processes, networks, Eindhoven, The Netherlands, 2016" />
+	<meta name="robots" content="index,follow" />
+
+	<link rel="stylesheet" type="text/css" media="screen" href="SynCoP.css" />
+</head>
+
+<body>
+<div id="container">
+ 
+	<header>
+		<img style="float:right;" src="SynCoP.png" alt="SynCoP" height="100" title="SynCoP – Logo: Goran Frehse" />
+		<h1><a href="index.php">SynCoP 2016</a></h1>
+		<h2>3rd International Workshop on Synthesis of Complex Parameters</h2>
+		<h3>Sunday 3rd of April 2016, Eindhoven, The Netherlands</h3>
+		<img src="eindhoven.jpg" width="1024" alt="Eindhoven" title="Eindhoven – Photo: Étienne André – Licence CC-BY-SA 3.0" />
+	</header> <!-- end header -->
+  
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="submission.php">Call for papers</a></li>
+			<li><a href="committees.php">Committees</a></li>
+			<li><a href="invited-speakers.php">Invited Speakers</a></li>
+			<li><a href="program.php">Program</a></li> 
+			<li><a href="syncop-2016-preproceedings.pdf" rel="nofollow">Pre-proceedings</a></li> 
+<!--			<li><a href="pictures.php">Pictures</a></li>-->
+			<li><a href="past.php">Past editions</a></li>
+		</ul>
+	</nav> <!-- end menuleft -->
+ 
+ 
+ 
+	<div id="menuright">
+		<h3>Important dates</h3>
+		<p><strong>Submission (abstract)</strong><br /><span class="barre">January 10th</span> February 1st, 2016 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Submission (paper)</strong><br /><span class="barre">January 17th</span> February 1st, 2016 <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth"><abbr title="Anywhere on Earth">AoE</abbr></a></p> 
+		
+		<p><strong>Submission (informal presentation)</strong><br />February 15th, 2016</p>
+		
+		<p><strong>Notification	</strong><br />February 22nd, 2016</p>
+		
+		<p><strong>Workshop</strong><br />April 3rd, 2016</p>
+
+		<p><strong>Camera ready</strong><br />May 15th, 2016</p>
+		
+	</div> <!-- end menu right -->
+		
+ 
+ 
+	<div id="main">
+
+		<h2>Aim</h2>
+		<p>SynCoP aims at bringing together researchers working on verification and parameter synthesis for systems with discrete or continuous parameters, in which the parameters influence the behavior of the system in ways that are complex and difficult to predict.
+				Such problems may arise for real-time, hybrid or probabilistic systems in a large variety of application domains.
+				The parameters can be continuous (e.g., timing, probabilities, costs) or discrete (e.g., number of processes). The goal can be to identify suitable parameters to achieve desired behavior, or to verify the behavior for a given range of parameter values.</p>
+
+		<h2>Topics of the workshop</h2>
+		<p>The scientific subject of the workshop covers (but is not limited to) the following areas:</p>
+		
+		<ul>
+			<li>parameter synthesis,</li>
+			<li>parametric model checking,</li>
+			<li>regular model checking,</li>
+			<li>robustness analysis,</li>
+			<li>parametric logics, decidability and complexity issues,</li>
+			<li>formalisms such as parametric timed and hybrid automata, parametric time(d) Petri nets, parametric probabilistic (timed) automata, parametric Markov Decision Processes, networks of identical processes,</li>
+			<li>interactions between discrete and continuous parameters,</li>
+			<li>tools and applications to major areas of computer science, biology and control engineering.</li>
+		</ul>
+
+		
+		<h2>Venue</h2>
+		
+		<p>SynCoP 2016 is a satellite of the <a href="http://www.etaps.org/2016/">ETAPS 2016</a> conference taking place in the
+			<span style="text-decoration: line-through">beautiful</span>
+			<span style="text-decoration: line-through">famous</span>
+			<span style="text-decoration: line-through">touristy</span>
+			<span style="text-decoration: line-through">sunny</span>
+			perfectly-suited-for-a-workshop
+			city of <a href="https://en.wikivoyage.org/wiki/Eindhoven">Eindhoven</a>, The Netherlands.</p>
+		
+		<p>The workshop will take place on Sunday 3rd April 2016 in <b>room CZ15</b> in the Auditorium, Eindhoven, The Netherlands.<br/>
+			Additional information can be found on the <a href="http://www.etaps.org/index.php/2016/location">ETAPS workshops page</a>.</p>
+		
+		<h2>Support</h2>
+		
+		<p>The workshop is partially supported by French project <a href="http://lipn.univ-paris13.fr/PACS/">ANR PACS</a> (Parametric analyses of concurrent systems).</p>
+		
+
+		
+<hr class="float_correction" />
+
+
+	</div> <!-- end main -->
+ 
+	<footer>
+		<div id="sponsors">
+			<!-- <img src="images/lipn.jpg" alt="LIPN" title="LIPN">-->
+			<a href="http://www.agence-nationale-recherche.fr/"><img src="images/anr.png" alt="Agence Nationale de la Recherche" title="ANR"></a>
+			<a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr-cmjn-petit.png" alt="Projet financé par l’ANR" title="ANR PACS"></a>
+			<a href="http://lipn.univ-paris13.fr/PACS/"><img src="images/anr_pacs_small.png" alt="ANR PACS" title="ANR PACS"></a>
+			<a href="http://www.etaps.org/2016/"><img src="images/etapslogolarge_blue.png" alt="ETAPS 2016" title="ETAPS 2016"></a>
+			
+			
+		</div>
+		
+		<div id="copyright">
+			<p>Design: <a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Creative Commons CC-BY-NC 3.0)</p>
+			<p>Title font: <a href="http://www.fontsquirrel.com/fonts/josefin-slab">Josefin Slab</a> (SIL Open Font); Main banner: "Beautiful and sunny Eindhoven", by Étienne André<!--  <a href="http://www.microtoerisme.nl/">Microtoerisme</a>--> (Creative Commons CC-BY-SA 3.0)</p>
+		</div>
+		
+		<div id="validators">
+			This page makes use of
+			<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+				and
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.
+		</div>
+	</footer> <!-- end footer -->
+	
+</div> <!--end container-->
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+</html>
+ 

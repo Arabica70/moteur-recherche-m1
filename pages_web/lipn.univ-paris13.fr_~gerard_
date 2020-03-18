@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="AUTHOR" CONTENT="Pierre G&eacute;rard">
+	<LINK rel="stylesheet" type="text/css" href="style.css">
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+
+<P CLASS="western"><B><FONT FACE="Verdana, sans-serif"><FONT SIZE=4>Pierre
+G&eacute;rard</FONT></FONT></B></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="mailto:pierre.gerard@univ-paris13.fr">pierre.gerard@univ-paris13.fr</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B>Assistant Professor (computer science)</B></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><B>University of
+Paris 13</B></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><A HREF="http://www-lipn.univ-paris13.fr/">Computer Science Lab of Paris 13 University (LIPN)</A> / Office B211 / +33 1 49 40 28 31</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+
+<P CLASS="western" ALIGN=CENTER><FONT COLOR="#000000"><META NAME="CHANGEDBY" CONTENT="Pierre Gérard"><A HREF="recherche-fr.php">Recherche
+(fr)</A> / <A HREF="recherche-en.php">Research
+(en)</A> / <A HREF="enseignement.php">Enseignement</A>
+/ <A HREF="divers.php">Divers</A></FONT></P>
+<H1 CLASS="western">Research</H1>
+<P CLASS="western">I'm studying online adaptive behavior of autonomous agents.
+More specifically, my research deals about reinforcement learning and action model learning. 
+</P>
+<H2 CLASS="western">Publications</H2>
+<H3 CLASS="western">Selected papers</H3>
+	<UL>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P.,
+	Rouveirol, C. and Soldano, H. (2010) <A HREF="http://www-lipn.univ-paris13.fr/%7Erodrigues/icmla2010PP.pdf">Incremental
+	learning of relational action rules.</A> ICMLA'10 
+	</P>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P.
+	and Rouveirol, C. (2010) <A HREF="http://www-lipn.univ-paris13.fr/%7Erodrigues/Rodrigues_ilp2010.pdf">Incremental
+	learning of relational action models in noisy environments.</A>
+	ILP'10 
+	</P>	
+	<LI><P CLASS="western">G&eacute;rard, P., Meyer J.-A. and Sigaud, O.
+	(2005) <A HREF="docs/publications/gerard-mey-sig-ejor03.ps">Combining
+	Latent Learning and Dynamic Programming in MACS.</A> European
+	Journal of Operational Research 160:614-637.</P>
+	<LI><P CLASS="western">G&eacute;rard, P. and Sigaud, O. (2003)
+	<A HREF="docs/publications/gerard-sig-gecco03.ps">Designing
+	Efficient Exploration with MACS: Modules and Function Approximation.
+	</A>Proceedings of the Genetic and Evolutionary Computation
+	Conference,GECCO'03.</P>
+	<LI><P CLASS="western">G&eacute;rard, P., Stolzmann, W. and Sigaud,
+	O. (2002) <A HREF="docs/publications/gerard-sto-sig-jsc01.ps">YACS
+	: a new Learning Classifier System using Anticipation.</A> Journal
+	of Soft Computing : Special Issue on Learning Classifier Systems. 6
+	(3-4), 216-228 Springer Verlag.</P>
+</UL><H3 CLASS="western">Others</H3>
+	<UL>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P.
+	and Rouveirol, C. (2010) Incremental learning of relational action
+	models in noisy environments. JFPDA'10 
+	</P>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P.
+	and Rouveirol, C. (2010) Apprentissage incr&eacute;mental de r&egrave;gles
+	d'actions relationnelles. RFIA'10 
+	</P>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P. and
+	Rouveirol, C. (2008) <A HREF="docs/publications/rodrigues-ger-rou-ilp08-submit.pdf">On
+	and Off-Policy Relational Reinforcement Learning</A>. ILP'08. 
+	</P>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P. and
+	Rouveirol, C. (2008) <A HREF="docs/publications/rodrigues-rou-ger-ewrl08-submit.pdf">Relational
+	TD Reinforcement Learning</A>. EWRL'08. 
+	</P>
+	<LI><P CLASS="western">Rodrigues, C., G&eacute;rard, P. and
+	Rouveirol, C. (2008) <A HREF="docs/publications/rodrigues-ger-rou-ilp08-submit.pdf">On
+	and Off-Policy Relational Reinforcement Learning</A>. ILP'08. 
+	</P>
+	<LI><P CLASS="western">G&eacute;rard, P. and Sigaud, O. (2004)
+	<A HREF="docs/publications/sigaud-ger-pdmia03.ps">Apprentissage
+	par renforcement indirect dans les syst&egrave;mes de classeurs.</A>
+	JEDAI.</P>
+	<LI><P CLASS="western">Butz, M.V., Sigaud, O. and G&eacute;rard, P.
+	(2003) <A HREF="docs/publications/butz-sig-ger-abialsintro.ps">Internal
+	Models and Anticipations in Adaptive Learning Systems.</A> In Butz
+	et al. (Eds) LNCS 2684 :Anticipatory Behavior in Adaptive Learning
+	Systems , Springer Verlag.</P>
+	<LI><P CLASS="western">Butz, M.V., Sigaud, O. and G&eacute;rard, P.
+	(2003) <A HREF="docs/publications/butz-sig-ger-abials02.ps">Anticipatory
+	Behavior: Exploiting Knowledge about the Future to Improve Current
+	Behavior.</A> In Butz et al. (Eds) LNCS 2684 :Anticipatory Behavior
+	in Adaptive Learning Systems , Springer Verlag.</P>
+	<LI><P CLASS="western">Landau, S., Picault, S., Sigaud, O., and
+	G&eacute;rard, P. (2003). <A HREF="docs/publications/landau-pic-sig-ger-iwlcs02.ps">Further
+	Comparison between ATNoSFERES and XCSM.</A> In Stolzmann, W., Lanzi,
+	P.-l., and Wilson, S. W., editors, Learning Classifier Systems LNCS
+	2661, pages 99-117. Springer-Verlag.</P>
+	<LI><P CLASS="western">Sigaud, O. and G&eacute;rard, P. (2003)
+	<A HREF="docs/publications/sigaud-ger-pdmia03.ps">Apprentissage
+	par renforcement indirect dans les syst&egrave;mes de classeurs.</A>
+	In Actes des journ&eacute;es PDMIA.</P>
+	<LI><P CLASS="western">Butz, M. V. and Sigaud, O. and G&eacute;rard,
+	P. (2002) <A HREF="docs/publications/butz-sig-ger-abialsmodels.ps">Internal
+	Models and Anticipations in Adaptive Learning Systems.</A>
+	Anticipatory Behavior in Adaptive Learning Systems. SAB'02 workshop.
+	(version &eacute;tendue dans les chapitres d'ouvrages)</P>
+	<LI><P CLASS="western">Landau, S., Picault, S., Sigaud, O. and
+	G&eacute;rard, P. (2002) <A HREF="docs/publications/landau-pic-sig-ger-gecco2002.ps">A
+	Comparison between ATNoSFERES and XCSM.</A> In Proceedings of the
+	Genetic and Evolutionary Computation Conference, GECCO'02., 926-933</P>
+	<LI><P CLASS="western">G&eacute;rard, P. and Sigaud, O. (2001)
+	<A HREF="docs/publications/gerard-sig-gecco01.ps">Adding
+	a Generalization Mechanism to YACS.</A> In Proceedings of the
+	Genetic and Evolutionary Computation Conference, GECCO-2001, 951-957</P>
+	<LI><P CLASS="western">G&eacute;rard, P. and Sigaud, O. (2001) <A HREF="docs/publications/gerard-sig-lnai1996.ps">YACS
+	: Combining Dynamic Programming with Generalization in Classifier
+	Systems.</A> In LNAI 1996 : Advances in Classifier Systems, 53-69,
+	Springer-Verlag (version &eacute;tendue de la contribution &agrave;
+	IWLCS00)</P>
+	<LI><P CLASS="western">Sigaud, O. and G&eacute;rard, P. (2001) <A HREF="docs/publications/sigaud-ger-lnai2103.ps">Being
+	reactive by exchanging roles: an empirical study.</A> In LNAI 2103:
+	Balancing reactivity and Social Deliberation in Multiagent Systems,
+	150-172, Springer-Verlag (version &eacute;tendue de la contribution
+	&agrave; ECAI00)</P>
+	<LI><P CLASS="western">Sigaud, O. and G&eacute;rard, P. (2001) <A HREF="docs/publications/sigaud-ger-lnai1996.ps">Using
+	Classifier Systems as Adaptive Expert Systems for Control.</A> In
+	LNAI 1996 : Advances in Classifier Systems, 138-157, Springer-Verlag</P>
+	<LI><P CLASS="western">Landau, S., Picault, S., Sigaud, O. and
+	G&eacute;rard, P. (2002) Further Comparison between ATNoSFERES and
+	XCSM. In Stolzmann et al. (Eds). IWLCS-02. Proceedings of the Fourth
+	International Workshop on Learning Classifier Systems.</P>
+	<LI><P CLASS="western">G&eacute;rard, P. and Sigaud, O. (2000)
+	<A HREF="docs/publications/gerard-sig-iwlcs00.ps">Combining
+	Anticipation and Dynamic Programming in Classifier Systems
+	(abstract).</A> In Proceedings of the Third International Workshop
+	on Learning Classifier Systems, IWLCS00.</P>
+	<LI><P CLASS="western">Sigaud, O. and G&eacute;rard, P. (2000) <A HREF="docs/publications/sigaud-ger-ecai00.ps">The
+	use of roles in a multiagent adaptive simulation.</A> In Proceedings
+	of the 14th European Conference in Artificial Intelligence (ECAI00),
+	Workshop on Balancing reactivity and Social Deliberation in
+	Multiagent Systems., 113-124</P>
+	<LI><P CLASS="western">Sigaud, O. and G&eacute;rard, P. (1999)
+	<A HREF="docs/publications/sigaud-ger-ias99.ps">Contribution
+	au probl&egrave;me de la s&eacute;lection de l'action en
+	environnement partiellement observable.</A> In Drogoul et Meyer
+	(Eds.). Intelligence Artificielle Situ&eacute;e., 129-146, Herm&egrave;s.</P>
+	<LI><P CLASS="western">G&eacute;rard, P. (2001) <A HREF="docs/publications/gerard-esi01.ps">Generalization
+	and Latent Learning in Learning Classifier Systems.</A> Proceedings
+	of the EURO Summer Institute XIX.</P>
+</UL><H3 CLASS="western">Edited books</H3>
+<UL>
+	<LI><P CLASS="western">Butz, M.V., Sigaud, O. and G&eacute;rard, P.
+	(Eds) (2003) <A HREF="http://www.springer.com/computer/artificial/book/978-3-540-40429-3">LNCS
+	2684 : Anticipatory Behavior in Adaptive Learning Systems.</A></P>
+</UL>
+<H3 CLASS="western">PhD Thesis</H3>
+<UL>
+	<LI><P CLASS="western">G&eacute;rard, P. (2002). <A HREF="docs/publications/full_thesis_gerard_02.ps">Syst&egrave;mes
+	de classeurs : &eacute;tude de l'apprentissage latent.</A> Th&egrave;se
+	de Doctorat de l'Universit&eacute; Paris 6. Sp&eacute;cialit&eacute;
+	Informatique <A HREF="docs/publications/full_thesis_gerard_02.pdf">[pdf]</A>.</P>
+</UL>
+<H2 CLASS="western">Links</H2>
+<UL>
+	<LI><P CLASS="western"><A HREF="http://www.lipn.fr/~rodrigues/">Christophe
+	Rodrigues</A></P>
+	<LI><P CLASS="western"><A HREF="http://www.lipn.fr/~rouveirol">C&eacute;line
+	Rouveirol</A></P>
+	<LI><P CLASS="western"><A HREF="http://www-lipn.univ-paris13.fr/~soldano/">Heny
+	Soldano</A></P>
+	<LI><P CLASS="western"><A HREF="http://www.isir.upmc.fr/index.php?op=view_profil&amp;id=21">Jean-Arcady
+	Meyer</A></P>
+	<LI><P CLASS="western"><A HREF="http://www.isir.upmc.fr/?op=view_profil&amp;id=28">Olivier
+	Sigaud</A></P>
+	<LI><P CLASS="western"><A HREF="http://samuel.landau.free.fr/index.php.en">Samuel
+	Landau</A></P>
+	<LI><P CLASS="western"><A HREF="http://www.coboslab.psychologie.uni-wuerzburg.de/people/martin_v_butz/">Martin
+	Butz</A></P>
+</UL>
+</BODY>
+</HTML>

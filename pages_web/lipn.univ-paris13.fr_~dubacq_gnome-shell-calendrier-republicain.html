@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Gnome-shell: Calendrier républicain</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Gnome-shell: Calendrier républicain"/>
+            <meta property="og:url" content="./gnome-shell-calendrier-republicain.html"/>
+            <meta property="og:description" content="Depuis un moment, j'avais envie d'essayer Javascript autrement que dans une page web. J'avais dans mon radar une cible : une extension pour Gnome Shell. Du coup, j'ai développé quelque chose d'absolument inutile (et donc complètement indispensable) : un affichage de la date dans le calendrier républicain."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li class="active">
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li >
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./gnome-shell-calendrier-republicain.html"
+         rel="bookmark"
+         title="Permalink to Gnome-shell: Calendrier républicain">
+        Gnome-shell: Calendrier républicain
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>dim. 21 septembre 2014
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/javascript.html">javascript</a>
+        /
+	<a href="./tag/gnome.html">gnome</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Depuis un moment, j'avais envie d'essayer Javascript autrement que dans une page web. J'ai bien développé 2-3 bricoles en <a href="http://nodejs.org/">node.js</a> qui ne valent pas la peine d'être montrée, mais j'avais dans mon radar une autre cible facilement visible : une extension pour <a href="http://fr.wikipedia.org/wiki/GNOME_Shell">Gnome Shell</a>.</p>
+<p><img alt="Calendrier révolutionnaire dans Gnome-Shell" class="pull-right" src="./images/hacks/frc.png" />
+Du coup, j'ai développé quelque chose d'absolument inutile (et donc complètement indispensable) : un affichage de la date dans le <a href="http://fr.wikipedia.org/wiki/Calendrier_r%C3%A9publicain">calendrier républicain</a> (celui qui a été adopté à la révolution en 1792, dont on retient surtout le coup d'état du 18 brumaire, et le <a href="http://fr.wikipedia.org/wiki/Homard_%C3%A0_l%27am%C3%A9ricaine">homard thermidor</a>).</p>
+<h2>Fonctionnalités</h2>
+<p>Dans la barre du haut s'affiche la date sous forme simple (par exemple 1<sup>er</sup> vendémiaire, an 223). Si on clique dessus, on a la date plus détaillée (nom des jours selon la classification de <a href="http://fr.wikipedia.org/wiki/Fabre_d'%C3%89glantine">Fabre d'Églantine</a>, nom du jour de la décade et numéro de décade, ainsi que le jour julien et la date ISO). On peut aussi se déplacer (par sauts de 1 ou 30 jours) pour voir les noms des jours suivants ou passés.</p>
+<p>J'utilise les mêmes fonctions de calcul pour la date que le site <a href="https://www.fourmilab.ch/documents/calendar/">fourmilab</a>. Je pourrais d'ailleurs étendre l'application pour afficher aussi (ou au choix) la date hébraïque, islamique, maya, persane ou d'autres encore. L'essentiel est de pouvoir faire un peu de calculs astronomiques (pas astrologiques).</p>
+<p>Je n'ai pas mis le système d'affichage de l'heure, et par simplicité, je n'ai pas essayé de me glisser dans le calendrier habituel de Gnome (c'est <a href="http://fr.wikipedia.org/wiki/Monkey-Patch">faisable</a>, mais plus complexe à maintenir).</p>
+<h2>Développement</h2>
+<p>Le chemin n'a pas été facile ! L'environnement <code>gnome-shell</code> manque sérieusement de documentation. J'ai dû inférer un certain nombre de propriétés des objets à partir d'exemples (la méthode usuelle, apparemment). Avoir appelé les bibliothèques graphiques <code>St</code> ne permet pas vraiment des recherches simples dans Google. Si j'ai le courage de faire une deuxième extension, je posterai une liste webographique des pages consultées.</p>
+<p>L'environnement n'aide pas trop non plus. Par exemple, pour qu'une extension fonctionne bien, if faut prévoir sa destruction et en particulier <a href="http://blog.mecheye.net/2012/02/requirements-and-tips-for-getting-your-gnome-shell-extension-approved/">prévoir la déconnexion des signaux</a> (c'est un environnement graphique où les objets communiquent par signaux). Je ne trouve pas tout ça très mûr parce qu'on doit gérer à la main la destruction des <em>listeners</em> pour les boutons (comme on demande au bouton de créer son <em>listener</em>, il pourrait très bien les détruire lorsqu'il est effacé).</p>
+<p>J'ai dû rajouter une couche pour gérer la traduction (des boutons, pas de la date : ça n'a aucun sens de mettre une date purement française en anglais). Je n'ai pas osé mettre des préférences encore (ça pourrait m'intéresser à terme, par exemple pour choisir le type de date affichée ou l'endroit).</p>
+<h2>Installation</h2>
+<p>L'installation dans un gnome récent est ultra-simple :</p>
+<ul>
+<li>se rendre sur <a href="https://extensions.gnome.org/extension/874/french-republican-calendar/">la page de l'extension</a> avec un navigateur muni du plugin <code>gnome</code> (ce ne sera pas le cas de <code>chrome</code> sur un linux récent, </li>
+<li>Activer le plugin</li>
+</ul>
+<p>L'installation à la main est à peine plus difficile :</p>
+<ul>
+<li>Télécharger le code source (sur <a href="https://github.com/jcdubacq/gnome-shell">Github</a> ou sur <a href="https://extensions.gnome.org/extension/874/french-republican-calendar/">la page de l'extension</a>)</li>
+<li>Le décompresser dans <code>~/.local/share/gnome-shell/extensions/</code> dans un répertoire <code>FRC@jcdubacq.dubacq.fr</code></li>
+<li>Redémarrer gnome-shell (<code>Alt+F2</code> puis <code>r</code>) (vous ne perdez pas votre travail en cours). Éventuellement, lancez <code>gnome-tweak-tool</code> si ça n'apparaît pas.</li>
+<li>Si votre version de Gnome est plus ancienne que la mienne, essayez de modifier la version dans le fichier <code>metadata.json</code>.</li>
+</ul>
+<p>Le code source de ma version de travail est disponible sur <a href="https://github.com/jcdubacq/gnome-shell">Github</a>.</p>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

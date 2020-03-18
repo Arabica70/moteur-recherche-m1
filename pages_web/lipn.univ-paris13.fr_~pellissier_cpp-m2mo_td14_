@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 14</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    .footnote { }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 14 C++: Entrées/Sorties, Smart Pointers</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 1: file I/O</h3>
+<ol>
+  <li>
+    <b>Écrivez</b> un programme 1.1.cc (avec un <tt>main()</tt>) qui compte le nombre de lignes
+    d'un fichier texte, dont le nom sera donné en <b>argument</b> du programme. Il affichera ce nombre dans <tt>stdout</tt>.
+    <br/>Indices: <tt>ifstream</tt> et <tt>getline</tt> pour lire un fichier (cherchez sur cppreference.com),
+    <tt>int main(int argc, char** argv)</tt> pour récupérer les arguments du programme.
+    <br/><br/><b>Testez</b> votre code:
+    <pre>rm 1.tar.gz; wget --no-cache <a href="1.tar.gz" download>http://fabien.viger.free.fr/cpp/td14/1.tar.gz</a>
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU</b>: <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    De même, <b>écrivez</b> un programme 1.2.cc qui <b>affiche</b> (dans stdout) les <i>N</i>
+    premières lignes d'un fichier texte. Le programme prendra le nom du fichier en 1<sup>er</sup> argument
+    et le nombre <i>N</i> en 2<sup>ème</sup> argument. 
+    <br/><br/><b>Test</b>: <tt>make 1.2</tt>
+    <br/><b class="orange">RENDU</b>: <tt>1.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    De même, <b>écrivez</b> un programme 1.3.cc qui <b>réduit</b> un fichier donné à ses <i>N</i>
+    dernières lignes.
+    <br/><b>Exemple</b> pour N=3: un fichier contenant:
+    <table style="border:1px solid black;"><tr><td><tt>Hello</br/>
+World<br/>
+This is a<br/>
+simple<br/>
+<br/>
+text file</tt></td></tr></table>
+    <br/>ne contiendra, après ce programme, plus que:
+    <table style="border:1px solid black;"><tr><td><tt>simple<br/>
+<br/>
+text file</tt></td></tr></table>
+    <br/><b class="red">Attention!</b> votre code ne devra pas prendre plus de mémoire que le contenu des N dernières lignes!
+    <br/>Le test le verifiera.</br>
+    <br/><b>Test</b>: <tt>make 1.3</tt>
+    <br/><b class="orange">RENDU</b>: <tt>1.3.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Smart pointers</h3>
+<ol>
+  <li>
+    <b>Implémentez</b> <tt>ComputeMedianObj()</tt> qui est déclaré dans
+    <a href="2.1.h" download>2.1.h</a> (copié ci-dessous) dans un fichier
+    <tt>2.1.cc</tt>, <b class="red">sans utiliser le mot-clé</b> <tt>delete</tt>.
+    <br/>Ne modifiez <b>pas</b> <tt>2.1.h</tt> et n'implémentez pas
+    les constructeurs/destructeurs de MyObj.
+    <pre><code class="c++">class MyObj {
+ public:
+  explicit MyObj(int seed);  // Implemented in 2.1.test.cc
+  ~MyObj();                  // Implemented in 2.1.test.cc
+
+  // NOT default- and copy-constructible!
+  MyObj() = delete;
+  MyObj(const MyObj&amp;) = delete;
+
+  int Value() const { return value_; }
+ private:
+  const int value_;
+};
+
+// This function, which you must implement, should do the following:
+// - Construct N instances of MyObj, with seed=0...N-1.
+// - Sort them by Value()
+// - Return the "median" value, i.e. the Value() of the N/2-th MyObj in the
+//   sorted list.
+// - [IMPORTANT!] Destroy all instances of MyObj before returning.
+int ComputeMedianMyObj(int N);</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 2.tar.gz; wget --no-cache <a href="2.tar.gz" download>http://fabien.viger.free.fr/cpp/td14/2.tar.gz</a>
+tar xf 2.tar.gz
+make 2.1</pre>
+    <b class="orange">RENDU</b>: <tt>2.1.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 3: Factory</h3>
+<ol>
+  <li>
+    <b>Complétez</b> <a href="3.1.h" download>3.1.h</a> (version initiale copiée ci-dessous)
+    et écrivez l'implémentation dans un fichier <tt>3.1.cc</tt>.
+    <pre><code class="c++">class Hat {
+ public:
+  Hat() {  ++num_hats_global_; }
+  ~Hat() { --num_hats_global_; }
+  static int NumHatsGlobal() { return num_hats_global_; }
+ private:
+  static int num_hats_global_;
+};
+
+class HatFactory {
+ public:
+  // The factory constructs a new hat, and gives me a pointer to the
+  // newly constructed object. The caller does not own the Hat.
+  Hat* NewHat();
+
+  // All hats ever constructed are destructed when the factory is destructed.
+  ~HatFactory();
+
+ private:
+  // TODO
+};</code></pre>
+    <b>Testez</b> votre code:
+    <pre>rm 3.tar.gz; wget --no-cache <a href="3.tar.gz" download>http://fabien.viger.free.fr/cpp/td14/3.tar.gz</a>
+tar xf 3.tar.gz
+make 3.1</pre>
+    <b class="orange">RENDU</b>: <tt>3.1.h</tt> et <tt>3.1.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+
+</body>
+</html>

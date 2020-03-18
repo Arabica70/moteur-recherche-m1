@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>method</TITLE>
+
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.09">
+<STYLE type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.title{margin:auto;text-align:center}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.boxed{border:1px solid black}
+.textboxed{border:1px solid black}
+.vbar{border:none;width:2px;background-color:black;}
+.hbar{border:none;height:2px;width:100%;background-color:black;}
+.hfill{border:none;height:1px;width:200%;background-color:black;}
+.vdisplay{border-collapse:separate;border-spacing:2px;width:auto; empty-cells:show; border:2px solid red;}
+.vdcell{white-space:nowrap;padding:0px;width:auto; border:2px solid green;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px;width:auto; border:none;}
+.dcenter{margin:0ex auto;}
+.vdcenter{border:solid #FF8000 2px; margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.marginpar{border:solid thin black; width:20%; text-align:left;}
+.marginparleft{float:left; margin-left:0ex; margin-right:1ex;}
+.marginparright{float:right; margin-left:1ex; margin-right:0ex;}
+.theorem{text-align:left;margin:1ex auto 1ex 0ex;}
+.part{margin:auto;text-align:center}
+</STYLE>
+</HEAD>
+<BODY >
+<!--HEVEA command line is: /usr/bin/hevea method.tex -->
+<!--CUT DEF section 1 --><DIV CLASS="center">
+<FONT SIZE=4><B>Sujet de stage<BR>
+Une méthode d'analyse et spécification pour les systèmes complexes
+avec des réseaux de Petri de haut niveau et des spécifications algébriques
+</B></FONT></DIV><P><BR>
+</P><P><B>Encadrement :</B> Christine Choppy - Laure Petrucci</P><P><B>Lieu :</B>
+	LIPN, CNRS UMR 7030<BR>
+	Université Paris13<BR>
+	99 avenue Jean-Baptiste Clément<BR>
+	93430 VILLETANEUSE</P><P><BR>
+</P><P><B>Contacts :</B> <TT>{Christine.Choppy,
+	Laure.Petrucci}@lipn.univ-paris13.fr</TT><BR>
+<TT>http://www-lipn.lipn.univ-paris13.fr/~choppy/ , ~petrucci</TT>
+</P><P><BR>
+</P><P>Le développement de systèmes informatiques complexes nécessite une
+conception préalable qui puisse garantir au mieux que le système que
+l'on construit satisfera les contraintes nécessaires à son bon
+fonctionnement. Pour ce faire, on commence par spécifier formellement
+le système.</P><P>Les spécifications formelles restent difficile à écrire car les
+systèmes à développer actuellement sont d'une assez grande
+complexité. Il est donc nécessaire de proposer des méthodes facilitant
+la démarche d'analyse et de spécification des systèmes complexes.</P><P>Dans [<A HREF="#ChoppyReggioJLAP05"><CITE>CR05</CITE></A>] une méthode est proposée et illustrée par 
+le développement de spécifications écrites dans un langage de spécification 
+algébrique.
+Cette
+méthode est basée sur les caractéristiques sémantiques souhaitées pour
+guider vers des spécifications pertinentes. 
+Une distinction est effectuée entre systèmes dynamiques simples, 
+structurés, et types de données.
+Toutefois, cette méthode
+est a priori assez générale pour pouvoir être utilisée avec d'autres
+types de spécification. Les réseaux de Petri sont un formalisme
+utilisé pour différents types d'applications réactives, telles que les
+protocoles de communication, les téléphones portables,
+les ateliers flexibles ... Les
+paradigmes des réseaux de Petri sont très différents de ceux des
+spécifications algébriques, mais une méthode de modélisation s'avère
+également nécessaire. Nous nous intéressons ici aux réseaux de Petri
+colorés qui sont des réseaux de Petri "de haut niveau", combinant une
+structure de contrôle de type réseau de Petri et partie données
+exprimée dans un langage de programmation ou sous forme de types
+abstraits algébriques.</P><P>Une première approche [<A HREF="#ChoppyPetrucciCPN04"><CITE>CP04</CITE></A>] montre comment utiliser
+les principes méthodologiques pour un système de pilotage de 
+train électrique [<A HREF="#GB-LP-JSTTT00"><CITE>BP01</CITE></A>].
+L'objectif est donc de poursuivre ce travail et de l'étendre
+à travers les enseignements tirés d'une étude de cas plus importante,
+portant sur la spécification de systèmes avioniques ou de systèmes
+pour les téléphones portables.
+On devra notamment étudier comment effectuer une structuration modulaire
+des réseaux pour la spécification d'un système dynamique complexe.</P><P>On cherchera à concevoir une méthode pour aider à la spécification de
+systèmes complexes à l'aide de réseaux de Petri colorés. Ceci
+permettra de fournir des guides précis en vue d'obtenir une
+spécification claire, bien structurée et flexible.</P><P>Cette méthode doit fournir des guides qui permettent : 
+d'attaquer des systèmes complexes et de les décomposer en sous-systèmes, 
+de spécifier les sous-systèmes en réseaux de Petri colorés (places,
+transitions étiquetées par des termes et éventuellement munies de
+gardes, données manipulées, ...)
+de spécifier la composition des sous-systèmes pour obtenir le système global
+de spécifier les propriétés souhaitées pour le système global et pour les 
+sous-systèmes.</P><P>Ces guides doivent également aider à une " bonne " utilisation du
+formalisme pour produire des spécifications dont les propriétés
+induites par la sémantique correspondent aux classes souhaitées. Des
+notations graphiques pour la composition seront proposées. Tous ces
+éléments peuvent aussi conduire à des guides d'utilisation des outils
+d'édition et d'analyse existants.</P><!--TOC section Références-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Références</H2><!--SEC END --><DL CLASS="thebibliography"><DT CLASS="dt-thebibliography">
+<A NAME="GB-LP-JSTTT00"><FONT COLOR=purple>[BP01]</FONT></A></DT><DD CLASS="dd-thebibliography">
+G. Berthelot and L. Petrucci.
+Specification and validation of a concurrent system: An educational
+project.
+<EM>Journal of Software Tools for Technology Transfer</EM>,
+3(4):372&#X2013;381, 2001.</DD><DT CLASS="dt-thebibliography"><A NAME="ChoppyPetrucciCPN04"><FONT COLOR=purple>[CP04]</FONT></A></DT><DD CLASS="dd-thebibliography">
+Christine Choppy and Laure Petrucci.
+Towards a Methodology for Modelling with Petri Nets.
+In K. Jensen, editor, <EM>Fifth Workshop and Tutorial on Practical
+Use of Coloured Petri Nets and the CPN Tools</EM>, pages 39&#X2013;56, Aarhus, Denmark,
+October 2004. DAIMI PB - 570, ISSN 0105-8517.</DD><DT CLASS="dt-thebibliography"><A NAME="ChoppyReggioJLAP05"><FONT COLOR=purple>[CR05]</FONT></A></DT><DD CLASS="dd-thebibliography">
+Christine Choppy and Gianna Reggio.
+A Formally Grounded Software Specification Method.
+<EM>Journal of Logic and Algebraic Programming, Elsevier</EM>, 2005.</DD></DL><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>Ce document a été traduit de L<sup>A</sup>T<sub>E</sub>X par </EM><A HREF="http://hevea.inria.fr"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A></BLOCKQUOTE></BODY>
+</HTML>

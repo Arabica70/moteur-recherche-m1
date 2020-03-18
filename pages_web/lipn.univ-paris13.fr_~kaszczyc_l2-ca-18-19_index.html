@@ -1,0 +1,90 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="../resources/css/styles.css" rel="stylesheet" /><title>Antoine Kaszczyc</title></head><h1>L2 Info : Conception d'algorithmes 2018-19</h1><ul><li><a href="../index.html" >index site</a></li></ul><section><h1><span class="unicode" >&#x270d;</span>Solution générale d'équation de récurrence linéaire</h1><div><pre>t(0) = 0
+t(1) = 1
+t(n) = 5t(n-1) - 6t(n-2)</pre><p>On peut écrire la troisième équation sous la forme d'une matrice :</p><pre>|t(n)  |  =  |5 -6| * |t(n-1)|
+|t(n-1)|     |1  0|   |t(n-2)|   
+
+M  =  |5 -6|
+      |1  0|</pre><p>Notez que la matrice a deux lignes, et l'équation deux termes récurrents.</p><p>On remarque que :</p><pre>|t(n+1)|  =  |5 -6| * |t(n)  |
+|t(n)  |     |1  0|   |t(n-1)|
+
+          =  |5 -6| * |5 -6| * |t(n-1)|
+             |1  0|   |1  0|   |t(n-2)|</pre><p>En fait on a écrit la récurrence sous une forme qui ressemble à une suite géométrique. On en conclut que :</p><pre>|t(n)  |  =   |5 -6| ^ (n-1)  * |t(1)|
+|t(n-1)|      |1  0|            |t(0)|</pre><p>Le problème est que <span class="code" >M ^ (n-1)</span> est embêtant à calculer.<br/>On va chercher à diagonaliser M, c'est à dire trouver une matrice P, une matrice Pi, et une matrice D telles que :</p><pre>P * Pi  =  Id
+Pi * P  =  Id
+M  =  P * D * Pi</pre><p>La matrice D doit être diagonale, c'est à dire de la forme :</p><pre>|a 0|
+|0 b|</pre><p>Une matrice diagonale facilite certains calculs.</p><p>On a :</p><pre>M ^ n  =  (P * D * Pi) ^ n
+
+(P * D * Pi) ^ 2  =  P * D * Pi * P * D * Pi
+                  =  P * D * Id * D * Pi
+                  =  P * (D ^ 2) * Pi
+
+M ^ n  =  P * (D ^ n) * Pi 
+
+D ^ n  =  |a^n  0  |
+          |0    b^n|   
+
+|t(n)  |  =  P  *  |a^(n-1) 0      |  *  Pi  *  |t(1)|
+|t(n-1)|           |0       b^(n-1)|            |t(0)|</pre><p>Pour trouver D on doit trouver les valeurs propres de M. Pour trouver P on doit trouver les vecteurs propres de M.</p><p>r est une valeur propre de M,<br/>et V est un vecteur propre de M associé à r,<br/>si M * V  =  r * V.</p><p>Pour trouver les valeurs propre on utilise le polynôme caractéristique de M :</p><pre>PM(r)  =  det(M - r * Id)
+
+       =  det|5-r -6|
+             |1   -r|   
+
+       =  r^2 - 5r + 6</pre><p>Les racines de PM(r) sont les valeurs propres.</p><pre>delta  =  (-5)^2 - 4*6  =  1
+
+       -(-5) + rac(delta)
+r1  =  ------------------  =  3
+             2 
+
+r2  =  2</pre><p>On trouve deux racines de multiplicité 1. C'est ce qu'il faut, M est de côté 2.</p><p>On trouve les vecteurs propres à partir de M * V = r * V :</p><pre>M * V  =  3 * V
+
+|5 -6| * |x1|  =  3 * |x1|
+|1  0| * |x2|         |x2|
+
+5*x1 - 6*x2  =  3*x1
+  x1         =  3*x2</pre><p>On a trouvé que x1 = 3*x2. On choisit un vecteur V1 qui respecte cette équation :</p><pre>V1  =  |3|
+       |1|</pre><p>On fait de même pour la racine r2 et on trouve V2 :</p><pre>V2  =  |2|
+       |1|</pre><p>À présent on a D et P grâce aux valeurs et vecteurs propres :</p><pre>D  =  |r1 0 |  =  |3 0|
+      |0  r2|     |0 2|
+
+P  =  |V1 V2|  =  |3 2|
+                  |1 1|  
+
+Pi  =  inverse de P  =  |1 -2|
+                        |-1 3|</pre><p>On reprend notre définition :</p><pre>|t(n)  |  =  P  *  |a^(n-1) 0      |  *  Pi  *  |t(1)|
+|t(n-1)|           |0       b^(n-1)|            |t(0)|
+
+          =  |3 0|  *  |3^(n-1) 0      |  *  |1 -2|  *  |1|
+             |0 2|     |0       2^(n-1)|     |-1 3|     |0|
+
+          =  |3^n     -(2^n)    |
+             |3^(n-1) -(2^(n-1))|</pre><p>On a finalement : <span class="code" >t(n) = 3^n - 2^n</span></p></div></section><section><h1><span class="unicode" >&#x270d;</span>TD1, exercice 5</h1><div><section><h2><span class="unicode" >&#x270d;</span>a)</h2><div><pre>t(0) = 0
+t(n) = 3t(n-1) + 5*2^n + 6n + 7</pre><p>Nous sommes en présence d'un cas "non homogène" :</p><pre>t(n) - 3t(n-1) = 2^n*5 + 1^n*6n + 1^n*7</pre><pre>t(n) - 3t(n-1) = 2^n*5 + 1^n*(6n + 7)</pre><p>Le polynôme caractéristique est :</p><pre>(x - 3) (x - 2) (x - 1)^2</pre><p>L'équation caractéristique est :</p><pre>(x - 3) (x - 2) (x - 1)^2 = 0</pre><p>La solution de l'équation de récurrence est :</p><pre>t(n) = a*3^n + b*2^n + c*1^n + d*n*1^n</pre><p>Simplifions :</p><pre>t(n) = a*3^n + b*2^n + c + d*n</pre><p>Cet exercice ne demande pas de trouver des valeurs pour a, b, c et d.</p></div></section><section><h2><span class="unicode" >&#x270d;</span>b</h2><div><pre>t(0) = 0
+t(n) = 2t(n-1) + n^2 * 2n + 2</pre><pre>t(n) - 2t(n-1) = n^2 * 2^n + 2n + 2</pre><pre>t(n) - 2t(n-1) = 2^n * n^2 + 1^n * 2n + 1^n * 2</pre><pre>t(n) - 2t(n-1) = 2^n * n^2 + 1^n * (2n + 2)</pre><pre>(x - 2) (x - 2)^3 (x - 1)^2</pre><pre>(x - 2)^4 (x - 1)^2</pre><pre>t(n) = a*2^n + b*n*2^n + c*n^(2)*2^n + d*n^(3)*2^n + e*1^n * f*n*1^n</pre><pre>t(n) = a*2^n + b*n*2^n + c*n^(2)*2^n + d*n^(3)*2^n + e * f*n</pre></div></section></div></section><section><h1><span class="unicode" >&#x270d;</span>TD1, exercice 6</h1><div><section><h2><span class="unicode" >&#x270d;</span>a)</h2><div><p>Il y a une comparaison, une addition et deux soustractions :</p><pre>t(0) = t(1) = 1
+t(n) = 1 + 1 + 2 + t(n-1) + t(n-2)</pre><pre>t(n) - t(n-1) - t(n-2) = 4</pre><pre>(x^2 - x - 1) (x - 1)</pre><p>Il faut trouver les racines pour la partie homogène (x^2 - x - 1 = 0).</p><pre>delta = b^2 - 4ac = 5
+x_1 = (-b + rac(delta) / 2a) = (1 + rac(5) / 2)
+x_2 = (1 - rac(5) / 2)</pre><p>Le polynôme caractéristique est :</p><pre>(x - (1 + rac(5) / 2)) (x - (1 - rac(5) / 2)) (x - 1)</pre><p>La solution de l'équation de récurrence est :</p><pre>t(n) = a*(1 + rac(5) / 2)^n + b*(1 - rac(5) / 2)^n + c*1^n</pre><p>pour trouver a, b et c nous utilisons un système d'équations :</p><pre>a                   + b                   + c = 1
+a*(1 + rac(5) / 2)  + b*(1 - rac(5) / 2)  + c = 1
+a*(1 + rac(5) /2)^2 + b*(1 - rac(5) /2)^2 + c = 6</pre><p>Vous trouverez les valeurs :</p><pre>a =  rac(5) * (1 + rac(5)) / 2
+b = -rac(5) * (1 - rac(5)) / 2
+c = -4</pre><p>Remplaçons a, b et c par leur valeur :</p><pre>t(n) = (rac(5) * (1 + rac(5)) / 2) * (1 + rac(5) / 2)^n
+       + (-rac(5) * (1 - rac(5)) / 2) * (1 - rac(5) /2)^n
+       - 4</pre><p>Simplifions :</p><pre>t(n) = rac(5) * ( ((1 + rac(5)) / 2)^(n+1) - ((1 - rac(5)) / 2)^(n+1) ) - 4</pre></div></section></div></section><section><h1><span class="unicode" >&#x270d;</span>TD2, exercice 5</h1><div><p>Il faut calculer :</p><pre>(a_0) + (a_1 * x) + (a_2 * x^2) + ... (a_m * x^m)</pre><p>Par clarté on a utilisé m = n - 1.</p><p>Voici un algo en Thêta(n^2). Il faut vraiment le vouloir</p><pre>result = 0
+pour tout i dans [0, m]
+    xp = 1
+    pour tout p dans [0, i[
+        xp = xp * x
+    result = result + (a_i * xp)</pre><p>Prouvez Thêta(n^2).</p><p>Il ne vous aura pas échappé qu'on calcule plusieurs fois les mêmes puissances de x.</p><p>Voici la méthode de Horner. Elle consiste à réécrire le polynôme ainsi :</p><pre>a_0 + x * (a_1 + x * (a_2 + x * (... (a_m-1 + x * a_m))))</pre><p>Vérifiez qu'elle est bien équivalent au polynôme initial.</p><p>Voici l'algo associé :</p><pre>horner (i) =
+    si i < m
+    alors donner (a_i + x * horner (i + 1))
+    sinon donner a_m 
+result = horner (0)</pre><p>Prouvez Thêta(n).</p><p>Voici une version avec un meilleur espace :</p><pre>horner (i, acc) =
+    si i > 0
+    alors donner horder (i - 1, x * (a_i + acc))
+    sinon donner a_0 + acc
+result = horner (n, 0)</pre></div></section><section><h1><span class="unicode" >&#x270d;</span>TD2, exercice 6</h1><div><p>On déplie l'équation initiale :</p><pre>T(n) = a * T(n/b) + f(n)
+T(n) = a * ( a * T(n/b/b) + f(n/b) ) + f(n)</pre><p>On regroupe des choses qui se ressemblent, puis on déplie encore, puis on regroupe encore :</p><pre>T(n) = a^2 * T(n/b^2) + a * f(n/b) + f(n)
+T(n) = a^2 * (a * T(n/b^2/b) + f(n/b^2)) + a * f(n/b) + f(n)
+T(n) = a^3 * T(n/b^3) + a^2 * f(n/b^2) + a * f(n/b) + f(n)</pre><p>On en déduit la règle :</p><pre>T(b^i) = a^i * T(1) + sum{k dans [0,i-1]}( a^k * f(n/b^k) )</pre><p>Remarquez que :</p><pre>n = b^i
+i = log_b(n)
+a^i = a^(log_b(n)) 
+a^i = n^(log_b(a))</pre><p>On a donc bien :</p><pre>T(n) = Thêta(n^(log_b(a))) + sum{k dans [0,log_b(n)-1]}( a^k * f(n/b^k) )</pre></div></section><section><h1><span class="unicode" >&#x270d;</span>TD 5, exercice 3</h1><div><p>Ici on va conserver la structure d'arbre, on ne va pas faire de matrice. La question initiale porte sur l'arbre complet. Une sous-question porte donc sur un sous-arbre. D'avance on devine qu'on va lier les sous-problèmes entre eux par la relation père-fils. Tout ceci est raisonnable car la taille de l'arbre qu'on va créer est la même que la taille de l'arbre donné en entrée.</p><p>Dans la solution, chaque noeud est soit présent, soit absent, à condition de respecter la contrainte de non-adjacence. </p><p>Pour chaque sous-problème, c'est à dire pour chaque sous-arbre S, soit r la racine de S, il faut savoir si r fait partie de la solution. Comme cette question est un peu complexe, on va considérer les deux cas en même temps.</p><p>Soit S un sous-arbre. Soit r la racine de S. Soit P(r) le plus grand ensemble sans adjacence qui contient r. Soit A(r) le plus grand ensemble sans adjacence qui ne contient pas r. Soit Res(r) le plus grand ensemble sans adjacence de S, défini comme le maximum entre P(r) et A(r). La solution à l'énoncé est donc R(x), si x est la racine de l'arbre complet.</p><p>On créé donc un arbre de même structure que celui de l'énoncé. Mais dans chaque noeud n on stocke P(n) et A(n), au lieu de la valeur initiale de n.</p><p>Il faut maintenant définir chaque solution en fonction de sous-solutions. Dans notre structure d'arbre, la solution d'un noeud sera définie en fonction des solutions des fils. Les feuilles seront des cas de base.</p><p>Ici cherchez à définir P(r) et A(r) en fonction des fils.</p><p>Quand r fait partie de P(r), cela veut dire que les fils n'en font pas partie (règle de non-adjacence). On en déduit :</p><pre>P(r) = {r} union unions{q fils de r}( A(q) )</pre><p>Réflexion similaire pour A(r) :</p><pre>A(r) = unions{q fils de r}( maximum(P(q), A(q)) )</pre><p>Bien sûr il faut supposer que les valeurs des noeuds sont uniques sinon ça complique la question.</p><p>Pour les cas de bases, c'est facile. Si r est une feuille, alors P(r) = 1 et A(r) = 0.</p><p>On remplit l'arbre des feuilles vers la racine. C'est une approche bottom-up, puisque up est la question de l'énoncé.</p><p>Concernant la complexité, on note qu'on répète le calcul de A et P pour tous les noeuds. On a donc n répétitions. Chaque étape prend un temps égal à trois fois le nombre des fils de chaque noeud. Ce nombre est petit. En fait même si le nombre est grand, c'est pas grave parce que cela réduit le nombre de répétitions à faire du même montant.</p><p>Concernant la complexité en espace, ici on est en n carré, parce qu'on stocke les sous-ensembles. On peut définir une solution similaire dans laquelle on ne stocke pas le sus-ensemble résultat, mais uniquement sa taille. Ensuite, on construit la solution en parcourant l'arbre.</p></div></section><section><h1><span class="unicode" >&#x270d;</span>Corrections avant l'examen</h1><div><li><a href="../resources/l2-ca-18-19/partiel-ex3.pdf" >Partiel mi-semestre, exercice 3, fichier PDF</a></li><li><a href="../resources/l2-ca-18-19/partiel-ex5.pdf" >Partiel mi-semestre, exercice 5, fichier PDF</a></li><li><a href="../resources/l2-ca-18-19/td9-ex4.pdf" >TD 9, exercice 4</a></li></div></section><footer><p>Site réalisé statiquement en Scala, HTML et CSS.<br/>Faut pas se casser la tête pour afficher du texte...</p></footer></html>

@@ -1,0 +1,983 @@
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Étienne André</title>
+		
+		<meta charset="utf-8" />
+		
+		<meta name="author" content="Étienne André" />
+		<meta name="description" content="Étienne André" />
+		<meta name="keywords" content="Étienne André, Paris 13, LIPN, model checking, Parametric Timed Automata, Parameter synthesis, Timed systems" />
+		<meta name="robots" content="index,follow" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="etienne.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.php" class="logo"><strong>Étienne André</strong> full professor</a>
+									<ul class="icons">
+										<li><a href="http://dblp.uni-trier.de/pers/a/Andr=eacute=:=Eacute=tienne" class="icon fa-th-list" title="DBLP"><span class="label">DBLP</span></a></li>
+										<li><a href="https://github.com/etienneandre/" class="icon fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+										<li><a href="https://scholar.google.com.sg/citations?user=9eslfRkAAAAJ" class="icon fa-google" title="Google Scholar"><span class="label">Google Scholar</span></a></li>
+										<li><a href="https://orcid.org/0000-0001-8473-9555" class="icon fa-id-badge" title="Orcid"><span class="label">Orcid</span></a></li>
+										<li><a href="https://www.researchgate.net/profile/Etienne_Andre" class="icon fa-users" title="ResearchGate"><span class="label">ResearchGate</span></a></li>
+										<li><a href="https://twitter.com/etienne_andre" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+										<li><a hreflang="fr" lang="fr" xml:lang="fr" href="index_fr.php">🇫🇷</a></li>
+									</ul>
+								</header>
+
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Étienne André</h1>
+											<p>Professor @ LORIA</p>
+										</header>
+										<p>I am full professor within <a href="https://www.univ-lorraine.fr">Université de Lorraine</a>.
+	</p><p>I am an associate member of <a href="https://group-mmm.org/~ichiro/">Ichiro Hasuo</a>’s <a href="https://group-mmm.org/eratommsd/">ERATO MMSD project</a> (Tokyo, Japan).
+	</p>
+
+									</div>
+									<span class="image object">
+										<img src="images/etienne_andre_torino.jpg" alt="Étienne André" />
+									</span>
+								</section>
+								
+								<section>
+									<div class="content">
+										<p>I am interested in specifying and formally verifying concurrent systems. My research focuses especially on verification of timed systems (or real-time systems) under uncertainty, i.e., with timing parameters, and notably on parametric timed model-checking.
+	I am also interested in monitoring cyber-physical systems, and in detecting side-channel attacks using quantitative formal methods.</p>
+										
+										<p>Keywords: model checking, Verification, distributed and concurrent systems, Timed systems, Parametric Timed Automata, Parameter synthesis.</p>
+
+									</div>
+								</section>
+
+								
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Latest works</h2>
+									</header>
+									<div class="row">
+										<div class="6u 12u$(small)">
+											<a href="publications.php" class="image fit"><img src="https://lipn.univ-paris13.fr/~andre/images/rawpixel-649908-unsplash.jpg" alt="Language Preservation Problems in Parametric Timed Automata" /></a>
+											<h3>Latest publication</h3>
+											<p><span class="auteur"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a></span>, <span class="auteur"><a href="http://pagesperso.ls2n.fr/~lime-d/">Didier Lime</a></span> and <span class="auteur"><a href="http://people.irisa.fr/Nicolas.Markey/">Nicolas Markey</a></span>. <span class="titre"><a href="https://lmcs.episciences.org/6042/pdf">Language Preservation Problems in Parametric Timed Automata</a></span>. <span class="journal">Logical methods in computer science</span> 16(1), January 2020. <span class="langue">(English)</span> <span style="font-size:smaller">[<a href="https://lmcs.episciences.org/6042/pdf">PDF</a>]</span></p>
+											<ul class="alt">
+												<li><a href="https://dblp.uni-trier.de/pers/hd/a/Andr=eacute=:=Eacute=tienne.html">My DBLP page</a></li>
+												<li><a href="https://scholar.google.com/citations?user=9eslfRkAAAAJ">My Google Scholar profile</a></li>
+												<li><a href="https://orcid.org/0000-0001-8473-9555" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0001-8473-9555</a></li>
+											</ul>
+
+											<ul class="actions">
+												<li><a href="publications.php" class="button">See all publications</a></li>
+											</ul>
+										</div>
+										
+										<div class="6u 12u$(small)">
+											<a href="talks.php" class="image fit"><img src="https://lipn.univ-paris13.fr/~andre/documents/slides-2019-10-29-ATVA.png" alt="Parametric Timed Model Checking for Guaranteeing Timed Opacity" /></a>
+											<h3>Latest talk</h3>
+											<p>29th October 2019: <span class="titre"><a href="https://lipn.univ-paris13.fr/~andre/documents/slides-2019-10-29-ATVA.pdf">Parametric Timed Model Checking for Guaranteeing Timed Opacity</a></span> (<span class="conference"><abbr title="17th International Symposium on Automated Technology for Verification and Analysis, Taipei, Taiwan, October 2019"><a href="http://atva2019.iis.sinica.edu.tw/">ATVA’19</a></abbr></span>, <a title="Taiwan">🇹🇼</a> Taipei)</p>
+											<ul class="actions">
+												<li><a href="talks.php" class="button">See all talks</a></li>
+											</ul>
+										</div>
+										
+									</div>	
+								</section>
+
+							<!-- Section: Projects -->
+								<section>
+									<!-- Elements -->
+									<header class="major">
+										<h2 id="projects">Research projects</h2>
+									</header>
+									<h3>Project PI</h3>
+									
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Year</th>
+													<th>Call</th>
+													<th>Project name</th>
+													<th>Role</th>
+													<th>Permanent staff</th>
+													<th>Budget</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>2020–2023<br><em>ongoing</em></td>
+													<td><a href="http://www.agence-nationale-recherche.fr"><abbr title="Agence nationale de la recherche">ANR</abbr></a>-<a href="https://www.nrf.gov.sg/"><abbr title="National Research Foundation">NRF</abbr></a>
+														<br><a title="France">🇫🇷</a> <a title="Singapore">🇸🇬</a>													</td>
+													<td><strong><a href=""><abbr title="Provable Mitigation of Side Channel through Parametric Verification">ProMiS</abbr></a></strong>
+														<br><span style="font-size:smaller">Provable Mitigation of Side Channel through Parametric Verification</span></td>
+													<td>PI</td>
+													<td>5</td>
+													<td>276k€ (*2)</td>
+												</tr>
+												<tr>
+													<td>2014–2019</td>
+													<td><a href="http://www.agence-nationale-recherche.fr"><abbr title="Agence nationale de la recherche">ANR</abbr></a>
+														<br><a title="France">🇫🇷</a>													</td>
+													<td><strong><a href="https://lipn.univ-paris13.fr/PACS/"><abbr title="Parametric analyses of concurrent systems">PACS</abbr></a></strong>
+														<br><span style="font-size:smaller">Parametric analyses of concurrent systems</span></td>
+													<td>PI</td>
+													<td>8</td>
+													<td>450k€</td>
+												</tr>
+
+												<tr>
+													<td>2018</td>
+													<td><a href="https://dim-rfsi.fr/"><abbr title="Domaine d’Intérêt Majeur - Réseau Francilien en Sciences Informatiques">DIM RFSI</abbr></a>
+														<br><a title="France">🇫🇷</a>													</td>
+													<td><strong><abbr title="Analyse de systèmes temps-réel modélisés par Time4sys en présence d’incertitude">ASTREI</abbr></strong>
+														<br><span style="font-size:smaller">Analyse de systèmes temps-réel modélisés par Time4sys en présence d’incertitude</span></td>
+													<td>PI</td>
+													<td>1</td>
+													<td>10k€</td>
+												</tr>
+
+												<tr>
+													<td>2014–2015</td>
+													<td><a href="http://www.cnrs.fr/"><abbr title="Centre national de la recherche scientifique">CNRS</abbr></a>–<a href="https://www.pan.pl/"><abbr title="Polska Akademia Nauk">PAN</abbr></a>
+														<br><a title="France">🇫🇷</a> <a title="Poland">🇵🇱</a></td>
+													<td><strong><abbr title="Behavior preserving parametric bounded model checking">BehaPPi-BMC</abbr></strong>
+														<br><span style="font-size:smaller">Behavior preserving parametric bounded model checking</span></td>
+													<td>co-PI</td>
+													<td>4</td>
+													<td>8k€</td>
+												</tr>
+												<tr>
+													<td>2014</td>
+													<td><abbr title="Bonus qualité recherche">BQR</abbr>
+														<br><a title="France">🇫🇷</a></td>
+													<td><strong><abbr title="Synthèse de paramètres temporels distribuée et multi-cœurs">SynPaTiC</abbr></strong>
+														<br><span style="font-size:smaller">Synthèse de paramètres temporels distribuée et multi-cœurs</span></td>
+													<td>PI</td>
+													<td>2</td>
+													<td>15k€</td>
+												</tr>
+												<tr>
+													<td>2013</td>
+													<td>Actions émergentes <abbr title="Groupement de Recherche Génie de la Programmation et du Logiciel"><a href="http://gdr-gpl.cnrs.fr">GDR GPL</a></abbr>
+														<br><a title="France">🇫🇷</a></td>
+													<td><strong><abbr title="Intégration d’outils à la plate-forme CosyVerif"><a href="http://gdr-gpl.cnrs.fr/Actions/Emergentes/IOP">IOP</a></abbr></strong>
+														<br><span style="font-size:smaller">Intégration d’outils à la plate-forme CosyVerif</span></td>
+													<td>PI</td>
+													<td>1</td>
+													<td>2k€</td>
+												</tr>
+												<tr>
+													<td>2012–2014</td>
+													<td><a href="http://www.institutfrancais.sg/category/singapore/merlion-singapore/?lang=en"><abbr title="Partenariat Hubert Curien">PHC</abbr> Merlion</a>
+														<br><a title="France">🇫🇷</a> <a title="Singapore">🇸🇬</a></td>
+													<td><strong><abbr title="pat-Based specification, Refinement And Verification Of uml State machines">BRAVOS</abbr></strong>
+														<br><span style="font-size:smaller">Software Verification from Design to Implementation</span></td>
+													<td>co-PI</td>
+													<td>6</td>
+													<td>30k€</td>
+												</tr>
+
+											</tbody>
+																					</table>
+									</div>
+									
+									
+									<h3>Project participant</h3>
+									
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Year</th>
+													<th>Call</th>
+													<th>Project name</th>
+													<th>PI</th>
+													<th>Permanent staff</th>
+													<th>Budget</th>
+												</tr>
+											</thead>
+											
+											<tbody>
+												<tr>
+													<td>2018–2019</td>
+													<td><a href="http://www.jst.go.jp/erato/en/index.html">ERATO</a>
+														<br><a title="Japan">🇯🇵</a></td>
+													<td><a href="https://group-mmm.org/eratommsd/"><abbr title="Metamathematics for Systems Design">MMSD</abbr></a>
+														<br><span style="font-size:smaller">Metamathematics for Systems Design</span></td>
+													<td><span class="auteur"><a href="http://group-mmm.org/~ichiro/">Ichiro Hasuo (蓮尾 一郎)</a></span></td>
+													<td>> 20</td>
+													<td>10000k€</td>
+												</tr>
+												<tr>
+													<td>2019–2020<br><em>ongoing</em></td>
+													<td><abbr title="Projet International de Coopération Scientifique">PICS</abbr>
+														<br><a title="France">🇫🇷</a> <a title="Poland">🇵🇱</a></td>
+													<td><abbr title="verification of PARametric TIme constrained strategic abilitiES for agents acting under incomplete information">PARTIES</abbr>
+														<br><span style="font-size:smaller">verification of PARametric TIme constrained strategic abilitiES for agents acting under incomplete information</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span></td>
+													<td>7</td>
+													<td>8k€</td>
+												</tr>
+												<tr>
+													<td>2018–2019<br><em>ongoing</em></td>
+													<td><abbr title="Partenariat Hubert Curien">PHC</abbr> Van Gogh
+														<br><a title="France">🇫🇷</a> <a title="Netherlands">🇳🇱</a></td>
+													<td><abbr title="Parallel algorithms for model-checking and parameter synthesis">PAMPAS</abbr>
+														<br><span style="font-size:smaller">Parallel algorithms for model-checking and parameter synthesis</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span></td>
+													<td>11</td>
+													<td>7k€</td>
+												</tr>
+												<tr>
+													<td>2018</td>
+													<td><abbr title="Bonus qualité recherche">BQR</abbr>
+														<br><a title="France">🇫🇷</a></td>
+													<td><abbr title="Arbres attaque-défense et Modèles de Jeux pour l’Analyse de la Sécurité">AMoJAS</abbr>
+														<br><span style="font-size:smaller">Arbres attaque-défense et Modèles de Jeux pour l’Analyse de la Sécurité</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span></td>
+													<td>7</td>
+													<td>6k€</td>
+												</tr>
+												<tr>
+													<td>2015</td>
+													<td><a href="http://www.cnrs.fr/ins2i/spip.php?article1109"><abbr title="Projets Exploratoires Premier Soutien">PEPS</abbr> <abbr title="Jeune chercheur, jeune chercheuse">JCJC</abbr></a>
+														<br><a title="France">🇫🇷</a></td>
+													<td><abbr title="Parallel SYnthesis for COncurrent Systems">PSyCoS</abbr>
+														<br><span style="font-size:smaller">Parallel SYnthesis for COncurrent Systems</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~coti/">Camille Coti</a></span></td>
+													<td>2</td>
+													<td>10k€</td>
+												</tr>
+												
+												<tr>
+													<td>2013–2014</td>
+													<td><a href="http://www.campusfrance.org/fr/Stic-asie">STIC Asie</a>
+														<br><a title="France">🇫🇷</a> <a title="Singapore">🇸🇬</a> <a title="Việt Nam">🇻🇳</a></td>
+													<td><strong><abbr title="Compositional analysis of timed systems"><a href="http://lipn.univ-paris13.fr/~andre/cats/">CATS</a></abbr></strong>
+														<br><span style="font-size:smaller">Compositional analysis of timed systems</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span></td>
+													<td>6</td>
+													<td>34k€</td>
+												</tr>
+												<tr>
+													<td>2013</td>
+													<td><a href="http://www.institutfrancais.sg/category/singapore/merlion-singapore/?lang=en"><abbr title="Partenariat Hubert Curien">PHC</abbr> Merlion</a>
+														<br><a title="France">🇫🇷</a> <a title="Singapore">🇸🇬</a></td>
+													<td><strong><abbr title="French Singaporean Workshop on Formal Methods and Applications"><a href="http://www.comp.nus.edu.sg/~pat/fsfma2013/">FSFMA</a></abbr></strong>
+														<br><span style="font-size:smaller">French Singaporean Workshop on Formal Methods and Applications</span></td>
+													<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~choppy/">Christine Choppy</a></span> + <span class="auteur"><a href="http://sunjun.site/">Sun Jun</a></span></td>
+													<td>9</td>
+													<td>8k</td>
+												</tr>
+																								<tr>
+													<td>2010</td>
+													<td><a href="http://www.campusfrance.org/fr/galilee"><abbr title="Partenariat Hubert Curien">PHC</abbr> Galilée</a>
+														<br><a title="France">🇫🇷</a> <a title="Italy">🇮🇹</a>													<td>Synthèse et contraintes</td>
+													<td><span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span></td>
+													<td>3</td>
+													<td>12k€</td>
+												</tr>
+												<tr>
+													<td>2007–2010</td>
+													<td><a href="http://www.agence-nationale-recherche.fr"><abbr title="Agence nationale de la recherche">ANR</abbr></a>
+														<br><a title="France">🇫🇷</a>													</td>
+													<td><a href="http://www.lsv.fr/Projects/anr-valmem/"><abbr title="Validation fonctionnelle et temporelle des mémoires embarquées, décrites au niveau transistor, par des méthodes formelles">VALMEM</abbr></a>
+														<br><span style="font-size:smaller">Validation fonctionnelle et temporelle des mémoires embarquées, décrites au niveau transistor, par des méthodes formelles</span></td>
+													<td><span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span></td>
+													<td>7</td>
+													<td>572k€</td>
+												</tr>
+												<tr>
+													<td>2007–2009</td>
+													<td><a href="http://farman.ens-paris-saclay.fr/">Institut Farman</a>
+														<br><a title="France">🇫🇷</a>													<td><abbr title="Simulation et model-checking paramétré">SIMOP</abbr>
+														<br><span style="font-size:smaller">Simulation et model-checking paramétré</span></td>
+													<td><span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span></td>
+													<td>6</td>
+													<td>20k€</td>
+												</tr>
+																						</table>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 id="PC">Program committees and evaluations</h2>
+									</header>
+									
+									<div class="row">
+										<div class="6u 12u$(small)">
+											
+											<h3>Program committees</h3>
+											
+											<dl>
+												<dt>2021</dt>
+												<dd>
+													<ul class="alt">
+														<li><abbr title="24th International Conference on Fundamental Approaches to Software Engineering, Luxembourg-Ville, Luxembourg, March 2021">FASE 2021</abbr></li>
+													</ul>
+												</dd>
+
+												<dt>2020</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="https://sei.ecnu.edu.cn/tase2020/"><abbr title="14th International Symposium on Theoretical Aspects of Software Engineering, Hangzhou, China, July 2020">TASE 2020</abbr></a></li>
+														
+														<li><a href="https://formal-analysis.com/iceccs/2020/"><abbr title="25th International Conference on Engineering of Complex Computer Systems, Singapore, October 2020">ICECCS 2020</abbr></a></li>
+
+														<li><a href="https://formal-analysis.com/icfem/2020/"><abbr title="22nd International Conference on Formal Engineering Methods, Singapore, November 2019">ICFEM 2020</abbr></a></li>
+														
+													</ul>
+												</dd>
+
+												<dt>2019</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="https://lipn.univ-paris13.fr/formats2019/"><abbr title="17th International Conference on Formal Modeling and Analysis of Timed Systems, Amsterdam, The Netherlands, 26−31 August 2019">FORMATS 2019</abbr></a> (PC chair)</li>
+														
+														<li><a href="http://prdc.dependability.org/PRDC2019/"><abbr title="24th IEEE Pacific Rim International Symposium on Dependable Computing, Kyoto, Japan, December 2019">PRDC 2019</abbr></a></li>
+														
+														<li><a href="http://www.formal-analysis.com/iceccs/2019/"><abbr title="24th International Conference on Engineering of Complex Computer Systems, Hong Kong, November 2019">ICECCS 2019</abbr></a></li>
+														
+														<li><a href="http://csse.szu.edu.cn/icfem2019/"><abbr title=">21st International Conference on Formal Engineering Methods, Shenzhen, China, November 2019">ICFEM 2019</abbr></a></li>
+														
+														<li><a href="http://www.ftscs.org/"><abbr title="7th International Workshop on Formal Techniques for Safety-Critical Systems, Shenzhen, China, November 5, 2019">FTSCS 2019</abbr></a></li>
+
+														<li><a href="http://www4.comp.polyu.edu.hk/~csguannan/setta19/"><abbr title="5th International Symposium on Dependable Software Engineering, Shanghai, China, November 2019">SETTA 2019</abbr></a></li>
+														
+														<li><a href="https://kmots2019.lacl.fr/"><abbr title="First International Workshop on Knowledge and MOdel-driven engineering in formal development of Trustworthy Systems, Guilin, China, July 2019">KMOTS 2019</abbr></a></li>
+														
+														<li><a href="http://www.se.gxnu.edu.cn/tase2019/"><abbr title="13th International Symposium on Theoretical Aspects of Software Engineering, Guilin, China, July 2019">TASE 2019</abbr></a></li>
+														
+														<li><a href="http://www.petrinets2019.de/call-for-papers-acsd-2019/"><abbr title="19th International Conference on Application of Concurrency to System Design, Aachen, Germany, June 2019">ACSD 2019</abbr></a></li>
+													</ul>
+												</dd>
+												
+												<dt>2018</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://formal-analysis.com/iceccs/2018/"><abbr title="23rd International Conference on Engineering of Complex Computer Systems, Melbourne, Australia, 12−14 December, 2018">ICECCS 2018</abbr></a></li>
+
+														<li><a href="http://www.ftscs.org/"><abbr title="6th International Workshop on Formal Techniques for Safety-Critical Systems, Gold Coast, Australia, November 16, 2018">FTSCS 2018</abbr></a></li>
+
+														<li><a href="http://prdc.dependability.org/PRDC2018/"><abbr title="23rd IEEE Pacific Rim International Symposium on Dependable Computing, Taipei, Taiwan, 4−7 December 2018">PRDC 2018</abbr></a></li>
+														
+														<li><a href="http://www.icostconference.org/"><abbr title="16th International Conference On Smart homes and health Telematics, July 2018, Singapore">ICOST 2018</abbr></a></li>
+
+														<li><a href="http://interes.institute/acsd2018/"><abbr title="18th International Conference on Application of Concurrency to System Design, Bratislava, Slovakia, 24−29 June 2018">ACSD 2018</abbr></a></li>
+													</ul>
+												</dd>
+												<dt>2017</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://prdc.dependability.org/PRDC2017/"><abbr title="22nd IEEE Pacific Rim International　Symposium on Dependable Computing, Christchurch, New Zealand, 22−25 January 2017">PRDC 2017</abbr></a></li>
+														<li><a href="http://www.icostconference.org/"><abbr title="15th International Conference On Smart homes and health Telematics">ICOST 2017</abbr></a></li>
+														<li><a href="http://formats17.ulb.be/"><abbr title="15th International Conference on Formal Modelling and Analysis of Timed Systems, Berlin, Germany, 5−7 September 2017">FORMATS 2017</abbr></a></li>
+														<li><a href="https://iceccs.github.io/2017/"><abbr title="22nd International Conference on Engineering of Complex Computer Systems, Fukuoka, Japan, 5−8 November 2017">ICECCS 2017</abbr></a></li>
+														<li><a href="http://ictt.xidian.edu.cn/icfem2017/"><abbr title="19th International Conference on Formal Engineering Methods, Xi’An, China, 13−17 November 2017">ICFEM 2017</abbr></a></li>
+													</ul>
+												</dd>
+												<dt>2016</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://ase2016.org/"><abbr title="31st IEEE/ACM International Conference on Automated Software Engineering (ASE 2016) ">ASE 2016 (tool demo)</abbr></a></li>
+														<li><a href="http://icfem2016.xyz/"><abbr title="18th International Conference on Formal Engineering Methods, Tokyo, Japan, 14−18 November 2016">ICFEM 2016</abbr></a></li>
+														<li><a href="http://www.ftscs.org/"><abbr title="5th International Workshop on Formal Techniques for Safety-Critical Systems">FTSCS 2016</abbr></a></li>
+														<li><a href="http://pat.scse.ntu.edu.sg/esss16/index.html"><abbr title="5th International Workshop on Engineering Safety and Security Systems">ESSS 2016</abbr></a></li>
+													</ul>
+												</dd>
+												<dt>2015</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://pat.sce.ntu.edu.sg/esss15/"><abbr title="4th International Workshop on Engineering Safety and Security Systems">ESSS 2015</abbr></a></li>
+														<li><a href="http://lipn.univ-paris13.fr/SynCoP2015/"><abbr title="2nd International Workshop on Synthesis of Complex Parameters">SynCoP 2015</abbr></a> (PC chair)</li>
+														<li><a href="http://www.icostconference.org/"><abbr title="13th International Conference on Smart homes, Assistive Technologies, Robotics and Health Telematics">ICOST 2015</abbr></a></li>
+														<li><a href="http://prdc.dependability.org/PRDC2015/"><abbr title="21st IEEE Pacific Rim International Symposium on Dependable Computing, Zhangjiajie, China, 18−20 November 2015">PRDC 2015</abbr></a></li>
+														<li><a href="http://icfem2015.lri.fr/"><abbr title="17th International Conference on Formal Engineering Methods">ICFEM 2015</abbr></a> (+ workshop chair)</li>
+														<li><a href="http://www.ftscs.org/"><abbr title="4th International Workshop on Formal Techniques for Safety-Critical Systems">FTSCS 2015</abbr></a></li>
+														<li><a href="http://www.cse.hcmut.edu.vn/acomp2015/"><abbr title="9th International Conference on Advanced Computing and Applications">ACOMP 2015</abbr></a></li>
+														<li><a href="http://lipn.univ-paris13.fr/for-moves15/"><abbr title="FORmal MOdeling and VErification of Service-based systems">FOR-MOVES 2015</abbr></a></li>
+														<li><a href="http://iceccs2015.monash.edu.au/"><abbr title="20th IEEE International Conference on Engineering of Complex Computer Systems, Gold Coast, December 2015">ICECCS 2015</abbr></a> (+ publicity chair)</li>
+														<li><a href="http://iceccs2015.monash.edu.au/2015/DC-callforpapers.jsp"><abbr title="20th IEEE International Conference on Engineering of Complex Computer Systems, Gold Coast, December 2015">ICECCS 2015 doctoral symposium</abbr></a></li>
+													</ul>
+												</dd>
+												<dt>2014</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://lipn.univ-paris13.fr/fsfma2014/"><abbr title="2nd French Singaporean Workshop on Formal Methods and Applications, Singapore, May 2014">FSFMA 2014</abbr></a> (general chair)</li>
+														<li><a href="http://pat.sce.ntu.edu.sg/esss14/"><abbr title="3rd International Workshop on Engineering Safety and Security Systems">ESSS 2014</abbr></a></li>
+														<li><a href="http://lipn.univ-paris13.fr/SynCoP2014/"><abbr title="1st International Workshop on Synthesis of Continuous Parameters, Grenoble, France, April 2014">SynCoP 2014</abbr></a> (PC chair)</li>
+														<li><a href="http://cs.tju.edu.cn/iceccs/2014/"><abbr title="19th IEEE International Conference on Engineering of Complex Computer Systems, Tianjin, China, August 2014">ICECCS 2014</abbr></a> (PC chair)</li>
+														<li><a href="http://prdc.dependability.org/PRDC2014/"><abbr title="20th IEEE Pacific Rim International Symposium on Dependable Computing, Singapore, November 2014">PRDC 2014</abbr></a></li>
+														<li><a href="http://cse.hcmut.edu.vn/acomp2014/"><abbr title="International Conference on Advanced Computing and Applications">ACOMP 2014</abbr></a></li>
+														<li><a href="http://www.iasi.cnr.it/events/lopstr14/"><abbr title="24th International Symposium on Logic-Based Program Synthesis and Transformation">LOPSTR 2014</abbr></a></li>
+														<li><a href="http://lipn.univ-paris13.fr/for-moves/"><abbr title="FORmal MOdeling and VErification of Service-based systems">FOR-MOVES 2014</abbr></a></li>
+													</ul>
+												</dd>
+												<dt>2013</dt>
+												<dd>
+													<ul class="alt">
+														<li><a href="http://www.comp.nus.edu.sg/~pat/esss2013/"><abbr title="2nd International Workshop on Engineering Safety and Security Systems">ESSS 2013</abbr></a></li>
+														<li><abbr title="French Singaporean Workshop on Formal Methods and Applications"><a href="http://www.comp.nus.edu.sg/~pat/fsfma2013/">FSFMA</a></abbr> (+ PhD session chair)</li>
+														<li><abbr title="18th International Conference on Engineering of Complex Computer Systems, Singapore, July 2013"><a href="http://www.comp.nus.edu.sg/~pat/iceccs2013/">ICECCS’13</a></abbr></li>
+														<li><a href="http://www.cse.hcmut.edu.vn/ACOMP2013/"><abbr title="International Conference on Advanced Computing and Applications">ACOMP 2013</abbr></a></li>
+													</ul>
+												</dd>
+											</dl>
+											
+										</div>
+
+										<div class="6u 12u$(small)">
+											
+											<h3>Steering committees</h3>
+											
+											<ul class="alt">
+												<li><a href="http://www.mefosyloma.fr/"><abbr title="Méthodes formelles pour les systèmes logiciels et matériels">MeFoSyLoMa</abbr></a> (2017–2019)</li>
+												<li>SynCoP:
+													<a href="https://lipn.univ-paris13.fr/SynCoP2016/">2016</a>,
+													<a href="https://lipn.univ-paris13.fr/SynCoPPV2017/">2017</a>,
+													<a href="https://lipn.univ-paris13.fr/SynCoP2018/">2018</a>,
+													<a href="https://lipn.univ-paris13.fr/SynCoP2019/">2019</a>,
+													<a href="https://project.inria.fr/syncop20/">2020</a>
+												</li>
+											</ul>
+											
+											<h3>Conference organization</h3>
+											
+											<ul class="alt">
+												<li><a href="https://lipn.univ-paris13.fr/petrinets2020/"><abbr title="41st International Conference on Application and Theory of Petri Nets and Concurrency">Petri Nets 2020</abbr></a> @ <a href="https://lipn.univ-paris13.fr/summer-of-love-2020/">Paris Nord Summer of LoVe</a> (co-general chair)</li>
+												<li><a href="http://icfem2015.lri.fr/"><abbr title="17th International Conference on Formal Engineering Methods">ICFEM 2015</abbr></a> (workshop chair)</li>
+												<li><a href="http://lipn.univ-paris13.fr/fsfma2014/"><abbr title="2nd French Singaporean Workshop on Formal Methods and Applications, Singapore, May 2014">FSFMA 2014</abbr></a> (co-general chair)</li>
+											</ul>
+											
+											<h3>PhD theses reviewer</h3>
+											
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th>Year</th>
+																<th>Phd student</th>
+																<th>Institution</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>2019</td>
+																<td>Du Xiaoning</td>
+																<td><a href="http://www.ntu.edu.sg">Nanyang Technological University, Singapore</a></td>
+															</tr>
+															<tr>
+																<td>2018</td>
+																<td>Wang Junjie</td>
+																<td><a href="http://www.ntu.edu.sg">Nanyang Technological University, Singapore</a></td>
+															</tr>
+															<tr>
+																<td>2018</td>
+																<td>Chandramohan Mahinthan</td>
+																<td><a href="http://www.ntu.edu.sg">Nanyang Technological University, Singapore</a></td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>Wu Zhimin</td>
+																<td><a href="http://www.ntu.edu.sg">Nanyang Technological University, Singapore</a></td>
+															</tr>
+															<tr>
+																<td>2013</td>
+																<td>Zhu Huiquan</td>
+																<td><a href="http://www.nus.edu.sg/">National University of Singapore</a></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											
+											<h3>Scientific expert</h3>
+											
+											<div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Year</th>
+															<th colspan="2">Institution</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>2015, 2016</td>
+															<td><a title="France">🇫🇷</a></td>
+															<td><a href="http://www.agence-nationale-recherche.fr">Agence nationale de la recherche</a></td>
+														</tr>
+														<tr>
+															<td>2014</td>
+															<td><a title="Netherlands">🇳🇱</a></td>
+															<td><a href="https://www.nwo.nl/">Nederlandse Organisatie voor Wetenschappelijk Onderzoek</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+										</div>
+									</div>
+
+								</section>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 id="software">Software development</h2>
+									</header>
+
+									<span class="image right"><img src="images/cartography.png" alt="Behavioral cartography by IMITATOR" /></span>
+									<h2><span class="imitator">IMITATOR</span>: parameter synthesis for real-time systems</h2>
+
+									<p>I initated the development of <a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a> in 2008, and I am since then the lead developer.</p>
+	<p><a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a> is a software to synthesize timing parameters for concurrent timed systems modeled using extensions of parametric timed automata.</p>
+	<p><a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a> was used in several industrial collaborations on hardware verification, and schedulability analysis under uncertainty.</p>									
+									<div class="features">
+										<article>
+											<span class="icon fa-edit"></span>
+											<div class="content">
+												<h3>An expressive input language</h3>
+												<p><a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a> performs parameter synthesis for real-time systems modeled by an extension of parametric timed automata.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-cubes"></span>
+											<div class="content">
+												<h3>Powerful analyses</h3>
+												<p>Various algorithms are implemented in <a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a>, including safety parameter synthesis, deadlock-freeness, non-Zeno parametric model-checking or robustness analysis.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-image"></span>
+											<div class="content">
+												<h3>Graphical outputs</h3>
+												<p>In addition to results output using predefined formats, IMITATOR generates graphical outputs such as the zones of good behaviors for the timing parameters.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-creative-commons"></span>
+											<div class="content">
+												<h3>Open source</h3>
+												<p><a href="https://www.imitator.fr"><span class="imitator">IMITATOR</span></a> is entirely open-source and is distributed under the <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License</a>.</p>
+											</div>
+										</article>
+										<ul class="actions">
+											<li><a href="https://www.imitator.fr" class="button special">More on IMITATOR…</a></li>
+										</ul>
+									</div>
+
+									<h2>Other software</h2>
+									
+									<div class="posts">
+									
+										<article>
+											<h3><a href="http://sav.sutd.edu.sg/PAT/">PAT</a></h3>
+											<h4>Member of the development team (2010-2013)</h4>
+											<p><a href="http://sav.sutd.edu.sg/PAT/">PAT</a> is a powerful model-checker for multiple formalisms such as timed CSP, probabilistic systems, parametric systems… PAT is mainly developed in Singapore (NUS, STUD, NTU).</p>
+											<ul class="actions small">
+												<li><a href="http://sav.sutd.edu.sg/PAT/" class="button small">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<h3><a href="https://lipn.univ-paris13.fr/~andre/software/PolyOp/">PolyOp</a></h3>
+											<h4>Developer</h4>
+											<p><a href="https://lipn.univ-paris13.fr/~andre/software/PolyOp/">PolyOp</a> is a simple interface to some operations on polyhedra provided by the Parma Polyhedra Library.</p>
+											<ul class="actions small">
+												<li><a href="https://lipn.univ-paris13.fr/~andre/software/PolyOp/" class="button small">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<h3><a href="https://lipn.univ-paris13.fr/~andre/software/PSyHCoS/">PSyHCoS</a></h3>
+											<h4>Developer</h4>
+											<p><a href="https://lipn.univ-paris13.fr/~andre/software/PSyHCoS/">PSyHCoS</a> is tool that groups techniques of parameter synthesis for Parametric Stateful Timed CSP (PSTCSP).</p>
+											<ul class="actions small">
+												<li><a href="https://lipn.univ-paris13.fr/~andre/software/PSyHCoS/" class="button small">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<h3><a href="https://lipn.univ-paris13.fr/~andre/software/hymitator/">HyMITATOR</a></h3>
+											<h4>Developer</h4>
+											<p><a href="https://lipn.univ-paris13.fr/~andre/software/hymitator/">HyMITATOR</a> is a fork of <span class="imitator">IMITATOR</span> for parametric hybrid automata.</p>
+											<ul class="actions small">
+												<li><a href="https://lipn.univ-paris13.fr/~andre/software/hymitator/" class="button small">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<h3><a href="https://lipn.univ-paris13.fr/~andre/software/InSPEQTor/">InSPEQTor</a></h3>
+											<h4>Developer</h4>
+											<p><a href="https://lipn.univ-paris13.fr/~andre/software/InSPEQTor/">InSPEQTor</a> is an implementation of the inverse method in the framework of Parametric Directed Weighted Graphs.</p>
+											<ul class="actions small">
+												<li><a href="https://lipn.univ-paris13.fr/~andre/software/InSPEQTor/" class="button small">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<h3><a href="https://lipn.univ-paris13.fr/~andre/software/ImpRator/">ImpRator</a></h3>
+											<h4>Developer</h4>
+											<p><a href="https://lipn.univ-paris13.fr/~andre/software/ImpRator/">ImpRator</a> is an implementation of the inverse method in the framework of Parametric Markov Decision Processes.</p>
+											<ul class="actions small">
+												<li><a href="https://lipn.univ-paris13.fr/~andre/software/ImpRator/" class="button small">More</a></li>
+											</ul>
+										</article>
+									</div>
+
+								</section>
+
+							<!-- Content -->
+								<section>
+									<!-- Elements -->
+									<header class="major">
+										<h2 id="students">Students</h2>
+									</header>
+									
+									
+									<div class="row">
+										<div class="6u 12u$(small)">
+											
+											<h2>PhD students</h2>
+											<div class="box alt">
+												<div class="row 50% uniform">
+													<div class="6u">
+														<h3><span class="auteur"><a href="https://lipn.univ-paris13.fr/~jerray/">Jawher Jerray</a></span></h3>
+														<h4>(2018—…)</h4>
+														<span class="image fit"><img src="images/jawher-jerray.jpg" alt="Jawher Jerray" /></span>
+										
+														Formal analyses of real-time systems														<br/>Co-supervised by <span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span>													</div>
+													<div class="6u">
+														<h3><span class="auteur"><a href="https://lipn.univ-paris13.fr/~ramparison/">Mathias Ramparison</a></span></h3>
+														<h4>(2016—2019)</h4>
+														<span class="image fit"><img src="images/oops.jpg" alt="" /></span>
+										
+														Formal verification of parametric real-time systems with preemption														<br/>Co-supervised by <span class="auteur"><a href="http://pagesperso.ls2n.fr/~lime-d/">Didier Lime</a></span>														<br/>Current situation: Post-doc in Luxembourg													</div>
+												</div>
+												<div class="row 50% uniform">
+													<div class="6u">
+														<h3><span class="auteur"><a href="https://lipn.univ-paris13.fr/~hoanggia.nguyen/">Nguyễn Hoàng Gia</a></span></h3>
+														<h4>(2015—2018)</h4>
+														<span class="image fit"><img src="images/nguyen-hoang-gia.jpg" alt="Nguyễn Hoàng Gia" /></span>
+										
+														Efficient and distributed parameter synthesis for parametric timed automata														<br/>Co-supervised by <span class="auteur"><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a></span>														<br/>Current situation: Post-doc at INRIA Lille (France)													</div>
+													<div class="6u">
+														<h3><span class="auteur"><a href="https://lipn.univ-paris13.fr/~benmoussa/">Mohamed Mahdi Benmoussa</a></span></h3>
+														<h4>(2013—2016)</h4>
+														<span class="image fit"><img src="images/oops.jpg" alt="" /></span>
+										
+														Specification with the UML														<br/>Co-supervised by <span class="auteur"><a href="https://lipn.univ-paris13.fr/~choppy/">Christine Choppy</a></span>														<br/>Current situation: Associate professor in Constantine (Algeria)													</div>
+												</div>
+												<div class="row 50% uniform">
+													<div class="6u">
+														<h3><span class="auteur"><a href="http://www.lsv.fr/~soulat/">Romain Soulat</a></span></h3>
+														<h4>(2010—2013)</h4>
+														<span class="image fit"><img src="images/rs.jpg" alt="Romain Soulat" /></span>
+										
+														Synthesis of correct-by-design schedulers for hybrid systems														<br/>Co-supervised by <span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span>														<br/>Current situation: R&amp;D engineer with Thales (France)													</div>
+												</div>
+									
+											</div>
+											
+											<h2>Post-docs</h2>
+											<div class="box alt">
+												<div class="row 50% uniform">
+													<div class="6u">
+														<h3 style="text-decoration: line-through;">Louis Fippo-Fitime (2017)</h3>
+														<span class="image fit"><img src="images/louis-fippo-fitime.jpg" alt="Louis Fippo Fitime" /></span>
+										
+														<span style="text-decoration: line-through;">Parametric analyses of biological systems</span>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+										<div class="6u$ 12u$(small)">
+										<h3>Master students</h3>
+									
+											<div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Name</th>
+															<th>Year</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~jerray/">Jawher Jerray</a></span></td>
+															<td>2018</td>
+														</tr>
+														<tr>
+															<td>Sahar Mhiri</td>
+															<td>2018</td>
+														</tr>
+														<tr>
+															<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~ramparison/">Mathias Ramparison</a></span></td>
+															<td>2016</td>
+														</tr>
+														<tr>
+															<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~hoanggia.nguyen/">Nguyễn Hoàng Gia</a></span></td>
+															<td>2014</td>
+														</tr>
+														<tr>
+															<td>Christopher Makanga</td>
+															<td>2014</td>
+														</tr>
+														<tr>
+															<td><span class="auteur"><a href="https://lipn.univ-paris13.fr/~benmoussa/">Mohamed Mahdi Benmoussa</a></span></td>
+															<td>2013</td>
+														</tr>
+														<tr>
+															<td>Taieb Ben Niha</td>
+															<td>2013</td>
+														</tr>
+														<tr>
+															<td>Giuseppe Pellegrino</td>
+															<td>2012−2013</td>
+														</tr>
+														<tr>
+															<td><a href="http://www.cse.iitb.ac.in/~shwetagarg/">Shweta Garg (श्वॆता)</a></td>
+															<td>2012</td>
+														</tr>
+														<tr>
+															<td>Inès Jguirim</td>
+															<td>2012</td>
+														</tr>
+														<tr>
+															<td>Daphné Dussaud</td>
+															<td>2010</td>
+														</tr>
+														<tr>
+															<td>Sandeep Grewal</td>
+															<td>2008</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</section>
+										
+								
+							<!-- Section: Education -->
+								<section>
+									<!-- Elements -->
+									<header class="major">
+										<h2 id="education">Education</h2>
+									</header>
+										<div class="row 200%">
+											<div class="6u 12u$(medium)">
+												<h3>Ph.D. thesis</h3>
+												<span class="image right"><img src="images/ens_cachan.png" alt="École normale supérieure de Cachan" /></span>
+												<p>I wrote my Ph.D. thesis from September 2007 to December 2010 in the <a href="http://www.lsv.fr/">Laboratoire Spécification et Vérification, ENS Cachan, France</a> of the <a href="http://www.ens-paris-saclay.fr/">École Normale Supérieure de Cachan, France</a> under the supervision of <span class="auteur"><a href="http://www.lsv.fr/~fribourg/">Laurent Fribourg</a></span> and <span class="auteur"><a href="http://www-soc.lip6.fr/~ema/">Emmanuelle Encrenaz</a></span>.</p>
+												<p>Title: <a href="http://www.lsv.fr/~andre/thesis-etienne-andre.php">An Inverse Method for the Synthesis of Timing Parameters in Concurrent Systems</a> <a href="http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/andre-phd.pdf" hreflang="en-us">[PDF <img src="https://lipn.univ-paris13.fr/~andre/drapeaux/drapeau-royaume-uni.png" alt="DRAPEAU United Kingdom" title="English" class="drapeau" />]</a>.</p>
+												
+												<span class="image fit"><a href="images/thesis-wordle-black.gif"><img src="images/thesis-wordle-black.gif" alt="Wordle thèse" /></a></span>
+												<span class="image fit"><a href="images/thesis-wordle-white.gif"><img src="images/thesis-wordle-white.gif" alt="Wordle PhD thesis" /></a></span>
+
+											</div>
+											<div class="6u$ 12u$(small)">
+												<h3>Post-doctoral activity</h3>
+												<span class="image right"><img src="images/national_university_singapore.png" alt="National University of Singapore" /></span>
+												<p>I have been from December 2010 to August 2011 a research fellow (post-doc) in Prof. <span class="auteur"><a href="http://www.comp.nus.edu.sg/~dongjs/">Dong Jin Song (董劲松)</a></span>’s team in the <a href="http://www.nus.edu.sg/">National University of Singapore</a>.<br>I keep collaborating with several Singapore-based scientists.</p>
+											</div>
+										</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 id="links">My lists of scientific events</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-calendar"></span>
+											<div class="content">
+												<h3>Conferences</h3>
+												<p>I maintain a <a href="https://www.conferences-computer.science/">list of conferences in formal methods</a>.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-newspaper-o"></span>
+											<div class="content">
+												<h3>Journals</h3>
+												<p>My <a href="https://www.conferences-computer.science/journals.php">list of journals in formal methods</a>.</p>
+											</div>
+										</article>
+									</div>
+								</section>
+																
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 id="contact">Contact</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-university"></span>
+											<div class="content">
+												<h3>Affiliation</h3>
+												<p>Université de Lorraine, CNRS, Inria, LORIA, Nancy, France</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-map-o"></span>
+											<div class="content">
+												<h3>Snail mail address</h3>
+												<p>Étienne André
+	<br>LORIA
+	<br>Université de Lorraine
+	<br>54506 Vandœuvre-lès-Nancy
+	<br>France</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-paper-plane"></span>
+											<div class="content">
+												<h3>E-Mail address</h3>
+												<p>Etienne.Andre（at）univ-paris13.fr</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-twitter"></span>
+											<div class="content">
+												<h3>Twitter</h3>
+												<p><a href="https://twitter.com/etienne_andre">@etienne_andre</a></p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-phone"></span>
+											<div class="content">
+												<h3>Phone</h3>
+												<p>Please send me an email first</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-fax"></span>
+											<div class="content">
+												<h3>Fax</h3>
+												<p>…in 2020…? like seriously…?</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-volume-up"></span>
+											<div class="content">
+												<h3>How to write and pronounce my name</h3>
+												<p>												<pre><code><a href="http://en.wiktionary.org/wiki/Appendix:French_pronunciation">/e.tjɛn/ /ɑ̃.dʁe/</a></code></pre>
+
+
+												<h4>LaTeX</h4>
+												<pre><code>\'Etienne Andr\'e</code></pre>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-arrows-v"></span>
+											<div class="content">
+												<h3>ha-index</h3>
+												<p>I am very proud that my <a href="https://www.irif.fr/~haberm/haindex.html">ha-index</a> is 78.</p>
+											</div>
+										</article>
+									</div>
+								</section>
+
+
+
+
+						</div>
+						
+						
+					<!-- Footer -->
+						<footer id="footer">
+						
+							<a href="http://www.loria.fr/"><img src="images/logo_loria_complet.jpg" alt="LORIA"></a>
+							<a href="http://www.univ-lorraine.fr/"><img src="images/logo-universite-de-lorraine.png" alt="Université de Lorraine"></a>
+							<a href="http://www.cnrs.fr/"><img src="images/cnrs.png" alt="CNRS"></a>
+						
+							<p class="copyright">&copy; Étienne André. All rights reserved. Design: <a href="https://html5up.net/editorial">Editorial</a> by <a href="https://html5up.net">HTML5 UP</a> (<a href="https://creativecommons.org/licenses/by/3.0/"><abbr title="Creative Commons Attribution 3.0 License">cc-by</abbr> 3.0</a>).</p>
+							<p class="copyright">This page makes use of
+	<a href="http://validator.w3.org/check?uri=referer">valid HTML 5</a>
+		and
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>.</p>
+
+						</footer>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+
+									<ul>
+										<li><a href="index.php">Home</a></li>
+										<li><a href="jobs.php">⭐ Jobs (post-doc)</a></li>
+										<li><a href="index.php#projects">Research projects</a></li>
+										<li><a href="publications.php">Publications</a></li>
+										<li><a href="index.php#students">Students</a></li>
+										<li><a href="index.php#software">Software development</a></li>
+										<li><a href="teaching.php">Teaching</a></li>
+										<li><a href="index.php#education">Education</a></li>
+										<li><a href="index.php#contact">Contact</a></li>
+									</ul>
+									<ul class="icons">
+										<li><a hreflang="fr" lang="fr" xml:lang="fr" href="index_fr.php">🇫🇷</a></li>
+									</ul>
+								</nav>
+
+						</div> <!-- inner -->
+					</div> <!-- sidebar -->
+					
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			
+			
+	
+<!-- Begin Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+	</body>
+</html>
+
+
+

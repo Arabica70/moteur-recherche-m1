@@ -1,0 +1,113 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>TDs de C++ - Procédure de Rendu</title>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20097933-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <style>
+    .red { color: #ff0000 }
+    tt { color: #116611 }
+    pre { color: #116611 }
+  </style>
+</head>
+<body>
+
+<h1>TDs de C++ - Procédure de Rendu</h1>
+
+<h3 id="rendu">Procédure de Rendu</h3>
+<ul>
+  <li>Téléchargez et complétez le fichier texte <a href="./rendu.txt" download><tt>rendu.txt</tt></a>.</li>
+  <li>Créer une archive <b><tt>td<span class="red">X</span>.tar</tt></b> (eg. <tt>td3.tar</tt> pour le TD 3) contenant les fichiers demandés, <b>sans les mettre dans un dossier</b>:
+          <pre>tar cf td2.tar <b>rendu.txt</b> fichier1 fichier2 fichier3 ... </pre>
+  </li>
+  <li><b class="red">Vérifiez</b> votre archive avec le programme <tt>test.sh</tt> qui sera disponible sur chaque page de TD: <tt>bash test.sh td<b class="red">X</b>.tar</tt>
+    <ul><li>Si ça ne passe pas le test, ça vaudra sans doute zéro!</li></ul>
+  </li>
+  <li>
+	  Soumettez sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a> (Sciences &rarr; UFR de Mathématiques &rarr; Master Mathématiques et Applications &rarr; M2 Mathématiques et Applications &rarr; Modélisation Aléatoire &rarr; Formation en C++)</span>)
+  </li>
+</ul>
+
+
+<h3>Aide pendant le TD</h3>
+<b class="red">N'hesitez pas à demander de l'aide!</b>  On ne vous pénalisera <b>en aucun cas</b> si vous demandez de l'aide pendant le TD: on est là pour ça. Au contraire, on sera content.
+La note de TD est basée sur ce que vous arrivez à faire, qu'on vous ait aidé ou non.
+
+<!--
+<h3>Heure de soumission et Notation</h3>
+<ul>
+  <li>Le TD doit être rendu (une première fois) <b>à la fin de l'horaire TD</b>. En retard, c'est zéro!</li>
+  <li>Vous pouvez <b>re-soumettre</b> le TD jusqu'au <b>mardi soir suivant à minuit</b>, si vous n'avez pas eu le temps de le finir pendant le TD et que vous pensez pouvoir améliorer votre note.
+  </li>
+  <li>Les notes de chaque TD (1er rendu et rendu final) seront rendues publiques au fur et à mesure.
+    <ul><li>Elles restent <b>indicatives</b> et peuvent changer (ça ne devrait pas arriver trop souvent).</li></ul>
+  </li>
+  <li>Les "erreurs bêtes" (fichier mal nommé, oubli du numéro d'étudiant, <i>etc</i>) ne seront pas "pardonnées".</li>
+  <li>La balance entre le 1er rendu et le rendu final de chaque TD <b>sera fixée à la fin</b>:
+    <ul>
+      <li><b>Le premier rendu vaudra entre 50% et 66%</b></li>
+      <li>Le rendu final vaudra entre 33% et 50%</li>
+    </ul>
+  </li>
+  <li><b>Chaque TD aura un coefficient différent</b> entre 1 et 2,  qui seront fixés à la fin.
+    Quelques TDs pourront ne pas être notés ou ne pas compter (coeff 0).
+  </li>
+  <li>Vous aurez un <b>Joker</b>: on enlevera votre pire note pour 1-2 TDs (pour un total de 2 coeffs, voir les coeff de TD). Ça sera fait automatiquement pour maximiser votre note globale.
+  </li>
+</ul>
+-->
+
+<h3>Collaboration et "Triche" pour les TD-contrôles</h3>
+<ul>
+  <li><b>Toute collaboration (ou copie de travaux) entres étudiants qui n'est pas signalée sera punie</b>, au moins par un zéro au TD concerné, et ça peut très facilement aller jusqu'à un zéro à la note d'UE (pas seulement de TD, mais d'examen aussi).
+  </li>
+  <li>
+    Des outils perfectionnés detecteront la triche probable, et je regarderai personnellement
+    les cas suspects.
+  </li>
+<!--  <li>
+    Je ferai tout ça en fin de semestre. Par exemple, si je detecte de la triche sur le TD2 et le
+    TD4 d'un ou plusieurs étudiants, à la fin du semestre, l'ensemble des notes de TD pourra passer
+    à zéro.
+  </li>
+  <li>
+    Ça ne concerne bien sûr pas les binômes déclarés. Cf la section "binôme" ci-dessous.
+  </li>
+-->
+</ul>
+
+<h3>Binôme</h3>
+Vous pouvez travaillez en binôme pour les TD normaux.
+On verra si les binomes sont autorisés pour les TDs contrôle (a priori non)
+<ul>
+  <li>Ne rendez qu'un seul fichier par binôme ; en une seule fois (depuis un seul compte Moodle)</li>
+  <li>Mettez vos deux numéros d'étudiants dans le fichier <tt>etudiant.xml</tt></li>
+  <li><b>Trinôme interdit</b>.
+</ul>
+
+<h3>Note</h3>
+<ul>
+  <li>Chaque TD possède une batterie de tests automatiques, qui seront parfois fournis pendant le TD.</li>
+  <li>Si vous faites une petite typo dans le fichier ou même dans le nom de fichier
+    (eg. <tt>2_1.cc</tt> au lieu de  <tt>2.1.cc</tt>), l'exercice sera sûrement considéré <b>faux</b>.</li>
+  <li>Le <i>style</i> sera également important (indentation, lisibilité, suivre les bonnes recommandations).
+  </li>
+</ul>
+
+<h3>Absence</h3>
+<ul>
+  <li>Une absence non justifiée <b>en avance</b> entraîne un zéro au TD concerné.</li>
+  <li>Même en cas d'absence justifiée, <b>le TD reste dû et devra être rendu à lheure</b></li>
+  <li>Vous devrez remplir le champ <tt>&lt;absence&gt;</tt> dans le fichier <tt>rendu.txt</tt>.</li>
+</ul>
+
+</body>
+</html>

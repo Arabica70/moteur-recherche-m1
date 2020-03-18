@@ -1,0 +1,209 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / UTF-8 </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.UTF-8' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=search&amp;q=link=PmWiki.UTF-8'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>UTF-8</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right;' >
+</div>
+<p>Summary: Enabling UTF-8 Unicode language encoding in your wiki. 
+</p>
+<p class='vspace'>UTF-8 supports all languages and alphabets, including Asian languages and their character depth. It is a widely supported and flexible character encoding. 
+</p>
+<p class='vspace'>It&rsquo;s fairly simple to enable UTF-8 on your wiki pages. Current PmWiki versions have the UTF-8 file which is enabled by default in the sample-config.php.
+</p>
+<div class='vspace'></div><h2>Enabling UTF-8 on a new wiki</h2>
+<p>If you start a new wiki in any language with the latest PmWiki version, it is highly recommended to enable UTF-8. In the future, PmWiki will change to use the UTF-8 encoding by default, so if you already use it, you will not need a complex &ldquo;migration&rdquo; to UTF-8 later.
+</p>
+<p class='vspace'>To enable UTF-8 for a new wiki, add this line near the beginning of config.php (the docs/sample-config.php file has this line already):
+</p>
+<div class='vspace'></div><pre> include_once(&ldquo;scripts/xlpage-utf-8.php&rdquo;);
+</pre><p class='vspace'>This line should come <em>before</em> a call to the XLPage() function in <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations'>international wikis</a>.
+</p>
+<p class='vspace'>Save your config.php file encoded as UTF-8 (NO BOM). That allows entry of UTF-8 encoded characters in it. Make sure your editor does support this, and test by adding some non-ANSI UTF-8 characters, to see them in the text editor <sup><a href='#notes'>1</a></sup>.
+</p>
+<p class='vspace'>With UTF-8 thus enabled you also got use of classes <em>rtl</em> and <em>ltr</em>, which offer setting of the text direction to right-to-left, or left-to-right. This is useful for inclusion of right-to-left scripts like Arabic, Farsi (Persian), Hebrew, Urdu and others. 
+</p>
+<div class='vspace'></div><h2>Enabling UTF-8 on existing wikis</h2>
+<p>Currently, this is possible <em>only if your group and page </em>names<em>, as well as upload names, don&rsquo;t contain international characters</em>. The names of wiki pages are used as file names, and we don&rsquo;t have yet an easy way to rename the disk files.
+</p>
+<p class='vspace'>If your wiki doesn&rsquo;t have international page/file names, first <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades'>upgrade</a> to the latest PmWiki version. To enable UTF-8, add these lines near the beginning of config.php:
+</p>
+<div class='vspace'></div><pre> include_once(&ldquo;scripts/xlpage-utf-8.php&rdquo;);
+ $DefaultPageCharset = array(&lsquo;&thinsp;&rsquo;=&gt;&rsquo;ISO-8859&ndash;1&rsquo;); # see below
+</pre><p class='vspace'>These lines should come <em>before</em> a call to the XLPage() function in <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Internationalizations'>international wikis</a>.
+</p>
+<p class='vspace'>The <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#DefaultPageCharset'><code class='varlink'>&#036;DefaultPageCharset</code></a> line is there to fix and correctly handle some pages with missing or wrong attributes, created by older PmWiki versions.
+</p>
+<div class='vspace'></div><ul><li>Most wikis in European languages are likely to be in the ISO-8859&ndash;1 encoding and should use:<br />  <code><a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#DefaultPageCharset'><code class='varlink'>&#036;DefaultPageCharset</code></a> = array(&lsquo;&thinsp;&rsquo;=&gt;&rsquo;ISO-8859&ndash;1&rsquo;);</code>
+</li><li>Wikis in Czech and Hungarian language are likely to be in the ISO-8859&ndash;2 encoding, they should use this line instead:<br />  <code> <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#DefaultPageCharset'><code class='varlink'>&#036;DefaultPageCharset</code></a> = array(&lsquo;&thinsp;&rsquo;=&gt;&rsquo;ISO-8859&ndash;2&rsquo;, &lsquo;ISO-8859&ndash;1&rsquo;=&gt;&rsquo;ISO-8859&ndash;2&rsquo;); </code>
+</li><li>Wikis in Turkish language are likely to be in the ISO-8859&ndash;9 encoding, they should use this line instead:<br />  <code> <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/I18nVariables#DefaultPageCharset'><code class='varlink'>&#036;DefaultPageCharset</code></a> = array(&lsquo;&thinsp;&rsquo;=&gt;&rsquo;ISO-8859&ndash;9&rsquo;, &lsquo;ISO-8859&ndash;1&rsquo;=&gt;&rsquo;ISO-8859&ndash;9&rsquo;); </code>
+</li></ul><p class='vspace'>You should also delete the file <code> wiki.d/.pageindex</code>. This file contains a cache of links and words from your pages and is used for searches and pagelists. PmWiki will rebuild it automatically with the new encoding.
+</p>
+<div class='vspace'></div><h2>Support for RTL right-to-left languages</h2>
+<p>Languages like Arabic, Hebrew, Farsi (Persian), Urdu and others are written in script flowing from right to left. Classes <em>rtl</em> and <em>ltr</em> can be used to specify direction of text independently of the general text direction within a page, for example: 
+</p><table class='markup vert' align='center'>
+      <tr><td class='markup1' valign='top'><pre>&gt;&gt;rtl&lt;&lt;
+يتدفق هذا النص من اليمين إلى اليسار
+&gt;&gt;ltr&lt;&lt;
+This text flows left to right.
+&gt;&gt;&lt;&lt;
+</pre></td></tr><tr><td 
+        class='markup2' valign='top'><div class='rtl' > 
+<p>يتدفق هذا النص من اليمين إلى اليسار
+</p></div><div class='ltr' > 
+<p>This text flows left to right.
+</p></div>
+</td></tr></table>
+<p class='vspace'>To set text direction for a wiki generally to RTL, you could add to config.php a line like:
+</p>
+<div class='vspace'></div><pre>  <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LayoutVariables#HTMLStylesFmt'><code class='varlink'>&#036;HTMLStylesFmt</code></a>[&lsquo;rtl&rsquo;] = &ldquo; body { direction:rtl; }&rdquo;
+</pre><p class='vspace'>but  the skin you use may need other modifications, for instance to swap the search box and the page actions to the other side etc. 
+</p>
+<p class='vspace'>Some skins have full support for RTL, see for instance <a class='urllink' href='http://www.pmwiki.org/wiki/Skins/Amber' rel='nofollow'>Amber</a>. 
+</p>
+<p class='vspace'><a name='notes' id='notes'></a>
+</p><h2>Notes</h2>
+<ul><li>You need to save your config.php file in the UTF-8 encoding, and &ldquo;Without Byte Order Mark (BOM)&rdquo;. See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations#encoding'>Character encoding of config.php</a>.
+<div class='vspace'></div></li><li>This page concerns the most recent versions of PmWiki. See <a class='urllink' href='http://www.pmwiki.org/wiki/Cookbook/UTF-8' rel='nofollow'>Cookbook:UTF-8</a> for tips on older versions.
+<div class='vspace'></div></li><li>In the case your pmwiki installation displays wrong encoding, or save an UTF-8 page to an other encoding without explanation, you can double check your custom .htaccess settings at the root of your served pages.
+</li></ul><p class='vspace'> 
+<a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/UTF-8' rel='nofollow'>PmWiki:UTF-8</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/UTF-8-Talk' rel='nofollow'>PmWiki:UTF-8-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/UTF-8?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on June 26, 2017, at 01:48 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

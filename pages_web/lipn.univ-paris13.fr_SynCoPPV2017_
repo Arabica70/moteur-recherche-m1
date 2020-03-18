@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>SynCoP + PV 2017</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.png" alt="A parameterized Swedish logo" /></span>
+					<h1 id="logo"><a href="#">SynCoP + PV</a></h1>
+					<p>22-23 April 2017<br />
+					<a href="http://www.openstreetmap.org/search?query=Bl%C3%A5senhus#map=17/59.85104/17.63016">Blåsenhus</a>, Uppsala, Sweden</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#committees">Committees</a></li>
+						<li><a href="#program">Program</a></li>
+						<li><a href="#speakers">Speakers</a></li>
+						<li><a href="#venue">Venue</a></li>
+						<li><a href="#pictures">Pictures</a></li>
+					</ul>
+				</nav>
+				<!-- 
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+				-->
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>SynCoP + PV 2017</h2>
+										<p>4th International Workshop on Synthesis of Complex Parameters<br/>
+										+<br/>
+										3rd International Workshop on Parameterized Verification</p>
+									</header>
+									
+									<p>This event is a joint <a href="http://www.etaps.org/2017/">ETAPS</a> workshop organized as a series of invited talks. Everyone is welcome to attend and participate in the discussions (register <a href="http://www.etaps.org/index.php/2017/registration">here</a>).</p>
+									
+									<h3>SynCoP</h3>
+									<p>SynCoP aims at bringing together researchers working on verification and parameter synthesis for systems with discrete or continuous parameters, in which the parameters influence the behavior of the system in ways that are complex and difficult to predict.
+											Such problems may arise for real-time, hybrid or probabilistic systems in a large variety of application domains.
+											The parameters can be continuous (e.g., timing, probabilities, costs) or discrete (e.g., number of processes). The goal can be to identify suitable parameters to achieve desired behavior, or to verify the behavior for a given range of parameter values.</p>
+
+									<h4>Topics of SynCoP</h4>
+									<p>The scientific subject of the workshop covers (but is not limited to) the following areas:</p>
+		
+									<ul>
+										<li>parameter synthesis,</li>
+										<li>parametric model checking,</li>
+										<li>regular model checking,</li>
+										<li>robustness analysis,</li>
+										<li>parametric logics, decidability and complexity issues,</li>
+										<li>formalisms such as parametric timed and hybrid automata, parametric time(d) Petri nets, parametric probabilistic (timed) automata, parametric Markov Decision Processes, networks of identical processes,</li>
+										<li>interactions between discrete and continuous parameters,</li>
+										<li>tools and applications to major areas of computer science, biology and control engineering.</li>
+									</ul>
+									
+									<h3>PV</h3>
+									<p>Systems composed of a finite but possibly arbitrary number of identical components occur everywhere from hardware design (e.g. cache coherence protocols) to distributed applications (e.g. client-server applications). Parameterized verification is the task of verifying the correctness of this kind of systems regardless the number of their components.
+
+The workshop is aimed at bringing together researchers working on Parameterized Verification using
+									<ul>
+										
+
+<li>Specifications in automata and logic, term and graph rewriting, Petri nets, process algebra, …</li>
+<li>Validation methods via assertional and regular model checking, reachability and coverability decision procedures, abstractions, theorem proving, constraint solving, …</li>
+    									<li>Applications to hardware design, cache coherence protocols, security and communication protocols, multithreaded and concurrent programs, programs with relaxed memory models, mobile and distributed systems, database languages and systems, biological systems, …</li>
+									</ul>
+
+								</div>
+							</section>
+
+						<!-- Committees -->
+							<section id="committees">
+								<div class="container">
+									<h3>Committees</h3>
+										<div class="row">
+											<div class="6u 12u(xsmall)">
+												<h5>SynCoP general chair (2017)</h5>
+												<ul class="alt">
+													<li><a href="http://www.liafa.jussieu.fr/~haberm/">Peter Habermehl</a>, Paris, France</li>
+												</ul>
+												<h5>SynCoP steering committee</h5>
+												<ul class="alt">
+													<li><a href="http://user.it.uu.se/~parosh/">Parosh Abdulla</a>, Uppsala, Sweden</li>
+													<li><a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a>, Villetaneuse, France</li>
+													<li><a href="http://people.cs.aau.dk/~kgl/">Kim Larsen</a>, Aalborg, Denmark</li>
+													<li><a href="http://www.irccyn.ec-nantes.fr/~lime/">Didier Lime</a>, Nantes, France</li>
+													<li><a href="http://www.ipipan.waw.pl/~penczek/">Wojciech Penczek</a>, Warszawa, Poland</li>
+													<li><a href="http://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a>, Villetaneuse, France</li>
+												</ul>
+											</div>
+											<div class="6u 12u(xsmall)">
+												<h5>PV committee</h5>
+												<ul class="alt">
+													<li><a href="http://user.it.uu.se/~parosh/">Parosh Abdulla</a>, Uppsala, Sweden</li>
+													<li><a href="http://www.disi.unige.it/person/DelzannoG/">Giorgio Delzanno</a>, Genoa, Italy</li>
+												</ul>
+											</div>
+										</div>
+
+								</div>
+							</section>
+
+
+						<!-- Program -->
+							<section id="program">
+								<div class="container">
+									<h3>Program</h3>
+
+									
+										<div class="table-wrapper">
+											<h4>Saturday, 22nd of April 2017</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>9h-10h</td>
+														<td>Keynote speaker 1: <a href="#safranek">David Šafránek</a></td>
+														<td><a href="#safranek">Parameter synthesis in dynamical systems by model checking</a> [<a href="slides-safranek.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>10h-10h30</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>10h30-12h30</td>
+														<td>Session 1
+															<br/><a href="#larsen">Kim Larsen</a>
+															<br/><span style="text-decoration: line-through;">Saddek Bensalem</span>
+														</td>
+														<td>
+															<br/><a href="#larsen">Minimizing Markov Chains Beyond Bisimilarity</a> [<a href="slides-larsen.pdf">slides</a>]
+															<br/><span style="text-decoration: line-through;">Compositional parameter synthesis</span>
+														</td>
+													</tr>
+													<tr>
+														<td>12h30-14h</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+													<tr>
+														<td>14h-15h30</td>
+														<td>Session 2:
+															<br/><a href="#bouajjani">Ahmed Bouajjani</a>
+															<br/><a href="#berard">Béatrice Bérard</a>
+														</td>
+														<td>
+															<br/><a href="#bouajjani">Parametric verification of concurrent programs over the Total Store Ordering weak memory model</a> [<a href="slides-bouajjani.pdf">slides</a>]
+															<br/><a href="#berard">Polynomial Interrupt Timed Automata</a> [<a href="slides-berard.pdf">slides</a>]
+														</td>
+													</tr>
+													<tr>
+														<td>15h30-16h</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>16h-16h45</td>
+														<td>Session 3:
+															<br/><a href="#kouvaros">Panagiotis Kouvaros</a>
+														</td>
+														<td>
+															<br/><a href="#kouvaros">Parameterised Verification for Multi-Agent Systems</a>
+														</td>
+													</tr>
+													<tr>
+														<td>20h</td>
+														<td>Workshop dinner</td>
+														<td><a href="http://www.ilfornoitaliano.se/">Il Forno Restaurant</a><br/>S:t Olofsgatan 8, Uppsala</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<h4>Sunday, 23rd of April 2017</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>9h-10h</td>
+														<td>Keynote speaker 2: <a href="#katoen">Joost-Pieter Katoen</a></td>
+														<td><a href="#katoen">Advancing Parameter Synthesis in Markov Models</a> [<a href="slides-katoen.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>10h-10h30</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>10h30-12h30</td>
+														<td>Session 4:
+															<br/><a href="#zuleger">Florian Zuleger</a>
+															<br/><a href="#ruemmer">Philipp Rümmer</a>
+															<br/><a href="#aminof">Benjamin Aminof</a>
+														</td>
+														<td>
+															<br/><a href="#zuleger">Liveness of Parameterized Timed Networks</a> [<a href="slides-zuleger.pdf">slides</a>]
+															<br/><a href="#ruemmer">Analysis of parameterised timed systems using Horn constraints</a> [<a href="slides-ruemmer.pdf">slides</a>]
+															<br/><a href="#aminof">Parametrised Model Checking of Multi-token Systems via the Composition Method</a>
+														</td>
+													</tr>
+													<tr>
+														<td>12h30-14h</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+													<tr>
+														<td>14h-15h30</td>
+														<td>Session 5:
+															<br/><a href="#finkel">Alain Finkel</a>
+															<br/><a href="#sunjun">Sun Jun</a>
+														</td>
+														<td>
+															<br/><a href="#finkel">WBTS: the new class of WSTS without WQO</a> [<a href="slides-finkel.pdf">slides</a>]
+															<br/><a href="#sunjun">Verification of Timed Security Protocols with Clock Drift</a> [<a href="slides-sunjun.pdf">slides</a>]
+														</td>
+													</tr>
+													<tr>
+														<td>15h30-15h35</td>
+														<td>Closing remarks
+															<br/>Étienne André
+														</td>
+														<td>
+															<br/>[<a href="slides-conclusion.pdf">slides</a>]
+														</td>
+													</tr>
+													<tr>
+														<td>15h35-16h</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+							</section>
+							
+						<!-- Program -->
+							<section id="speakers">
+								<div class="container">
+									<h3>Speakers</h3>
+									
+									<div class="features">
+										
+										<article>
+											<a href="#" class="image"><img src="images/aminof.jpg" alt="Benjamin Aminof" /></a>
+											<div class="inner">
+												<h4 id="aminof"><a href="http://forsyte.at/people/aminof/">Benjamin Aminof</a> (Vienna, Austria)</h4>
+												<h5>Parametrised Model Checking of Multi-token Systems via the Composition Method</h5>
+												<p></p>
+											</div>
+										</article>
+
+										<article>
+											<a href="#" class="image"><img src="images/berard.jpg" alt="Béatrice Bérard" /></a>
+											<div class="inner">
+												<h4 id="berard"><a href="https://pages.lip6.fr/Beatrice.Berard/">Béatrice Bérard</a> (Paris, France)</h4>
+												<h5>Polynomial Interrupt Timed Automata</h5>
+												<p>Interrupt Timed Automata (ITA) form a subclass of stopwatch automata 
+where reachability and some variants of timed model checking are decidable 
+even in presence of parameters. They are well suited to model and analyze 
+real-time operating systems. We extend ITA with polynomial guards 
+and updates, leading to the class of polynomial ITA (PolITA). We prove that 
+reachability is decidable in 2EXPTIME on PolITA, using an adaptation of the 
+cylindrical algebraic decomposition algorithm for the first-order theory of reals. 
+We also obtain decidability for the model checking of a timed version of CTL 
+and for reachability in several extensions of PolITA. In particular, compared 
+to previous approaches, our procedure handles parameters and clocks in a 
+unified way. We also study expressiveness questions for PolITA and show 
+that PolITA are incomparable with stopwatch automata.</p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="#" class="image"><img src="images/bouajjani.jpg" alt="Ahmed Bouajjani" /></a>
+											<div class="inner">
+												<h4 id="bouajjani"><a href="https://www.irif.fr/~abou/">Ahmed Bouajjani</a> (Paris, France)</h4>
+												<h5>Parametric verification of concurrent programs over the Total Store Ordering weak memory model</h5>
+												<p>
+We address the verification of safety properties of shared memory 
+concurrent programs running over TSO. In this model, writes to a shared 
+memory can be delayed and be not visible immediately to other threads, 
+and reads can overtake pending writes issued by the same process. This 
+can be modelled as the effect of using store buffers. We consider first 
+this safety verification problem assuming that store buffers can be of 
+an arbitrary size, and then we address the problem where in addition the 
+number of threads can also be arbitrarily large. This is indeed 
+motivated by the fact that programs should be robust against changes in 
+the parameters of the underlying infrastructure such as the size of 
+buffers or the number of processors. For that, we introduce a dual (yet 
+equivalent) semantics for TSO where load buffers are used instead of 
+store buffers, and where the flow of information is from the memory to 
+load buffers. We show that this new semantics leads to a simple and 
+efficient decision procedure for the considered safety verification 
+problem.</p>
+
+<p>This talk is based on two articles:</p>
+<ol>
+<li>On the verification problem for weak memory models,
+by M. F. Atig, A. Bouajjani, S. Burckhardt, and M. Musuvathi. In POPL 2010.</li>
+
+<li>The Benefits of Duality in Verifying Concurrent Programs under TSO,
+by P. A. Abdulla, M. F. Atig, A. Bouajjani, and T. P. Ngo. In CONCUR 2016.</li>
+</ol>
+											</div>
+										</article>
+										
+										<article>
+											<a href="#" class="image"><img src="images/finkel.jpg" alt="Alain Finkel" /></a>
+											<div class="inner">
+												<h4 id="finkel"><a href="http://www.lsv.ens-cachan.fr/~finkel/">Alain Finkel</a> (Cachan, France)</h4>
+												<h5><a href="https://arxiv.org/abs/1608.02636">WBTS: the new class of WSTS without WQO</a></h5>
+												<p>We present the ideal framework [FG09a,BFM14] which was recently used to obtain new deep results on Petri nets and
+extensions. If time, we will present the proof of the famous but unknown Erdös-Tarski theorem.
+We argue that the theory of ideals prompts a renewal of the theory of WSTS by providing a way to define a new class of monotonic systems, the so-called Well Behaved Transition Systems, which properly contains WSTS, and for which coverability is still decidable by a forward algorithm.</p>
+												<p><em>This presents the paper <a href="https://arxiv.org/abs/1608.02636"> Well Behaved Transition Systems</a>, by  Michael Blondin, Alain Finkel and Pierre McKenzie.</em></p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="#" class="image"><img src="images/katoen.jpg" alt="Joost-Pieter Katoen" /></a>
+											<div class="inner">
+												<h4 id="katoen"><a href="http://www-i2.informatik.rwth-aachen.de/~katoen/">Joost-Pieter Katoen</a> (Aachen, Germany)</h4>
+												<h5>Advancing Parameter Synthesis in Markov Models</h5>
+												<p>A major practical obstacle is that probabilistic model checking assumes
+that all probabilities (rates) in Markov models are known a priori.
+However, at early development stages, certain system quantities such as
+fault rates, reaction rates, packet loss ratios, etc. are often not — or
+at the best partially — known. In such cases, parametric models can be
+used, where transition probabilities are specified as arithmetic
+expressions over real-valued parameters.</p>
+
+<p>This talk considers the problem of parameter synthesis is: Given a
+finite-state parametric Markov model, what are the parameter values for
+which a given (conditional) reachability property exceeds a given
+threshold? Put differently, what probabilities in the system are
+tolerable such that the overall probability to reach some critical
+states is below a given threshold like 10<sup>-8</sup>? We present an exact
+approach using SMT techniques, an approximate technique using parameter
+lifting, and briefly mention a new approach using geometric programming.</p>
+											</div>
+										</article>
+										
+										
+										<article>
+											<a href="https://www.doc.ic.ac.uk/~pk3510/" class="image"><img src="images/kouvaros.jpg" alt="Panagiotis Kouvaros" /></a>
+											<div class="inner">
+												<h4 id="kouvaros"><a href="https://www.doc.ic.ac.uk/~pk3510/">Panagiotis Kouvaros</a> (London, England)</h4>
+												<h5>Parameterised Verification for Multi-Agent Systems</h5>
+												<p>Interpreted systems is the main formalism to model multi-agent systems;
+they provide a natural setup to interpret specifications in a variety of
+agent-based languages including temporal-epistemic logic. In this talk I
+will introduce parameterised interleaved interpreted systems, an extension
+of interpreted systems to  describe multi-agent systems of arbitrarily many
+agents.  On this formal setting I will present cutoff-based methodologies
+for their parameterised verification. I will then extend these to alleviate
+the common limitation to model agents as finite-state structures, and
+discuss a technique to verify their fault-tolerance.  Finally I will
+discuss an application to the emergence identification problem of robotic
+swarms and experimental results obtained on MCMAS-P, a tool realising these
+techniques.
+</p>
+											</div>
+										</article>
+										
+										
+										<article>
+											<a href="http://people.cs.aau.dk/~kgl/" class="image"><img src="images/larsen.jpg" alt="Kim G. Larsen" /></a>
+											<div class="inner">
+												<h4 id="larsen"><a href="http://people.cs.aau.dk/~kgl/">Kim G. Larsen</a> (Aalborg, Denmark)</h4>
+												<h5>Minimizing Markov Chains Beyond Bisimilarity</h5>
+												<p>We address the behavioral metric-based approximate minimization problem of Markov Chains (MCs), i.e., given a ﬁnite MC and a positive integer k, we are interested in ﬁnding a k-state MC of minimal distance to the original. By considering as metric the bisimilarity distance of Desharnais at al., we show that optimal approximations always exist; show that the problem can be solved as a bilinear program; and prove that its threshold problem is in PSPACE and NP-hard. Finally, we present an approach inspired by expectation maximization techniques that provides suboptimal solutions. Experiments suggest that our method gives a practical approach that outperforms the bilinear program implementation run on state-of-the-art bilinear solvers.</p>
+												
+											</div>
+										</article>
+
+
+										<article>
+											<a href="#" class="image"><img src="images/ruemmer.jpg" alt="Philipp Rümmer" /></a>
+											<div class="inner">
+												<h4 id="ruemmer"><a href="http://www.philipp.ruemmer.org/">Philipp Rümmer</a> (Uppsala, Sweden)</h4>
+												<h5>Analysis of parameterised timed systems using Horn constraints</h5>
+												<p>Languages based on the theory of timed automata are a well established
+approach for modelling and analysing real-time systems, with many
+applications both in industrial and academic context. Model checking
+for timed automata has been studied extensively during the last two
+decades; however, even now industrial-grade model checkers are
+available only for few timed automata dialects (in particular Uppaal
+timed automata), exhibit limited scalability for systems with large
+discrete state space, or cannot handle parametrised systems. We
+explore the use of Horn constraints and off-the-shelf model checkers
+for analysis of networks of timed automata.  The resulting analysis
+method is fully symbolic and applicable to systems with large or
+infinite discrete state space, and can be extended to include various
+language features, for instance Uppaal-style communication/broadcast
+channels and BIP-style interactions, and systems with infinite
+parallelism. Experiments demonstrate the feasibility of the method.</p>
+<p>Joint work with Hossein Hojjat, Pavle Subotic, Wang Yi</p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="#" class="image"><img src="images/safranek.jpg" alt="David Šafránek" /></a>
+											<div class="inner">
+												<h4 id="safranek"><a href="http://www.fi.muni.cz/~xsafran1/">David Šafránek</a> (Brno, Czech Republic)</h4>
+												<h5>Parameter synthesis in dynamical systems by model checking</h5>
+												<p>We will present a method for parameter synthesis in parametrised dynamical systems from CTL specifications. The method works with a dynamical system represented in terms of a finite-state transition system with parametrised transition relation. Technically, the method is based on model checking algorithms adapted to such kind of transition systems. Depending on a particular class of systems, the underlying algorithms can gain advantages from efficient symbolic representations of sets of parameter valuations. We will show several examples of such systems and respective representations. To demonstrate the method, we will describe applications to models representing dynamics of biological systems with complex non-linear behaviour. Additionally, we will discuss an extension of the parameter synthesis method that allows to address the problem of bifurcation analysis (dramatic changes of systems behaviour with respect to small changes in parameter values). To this end, we introduce a specialised version of hybrid CTL. This allows us to describe various behaviour patterns that make a fundamental basis for formalisation of specific problems of bifurcation analysis. </p>
+											</div>
+										</article>
+										
+											<article>
+											<a href="#" class="image"><img src="images/sunjun.jpg" alt="Sun Jun" /></a>
+											<div class="inner">
+												<h4 id="sunjun"><a href="http://people.sutd.edu.sg/~sunjun/">Sun Jun</a> (Singapore)</h4>
+												<h5>Parameterized Verification of Timed Security Protocols with Clock Drift</h5>
+												<p>Time is frequently used in security protocols to provide better security. For instance, critical credentials often have limited lifetime which improves the security against brute-force attacks. However, it is challenging to correctly use time in protocol design. In this work, we develop a systematic method to formally specify as well as automatically verify timed security protocols. We first apply timed applied π-calculus as a formal specification language for timed protocols. Then, we define its formal semantics based on timed logic rules, which facilitates efficient verification against various security properties. Timing constants in the protocol and clock drift are encoded as parameters in the rules. The verification result shows the constraints on the parameters which must be satisfied for the security of the protocol. We evaluate our method with multiple timed security protocols. We find a time related security threat in the TESLA protocol, a complex time-related broadcast protocol for lossy channels, when the clocks used by different protocol participants do not share the same clock rate.</p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="#" class="image"><img src="images/zuleger.jpg" alt="Florian Zuleger" /></a>
+											<div class="inner">
+												<h4 id="zuleger"><a href="http://forsyte.at/people/zuleger/">Florian Zuleger</a> (Vienna, Austria)</h4>
+												<h5>Liveness of Parameterized Timed Networks</h5>
+												<p>We consider the model checking problem of infinite state systems given in the form of parameterized discrete timed networks with multiple clocks. We show that this problem is decidable with respect to specifications given by B- or S-automata. Such specifications are very expressive (they strictly subsume omega-regular specifications), and easily express complex liveness and safety properties. Our results are obtained by modeling the passage of time using symmetric broadcast, and by solving the model checking problem of parameterized systems of untimed processes communicating using k-wise rendezvous and symmetric broadcast. Our decidability proof makes use of automata theory, rational linear programming, and geometric reasoning for solving certain reachability questions in vector addition systems; we believe these proof techniques will be useful in solving related problems.</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Past editions -->
+							<section id="past">
+								<div class="container">
+									<h3>Past editions</h3>
+										<h4>SynCoP</h4>
+										<ul class="alt">
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2016/">SynCoP 2016</a>, Eindhoven, The Netherlands</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2015/">SynCoP 2015</a>, London, UK</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2014/">SynCoP 2014</a>, Grenoble, France</li>
+										</ul>
+
+										<h4>PV</h4>
+										<ul class="alt">
+											<li><a href="http://pv.dibris.unige.it/">PV 2015</a>, Madrid, Spain</li>
+											<li><a href="http://www.disi.unige.it/person/DelzannoG/PV/PV14/">PV 2014</a>, Roma, Italy</li>
+										</ul>
+								</div>
+							</section>
+
+						<!-- Venue -->
+							<section id="venue">
+								<div class="container">
+									<h3>Venue and registration</h3>
+									<p>SynCoP + PV 2017 is a satellite event of <a href="http://www.etaps.org/2017/">ETAPS 2017</a>, that takes place in <a href="https://en.wikivoyage.org/wiki/Uppsala">Uppsala, Sweden</a>.</p>
+									
+									<p>The workshops take place in room Lärosal 12:230, in the brand new <a href="http://www.etaps.org/index.php/2017/venues">Campus Blåsenhus</a>, not far from Uppsala City Center.</p>
+									
+									<p>For more information, see the <a href="http://www.etaps.org/2017/">ETAPS 2017</a> Web site:</p>
+										<ul class="feature-icons">
+											<li class="fa-pencil"><a href="http://www.etaps.org/index.php/2017/registration">Registration</a></li>
+											<li class="fa-bed"><a href="http://www.etaps.org/index.php/2017/travel">Accommodation and travel</a></li>
+										</ul>
+								</div>
+						</section>
+
+						<!-- Contact -->
+							<section id="pictures">
+								<div class="container">
+									<h3>Photo gallery</h3>
+									
+	<a href="photos/SynCoP-00.jpg"><img src="photos/SynCoP-00-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-01.jpg"><img src="photos/SynCoP-01-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-02.jpg"><img src="photos/SynCoP-02-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-03.jpg"><img src="photos/SynCoP-03-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-04.jpg"><img src="photos/SynCoP-04-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-05.jpg"><img src="photos/SynCoP-05-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-06.jpg"><img src="photos/SynCoP-06-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-07.jpg"><img src="photos/SynCoP-07-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-08.jpg"><img src="photos/SynCoP-08-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-09.jpg"><img src="photos/SynCoP-09-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-10.jpg"><img src="photos/SynCoP-10-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-11.jpg"><img src="photos/SynCoP-11-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-12.jpg"><img src="photos/SynCoP-12-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-13.jpg"><img src="photos/SynCoP-13-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-14.jpg"><img src="photos/SynCoP-14-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-15.jpg"><img src="photos/SynCoP-15-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-16.jpg"><img src="photos/SynCoP-16-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-17.jpg"><img src="photos/SynCoP-17-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoP-18.jpg"><img src="photos/SynCoP-18-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Étienne André)"></a>
+	<a href="photos/SynCoPPV-01.jpg"><img src="photos/SynCoPPV-01-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-02.jpg"><img src="photos/SynCoPPV-02-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-03.jpg"><img src="photos/SynCoPPV-03-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-04.jpg"><img src="photos/SynCoPPV-04-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-05.jpg"><img src="photos/SynCoPPV-05-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-06.jpg"><img src="photos/SynCoPPV-06-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-07.jpg"><img src="photos/SynCoPPV-07-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-08.jpg"><img src="photos/SynCoPPV-08-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>
+	<a href="photos/SynCoPPV-09.jpg"><img src="photos/SynCoPPV-09-thumb.png" alt="SynCoP + PV workshop 2017 (photo: Giorgio Delzanno)"></a>								</div>
+						</section>
+						
+						<!-- Contact -->
+							<section id="contact">
+								<div class="container">
+									<h3>Contact</h3>
+									<ul class="feature-icons">
+										<li class="fa-graduation-cap"><a href="http://www.disi.unige.it/person/DelzannoG/">Giorgio Delzanno</a> (PV)</li>
+										<li class="fa-graduation-cap"><a href="http://www.liafa.jussieu.fr/~haberm/">Peter Habermehl</a> (SynCoP)</li>
+										<li class="fa-television"><a href="http://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Web page)</li>
+									</ul>
+								</div>
+						</section>
+						
+						
+					</div>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Site maintained by Étienne André</li><li>Content released under Creative Commons CC-BY-SA 3.0.</li>
+							</ul>
+							<ul class="copyright">
+								<li>Design: <a href="https://html5up.net/read-only">read-only</a> by <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Three crowns: <a href="https://commons.wikimedia.org/wiki/File:Flygvapnet_roundel.svg">slady</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+	</body>
+</html>

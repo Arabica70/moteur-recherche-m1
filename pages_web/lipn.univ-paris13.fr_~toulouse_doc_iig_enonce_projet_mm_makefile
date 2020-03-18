@@ -1,0 +1,33 @@
+# ____ parametres de compilation
+CFLAGS= -Wall --pedantic
+
+# ____ generation
+
+# excecutables
+all: jeu.exe
+
+# jeu
+jeu: jeu.exe
+
+jeu.exe: jouer_mastermind.o mastermind.o essai.o combinaison.o
+	gcc jouer_mastermind.o mastermind.o essai.o combinaison.o -o jeu.exe
+
+jouer_mastermind.o: jouer_mastermind.c mastermind.h
+	gcc -c jouer_mastermind.c -o jouer_mastermind.o $(CFLAGS)
+
+mastermind.o: mastermind.c mastermind.h
+	gcc -c mastermind.c -o mastermind.o $(CFLAGS)
+
+essai.o: essai.c essai.h
+	gcc -c essai.c -o essai.o $(CFLAGS)
+
+combinaison.o: combinaison.c combinaison.h
+	gcc -c combinaison.c -o combinaison.o $(CFLAGS)
+
+# ____ nettoyage
+clean:
+	rm -rf *.o
+
+mrproper: clean 
+	rm -rf *.exe
+

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="font-awesome.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+	<!-- Web-Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<!-- //Web-Fonts -->
+</head>
+<body>
+<div class="wrap">
+	<div class="container">
+		<div class="logo text-center">
+			<h1><a href="index.html">SMODIC</a></h1>
+			<p class="sub-tittle text-white mt-2">A Model Checker for Self-Modifying Code</p>
+		</div>
+	</div>
+<div class="container">
+<div class="main">
+ <header>
+		<div class="px-lg-5 ">
+			<nav class="mnu mx-auto">
+                      <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop">
+                        <ul class="menu">
+                            <li class="mr-lg-4 mr-3 active"><a href="index.html">Home</a></li>
+							<li class="mr-lg-4 mr-3"><a href="#about" class="scroll">Overview</a></li>
+							<li class="mr-lg-4 mr-3"><a href="#arc" class="scroll">Architecture</a></li>
+							 <li class="mr-lg-4 mr-3"><a href="#Downloads" class="scroll">Downloads</a></li>
+                            <li class="mr-lg-4 mr-3"><a href="#Manual" class="scroll">Manual</a></li>
+							<li class="mr-lg-4 mr-3"><a href="#start" class="scroll">Quick Start</a></li>
+							<li class="mr-lg-4 mr-3"><a href="#reference" class="scroll">Reference</a></li>
+                        </ul>
+                    </nav>
+		</div>
+	</header>
+	
+	<!-- //header -->
+	<section class="banner-bottom" id="about">
+            <div class="inner-sec">
+                <div class="row middle-grids">
+                    
+                        <div >
+                             <h2 class="heading text-capitalize mb-sm-5 mb-4">Overview</h2>
+                             <h> SMODIC is a model checker for self-modifying binary code. SMODIC uses  <a href="#reference" >
+  Self Modifying Pushdown Systems (SM-PDS)[1][2] </a> to model self-modifying binary code.  This allows to  faithfully represent the
+  program's  stack as well as the self-modifying instructions of the program.
+  SMODIC takes a  self-modifying binary code or a  self modifying pushdown system as input. It can then perform
+  reachability analysis and LTL/CTL model-checking for these models.
+  We successfuly used SMODIC to model-check  more than 900 self-modifying binary codes. In particular, we applied SMODIC
+  for malware detection, since malwares usually use self-modifying instructions, and since  malicious behaviors can be described by LTL or CTL formulas. 
+  In our experiments, SMODIC was able to  detect 895 malwares and to prove that 22 benign programs were benign.
+  SMODIC was also able to detect several malwares that well-known antiviruses such as Bit-Defender, Kinsoft, Avira, eScan, Kaspersky, Baidu, Avast, and Symantec failed to detect.</h>
+                        <br />
+                        <br />
+                        					</div>        
+                </div>
+            </div>
+    </section>
+    <section class="banner-bottom" id="arc">
+            <div class="inner-sec">
+                <div class="row middle-grids">
+                    
+                        <div >
+                         <h2 class="heading text-capitalize mb-sm-5 mb-4">Architecture</h2>
+                             <h>The Architecture of SMODIC is shown in the Figure below. </h>
+                             <br />
+                             <div class="row middle-grids">
+							<img src="smodic.png" width="800" height="300"/> </div>
+							
+							<br />
+<h>SMODIC takes as input either a  binary program or  a SM-PDS.  SMODIC can perform both reachability analysis and LTL/CTL model checking.
+</h>
+<br />
+<div>
+							<h> If the input of SMODIC is a binary program, it is passed to the component  Oracle. This component is based on the disassembler <a href="http://www.jakstab.org">Jakstab</a>. It takes as input a  binary program, and outputs  its corresponding assembly program, its corresponding Control Flow Graph (CFG) equipped with the assembly instructions corresponding to
+  each edge, together with informations about the  called API functions, and the different values   of the
+  registers and memory addresses at each control point (state).  All these outputs are fed to the component 
+ Model Builder that will compute the corresponding SM-PDS.
+
+  The  Reachability component takes as input a SM-PDS, and a sequence of API functions, and checks whether the SM-PDS has a 
+run that calls these API functions in this order.
+  For example, if we consider the sequence   f1, f2, f3, then the  Reachability component checks whether the SM-PDS has a run that calls first f1, then  f2, then f3.
+
+ The LTL component takes as input a SM-PDS and an LTL formula, and  
+checks whether the SM-PDS satisfies the LTL formula. Similarly, the CTL 
+component takes as input a SM-PDS and a CTL formula, and checks whether 
+the SM-PDS satisfies the CTL formula.
+</h>
+                                              </div>
+							
+							
+                                             
+						</div>        
+                </div>
+            </div>
+    </section>
+    
+    <section class="banner-bottom" id="Downloads">
+                <div class="inner-sec">
+                <div class="row middle-grids">
+                    
+                        <div >
+                             <h2 >Downloads</h2>
+                              <div  class="agileits-services-row row py-lg-5 pb-5 text-center">
+                                        <h6> SMODIC can be obtained here:  <a href="SMODIC.zip" download="SMODIC.zip"> SMODIC</a>.</h6> 
+                                         <h6>  It uses the following libraries:</h6>
+
+                              </div>
+                              <ul>
+   <li> <a href="http://www.sable.mcgill.ca/~ebodde/rv/ltl2ba4j/"> LTL2BA4J </a></li>
+    <li><a href="https://www.antlr.org"> ANTLR </a>  </li>
+    <li> <a href="https://jar-download.com/artifacts/com.google.collections/google-collections" >google-collenction-10.jar </a> </li>
+    <li><a href="https://jgrapht.org">Jgrapht</a> </li>
+  
+</ul>	
+                        </div> 
+               </div>
+            </div>
+               
+               
+    </section>
+	
+	<!-- stats -->
+	<section class="banner-bottom" id="Manual">
+            <div class="inner-sec">
+                <div class="row middle-grids">
+                    
+                        <div >
+                             <h2 >Manual</h2>
+                              <div  class="agileits-services-row row py-lg-5 pb-5 text-center">
+                                        <h6>  To be able to use the SMODIC, you need to be familiar with the syntax of the logics LTL and CTL. The implementation of LTL and CTL operators in SMODIC are as follows:</h6>
+                                             </div>
+                                         
+                                          <div>
+                                       
+                                        <table border="1" width="45%"  cellpadding="2" style="float: left;margin: 0px;padding: 0px;">
+        <tr align="center">
+            <td colspan="1">Operators for LTL formulas</td>
+            <td>&nbsp; </td>
+           
+        </tr>
+
+        <tr align="center">
+            <td rowspan="3">Propositonal Symbols:</td>
+            <td> true</td>
+          
+            
+        </tr>
+
+        <tr align="center">
+            <td>false</td>
+           
+            
+        </tr>
+        <tr align="center">
+            <td>any lowercase string</td>
+          
+            
+        </tr>
+
+ 
+
+        <tr align="center">
+            <td rowspan="5">Boolean operators</td>
+            <td> !   (negation) </td>
+           
+           
+        </tr>
+
+        <tr align="center">
+           
+        </tr>
+        
+         <tr align="center">
+            <td> &lt;-&gt; (equivalence) </td>
+        </tr>
+          <tr align="center">
+            <td>  &&  (and) </td>
+        </tr>
+         <tr align="center">
+            <td> ||  (or) </td>
+        </tr>
+         <tr align="center">
+            <td rowspan="5">Temporal operators</td>
+            <td>  [] p  (p always holds) </td>
+           
+           
+        </tr>
+
+        <tr align="center">
+            <td> &lt;&gt; p   (eventually p holds) </td>
+        </tr>
+        
+         <tr align="center">
+            <td> p U q  (p holds until q holds)</td>
+        </tr>
+         <tr align="center">
+            <td>X p  (p holds next time) </td>
+    </table>
+    
+     <table border="1" width="45%"  cellpadding="2"style="float: right;margin: 0px;padding: 0px;">
+       
+        <tr align="center">
+            <td colspan="1">Operators for CTL Formulas </td>
+            <td>&nbsp; </td>
+           
+        </tr>
+
+        <tr align="center">
+            <td rowspan="3">Propositonal Symbols:</td>
+            <td>  tt（true）</td>
+          
+            
+        </tr>
+
+        <tr align="center">
+            <td> ff(false)</td>
+           
+            
+        </tr>
+        <tr align="center">
+            <td>any lowercase string</td>
+          
+            
+        </tr>
+ <tr align="center">
+            <td rowspan="2">  Path quantifiers</td>
+            <td> A  (for all paths) </td>
+                
+        </tr>
+     <tr align="center">
+            <td>  E (there exists a path) </td>
+        </tr>
+
+        <tr align="center">
+            <td rowspan="3">Boolean operators</td>
+            <td> !   (negation) </td>
+           
+           
+        </tr>
+
+          <tr align="center">
+            <td>  &&  (and) </td>
+        </tr>
+         <tr align="center">
+            <td> ||  (or) </td>
+        </tr>
+         <tr align="center">
+            <td rowspan="3">Temporal operators</td>
+           <td> Xp   (p holds next time) </td>
+           
+           
+        </tr>
+
+         <tr align="center">
+            <td>  pRq   (p holds until q does't hold)</td>
+        </tr>
+          <tr align="center">
+            <td>  pUq   (p holds until q holds) </td>
+        </tr>
+  
+    </table>
+  </div>
+  
+              
+   
+    	</div>
+    </div>
+    </section>
+		<section class="banner-bottom" id="start">
+            <div class="inner-sec">
+                <div >
+                    
+                        <div >
+                             <h2 >Quick Start</h2>
+                              <div  class="agileits-services-row row py-lg-5 pb-5 ">
+                                       
+                                       
+                                 
+   		
+   				 <div float:left>
+   				  <h6>  After downloading the above file, we can execute SMODIC by the following  commands</h6>
+                                  
+   <ul>
+   <li  text-align:left><h6> ./SMODIC  &lt; option1 &gt;  &lt; modelfile &gt;  &lt; option2 &gt; &lt; formula  &gt; </h6></li>
+   </ul>
+
+  	<br />
+	<ul>
+  <li> Option1 specifies  the input file of SMODIC:
+  <ul>
+   <li> -M:  the input is a SM-PDS model. </li>
+    <li> -B:  the input is a binary program </li>
+    </ul>
+    
+  <br />
+  <li> Option2 specifies  the model checking strategy:
+  <ul>
+   <li> -L:  use the LTL model checking algorithm </li>
+    <li> -C:  use  the CTL model checking algorithm </li>
+     <li> -R1: perform the  Reachability Analysis using pre* </li>
+     <li> -R2: perform the Reachability Analysis using post* </li>
+    </ul>
+  <br />
+  <li>The model file can be either a program or a SM-PDS (.smpds file).  The output have three files: one for the Control Flow Graph, 
+one for assembly codes,  and one for the generated SM-PDS.
+A SM-PDS consists of four parts: a finite set of standard PDS transition rules, a finite set of self-modifying transition rules, an initial phase (the initial set of transition rules) and an initial configuration (initial control location equipped with the stack contents). </li>
+  <li>In order to show this, we will use the following command to check   whether the program cmd.exe can eventually call the API  function  GetModuleA or not. For this case, we execute the following command:
+ </h6>
+   <h6> ./SMODIC 	B	  cmd.exe L "&lt; &gt; getmodulea" </h6></li>
+</ul>	
+  <br />
+ </div>
+   <br />
+      <div  class="main">
+                                   <img src="pic1.jpg" width="500" height="200"> 
+                                   <br />
+<br />
+                                        <h6>Here  is the snapshot of the command to start SMODIC. In this command, “B" is Option1 specifying that the input is a binary program. ”L" specifies that the strategy of model checking is LTL.&lt; &gt; getmodulea is the LTL formula  F (call GetModuleA). </h6>
+                             <br />
+                              
+<br />
+<br />
+<br />
+<h> <b> Reachability Analysis in SMODIC </b> </h>
+<br />
+<br />
+<br />
+ <h> Let us show how to use SMODIC to perform reachability analysis on SMPDSs 
+and self-modifying code.
+To start the reachability analysis, we need to specify the options. Let 
+us
+consider Option1 B, and Option2 R2(or R1). We also need to specify the 
+sequence of API
+functions. For example, to  perform the reachability analysis on the 
+sequence of
+API functions "Call GetModuleA", "Call CopyFile" , "call SendFile", we put the names of the functions in lowercase and use the symbol ";" to 
+separate
+the names. To use the  post* approach to check  whether the above  
+sequence of
+API functions can be reached or not, we use the following command(see the following figure): ./SMODIC B malware/cmd.exe R2 getmodulea;copyfile;sendfile</h>
+                                    <br />
+<br />     
+                                           <img src="startR.jpg" width="500" height="200"/>
+  <br />
+<br />   
+<h> The result is shown in the figure below: </h>                                      
+<br /> 
+<br /> 
+<img src="post.jpg" width="500" height="200"/>
+  <br />
+  <br /> 
+  <br />
+<h><b> LTL/CTL Model Checking in SMODIC</b> </h>
+<br />
+<br /> 
+<br />
+<h> We show how to apply LTL/CTL model checking to malware detection. Let us take a spy worm as example. Such a worm   can record  data and send it  using the Socket API functions. For example, Keylogger  is a spy worm that  can record the keyboard states by calling the API functions GetAsyKeyState  and GetKeyState 
+and send this to the specific server by calling the socket function sendto. This behavior can be specified by the
+following LTL formula: F ((call GetAsyncKeyState &or; call GetRawInputData)&and; F( call sendto &or;call  send)).</h>
+
+<h>To check whether the program cmd.exe satisfies this formula or not, first, we need to rewrite this formula to the form supported by our tool SMODIC. Because all the propositions are lowercase strings,  we rewrite API function calls (like call GetAsyncKeyState) by removing the word "call" and changing the name of the function in lowercase string. The operators are in <a href="http://spinroot.com/"> spin</a> syntax.  Thus, the formula  is rewritten as: </h>
+<br />
+<h> &lt; &gt; ((getasynckeystate || getrawinputdata)&& &lt; &gt; ( sendto ||  send)) </h>
+<br />
+<br />
+<br />
+<br />
+<img src="command.jpg" width="500" height="200"/>
+<br />
+<br />
+<br />
+<h>So, we can check  whether the program cmd.exe satisfies this formula or not  by using the following command (shown in the figure above):</h>
+<br />
+<br /> 
+<h> ./SMODIC B malware/cmd.exe	L  "&lt; &gt;  ((getasynckeystate || getrawinputdata)&&  &lt; &gt;( sendto ||  send))". </h>
+ 
+ <br />                                     
+<h>The result is shown in the figure below. The result of the computation is that there is no accepting run. The output of the tool is No, i.e. cmd.exe is not a spyware. </h>
+ <br />
+ <br />
+ <img src="Ltl.png" width="500" height="150"/> 
+ <br />
+<br />
+                        </div>
+                                             </div>
+                                       
+						</div>
+                  
+                </div>
+            </div>
+    </section>
+    <section class="banner-bottom" id="reference">
+            <div class="inner-sec">
+                <div class="row middle-grids">
+                    
+                        <div >
+                             <h2 class="heading text-capitalize mb-sm-5 mb-4">References</h2>
+                            
+<div>
+<br />
+							<h>  <a href="https://ieeexplore.ieee.org/abstract/document/8292809">[1] Tayssir Touili and Xin Ye. "Reachability analysis of self modifying code." 22nd International Conference on Engineering of Complex Computer Systems (ICECCS). IEEE, 2017. </a>
+</h>
+<br />
+<h>  [2] Tayssir Touili and Xin Ye. "LTL model checking of self modifying code." 24th International Conference on Engineering of Complex Computer Systems (ICECCS). IEEE, 2019. 
+</h>
+                                              </div>
+			
+							
+                                             
+						</div>        
+                </div>
+            </div>
+    </section>
+	<!-- //stats -->
+	
+	<!-- //content-inner -->
+</div>
+</div>
+	
+	<!-- footer -->
+	
+		<div >
+			<p class="copy-right text-center text-white pt-xl-5 pt-4">Project maintained by Tayssir Touili and Xin Ye.</p>
+		</div>
+	</footer>
+	</div>
+	<!-- //footer -->
+</div>	
+</body>
+</html>

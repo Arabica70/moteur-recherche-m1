@@ -1,0 +1,197 @@
+\section{EVOLUTIVE GIS FORMALISM}
+
+We adopt the feature-based approach, where features are the fundamental concept for the representation of geographical phenomena as described in \cite{Tang}.\\
+
+Basically, a GDB is represented in a minimal formalism, by the pair 
+$$(\mathcal{V,~D})$$ where:
+\begin{enumerate}
+\item $\mathcal{V}$ is the set of the classes used in the GDB. 
+Each class gathers features which have common characteristics. The set
+$\mathcal{V}$ gathers GDB scheme elements.  
+\item $\mathcal{D}$ is the definition domain of the variables of $\mathcal{V}$. 
+It is the set of the objects of one GDB instance.
+The heterogeneity of objects which belong to a GDB needs their classification for a better use. We consider 4 classes of objects which are spread over two information levels: the {\it geometric} level which gathers geometric primitives $\mathcal{PG}$ and the geometric objects $\mathcal{OG}$, and the {\it semantic} level which gathers simple semantic objects $\mathcal{OS}$ and complicated semantic objects $\mathcal{OC}$. 
+           $$ \mathcal{D} =~ \mathcal{PG}~ \cup ~\mathcal{OG}~ \cup ~\mathcal{OS}~ \cup ~\mathcal{OC}$$ 
+\end{enumerate}
+ 
+The proposed model for a GDB which allows to evolve through updating operations must add some complementary sets which will manage some dependences between the geographical elements. So the model is composed of a quadruplet 
+$$(\mathcal{V,~D,~R,~C})$$ where, in addition:
+\begin{enumerate}
+\item The connection graph over the GDB elements is based on relations between these elements. $R$ is the set of these relations. In our object representation, these relations correspond to relations between GDB basic objects. The different kinds of relations that we consider are: composition relations $\mathcal{R^C}$, dependence relations $\mathcal{R^D}$ and topologic relations $\mathcal{R^T}$. 
+
+                                $$\mathcal{R} =~\mathcal{R}^C~ \cup ~\mathcal{R}^D~ \cup ~\mathcal{R}^T$$ 
+\item $\mathcal{C}$ is the set of constraints defined between the variables of $\mathcal{V}$
+ and/or between variables value of $\mathcal{V}$. 
+ In our object modelization, this corresponds to constraints defined between the classes (constraints between variable) and/or between objects (constraints between values). 
+ These constraints manage the GDB evolution on many levels, so we need to classify them inside different categories corresponding to the concerned aspect of evolution.
+ On the first level, we have classify these constraints in {\em structural} constraints and in {\em non structural} constraints. 
+\end{enumerate}
+
+This quadruplet corresponds to the GDB modelisation to prepare it to evolution.\\ 
+
+Finally, to effectively manage evolution processes, we have to modelize the updating informations in accordance with the GDB conceptual model. We note $\mathcal{M}$ the updating set where basis action is the transaction and the full model for the GDB is the 5-uplet
+$$(\mathcal{V,~D,~R,~C,~M})$$.
+%
+
+
+\subsection{Features representation}
+Objects stored in a GDB constitute different components of CGIS at different levels : geometric and semantic level. 
+%objects are decomposed in four class: geometric primitives (point, line or area), geometric objects (composed with primitives), elementary semantic objects and complex semantic objects (aggregation of elementary semantic objects)
+\begin{definition}
+Given $\mathcal{PG}$ the geometric primitives set and $T=\{P,~L,~S\}$ the set of possible types for geometric primitives where $P$ represent the points, $L$ represent the lines et $S$ represent the surfaces; We then define the function $~~ \mathbf{type}$ define from $\mathcal{PG}$ to $T$ and which gives a type to each geometric primitives.
+\end{definition}
+%
+%\begin{definition}
+%Soit $\mathcal{OG}$ l'ensemble des objets g\'eom\'etriques. Un objet g\'eom\'etrique $Og$ de $\mathcal{OG}$ est un %couple $(OB, OR)$ tel que~:
+%\begin{itemize}
+%\item $OB$ est un sous-ensemble de cardinalit\'e sup\'erieure ou \'egale \`a 2 de $\mathcal{PG}$~;
+%\item $OR$ est un ensemble de relations binaires entre les paires de primitives g\'eom\'etriques de $Og$ tel que $OR %\subset \mathcal{R}$ (l'ensemble de toutes les relations poissibles entre objets).
+%\end{itemize}
+%\end{definition}
+\begin{definition}
+A geometric  object $Og$ of $\mathcal{OG}$ is a pair $(OB, OR)$ such that~:
+\begin{itemize}
+\item $OB$ is a subset of $\mathcal{PG}$ possessing more than 2 elements~;
+\item $OR$ is a set of binary relations between pairs of geometric primitives of $Og$ such that $OR \subset \mathcal{R}$ (the latter being the set of all the possible binary relations between objects).
+\end{itemize}
+Let $\mathcal{OG}$ be the set of geometric objects.
+\end{definition}
+\begin{exemple}
+%
+The geometric object $Og$ in figure \ref{ObjetGeometrique} is one of the possible geometries for the object ``round-about''.\\
+%%MODIF_EXPRESSION
+%{\footnotesize
+
+$\begin{array}{lcl}
+Og  &=  &(OB, OR)\textrm{ with~:}\\~& & \\
+OB	&=	&\{p_1,p_2,p_3,p_4,p_5\}\\
+& &\textrm{ where }\mathbf{type}(p_i)=L\textrm{ for }1\leq i \leq 5\\~& &\\
+OR	&=	&
+			\left\{
+			\begin{array}{llll}
+			\mathbf{t}(p_1,p_2), &\mathbf{t}(p_1,p_3), &\mathbf{t}(p_1,p_4), &\mathbf{t}(p_1,p_5),\\
+			\mathbf{t}(p_2,p_1), &\mathbf{t}(p_2,p_3), &\mathbf{t}(p_2,p_4), &\mathbf{t}(p_2,p_5),\\
+			\mathbf{t}(p_3,p_1), &\mathbf{t}(p_3,p_2), &\mathbf{t}(p_3,p_4), &\mathbf{t}(p_3,p_5),\\
+			\mathbf{t}(p_4,p_1), &\mathbf{t}(p_4,p_2), &\mathbf{t}(p_4,p_3), &\mathbf{t}(p_4,p_5),\\
+			\mathbf{t}(p_5,p_1), &\mathbf{t}(p_5,p_2), &\mathbf{t}(p_5,p_3), &\mathbf{t}(p_5,p_4)\\
+			\end{array}
+			\right\}\\~& & \\
+\end{array}
+$
+%} 
+\\
+%%FIN_MODIF_EXPRESSION
+Geometric primitives  $p_1,~p_2,~p_3,~p_4,~p_5$ are all of line type and are linked between themselves by the topologic relation "t" (for "touch").
+\end{exemple}
+\begin{figure}[htpb]
+\centerline{\psfig{figure=rompoint2.eps,width=8cm}}
+\caption{Round-about object geometric representation.}
+\label{ObjetGeometrique}
+\end{figure}
+\begin{definition} 
+Let $\mathcal{OS}$ be the set of simple objects and $\mathcal{ATT}$, be the set of descriptive attributes of the  simple objects.\\
+A simple semantic object $Os$ of $\mathcal{OS}$ is a pair $(p, ATT)$ such that~:
+\begin{itemize}
+\item $p$ is a geometric primitive~: $p~ \in \mathcal{PG}$~;
+\item $ATT$ is a non-empty subset of $\mathcal{ATT}$~:  $ATT~ \in~ \wp(\mathcal{ATT}) - \{\phi\}$, where $\wp(\mathcal{ATT})$ stands for the set of subsets of $\mathcal{ATT}$. 
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+A complex object $Oc$ of $\mathcal{OC}$ is a pair $(OBS, ATT)$ such that~:
+\begin{itemize}
+\item $ATT$ is a non-empty subset of $\mathcal{ATT}$~:  $ATT~ \in~ \wp(\mathcal{ATT}) - \{\phi\}$~; 
+\item $OBS$ is a non-empty subset of simple semantic objects~: $OBS \in \wp(\mathcal{OS}) - \{\phi\}$~;
+\item $\forall Os \in OBS,~\exists~R^C ~\in ~\mathcal{R}^C$ tel que $R^C(Oc,~Os)$. 
+\end{itemize}
+Let $\mathcal{OC}$ be the set of complex objects.
+\end{definition}
+
+\subsection{Relations representation}
+Since objects are classified in two different levels, only objects of the same level can interact. The interaction network over these objects is based on relations between these components. These relations are also classified in two levels : semantic relations and topological relations.  
+\begin{enumerate}
+\item {\it Semantic relations}: they are essential for the constraints propagation description. 
+They are composed of {\it composition relations}, $\mathcal{R^C}$, which allow to describe aggregation of some objects and {\it dependence relations}, $\mathcal{R^D}$,  which describe that the modification of one object can lead to the modification of other ones;
+
+\begin{definition}
+One calls composition relation of $R^C(O,O')$ between $O$, a complex semantic object and $O'$ a simple semantic object, the relation which expresses the fact that <<$O$ is composed of $O'$>>.
+%Soient $O$ et $O'$ deux objets s\'emantiques. On appelle relation de composition entre $O$ et $O'$, not\'ee $R^C(O,O')$, la relation s\'emantique entre l'objet complexe $O$ et l'objet simple $O'$ qui traduit le fait que <<~$O$ est compos\'e de $O'$~>>. 
+\end{definition}
+\begin{definition}
+One calls dependence relation $R^D(O,O')$ between $O$ and $O'$, the relation for which a modification of the object $O$ (called master object), can alter the semantic attributes of the object $O'$ (called dependent).
+\end{definition}
+
+\item{\it Topological relations}: they describe the type of topological connection between objects. 
+We proposed to use the 9-intersection from Egenhofer and Herring \cite{EH}. 
+In this model, we use a topology which consists to define for each object $p_i$, the inset noted  $p_i^\circ$, the closure set noted  $\overline{p_i}$, the outline set noted $\partial p_i$ and the exterior set noted $p_i^-$.
+This model can be represented by the matrix formulation 
+
+\begin{center}
+\begin{math}
+\bordermatrix{ &\cr
+	       & $P$(\partial p_k \cap \partial p_l) & $P$(\partial p_k \cap p_l^\circ) & $P$(\partial p_k \cap p_l^-) \cr
+	       & $P$(p_k^\circ \cap \partial p_l)    & $P$(p_k^\circ \cap p_k^\circ)    & $P$(p_k^\circ \cap p_l^-)    \cr
+	       & $P$(p_k^- \cap \partial p_l)        & $P$(p_k^- \cap p_l^\circ)        & $P$(p_k^- \cap  p_k^-)      \cr}
+\end{math}
+\end{center}
+
+Figure \ref{9int} shows some specific situations that these matrix formulation allow to describe.       
+\end{enumerate}
+
+\begin{figure}[htbp]
+\begin{center}
+%\rotatebox{-90} 
+\includegraphics[scale=0.5]{matrices.eps}
+\caption{9-intersection topological model}
+\label{9int}
+\end{center}
+\end{figure}
+
+%\input{influence.tex}
+
+\subsection{Constraints representation}
+We represent the following constraints: structural, temporal, spatial and semantic ones. We define also for each constraint its importance which means that some of them have to be always satisfied and others can be raised, using exception processes. We formally define each constraint between two objects as a 5-uple composed of (i) the first object class, (ii) the second object class, (iii) the relation associated to the constraint, (iv) its importance  and (v) an exception field which allow to raise some constraints.
+\begin{definition}
+A geographical integrity constraint, called <<G-constraint>>, is an integrity constraint defined over semantic objects, characterized by its severity, its category, its range and its expression. It is defined by a 5-tuple : 
+$$ G-Contrainte = (ID_c, S_c, C_c, P_c, Expr_c) $$ 
+where {\bf $ID_c$ } uniquely qualifies each G-constraint, the severity level {\bf $S_c$} defines the type of conflict which can be induced by the violation the G-constraint, the category {\bf $C_c$} denotes the application domain of the G-constraint and its range {\bf $P_c$} qualifies the elements on which it is applied.The expression {\bf $Expr_c$} of the G-constraint depend on its category and its range.\\
+\end{definition}
+\begin{exemple} 
+Let $c1$ be the relative G-constraint which points out that a segment of road never crosses a building. In our language this G-constraint is defined as follows :
+   \begin{eqnarray*}
+       (ID_c & = & c1,\\
+			   S_c & = & relative,\\
+				 C_c & = & topologique,\\
+				 P_c & = & interclasse,\\
+			Expr_c & = & expr1)
+	 \end{eqnarray*}
+	 \begin{eqnarray*}
+       expr1 & = & (TRoute : Os_1,\\ 
+			        & & Batiment : Os_2, \\
+							& & INTERSECT, 
+							 interdit, {\it \phi}).
+	 \end{eqnarray*} 
+\end{exemple}
+
+\subsection{Formalization of the updating flow}
+
+Evolution of a geographical data base often reflects the evolution of the nominal ground it is supposed to modelize. This induces, in the base, integration of a set of update operations which modify, in turn, components of the system (its objects). The alteration of certain components can affect other components in a recursive way. According to the type  of the operations under consideration, their running can make the geographical data base swell, shrink or change in content without altering the volume.\\ 
+ 
+ The set of the operations and of the involved objects is the set of {\em updating in\-for\-mations} or, in other words, the updating flux.\\
+
+The updating informations proposed in the model is based on 8 {\it complex operations}. 
+
+\begin{definition} A complex operation is an operation which applies over simple or complex semantic objects and which can split up into several simple operations. Let $op\_co$ be a complex operation, $op\_co \in \{Ccre,~Csup,~Scis,~Fus,~Agg,~Cgeom,~Cdesc,~Stb\}$ such that  
+\begin{eqnarray*} Ccre & = & Creation~complexe\\ Csup & = & Suppression~complexe\\ Scis & = & Scission \\ Fus  & = & Fusion\\ Agg  & = & Aggregation\\ Cgeom& = & Modification~geometrique\\ Cdesc& = & Changement~descriptif~complexe\\ Stb  & = & Stabilite.  
+\end{eqnarray*} 
+\end{definition} 
+which are complex creation, complex suppression, splitting, fusion, aggregation, geometric modification, complexe descriptive modification, stability. We have shown \cite{hkdphd} that each complex operation can be decomposed as a sequence of some of the 4 canonical operations: creation, suppression, descriptive modification and identity.
+\begin{definition} We call  canonical operation every operation which cannot be split up in terms of other operations. Let $op\_ca$ be a canonical operation, $op\_ca \in \{Cre,~Sup,~Desc, ~ID\}$ such that  
+\begin{eqnarray*} Cre & = & Creation\\  Sup & = & Suppression\\ Desc& = & Changement~descriptif\\ ID  & = & Identite.  \end{eqnarray*} 
+\end{definition} 
+
+To do an updating, one must define an execution order for the involved canonical operations. This leads us to the definition of a sequence.
+ \begin{definition} 
+A sequence is a totally ordered set of canonical operations which correspond to a given complex operation.  
+\end{definition} 
+Finally the basic updating unity is the {\it transaction} which is a set of {\it sequences} of canonical operations. 

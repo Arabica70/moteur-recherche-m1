@@ -1,0 +1,235 @@
+<HR>
+<UL>
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#4200DA" VLINK="#551A8B"
+      ALINK="#CC33CC" BACKGROUND="../../../equipes/OCAD/image/LIPNbg12.GIF">
+
+<CENTER><title>Abstracts of talks at the Urbana Champaign IFIP WG1.3 meeting</title>
+
+<H2>Abstracts of talks at the  Urbana Champaign IFIP WG1.3 meeting (July 31st-August 2nd, 2008)</H2>
+</CENTER>
+==  Thursday, July 31st, 2008
+<LI>1 - <a name="Tarlecki">Andrzej Tarlecki</a>,
+Institute of Informatics, University of Warsaw,      
+and Institute of Computer Science PAS, Warsaw, Poland 
+(<A HREF="URBANA-DATA/tarlecki_urbana08.pdf">slides</A>)
+<BR>Heterogeneous logical environments for distributed specifications
+<BR>[Joint work with Till Mossakowski, Maria Victoria Cengarle, 
+Alexander Knapp, Martin Wirsing, Adam Warski]
+<BR>Abstract:<BR> 
+We work within the theory of institutions as an excellent framework
+where the theory of specification and formal software development may
+be presented in an adequately general and abstract way. As different
+logical systems may be appropriate or most convenient for
+specification of different modules of the same system, of different
+aspects of system behaviour, or of different stages of system
+development, we the need for a number of logical systems to be used
+in the same specification and development project. This motivates
+the presented research on specifications in heterogeneous logical
+environments.
+<BR>
+We formalise logical systems as institutions. To enable a sensible
+use of a number of institutions together, in heterogeneous logical
+environments we link them with each other by institution morphisms or
+other maps between institutions, like institution comorphisms. Using
+them together with other standard (intra-institutional)
+specification-building operations, one builds heterogeneous
+structured specifications, which may involve a number of institutions
+to specify some aspects or some parts of the system, but ultimately
+focus at one institution of interest.
+<BR>
+One family of logical systems is suggested by UML, where system
+specifications typically involve a number of diagrams of different
+kinds, each capturing a different aspect of the system. Each kind of
+UML diagrams leads to a separate logical system which, at least in
+principle, can be formalised as an institution. Expected
+relationships between system properties specified by different kinds
+of UML diagrams may now be captured using appropriate institution
+maps.  UML specifications, however, are quite different from focused
+heterogeneous specifications mentioned above. They just form a
+collection of specifications residing in different institutions of
+UML diagrams.
+<BR>
+We present a general abstract concept of a distributed heterogeneous
+specifcations that consist of a collection of specifications focused
+at various institutions in an underlying heterogeneous logical
+environment, linked by specification morphisms generalised by
+involving institution maps.  Distributed heterogeneous specifications
+come equipped with a rather natural semantics, given in terms of
+compatible families of models of component specifications. This
+yields in the standard way a number of usual concepts: consistency,
+semantic consequence, and perhaps most importantly, implementation of
+one distributed specification by another.
+<BR>
+Each basic concept of a map between institutions can be captured by
+institution (co)morphisms --- as a span of (co)morphisms.  Replacing
+a map between institutions by an appropriate span of comorphisms
+allows one to represent exactly the same relationship between
+institutions and their components.  However, the categories of
+specifications that emerge in each case are different. Nevertheless,
+we argue that the expressive power of distributed specicfications
+built over them does not essentially differ.
+
+<BR>------------------------------------------------------
+</LI><LI>2 - <a name="Wirsing">Martin Wirsing</a> 
+(<A HREF="URBANA-DATA/WirsingUrbana-MMLanguage080731.pdf">slides</A>)
+<BR>What is a multi-paradigm language?
+<BR>[Joint work with Artur Boronat, Alexander Knapp, Jose Meseguer]
+<BR><A HREF="URBANA-DATA/WirsingUrbana-WADTAbstract.pdf">Abstract</A>
+
+<BR>------------------------------------------------------
+</LI><LI>3 - <a name="Rutten">Jan Rutten</a> 
+<BR>Regular expressions coalgebraically
+<BR>Abstract:<BR> 
+ Regular expressions, formal languages and automata are presented
+ form a coalgebraic perspective, for
+<BR>(a) classical regular expressions;
+<BR>(b) Kleene algebra with tests;
+<BR>(c) generalised regular expressions for polynomial functors.
+<BR><BR>
+References:
+<BR>- J. Rutten: Automata and coinduction (an exercise in coalgebra),
+CONCUR 1998.
+<BR>- D. Kozen: On the coalgebraic theory of Kleene algebra with tests,
+Technical Report, Computing and Information Science, Cornell
+University, March 2008.
+<BR>- M. Bonsangue, J. Rutten and A. Silva: A Kleene theorem for polynomial
+coalgebras, 2008.
+</LI>
+======================================================================
+<BR><BR>== Friday, August 1st, 2008
+<LI>4 - <a name="Klin">Bartek Klin</a>
+<BR>Structural operational semantics of stochastic systems
+<BR>[Joint work with Vladimiro Sassone]
+<BR>Abstract:<BR>
+We use the bialgebraic approach due to Turi and Plotkin to derive a
+syntactic framework for defining well-behaved structural operational
+semantics for Markovian process algebras. We use this application to
+argue that on an abstract level, structural operational semantics
+should be understood as a way to distribute process syntax over
+behaviour, rather than as a way of defining labeled transition
+relations by induction.
+</LI>
+<BR>------------------------------------------------------
+<LI>5 - <a name="Marti-Oliet">Narciso Marti-Oliet
+<A HREF="URBANA-DATA/Marti-Oliet-strategies-slides.pdf">slides</A>
+<BR>A Rewriting Semantics for Maude Strategies
+<BR>[Joint work with Jose Meseguer and Alberto Verdejo]
+<BR>Abstract:<BR>
+Intuitively, a strategy language is a way of taming the nondeterminism of a 
+rewrite theory. We can think of a strategy language S as a rewrite theory 
+transformation R -> S(R) such that S(R) provides a way of executing R in a
+controlled way. One such theory transformation for the Maude strategy language
+is presented in detail. Progress in the semantic foundations of Maude's
+strategy language has led us to study some general requirements for strategy
+languages. Some of these requirements, like soundness and completeness with
+respect to the rewrites in R, are absolute requirements that every strategy 
+language should fulfill. 
+Other more optional requirements, that we call monotonicity and
+persistence, represent the fact that no solution is ever lost.  
+We show that the Maude strategy language satisfies all these four requirements.
+</LI>
+<BR>------------------------------------------------------
+<LI>9 - <a name="Hennicker">Rolf Hennicker</a>,
+<A HREF="URBANA-DATA/Hennicker-vortrag-gescannt.pdf">slides</A>
+<BR>An Algebraic Semantics for Contract-based Software Components
+(On Getting a Chance to Finish my AMAST Talk)
+<BR>[Joint work with Michel Bidoit]
+<BR>Abstract:<BR>
+We propose a semantic foundation for the contract-based design of
+software components.Our approach focuses on the characteristic
+principles of component-oriented development,like provided and
+required interface specifications and strong
+encapsulation.Semantically, we adopt classical concepts of
+mathematical logic using models,in our framework given by labelled
+transition systems with ``states as algebras'', sentences,and a
+satisfaction relation which characterizes those properties of a
+component whichare observable by the user in the ``strongly
+reachable'' states.We distinguish beteween models of interfaces and
+models of component bodies. The latterare equipped with semantic
+encapsulation constraints which guarantee, that if the component
+bodyis a correct user of the required interface operations, then it
+can safely rely on all properties ofthe required interface
+specification. Our model-theoretic semantics of interfaces and
+componentbodies suggests two semantic views on a component, its
+external and its internal semanticswhich must be properly related to
+ensure the correctness of a component.We also study a refinement
+relation between required and provided interfacespecifications of
+different components used for component composition.  
+<BR> 
+The full paper is available in Proc. AMAST 2008 (J. Meseguer. G. Rosu
+eds.),LNCS 5140, pp. 216-231, 2008.
+
+</LI>
+<BR>------------------------------------------------------
+<!-- partie commente'e
+<LI>2 - <a name="Wirsing">Martin Wirsing</a>, 
+(<A HREF="URBANA-DATA/WirsingUrbana.pdf">slides</A>)
+<BR>What is a multi-paradigm language?
+<BR>[Joint work with ]
+<BR>Abstract:<BR> 
+-->
+<BR>------------------------------------------------------
+<LI>6/7 -  <a name="Fiadeiro">Jose Fiadeiro</a>,
+<A HREF="URBANA-DATA/Fiadeiro-Urbana08.pdf">slides</A>
+<BR>[Joint work with Laura Bocchi and Antonia Lopes ]
+<BR>Semantics of Service Discovery and Binding - Part 1, Part 2
+<BR>Abstract:<BR> 
+We put forward a business-oriented operational model for the
+reconfiguration process that takes place in service-oriented systems.
+This model is based on a graph-based representation of the
+configuration of global computers typed by business activities.
+Business activities execute distributed workflows that, at run time,
+can trigger the discovery, ranking and selection of services to which
+they bind, thus reconfiguring the workflows.
+Discovery, ranking and selection are based on the satisfaction of
+business protocols and optimisation of quality of service constraints.
+ Binding and reconfiguration are captured as algebraic operations on
+configuration graphs. 
+An analogy with concurrent constraint programming is used for
+presenting the overall model.
+</LI>
+<BR>------------------------------------------------------
+</LI><LI>12 - <a name="Rosu">Grigore Rosu</a> 
+(<A HREF="URBANA-DATA/Rosu-Urbana-k-rew.pdf">slides</A>)
+<BR>What is a multi-paradigm language?
+<BR>Abstract:<BR> 
+ K is a definitional framework based on term rewriting, in which
+ programming languages, calculi, as well as type systems or formal
+ analysis tools can be defined making use of special list and/or set
+ structures, called cells, which can be potentially nested.  In
+ addition to cells, K definitions contain equations capturing
+ structural equivalences that do not count as computational steps, and
+ rewrite rules capturing computational steps or irreversible
+ transitions.  Rewrite rules in K are unconditional, i.e., they need
+ no computational premises (they are rule schemata and may have
+ ordinary side conditions, though), and they are context-insensitive,
+ so in K rewrite rules apply concurrently as soon as they match,
+ without any contextual delay or restrictions.  The distinctive
+ feature of K compared to other term rewriting approaches in general
+ and to rewriting logic in particular, is that K allows rewrite rules
+ to apply concurrently even in cases when they overlap, provided that
+ they do not change the overlapped portion of the term. This allows
+ for truly concurrent semantics to programming languages and calculi.
+ For example, two threads that read the same location of memory can do
+ that concurrently, even though the corresponding rules overlap on the
+ store location being read.  The distinctive feature of K compared to
+ other frameworks for true concurrency, like chemical abstract
+ machines (Chams) or membrane systems (P-systems), is that equations
+ and rewrite rules can match across multiple cells and thus perform
+ changes many places at the same time, in one step.  K achieves, in
+ one uniform framework, the benefits of both Chams and reduction
+ semantics with evaluation contexts (context reduction), at the same
+ time avoiding what may be called the rigidity to chemistry of the
+ former and the rigidity to syntax of the latter. Any Cham and any
+ context reduction definition can be captured in K with minimal (in
+ our view zero) representational distance.  K can support concurrent
+ language definitions with either an interleaving or a true
+ concurrency semantics.  K definitions can be efficiently executed on
+ existing rewrite engines, thus providing interpreters for free
+ directly from formal language definitions.  Additionally,
+ general-purpose formal analysis techniques and tools developed for
+ rewrite logic, such as state space exploration for safety violations
+ or model-checking, give us corresponding techniques and tools for the
+ defined languages, at no additional development cost.
+<BR>------------------------------------------------------
+

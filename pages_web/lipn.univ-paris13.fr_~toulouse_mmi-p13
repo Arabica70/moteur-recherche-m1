@@ -1,0 +1,1920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<meta http-equiv="Content-Style-Type" content="text/css"/>
+	<meta name="author" content="Sophie Toulouse"/>
+	<meta name="date" content="06/20/2007"/>
+	<meta name="keywords" lang="en" content="Institut Galilée, University Paris 13, Master degree, Discrete mathematics, Theoritical computer science, Applied mathematics" />
+	<meta name="keywords" lang="fr" content="Institut Galilée, Université Paris 13, Formation Master, Mathématiques discrètes, Informatique théorique, Mathématiques appliquées, Images, Recherche opérationnelle, Algorithmique, Réseaux, Modélisation, Processus stochastisques, Finance, Calcul scientifique" />
+
+	<link rel="stylesheet" type="text/css" href="css/lipn-new.css"/>
+	<base href="http://www-lipn.univ-paris13.fr/~toulouse/index.html"/>
+	<title>Institut Galil&eacute;e Universit&eacute; Paris&nbsp;13 Master Algorithmique, Mod&eacute;lisation, Images</title>
+
+	<style>
+	body.mmi-p13
+	{
+		color: #0F1F30;
+		background-image: none;
+		background-color:#F4F4E4;
+		margin: 0px; padding-top: 0px;
+		top: 0px;
+		z-index: 1;
+	}
+	div#main-mmi{top: 100px; position: absolute; z-index: 2;}
+
+	h1#titre-mmi{top: 0; background-color: #D0E0F0; border: 2px; border-style: solid; position: absolute; margin-bottom: 20px; z-index: 3; text-align: center;}
+
+	#menu-mmi 
+	{
+		background-color: inherit; border: none;
+		height: auto; width: auto; display: inline; position: fixed; right: 16px; top: 126px; 
+		z-index: 3;
+	}
+	#menu-mmi > li {list-style: none; display: block; z-index: 4;}
+	</style>
+
+</head>
+
+<body class="mmi-p13">
+	<ul id="menu-mmi">
+		<li><a href="mmi-p13.html#description">Description g&eacute;n&eacute;rale</a></li>
+		<li>-&nbsp;<a href="mmi-p13.html#debouche">D&eacute;bouch&eacute;s</a></li>
+		<li>-&nbsp;<a href="mmi-p13.html#environnement">Environnement de travail</a></li>
+		<li><a href="mmi-p13.html#admission">Admission &amp; Inscription</a></li>
+		<li>-&nbsp;<a href="mmi-p13.html#inge">Ing&eacute;nieurs Galil&eacute;e</a></li>
+		<li><a href="mmi-p13.html#semestre">Semestres d&eacute;taill&eacute;s</a></li>
+		<li>-&nbsp;<a href="mmi-p13.html#parcours">Construire son parcours</a></li>
+		<li><a href="mmi-p13.html#ue">D&eacute;tail des enseignements</a></li>
+		<li><a href="mmi-p13.html#biblio">Bibliographie</a></li>
+		<li><a href="mmi-p13.html#contact">Contacts</a></li>
+		<li><a id="retour" href="mmi-p13.html#titre-mmi">top</a></li>
+		<li><a href="http://www-galilee.univ-paris13.fr/">Institut Galil&eacute;e</a></li>
+		<li><a href="http://www.univ-paris13.fr/formationsUP13/form/default_dom.php?id=3">Formations <em>Sciences</em> P13</a></li>
+    </ul>
+
+	<h1 id="titre-mmi">Master Math-Info <q>Algorithmique, Mod&eacute;lisation, Images</q></h1>
+
+	<div id="main-mmi">
+	    <h2 class="cadre" id="description">Description g&eacute;n&eacute;rale</h2>
+
+	    <div class="cadre">
+	    	<p>Le master <span class="emph">Algorithmique, Mod&eacute;lisation, Images</span> est une sp&eacute;cialit&eacute; du master <span class="emph">Math&eacute;matiques &amp; Informatique</span> de <a href="http://www.univ-paris13.fr">Paris 13</a>. 
+				Il s'appuie sur les laboratoires  <a href="http://www-lipn.univ-paris13.fr/">LIPN</a> d'informatique et <a href="http://www.math.univ-paris13.fr/laga">LAGA</a> de math&eacute;matiques de <a href="http://www.univ-paris13.fr/galilee">l'Institut Galil&eacute;e</a>.
+				Il int&egrave;gre en outre des intervenants de l'Universit&eacute; <a href="http://www.univ-paris8.fr/index.php3">Paris 8</a> (<a href="http://www.math.univ-paris13.fr/laga">LAGA</a>), du <a href="http://www-l2ti.univ-paris13.fr/">L2TI</a> (traitement des images et les r&eacute;seaux informatiques, Paris&nbsp;13) et du <a href="http://www-lpl.univ-paris13.fr/Lpl%5Fweb/Fr/">LPL</a> (physique des lasers, Paris&nbsp;13).
+				Toutes les infos officielles sur le master sont accessibles <em><a href="http://www-galilee.univ-paris13.fr/etu_masters_mathinfo_optimis.htm">en direct de Galil&eacute;e</a></em>.
+			</p>
+
+			Cette formation a pour objectif de fournir aux &eacute;tudiants les &eacute;l&eacute;ments fondamentaux leur permettant d'acqu&eacute;rir une v&eacute;ritable <span class="emph">double comp&eacute;tence en informatique et en math&eacute;matiques et leurs applications</span>. Elle offre l'acc&egrave;s &agrave; des cours tr&egrave;s compl&eacute;mentaires dans les domaines de <span class="emph">l'informatique, des math&eacute;matiques discr&egrave;tes et continues, des ph&eacute;nom&egrave;nes al&eacute;atoires et de la combinatoire</span>. Elle permet, outre les aspects th&eacute;oriques, de toucher aux <span class="emph">probl&egrave;mes applicatifs</span> sources de mod&egrave;les complexes.
+			Ses points forts et originaux tiennent notamment en&nbsp;:
+			<ul>
+				<li>les <span class="emph">processus stochastiques et leurs applications &agrave; la finance</span>&nbsp;;</li>
+				<li>les m&eacute;thodes de <span class="emph">programmation mah&eacute;matique discr&egrave;te et leur impl&eacute;mentation en recherche op&eacute;rationnelle</span> (domaine logistique)&nbsp;;</li>
+				<li><span class="emph">l'algorithmique de sa conception &agrave; son analyse</span>, notamment dans le domaine des r&egrave;seaux&nbsp;;</li>
+				<li>le <span class="emph">traitement des images num&eacute;riques</span>&nbsp;;</li>
+				<li>de mani&egrave;re g&eacute;n&eacute;rale, un bagage solide pour la <span class="emph">r&eacute;solution de syst&egrave;s complexes</span>, 
+						des outils de <span class="emph">mod&eacute;lisation</span> aux outils de <span class="emph">r&eacute;solution</span>, 
+						alliant concepts <span class="emph">math&eacute;matiques et informatiques</span>,
+						en direction de ou d&eacute;di&eacute; &agrave; un <span class="emph">riche panel de domaines d'application</span>.</li>
+			</ul>
+	    </div>
+
+	    <h3 class="cadre">Objectifs p&eacute;dagogiques</h3>
+	    <div class="cadre">
+			<p><a href="mmi-p13.html#m1s1">La premi&egrave;re ann&eacute;e</a> et plus particuli&egrave;rement le premier semestre est consacr&eacute; &agrave; l'apprentissage des <span class="emph">outils de base en math&eacute;matiques appliqu&eacute;es et en informatique</span>. En parall&egrave;le, les &eacute;tudiants peuvent choisir parmi une grande vari&eacute;t&eacute; de <span class="emph">cours approfondissant tel ou tel aspect des cours fondamentaux ou abordant un domaine d'application</span>. Chacun de ces cours requiert &agrave; la fois des comp&eacute;tences math&eacute;matiques et informatiques et met en valeur la n&eacute;cessit&eacute; de bien ma&icirc;triser les outils des deux domaines. Enfin, un <span class="emph">travail personnel d'&eacute;tude et de recherche</span> men&eacute; en coordination avec l'&eacute;quipe p&eacute;dagogique doit permettre &agrave; l'&eacute;tudiant de mettre par lui-m&ecirc;me en application les connaissances acquises pendant l'ann&eacute;e.
+			</p>
+			<p><a href="mmi-p13.html#m2s3">La seconde ann&eacute;e</a> est l'occasion pour l'&eacute;tudiant <span class="emph">d'approfondir ses connaissances</span> en choisissant parmi de nombreux cours aux sujets proches des th&eacute;matiques des laboratoires associ&eacute;s au master&nbsp;: signalons, entre autres, <span class="emph">math&eacute;matiques financi&egrave;res, recherche op&eacute;rationnelle, traitement des images num&eacute;riques</span>.
+			</p> 
+			<p>La formation s'ach&egrave;ve par un <span class="emph">stage d'initiation &agrave; la recherche</span>, qui peut s'effectuer dans un laboratoire universitaire (et en particulier ceux associ&eacute;s au master, le <a href="http://www.math.univ-paris13.fr/laga">LAGA</a> et le <a href="http://www-lipn.univ-paris13.fr/">LIPN</a>), ou dans un laboratoire de recherche public ou priv&eacute;. La th&eacute;matique sera choisie en accord avec le responsable de la formation, et le stage fera l'objet d'un rapport final ainsi que d'une soutenance orale en fin de stage.
+			</p> 
+	    </div>
+
+	    <h3 class="cadre" id="debouche">Principaux d&eacute;bouch&eacute;s</h3>
+	    <div class="cadre">
+			<p>La formation a pour principaux d&eacute;bouch&eacute;s la recherche (acad&eacute;mique ou priv&eacute;e), l'ing&eacute;nierie et le consulting, dans les domaines de la mod&eacute;lisation et de l'optimisation, s'exer&ccedil;ant dans des secteurs d'activit&eacute; assez vari&eacute;s (logistique, banques &amp; assurances, informatique industrielle, ...).
+			</p>				
+			<dl>
+				<dt>Ing&eacute;nierie &amp; consulting</dt>
+				<dd>Le master math&eacute;matiques et informatique vise &agrave; donner au travers de la formation le bagage indispensable d'un <span class="emph">bon ing&eacute;nieur en recherche et d&eacute;veloppement ou d'un consultant aupr&egrave;s d'entreprises de divers secteurs de pointe.</span><br/>
+					<span class="emph">Entreprises</span> ayant recrut&eacute; des &eacute;tudiants issus du Master (ou des DEA qui l'ont pr&eacute;c&eacute;d&eacute;)&nbsp;: CEA, EADS, Commerzbank, HSBC, SNCF, Air France, Gaz de France, France T&eacute;l&eacute;com, ILOG, Eurod&eacute;cision, ...
+				</dd>
+				<dt>R&amp;D</dt>
+				<dd>Les &eacute;tudiants souhaitant exercer dans le domaine de la recherche sans pour autant poursuivre en th&egrave;se pourront se tourner vers les activit&eacute;s de <span class="emph">recherche et d&eacute;veloppement en entreprise</span>. Cette voie n'est pas &agrave; n&eacute;gliger, les entreprises devenant un endroit o&ugrave; les comp&eacute;tences solides en math&eacute;matiques et informatique appliqu&eacute;es, attest&eacute;es par une formation par la recherche, sont de plus en plus recherch&eacute;es.</dd>
+
+				<dt>Poursuite en th&egrave;se</dt>
+				<dd>La formation est naturellement appel&eacute;e &agrave; d&eacute;boucher sur une <span class="emph">th&egrave;se dans un laboratoire universitaire</span>, dans un domaine de comp&eacute;tence proche de ceux enseign&eacute;s. Les deux laboratoires que sont le <a href="http://www.math.univ-paris13.fr/laga">LAGA</a> et le <a href="http://www-lipn.univ-paris13.fr/">LIPN</a> d&eacute;veloppent activement des th&eacute;matiques de recherche dans ces domaines. Le financement des th&egrave;ses se fait par des allocations de recherche du minist&egrave;re de l'enseignement sup&eacute;rieur et de la recherche, ou par des bourses CIFRE (convention avec une entreprise). Des th&egrave;ses peuvent aussi &ecirc;tre conduites directement dans des laboratoires de recherche priv&eacute;s, &eacute;ventuellement en partenariat avec un laboratoire universitaire.
+				</dd>
+			</dl>
+	    </div>
+
+	    <h3 class="cadre" id="environnement">Environnement de travail</h3>
+	    <div class="cadre">
+			L'environnement &agrave; Paris 13 est particuli&egrave;rement <span class="emph">propice au d&eacute;veloppement de son projet personnel</span> de formation&nbsp;: disponibilit&eacute; du mat&eacute;riel informatique (machines et <em>softs</em>, biblioth&egrave;ques, reprographie, &hellip;), taux d'encadrement, pr&eacute;sence des personnels administratif et enseignant aupr&egrave;s des &eacute;tudiants, prise en compte des situations personnelles (<em>eg.</em>, contrat p&eacute;dagogique pour les &eacute;tudiants salari&eacute;s, <a href="http://www.univ-paris13.fr/parcours/parc01.htm">service d'accueil</a> pour les &eacute;tudiants &eacute;trangers, &hellip;). 
+		    <h4 class="cadre">Environnement technique</h4>
+			<p>L'&eacute;quipement informatique accessible aux &eacute;tudiants est configur&eacute; de la fa&ccedil;on suivante&nbsp;: une quarantaine de stations de travail avec des processeurs de type RISC (SPARC), une trentaine de machines de type PC Bi-processeurs, plus d'une centaine de machines de type PC, un r&eacute;seau local (Ethernet) assurant l'interaction entre les diff&eacute;rents postes de travail, un syst&egrave;me d'exploitation UNIX qui constitue la norme en mati&egrave;re de syst&egrave;mes ouverts, une machine multiprocesseurs (Silicon Graphics).
+			</p>
+			
+			<h4 class="cadre">Environnement recherche</h4>
+			<p>L'&eacute;quipe de recherche d'appui du Master Math&eacute;matiques et Informatique  est compos&eacute;e d'un ensemble d'enseignants-chercheurs qui appartiennent &agrave; 2 laboratoires de recherche, &agrave; savoir&nbsp;:</p>
+			<ul class="list">
+				<li><a href="http://www.math.univ-paris13.fr/laga">LAGA (UMR 7539, CNRS)</a> Laboratoire d'Analyse G&eacute;om&eacute;trie et Applications</li>
+				<li><a href="http://www-lipn.univ-paris13.fr/">LIPN (UMR 7030, CNRS)</a> Laboratoire d'Informatique de Paris-Nord</li>
+			</ul>
+	    </div>
+
+	    <h2 class="cadre" id="admission">Admission &amp; inscription</h2>
+	    <h3 class="cadre">Conditions d'admission</h3>
+	    <div class="cadre">
+	        <p>Le recrutement se fait en <span class="emph">premi&egrave;re ou en deuxi&egrave;me ann&eacute;e</span>. L'admission en premi&egrave;re ann&eacute;e se fait de droit pour les titulaires de <span class="emph">licence mentions <q>informatique</q>, <q>math&eacute;matiques</q> et <q>math&eacute;matiques, informatique appliqu&eacute;es &agrave; l'&eacute;conomie et la finance</q></span>. Les titulaires de licence portant une autre mention sont admis apr&egrave;s examen des dossiers.
+	        </p>
+	        <p>Des <span class="emph">r&eacute;orientations</span> vers les autres masters (math&eacute;matiques, informatique en particulier) sont possibles pendant la premi&egrave;re ann&eacute;e apr&egrave;s concertation des responsables des formations concern&eacute;es. Les &eacute;tudiants ayant acquis un nombre de cr&eacute;dits suffisants &agrave; l'issue de la premi&egrave;re ann&eacute;e re&ccedil;oivent un dipl&ocirc;me interm&eacute;diaire de ma&icirc;trise.
+	        </p>
+	        <p>L'acceptation en <span class="emph">seconde ann&eacute;e</span> est prononc&eacute;e par le chef d'&eacute;tablissement sur proposition du responsable de la formation. Celui-ci sollicite l'avis du jury sur les capacit&eacute;s du candidat &agrave; suivre les enseignements de seconde ann&eacute;e. Pour les &eacute;tudiants des premi&egrave;res ann&eacute;es de masters mention <q>math&eacute;matiques</q> ou <q>informatique</q> satisfaisant les pr&eacute;requis pour poursuivre la formation, l'admission est faite sur examen des dossiers.
+	        </p>
+	    </div>
+
+	    <h3 id="inge" class="cadre">Master 2 et formation d'ing&eacute;nieurs <a href="http://www.ispg.univ-paris13.fr/"><em>Sup Galil&eacute;e</em></a></h3>
+	    <div class="cadre">
+	        <p>Les &eacute;l&egrave;ves ing&eacute;nieurs des sp&eacute;cialit&eacute;s <a href="http://www.sup-galilee.univ-paris13.fr/index.php?option=com_content&amp;task=view&amp;id=14&amp;Itemid=225">MACS</a> (<em>Math&eacute;matiques Appliqu&eacute;es et Calcul Scientifique</em>) et 
+			   <a href="http://www.sup-galilee.univ-paris13.fr/index.php?option=com_content&amp;task=view&amp;id=45&amp;Itemid=226">Informatique</a> ont la possibilit&eacute; de valider le Master MMI en <span class="emph">double cursus MACS3 -- MMI2</span> ou <span class="emph">Info3 -- MMI2</span>.
+			</p> 
+			<p>Des accords entre les diff&eacute;rentes formations permettent en effet de valider le Master en suivant <q>seulement</q> un nombre limit&eacute; d'UE <!--(3 UE)--> en sus du cursus ing&eacute;nieur.
+			</p>
+			<p>Pour les <span class="emph">futurs Info3</span>&nbsp;: le Master est compatible avec l'option <span class="emph">ADO</span> <em><q>Aide &agrave; la d&eacute;cision &amp; Optimisation</q></em> --
+				<a href="doc/mmi-p13/pres-option-s3-inge-0910.pdf">pr&eacute;sentation pdf d'information</a> du 27/4/9.
+			</p>
+	    </div>
+
+	    <h3 class="cadre" id="pratique">Retrait et d&eacute;p&ocirc;t des dossiers</h3>
+	    <div class="cadre">
+	        <p>Les dossiers de candidature au Master Math&eacute;matiques et Informatique sont disponibles, &agrave; partir de fin avril,</p> 
+	        <ul class="list">
+	            <li>soit sur le site web de l'Institut Galil&eacute;e&nbsp;:<br/> 
+	                <a href="http://www.univ-paris13.fr/galilee/">http://www.univ-paris13.fr/galilee/</a></li>
+	            <li>soit aupr&egrave;s du secr&eacute;tariat&nbsp;:<br/>  
+	                <span style="text-align:center;" id="jocelyne">
+	                    UNIVERSIT&Eacute; PARIS 13, INSTITUT GALIL&Eacute;E<br/>
+	                    SECR&Eacute;TARIAT DU Master Math&eacute;matiques et Informatique,<br/>
+	                    BUREAU D 203<br/>
+	                    99, Avenue J-B. Cl&eacute;ment - 93430 Villetaneuse<br/>
+	                    T&eacute;l&eacute;phone  01 49 40 44 58 E-mail&nbsp;: master-mathinfo@galilee.univ-paris13.fr
+	                </span>
+		        </li>                
+			</ul>
+		</div>
+
+		<h2 class="cadre" id="semestre">Description des semestres</h2>
+	    <div class="cadre">    
+	        <h3 class="cadre" id="tab-m1s1"><a href="mmi-p13.html#m1s1">Ann&eacute;e&nbsp;M1 - Semestre&nbsp;1</a></h3>
+	        <table frame="box" rules="groups">
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1" width="50%">
+			</colgroup>
+	        <colgroup span="4">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <thead>
+	        	<tr>
+	        		<th>Unit&eacute; d'enseignement</th>
+	        		<th>Intitul&eacute;</th>
+	        		<th>Cours</th>
+	        		<th>TD</th>
+	        		<th>TP</th>
+	        		<th>Total</th>
+	        		<th>ECTS</th>
+	        		<th>Responsable(s)</th>
+	        	</tr>
+	        </thead>
+			<tfoot>
+				<tr>
+					<td colspan="8"><span id="reportS1">(*)</span> N'ouvre pas en 2009-2010</td>
+				</tr>
+			</tfoot>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="5">UE fondamentales</th>
+	        		<td><a href="mmi-p13.html#niveau">Remise &agrave; niveau <em>math&eacute;matiques et informatique</em></a></td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>19,5</td>
+	        		<td>39</td>
+	        		<td>2</td>
+	        		<td><a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a>, <a href="http://www-lipn.univ-paris13.fr/~toulouse">Sophie Toulouse</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#ahf">Analyse de Fourier et th&eacute;orie du signal</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=PF51w0qC5H">Fran&ccedil;ois Parreau</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#graphe">Graphes</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~valencia">Mario Valencia-Pabon</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#alea1">Mod&egrave;les al&eacute;atoires&nbsp;1</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#oc1">Programmation lin&eacute;aire</a></td>
+	        		<td>18</td>
+	        		<td>18</td>
+	        		<td>12</td>
+	        		<td>48</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~borne">Sylvie Borne</a></td>
+	        	</tr>
+	        </tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="7">2 UE de parcours au choix parmi la liste ci-contre</th>
+	        		<td><span class="report"><a href="mmi-p13.html#aga">Algorithmes et graphes al&eacute;atoires</a></span>
+							 (<a href="mmi-p13.html#reportS1">*</a>)</td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td></td>
+				</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#anaf">Analyse fonctionnelle</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=PF51w0qC5H">Fran&ccedil;ois Parreau</a></td>
+	        	</tr>			
+	        	<tr>
+	        		<td><a href="mmi-p13.html#cpx1">Complexit&eacute; algorithmique</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://ufr6.univ-paris8.fr/maths/phan/">Duong Hieu Phan</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#alea2">Mod&egrave;les al&eacute;atoires&nbsp;2</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#opca">Capteurs et optique</a></td>
+	        		<td>18</td>
+	        		<td>6</td>
+	        		<td>6</td>
+	        		<td>30</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lpl.univ-paris13.fr/WD120AWP/WD120Awp.exe/CTX_1468-1-kJYBFowcbf/PageCollaborateurFiche/SYNC_2089709093?BTNMNU4">Eric Tinet</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#stat1">Statistique exploratoire multidimensionnelle</a></span>
+							 (<a href="mmi-p13.html#reportS1">*</a>)</td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=AL7M45yyl3">Laurence Allenbach</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#tss">Traitement statistique du signal</a></span>
+							 (<a href="mmi-p13.html#reportS1">*</a>)</td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td>12</td>
+	        		<td>51</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-l2ti.univ-paris13.fr/~kulcsar/">Caroline Kulcs&aacute;r</a>, <a href="http://www-l2ti.univ-paris13.fr/~raynaud/">Henri-Fran&ccedil;ois Raynaud</a></td>
+	        	</tr>
+	        </tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="1">UE culturelles</th>
+	        		<td>Culture g&eacute;n&eacute;rale&nbsp;1 (<a href="mmi-p13.html#gb1">Anglais</a> / <a href="mmi-p13.html#hist1">Histoire des sciences</a>)</td>
+	        		<td colspan="2" style="text-align:center;">39</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td></td>
+	        	</tr>
+	        </tbody>
+	        </table>
+	    </div>
+	    
+	    <div class="cadre">    
+	        <h3 class="cadre" id="tab-m1s2"><a href="mmi-p13.html#m1s2">Ann&eacute;e&nbsp;M1 - Semestre&nbsp;2</a></h3>
+	        <table frame="box" rules="groups">
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1" width="50%">
+			</colgroup>
+	        <colgroup span="4">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <thead>
+	        	<tr>
+	        		<th>Unit&eacute; d'enseignement</th>
+	        		<th>Intitul&eacute;</th>
+	        		<th>Cours</th>
+	        		<th>TD</th>
+	        		<th>TP</th>
+	        		<th>Total</th>
+	        		<th>ECTS</th>
+	        		<th>Responsable(s)</th>
+	        	</tr>
+	        </thead>
+			<tfoot>
+				<tr>
+					<td colspan="8"><span id="crypto-notice">(1)</span> Selon le parcours ant&eacute;rieur de l'&eacute;tudiant, il est fortement conseill&eacute; pour cette UE de suivre au premier semestre, en candidat libre, l'UE de Cryptographie dispens&eacute;e dans la <a href="http://ufr6.univ-paris8.fr/licence-info/">L3 Info -- parcours Math</a> de Paris&nbsp;8.<br/>
+									<span id="reportS2">(*)</span> N'ouvre pas en 2009-2010</td>
+				</tr>
+			</tfoot>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="3">UE fondamentales</th>
+	        		<td><a href="mmi-p13.html#oc2">Optimisation combinatoire</a></td>
+	        		<td>18</td>
+	        		<td>18</td>
+	        		<td>12</td>
+	        		<td>48</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~wolfler">Roberto Wolfler Calvo</a></td>
+	        	</tr>
+	        	<tr>				
+	        		<td><a href="mmi-p13.html#optim">Optimisation continue</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+		        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=DFT09ZLrfH">Fran&ccedil;oise Dibos</a></td>
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/~molinet/">Luc Molinet</a></td> -->
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#ter">Travail d'&eacute;tudes et de recherche</a></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>58,5</td>
+	        		<td>58,5</td>
+	        		<td>6</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~toulouse">Sophie Toulouse</a></td>
+	        	</tr>
+	        </tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="10">3 UE de parcours au choix parmi la liste ci-contre</th>
+	        		<td><span class="report"><a href="mmi-p13.html#adist">Algorithmique distribu&eacute;e</a></span>
+							 (<a href="mmi-p13.html#reportS2">*</a>)</td>
+	        		<td>18</td>
+	        		<td>18</td>
+	        		<td></td>
+	        		<td>36</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~valencia">Mario Valencia-Pabon</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#crypto-1">Cryptographie</a>&nbsp;(<a href="mmi-p13.html#crypto-notice">1</a>)</td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://ufr6.univ-paris8.fr/maths/CC/index.html">Claude Carlet</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#stat2">D&eacute;cisions statistiques</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#edp">EDP et distributions</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=BMoCxdTfbe">Mikha&euml;l Balabane</a></td>
+	        	</tr>
+				<tr>
+					<!-- 6 semaines Pascal Omnes Modelisation Cours-TD, 7 semaines Marc Wouts Projets numeriques Cours-TP -->
+	        		<td><a href="mmi-p13.html#model">Mod&eacute;lisation - Projets num&eacute;riques</a></td>
+	        		<td>19,5</td>
+	        		<td>9</td>
+	        		<td>10,5</td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td>Pascal Omnes, <a href="http://www.math.univ-paris13.fr/~wouts/">Marc Wouts</a></td>
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=LOl5uyl7.J">Olivier Lafitte</a>, <a href="http://www.math.univ-paris13.fr/~japhet/japhetmain.htm">Caroline Japhet</a></td> -->
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=AL7M45yyl3">Laurence Allenbach</a></td> -->
+<!-- 			<a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=KAACMbErbN">Ahmed Kebaier</a>, <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=ONkL3EslK8">Nadia Oudjane</a> -->
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#alea3">Processus stochastiques</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a></td>
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a></td> -->
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#cafo1">Calcul formel&nbsp;1 (calcul exact)</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a></td>
+	        	</tr>					
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#thiejeu">Th&eacute;orie des jeux</a></span>
+							 (<a href="mmi-p13.html#reportS2">*</a>)</td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#imgnum">Traitement des images num&eacute;riques</a></td>
+	        		<td>21</td>
+	        		<td>15</td>
+	        		<td>15</td>
+	        		<td>51</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-l2ti.univ-paris13.fr/~beghdadi/">Azeddine Beghdadi</a></td>
+	        	</tr>
+				<tr>
+	        		<td><a href="mmi-p13.html#ue-s2">Autre UE des Masters math&eacute;matiques de Paris 8 et Paris 13</a></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>4</td>
+	        		<td></td>
+	        	</tr>
+	        </tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="1">UE culturelles</th>
+	        		<td>Culture g&eacute;n&eacute;rale&nbsp;2 (<a href="mmi-p13.html#gb2">Anglais</a> / <a href="mmi-p13.html#hist2">Histoire des sciences</a>)</td>
+	        		<td colspan="2" style="text-align:center;">39</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td></td>
+	        	</tr>
+	        </tbody>
+	        </table>    
+	    </div>
+
+	    <div class="cadre">    
+	        <h3 class="cadre" id="tab-m2s3"><a href="mmi-p13.html#m2s3">Ann&eacute;e&nbsp;M2 - Semestre&nbsp;3</a></h3>
+	        <table frame="box" rules="groups">
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1" width="50%">
+			</colgroup>
+	        <colgroup span="4">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <thead>
+	        	<tr>
+	        		<th>Unit&eacute; d'enseignement</th>
+	        		<th>Intitul&eacute;</th>
+	        		<th>Cours</th>
+	        		<th>TD</th>
+	        		<th>TP</th>
+	        		<th>Total</th>
+	        		<th>ECTS</th>
+	        		<th>Responsable(s)</th>
+	        	</tr>
+	        </thead>
+			<tfoot>
+				<tr>
+					<td colspan="8"><span id="reportS3">(*)</span> N'ouvre pas en 2009-2010</td>
+				</tr>
+			</tfoot>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="6">2 UE de parcours au choix parmi la liste ci-contre</th>
+	        		<td><a href="mmi-p13.html#alea4">&Eacute;quations diff&eacute;rentielles stochastiques</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a></td>
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a></td> -->
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#image">Mod&eacute;lisation math&eacute;matique pour le traitement des images</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=DFT09ZLrfH">Fran&ccedil;oise Dibos</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#oc3">Programmation math&eacute;matique approfondie</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~letocart">Lucas L&eacute;tocart</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#imon">Repr&eacute;sentation des images et ondelettes</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~malgouy/">Fran&ccedil;ois Malgouyres</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#cafo2">Calcul formel&nbsp;2</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a></td>
+	        	</tr>					
+	        	<tr>
+	        		<td><a href="mmi-p13.html#bio">M&eacute;thodes stochastiques en biologie</a></td>
+	        		<td>19,5</td>
+	        		<td>19,5</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>5</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~dhersin">Jean-Stephane Dhersin</a></td>
+	        	</tr>
+			</tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="13">4 UE de parcours au choix parmi la liste ci-contre</th>
+	        		<td><a href="mmi-p13.html#adec">Aide &agrave; la d&eacute;cision</a></td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~wolfler">Roberto Wolfler Calvo</a>, <a href="http://www45.essec.fr/professorsCV/showCV.do?keyUrl=laurent-alfandari">Laurent Alfandari</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#cpx2">Algorithmes randomis&eacute;s et complexit&eacute;</a></span>
+							 (<a href="mmi-p13.html#reportS3">*</a>)</td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/membres/?lang=fr">Christophe Tollu</a></td>
+	        	</tr>
+				<tr>
+	        		<td><a href="mmi-p13.html#stat3">Apprentissage statistique</a></td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~kuhn/">Estelle Kuhn</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#alea5">Calcul stochastique et mod&egrave;les pour la finance</a></td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a></td>
+<!--	        		<td><a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a></td> -->
+	        	</tr>
+	        	<tr>					
+	        		<td><a href="mmi-p13.html#tv">Cin&eacute;ma et TV num&eacute;riques</a></td>
+	        		<td>27</td>
+	        		<td></td>
+	        		<td>12</td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-l2ti.univ-paris13.fr/~beghdadi/">Azeddine Beghdadi</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#cafo3">Combinatoire alg&eacute;brique et applications</a></span>
+							 (<a href="mmi-p13.html#reportS3">*</a>)</td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a></td>
+	        	</tr>					
+	        	<tr>
+	        		<td><span class="report"><a href="mmi-p13.html#analgo2">Combinatoire analytique</a></span>
+							 (<a href="mmi-p13.html#reportS3">*</a>)</td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~cb">Cyril Banderier</a></td>
+	        	</tr>
+	        	<tr>					
+	        		<td><a href="mmi-p13.html#ctropt">Contr&ocirc;le optimal</a></td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=BCdsMJ.Nl5">Claude Basdevant</a></td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#ol">Optimisation et logiciels</a></td>
+	        		<td>9</td>
+	        		<td></td>
+	        		<td>12</td>
+	        		<td>21</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~borne">Sylvie Borne</a></td>
+	        	</tr>
+<!--
+	        	<tr>					
+	        		<td><a href="mmi-p13.html#bio">Reconnaissance de formes et biom&eacute;trie</a></td>
+	        		<td>27</td>
+	        		<td></td>
+	        		<td>12</td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td><a href="http://www-lipn.univ-paris13.fr/~younes/">Younes Bennani</a></td>
+	        	</tr>
+-->
+	        	<tr>					
+	        		<td><a href="mmi-p13.html#mpi">M&eacute;thodes probabilistes en ing&eacute;nierie</a></td>
+	        		<td>24</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>24</td>
+	        		<td>4</td>
+	        		<td>Jiaping Wang, <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=ONkL3EslK8">Nadia Oudjane</a><br/></td>
+	        	</tr>
+	        	<tr>					
+	        		<td><span class="report"><a href="mmi-p13.html#incert">Propagation des incertitudes</a></span>
+							 (<a href="mmi-p13.html#reportS3">*</a>)</td>
+	        		<td>30</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>30</td>
+	        		<td>4</td>
+	        		<td><a href="http://www.math.univ-paris13.fr/~kebaier/">Ahmed Kebaier</a></td>
+	        	</tr>
+	        	<tr>					
+	        		<td><a href="mmi-p13.html#pro">UE <q>Pro</q></a></td>
+	        		<td>30</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>30</td>
+	        		<td>4</td>
+	        		<td><a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a> <!-- TODO, <a href="http://www-lipn.univ-paris13.fr/~plateau">G&eacute;rard Plateau</a> --> </td>
+	        	</tr>
+	        	<tr>
+	        		<td><a href="mmi-p13.html#ue-s3">UE au choix dans d'autres formations (Master Informatique Paris 13, fili&egrave;res ing&eacute;nieurs MACS et Informatique)</a></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>4</td>
+	        		<td></td>
+	        	</tr>
+	        </tbody>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="1">UE culturelles</th>
+	        		<td>Culture g&eacute;n&eacute;rale&nbsp;3 (<a href="mmi-p13.html#gb3">Anglais</a> / <a href="mmi-p13.html#tec3">Techniques d'expression et de communication</a>)</td>
+	        		<td colspan="2" style="text-align:center;">39</td>
+	        		<td></td>
+	        		<td>39</td>
+	        		<td>4</td>
+	        		<td></td>
+	        	</tr>
+	        </tbody>
+	        </table>
+	    </div>
+	    
+	    <div class="cadre">    
+	        <h3 class="cadre"><a href="mmi-p13.html#m2s4">Ann&eacute;e&nbsp;M2 - Semestre&nbsp;4</a></h3>
+	        <table frame="box" rules="groups">
+	        <caption></caption>
+	        <colgroup span="1">
+			</colgroup>
+	        <colgroup span="1" width="50%">
+			</colgroup>
+	        <colgroup span="4">
+			</colgroup>
+	        <colgroup span="1">
+			</colgroup>
+	        <thead>
+	        	<tr>
+	        		<th>Unit&eacute; d'enseignement</th>
+	        		<th>Intitul&eacute;</th>
+	        		<th>Cours</th>
+	        		<th>TD</th>
+	        		<th>TP</th>
+	        		<th>Total</th>
+	        		<th>ECTS</th>
+	        	</tr>
+	        </thead>
+	        <tbody>
+	        	<tr>
+	        		<th rowspan="1">UE fondamentales</th>
+	        		<td>Stage</td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td></td>
+	        		<td>30</td>
+	        	</tr>
+	        </tbody>
+	        </table>    	
+	    </div>
+
+	    <h3 class="cadre" id="parcours">Comment construire son parcours&nbsp;?</h3>
+	    <div class="cadre">
+			<p>La formation propos&eacute;e, s'appuyant sur plusieurs laboratoires &amp; instituts et collaborant avec d'autres masters, est <span class="emph">particuli&egrave;rement riche</span>. Pour vous aider &agrave; faire vos choix d'options, nous vous donnons quelques <span class="emph">crit&egrave;res de choix</span>, et vous proposons une <span class="emph">liste de profils <q>type</q></span>. Vos choix d'options seront valid&eacute;s d&egrave;s la rentr&eacute;e par l'&eacute;quipe p&eacute;dagoqique. Nous vous invitons donc d&egrave;s &agrave; pr&eacute;sent &agrave; consulter avec attention le d&eacute;tail des contenus des UE.
+			</p>
+			<h4>Crit&egrave;res de choix</h4>
+			<ul>
+				<li><span class="entete">Parcours ant&eacute;rieur</span>
+					envisagez &eacute;videmment une sp&eacute;cialisation en privil&eacute;giant les domaines que vous avez le plus parcourus (contenu de votre formation ant&eacute;rieure) et le mieux appr&eacute;hend&eacute;s (notes obtenues).
+				</li>
+				<li><span class="entete">Objectif professionnel</span>
+					la fonction et le domaine d'activit&eacute;s que vous visez conditionnent fortement vos choix.
+				</li>
+				<li><span class="entete">Profil de poste</span>
+					souhaitez-vous favoriser une culture g&eacute;n&eacute;rale <em>vs.</em> une sp&eacute;cialisation pointue&nbsp;?
+				</li>
+				<li><span class="entete">Coh&eacute;rence globale</span>
+					certaines UE se suivent au fil des semestres, v&eacute;rifiez bien les pr&eacute;requis&nbsp;!
+				</li>
+			</ul>
+			<h4>Profil <q>type</q> (on indique pour chaque profil les UE optionnelles conseill&eacute;es)</h4>
+			<ul>
+				<li><span class="entete">Algorithmique &amp; r&eacute;seaux</span> 
+					<ul>
+						<li><a href="mmi-p13.html#tab-m1s1">S1</a>&nbsp;: 
+			        		<a href="mmi-p13.html#cpx1">Complexit&eacute; algorithmique</a>,
+		        			<span class="report"><a href="mmi-p13.html#aga">Algorithmes et graphes al&eacute;atoires</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>). 
+						</li>
+						<li><a href="mmi-p13.html#tab-m1s2">S2</a>&nbsp;: 
+		        			<span class="report"><a href="mmi-p13.html#adist">Algorithmique distribu&eacute;e</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>),
+							<a href="mmi-p13.html#cafo1">Calcul formel&nbsp;1 (calcul exact)</a>,
+							<a href="mmi-p13.html#thiejeu"><span class="report">Th&eacute;orie des jeux</span></a> 
+										(<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+						<li><a href="mmi-p13.html#tab-m2s3">S3</a>&nbsp;: 
+							<a href="mmi-p13.html#imon">Repr&eacute;sentation des images et ondelettes</a>,
+			        		<a href="mmi-p13.html#oc3">Programmation math&eacute;matique approfondie</a>,<br/> 
+			        		<span class="report"><a href="mmi-p13.html#cpx2">Algorithmes randomis&eacute;s et complexit&eacute;</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>), 
+		        			<span class="report"><a href="mmi-p13.html#analgo2">Combinatoire analytique</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>),
+							<br/>
+							2 UE parmi 
+			        		<a href="mmi-p13.html#stat3">Apprentissage statistique</a>,
+			        		<span class="report"><a href="mmi-p13.html#adist">Combinatoire alg&eacute;brique et applications</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>),  
+			        		<a href="mmi-p13.html#mpi">M&eacute;thodes probabilistes en ing&eacute;nierie</a>, 
+			        		<a href="mmi-p13.html#ol">Optimisation et logiciels</a>.
+						</li>
+					</ul>
+				</li>
+				<li><span class="entete">Combinatoire alg&eacute;brique &amp; applications</span>
+					<ul>
+						<li><a href="mmi-p13.html#tab-m1s1">S1</a>&nbsp;: <!-- Programmation pour la cryptographie (MFPI) - autorise ?-->
+			        		<a href="mmi-p13.html#cpx1">Complexit&eacute; algorithmique</a>,
+		        			<span class="report"><a href="mmi-p13.html#aga">Algorithmes et graphes al&eacute;atoires</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+						<li><a href="mmi-p13.html#tab-m1s2">S2</a>&nbsp;: 
+							<a href="mmi-p13.html#cafo1">Calcul formel&nbsp;1 (calcul exact)</a>,  
+							<a href="mmi-p13.html#crypto-1">Cryptographie</a>,
+							<br/>
+							1 UE parmi 
+							<a href="mmi-p13.html#code-corr">Codes correcteurs (UE de la sp&eacute;cialit&eacute; MFPI)</a>, 
+		        			<span class="report"><a href="mmi-p13.html#adist">Algorithmique distribu&eacute;e</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+						<li><a href="mmi-p13.html#tab-m2s3">S3</a>&nbsp;: 									
+			        		<a href="mmi-p13.html#cafo2">Calcul formel&nbsp;2</a>,  
+			        		<span class="report"><a href="mmi-p13.html#adist">Combinatoire alg&eacute;brique et applications</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>),  
+			        		<span class="report"><a href="mmi-p13.html#cpx2">Algorithmes randomis&eacute;s et complexit&eacute;</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>), 
+			        		<span class="report"><a href="mmi-p13.html#analgo2">Combinatoire analytique</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+					</ul>
+				</li>
+				<li><span class="entete">Images</span>
+					<ul>
+						<li><a href="mmi-p13.html#tab-m1s1">S1</a>&nbsp;: 
+		        			<span class="report"><a href="mmi-p13.html#tss">Traitement statistique du signal</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>), 
+							<a href="mmi-p13.html#opca">Capteurs et optique</a>.
+						</li>
+						<li><a href="mmi-p13.html#tab-m1s2">S2</a>&nbsp;: 
+							<a href="mmi-p13.html#imgnum">Traitement des images num&eacute;riques</a>,
+			        		<a href="mmi-p13.html#model">Mod&eacute;lisation - Projets num&eacute;riques</a>.
+						</li>
+						<li><a href="mmi-p13.html#tab-m2s3">S3</a>&nbsp;: 
+							<a href="mmi-p13.html#image">Mod&eacute;lisation math&eacute;matique pour le traitement des images</a>,
+							<a href="mmi-p13.html#imon">Repr&eacute;sentation des images et ondelettes</a>,
+<!--			        		<a href="mmi-p13.html#bio">Reconnaissance de formes et biom&eacute;trie</a>,	-->
+			        		<a href="mmi-p13.html#tv">Cin&eacute;ma et TV num&eacute;riques</a>,
+			        		<a href="mmi-p13.html#stat3">Apprentissage statistique</a>.
+						</li>
+					</ul>
+				</li>
+				<li><span class="entete">Mod&egrave;les stochastiques &amp; finance</span>
+					<ul>
+						<li><a href="mmi-p13.html#tab-m1s1">S1</a>&nbsp;: 
+			        		<a href="mmi-p13.html#alea2">Mod&egrave;les al&eacute;atoires&nbsp;2</a>,
+							<br/>
+							1 UE parmi 
+			        		<span class="report"><a href="mmi-p13.html#stat1">Statistique exploratoire multidimensionnelle</a></span>,
+							(<a href="mmi-p13.html#reportP">*</a>)
+			        		<span class="report"><a href="mmi-p13.html#aga">Algorithmes et graphes al&eacute;atoires</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+						<li><a href="mmi-p13.html#tab-m1s2">S2</a>&nbsp;: 
+			        		<a href="mmi-p13.html#stat2">D&eacute;cisions statistiques</a>, 
+			        		<a href="mmi-p13.html#edp">EDP et distributions</a>,
+							<br/> 
+							1 UE parmi 
+			        		<a href="mmi-p13.html#alea3">Processus stochastiques</a>, 
+			        		<a href="mmi-p13.html#model">Mod&eacute;lisation - Projets num&eacute;riques</a>. 
+						</li>
+						<li><a href="mmi-p13.html#tab-m2s3">S3</a>&nbsp;: 
+			        		<a href="mmi-p13.html#alea5">Calcul stochastique et mod&egrave;les pour la finance</a>, 
+			        		<a href="mmi-p13.html#alea4">&Eacute;quations diff&eacute;rentielles stochastiques</a>, 
+			        		<a href="mmi-p13.html#ctropt">Contr&ocirc;le optimal</a>, 
+			        		<a href="mmi-p13.html#stat3">Apprentissage statistique</a>, 
+			        		<a href="mmi-p13.html#mpi">M&eacute;thodes probabilistes en ing&eacute;nierie</a>,  
+			        		<a href="mmi-p13.html#pro">UE <q>Pro</q></a>.
+						</li>
+					</ul>
+				</li>
+				<li><span class="entete">Recherche op&eacute;rationnelle</span>
+					<ul>
+						<li><a href="mmi-p13.html#tab-m1s1">S1</a>&nbsp;: 
+			        		<a href="mmi-p13.html#cpx1">Complexit&eacute; algorithmique</a>,
+							<br/>
+							1 UE parmi 
+			        		<a href="mmi-p13.html#alea2">Mod&egrave;les al&eacute;atoires&nbsp;2</a>,
+			        		<span class="report"><a href="mmi-p13.html#stat1">Statistique exploratoire multidimensionnelle</a></span>,
+							(<a href="mmi-p13.html#reportP">*</a>)
+						</li>
+						<li><a href="mmi-p13.html#tab-m1s2">S2</a>&nbsp;: 
+			        		<a href="mmi-p13.html#stat2">D&eacute;cisions statistiques</a>,
+							<br/>
+							1 UE parmi 
+		        			<span class="report"><a href="mmi-p13.html#adist">Algorithmique distribu&eacute;e</a></span>
+							 (<a href="mmi-p13.html#reportP">*</a>),
+			        		<a href="mmi-p13.html#model">Mod&eacute;lisation - Projets num&eacute;riques</a>,
+							<a href="mmi-p13.html#thiejeu"><span class="report">Th&eacute;orie des jeux</span></a> 
+									(<a href="mmi-p13.html#reportP">*</a>).
+						</li>
+						<li><a href="mmi-p13.html#tab-m2s3">S3</a>&nbsp;: 
+			        		<a href="mmi-p13.html#oc3">Programmation math&eacute;matique approfondie</a>, 
+							<a href="mmi-p13.html#imon">Repr&eacute;sentation des images et ondelettes</a>,
+							<a href="mmi-p13.html#adec">Aide &agrave; la d&eacute;cision</a>, 
+			        		<a href="mmi-p13.html#ol">Optimisation et logiciels</a>,
+							<br/>
+							2 UE parmi 
+			        		<a href="mmi-p13.html#stat3">Apprentissage statistique</a>,
+							<a href="mmi-p13.html#ctropt">Contr&ocirc;le optimal</a>, 
+			        		<a href="mmi-p13.html#mpi">M&eacute;thodes probabilistes en ing&eacute;nierie</a>,
+			        		<a href="mmi-p13.html#pro">UE <q>Pro</q></a>.
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p><span id="reportP">(*)</span> N'ouvre pas en 2009-2010</p>
+
+	    </div>
+
+		<h2 class="cadre" id="ue">Descriptif des unit&eacute;s d'enseignement</h2>
+	    <h3 class="cadre" id="m1s1">Ann&eacute;e&nbsp;M1 - Semestre&nbsp;1</h3>
+	    <div class="cadre">
+		    <ul>
+		    	<li id="niveau"><span class="bold">Remise &agrave; niveau <em>math&eacute;matiques et informatique</em></span><br/>
+					But du cours&nbsp;: Outils de base en Math&eacute;matiques et en Informatique -- Programmation C<br/>
+					Responsables&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a>, <a href="http://www-lipn.univ-paris13.fr/~toulouse">Sophie Toulouse</a><br/>
+					Pr&eacute; requis&nbsp;: Programmation &eacute;l&eacute;mentaire, utilisation d'Unix, <a href="mmi-p13#bib-c-1">[1]</a>.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Outils de base de probabilit&eacute;s et d'analyse&nbsp;: int&eacute;gration, loi des grands nombres, th&eacute;or&egrave;me central limite.</li>
+						<li>Informatique&nbsp;: algorithmique, structures de donn&eacute;es, complexit&eacute;.</li>
+						<li>Programmation C&nbsp;: structure d'un programme C, pointeur, structures complexes, programmation modulaire.</li>
+					</ul>
+					<a href="mmi-p13#bib-c">Bibliographie</a>&nbsp;: 
+						<a href="mmi-p13#bib-c-2">[2]</a>, <a href="mmi-p13#bib-c-3">[3]</a>, <a href="mmi-p13#bib-c-4">[4]</a>, 
+						<a href="mmi-p13#bib-c-5">[5]</a>, <a href="mmi-p13#bib-c-6">[6]</a>.
+		    	</li>
+		    	<li id="ahf"><span class="bold">Analyse de Fourier et th&eacute;orie du signal</span><br/>
+					But du cours&nbsp;: Analyse hilbertienne et de Fourier et applications en th&eacute;orie du signal<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=PF51w0qC5H">Fran&ccedil;ois Parreau</a><br/>
+					Pr&eacute; requis&nbsp;: Aucun<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Compl&eacute;ments sur les espaces de Hilbert. Bases hilbertiennes, s&eacute;ries de Fourier. Th&eacute;or&egrave;me de Riesz, dualit&eacute;.</li>
+						<li>Transformation de Fourier dans L<sup>1</sup>, dans L<sup>*</sup> et sur l'espace de Schwartz. Convolution, r&eacute;gularisation.</li>
+						<li>Transformation de Fourier discr&egrave;te, transformation de Fourier rapide.</li> 
+						<li>Filtrage. Echantillonnage, th&eacute;or&egrave;me de Shannon.</li>
+					</ul>
+				</li>				
+		    	<li id="graphe"><span class="bold">Graphes</span><br/>
+					But du cours&nbsp;: Introduire les concepts classiques et modernes de la th&eacute;orie des graphes<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~valencia">Mario Valencia-Pabon</a><br/>
+					Pr&eacute; requis&nbsp;: Aucun<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Concepts pr&eacute;liminaires&nbsp;: chemins, cycles, arbres et forêts, connexit&eacute;, graphes bipartis, contractions et mineurs, chemins et circuits Eul&eacute;riens. Algorithmes de plus court chemin (ex.&nbsp;: Dijkstra) et d'arbres couvrants (ex.&nbsp;: Kruskal).</li>
+						<li>Couplage&nbsp;: graphes bipartis, graphes g&eacute;n&eacute;raux, recouvrement des graphes par des chemins.</li>
+						<li>Connexit&eacute;&nbsp;: graphes et sous-graphes 2-connexes, structure des graphes 3-connexes, th&eacute;or&egrave;me de Menger, th&eacute;or&egrave;me de Mader, arbres de recouvrement arête disjoints, chemins entre pairs de sommets.</li>
+						<li>Graphes Planaires&nbsp;: concepts topologiques, th&eacute;or&egrave;me de Kuratowski, crit&egrave;res alg&eacute;briques, dualit&eacute; planaire.</li>
+						<li>Coloration&nbsp;: coloration des sommets, coloration des arêtes, coloration par listes, multicoloration, graphes parfaits.</li>
+						<li>R&eacute;seaux &eacute;lectriques et flux&nbsp;: d&eacute;finitions, k-flux, dualit&eacute; flux-coloration, conjectures de Tutte sur le flux. Algorithmes de flots (Ford-Fulkerson).</li>
+						<li>Sous-structures dans les graphes&nbsp;: graphes denses, lemme de r&eacute;gularit&eacute; de Szemer&eacute;di, graphes disperses, mineurs topologiques, conjecture de Hadwiger.</li>
+						<li>Th&eacute;orie de Ramsey dans les graphes&nbsp;: notions basiques et th&eacute;or&egrave;mes principaux.</li>
+						<li>Cycles Hamiltoniens&nbsp;: conditions suffisantes et applications.</li>
+						<li>Graphes al&eacute;atoires&nbsp;: la m&eacute;thode probabiliste, propri&eacute;t&eacute;s pour presque tous les graphes.</li>
+						<li>Mineurs, arbres et largeur arborescente&nbsp;: th&eacute;orie des mineurs, d&eacute;compositions arborescentes des graphes, largeur arborescente et mineurs interdits.</li>
+					</ul>
+					<a href="mmi-p13#bib-gr">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-gr-1">[1]</a>, <a href="mmi-p13#bib-gr-2">[2]</a>, <a href="mmi-p13#bib-gr-3">[3]</a>.
+				</li>
+		    	<li id="alea1"><span class="bold">Mod&egrave;les al&eacute;atoires&nbsp;1</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a><br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Rappels de probabilit&eacute;s, fonction g&eacute;n&eacute;ratrice des moments ; propri&eacute;t&eacute; de Markov. Probabilit&eacute;s de transition ; lois invariantes et lois limites.</li>
+						<li>Exemples de chaînes de Markov (marches al&eacute;atoires, mod&egrave;les g&eacute;n&eacute;tiques, files d'attente, chaînes de branchement, chaîne de naissance ou de mort.</li>
+						<li>&eacute;tats transients, &eacute;tats r&eacute;currents. Temps et probabilit&eacute; d'absorption. Temps moyen de premi&egrave;re visite et de r&eacute;currence.</li>
+					</ul>
+		    	</li>						
+		    	<li id="oc1"><span class="bold">Programmation lin&eacute;aire</span><br/>
+					But du cours&nbsp;: Fournir la th&eacute;orie et les principes g&eacute;n&eacute;raux de la programmation lin&eacute;aire (convexit&eacute;, solutions de base, dualit&eacute;) pour &eacute;tablir les algorithmes du simplexe (primal et dual) avec l'extension &agrave; la param&eacute;trisation.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~borne">Sylvie Borne</a><br/>
+					Pr&eacute; requis&nbsp;: Alg&egrave;bre lin&eacute;aire<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Mod&eacute;lisation et formulation d'un programme lin&eacute;aire</li>
+						<li>Convexit&eacute;</li>
+						<li>Th&eacute;or&egrave;mes fondamentaux de la programmation lin&eacute;aire</li>
+						<li>Algorithme primal du simplexe</li>
+						<li>Algorithme dual du simplexe</li>
+					</ul>
+				</li>
+		    	<li id="aga"><span class="bold">Algorithmes et graphes al&eacute;atoires</span><br/>
+					But du cours&nbsp;: L'objectif de ce cours est d'initier les &eacute;tudiants aux graphes al&eacute;atoires <a href="mmi-p13#bib-aga-3">[3]</a> qui sont des objets dont l'importance couvre plusieurs domaines&nbsp;: algorithmique et informatique fondamentale bien-sûr mais aussi physique, biologie, probabilit&eacute;s pour ne citer que ceux l&agrave;. 
+						Il s'agit d'&eacute;tudier ces objets alg&eacute;briques du point de vue <em>algorithmique</em> et <em>structurel</em> en utilisant&nbsp;: 
+						la <em>combinatoire analytique</em>, <a href="mmi-p13#bib-aga-1">[1]</a>, <a href="mmi-p13#bib-aga-2">[2]</a> et les <em>m&eacute;thodes</em> dites <em>probabilistes</em>, <a href="mmi-p13#bib-aga-4">[4]</a>, <a href="mmi-p13#bib-aga-5">[5]</a>.<br/>
+					Responsable&nbsp;:<br/>
+					Pr&eacute; requis&nbsp;: Concepts &eacute;l&eacute;mentaires de th&eacute;orie des graphes<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Concepts pr&eacute;liminaires d'analyse combinatoire&nbsp;: graphes &eacute;tiquet&eacute;s et s&eacute;ries g&eacute;n&eacute;ratrices exponentielles, <a href="mmi-p13#bib-aga-1">[1]</a>, <a href="mmi-p13#bib-aga-2">[2]</a>.</li>
+						<li>Concepts pr&eacute;liminaires de probabilit&eacute;: in&eacute;galit&eacute;s de concentration, graphes et algorithmes, <a href="mmi-p13#bib-aga-3">[3]</a>, <a href="mmi-p13#bib-aga-4">[4]</a>, <a href="mmi-p13#bib-aga-5">[5]</a>.</li>
+						<li>Concepts avanc&eacute;s&nbsp;: m&eacute;thode du col et analyses de singularit&eacute;, <a href="mmi-p13#bib-aga-1">[1]</a>.</li>
+						<li>Description des transitions de phases dans le processus de g&eacute;n&eacute;ration de graphes al&eacute;atoires, <a href="mmi-p13#bib-aga-3">[3]</a>.</li>
+						<li>Algorithmes pour les CSP binaires. Nous montrerons que ces probl&egrave;mes difficiles peuvent être rendu polynomial en moyenne.</li>
+						<li>Le probl&egrave;me du plus grand ensemble ind&eacute;pendant. Il repr&eacute;sente un exemple concret permettant de mettre en exergue les m&eacute;thodes cit&eacute;es dans les concepts (1) et (2) ci-dessus. 
+							En effet, nous verrons comment montrer l'existence d'un ensemble ind&eacute;pendant d'une certaine taille T en utilisant les m&eacute;thodes de moments (2) et nous montrerons que les meilleurs algorithmes n'exhibent que des ensembles ind&eacute;pendants de taille T/2 dans les graphes al&eacute;atoires G(n, 1/2).
+						</li>
+					</ul>
+				</li>
+		    	<li id="cpx1"><span class="bold">Complexit&eacute; algorithmique</span><br/>
+					But du cours&nbsp;: Introduire les concepts de la complexit&eacute; en temps et en espace.<br/>
+					Responsable&nbsp;: <a href="http://ufr6.univ-paris8.fr/maths/phan/">Duong Hieu Phan</a><br/>
+					Pr&eacute; requis&nbsp;: AUCUN<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Rappel sur la notion de calculabilit&eacute;.</li>
+						<li>Machine de Turing.</li>
+						<li>Classes PSPACE, P et NP.</li>
+						<li>Probl&egrave;mes NP-difficiles ; exemples issus de l'arithm&eacute;tique et de la cryptographie.</li>
+						<li>Classes probabilistes.</li>
+					</ul>
+				</li>
+		    	<li id="anaf"><span class="bold">Analyse fonctionnelle</span><br/>
+					But du cours&nbsp;: Th&eacute;or&egrave;mes g&eacute;n&eacute;raux et outils fondamentaux de l'analyse fonctionnelle.<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=PF51w0qC5H">Fran&ccedil;ois Parreau</a><br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Espaces fonctionnels&nbsp;: exemples classiques, th&eacute;or&egrave;me de Baire, de Banach-Steinhaus, du graphe ferm&eacute; et de l'application ouverte.</li>
+						<li>Th&eacute;or&egrave;me d'Ascoli. Dualit&eacute;, Th&eacute;or&egrave;me de Hahn-Banach. Topologies faibles.</li>
+						<li>El&eacute;ments de th&eacute;orie spectrale des op&eacute;rateurs.</li>
+					</ul>
+				</li>
+		    	<li id="alea2"><span class="bold">Mod&egrave;les al&eacute;atoires&nbsp;2</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#alea1">Mod&egrave;les al&eacute;atoires&nbsp;1</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Existence d'une loi invariante limite, p&eacute;riodicit&eacute; (pour une chaîne de Markov).</li>
+						<li>Algorithme de M&eacute;tropolis, processus de Bernoulli, processus de Poisson et relation avec les files d'attente.</li>
+					</ul>
+		    	</li>
+		    	<li id="tss"><span class="bold">Traitement statistique du signal</span><br/>
+					But du cours&nbsp;: Apprendre aux &eacute;tudiants &agrave; utiliser les processus stochastiques stationnaires du second ordre (principalement &agrave; temps discret) comme outils de mod&eacute;lisation permettant de r&eacute;soudre, de mani&egrave;re statistiquement optimale (au sens du minimum de variance) des probl&egrave;mes de filtrage, d'estimation et de pr&eacute;diction.<br/>
+					Responsables&nbsp;: <a href="http://www-l2ti.univ-paris13.fr/~kulcsar/">Caroline Kulcsár</a>, <a href="http://www-l2ti.univ-paris13.fr/~raynaud/">Henri-Fran&ccedil;ois Raynaud</a><br/>
+					Pr&eacute; requis&nbsp;: notions de base de la th&eacute;orie des probabilit&eacute;s, et de l'alg&egrave;bre lin&eacute;aire et quadratique<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Processus al&eacute;atoires &agrave; temps discret&nbsp;: moments, processus stationnaires, processus gaussiens scalaires et vectoriels. Notions d'espace de Hilbert stochastique. Ergodicit&eacute;.</li>
+						<li>Repr&eacute;sentation spectrale, fonction d'autocorr&eacute;lation, densit&eacute; spectrale de puissance, bruit blanc.</li>
+						<li>Mod&egrave;les param&eacute;triques AR et ARMA. Mod&egrave;les markoviens, repr&eacute;sentations d'&eacute;tat, probl&egrave;me de r&eacute;alisation.</li>
+						<li>Filtrage et pr&eacute;diction &agrave; variance minimale. Filtre de Kalman.</li>
+						<li>Estimation des param&egrave;tres d'un mod&egrave;le AR/ARMA. M&eacute;thode de Yule-Walker.</li>
+						<li>Introduction aux processus &agrave; temps continu. Probl&egrave;me de discr&eacute;tisation.</li>
+					</ul>
+				</li>				
+		    	<li id="stat1"><span class="bold">Statistique exploratoire multidimensionnelle</span><br/>
+					But du cours&nbsp;:<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=AL7M45yyl3">Laurence Allenbach</a><br/>
+					Pr&eacute; requis&nbsp;:<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Description unidimensionnelle de donn&eacute;es, M&eacute;diane, Moyenne, Mode, Etendue, Intervalle interquartile, Variance et &eacute;cart-type.</li>
+						<li>Description bidimensionnelle et mesures de liaison entre variables, coefficient de corr&eacute;lation, matrice de corr&eacute;lation.</li>
+						<li>Description multidimensionnelle de donn&eacute;es, analyse en composantes principales, analyse discriminante. Analyse des correspondances, Analyse des donn&eacute;es temporelles et &eacute;volutives, Analyse des donn&eacute;es sensorielles, Scoring.</li>
+					</ul>
+				</li>
+		    	<li id="hist1"><span class="bold">Histoire des sciences&nbsp;S1</span><br/>
+<!-- 					Responsable&nbsp;: <a href="http://www.kuttaka.org/">Maarten Bullynck</a><br/> -->
+ 					Responsable&nbsp;: <a href="http://recherche.univ-paris8.fr/red_fich_pers.php?PersNum=977">Jim Ritter</a><br/> 
+					Contenu&nbsp;: Histoire des logiques
+		    	</li>
+		    	<li id="gb1"><span class="bold">Anglais&nbsp;S1</span><br/>
+					Responsables&nbsp;: Gary Grill, Monique Nicolas, Edith Patrouilleau<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Entra&icirc;nement syst&eacute;matique &agrave; la compr&eacute;hension orale et &agrave; la prise de parole en continu (expos&eacute;, analyse personnelle argument&eacute;e).</li>
+						<li>Traitement de l'information &agrave; partir de messages oraux et &eacute;crits  de plus en plus complexes et orient&eacute;s vers le domaine <q>sciences et technologie</q> (&eacute;missions de radio, de t&eacute;l&eacute;vision, extraits de films, articles de presse).</li>
+						<li>Recherche documentaire dans la presse scientifique et sur internet.</li>
+					</ul>
+					Une approche interculturelle est d&eacute;velopp&eacute;e dans une perspective d'ouverture &agrave; l'international.
+		    	</li>
+		    </ul>
+	    </div>
+
+	    <h3 class="cadre" id="m1s2">Ann&eacute;e&nbsp;M1 - Semestre&nbsp;2</h3>
+	    <div class="cadre">
+		    <ul>
+		    	<li id="optim"><span class="bold">Optimisation continue</span><br/>
+					But du cours&nbsp;: Maîtriser les r&eacute;sultats et m&eacute;thodes de l'optimisation en dimension finie<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=DFT09ZLrfH">Fran&ccedil;oise Dibos</a> (bureau D412)<br/>
+					Pr&eacute; requis&nbsp;:<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Optimisation avec ou sans contraintes&nbsp;: convexit&eacute;, lagrangien, dualit&eacute;, points selles.</li>
+						<li>Algorithmes pour l'optimisation sans contrainte&nbsp;: gradient, gradient conjugu&eacute;, gradient conjugu&eacute; non lin&eacute;aire, r&eacute;gions de confiance...</li>
+						<li>Algorithmes pour l'optimisation avec contraintes&nbsp;: Algorithmes de projection, Uzawa...</li>
+					</ul>
+		    	</li>
+		    	<li id="oc2"><span class="bold">Optimisation combinatoire</span><br/>
+					But du cours&nbsp;: Fournir la th&eacute;orie et les principes g&eacute;n&eacute;raux de la programmation lin&eacute;aire en nombres entiers (PLNE) pour &eacute;tablir les algorithmes fondamentaux de r&eacute;solution exacte et approch&eacute;e.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~wolfler">Roberto Wolfler Calvo</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#oc1">Programmation lin&eacute;aire</a>. Algorithmique de graphes (plus courts chemins, arbres couvrants et flux maximal dans un r&eacute;seau de transport)<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Formulation et mod&eacute;lisation des PLNE de r&eacute;f&eacute;rence</li>
+						<li>Programmation lin&eacute;aire (PL) versus PLNE</li>
+						<li>Algorithme primal-dual pour le probl&egrave;me du transport</li>
+						<li>Relaxations&nbsp;: programmation lin&eacute;aire, relaxations Lagrangiennes, relaxations agr&eacute;g&eacute;es (surrogate), dualit&eacute;s en PLNE</li>
+						<li>Heuristiques&nbsp;: algorithmes gloutons, heuristiques duales, recherche locale, m&eacute;ta-heuristiques, algorithmes approchants</li>
+						<li>Algorithmes de simplification&nbsp;: r&eacute;duction de la taille du PLNE, in&eacute;galit&eacute;s valides</li>
+						<li>r&eacute;solution exacte&nbsp;: approches poly&eacute;drales, explorations arborescentes, programmation dynamique, hybridation de m&eacute;thodes</li>
+					</ul>
+				</li>
+		    	<li id="ter"><span class="bold">Travail d'&eacute;tude et de recherche (TER)</span><br/>
+					But du cours&nbsp;: D&eacute;velopper l'autonomie de lecture de livres et d'articles scientifiques ainsi que la capacit&eacute; de synth&egrave;se. Premi&egrave;re initiation &agrave; la recherche.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~toulouse">Sophie Toulouse</a><br/>
+					Pr&eacute; requis&nbsp;:<br/>
+					Contenu&nbsp;:
+							Effectuer un travail personnel de synth&egrave;se et d'&eacute;tude, &eacute;ventuellement accompagn&eacute; d'une impl&eacute;mentation, autour d'un sujet choisi en accord avec un encadrant de l'&eacute;quipe p&eacute;dagogique. 
+							Le sujet peut porter sur tout domaine li&eacute; aux enseignements de premi&egrave;res ann&eacute;e, sans faire partie de l'objet de l'un des cours. 
+							Le travail peut &eacute;ventuellement être effectu&eacute; en binôme, auquel cas le rendu devra être plus cons&eacute;quent.
+							La quantit&eacute; de travail d&eacute;di&eacute; au TER est &eacute;valu&eacute;e &agrave; 58,5 heures, soit &agrave; 4,5 heures (une demijourn&eacute;e) par semaine sur un semestre de 13 semaines. 
+							D&egrave;s lors que le sujet s'y prête, le TER devra être accompagn&eacute; d'une impl&eacute;mentation.
+							Le TER fait l'objet d'un m&eacute;moire et d'une soutenance orale, devant un jury constitu&eacute; de membres de l'&eacute;quipe p&eacute;dagogique.
+				</li>			
+		    	<li id="adist"><span class="bold">Algorithmique distribu&eacute;e</span><br/>
+					But du cours&nbsp;: Ce cours &eacute;tablit les fondements essentiels n&eacute;cessaires &agrave; l'analyse de l'environnement et des algorithmes distribu&eacute;s (ou r&eacute;partis). Il a pour objectif de les initier &agrave; un domaine riche et vaste où la recherche th&eacute;orique et les applications en informatique fondamentale s'&eacute;tendent tr&egrave;s rapidement, des structures et algorithmes distribu&eacute;s <q>classiques</q> &agrave; l'algorithmique des r&eacute;seaux sans fils.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~valencia">Mario Valencia-Pabon</a><br/>
+					Pr&eacute; requis&nbsp;:<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Le mod&egrave;le. Syst&egrave;mes de transition, ordre causal des &eacute;v&eacute;nements et horloges logiques, complexit&eacute;.</li>
+						<li>Protocoles de routage.</li>
+						<li>Algorithmes de routage. Le probl&egrave;me des plus courts chemins, routage avec des tables compactes, routage hi&eacute;rarchique. </li>
+						<li>Routage des paquets sans <q>deadlock</q>.</li>
+						<li>Algorithmes transversaux. Recherche en profondeur d'abord.</li>
+						<li>Algorithmes d'&eacute;lection dans une r&eacute;seau. Anneaux et r&eacute;seaux arbitraires.</li>  
+						<li>R&eacute;seaux anonymes. Algorithmes d&eacute;terministes et probabilistes.</li> 
+						<li>Tol&eacute;rance aux fautes dans les syst&egrave;mes distribu&eacute;s.</li>
+						<li>Algorithmes auto-stabilisants  dans les r&eacute;seaux distribu&eacute;s.</li> 
+					</ul>
+		    	</li>
+		    	<li id="cafo1"><span class="bold">Calcul formel&nbsp;1 (calcul exact)</span><br/>
+					But du cours&nbsp;: Ce cours est un cours dispensateur de culture g&eacute;n&eacute;rale en mati&egrave;re de calcul exact (sur machine) et ses applications. Il prend les &eacute;tudiants <q>&agrave; leur niveau</q> (n&eacute;cessairement encore h&eacute;t&eacute;rog&egrave;ne) et, grâce &agrave; la souplesse fournie par le sujet lui-même (les degr&eacute;s de libert&eacute; sont cons&eacute;quents&nbsp;: dosage impl&eacute;mentation-th&eacute;orie, vari&eacute;t&eacute; et profondeur des applications) vise &agrave; donner aux &eacute;tudiants un bagage en algorithmique approfondie, calcul formel et dans les m&eacute;thodes modernes de calcul (algorithmique rapide, m&eacute;thodes de Monte-Carlo, etc...).<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a><br/>
+					Pr&eacute; requis&nbsp;: AUCUN<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Calcul exact et approch&eacute;&nbsp;: symboles et formules, quantit&eacute;s</li>
+						<li>Repr&eacute;sentation en machine&nbsp;: graphes sans cycles (DAG&nbsp;: Directed Acyclic Graphs), graphes de transition (poids et calcul)</li>
+						<li>R&eacute;duction et r&eacute;&eacute;critures (mots, graphes)</li>
+						<li>Classes de nombres (rationnels, extensions alg&eacute;briques, transcendants), repr&eacute;sentations en machine et algorithmes de calcul</li>
+						<li>Application&nbsp;: &eacute;valuation par points, lien avec la compression audio et vid&eacute;o</li>
+						<li>Calcul exact sur les espaces de fonctions (fonctions rationnelles &agrave; variables commutatives et non-commutatives, int&eacute;gration et sommation symbolique)</li>
+						<li>Calcul modulo p&nbsp;: applications aux m&eacute;thodes de Monte-Carlo (dont une mod&eacute;lisation en finance, Cox-Ross-Rubinstein) et &agrave; la s&eacute;curit&eacute; des donn&eacute;es, syst&egrave;mes &agrave; clef publique, correction des erreurs (modems).</li>
+					</ul>
+					<a href="mmi-p13#bib-cafo">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-cafo-1">[1]</a>, <a href="mmi-p13#bib-cafo-2">[2]</a>, <a href="mmi-p13#bib-cafo-3">[3]</a>, <a href="mmi-p13#bib-cafo-4">[4]</a>, <a href="mmi-p13#bib-cafo-5">[5]</a>, <a href="mmi-p13#bib-cafo-6">[6]</a>, <a href="mmi-p13#bib-cafo-7">[7]</a>, <a href="mmi-p13#bib-cafo-8">[8]</a>, <a href="mmi-p13#bib-cafo-9">[9]</a>.<br/>
+
+					Compl&eacute;ment&nbsp;:
+					<ul>
+						<li><a href="doc/mmi-p13/pres-cafo-12.pdf">Pr&eacute;sentation du 27/4/2009</a> (diaporama, format pdf)</li>
+						<li>Logiciel de calcul formel <q>maxima</q>&nbsp;: apr&egrave;s avoir t&eacute;l&eacute;charg&eacute; le logiciel <a href="http://maxima.sourceforge.net/">maxima</a> et son interface <a href="http://wxmaxima.sourceforge.net/wiki/index.php/Main_Page">wxmaxima</a> (tous deux en acc&egrave;s libre), essayez une petit <a href="doc/mmi-p13/pres-cafo-demo1.wxm">d&eacute;monstration</a> ou encore, une <a href="doc/mmi-p13/pres-cafo-cox1.mws">simulation en finance</a> (mod&egrave;le binomial ou de Cox-Ross-Rubinstein). Si les d&eacute;mos ne s'affichent pas, contacter G&eacute;rard H. E. Duchamp ghed<q>at</q>lipn.univ-paris13.fr ou bien Laurent Poinsot Laurent.Poinsot<q>at</q>lipn.univ-paris13.fr</li>
+					</ul>
+		    	</li>			
+		    	<li id="edp"><span class="bold">EDPs et distributions</span><br/>
+					But du cours&nbsp;:	<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=BMoCxdTfbe">Mikha&euml;l Balabane</a><br/>
+					Pr&eacute; requis&nbsp;: 	<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Introduction &agrave; la th&eacute;orie des distributions. Convolution, r&eacute;gularisation, distributions sur un ouvert.</li>
+						<li>Distributions temp&eacute;r&eacute;es, transformation de Fourier et lien avec les espaces de Sobolev.</li>
+						<li>Application &agrave; la r&eacute;solution des &eacute;quations aux d&eacute;riv&eacute;es partielles lin&eacute;aires : laplacien, &eacute;quation de la chaleur, &eacute;quation des ondes.</li>
+					</ul>
+		    	</li>
+		    	<li id="alea3"><span class="bold">Processus stochastiques</span><br/>
+					But du cours&nbsp;: Familiariser l'&eacute;tudiant avec des techniques avanc&eacute;es de probabilit&eacute;s et processus et en travaillant sur des mod&egrave;les venant de la finance et de l'assurance.<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a> (bureau D315)<br/>
+<!--				Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a><br/> -->
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#alea1">Mod&egrave;les al&eacute;atoires 1</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Conditionnement (esp&eacute;rance conditionnelle et lois conditionnelles).</li>
+						<li>Vecteurs gaussiens.</li>
+						<li>Martingales &agrave; temps discret.</li>
+						<li>Introduction aux mod&egrave;les financiers &agrave; temps discrets.</li>
+						<li>Options europ&eacute;ennes et am&eacute;ricaines. Mod&egrave;le de Cox-Ross-Rubinstein.</li>
+						<li>Processus de Poisson et applications &agrave; l'assurance.</li>
+					</ul>				   
+		    	</li>
+		    	<li id="opca"><span class="bold">Capteurs et optique</span><br/>
+					But du cours&nbsp;: Sensibiliser les &eacute;tudiants aux probl&egrave;mes d'acquisitions d'images.<br/>
+					Responsable&nbsp;: <a href="http://www-lpl.univ-paris13.fr">Eric Tinet</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#ahf">Analyse de Fourier et th&eacute;orie du signal</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>El&eacute;ments de photom&eacute;trie et colorim&eacute;trie</li>
+						<li>Bases de l'optique g&eacute;om&eacute;trique et photographie&nbsp;: ouverture num&eacute;rique, profondeur de champ, sensibilit&eacute;.</li>
+						<li>Les outils essentiels de l'optique physique&nbsp;: notions de coh&eacute;rences spatiale et temporelle, limite de r&eacute;solution, imagerie interf&eacute;rom&eacute;trique.</li>
+						<li>M&eacute;trologie des capteurs. D&eacute;finitions, caract&eacute;ristiques.</li>
+						<li>Capteurs ponctuels, principe de fonctionnement d'une photodiode. Capteurs d'image&nbsp;: CCD, CMOS,...</li>
+						<li>Restitution de l'image, &eacute;crans, impressions.</li>
+						<li>Exemples de syst&egrave;mes d'acquisition d'images num&eacute;riques
+							<ul>
+								<li>appareil photo num&eacute;rique CCD&nbsp;: description du syst&egrave;me, capteurs matriciels couleur, fr&eacute;quence de coupure et repliement spectral.</li>
+								<li>cam&eacute;ra num&eacute;rique&nbsp;: principe de fonctionnement, limitations principales (temps de lecture, entrelacement, fenêtrage) et points forts</li>
+								<li>t&eacute;lescope terrestre&nbsp;: description du VLT, cam&eacute;ra d'imagerie, probl&eacute;matique des images longue pose en astronomie, correction temps-r&eacute;el, exemples d'images</li>
+							</ul>
+						</li>
+						<li>Applications&nbsp;: acquisitions particuli&egrave;res&nbsp;: images satellites, images m&eacute;dicales, vid&eacute;o embarqu&eacute;e, vid&eacute;o surveillance</li>
+					</ul>
+		    	</li>
+		    	<li id="imgnum"><span class="bold">Traitement des images num&eacute;riques</span><br/>
+					But du cours&nbsp;: Il s'agit d'un cours d'introduction aux techniques de traitement d'images num&eacute;riques. Les notions de base sur l'acquisition et le traitement bas niveau du signal image sont abord&eacute;es.<br/>
+					Responsable&nbsp;: <a href="http://www-l2ti.univ-paris13.fr/~beghdadi/">Azeddine Beghdadi</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#ahf">Analyse de Fourier et th&eacute;orie du signal</a>, notions sur l'<a href="mmi-p13#opca">optique et les capteurs</a>.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Historique et introduction au traitement d'image</li>
+						<li>Acquisition et repr&eacute;sentation du signal image. Echantillonnage 2D, quantification, codage. Repr&eacute;sentation et d&eacute;composition dans une base d'images orthogonales</li>
+						<li>Analyse statistique de l'image (histogramme 1D, 2D, entropie,...)</li>
+						<li>Filtrage lin&eacute;aire (filtres de lissage, filtre passe-bande, passe-haut)</li>
+						<li>Filtrage non-lin&eacute;aire (filtres de statistique d'ordre, filtres morphologiques)</li>
+						<li>Segmentation d'image (seuillage, d&eacute;tection de contours, r&eacute;gions)</li>
+						<li>Pr&eacute;traitement (corrections d'&eacute;clairement, rehaussement de contraste, ...)</li>
+						<li>Applications, logiciels</li>
+					</ul>
+		    	</li>
+		    	<li id="crypto1"><span class="bold">Cryptographie</span><br/>
+					But du cours&nbsp;: Approfondir la connaissance la cryptographie, en particulier des chiffrements par flots et par blocs, des protocoles sans transfert de connaissances et les cryptosyst&egrave;mes &agrave; cl&eacute; publique utilisant les codes<br/>
+					Responsable&nbsp;: <a href="http://ufr6.univ-paris8.fr/maths/CC/index.html">Claude Carlet</a><br/>
+					Pr&eacute; requis&nbsp;: Une connaissance de base des corps finis et de la cryptologie (principes de base, DES, AES, chiffrement &agrave; la vol&eacute;e, RSA, El Gamal) telle qu'elle est enseign&eacute;e dans le cours d'introduction &agrave; la cryptographie en licence de math&eacute;matiques et informatique de l'Universit&eacute; Paris 8. Un polycopi&eacute; de ce cours sera mis &agrave; disposition des &eacute;tudiants ainsi qu'une liste d'exercices avec leurs corrig&eacute;s<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Attaques sur les sch&eacute;mas de chiffrement par flots (&agrave; la vol&eacute;e)&nbsp;: attaques par corr&eacute;lation et fonctions r&eacute;silientes ; attaque par approximation lin&eacute;aire et nonlin&eacute;arit&eacute; des fonctions bool&eacute;ennes. Constructions de fonctions hautement r&eacute;silientes et de forte non lin&eacute;arit&eacute;. Attaques alg&eacute;briques et immunit&eacute; alg&eacute;brique des fonctions bool&eacute;ennes.</li>
+						<li>Rappels et compl&eacute;ments sur les attaques sur les sch&eacute;mas de chiffrement par bloc. Mesures de la non lin&eacute;arit&eacute; des fonctions bool&eacute;ennes vectorielles; fonctions presque parfaitement non lin&eacute;aires et fonctions presque courbes.</li>
+						<li>Cryptographie &agrave; cl&eacute; publique&nbsp;: protocoles d'authentification, transfert nul de connaissances ; codes correcteurs et cryptographie.</li>
+					</ul>
+		    	</li>
+		    	<li id="code-corr"><span class="bold">Codes correcteurs</span><br/>
+					But du cours&nbsp;: Approndir la connaissance des codes correcteurs d'erreurs, en particulier des codes cycliques et de certains codes  non lin&eacute;aires<br/>
+					Responsable&nbsp;: <a href="http://ufr6.univ-paris8.fr/maths/CC/index.html">Claude Carlet</a><br/>
+					Pr&eacute; requis&nbsp;: Une connaissance de base des corps finis et des codes cryptographie correspondant au cours d'introduction aux codes correcteurs de la licence de math&eacute;matiques et informatique de l'Universit&eacute; Paris&nbsp;8. Un polycopi&eacute; de ce cours ainsi qu'une liste d'exercices corrig&eacute;s seront mis &agrave; disposition des &eacute;tudiants.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Compl&eacute;ments sur les extensions galoisiennes et sur la factorisation des polyn&ocirc;mes &agrave; coefficients dans les corps. Application &agrave; la construction des codes cycliques.</li>
+						<li>Codes cycliques (rappels), borne BCH. Les codes de Reed-Solomon et la correction d'erreur dans le disque compact.</li>
+						<li>Les algorithmes de d&eacute;codage des codes cycliques.</li>
+						<li>La borne de Gilbert-Varshamov et les codes g&eacute;om&eacute;triques.</li>
+						<li>La dualit&eacute; formelle des codes de Kerdock et de Preparata. Les codes Z4-lin&eacute;aires et leurs g&eacute;n&eacute;ralisations</li>
+					</ul>
+		    	</li>
+				<li id="stat2"><span class="bold">D&eacute;cisions statistiques</span><br/>
+					But du cours&nbsp;: Maitrise de quelques outils avanc&eacute;s de l'analyse statistique<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a> (bureau D315)<br/>
+					Pr&eacute; requis&nbsp;: 	<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Probl&egrave;me d'estimation&nbsp;: Estimateur ; Risque quadratique ; Statistique exhaustive ; Mod&egrave;le Exponentiel. Construction d'estimateurs&nbsp;: Estimateur de substitution ; Estimateur bay&eacute;sien ; maximum de vraisemblance. Information de Fisher et In&eacute;galit&eacute; de Cramer-Rao.</li>
+						<li>Vecteurs Gaussiens&nbsp;: Loi du X2 ; Th&eacute;or&egrave;me de Student ; Th&eacute;or&egrave;me de Cochran.</li>
+						<li>Intervalle et R&eacute;gion de confiance. Tests d'hypoth&egrave;ses&nbsp;: Lemme de Neyman-Pearson ; Test du rapport de vraisemblance ; Famille &agrave; rapport de vraisemblance monotone ; Tests UPP ; Th&eacute;or&egrave;me de Lehmann ; Test de comparaison.Tests du X2 ; test d'ajustement.</li>
+					</ul>
+		    	</li>
+				<li id="thiejeu"><span class="bold">Th&eacute;orie des jeux</span><br/>
+					But du cours&nbsp;: Dans ce cours on &eacute;tudiera la notion de jeu&nbsp;:un jeu est une situation d'interaction ou les gains de chaque agent d&eacute;pendent des actions qu'il  choisit mais aussi du choix des autres agents. Le concept de solution le plus connu est celui d'&eacute;quilibre de Nash qui sera d&eacute;fini et &eacute;tudie.<br/>
+					On examinera le cas particulier des jeux a somme nulle et la notion de valeur qui est plus pr&eacute;cise dans ce contexte que celle d'&eacute;quilibre de Nash.<br/>
+					La suite du cours sera consacre a des extensions et des raffinements &nbsp;: cas des jeux ou les joueurs peuvent disposer d'une information prive sur le jeu, et utilisation optimale de cette information; cas ou le jeu est d&eacute;fini par un arbre et relation entre l'&eacute;quilibre de Nash et l'induction r&eacute;trograde.<br/>
+					Au cours du semestre on examinera des exemples d'applications des concepts &eacute;tudies en particulier dans des contextes &eacute;conomiques.<br/>
+					Responsable&nbsp;:
+				</li>
+
+		    	<li id="model"><span class="bold">Mod&eacute;lisation&nbsp;: &eacute;tude de cas &amp; Projets num&eacute;riques</span><br/>
+					But du cours&nbsp;: 
+					<ul>
+						<li><span class="entete">Mod&eacute;lisation&nbsp; &eacute;tude de cas</span>
+							D&eacute;couvrir au travers d'un cas concret issu de l'industrie ou de la recherche le processus complet qui va de la mod&eacute;lisation d'un probl&egrave;me, &agrave; sa r&eacute;solution sur ordinateur en passant par son analyse math&eacute;matique et informatique.
+						</li>
+						<li><span class="entete">Projets num&eacute;riques</span>
+							Faire acqu&eacute;rir aux &eacute;tudiants une r&eacute;elle comp&eacute;tence pratique dans les domaines &eacute;tudi&eacute;s, via la manipulation d'outils logiciels sp&eacute;cialis&eacute;s (Matlab, SAS,...).
+						</li>
+					</ul>
+					Responsables&nbsp;:
+					<ul>
+						<li><span class="entete">Mod&eacute;lisation&nbsp; &eacute;tude de cas</span>
+							Pascal Omnes
+							<!-- <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=LOl5uyl7.J">Olivier Lafitte</a>, <a href="http://www.math.univ-paris13.fr/~japhet/japhetmain.htm">Caroline Japhet</a> -->
+						</li>
+						<li><span class="entete">Projets num&eacute;riques</span>
+							<a href="http://www.math.univ-paris13.fr/~wouts/">Marc Wouts</a>
+							<!-- <a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=AL7M45yyl3">Laurence Allenbach</a> -->
+						</li>
+					</ul>
+					Pr&eacute; requis&nbsp;: <br/>
+					<ul>
+						<li><span class="entete">Mod&eacute;lisation&nbsp; &eacute;tude de cas</span>
+						</li>
+						<li><span class="entete">Projets num&eacute;riques</span>
+						</li>
+					</ul>
+					Contenu&nbsp;:
+					<ul>
+						<li><span class="entete">Mod&eacute;lisation&nbsp; &eacute;tude de cas</span>
+							<ul>
+								<li>Ce cours partag&eacute; entre un intervenant industriel et un intervenant universitaire m&egrave;nera l'&eacute;tude compl&egrave;te d'un probl&egrave;me de conception ou de calcul tant dans ses aspects fondamentaux que dans ses aspects de mise en oeuvre informatique.</li>
+								<li>Ce cours comprendra une initiation au g&eacute;nie logiciel.</li>
+							</ul>
+						</li>
+						<li><span class="entete">Projets num&eacute;riques</span>
+							Appliquer les m&eacute;thodologies acquises &agrave; des probl&egrave;mes concrets sous forme de mini-projets d'application sur ordinateur, avec des logiciels tels que Matlab, SAS, ...
+						</li>
+					</ul>
+		    	</li>
+		    	<li id="hist2"><span class="bold">Histoire des sciences&nbsp;S2</span><br/>
+<!-- 					Responsable&nbsp;: <a href="http://www.kuttaka.org/">Maarten Bullynck</a><br/> -->
+ 					Responsable&nbsp;: <a href="http://recherche.univ-paris8.fr/red_fich_pers.php?PersNum=977">Jim Ritter</a><br/> 
+					Contenu&nbsp;: Histoire des logiques
+		    	</li>
+		    	<li id="gb2"><span class="bold">Anglais&nbsp;S2</span><br/>
+					Responsables&nbsp;: Gary Grill, Monique Nicolas, Edith Patrouilleau<br/>
+					Contenu&nbsp;: Les supports oraux et &eacute;crits sont orient&eacute;s autour de deux axes&nbsp;:
+					<ul>
+						<li>le champ d'&eacute;tude large de l'&eacute;tudiant (documentation scientifique, conf&eacute;rences)&nbsp;</li>
+						<li>le domaine professionnel (introduction au monde de l'entreprise).</li>
+					</ul>
+					La compr&eacute;hension et l'expression orales sont privil&eacute;gi&eacute;es  par des mises en situation visant &agrave; tester la capacit&eacute; &agrave; interagir  (l'anglais au t&eacute;l&eacute;phone, r&eacute;solution de probl&egrave;mes, participation &agrave; un projet). A  partir  de sc&eacute;nario "r&eacute;alistes" les &eacute;tudiants  seront  fortement incit&eacute;s &agrave; la prise de parole et &agrave; la production d'&eacute;crits (comptes-rendus, courriers divers pr&eacute;sentation de travaux).
+		    	</li>
+		    	<li id="ue-s2"><span class="bold">Autre UE des Masters math&eacute;matiques de Paris 8 et Paris 13</span><br/>
+					Liste <span class="emph">non exhaustive</span> d'UE conseill&eacute;es&nbsp;:
+					<ul>
+						<li><a href="mmi-p13.html#code-corr">Codes correcteurs</a> (UE de la sp&eacute;cialit&eacute; <em>MFPI</em> du master)</li>
+						<li>&hellip;</li>
+					</ul>  
+		    	</li>
+		    </ul>
+	    </div>
+
+	    <h3 class="cadre" id="m2s3">Ann&eacute;e&nbsp;M2 - Semestre&nbsp;3</h3>
+	    <div class="cadre">
+		    <ul>
+				<!-- UE 5 credits -->
+		    	<li id="oc3"><span class="bold">Programmation math&eacute;matique approfondie</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~letocart">Lucas L&eacute;tocart</a><br/>
+					Pr&eacute; requis&nbsp;: Programmation lin&eacute;aire <a href="mmi-p13.html#oc1">continue</a> et <a href="mmi-p13.html#oc2">enti&egrave;re</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>M&eacute;thodes de d&eacute;composition et g&eacute;n&eacute;ration de colonnes</li>
+						<li>Approches poly&eacute;drales</li>
+						<li>Programmation non lin&eacute;aire, relaxation semi-d&eacute;finie et convexification</li>
+						<li>Applications pour des probl&egrave;mes de planification en transport, de routage et de fiabilit&eacute; dans les r&eacute;seaux, ...</li>
+					</ul>
+		    	</li>
+
+		    	<li id="cafo2"><span class="bold">Calcul formel&nbsp;2</span><br/>
+					But du cours&nbsp;: Ce cours fournit les diff&eacute;rentes m&eacute;thodes modernes de codage et de calcul de structures complexes en machine (par exemple les diff&eacute;rentes fa&ccedil;ons de repr&eacute;senter -- de fa&ccedil;on exacte -- l'infini en machine, quand c'est possible). Il pose aussi la question des deux sortes d'approximation ; par troncature (inductive) et par une ou des &eacute;quivalences (projectives). Ce dernier cadre fournit &eacute;galement un lien avec la cryptographie. La partie centrale est constitu&eacute;e par la th&eacute;orie moderne des automates (&agrave; multiplicit&eacute;s) qui englobe la th&eacute;orie classique (bool&eacute;enne) et des mod&egrave;les comme les automates stochastiques et les transducteurs. Au passage ce cours fournit un solide bagage en algorithmique.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a><br/>
+					Pr&eacute; requis&nbsp;: AUCUN<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Codage des d&eacute;veloppements infinis en machine (boucles, rationalit&eacute;, p&eacute;riodicit&eacute; et pseudop&eacute;riodicit&eacute;), applications aux g&eacute;n&eacute;rateurs de nombres al&eacute;atoires.</li>
+						<li>Automates et rationalit&eacute; des fonctions sur les mots&nbsp;: s&eacute;ries g&eacute;n&eacute;ratrices &agrave; plusieurs variables noncommutatives, lien avec la th&eacute;orie des langages, la r&eacute;duction des BDD (Binary Decision Diagrams) et des fonctions bool&eacute;ennes.</li>
+						<li>Application de la variation de coefficients&nbsp;: recherche de plus court chemin dans un graphe avec listes d'adresses, mod&eacute;lisation de strat&eacute;gies humaines, syst&egrave;mes complexes.</li>
+						<li>Approximations&nbsp;: par troncature, modulo une ou des &eacute;quivalences</li>
+						<li>R&eacute;duction et r&eacute;&eacute;criture de termes.</li>
+					</ul>
+					<a href="mmi-p13#bib-cafo">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-cafo-2">[1]</a>, <a href="mmi-p13#bib-cafo-2">[2]</a>, <a href="mmi-p13#bib-cafo-3">[3]</a>, <a href="mmi-p13#bib-cafo-4">[4]</a>, <a href="mmi-p13#bib-cafo-5">[5]</a>, <a href="mmi-p13#bib-cafo-6">[6]</a>, <a href="mmi-p13#bib-cafo-7">[7]</a>, <a href="mmi-p13#bib-cafo-8">[8]</a>, <a href="mmi-p13#bib-cafo-9">[9]</a>.
+		    	</li>
+
+		    	<li id="bio"><span class="bold">M&eacute;thodes stochastiques en biologie</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~dhersin">Jean-Stephane Dhersin</a> (bureau B402)<br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+		    	</li>
+
+		    	<li id="alea4"><span class="bold">&Eacute;quations diff&eacute;rentielles stochastiques</span><br/>
+					But du cours&nbsp;: Pr&eacute;senter une multiplicit&eacute; d'aspects du sujet en vue des applications.<br/>
+					Intervenants&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a> (bureau A303), 
+										<a href="http://www.math.univ-paris13.fr/~wouts/">Marc Wouts</a> (bureau A302),<br/>
+<!--				Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a><br/> -->
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#alea1">Mod&egrave;les al&eacute;atoires 1</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Rappel de probabilit&eacute;s et de processus stochastiques
+							<ul>
+								<li>Mouvement brownien, martingales et semimartingales.</li>
+								<li>Int&eacute;grales "forward", variation quadratique et relation avec le calcul d'Itô.</li>
+							</ul>
+						</li>
+						<li>Equations diff&eacute;rentielles stochastiques (EDS)
+							<ul>
+								<li>Le cas des coefficients Lipschitz.</li>
+								<li>Solutions fortes et en loi. Th&eacute;or&egrave;me de Yamada-Watanabe.</li>
+								<li>Divers th&eacute;or&egrave;mes d'existence et unicit&eacute;.</li>
+								<li>Processus de Bessel, carr&eacute;s de Bessel et processus de Cox-Ingersoll-Ross</li>
+							</ul>
+						</li>
+						<li>Equations diff&eacute;rentielles stochastiques progressives r&eacute;trogrades et relation avec les EDP elliptiques et paraboliques non lin&eacute;aires.</li>
+						<li>Discr&eacute;tisation des &eacute;quations diff&eacute;rentielles stochastiques et taux de convergence. Convergence forte et faible des approximations.</li>
+					</ul>	
+		    	</li>
+
+		    	<li id="image"><span class="bold">Mod&eacute;lisation math&eacute;matique pour le traitement des images</span><br/>
+					But du cours&nbsp;: Pr&eacute;senter les mod&egrave;les classiques en analyse et traitement des images et leurs applications en vision bas niveau&nbsp;: segmentation, restauration, d&eacute;termination du flot optique.<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/?clef=DFT09ZLrfH">Fran&ccedil;oise Dibos</a> (bureau D412)<br/>
+					Pr&eacute; requis&nbsp;: Analyse et statistiques &eacute;l&eacute;mentaires. Souhait&eacute;&nbsp;: int&eacute;gration et EDP.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Mod&eacute;lisation d&eacute;terministe.<br/>
+							Lignes de niveaux ( Level Sets), courbure d'une image.<br/>
+							Minimisation de fonctionnelle d'&eacute;nergie, EDP associ&eacute;e. R&eacute;gularisation quadratique, anisotropique, BV. Applications &agrave; la restauration, &agrave; la d&eacute;termination du flot optique, &agrave; la segmentation (mod&egrave;le de Mumford et Shah).<br/>
+							Optimisation de formes&nbsp;: contours actifs (snakes), mod&egrave;le de Chan et Vese.
+						</li>
+						<li>Mod&eacute;lisation probabiliste.<br/>
+							Champ de Markov, fonction d'&eacute;nergie, syst&egrave;me de cliques.<br/>
+							Exemples&nbsp;: mod&egrave;le d'Ising, mod&egrave;le de Potts, mod&egrave;le markovien gaussien.<br/>
+							Cadre bay&eacute;sien. Applications &agrave; la restauration, &agrave; la segmentation.<br/>
+							Pr&eacute;sentation de l'agorithme de Belief Propagation et applications &agrave; la d&eacute;soccultation d'images et &agrave; la d&eacute;termination des profondeurs.
+						</li>
+					</ul>
+		    	</li>
+
+		    	<li id="imon"><span class="bold">Repr&eacute;sentation des images et ondelettes</span><br/>
+					But du cours&nbsp;: Donner les principales m&eacute;thodes de repr&eacute;sentation des images avec applications &agrave; la compression, au filtrage et &agrave; l'analyse d'images.<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~malgouy/">Fran&ccedil;ois Malgouyres</a><br/>
+					Pr&eacute; requis&nbsp;: Analyse et statistiques &eacute;l&eacute;mentaires. Souhait&eacute;&nbsp;: <a href="mmi-p13#ahf">analyse de Fourier</a>.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Rappels&nbsp;: Base et transform&eacute;e de Fourier discr&egrave;te&nbsp;: inversion de la transform&eacute;e de Fourier, Fourier et convolution, Fourier et &eacute;chantillonage, application au debruitage, au zoom et au filtrage d'images.</li>
+						<li>Base de cosinus locaux (JPEG),</li>
+						<li>Bases d'ondelettes&nbsp;: banques de filtres, ondelettes orthogonales et bi-orthogonales, applications au debruitage et a la compression d'images.</li>
+						<li>Bases de paquets d'ondelettes&nbsp;: construction, localisation fr&eacute;quentielle des paquets d'ondelettes, application &agrave; la d&eacute;convolution d'images.</li>
+						<li>Introduction &agrave; la repr&eacute;sentation dans un syst&egrave;me redondant&nbsp;: indetermination des coordonn&eacute;es, introduction des repr&eacute;sentations parcimonieuses.</li>
+						<li>Les algorithmes gloutons&nbsp;: Matching Pursuit, Orthogonal Matching Pursuit, application en compression et analyse d'images. Les algorithmes d'optimisation (Basis Pursuit): le seuillage iteratif, application en analyse d'images.</li>
+					</ul>
+		    	</li>
+
+				<!-- UE 4 credits -->
+		    	<li id="adec"><span class="bold">Aide &agrave; la d&eacute;cision</span><br/>
+					But du cours&nbsp;: Mod&eacute;liser math&eacute;matiquement un probl&egrave;me r&eacute;el, r&eacute;soudre les probl&egrave;mes multi-objectifs avec la programmation math&eacute;matique et/ou les m&eacute;thodes d'aide &agrave; la d&eacute;cision multi-crit&egrave;res<br/>
+					Responsables&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~wolfler">Roberto Wolfler Calvo</a>, <a href="http://www45.essec.fr/professorsCV/showCV.do?keyUrl=laurent-alfandari">Laurent Alfandari</a><br/>
+					Pr&eacute; requis&nbsp;: Programmation lin&eacute;aire <a href="mmi-p13.html#oc1">continue</a> et <a href="mmi-p13.html#oc2">enti&egrave;re</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Mod&eacute;lisation et &eacute;tudes de cas&nbsp;:
+							<ul>
+								<li>Probl&egrave;mes lin&eacute;aires continus: d&eacute;coupe, couverture, planification, ...</li>
+								<li>Probl&egrave;mes lin&eacute;aires entiers: localisation, ...</li>
+								<li>Ordonnancement</li>
+							</ul>
+						</li>
+						<li>Optimisation multi-objectifs&nbsp;:
+							<ul>
+								<li>Mod&eacute;lisation des pr&eacute;f&eacute;rences</li>
+								<li>Familles de crit&egrave;res</li>
+								<li>Programmation multi-objectifs</li>
+								<li>M&eacute;thodes multi-crit&egrave;res d'aide &agrave; la d&eacute;cision</li>
+							</ul>
+						</li>
+					</ul>
+		    	</li>
+
+		    	<li id="cpx2"><span class="bold">Algorithmes randomis&eacute;s et complexit&eacute;</span><br/>
+					But du cours&nbsp;: Donner une pr&eacute;sentation technique des r&eacute;sultats et techniques de base de l'algorithmique randomis&eacute;e et, partant, permettre aux &eacute;tudiants d'enrichir leur <q>bo&icirc;te &agrave; outils algorithmique</q>.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~tollu">Christophe Tollu</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13.html#graphe">Graphes</a>,  <a href="mmi-p13.html#alea1">mod&egrave;les al&eacute;atoires</a>, (<a href="mmi-p13.html#cpx1">complexit&eacute; algorithmique</a>, <a href="mmi-p13.html#aga">analyse d'algorithmes</a>).<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Notions de base&nbsp;: algorithmes Monte-Carlo et Las Vegas</li>
+						<li>Mod&egrave;les de calcul et classes de complexit&eacute; probabilistes</li>
+						<li>Principe du min-max de Yao</li>
+						<li>Empreintes digitales et hachage</li>
+						<li>&eacute;chantillonnage al&eacute;atoire</li>
+						<li>Approximation al&eacute;atoire</li>
+					</ul>
+					Toutes les techniques pr&eacute;sent&eacute;es seront illustr&eacute;es par des applications en algorithmique des graphes, en optimisation, en cryptographie et en &eacute;num&eacute;ration. On pourra aussi &eacute;tudier des exemples en algorithmique g&eacute;om&eacute;trique (triangulation, calcul de volume).
+					<a href="mmi-p13#bib-cpx2">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-cpx2-1">[1]</a>, <a href="mmi-p13#bib-cpx2-2">[2]</a>.
+		    	</li>
+
+		    	<li id="cafo3"><span class="bold">Combinatoire alg&eacute;brique et applications</span><br/>
+					But du cours&nbsp;: Le cours est orient&eacute; vers l'&eacute;tude de la mod&eacute;lisation par graphes de transition. Ce point de vue peut s'appliquer &agrave; une grande vari&eacute;t&eacute; de domaines puisqu'il rend aussi bien compte du calcul de poids (le long d'un chemin) que des op&eacute;rations. On donne des illustrations vari&eacute;es de graphes de transition&nbsp;: Espace de Fock en Physique, automates probabilistes, repr&eacute;sentation d'op&eacute;rateurs qui ne commutent pas, calculs de caract&egrave;res du groupe sym&eacute;trique et leur impl&eacute;mentation.<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a><br/>
+					Intervenant ext&eacute;rieur&nbsp;: Lionel Khalil, s&eacute;curit&eacute; bancaire (Cr&eacute;dit Lyonnais)<br/>				
+					Pr&eacute; requis&nbsp;: AUCUN<br/>
+					Contenu&nbsp;:
+					<ul>				
+						<li>Graphes de transition&nbsp;: exemples</li>
+						<li>Calcul du coût d'un chemin. Discussion des postulats sur les coefficients &agrave; l'aide de graphes &eacute;l&eacute;mentaires</li>
+						<li>Application &agrave; l'expression d'ensembles infinis de chemins (boucles et p&eacute;tales)</li>
+						<li>&eacute;toile et rationalit&eacute;</li>
+						<li>Suppression des epsilon-transitions</li>
+						<li>Lien avec la th&eacute;orie des repr&eacute;sentations&nbsp;: d&eacute;composition automatique des modules et application &agrave; la d&eacute;composition de fonctions bool&eacute;ennes (cryptographie)</li>
+						<li>Caract&egrave;res, graphes de branchement, multiplicit&eacute;s</li>
+						<li>Tutorial du logiciel SCHUR</li>
+						<li>Applications professionnelles des graphes de transition.</li>
+
+						<li>Codage des d&eacute;veloppements infinis en machine (boucles, rationalit&eacute;, p&eacute;riodicit&eacute; et pseudop&eacute;riodicit&eacute;), applications aux g&eacute;n&eacute;rateurs de nombres al&eacute;atoires.</li>
+						<li>Automates et rationalit&eacute; des fonctions sur les mots&nbsp;: s&eacute;ries g&eacute;n&eacute;ratrices &agrave; plusieurs variables noncommutatives, lien avec la th&eacute;orie des langages, la r&eacute;duction des BDD (Binary Decision Diagrams) et des fonctions bool&eacute;ennes.</li>
+						<li>Application de la variation de coefficients&nbsp;: recherche de plus court chemin dans un graphe avec listes d'adresses, mod&eacute;lisation de strat&eacute;gies humaines, syst&egrave;mes complexes.</li>
+						<li>Approximations&nbsp;: par troncature, modulo une ou des &eacute;quivalences</li>
+						<li>R&eacute;duction et r&eacute;&eacute;criture de termes.</li>
+					</ul>
+					<a href="mmi-p13#bib-cafo">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-cafo-1">[1]</a>, <a href="mmi-p13#bib-cafo-2">[2]</a>, <a href="mmi-p13#bib-cafo-3">[3]</a>, <a href="mmi-p13#bib-cafo-4">[4]</a>, <a href="mmi-p13#bib-cafo-5">[5]</a>, <a href="mmi-p13#bib-cafo-6">[6]</a>, <a href="mmi-p13#bib-cafo-7">[7]</a>, <a href="mmi-p13#bib-cafo-8">[8]</a>, <a href="mmi-p13#bib-cafo-9">[9]</a>.
+		    	</li>
+				
+		    	<li id="analgo2"><span class="bold">Combinatoire analytique</span><br/>
+					But du cours&nbsp;: Etude asymptotiques de structures combinatoires et d'algorithmes.<br/>
+					Responsables&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~cb">Cyril Banderier</a>, <a href="http://www-lipn.univ-paris13.fr/~lavault">Christian Lavault</a><br/>
+					Pr&eacute; requis&nbsp;: AUCUN<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>La combinatoire analytique a &eacute;t&eacute; developp&eacute; par D.E. Knuth et P. Flajolet. C'est une m&eacute;thode puissante qui permet de compter (de fa&ccedil;on exacte, et aussi asymptotique) le nombre de structures combinatoires (arbres avec n noeuds, graphes connexes avec <em>n</em> sommets, permutations sans point fixe de <em>n</em> objets, partitions d'entiers, nombres de mots g&eacute;n&eacute;r&eacute;s par une grammaire ou un automate, ...).
+						</li>
+						<li>Les outils sont proches de ceux de la th&eacute;orie analytique des nombres (s&eacute;ries g&eacute;n&eacute;ratrices, etc.). La combinatoire analytique a comme application directe l'analyse d'algorithmes en moyenne, ainsi que des probl&egrave;mes issus de la bioinformatique, de la physique statistique...
+						</li> 
+						<li>Les th&egrave;mes abord&eacute;s dans ce cours incluent des exemples concrets issus de donn&eacute;es informatiques et de l'algorithmique parall&egrave;le et/ou distribu&eacute;e. En particulier, on &eacute;tudiera des algorithmes classiques (tri, recherche,&nbsp;...) et des structures de donn&eacute;es (arbres, graphes, cartes, tas,&nbsp;...).
+						</li>
+					</ul>
+					<a href="mmi-p13#bib-analgo">Bibliographie</a>&nbsp;: <a href="mmi-p13#bib-analgo-1">[1]</a>, <a href="mmi-p13#bib-analgo-2">[2]</a>, <a href="mmi-p13#bib-analgo-3">[3]</a>, <a href="mmi-p13#bib-analgo-4">[4]</a>, <a href="mmi-p13#bib-analgo-5">[5]</a>.
+		    	</li>
+
+		    	<li id="ol"><span class="bold">Opimisation et logiciels</span><br/>
+					But du cours&nbsp;: L'objectif de ce cours est d'&eacute;tudier les grandes familles de mod&egrave;les qui sont issus de la gestion de la chaîne logistique, de donner un aper&ccedil;u des m&eacute;thodes de r&eacute;solution qui sont adapt&eacute;es &agrave; leurs diverses variantes, et de prendre en mains des biblioth&egrave;ques de mod&eacute;lisation et d'optimisation en mettant en oeuvre certaines de ces m&eacute;thodes (&eacute;valuation sur devoir).<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~borne">Sylvie Borne</a><br/>
+					Pr&eacute; requis&nbsp;: Diff&eacute;rents concepts en optimisation combinatoire&nbsp;: <a href="mmi-p13.html#oc1">Programmation lin&eacute;aire</a>, <a href="mmi-p13.html#oc2">M&eacute;thodes de d&eacute;composition, Relaxations, Voisinages.</a> 
+								Connaissance de la biblioth&egrave;que ILOG Cplex. <a href="mmi-p13#bib-ol-1">Programmation C++</a>.<br/>				
+					Contenu&nbsp;:
+					<ul>
+						<li>M&eacute;thodologie.<br/>
+							Quelle approche dans quel contexte ? Il s'agit de passer en revue les diff&eacute;rents types d'approche et de les situer dans un contexte de r&eacute;solution r&eacute;elle&nbsp;: r&eacute;solution exacte vs. approch&eacute;e, &eacute;valuation a posteriori (exp&eacute;rimentale) vs. &eacute;valuation a priori (th&eacute;orique), instances sp&eacute;cifiques vs. instances g&eacute;n&eacute;riques, aspects de complexit&eacute;.
+						</li>
+						<li>Mod&egrave;les et m&eacute;thodes de r&eacute;solution
+							<ul>
+								<li>localisation ;</li>
+								<li>tourn&eacute;es de v&eacute;hicules ;</li>
+								<li>ordonnancement ;</li>
+								<li>gestion globale de la chaîne logistique (chaîne logistique et horizons de planification).</li>
+							</ul>
+						</li>
+						<li>Logiciels (suite ILOG et logiciels libres)
+							<ul>
+								<li>mod&eacute;lisation sous forme de probl&egrave;me de satisfaction de contraintes et r&eacute;solution d'un probl&egrave;me sp&eacute;cifique (bilbioth&egrave;ques ILOG Concert et ILOG Solver) ;</li>
+								<li>mod&eacute;lisation et r&eacute;solution d'un probl&egrave;me de tourn&eacute;e de v&eacute;hicules (ILOG Dispatcher) ;</li>
+								<li>logiciels libres d'optimisation&nbsp;: Abacus, Coin, ...</li>
+							</ul>
+						</li>
+					</ul>
+		    	</li>
+
+		    	<li id="alea5"><span class="bold">Calcul stochastique et mod&egrave;les pour la finance</span><br/>
+					But du cours&nbsp;: <br/>
+					Intervenants&nbsp;: <a href="http://www.math.univ-paris13.fr/~mba">Mohamed Ben Alaya</a> (bureau D315),
+										<a href="http://www.math.univ-paris13.fr/~kebaier/">Ahmed Kebaier</a> (bureau D310)<br/>
+<!--				Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~russo/">Francesco Russo</a><br/> -->
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#alea1">Mod&egrave;les al&eacute;atoires 1</a>, <a href="mmi-p13#alea3">Processus stochastiques</a><br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Motivations venant de la finance et des sciences de l'ing&eacute;nieur.</li>
+						<li>Processus gaussiens.</li>
+						<li>Mouvement brownien, martingales et bruit blanc.</li>
+						<li>Int&eacute;grale stochastique et calcul d'It&ocirc;.</li>
+						<li>Th&eacute;or&egrave;me de Girsanov et th&eacute;or&egrave;me de repr&eacute;sentation des martingales.</li>
+						<li>Processus de diffusion, g&eacute;n&eacute;rateur infinit&eacute;simal et relation avec les EDP lin&eacute;aires.</li>
+						<li>Description du mod&egrave;le de Black-Scholes.</li>
+						<li>Valorisation et couverture d'une option europ&eacute;enne.</li>
+						<li>Options am&eacute;ricaines dans le mod&egrave;le de Black-Scholes.</li>
+					</ul>
+		    	</li>
+
+		    	<li id="ctropt"><span class="bold">Contr&ocirc;le optimal</span><br/>
+					But du cours&nbsp;: Maîtriser les outils pour le contrôle de syst&egrave;mes gouvern&eacute;s par des &eacute;quations diff&eacute;rentielles<br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=BCdsMJ.Nl5">Claude Basdevant</a><br/>
+					Pr&eacute; requis&nbsp;: Les outils de l'optimisation en dimension finie.<br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Optimisation&nbsp;: de la dimension finie &agrave; la dimension infinie.</li>
+						<li>Le principe du minimum de Pontryaguine.</li>
+						<li>L'optimisation dynamique de Richard Bellman et l'&eacute;quation d'Hamilton-Jacobi-Bellman.</li>
+						<li>Introduction au contrôle des &eacute;quations aux d&eacute;riv&eacute;es partielles.</li>
+					</ul>
+		    	</li>
+
+		    	<li id="mpi"><span class="bold">M&eacute;thodes probabilistes en ing&eacute;nierie</span><br/>
+					But du cours&nbsp;: Appliquer les m&eacute;thodologies sur des probl&egrave;mes concrets ; R&eacute;aliser des projets d'applications sur ordinateur avec Matlab<br/>
+					Responsables&nbsp;: Jiaping Wang, <a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=ONkL3EslK8">Nadia Oudjane</a><br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+					<ul>				
+						<li>Simulation de variables al&eacute;atoires et de champs al&eacute;atoires. M&eacute;thodes de Monte-Carlo.</li>
+						<li>M&eacute;thode de Monte-Carlo pour les chaînes de Markov.</li>
+						<li>Recuit simul&eacute; -- une m&eacute;thode probabiliste d'optimisation.</li>
+						<li>Algorithme EM -- Expectation et Maximisation.</li>
+						<li>Analyse en composantes principales (ACP).</li>
+					</ul>
+		    	</li>
+
+		    	<li id="stat3"><span class="bold">Apprentissage statistique</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~kuhn/">Estelle Kuhn</a><br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+					<ul>
+						<li>Estimation &agrave; partir de donn&eacute;es, minimisation du risque empirique (ERM), consistance de l'approche ERM.</li>
+						<li>Dimension VC, minimisation du risque structurel (SRM).</li>
+						<li>Machines &agrave; vecteurs de support (SVM), hyperplan s&eacute;parateur optimal, cas non s&eacute;parable, SVM comme classificateur, SVM multi-classes, SVM comme r&eacute;gresseur, arbres de d&eacute;cision.</li>
+						<li>Mod&egrave;les stochastiques, propri&eacute;t&eacute;s de Markov, mod&egrave;les de Markov cach&eacute;s (HMM), apprentissage, reconnaissance.</li>
+					</ul>
+		    	</li>
+
+		    	<li id="pro"><span class="bold">UE professionnelle</span><br/>
+					But du cours&nbsp;: Fournir des &eacute;tudes de cas qui se posent r&eacute;ellement dans les entreprises, propos&eacute;es par des partenaires professionnels, et pour lesquels des mod&egrave;les et approches de r&eacute;solution sont donn&eacute;es. Cours ou conf&eacute;rences &agrave; choisir selon le parcours et les d&eacute;bouch&eacute;s envisag&eacute;s.<br/>
+					Responsables&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a> <!-- TODO , <a href="http://www-lipn.univ-paris13.fr/~plateau">G&eacute;rard Plateau</a> --> <br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+						Cette UE pourra consister au choix de deux mini-cours de 15h parmi les suivants et ceux propos&eacute;s en sp&eacute;cialit&eacute; d'ing&eacute;nieurs MACS ou du cycle de conf&eacute;rences industrielles propos&eacute; en sp&eacute;cialit&eacute; d'ing&eacute;nieurs informatique.<br/>
+						Mini-cours
+						<ul>
+							<li>Mod&eacute;lisation de risques financiers (Rosanna Coviello)<br/>
+								La mise en place d'un outil de mod&eacute;lisation des risques clefs participe aujourd'hui pleinement &agrave; la politique globale de gestion des risques et constitue un outil de pilotage de l'entreprise, essentiel pour anticiper et g&eacute;rer au mieux la survenance d'un sinistre majeur li&eacute; &agrave; ces risques . La mod&eacute;lisation est un outil d'aide &agrave; la d&eacute;cision dans le domaine de la gestion et de la mesure quantitative du risque. En fonction de la disponibilit&eacute; des donn&eacute;es et du p&eacute;rim&egrave;tre retenu, la mod&eacute;lisation consiste &agrave; exprimer math&eacute;matiquement une analyse de risques afin de pouvoir simuler ensuite les cons&eacute;quences potentielles. Le mod&egrave;le stochastique, avec les m&eacute;thodes avanc&eacute;es en probabilit&eacute;s, fournit une vision de la performance financi&egrave;re anticip&eacute;e mais &eacute;galement la volatilit&eacute; de cette performance (magnitude d'une contre-performance et probabilit&eacute; d'occurrence d'un tel sc&eacute;nario)
+							</li>
+
+							<li>El&eacute;ments d'ing&eacute;nierie financi&egrave;re (Nadia Oujdane)<br/> Ce cours pr&eacute;sente les principales techniques statistiques, probabilistes et num&eacute;riques utilis&eacute;es en ing&eacute;nierie financi&egrave;re.
+								<ul>
+									<li>Notion de mesure de risque d'un portefeuille. Etudes des m&eacute;thodes statistiques utilis&eacute;es pour le calcul des indicateurs de risque (estimation de quantile, intervalle de confiance, th&eacute;orie des tests etc.)</li>
+									<li>Notion de prime d'option. Etude des trois principales approches adopt&eacute;es pour le calcul d'option&nbsp;: les m&eacute;thodes EDP avec pr&eacute;sentation du lien entre esp&eacute;rance et EDP par la formule de Feynman-Kac, les m&eacute;thodes par arbre avec pr&eacute;sentation du lien entre le mod&egrave;le de Black-Scholes et le mod&egrave;le Cox-Ross-Rubinstein, les m&eacute;thodes de Monte Carlo avec pr&eacute;sentation de l'algorithme de Longstaff-Schwarz pour le calcul d'options am&eacute;ricaines..</li>
+								</ul>
+							</li>
+						</ul>
+						Conf&eacute;rences (liste &agrave; compl&eacute;ter)
+						<ul>
+							<li>1. La programmation par contraintes et les probl&egrave;mes d'aide &agrave; la d&eacute;cision en industrie par Abder Aggoun (KLS-OPTIM)</li>
+							<li>CHIP&nbsp;: un syst&egrave;me de programmation par contraintes par Idir Gouachi (COSYTEC)</li>
+							<li>Planification de production et ordonnancement par Julien Briton (ILOG)</li>
+							<li>Les probl&egrave;mes de m&eacute;lange. Applications dans la m&eacute;tallurgie par Eric Dumont (EURODECISION)</li>
+							<li>Dimensionnement optimal des r&eacute;seaux de transport de gaz&nbsp;: une &eacute;tude de cas de r&eacute;solution d'un probl&egrave;me industriel &agrave; l'aide des techniques de l'optimisation par Jean Andr&eacute; (Gaz de France)</li>
+							<li>Aide &agrave; la d&eacute;cision en gestion de production ferroviaire. Applications de la recherche op&eacute;rationnelle &agrave; la SNCF par David De Almeida et Nicolas Marcos (SNCF)</li>
+							<li>Conf&eacute;rence compl&eacute;mentaire&nbsp;: les logiciels libres d'optimisation par Bertrand Le Cun (PRISM)</li>
+						</ul>
+		    	</li>
+
+<!--
+		    	<li id="bio"><span class="bold">Reconnaissance de formes et biom&eacute;trie</span><br/>
+					But du cours&nbsp;: Pr&eacute;senter les diff&eacute;rentes techniques utilis&eacute;es en biom&eacute;trie notamment la reconnaissance vocale, visuelle et la reconnaissance d'empreintes digitales<br/>
+					Responsable&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~younes/">Younes Bennani</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#tss">Traitement statistique du signal</a>, <a href="mmi-p13#image">Traitement d'image</a><br/>
+					Contenu&nbsp;:<br/>
+Partie I&nbsp;: Reconnaissance vocale
+					<ul>				
+						<li>Int&eacute;rêt de la Reconnaissance du Locuteur</li>
+						<li>La Reconnaissance du Locuteur&nbsp;: Identification du Locuteur, V&eacute;rification du Locuteur</li>
+						<li>Diff&eacute;rents Types de Locuteurs et d'Erreurs&nbsp;: Types de Locuteurs, Types d'Erreurs (en v&eacute;rification, en identification), Contrôle des Divers Types d'Erreur, Diff&eacute;rents &eacute;tats des Locuteurs (imposteurs, adh&eacute;rents)</li>
+						<li>Reconnaissance du Locuteur et Reconnaissance des Formes</li>
+						<li>Reconnaissance du Locuteur et Reconnaissance du Message</li>
+						<li>Reconnaissance Automatique et Reconnaissance Humaine</li>
+					</ul>
+Partie II&nbsp;: Reconnaissance visuelle
+					<ul>
+						<li>Int&eacute;rêt de la reconnaissance de visuelle</li>
+						<li>Probl&eacute;matiques et contextes applicatifs: identification de visages, recherche, authentification</li>
+						<li>Quelques m&eacute;thodes pour la reconnaissances de visages</li>
+					</ul>
+Partie III&nbsp;: Reconnaissance d'empreintes digitales
+					<ul>
+						<li>Historique des empreintes digitales</li>
+						<li>M&eacute;thodes classiques</li>
+						<li>Approches structurelles</li>
+						<li>Approches neuronales</li>
+						<li>Exemples de syst&egrave;mes commercialis&eacute;.</li>
+					</ul>
+		    	</li>
+-->
+
+		    	<li id="tv"><span class="bold">Cin&eacute;ma et T&eacute;l&eacute;vision num&eacute;riques</span><br/>
+					But du cours&nbsp;: Ce cours tr&egrave;s applicatif est orient&eacute; vers le monde de l'industrie de la production et la distribution d'oeuvres cin&eacute;matographiques. Son but est d'apporter aux &eacute;tudiants les connaissances de base dans le secteur du cin&eacute;ma et de la t&eacute;l&eacute;vision num&eacute;rique fortement implant&eacute; au nord de Paris.<br/>
+					Responsable&nbsp;: <a href="http://www-l2ti.univ-paris13.fr/~beghdadi/">Azeddine Beghdadi</a><br/>
+					Pr&eacute; requis&nbsp;: <a href="mmi-p13#image">Traitement d'images num&eacute;riques</a>, <a href="mmi-p13#opca">Optique et capteurs</a>,<br/>
+					Contenu&nbsp;:<br/>
+					Historique et &eacute;volution du cin&eacute;ma et la de la T&eacute;l&eacute;vision Num&eacute;rique<br/>
+					Les diff&eacute;rentes &eacute;tapes d'un film (pour mieux comprendre ce qu'implique le num&eacute;rique)&nbsp;:
+					<ul>
+						<li>Pr&egrave;-production, Tournage, D&eacute;rushage,</li>
+						<li>Post-production, Masterisation</li>
+					</ul>
+					Mod&eacute;lisation des M&eacute;canismes de la perception visuelle<br/>
+					Colorim&eacute;trie et gestion de la couleur&nbsp;: &eacute;talonnage, calibrage, Gamut, LUT 3D<br/>
+					Les syst&egrave;mes et techniques de projections&nbsp;:
+					<ul>
+						<li>Projecteurs DLP, D-ILA, SXRD, projection 3</li>
+						<li>Les formats de projection&nbsp;: HD, 2k, 4k, e-cinema et d-cinema</li>
+					</ul>
+					Animation 3D et mod&eacute;lisation de sc&egrave;nes<br/>
+					Maillage et codage graphique<br/>
+					Techniques d'effets sp&eacute;ciaux<br/>
+					Qualit&eacute; d'image subjective<br/>
+					<ul>
+						<li>Les protocoles d'&eacute;valuation et recommandations de l'ITU et VQEG</li>
+						<li>Qualit&eacute; d'image objective
+							<ul>
+								<li>M&eacute;triques de qualit&eacute; objective (avec r&eacute;f&eacute;rence, sans r&eacute;f&eacute;rence, r&eacute;f&eacute;rence r&eacute;duite)</li>
+								<li>Vers un standard&nbsp;: VQEG ?</li>
+							</ul>
+						</li>
+					</ul>
+					Les normes du cin&eacute;ma num&eacute;rique: Les sp&eacute;cifications de la DCI, La norme Afnor<br/>
+					T&eacute;l&eacute;vision num&eacute;rique
+					<ul>
+						<li>Syst&egrave;mes de diffusion anciens</li>
+						<li>Syst&egrave;mes de diffusion TNT, TVHD
+							<ul>
+								<li>Normes de codage son et image (MPEG1, MPEG2, DVB, H264)</li>
+								<li>Qualit&eacute; image &amp; son</li>
+							</ul>
+						</li>
+						<li>Nouveaux services et usages li&eacute;s &agrave; la T&eacute;l&eacute;vision Num&eacute;rique</li>
+					</ul>
+		    	</li>
+
+		    	<li id="tec3"><span class="bold">Techniques d'expression et de communication&nbsp;S3</span><br/>
+				Responsable&nbsp;: Chantal Steinberg<br/>
+				Contenu&nbsp;:
+					<ul>
+						<li>Le projet professionnel &agrave; court et long terme.</li> 
+						<li>La connaissance de l'entreprise (analyse des sites WEB des entreprises et des offres de stages).</li> 
+						<li>Le bilan des comp&eacute;tences  et du stage d'ex&eacute;cution.</li> 
+						<li>La recherche du  stage immersion et du stage de fin d'&eacute;tudes : analyse des annonces, r&eacute;daction des lettres de motivation et CV, pr&eacute;paration et simulation d'entretien de recrutement.</li>
+						<li>La n&eacute;gociation.</li> 
+						<li>La r&eacute;daction du rapport de stage.</li>
+					</ul>
+		    	</li>
+
+		    	<li id="gb3"><span class="bold">Anglais</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsables&nbsp;: Gary Grill, Monique Nicolas, Edith Patrouilleau<br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+					Les supports oraux et &eacute;crits sont orient&eacute;s autour de trois axes&nbsp;:
+					<ul>
+						<li>Les comp&eacute;tences de communication  li&eacute;es &agrave; l'emploi&nbsp;: savoir-faire et comp&eacute;tences r&eacute;pondant &agrave; la recherche de stage  (CV, lettre de motivation, simulations d'entretiens d'embauche).</li>
+						<li>Les comp&eacute;tences de communication li&eacute;es &agrave; la vie universitaire et la recherche&nbsp;: production d'&eacute;crits et de pr&eacute;sentations orales (r&eacute;sum&eacute;s de conf&eacute;rences, r&eacute;dactions d'articles courts, <q>abstracts</q>, pr&eacute;sentations orales de travaux).</li>
+						<li>Une approche interculturelle sensibilise l'&eacute;tudiant &agrave; une perspective d'&eacute;changes et d'insertion professionnelle dans des &eacute;quipes multilingues.</li>
+					</ul>  
+		    	</li>
+
+		    	<li id="incert"><span class="bold">Propagation des incertitudes</span><br/>
+					But du cours&nbsp;: <br/>
+					Responsable&nbsp;: <a href="http://www.math.univ-paris13.fr/~kebaier/">Ahmed Kebaier</a> (bureau D310)<br/>
+					Pr&eacute; requis&nbsp;: <br/>
+					Contenu&nbsp;:
+		    	</li>
+
+		    	<li id="ue-s3"><span class="bold">UE au choix dans d'autres formations (Master Informatique Paris 13, fili&egrave;res ing&eacute;nieurs MACS et Informatique)</span><br/>
+					Liste <span class="emph">non exhaustive</span> d'UE conseill&eacute;es&nbsp;:
+					<ul>
+						<li>&hellip;</li>
+					</ul>  
+		    	</li>
+		    </ul>
+		</div>
+
+		<h2 class="cadre" id="biblio">Bibliographie</h2>
+		<div class="cadre">
+			<ul>
+				<li id="bib-c">
+					Programmation C <span class="emph">rappel&nbsp;: la connaissance des concepts de la programmations est pr&eacute; requise pour l'entr&eacute;e en master</span>
+					<ol>
+						<li id="bib-c-1">Polycopi&eacute; <q>C Express</q> d'inititation C/Linux en ligne&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~toulouse/doc/cexpress/cexpress.pdf">http://www-lipn.univ-paris13.fr/~toulouse/doc/cexpress/cexpress.pdf</a>.</li>
+						<li id="bib-c-2">P. Dax, Langage C, Eyrolles, 1992 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+						<li id="bib-c-3">C. Delannoy, Programmer en langage C&nbsp;: Cours et exercices corrig&eacute;s, Eyrolles, 2002 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+						<li id="bib-c-4">S. Harbisson, Langage C, Eyrolles, 1989.</li>
+						<li id="bib-c-5">B.W. Kernighan et D.M. Ritchie, The C programming language, Prentice-Hall, Inc. 1978.</li>
+						<li id="bib-c-6">B.W. Kernighan et D.M. Ritchie, Langage C - Norme ANSI, Eyrolles, 2004 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+					</ol>
+				</li>
+				<li id="bib-gr">
+					Graphes
+					<ol>
+						<li id="bib-gr-1">R. Diestel. Graph Theory. Graduate Texts in Mathematics, Springer-Verlag, 1997. <a href="http://www.math.uni-hamburg.de/home/diestel/books/graph.theory/GraphTheoryIII.counted.pdf">Version en ligne</a>. (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+						<li id="bib-gr-2">B. Bollob&agrave;s. Graph Theory: An Introductory Course. Graduate Texts in Mathematics, Springer-Verlag, 1979.</li>
+						<li id="bib-gr-3">C. Berge. Graphes et Hypergraphes. Dunod Eds., Paris, 1973 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+					</ol>
+				</li>
+				<li id="bib-aga">
+					Algorithmes et graphes al&eacute;atoires
+					<ol>
+						<li id="bib-aga-1"><a href="http://algo.inria.fr/flajolet/Publications/books.html">Analytic Combinatorics. Flajolet, Sedgewick, 2009</a> (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).
+						</li>
+						<li id="bib-aga-2">Introduction &agrave; l'analyse des algorithmes. Flajolet et Sedgewick, International Thomson Publishing France, 1996 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+						<li id="bib-aga-3">Random Graphs. Bollobas, Cambridge University Press, 2001 (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).</li>
+						<li id="bib-aga-4">The probabilistic method. Alon, Erd&ouml;s, Spencer, 1995.</li>
+						<li id="bib-aga-5">The probabilistic method. Alon, Spencer, 2008 (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).</li>
+					</ol>
+				</li>
+				<li id="bib-adist">
+					Algorithmique distribu&eacute;e
+					<ol>
+						<li id="bib-adist-4">C. Lavault. &eacute;valuation des algorithmes distribu&eacute;s, Herm&egrave;s, 1995 (<a href="http://www-bu.univ-paris13.fr/">BU</a>). Polycopi&eacute; d'Algorithmique distribu&eacute;e (parties 1 et 2), t&eacute;l&eacute;chargeable en ligne&nbsp;:
+								<a href="http://www-lipn.univ-paris13.fr/~lavault/">http://www-lipn.univ-paris13.fr/~lavault/</a></li>
+						<li id="bib-adist-8">G. Tel. Introduction to Distributed Algorithms, Cambridge Un. Press, 2nd &eacute;d., 2000 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+					</ol>
+				</li>
+				<li id="bib-cafo">
+					Calcul formel&nbsp;1 &amp; 2
+					<ol>
+						<li id="bib-cafo-1">Bourbaki N., Algebra Ch. I to III. Springer (2006)</li>
+						<li id="bib-cafo-2">Davenport J., Siret Y., Tournier E., Calcul formel, Masson (1986) (en BU&nbsp;: <q>Calcul formel&nbsp;: syst&egrave;mes et algorithmes de manipulations alg&eacute;briques</q>, 2e &eacute;d., 1993)</li>
+						<li id="bib-cafo-3">Eilenberg S., Automata, languages and machines, Acad. Press (1974)</li>
+						<li id="bib-cafo-4">Demazure M., Cours d'alg&egrave;bre&nbsp;: Divisibilit&eacute;, Primalit&eacute;, codes. Cassini (1997). (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+						<li id="bib-cafo-5">Von zur Gathen J. and Gerahrd J. Modern Computer Algebra. Cambridge (1999)</li>
+						<li id="bib-cafo-6">Knuth D., The art of computer programming, Tome I, Addison-Wesley (1973). (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+						<li id="bib-cafo-7">Knuth D., The art of computer programming, Tome II, Addison-Wesley (1981). (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+						<li id="bib-cafo-8">Knuth D., The art of computer programming, Tome III, Addison-Wesley (1998). </li>
+						<li id="bib-cafo-9">Naudin P., Quitt&eacute; C., Algorithmique Alg&eacute;brique, Masson (1992). (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+					</ol>
+				</li>
+				<li id="bib-cpx2">
+					Algorithmes randomis&eacute;s et complexit&eacute;
+					<ol>
+						<li id="bib-cpx2-1">R. Motwani et P. Raghavan,  Randomized algorithms, Cambridge University Press (1995)</li>
+						<li id="bib-cpx2-2">J. Hromkovic, Design and analysis of randomized algorithms, Springer-Verlag (2005)</li>
+					</ol>
+				</li>
+				<li id="bib-ol">
+					Pr&eacute; requis pour <q>Optimisation et logiciels</q>
+					<ol>
+						<li id="bib-ol-1">C. Delannoy, Programmer en langage C ++, Eyrolles, 2003. (<a href="http://www-bu.univ-paris13.fr/">BU</a>)</li>
+					</ol>
+				</li>
+				<li id="bib-analgo">
+					Combinatoire analytique
+					<ol>
+						<li id="bib-analgo-1"><a href="http://algo.inria.fr/flajolet/Publications/books.html">Analytic Combinatorics. Flajolet, Sedgewick, 2009</a> (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).
+						</li>
+						<li id="bib-analgo-2">Introduction &agrave; l'analyse des algorithmes. Flajolet et Sedgewick, International Thomson Publishing France, 1996 (<a href="http://www-bu.univ-paris13.fr/">BU</a>).</li>
+						<li id="bib-analgo-3">Random Graphs. Bollobas, Cambridge University Press, 2001 (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).</li>
+						<li id="bib-analgo-4">The probabilistic method. Alon, Erd&ouml;s, Spencer, 1995.</li>
+						<li id="bib-analgo-5">The probabilistic method. Alon, Spencer, 2008 (<a href="http://www.math.univ-paris13.fr/bibli/">biblioth&egrave;que Math-Info</a>).</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+			
+		<h2 class="cadre" id="contact">Contacts</h2>
+		<div class="cadre">
+			Selon la nature des informations que vous recherchez, vous pouvez contacter&nbsp;:
+			<ul>
+				<li>le secr&eacute;tariat p&eacute;dagogique&nbsp;: <a href="mmi-p13.html#jocelyne">Mme Jocelyne Maccagnan</a></li>
+				<li>les responsables du master&nbsp;: <a href="http://ufr6.univ-paris8.fr/maths/CC/index.html">Claude Carlet</a> (Paris&nbsp;8), 
+															<a href="http://www.math.univ-paris13.fr/ann/indiv/index.php?clef=PF51w0qC5H">Fran&ccedil;ois Parreau</a> (Paris&nbsp;13)</li>
+				<li>le responsable de la sp&eacute;cialit&eacute;&nbsp;: <a href="http://zeus.math.univ-paris13.fr/~yueyun/">Yueyun Hu</a></li>
+				<li>la responsable d'ann&eacute;e M1 de la sp&eacute;cialit&eacute;&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~toulouse">Sophie Toulouse</a></li>
+				<li>le responsable d'ann&eacute;e M2 de la sp&eacute;cialit&eacute;&nbsp;: <a href="http://www-lipn.univ-paris13.fr/~ghed">G&eacute;rard H. E. Duchamp</a></li>
+			</ul>
+		</div>
+
+		<div id="carte-visite">
+			Sophie Toulouse, LIPN - Institut Galil&eacute;e<br/>
+			+33.1.49.40.40.73 (tel.) - Bureau A103<br/>
+			<a href="mailto:sophie.toulouse@lipn.univ-paris13.fr">
+			sophie.toulouse@lipn.univ-paris13.fr</a>
+		</div>
+
+		<ul id="w3c">
+	 		<li>
+				<a href="http://validator.w3.org/check?uri=referer">
+					<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict"/>
+				</a>
+			</li>
+			<li>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+				</a>
+			</li>
+		</ul>
+
+	</div> <!-- main-mmi -->
+
+
+<script type="text/javascript">
+	var sc_project=3463137; 
+	var sc_invisible=1; 
+	var sc_partition=38; 
+	var sc_security="42bad5b8"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c39.statcounter.com/3463137/0/42bad5b8/1/" alt="unique visitor counter" /></a></div></noscript>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Notion de préfixe dans la complexité de Kolmogorov et les modèles de calcul</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Notion de préfixe dans la complexité de Kolmogorov et les modèles de calcul"/>
+            <meta property="og:url" content="./these.html"/>
+            <meta property="og:description" content="La complexité de Kolmogorov donne une interprétation de la notion d'aléatoire pour les mots sur un alphabet fini. Ces notions ont conduit à l'explicitation de classes de fonctions calculables possédant des caractéristiques provenant de la théorie des codes: la classe des machines préfixes — machines dont le domaine est codé de façon préfixe, c'est-à-dire qu'un mot du domaine n'est jamais le préfixe d'un autre mot du domaine. Outre la résolution du problème de l'aléatoire dans les mots infinis, cette classe de machine est stable vis-à-vis de la théorie de la calculabilité. On compare ici trois définitions distinctes de la notion de machine préfixe, mais remarquablement similaires. On étend ensuite les notions proposées aux codes comma free (sans facteurs). Certaines propriétés fondamentales sont alors non-vérifiées, comme l'existence d'une machine additivement optimale. Enfin, on étudie la façon dont la notion de préfixe intervient dans la théorie de la calculabilité. On regarde en particulier les machines dont on limite le nombre de caractères (sans caractères blancs) ou encore la modélisation des modèles finis plongés dans des espaces de calcul infinis (ce qui est le cas de la machine de Turing, dotée d'un ruban infini)."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./these.html"
+         rel="bookmark"
+         title="Permalink to Notion de préfixe dans la complexité de Kolmogorov et les modèles de calcul">
+        Notion de préfixe dans la complexité de Kolmogorov et les modèles de calcul
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>lun. 07 janvier 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/complexite-de-kolmogorov.html">Complexité de Kolmogorov</a>
+        /
+	<a href="./tag/modele-de-calcul.html">modèle de calcul</a>
+        /
+	<a href="./tag/codes-prefixes.html">codes préfixes</a>
+        /
+	<a href="./tag/aleatoire.html">aléatoire</a>
+        /
+	<a href="./tag/automates-cellulaires.html">automates cellulaires</a>
+        /
+	<a href="./tag/these.html">thèse</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/these.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Ma thèse de doctorat a été soutenue à l'École normale supérieure de Lyon
+le 9 octobre 2000. Elle porte sur la «&nbsp;notion de préfixe dans la
+complexité de Kolmogorov et les modèles de calcul&nbsp;», sous la
+direction de Jacques Mazoyer et Bruno Durand.</p>
+<p>La complexité de Kolmogorov donne une interprétation de la notion
+d'aléatoire pour les mots sur un alphabet fini.  Ces notions ont conduit
+à l'explicitation de classes de fonctions calculables possédant des
+caractéristiques provenant de la théorie des codes: la classe des
+machines préfixes — machines dont le domaine est codé de façon préfixe,
+c'est-à-dire qu'un mot du domaine n'est jamais le préfixe d'un autre mot
+du domaine.</p>
+<p>Outre la résolution du problème de l'aléatoire dans les mots infinis,
+cette classe de machine est stable vis-à-vis de la théorie de la
+calculabilité. On compare ici trois définitions distinctes de la notion
+de machine préfixe, mais remarquablement similaires. On étend ensuite
+les notions proposées aux codes <em>comma free</em> (sans facteurs). Certaines
+propriétés fondamentales sont alors non-vérifiées, comme l'existence
+d'une machine additivement optimale.</p>
+<p>Enfin, on étudie la façon dont la notion de préfixe intervient dans la
+théorie de la calculabilité. On regarde en particulier les machines dont
+on limite le nombre de caractères (sans caractères blancs) ou encore la
+modélisation des modèles finis plongés dans des espaces de calcul
+infinis (ce qui est le cas de la machine de Turing, dotée d'un ruban
+infini).</p>
+<h2>Quelques mots sur la thèse</h2>
+<p>La thèse a été soutenue avec succès, en présence des deux rapporteurs
+(Serge Grigorieff et Jean-Yves Marion, Adam Cichon n'ayant pu se
+déplacer), des deux directeurs de thèse, de François Denis et de
+Véronique Terrier. Je suis maintenant officiellement Docteur Dubacq
+(docteur ès sciences, spécialité informatique).</p>
+<p>La thèse explore en premier <a href="./dubacq98.html">les
+bases</a> de la complexité de
+Kolmogorov, puis définit plusieurs notions de machines préfixes. L'idée
+est de réussir à exprimer ce que peut être le calcul dans un cas où l'on
+contraint les entrées à respecter des conditions (par exemple,
+appartenir à un ensemble de mots qui forme un code préfixe). On peut
+rejeter tous les mots qui ne sont pas dans le code (le calcul ne
+converge pas, c'est un modèle de calcul <strong>creux</strong>), on peut les accepter
+tous en leur donnant la même valeur que le plus petit élément (c'est un
+modèle de calcul <strong>plein</strong>).Enfin, on peut faire un mélange des deux
+(modèle <strong>mixte</strong>). Et on peut mélanger en faisant des continuations des
+entrées non seulement par la droite, mais aussi par la gauche (modèle
+<strong>doublement préfixe</strong>).</p>
+<p>Le principal résultat de cette partie est qu'on peut construire les
+principaux théorèmes de la calculabilité (théorème <em>s-m-n</em> par exemple)
+de façon à appliquer ces théorèmes à l'intérieur des sous-classes de
+machines définies plus haut. De plus, on peut montrer que ces classes
+sont strictement distinctes, au sens où il y a des machines creuses qui
+ont un domaine qui ne peut pas être décrit comme étant le domaine d'un
+machine pleine. Je montre également que les machines doublement préfixes
+n'ont pas de théorème <em>s-m-n</em> interne.</p>
+<p>La dernière partie tire profit de ces acquis pour explorer ce que serait
+la calcul dans un médium composé uniquement de 2 symboles (0 et 1) et
+qui serait infini (soit infini d'un seul côté, soit infini des deux
+côtés). La machine de Turing est finalement un modèle de calcul dont la
+description implique trois symboles (souvent {0,1,B}) ou alors des états
+spéciaux pour repérer la fin du ruban. Je démontre que tous les modèles
+de calcul peuvent être vus comme un moteur de calcul sur une partie
+infinie et une paire de codage-décodage qui sert à transformer-lire les
+mots finis en les ensembles infinis sur lesquels travaille le moteur. Je
+me suis d'abord attaché à voir quelles définitions on pouvait tirer de
+cette modélisation du calcul, et déduit des propriétés qui devaient être
+vraies dans ce contexte.</p>
+<p>Cette dernière partie est à mettre en regard avec mes interrogations à
+propos des simulations de machines de Turing et d'automates
+cellulaires. En effet, les deux modèles que je connais le mieux
+diffèrent par le fait que l'on peut donner un pouvoir supplémentaire aux
+automates cellulaires en codant des choses dans la configuration
+initiale de l'automate.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a href="./pdf/publications/these.pdf">La thèse</a></li>
+<li><a href="./pdf/publications/soutenance_these.pdf">Les transparents de soutenance</a></li>
+</ul>
+<h2>Citer cette publication</h2>
+<div class="highlight"><pre>@PhdThesis{dubacq00,
+  author =   {Jean-Christophe Dubacq},
+  title =    {Notion de pr{\&#39;e}fixe dans la complexit{\&#39;e} de Kolmogorov et les mod\`{e}les de calcul},
+  school =   {\&#39;Ecole normale sup\&#39;erieure de Lyon},
+  year =     {2000},
+  type =     {Th\`ese de doctorat},
+  month =    oct
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

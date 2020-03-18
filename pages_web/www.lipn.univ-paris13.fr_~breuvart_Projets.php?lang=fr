@@ -1,0 +1,87 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flavien Breuvart</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=index.php?lang=fr>Index</a></li>
+	  <li><a href=publications.php?lang=fr>Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Projets <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li class="active"><a href="#">Propositions</a></li>
+            <li class="active"><a href="#">ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=stages.php?lang=fr>Stage/thèses</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Enseignement <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=compilation/?lang=fr>Compilation</a></li>
+	         <li><a href=principes_de_programmation/?lang=fr>Principes de Prog (old)</a></li>
+             <li><a href=prog_fonctionnelle/?lang=fr>Prog. fonctionnelle (old)</a></li>
+             <li><a href=LEE/?lang=fr>LEE</a></li>
+             <li><a href=Architecture_systeme/?lang=fr>Architecture et Systeme (old)</a></li>
+             <li><a href=DIU-EIL/?lang=fr>DIU-EIL</a></li>
+             <li><a href=misa/?lang=fr>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+
+
+      <div class="publications">
+	<h2> CoGITARe (ANRJCJC 2019-2022)</h2>
+	<B><a href="articles/Cogitare.pdf"> Link to proposal </a></B></br>
+	<p><B>"Combining Graded and Intersection Types for the Analyses of Resources"</B></p>
+	<p><B> Official and associated members :</B></br> Jaime Arias, Flavien Breuvart, Jérôme Féret, Dan Ghica, Jean-Vincent Loddo, Giulio Manzonetto, Damilano Mazza, Yann Régis-Gianas, Thomas Seiller</p>
+	<B> Summary :</B></br>
+	<p>Type systems are used to automatically check security properties of large programs. This project will extend typing methodology to a large panel of properties currently unreachable by state-of-the-art techniques, enabling in particular the analysis of {\bf quantitative properties of programs}.</p>
+
+	<p> We will develop a way to keep track of the extensional information inside types in order to perform the whole static analysis at the level of types. For this purpose, we will combine two (re)emerging type systems, namely graded types and intersection type systems, with the well established techniques from the field of abstract interpretation such as widening. </p>
+
+	<p> Graded type systems formally embed a first order structure within types, while intersection types will help to circumvent the unconditional non-compositionality of fine grained resource analyses. This is how we plan to tackle the long ruining problem of applying abstract interpretation result in functional programming.</p>
+	
+      </div>
+
+      <div class="publications">
+	<h2> Submited </h2>
+	<UL TYPE=square>
+	  <LI> <B><a href="articles/Cogitare.pdf"> CoGITARe </a></B>: Combining Graded and Intersection Types for the Analyses of Resources; ANRJCJC 2018 (accepted)
+	  <LI> <B><a href="articles/CoRPoReAl-Breuvart.pdf"> CoRPoReAl </a></B>: Confluence Randomisée Pour des Réductions Aléatoires; (refused)
+	</UL>
+      </div>
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

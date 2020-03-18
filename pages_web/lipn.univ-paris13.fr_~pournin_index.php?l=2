@@ -1,0 +1,169 @@
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="lipn.png">
+
+ 
+<title>Lionel Pournin - Teaching</title>
+<meta name="author" content="Lionel Pournin">
+<meta name="description" content="Lionel Pournin, research interests, publications, teaching">
+<meta name="keywords" content="Lionel Pournin, numerical simulation, granular media, discrete geometry, polytopes, operations research, triangulations">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div style="width=470;font-size:26px;font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">
+Lionel Pournin - Teaching
+</div>
+
+<hr align=left noshade size=2 width=200 style="margin-bottom:-5px;">
+
+<table>
+  <tr>
+    <td valign="top">
+      <div style="clear:both;float:left;width:120px;">
+      <p style="margin-top:20px;font-size:18px;"><a href="http://lipn.univ-paris13.fr/~pournin/">Main</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=2">Teaching</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=3">Research</a></p>
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=4">Publications</a></p>
+<!--
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=6">Talks</a></p>
+-->
+<p style="margin-top:-10px;font-size:18px;"><a href="index.php?l=5">Links</a></p>
+      </div>
+    </td>
+    <td valign="top">
+      <div style="clear:both;float:left;width:770px;">
+
+  <div style="clear:both;float:left;width:770px;height:40px;" align="left" valign="top">
+    <h2>2014&ndash; (Professor at the <a href="http://www.univ-paris13.fr/">University of Paris 13</a>, France)</h2>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>
+  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Introduction to Scientific Calculus</i><br>Newton's method, fixed-point iterations, Gaussian elimination, Euler's methods, applications and implementation in C. Second year undergraduate students, bachelor of physics and chemistry, University of Paris 13 (fall semesters 2014-2017)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>
+  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valig
+n="top">
+    <h3><i>Distributed Systems</i><br>A practical introduction to MPI and to some of the algorithms underlying collective communications with an emphasis on the distributed computation of spannig trees. First year graduate students, master of computer science, University of Paris 13 (spring semesters 2015-2016 and 2018)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>
+  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Formal Languages</i><br>Finite automata, Kleene's theorem, the pumping lemma, minimization, formal grammars. First year graduate students in computer science engineering, University of Paris 13 (spring semesters 2016-2018)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>
+  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Computational Geometry</i><br>Polyhedra, Convex hulls, Linear programming and applications, Voronoi diagrams. First year graduate students, master of computer science, University of Paris 13 (fall semesters 2016-2017)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:945px;height:40px;" align="left" valign="top">
+    <h2>2010&ndash;2014 (Assistant professor at <a href="http://www.efrei.fr/en">EFREI</a>, France)</h2>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Computational Finance</i><br>Discrete time pricing models, Generation of Random Variables, Monte Carlo Methods for option pricing. Second year graduate students, master of financial engineering, EFREI (fall semesters 2010 to 2013)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Undergraduate Calculus</i><br>Functions of one variable: Continuity, Derivation, Integration, Differential equations, usual functions. First year undergraduate students, bachelor of engineering, EFREI (fall semesters 2010 to 2013)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>General Algebra</i><br>Logic and set theory, Algebraic structures, Relations and Maps, Polynomials, Complex numbers, Arithmetics. First year undergraduate students, bachelor of engineering, EFREI (fall semester 2010)</h3>
+  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3></h3>
+  </div>
+
+  <div style="clear:both;float:left;width:750px;height:40px;" align="left" valign="top">
+    <h2>2006&ndash;2010 (Professor at <a href="http://www.ehl.edu/">EHL</a>, Switzerland)</h2>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Service Operations Management</i><br>Linear programming, Scheduling and transportation, Queuing theory, Inventory management. Second year undergraduate students, bachelor of science, EHL (fall and spring semesters from 2006 to 2010)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-2px;" align="justify" valign="top">
+    <h3><i>Advanced Decision Making Tools</i><br>Time series, Forecasting, Decision Trees, Notions of dynamic programming. Second year undergraduate students, bachelor of science, EHL (fall and spring semesters from 2007 to 2010)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-2px;" align="justify" valign="top">    
+    <h3><i>Quantitative Methods (Statistics)</i><br>Descriptive statistics, Statistical Testing, Regression analysis. First year undergraduate students, bachelor of science, EHL (fall and spring semesters from 2007 to 2009)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:750px;height:40px;" align="left" valign="top">
+    <h2>2005&ndash;2006 (Lecturer at <a href="http://www.epfl.ch">EPFL</a>, Switzerland)</h2>
+  </div>
+
+  <div style="clear:both;float:left;width:40px;margin-top:-4px;" align="right" valign="top">
+    <h3>&#9702;</h3>  </div>
+
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3><i>Operations Research</i><br>Linear Programming, Simplex method, Duality, Optimization on graphs, Dynamic programming. First year graduate students, master of telecommunications, EPFL (fall semesters 2005 and 2006)</h3>
+  </div>
+
+  <div style="clear:both;float:left;width:750px;height:40px;" align="left" valign="top">
+    <h2>1999&ndash;2005 (Assistant at <a href="http://www.epfl.ch">EPFL</a>, Switzerland)</h2>
+  </div>
+
+  <div style="clear:both;float:left;width:20px;margin-top:-4px;" align="justify" valign="top">
+  </div>  
+  <div style="float:right;width:730px;margin-top:-4px;" align="justify" valign="top">
+    <h3>Assistant for the courses of <i>Operations Research</i>, <i>Linear Algebra</i>, <i>(nonlinear) Optimization</i>, <i>Algorithmics</i>, <i>Decision Processes</i>, <i>Mathematical Modeling</i> for students in bachelor and master of Mathematics, Physics, Telecommunications, Civil engineering, EPFL</h3>
+  </div>
+
+</div>
+
+    </td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6627459; 
+var sc_invisible=1; 
+var sc_security="1f468d45"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

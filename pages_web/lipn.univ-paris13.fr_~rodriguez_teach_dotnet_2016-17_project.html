@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>A Survey System</title>
+<style type="text/css">
+
+
+body {
+	/* font-family: "Adobe Caslon Pro", "Minion Pro", serif; */
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 13pt;
+	background-color: #eee;
+}
+
+table {
+	background-color: #f8f8ff;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #ccc solid;
+}
+
+th, td {
+	padding: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px #aaa solid;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+th {
+	background-color: #eef;
+	text-align: left;
+}
+
+.document {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	width: 900px;
+	background-color: white;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+}
+
+.large {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.med {
+	font-size: 120%;
+}
+
+.cmd {
+	border: 1pt #ccc solid;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	background-color: #fee;
+   font-family: monospace;
+	font-weight: bold;
+	/* font-size: 110%; */
+}
+
+
+.literal-block {
+	border: 1px #999 dashed;
+	padding: 5px;
+	background-color: #e8e8e8;
+}
+
+.literal {
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #e8e8e8;
+}
+
+.exercise {
+	border: 1pt #ccc solid;
+	background-color: #efe;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+}
+
+.update {
+	font-size: 65%;
+   text-align: right;
+}
+
+
+</style>
+<style type="text/css">
+
+pre.code .hll { background-color: #ffffcc }
+pre.code  { background: #f0f3f3; }
+pre.code .c { color: #0099FF; font-style: italic } /* Comment */
+pre.code .err { color: #AA0000; background-color: #FFAAAA } /* Error */
+pre.code .k { color: #006699; font-weight: bold } /* Keyword */
+pre.code .o { color: #555555 } /* Operator */
+pre.code .cm { color: #0099FF; font-style: italic } /* Comment.Multiline */
+pre.code .cp { color: #009999 } /* Comment.Preproc */
+pre.code .c1 { color: #0099FF; font-style: italic } /* Comment.Single */
+pre.code .cs { color: #0099FF; font-weight: bold; font-style: italic } /* Comment.Special */
+pre.code .gd { background-color: #FFCCCC; border: 1px solid #CC0000 } /* Generic.Deleted */
+pre.code .ge { font-style: italic } /* Generic.Emph */
+pre.code .gr { color: #FF0000 } /* Generic.Error */
+pre.code .gh { color: #003300; font-weight: bold } /* Generic.Heading */
+pre.code .gi { background-color: #CCFFCC; border: 1px solid #00CC00 } /* Generic.Inserted */
+pre.code .go { color: #AAAAAA } /* Generic.Output */
+pre.code .gp { color: #000099; font-weight: bold } /* Generic.Prompt */
+pre.code .gs { font-weight: bold } /* Generic.Strong */
+pre.code .gu { color: #003300; font-weight: bold } /* Generic.Subheading */
+pre.code .gt { color: #99CC66 } /* Generic.Traceback */
+pre.code .kc { color: #006699; font-weight: bold } /* Keyword.Constant */
+pre.code .kd { color: #006699; font-weight: bold } /* Keyword.Declaration */
+pre.code .kn { color: #006699; font-weight: bold } /* Keyword.Namespace */
+pre.code .kp { color: #006699 } /* Keyword.Pseudo */
+pre.code .kr { color: #006699; font-weight: bold } /* Keyword.Reserved */
+pre.code .kt { color: #007788; font-weight: bold } /* Keyword.Type */
+pre.code .m { color: #FF6600 } /* Literal.Number */
+pre.code .s { color: #CC3300 } /* Literal.String */
+pre.code .na { color: #330099 } /* Name.Attribute */
+pre.code .nb { color: #336666 } /* Name.Builtin */
+pre.code .nc { color: #00AA88; font-weight: bold } /* Name.Class */
+pre.code .no { color: #336600 } /* Name.Constant */
+pre.code .nd { color: #9999FF } /* Name.Decorator */
+pre.code .ni { color: #999999; font-weight: bold } /* Name.Entity */
+pre.code .ne { color: #CC0000; font-weight: bold } /* Name.Exception */
+pre.code .nf { color: #CC00FF } /* Name.Function */
+pre.code .nl { color: #9999FF } /* Name.Label */
+pre.code .nn { color: #00CCFF; font-weight: bold } /* Name.Namespace */
+pre.code .nt { color: #330099; font-weight: bold } /* Name.Tag */
+pre.code .nv { color: #003333 } /* Name.Variable */
+pre.code .ow { color: #000000; font-weight: bold } /* Operator.Word */
+pre.code .w { color: #bbbbbb } /* Text.Whitespace */
+pre.code .mf { color: #FF6600 } /* Literal.Number.Float */
+pre.code .mh { color: #FF6600 } /* Literal.Number.Hex */
+pre.code .mi { color: #FF6600 } /* Literal.Number.Integer */
+pre.code .mo { color: #FF6600 } /* Literal.Number.Oct */
+pre.code .sb { color: #CC3300 } /* Literal.String.Backtick */
+pre.code .sc { color: #CC3300 } /* Literal.String.Char */
+pre.code .sd { color: #CC3300; font-style: italic } /* Literal.String.Doc */
+pre.code .s2 { color: #CC3300 } /* Literal.String.Double */
+pre.code .se { color: #CC3300; font-weight: bold } /* Literal.String.Escape */
+pre.code .sh { color: #CC3300 } /* Literal.String.Heredoc */
+pre.code .si { color: #AA0000 } /* Literal.String.Interpol */
+pre.code .sx { color: #CC3300 } /* Literal.String.Other */
+pre.code .sr { color: #33AAAA } /* Literal.String.Regex */
+pre.code .s1 { color: #CC3300 } /* Literal.String.Single */
+pre.code .ss { color: #FFCC33 } /* Literal.String.Symbol */
+pre.code .bp { color: #336666 } /* Name.Builtin.Pseudo */
+pre.code .vc { color: #003333 } /* Name.Variable.Class */
+pre.code .vg { color: #003333 } /* Name.Variable.Global */
+pre.code .vi { color: #003333 } /* Name.Variable.Instance */
+pre.code .il { color: #FF6600 } /* Literal.Number.Integer.Long */
+
+</style>
+</head>
+<body>
+<div class="document" id="a-survey-system">
+<h1 class="title">A Survey System</h1>
+
+<!-- :update:`(last update: Wed Jan 11 09:36:44 CET 2017)` -->
+<!-- .. sectnum:: -->
+<p>The goal of this exercise is to develop a client/server application for making
+surveys over the Internet.  A survey will be composed of the following elements:</p>
+<ul class="simple">
+<li>A question</li>
+<li>One or more possible choices</li>
+</ul>
+<p>Here is one possible example:</p>
+<ul class="simple">
+<li>Question: &quot;What is your favorite programming language?&quot;</li>
+<li>Choice 1: Java</li>
+<li>Choice 2: C#</li>
+<li>Choice 2: Python</li>
+</ul>
+<p>The server will store a list of surveys that some administrative user
+(identified with a password) will have created.  Clients will connect to the
+server and vote for the choices.  The server will store, in addition to the
+question and the choices, the following information:</p>
+<ul class="simple">
+<li>The number of votes that each choice has received so far.</li>
+</ul>
+<p>The client and server applications will have a text (console) interface.</p>
+<div class="section" id="client">
+<h1>Client</h1>
+<p>The client will first connect to a server right after it starts. The IP address
+and port are given as commandline parameters.  Here is what you would see on the
+terminal:</p>
+<pre class="literal-block">
+C:\Users\Telecom&gt; Client.exe 10.20.30.40 1234
+</pre>
+<p>We are using the Windows console, we are inside the folder <tt class="docutils literal"><span class="pre">C:\Users\Telecom</span></tt>
+and we run the client, providing the IP address and port of the server.</p>
+<p>If the client fails to connect to the server, it will show an error message and
+terminate. If it succeeds, it will show the following menu:</p>
+<pre class="literal-block">
+0. List all surveys and statistics
+1. Vote in one survey
+2. Create a survey (admin only)
+3. Remove a survey (admin only)
+4. Exit
+
+Choose an option :
+</pre>
+<p>If the user chooses an option different from 0 to 4, the client will
+show an error message and display again the menu.</p>
+<p>The last option terminates the client. The first 4 options allow the user to do
+the following:</p>
+<ul class="simple">
+<li>List the surveys and statistics about the answers stored in the server.</li>
+<li>Select a survey and vote for one of its choices.</li>
+<li>An authorized administrator will be also to create and remove surveys.</li>
+</ul>
+<div class="section" id="option-0-list-all-surveys-and-statistics">
+<h2>Option 0 - List all surveys and statistics</h2>
+<p>When the user selects this option, the client will request to server for the
+list of surveys defined in the server, together with the number of votes that
+each choice received. The client will display the data using the following
+format:</p>
+<pre class="literal-block">
+Question 0: What is your favorite programming language?
+- Choice 0 ( 5 votes,  25%): Java
+- Choice 1 ( 5 votes,  25%): C#
+- Choice 2 (10 votes,  50%): Python
+
+Question 1: What grade you think you will get on the .NET course?
+- Choice 0 ( 5 votes,  33%): Less than 12
+- Choice 1 (10 votes,  66%): More than 12
+
+Question 2: Do you know what is a critical section?
+- Choice 0 ( 8 votes, 100%): Yesssss!
+- Choice 1 ( 0 votes,   0%): No :(
+</pre>
+</div>
+<div class="section" id="option-1-vote-in-one-survey">
+<h2>Option 1 - Vote in one survey</h2>
+<p>The user has typed <tt class="docutils literal">1</tt> and now the client shows the menu to vote. In the
+following example the user will select the question number <tt class="docutils literal">2</tt> and will vote
+for the choice <tt class="docutils literal">0</tt> to that question:</p>
+<pre class="literal-block">
+Ok, choose a question to vote for:
+
+Question 0: What is your favorite programming language?
+Question 1: What grade you think you will get on the .NET course?
+Question 2: Do you know what is a critical section?
+
+Choose a question: (the user enters 2)
+
+Question 2: Do you know what is a critical section?
+- Choice 0: Yesssss!
+- Choice 1: No :(
+
+Choose a choice: (the user enters 0)
+
+Thank you, you voted 0 on question 2!
+Sending the data to the server... Done!
+</pre>
+<p>After the client gets the choice from the user, it will send it to the server.
+Observe that, to implement this menu you will have to retrieve from the server
+the list of surveys and options currently defined in the server.</p>
+</div>
+<div class="section" id="option-2-create-a-survey">
+<h2>Option 2 - Create a survey</h2>
+<p>After the user selects this option, the client will ask for a password. The
+password will be sent to the server together with the data defining the survey.
+If the server accepts the password, the survey will be created and the client
+will indicate so to the user.  If it is not accepted, the client will show an
+error message and come back to the main menu.</p>
+<p>This is example execution, where the user creates a new survey with 3 choices:</p>
+<pre class="literal-block">
+Question : (the user types &quot;How many planes orbit around the Sun?&quot;)
+Choice 0 : (the user types &quot;7 planets&quot;)
+Choice 1 : (the user types &quot;9 planets&quot;)
+Choice 2 : (the user types &quot;Not even NASA really knows...&quot;)
+Choice 3 : (the user just types Enter)
+
+Password: (the user types &quot;admin&quot;)
+
+Sending the data to the server... Done!
+</pre>
+<p>If the password is wrong, the server will send an error message to the client,
+and the client will show something different on the last line:</p>
+<pre class="literal-block">
+Sending the data to the server... ERROR, password not accepted :(
+</pre>
+</div>
+<div class="section" id="option-3-remove-a-survey">
+<h2>Option 3 - Remove a survey</h2>
+<p>Similarly to the previous option, the client requests for a password and sends
+it to the server. If its accepted it asks the user to provide the number of the
+question to remove. In the following example the user provides wrong data, and
+the client asks again:</p>
+<pre class="literal-block">
+Which question should I remove ?
+
+Question 0: What is your favorite programming language?
+Question 1: What grade you think you will get on the .NET course?
+Question 2: Do you know what is a critical section?
+Question 3: How many planes orbit around the Sun?
+
+Choose a question: (the user enters 123)
+
+Sorry, 123 is not a valid question id.
+Which question should I remove ?
+
+Question 0: What is your favorite programming language?
+Question 1: What grade you think you will get on the .NET course?
+Question 2: Do you know what is a critical section?
+Question 3: How many planes orbit around the Sun?
+
+Choose a question: (the user types 0)
+Password: (the user types &quot;admin&quot;)
+
+Sending the data to the server... Done!
+</pre>
+</div>
+</div>
+<div class="section" id="server">
+<h1>Server</h1>
+<p>The server will be a multithreaded application. Whenever a client connects to the
+server, the server will spawn one thread to handle the client. That thread will
+read and write the data socket used to communicate with the client. It will also
+read and write the list of surveys stored in the server. Observe that the list
+is shared among all the threads that handle the currently open connections to
+the server, so you will need to use appropriate synchronization primitives to
+avoid unexpected results when you update the shared data structures.</p>
+<p>The server will be capable of replying to 4 different requests:</p>
+<ul class="simple">
+<li>A request to produce the list of all surveys currently present in the server.
+The reply message will include the text of the question, the different choices
+and the number of votes for each choice.</li>
+<li>A request to vote for some choice on some question. The request message will
+obviously contain the question number and the choice number. The server will
+replay with an OK or error message.</li>
+<li>A request to remove a survey. It will include the number of the survey to
+remove as well as the password. The server will replay with an OK or error
+message.</li>
+<li>A request to create a new survey, including a password, the text of the
+question and the choices. The server will replay with an OK or error
+message.</li>
+</ul>
+<p>The server will operate as follows:</p>
+<ol class="arabic simple">
+<li>The server is started.</li>
+<li>It displays on the console the IP address and port number on which it listens.</li>
+<li>It then executes (in an infinite loop) the following actions:<ul>
+<li>Accept a new client.</li>
+<li>Create a thread to deal with it</li>
+</ul>
+</li>
+</ol>
+<p>The thread will be responsible for one client. It will access data structures
+shared with other threads (who deal with other clients).
+The thread will operate as follows:</p>
+<ol class="arabic simple">
+<li>Wait for a client request. If the client closes the connection, then the
+thread will close the connexion and terminate.</li>
+<li>Parse the request from the client.</li>
+<li>Perform the necessary actions on the server's data structures (listing
+surveys currently open, votes within given survey, create/remove surveys)</li>
+<li>Send a reply to the client.</li>
+<li>Close the connexion.</li>
+</ol>
+</div>
+<div class="section" id="final-remarks">
+<h1>Final remarks</h1>
+<ul class="simple">
+<li><strong>Synchronization</strong>. The server is a multithreaded application. Access to data
+structures needs to be performed using the appropriate mutual exclusion in
+order to guarantee the absence of data races (as explained in the course).
+Section 2.8 will be of help here.</li>
+<li>You must use TCP/IP connexions to transfer client requests and server replies
+through the net.
+You are free to design any protocol that you consider best for the task of
+encoding and decoding requests and replies. You might want ton consider the
+<a class="reference external" href="https://lipn.univ-paris13.fr/~rodriguez/teach/dotnet/2015-16/code/Bencode.cs">Bencode</a>
+protocol.</li>
+<li>Errors when parsing network packets (on the client or the server) should be
+reported to the user, and the connexion should be closed. This aspect of your
+proposed solution <strong>will be closely evaluated</strong>.</li>
+<li>Your code should handle the most obvious exceptions and display error messages
+indicating what happened. Unhandled exceptions that originate in a thread
+could kill the entire server. This behaviour, for instance, <strong>should be
+avoided</strong>.</li>
+<li>The <strong>quality of your code</strong> as well as the maturity in terms of testing will be
+evaluated. The code should be clear, well indented, and well tested.
+This aspect will also be <strong>closely evaluated</strong>.</li>
+<li>If you have questions concerning the definition of the problem that this
+exercise is asking you to solve, please
+<a class="reference external" href="https://lipn.univ-paris13.fr/~rodriguez/">contact me</a>.
+You are equally encouraged to take responsibility and make choices about the
+details of the problem statement that you consider missing in the above text.
+You will be asked to explain you decisions if they are not deemed adequate.</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

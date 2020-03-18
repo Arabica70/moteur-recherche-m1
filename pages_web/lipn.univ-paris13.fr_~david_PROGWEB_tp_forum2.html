@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="tp.css">
+    <title>Sujet de TP: FORUM</title>
+  </head>
+
+  <body>
+    <header>Sujet de TP: FORUM, les émoticons</header>
+
+    <main>
+           
+      <article class="exercice">
+	<header><h2>Exercice 1: Créer une nouvelle table dans la base de données</h2></header>
+	
+	<ul>
+	  <li>Téléchargez l'archive <a href="Emoticon.tgz">Emoticon.tgz</a> et décompressez la dans le même répertoire que le TP précédent. </li>
+	  <li>Connectez vous à phpmyadmin et créez un nouvelle table Emoticon dans votre base de données contenant:
+	    <ol>
+	      <li>L'url d'une emoticon (texte),</li>
+	      <li>La chaîne de caratères correspondant à l'émoticon.</li>
+	      <li>insérez plusieurs émoticons dans la base de données</li>
+	    </ol>
+	  </li>
+	</ul>
+	
+      </article>
+
+
+      <article class="exercice">
+	<header><h2>Exercice 2: la classe Emoticon</h2></header>
+
+	<p>Créer un fichier <code>Emoticon.php</code>  dans lequel on définit la classe Emoticon:
+	<ul>
+	  <li> Son constructeur se connecte à la base de données et initialise un tableau <code>images</code> dont les clés sont les chaînes de caractères correspondant à des émoticons
+	      et les valeurs sont les urls.</li>
+	  <li> Ecrire la méthode <code>filtre</code> qui prend en entrée un texte et renvoie un texte modifié, dans lequel toutes les chaînes de caractères correspondant à des émoticons
+	       sont remplacées par des balises <code>img</code> contenant l'url de l'image.</li>
+	  <li>Utilisez la classe Emoticon et sa méthode <code>filtre</code> pour charger les messages du forum de telle sorte que les émoticons apparaissent sous forme d'images de même taille.</li>	
+	</ul>
+	
+      </article>
+
+
+    </main>
+
+      <footer>Auteur: Julien David (2017)</footer>
+
+  </body>
+
+</html>

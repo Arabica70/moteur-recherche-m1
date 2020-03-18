@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<HEAD>
+	<TITLE>Franck Butelle</TITLE>
+	<meta charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Bad Script" rel="stylesheet" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+</HEAD>
+<body>
+<table class="largeTable">
+<tr>
+<td class="center">
+<a HREF="http://www.univ-paris13.fr">
+<img SRC="up13-web.png" width=200 ALT="Logo Paris 13"></a>
+&nbsp;
+&nbsp;
+&nbsp;
+<A HREF="http://www.iutv.univ-paris13.fr"><IMG SRC="./logoIUTV.jpg" width=100 ALT="Logo IUT Villetaneuse"></A>
+</TD>
+<td class="center grossefont">
+<A HREF="../../">LIPN</a> 
+: <A HREF="http://lipn.univ-paris13.fr/fr/aoc-2">AOC</a></td>
+<td class="center"><a HREF="http://www.cnrs.fr/"><img SRC="../wp-content/uploads/2017/11/cnrs_large-300x109.png"  ALT="Logo CNRS"></a></td>
+</tr>
+</table>
+
+<br>
+
+<div class="center"><H1>Page personnelle de Franck BUTELLE</H1></div>
+<TABLE class="center"><TR><TD>
+<table class="bordure"><tr><td><img src="./butelle2.jpg" height=150 ALT="Ma photo"></td>
+<td><I>
+Laboratoire d'Informatique de l'Universit&eacute; Paris Nord (LIPN)<br>
+Institut Galil&eacute;e<br>
+Avenue J.B. Cl&eacute;ment<br>
+F-93430 VILLETANEUSE<br>
+<br>
+Bureau:  A112.
+T&eacute;l.: <a HREF="telephone.html">ici</a>
+<BR>
+<span class="codedirection">rf.31sirap-vinu.npil@elletub.kcnarf</span>
+
+</I></TD></tr></table></TD>
+<TD class="petiteColonne">
+<ul class="icons">
+<li><a href="http://dblp.uni-trier.de/pers/hd/b/Butelle:Franck" class="icon fa-th-list" title="DBLP"><span class="label">DBLP</span></a></li>
+<li><a href="http://orcid.org/0000-0002-2302-7615" class="icon fa-circle-o" title="ORCID"><span class="label">ORCID</span></a></li>
+<li><a href="https://www.researchgate.net/profile/Franck_Butelle" class="icon fa-users" title="Reasearch Gate"><span class="label">ResearchGate</span></a></li>
+<!--<li><a hreflang="en-uk" lang="en-uk" xml:lang="en-uk" href="index_uk.html">🇬🇧</a></li>-->
+</ul>
+</TD></TR></TABLE>
+<hr>
+
+
+<h2>Sujets de Recherche</h2>
+
+Algorithmique Distribu&eacute;e en milieu asynchrone,
+plus particuli&egrave;rement arbres couvrants, routage, ordonnancement en ligne,
+auto-stabilisation...
+
+<h2>Enseignement</h2>
+<a href=http://www-info.iutv.univ-paris13.fr/~butelle>Page enseignement IUT</a>
+
+<h2>Bibliographie</h2>
+<a href="biblio_HAL.html">Bibliographie (extraite de Hyper Articles en Ligne (HAL) - CNRS &amp; INRIA)</a>.
+
+<h2>Logiciels</h2>
+<ul>
+<li>
+Chef de l'équipe S26 pour le <b><a href="http://challenge.roadef.org/2012/fr">challenge Roadef 2011-2012</a></b> 
+(en collaboration avec Google)
+portant sur la réaffectation
+de processsus, dans la catégorie open-source.
+
+Le code est disponible sous licence
+<a href="http://www.gnu.org/copyleft/gpl.html">GPL</a> 
+<a href="s26.tgz">ici</a>.</li>
+
+<li>
+Principal "mainteneur" sous 
+<a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>
+du logiciel <b><a href="http://schur.sourceforge.net">SCHUR</a></b>
+(Programme interactif de calcul des propriétés
+des groupes de Lie et des fonctions symétriques).</li>
+
+<li>
+Participe au développement sous 
+<a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>
+du logiciel <b><a href="http://marionnet.org">Marionnet</a></b>
+(un laboratoire de réseaux virtuels)</li>
+</ul>
+
+
+<BR><BR>
+<P class="right">
+<a href="mykey.asc">PGP public key (2017-2021)</A></P>
+<BR>
+
+<!--(<A HREF=Articles/HaBu03.ps>PostScript</A>)-->
+<!--Ma th&egrave;se de doctorat :<br>
+<a href="these.html">Contribution &agrave; l'algorithmique 
+distribu&eacute;e de contr&ocirc;le,
+arbres couvrants avec et sans contraintes</a> <br>
+Mars 1994, Universit&eacute; de 
+Paris 8 - Saint-Denis.<br>-->
+
+   <p class="right">
+      <!--<a href="http://validator.w3.org/check/referer"><img src="valid-html5"
+		  alt="Valid HTML 4.01!" height="31" width="88"></a>-->
+    </p>
+</BODY>
+</HTML>

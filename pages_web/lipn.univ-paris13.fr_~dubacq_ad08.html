@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+  <head>
+    <title>Étude de performance des systèmes de découverte de ressources</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph tags -->
+
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Étude de performance des systèmes de découverte de ressources"/>
+            <meta property="og:url" content="./ad08.html"/>
+            <meta property="og:description" content="Les grilles de PC (Desktop Grid) sont une technologie qui consiste à exploiter des ressources géographiquement dispersées, pour traiter des applications complexes demandant une grande puissance de calcul et une capacité de stockage importante. Cependant, comme le nombre de ressources augmente, les besoins de changement d'échelle, d'auto-organisation, de reconfiguration dynamique, de décentralisation et de performance deviennent de plus en plus indispensables. Comme ces propriétés sont présentes dans les systèmes P2P (pair-à-pair), la convergence des grilles et des systèmes P2P semble naturelle. Dans ce contexte, l'article évalue l'adaptation au changement d'échelle et la performance des outils P2P pour la publication/découverte de services. Trois bibliothèques sont évaluées à cet effet: Bonjour, Avahi et Pastry. Nous étudions leur comportement vis à vis des critères qui sont le temps écoulé pour l'enregistrement des services et le temps nécessaire pour en découvrir de nouveaux. Notre objectif est d'analyser ces résultats afin de choisir le meilleur protocole que nous pourrons utiliser à terme afin de créer un intergiciel décentralisé pour les Desktop Grid."/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    ./.
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="." class="navbar-brand">jcdubacq@lipn</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="./category/enseignement.html">Enseignement</a>
+            </li>
+            <li >
+              <a href="./category/hacks.html">Hacks</a>
+            </li>
+            <li >
+              <a href="./category/news.html">News</a>
+            </li>
+            <li class="active">
+              <a href="./category/publications.html">Publications</a>
+            </li>
+            <li >
+              <a href="./category/recherche.html">Recherche</a>
+            </li>
+            <li><a href="./author/jcdubacq.html">Qui?</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/~dubacq">Français</a></li>
+            <li><a href="/~dubacq/en">English</a></li>
+            <li class="divider"></li>
+            <li><a href="./archives.html"><i class="icon-th-list"></i>Archives</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+    <div class="container">
+<article>
+  <header class="page-header">
+    <h1>
+      <a href="./ad08.html"
+         rel="bookmark"
+         title="Permalink to Étude de performance des systèmes de découverte de ressources">
+        Étude de performance des systèmes de découverte de ressources
+      </a>
+    </h1>
+  </header>
+  <div class="entry-content">
+    <div class="panel">
+      <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="icon-calendar"></i>sam. 26 avril 2008
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/tunisie.html">Tunisie</a>
+        /
+	<a href="./tag/zeroconf.html">Zeroconf</a>
+        /
+	<a href="./tag/grid-computing.html">grid computing</a>
+        /
+	<a href="./tag/proceedings.html">proceedings</a>
+        /
+	<a href="./tag/rapport.html">rapport</a>
+<span class="label label-default">Autres langues</span>
+	<a href="./en/ad08.html">English</a>
+</footer><!-- /.post-info -->      </div>
+    </div>
+    <p>Les grilles de PC (Desktop Grid) sont une technologie qui consiste à
+exploiter des ressources géographiquement dispersées, pour traiter des
+applications complexes demandant une grande puissance de calcul et une
+capacité de stockage importante.  Cependant, comme le nombre de
+ressources augmente, les besoins de changement d'échelle,
+d'auto-organisation, de reconfiguration dynamique, de décentralisation
+et de performance deviennent de plus en plus indispensables. Comme ces
+propriétés sont présentes dans les systèmes P2P (pair-à-pair), la
+convergence des grilles et des systèmes P2P semble naturelle. Dans ce
+contexte, l'article évalue l'adaptation au changement d'échelle et la
+performance des outils P2P pour la publication/découverte de
+services. Trois bibliothèques sont évaluées à cet effet:
+<a href="http://fr.wikipedia.org/wiki/Apple_Bonjour">Bonjour</a>,
+<a href="http://en.wikipedia.org/wiki/Avahi_%28software%29">Avahi</a> et
+<a href="http://research.microsoft.com/%7Eantr/Pastry/">Pastry</a>. Nous étudions
+leur comportement vis à vis des critères qui sont le temps écoulé pour
+l'enregistrement des services et le temps nécessaire pour en découvrir
+de nouveaux. Notre objectif est d'analyser ces résultats afin de choisir
+le meilleur protocole que nous pourrons utiliser à terme afin de créer
+un intergiciel décentralisé pour les Desktop Grid.</p>
+<h2>Quelques mots sur cette série d'articles</h2>
+<p>Cette série d'articles (car il s'agit bien d'une série) a été
+principalement écrite par Heithem Abbes, doctorant tunisien co-encadré
+par Christophe Cérin et Mohamed Jemni, à l'UTIC). J'ai collaboré à
+l'article autant que la distance le permettait. J'ai en particulier fait
+la
+<a href="./pdf/publications/eumedgrid.pdf">présentation des résultats</a>
+(et une introduction au contexte de l'étude) au colloque EUMEDGrid
+2007. Heithem les a présenté aussi à
+<a href="./renpar18.html">Renpar 18</a>.</p>
+<p>Cet article est plus un article de positionnement et de recherche
+initiale sur le sujet qu'un article de fond. Nous essayons d'analyser la
+réactivité des protocoles classiques (FreePastry n'était pas dans le
+projet initial) de gestion d'annonces de service, en particulier face à
+des problèmes d'afflux massif ou d'arrivées régulières. Les résultats
+sont mauvais, sauf peut-être pour Bonjour.</p>
+<p>Une version abrégée a finalement été publiée dans
+<a href="http://www.springer.com/computer/communications/book/978-3-642-00954-9">SGS 2008</a>
+(conférence satellite d'Europar 2008). La
+<a href="http://dx.doi.org/10.1007/978-3-642-00955-6_28">présentation</a> a été
+faite par Heithem.</p>
+<h2>Les documents</h2>
+<ul>
+<li><a class="icon-eur" href="http://dx.doi.org/10.1007/978-3-642-00955-6_28">Les proceedings d'Europar/SGS 2008</a></li>
+<li><a href="./pdf/publications/acdj-renpar18.pdf">L'article de proceedings</a></li>
+<li><a href="./pdf/publications/acdj.pdf">Le rapport de recherche</a></li>
+<li><a href="./pdf/publications/eumedgrid.pdf">La présentation à EUMedGrid 2007</a></li>
+</ul>
+<h2>Citer ces documents</h2>
+<p>Pour citer ces documents, selon la version, prenez ce qui vous intéresse... Pour ceux qui n'ont pas eu de publication papier, les URL sont incluses (références à HAL).</p>
+<div class="highlight"><pre>@InProceedings{ad08,
+  author =    {Heithem Abbes and Jean-Christophe Dubacq},
+  title =      {Analysis of Peer-to-Peer Protocols Performance for Establishing a Decentralized Desktop Grid Middleware},
+  booktitle =   {Euro-Par 2008 Workshops - Parallel Processing},
+  pages =     {235-246},
+  year =    {2009},
+  editor =     {Eduardo C{\&#39;e}sar and Michael Alexander and Achim Streit and Jesper Larsson Träff and Christophe C{\&#39;e}rin and Andreas Kn{\&quot;u}pfer and Dieter Kranzlmüller and Shantenu Jha},
+  volume =      {5415},
+  series =     {Lecture Notes in Computer Science},
+  month =     apr,
+  publisher =      {Springer},
+  isbn =           {978-3-642-00954-9}
+}
+@TechReport{acdj07RR,
+  author =      {Heithem Abbes and Christophe C\&#39;erin and Jean-Christophe Dubacq and Mohamed Jemni},
+  title =     {Performance Analysis of Publish/Subscribe Systems},
+  institution =  {Laboratoire d&#39;informatique de Paris Nord},
+  year =    {2007},
+  type =   {Rapport de recherche / Research Report},
+  number =   {XX},
+  month =    jul
+  url =          {http://hal.archives-ouvertes.fr/hal-00159388/fr/},
+}
+@InProceedings{acdj08,
+  author =    {Heithem Abbes and Christophe C{\&#39;e}rin and Jean-Christophe Dubacq and Mohamed Jemni},
+  title =   {{\&#39;E}tude de performance des syst{\`e}mes de d{\&#39;e}couverte de ressources},
+  booktitle = {{A}ctes de {F}ribourg&#39;2008 : {R}enpar&#39;18 / {S}ymp{A}&#39;2008 / {CFSE}&#39;6 },
+  address =   {{F}ribourg, {S}witzerland},
+  year =      {2008},
+  month =      feb,
+  note =         {{P}ublication on {CDROM} only },
+  url =          {http://hal.archives-ouvertes.fr/hal-00276323/en/},
+}
+</pre></div>
+    <!-- /.entry-content -->
+</article>
+    </div>
+    <hr/>
+<aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><i class="icon-home icon-large"></i>Social</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://twitter.com/jcdubacq">
+                <i class="icon-twitter-sign icon-large"></i>twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="well">
+          <h2><a href="./tags.html"><i class="icon-tags icon-large"></i>Tags</a></h2>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+
+    </div>   </div> </aside>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="./theme/js/respond.min.js"></script>
+    <script src="./theme/js/local.js"></script>
+
+  </body>
+</html>

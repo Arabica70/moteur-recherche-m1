@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>SynCoP 2018</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.png" alt="A parameterized Swedish logo" /></span>
+					<h1 id="logo"><a href="#">SynCoP 2018</a></h1>
+					<p>14 and 15 April 2018<br />
+					Thessaloniki, Greece</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#program">Program</a></li>
+						<li><a href="#committees">Committees</a></li>
+											<li><a href="#invited">Speakers</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- 
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+				-->
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>SynCoP 2018</h2>
+										<h4>(formerly SynCoP + PV)</h4>
+										<p>5th International Workshop on Synthesis of Complex Parameters</p>
+									</header>
+									
+									<p>This event is an <a href="http://www.etaps.org/2018/">ETAPS</a> workshop organized as a series of invited talks. Everyone is welcome to attend and participate in the discussions. There are no formal proceedings.</p>
+									
+									<h3>Scientific objective of SynCoP</h3>
+									<p>SynCoP aims at bringing together researchers working on verification and parameter synthesis for systems with discrete or continuous parameters, in which the parameters influence the behavior of the system in ways that are complex and difficult to predict.
+											Such problems may arise for real-time, hybrid or probabilistic systems in a large variety of application domains.
+											The parameters can be continuous (e.g., timing, probabilities, costs) or discrete (e.g., number of processes). The goal can be to identify suitable parameters to achieve desired behavior, or to verify the behavior for a given range of parameter values.</p>
+											
+																				
+									<p>Systems composed of a finite but possibly arbitrary number of identical components occur everywhere from hardware design (e.g. cache coherence protocols) to distributed applications (e.g. client-server applications). Parameterized verification is the task of verifying the correctness of this kind of systems regardless the number of their components.</p>
+									<h4>Topics of SynCoP</h4>
+									<p>The scientific subject of the workshop covers (but is not limited to) the following areas:</p>
+		
+									<ul>
+										<li>parameter synthesis,</li>
+										<li>parametric model checking,</li>
+										<li>regular model checking,</li>
+										<li>robustness analysis,</li>
+										<li>parameterized logics, decidability and complexity issues,</li>
+										<li>formalisms such as parametric timed and hybrid automata, parametric time(d) Petri nets, parametric probabilistic (timed) automata, parametric Markov Decision Processes, networks of identical processes,</li>
+										
+																				<li>specifications in automata and logic, term and graph rewriting, Petri nets, process algebra, …</li>
+										<li>validation methods via assertional and regular model checking, reachability and coverability decision procedures, abstractions, theorem proving, constraint solving, …</li>
+										
+										<li>interactions between discrete and continuous parameters,</li>
+										<li>tools and applications to hardware design, cache coherence protocols, security and communication protocols, multithreaded and concurrent programs, programs with relaxed memory models, mobile and distributed systems, database languages and systems, biological systems, etc.</li>
+									</ul>
+									
+								</div>
+							</section>
+
+						<!-- Committees -->
+							<section id="committees">
+								<div class="container">
+									<h3>Committees</h3>
+										<div class="row">
+											<div class="6u 12u(xsmall)">
+												<h5>SynCoP general chair (2018)</h5>
+												<ul class="alt">
+													<li><a href="http://www.irccyn.ec-nantes.fr/~jezequel/">Loïg Jezequel</a>, Nantes, France</li>
+												</ul>
+												<h5>SynCoP (formerly SynCoP + PV) steering committee</h5>
+												<ul class="alt">
+													<li><a href="http://user.it.uu.se/~parosh/">Parosh Abdulla</a>, Uppsala, Sweden</li>
+													<li><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a>, Villetaneuse, France</li>
+													<li><a href="http://www.disi.unige.it/person/DelzannoG/">Giorgio Delzanno</a>, Genoa, Italy</li>
+													<li><a href="https://www.irif.fr/~haberm/">Peter Habermehl</a>, Paris, France</li>
+													<li><a href="http://people.cs.aau.dk/~kgl/">Kim Larsen</a>, Aalborg, Denmark</li>
+													<li><a href="http://www.irccyn.ec-nantes.fr/~lime/">Didier Lime</a>, Nantes, France</li>
+													<li><a href="http://www.ipipan.waw.pl/~penczek/">Wojciech Penczek</a>, Warszawa, Poland</li>
+													<li><a href="https://lipn.univ-paris13.fr/~petrucci/">Laure Petrucci</a>, Villetaneuse, France</li>
+												</ul>
+											</div>
+										</div>
+
+								</div>
+							</section>
+
+						<!-- Invited speakers -->
+							<section id="call">
+								<div class="container">
+									<h3>Call for papers</h3>
+									
+										<p>In addition to invited presentations (see below), SynCoP 2018 organizes a call for papers.</p>
+										
+										<p>SynCoP seeks short abstracts only.</p>
+
+										<p>Recently published works, ongoing works, or works under submission are welcome.
+
+<p>The page limit is 3 pages (excluding bibliography) single column.
+All accepted abstracts will be maid available to the participants of SynCoP 2018 but
+they will not result in referenced publications.</p>
+
+<p>Authors of accepted abstracts will be required to give an informal presentation during
+the workshop.</p>
+
+<p>Submission will be made in English in PDF format through Easychair:<br>
+<a href="https://easychair.org/conferences/?conf=syncop2018">https://easychair.org/conferences/?conf=syncop2018</a>
+</p>
+
+									<p>See the <a href="SynCoP18-call-for-papers.txt">call for papers</a> for further details.</p>
+										<ul class="feature-icons">
+											<li class="fa-calendar">Deadline: <span style="text-decoration: line-through">15th January, 2018 29th January, 2018</span> 12th February, 2018
+											</li>
+
+											<li class="fa-calendar-check-o">Notification: <span style="text-decoration: line-through">22nd January, 2018 5th February, 2018</span> 19th February, 2018
+											</li>
+
+											<li class="fa-file-pdf-o">Final version: 20th March, 2018
+											</li>
+
+										</ul>									
+									 
+
+										
+								</div>
+							</section>
+													<!-- Invited speakers -->
+							<section id="invited">
+								<div class="container">
+									<h3>Invited speakers</h3>
+									
+										<p>The following speakers confirmed their participation:</p>
+										<ul class="feature-icons">
+											<li class="fa-user"><a href="#bertrand">Nathalie Bertrand</a> (Rennes, France):
+													<a href="#bertrand">Population control: how to win when intuition fails?</a>
+											</li>
+
+											<li class="fa-user"><a href="#dang">Thao Dang</a> (Grenoble, France):
+													<a href="#dang">Parameter synthesis for biological systems modelling</a>
+											</li>
+
+											<li class="fa-user"><a href="#faella">Marco Faella</a> (Napoli, Italy):
+													<a href="#faella">Controller synthesis for Linear Hybrid Systems</a>
+											</li>
+
+											<li class="fa-user"><a href="#ganty">Pierre Ganty</a> (IMDEA Software Institute, Spain):
+													<a href="#ganty">Population protocols and predicates</a>
+											</li>
+
+											<li class="fa-user"><a href="#hasuo">Ichiro Hasuo</a> (Tokyo, Japan):
+													<a href="#hasuo">Approximating Reachability Probabilities by (Super-)Martingales</a>
+											</li>
+
+											<li class="fa-user"><a href="#quaas">Karin Quaas</a> (Leipzig, Germany):
+													<a href="#quaas">The Precise Complexity of the Reachability Problem for Parametric Timed Automata with a Single Parametric Clock</a>
+											</li>
+
+										</ul>									
+									 
+
+										
+								</div>
+							</section>
+							
+
+						<!-- Program -->
+							<section id="program">
+								<div class="container">
+									<h3>Program</h3>
+
+									
+										<div class="table-wrapper">
+											<h4>Saturday, 14th of April 2018</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>9h-10h</td>
+														<td>Keynote speaker 1: <a href="#bertrand">Nathalie Bertrand</a></td>
+														<td><a href="#bertrand">Population control: how to win when intuition fails?</a> [<a href="slides-bertrand.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>10h-10h30</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>10h30-12h30</td>
+														<td>Session 1
+															<br/>Invited talk: <a href="#dang">Thao Dang</a>
+															<br/>Invited talk: <a href="#faella">Marco Faella</a>
+														</td>
+														<td>
+															<br/><a href="#dang">Parameter synthesis for biological systems modelling</a> [<a href="slides-dang.pdf">slides</a>]
+															<br/><a href="#faella">Controller synthesis for Linear Hybrid Systems</a> [<a href="slides-faella.pdf">slides</a>]
+														</td>
+													</tr>
+													<tr>
+														<td>12h30-14h</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+													<tr>
+														<td>14h-15h30</td>
+														<td>Session 2:
+															<br/>Invited talk: <a href="#quaas">Karin Quaas</a>
+															<br/>Paulin Fournier
+															<br/>Mathias Ramparison
+														</td>
+														<td>
+															<br/><a href="#quaas">The Precise Complexity of the Reachability Problem for Parametric Timed Automata with a Single Parametric Clock</a>
+															<br/>Parametric timed broadcast protocols
+															<br/>Timed automata with parametric resets
+														</td>
+													</tr>
+													<tr>
+														<td>15h30-16h</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>20h</td>
+														<td>Workshop dinner</td>
+														<td>22 Paleon Patron Germanou</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<h4>Sunday, 15th of April 2018</h4>
+											<table>
+												<thead>
+													<tr>
+														<th>Time</th>
+														<th>Speaker</th>
+														<th>Topic</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>9h-10h</td>
+														<td>Keynote speaker 2: <a href="#hasuo">Ichiro Hasuo</a></td>
+														<td><a href="#hasuo">Approximating Reachability Probabilities by (Super-)Martingales</a> [<a href="slides-hasuo.pdf">slides</a>]</td>
+													</tr>
+													<tr>
+														<td>10h-10h30</td>
+														<td colspan="2">Coffee break</td>
+													</tr>
+													<tr>
+														<td>10h30-12h35</td>
+														<td>Session 4:
+															<br/>Invited talk: <a href="#ganty">Pierre Ganty</a>
+															<br/>Benoît Delahaye
+														</td>
+														<td>
+															<br/><a href="#ganty">Population protocols and predicates [<a href="slides-ganty.pdf">slides</a>]
+														</td>
+															<br/>Statistical Model Checking for Parameterized Model [<a href="slides-delahaye.pdf">slides</a>]
+														</td>
+													</tr>
+													<tr>
+														<td>12h30-14h</td>
+														<td colspan="2">Lunch break</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+							</section>
+
+
+						<!-- SPEAKERS -->
+							<section id="speakers">
+								<div class="container">
+									<h3>Invited speakers</h3>
+									
+									<div class="features">
+										
+										<article>
+											<a href="http://people.rennes.inria.fr/Nathalie.Bertrand/" class="image"><img src="photos/bertrand.jpg" alt="Nathalie Bertrand" /></a>
+											<div class="inner">
+												<h4 id="bertrand"><a href="http://people.rennes.inria.fr/Nathalie.Bertrand/">Nathalie Bertrand</a> (Rennes, France)</h4>
+												<h5>Population control: how to win when intuition fails?</h5>
+												<p>We consider a population of identical NFA, and view it as a 2-player game: the
+first player chooses which action to play, and the second one resolves the non-
+determinism in each copy of the NFA.
+
+The objective for the first player is to synchronize all copies to a target
+state. In this talk, we will report on decidability and complexity of the
+following parameterized control problem: for every population size, does the
+first player have a winning strategy ?</p>
+											</div>
+										</article>
+
+										<article>
+											<a href="http://www-verimag.imag.fr/~tdang/" class="image"><img src="images/avatar-orig.jpg" alt="Thao Dang" /></a>
+											<div class="inner">
+												<h4 id="dang"><a href="http://www-verimag.imag.fr/~tdang/">Thao Dang</a> (Grenoble, France)</h4>
+												<h5>Parameter synthesis for biological systems modelling</h5>
+												<p>In this presentation, we consider the problem of parameter synthesis in
+   view of modelling of biological systems. Models for describing
+   mechanisms and principles of biological processes often involve
+   numerous parameters which are needed to account for imprecision in our
+   knowledge as well as lack of experimental information. We will discuss
+   methods for finding parameters so that a hybrid model satisfies some
+   biological hypothesis expressed using temporal logics, or to make the
+   model fit actual measurements. Some case studies are presented to
+   illustrate the methods.</p>
+											</div>
+										</article>
+
+
+										<article>
+											<a href="http://wpage.unina.it/m.faella/" class="image"><img src="photos/faella.jpg" alt="Marco Faella" /></a>
+											<div class="inner">
+												<h4 id="faella"><a href="http://wpage.unina.it/m.faella/">Marco Faella</a> (Napoli, Italy)</h4>
+												<h5>Controller synthesis for Linear Hybrid Systems</h5>
+												<p>Linear Hybrid Automata generalize Timed Automata by allowing for more general real-time dynamics. When discrete transitions are partitioned into controllable and uncontrollable ones, this model can represent the interaction of a switching controller with a plant, subject to disturbances. We will review the state of the art on controller synthesis for this model and demonstrate our NYCS tool.</p>
+											</div>
+										</article>
+										
+										<article>
+											<a href="http://software.imdea.org/people/pierre.ganty/" class="image"><img src="photos/ganty.jpg" alt="Pierre Ganty" /></a>
+											<div class="inner">
+												<h4 id="ganty"><a href="http://software.imdea.org/people/pierre.ganty/">Pierre Ganty</a> (IMDEA Software Institute, Spain)</h4>
+												<h5>Population protocols and predicates</h5>
+												<p>In populations protocols, identical, anonymous, finite-state processes
+   interact pairwise through rendez-vous synchronization. Angluin et al.
+   (PODC 2004) introduced population protocols as a distributed
+   computation model. In that context, an interesting subclass of
+   protocols are the ones computing predicates. Intuitively, a population
+   protocol computes a predicate Φ(N) as follows: instantiate the protocol
+   with N processes and let them interact until they reach a stable
+   unanimity on value true or false.
+   I will present results relative to three natural questions:
+   <ul>
+	<li>does this protocol computes a predicate?</li>
+   <li>does this protocol computes this predicate?</li>
+   <li>what predicate does this protocol compute?</li>
+   </ul>
+   </p>
+											</div>
+										</article>
+
+
+										<article>
+											<a href="http://group-mmm.org/~ichiro/" class="image"><img src="photos/hasuo.jpg" alt="Ichiro Hasuo" /></a>
+											<div class="inner">
+												<h4 id="hasuo"><a href="http://group-mmm.org/~ichiro/">Ichiro Hasuo</a> (Tokyo, Japan)</h4>
+												<h5>Approximating Reachability Probabilities by (Super-)Martingales</h5>
+												<p>Reachability is a fundamental problem in the analysis of probabilistic
+systems. It is well-known that reachability probabilities are
+efficiently computed for finite-state systems by linear programming.
+However, this LP method does not apply to systems that have infinitely
+many configurations, such as probabilistic programs and parametric
+systems. In such a case, we have to rely on a parametric witness (i.e.
+a function) for over- or under-approximating reachability
+probabilities. A well-studied class of such witnesses is that of <em>supermartingales</em>. In this talk I will talk about our recent results
+that refine existing supermartingale-based methods. The technical keys
+to those results are: choice of a suitable martingale concentration
+lemma for over-approximation; and a categorical axiomatization of
+supermartingales by coalgebras and corecursive algebras. The talk is
+based on my joint work with Natsuki Urabe, Masaki Hara, Bart Jacobs,
+Toru Takisaka and Yuichiro Oyabu.</p>
+											</div>
+										</article>
+
+										<article>
+											<a href="http://www.informatik.uni-leipzig.de/~quaas/" class="image"><img src="images/avatar-orig.jpg" alt="Karin Quaas" /></a>
+											<div class="inner">
+												<h4 id="quaas"><a href="http://www.informatik.uni-leipzig.de/~quaas/">Karin Quaas</a> (Leipzig, Germay)</h4>
+												<h5>The Precise Complexity of the Reachability Problem for Parametric Timed Automata with a Single Parametric Clock</h5>
+												<p>In parametric timed automata (PTA), clocks can be compared with parameters. The value of a parameter is a priori unknown and it is instantiated during a run by a parameter valuation. The reachability problem is to decide, whether for a given PTA and a target state there exists a parameter valuation and a corresponding run to the target state. Alur, Henzinger, and Vardi (1994) proved that the problem is undecidable for the case that the PTA uses at least three clocks.  They also gave a decision procedure for PTA with at most one clock; the precise complexity of the problem was left open. Bundala and Ouaknine recently gave a 2NEXPTIME upper bound and a NEXPTIME lower bound for PTA with one clock. In this talk, we prove that the problem is NEXPTIME-complete. The proof uses a correspondence between PTA and parametric counter automata (established by Bundala and Ouaknine) on the one side, and a correspondence between parametric one-counter automata and classical two-way automata on the other side.
+
+<br>This is joint work with Benedikt Bollig and Arnaud Sangnier.</p>
+											</div>
+										</article>
+
+										
+									</div>
+								</div>
+							</section>
+
+
+						<!-- Past editions -->
+							<section id="past">
+								<div class="container">
+									<h3>Past editions</h3>
+										<h4>SynCoP + PV</h4>
+										<ul class="alt">
+											<li><a href="https://lipn.univ-paris13.fr/SynCoPPV2017/">SynCoP + PV 2017</a>, Uppsala, Sweden</li>
+										</ul>
+
+										<h4>SynCoP</h4>
+										<ul class="alt">
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2016/">SynCoP 2016</a>, Eindhoven, The Netherlands</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2015/">SynCoP 2015</a>, London, UK</li>
+											<li><a href="https://lipn.univ-paris13.fr/SynCoP2014/">SynCoP 2014</a>, Grenoble, France</li>
+										</ul>
+
+										<h4>PV</h4>
+										<ul class="alt">
+											<li><a href="http://pv.dibris.unige.it/">PV 2015</a>, Madrid, Spain</li>
+											<li><a href="http://www.disi.unige.it/person/DelzannoG/PV/PV14/">PV 2014</a>, Roma, Italy</li>
+										</ul>
+								</div>
+							</section>
+
+						<!-- Contact -->
+							<section id="contact">
+								<div class="container">
+									<h3>Contact</h3>
+									<ul class="feature-icons">
+										<li class="fa-graduation-cap"><a href="http://www.irccyn.ec-nantes.fr/~jezequel/">Loïg Jezequel</a> (organization)</li>
+										<li class="fa-television"><a href="https://lipn.univ-paris13.fr/~andre/">Étienne André</a> (Web page)</li>
+									</ul>
+								</div>
+						</section>
+						
+						<!-- Partners -->
+							<section id="partners">
+								<div class="container">
+									<h3>Support</h3>
+									<a href="https://lipn.univ-paris13.fr/PACS/"><img src="images/anr_pacs_small.png" alt="ANR PACS"></a>
+								</div>
+						</section>						
+					</div>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Site maintained by Étienne André</li><li>Content released under Creative Commons CC-BY-SA 3.0.</li>
+							</ul>
+							<ul class="copyright">
+								<li>Design: <a href="https://html5up.net/read-only">read-only</a> by <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Banner: <a href="https://commons.wikimedia.org/wiki/File:Panorama_of_Thessaloniki.jpg">Nikolaos Oikonomou</a></li>
+								<li>Three crowns: <a href="https://commons.wikimedia.org/wiki/File:Flygvapnet_roundel.svg">slady</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dzmel.fr/chiffres/" : "http://www.dzmel.fr/chiffres/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dzmel.fr/chiffres/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+
+	</body>
+</html>

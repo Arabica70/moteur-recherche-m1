@@ -1,0 +1,254 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Wiki temporaire Équipe Calin | PmWiki / Upgrades </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//skins/pmwiki/pmwiki.css' type='text/css' />
+  <!--HTMLHeader--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+  .rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
+  .ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
+  .rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent {
+    margin-left:0; margin-right: 40px;
+  }
+  
+table th.prompt { text-align: right; vertical-align: top; font-size: smaller; 
+	width:20%; color: #333333;
+}
+table th.divide { text-align:left; padding-top:0.75em; }
+table td.note { font-size: smaller; color: #333333; padding-bottom:1.0em; }
+span.prompt { cursor: help; }
+td textarea { font-size: smaller; }
+table.wikilist { font-size: smaller; 
+    border: 1px solid #600;
+    border-collapse: collapse;
+}
+table.wikilist th { background-color: #eeeeee; padding: 2px; 
+    border: 1px dotted #600;
+}
+table.wikilist td { vertical-align: top; padding: 2px; 
+    border: 1px dotted #600;
+}
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em;
+}li.browse b { font-weight: normal; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+  td.markup1 pre { white-space: pre-wrap; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none;}
+
+--></style><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><script type="text/javascript" src="https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub/MathJax/MathJax.js">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: { inlineMath: [ ['{\$','\$}'] ], displayMath: [ ['{\$\$','\$\$}'] ] } });</script><link rel='stylesheet' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/pub//css/markup.css' type='text/css' />
+  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'><img src='http://example.com/mylogo.gif'
+    alt='Wiki temporaire Équipe Calin' border='0' /></a></div>
+  <div id='wikihead'>
+  <form action='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php'>
+    <span class='headnav'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'
+      accesskey='c'>Recent Changes</a> -</span>
+    <input type='hidden' name='n' value='PmWiki.Upgrades' />
+    <input type='hidden' name='action' value='search' />
+    <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a>:
+    <input type='text' name='q' value='' class='inputbox searchbox' />
+    <input type='submit' class='inputbutton searchbutton'
+      value='Go' /></form></div>
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89quipeCalin/%c3%89quipeCalin'>ÉquipeCalin</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/S%c3%a9minaire/S%c3%a9minaire'>Séminaire</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/%c3%89valuation2017/%c3%89valuation2017'>Évaluation2017</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/FalseBeliefs/FalseBeliefs'>False Beliefs</a>
+</li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Tilings/Tilings'>Tilings</a>
+</li><li><a class='createlinktext' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit' title='Create page'>Hard Balls</a><a class='createlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/HardBalls?action=edit'>?</a>
+</li></ul><p class='vspace'  style='text-align: right;'> <span style='font-size:83%'><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+<!--PageActionFmt-->
+        <div id='wikicmds'><ul><li class='browse'>      <b class='selflink'>View</b>
+</li><li class='edit'>      <a accesskey='e'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=edit'>Edit</a>
+</li><li class='diff'>   <a accesskey='h'  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=diff'>History</a>
+</li><li class='print'>     <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=print'>Print</a>
+</li><li class='backlinks'> <a accesskey=''  rel='nofollow'  class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=search&amp;q=link=PmWiki.Upgrades'>Backlinks</a>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki'>PmWiki</a> /</div>
+          <h1 class='pagetitle'>Upgrades</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<p>
+<a name='trailstart' id='trailstart'></a> 
+</p><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/InitialSetupTasks'>Initial setup tasks</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BackupAndRestore'>Backup and Restore</a> &rarr;</span> 
+</p></div>
+<div style='clear:right;' >
+</div>
+<p><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PmWiki'>PmWiki</a> is designed to make it easy to upgrade the PmWiki software without affecting your existing data files or installation.  For most upgrades, you simply copy the files in the new release over your existing installation.
+</p>
+<p class='vspace'  style='background-color: #f7f7f7; color: black; border: 1px solid black; padding: 5px;'> <strong>Note for PmWiki 1.0 sites:</strong> Upgrading from 1.0.x to 2.0 requires more than simply copying the 2.0 software over the 1.0 installation.  See <a style='color: black' class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Upgrading%20From%20PmWiki%201' rel='nofollow'>Upgrading From PmWiki 1</a> for more details.
+</p>
+<div class='vspace'></div><div class='frame lfloat smaller' > 
+<p>Contents
+</p><ul><li><a href='#gen'>Generic instructions</a>
+</li><li><a href='#v21v22'>Upgrading from version 2.1.27 to 2.2.0</a>
+</li><li><a href='#v220'>Upgrading from version 2.2.0 to the latest version</a>
+</li><li><a href='#faq'>FAQ</a>
+</li></ul></div><br clear='all' />
+<p class='vspace'><a name='gen' id='gen'></a>
+</p><h2>Generic instructions </h2>
+<h3>1. Read the release notes</h3>
+<p>Please read carefully the <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/ReleaseNotes' rel='nofollow'>ReleaseNotes</a> before performing an upgrade, about the changes between your previous version and the new one. See if there are any significant changes or preparation tasks that must be handled before performing the upgrade.
+</p>
+<div class='vspace'></div><h3>2. Backup</h3>
+<p>It&rsquo;s <em>always</em> a good idea to have a <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/backup%20and%20Restore' rel='nofollow'>backup</a> copy of your existing PmWiki installation before starting.  You can copy the entire directory containing your existing installation, or you can just make copies of the <em>wiki.d/</em> directory and any other local customization files you may have created (e.g., <em>config.php</em>, <em>localmap.txt</em>, etc.).
+</p>
+<div class='vspace'></div><h3>3. Download and extract</h3>
+<p>Download the version of PmWiki that you want from the <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/download' rel='nofollow'>download</a> page.
+</p>
+<p class='vspace'>Extract the tar image using <code>tar -xvzf <em>tgzfile</em></code>, where <em>tgzfile</em> is the tar file you downloaded above.  This will create a <code>pmwiki-x.y.z</code> directory with the new version of the software.
+</p>
+<div class='vspace'></div><h3>4. Copy</h3>
+<p>Copy the files in <code>pmwiki-x.y.z</code> over the files of your existing PmWiki installation.  For example, if your existing PmWiki installation is in a directory called <em>pmwiki</em>, then one way to copy the new files over the existing ones is to enter the command:
+</p>
+<div class='vspace'></div><div class='indent'><code>cp -a pmwiki-x.y.z/. pmwiki</code>
+</div><p class='vspace'>Note that BSD systems will not have the -a option as a command-line argument for <em>cp</em>, but that&rsquo;s okay, since it&rsquo;s just shorthand for <em>cp -dpR</em>, so use that instead of <em>-a</em>.
+</p>
+<p class='vspace'>Some environments have an alias established for <em>cp</em> that enable interactive prompts before overwriting a file. To work around this specify the absolute path to <em>cp</em>, such as <em>/bin/cp</em>.
+</p>
+<p class='vspace'>On (some) FreeBSD servers and Mac OS X systems you need to use 
+</p>
+<div class='vspace'></div><div class='indent'><code>cp -Rpv pmwiki-x.y.z/. pmwiki</code>
+</div><div class='vspace'></div><h3>5. Update customisations and recipes</h3>
+<p>That&rsquo;s it! Your base PmWiki installation is complete.
+</p>
+<p class='vspace'>Now use the <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Site%20Analyzer' rel='nofollow'>PmWiki:Site Analyzer</a> to determine which recipes could be updated to the most recent version.
+</p>
+<p class='vspace'>Unless you have made customizations to the <em>pmwiki.php</em> script or to the files in <em>scripts/</em>, your PmWiki installation should continue to run correctly! (Changes to these files are <ins>not</ins> recommended).
+</p>
+<p class='vspace'>(<a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/LocalCustomizations'>Local customizations</a> should go in <em>local/config.php</em>, <em>pub/css</em>, and <em>pub/skins/</em>yourskinname)
+</p>
+<p class='vspace'><strong>Note</strong>: Additional tips can be found on the <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Troubleshooting' rel='nofollow'>PmWiki:Troubleshooting</a> page.
+</p>
+<p class='vspace'><a name='v21v22' id='v21v22'></a>
+</p><h2>Upgrading from version 2.1.27 to 2.2.0</h2>
+<p>Between the stable versions 2.1.27 and 2.2.0 there are a number of additions. Some of them may need changes to local config files or to wiki pages, and they are outlined here. For the full list of changes see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ReleaseNotes#v220'>the release notes</a>.
+</p>
+<p class='vspace'>If you are upgrading from a 2.2.beta version, your wiki may already include these features.
+</p>
+<div class='vspace'></div><ul><li>Some pages that were formerly in the <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Site'>Site</a>.* group are now in a separate read-protected <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/SiteAdmin/SiteAdmin'>SiteAdmin</a>.* group: Site.AuthUser, Site.AuthList, Site.NotifyList, Site.Blocklist, and Site.ApprovedUrls.  If upgrading from an earlier version, PmWiki will prompt to automatically copy these pages to their new location if needed.  If a site wishes to continue using the old Site.* group for these pages, simply set to config.php <code>{$SiteAdminGroup = $}SiteGroup;</code>
+<div class='vspace'></div></li><li>To authorize reading or editing in protected areas, the former password <code>&ldquo;nopass&rdquo;</code> should now be written as <code>&ldquo;@nopass&rdquo;</code>.
+<div class='vspace'></div></li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/WikiWords'>WikiWords</a> are now disabled by default.  To re-enable them, set either {$LinkWikiWords or $}EnableWikiWords to 1.
+<div class='vspace'></div></li><li>The <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/EditVariables#ROSPatterns'><code class='varlink'>&#036;ROSPatterns</code></a> variable has changed &mdash; replacement strings are no longer passed through FmtPageName() i.e., it must now be done explicitly.
+<div class='vspace'></div></li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Links'>Page links</a> inside included pages, sidebars, headers or footers are now treated as relative to the page where they are written, instead of the page where they appear. For example, in Site.SideBar, always set the group in a wikilink like <code class='escaped'>[[Main/HomePage]]</code> or with a page variable <code class='escaped'>[[{*$Group}/HomePage]]</code>, because a link <code class='escaped'>[[HomePage]]</code> will point to a page Site.HomePage.
+<div class='vspace'></div></li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>PageLists</a>
+<ul><li>Spaces no longer separate wildcard patterns &mdash; use commas. 
+</li><li><code class='escaped'>{$PageCount}, {$GroupCount}, {$GroupPageCount}</code> variables used in pagelist templates are now <code class='escaped'>{$$PageCount}, {$$GroupCount}, {$$GroupPageCount}</code>.
+</li><li>The directive no longer accepts parameters from urls by default.  In order to have it accept such parameters (which was the default in 2.1 and earlier), add a <code class='escaped'>request=1</code> option to the <code class='escaped'>(:pagelist:)</code> directive.
+</li></ul><div class='vspace'></div></li><li><a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/SkinTemplates'>Skin templates</a> are now required to have &lt;!--HTMLHeader&rarr; and &lt;!--HTMLFooter&rarr; directives.  
+<div class='vspace'></div></li><li>Authentication using Active Directory is now simplified, see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/AuthUser'>PmWiki.AuthUser</a>.
+</li></ul><p class='vspace'><a name='v220' id='v220'></a>
+</p><h2>Upgrading from version 2.2.0 to the latest version</h2>
+<p><span class='commentout-pmwikiorg'> <em>Note: this page may have a more recent version, see <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Upgrades' rel='nofollow'>PmWiki:Upgrades</a>.</em></span>
+</p>
+<p class='vspace'>Some additions since version 2.2.0 may need changes to local config files or to wiki pages, and they are outlined here. For the full list of changes see <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ReleaseNotes'>release notes</a> and <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/ChangeLog'>change log</a>.
+</p>
+<div class='vspace'></div><ul><li>Version 2.2.10: <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#EnableRelativePageVars'><code class='varlink'>&#036;EnableRelativePageVars</code></a> was changed to enabled by default, and it affects <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables'>PageVariables</a> from included pages, sidebars, headers and footers.
+<ul><li>The form <code class='escaped'>{*$var}</code> refers to &ldquo;the currently browsed page&rdquo; while <code class='escaped'>{$var}</code> without an asterisk refers to &ldquo;the physical page where the PageVar is written&rdquo;.
+</li><li><span  style='color: red;'> Pages that are designed to work on &ldquo;the currently browsed page&rdquo; should switch to using <code class='escaped'>{*$FullName}</code> instead of <code class='escaped'>{$FullName}</code>. </span> Administrators should especially check any customized versions of <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/PageActions'>Site.PageActions</a>, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/EditForm'>Site.EditForm</a>, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/PageNotFound'>Site.PageNotFound</a>, SideBar pages, {$GroupHeaderFmt, $}GroupFooterFmt, <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageLists'>Page lists</a> in sidebars, headers, and footers. See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/PageVariables#specialreferences'>Special references</a>.
+</li><li>If your wiki heavily relies on the previous behavior, you can revert to it, see <a class='varlink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BasicVariables#EnableRelativePageVars'><code class='varlink'>&#036;EnableRelativePageVars</code></a>.
+</li></ul><div class='vspace'></div></li><li>Version 2.2.35: Important change for international wikis: the XLPage() function no longer loads encoding scripts such as xlpage-utf-8.php. When you upgrade, you need to include those scripts from config.php, before the call to XLPage(): <pre class='escaped'>
+  include_once("scripts/xlpage-utf-8.php"); # if your wiki uses UTF-8
+  XLPage('bg','PmWikiBg.XLPage');
+</pre>
+</li></ul><div class='vspace'></div><div class='faq' > <a name='faq' id='faq'></a> 
+<h2>FAQ</h2>
+<p class='question'>Q How can I determine what version of PmWiki I&rsquo;m running now?</p>
+<p> See <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Version'>version</a> - Determining and displaying the current version of PmWiki (pmwiki-2.2.107).
+</p>
+<p class='vspace question'>Q How can I test a new version of PmWiki on my wiki without changing the prior version used by visitors?</p>
+<p> The easy way to do this is to install the new version in a separate
+directory, and for the new version set (in local/config.php):
+</p><pre class='escaped'>
+
+    $WikiLibDirs = array(&amp;$WikiDir,
+      new PageStore('/path/to/existing/wiki.d/{$FullName}'),
+      new PageStore('wikilib.d/{$FullName}'));
+
+</pre>
+<p>This lets you test the new version using existing page content
+without impacting the existing site or risking modification of
+the pages.  (Of course, any recipes or local customizations have to
+be installed in the new version as well.) 
+</p>
+<p class='vspace'>Then, once you&rsquo;re comfortable that the new version seems to work
+as well as the old, it&rsquo;s safe to upgrade the old version (and one
+knows of any configuration or page changes that need to be made).
+ 
+</p></div><div style='clear:right; float:right; font-size:smaller; background-color:#eee;' >
+<p><span class='wikitrail'>&larr; <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/InitialSetupTasks'>Initial setup tasks</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/DocumentationIndex#trailstart' title="trailstart#trailend">Documentation Index</a> | <a class='wikilink' href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/BackupAndRestore'>Backup and Restore</a> &rarr;</span> 
+</p></div>
+<p><a name='trailend' id='trailend'></a>
+<br clear='all' />
+</p><div  style='background-color: #ffe; border-top: 1px solid black; font-size: .8em;' > 
+<p>This page may have <span class='commentout-pmwikiorg'> a more recent version on <a class='urllink' href='http://www.pmwiki.org' rel='nofollow'>pmwiki.org</a>: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Upgrades' rel='nofollow'>PmWiki:Upgrades</a>, and </span> a talk page: <a class='urllink' href='http://www.pmwiki.org/wiki/PmWiki/Upgrades-Talk' rel='nofollow'>PmWiki:Upgrades-Talk</a>.
+</p></div>
+</div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=edit'>Edit</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=diff'>History</a> -
+      <a rel="nofollow" href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/Upgrades?action=print' target='_blank'>Print</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/PmWiki/RecentChanges'>Recent Changes</a> -
+      <a href='https://lipn.univ-paris13.fr/~monteil/hebergement/wiki_calin/pmwiki/index.php/Site/Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on January 07, 2013, at 05:24 PM EST</div></div>
+<!--HTMLFooter-->
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Fonction de Weierstrass et courbes elliptiques</TITLE>
+<META NAME="description" CONTENT="Fonction de Weierstrass et courbes elliptiques">
+<META NAME="keywords" CONTENT="recipro">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="recipro.css">
+<LINK REL="next" HREF="node44.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html614"
+ HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="next_motif.gif"></A> 
+<A NAME="tex2html611"
+ HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="up_motif.gif"></A> 
+<A NAME="tex2html605"
+ HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="previous_motif.gif"></A> 
+<A NAME="tex2html613"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html615"
+ HREF="node44.html">D&#233;finition du symbole quadratique</A>
+<B> Up:</B> <A NAME="tex2html612"
+ HREF="node41.html">R&#233;ciprocit&#233; dans un corps</A>
+<B> Previous:</B> <A NAME="tex2html606"
+ HREF="node42.html">Une formule accorte</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00920000000000000000">
+Fonction de Weierstrass et courbes elliptiques</A>
+</H1>
+Nous aurons besoin de la fonction <IMG WIDTH="14" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.gif"
+ ALT="$\wp$"> de Weierstrass qui est &#224; la base de 
+la th&#233;orie des courbes elliptiques dont les r&#233;sultats suivants d&#233;rivent 
+[Bayad], [Lang].
+Soit <I>R</I> le r&#233;seau <IMG WIDTH="84" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img316.gif"
+ ALT="${\mathbb Z}\omega_1+{\mathbb Z}\omega_2$">.<IMG WIDTH="14" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.gif"
+ ALT="$\wp$"> est d&#233;finie par
+
+<P ALIGN="CENTER"><IMG WIDTH="261" HEIGHT="52"
+ SRC="img317.gif"
+ ALT="\begin{displaymath}
+\wp(z)=\frac{1}{z^2}+\sum_{\omega \in R^*} 
+\Bigl (\frac{1}{ (z-\omega)^2}-\frac{1}{\omega^2}\Bigr )\end{displaymath}"></P>
+<P>
+On peut sommer sur <I>R</I> car il y a convergence normale donc commutative.
+<P>
+On note 
+<P ALIGN="CENTER"><IMG WIDTH="291" HEIGHT="52"
+ SRC="img318.gif"
+ ALT="\begin{displaymath}
+g_2=60 \sum_{\omega \in R^*} \frac{1}{\omega^4} {\rm \ \ et \ \ } 
+g_3=140 \sum_{\omega \in R^*} \frac{1} {\omega^6}.\end{displaymath}"></P>
+On obtient ainsi la formule clef reliant la fonction de Weierstrass aux courbes
+ elliptiques, permettant de consid&#233;rer <IMG WIDTH="14" HEIGHT="26" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.gif"
+ ALT="$\wp$"> comme une ``param&#233;trisation'' 
+de la courbe elliptique <I>E</I>&nbsp;:
+<BR>
+
+<P ALIGN="CENTER"><IMG WIDTH="229" HEIGHT="28"
+ SRC="img319.gif"
+ ALT="\begin{displaymath}
+\wp'(z)^2=4\wp(z)^3-g_2\wp(z)-g_3.\end{displaymath}"></P>
+Ainsi (<IMG WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img320.gif"
+ ALT="$\wp,\wp'$">) param&#233;trise 
+<I>Y<SUP>2</SUP></I>=4<I>X<SUP>3</SUP></I>-<I>g<SUB>2</SUB>X</I>-<I>g<SUB>3</SUB></I>, de discriminant&nbsp;: <IMG WIDTH="144" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img321.gif"
+ ALT="$\Delta=g_2^3-27g_3^2\not = 0$">.On a ainsi un isomorphisme entre <IMG WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.gif"
+ ALT="${\mathbb C}/R$"> et <I>E</I> donn&#233; par 
+<IMG WIDTH="131" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img323.gif"
+ ALT="$z\mapsto (\wp(z),\wp'(z))$">.<P>
+<BR><HR>
+<ADDRESS>
+<I>Cyril Banderier</I>
+<BR><I>7/23/1997</I>
+</ADDRESS>
+</BODY>
+</HTML>

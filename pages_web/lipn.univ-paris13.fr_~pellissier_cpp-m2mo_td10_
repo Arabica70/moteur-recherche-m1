@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 10</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    .bigsep { width: 50px }
+    .verticalline { border-left: solid #000000; }
+    .framed { border: solid #000000; }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 10 C++: Polymorphisme, suite et fin.</h2>
+
+<h3>Rappels</h3>
+<ul>
+<li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+<hr/>
+<h3>Exercice 0: Poymorphisme, encore un peu</h3>
+Note: j'ai beaucoup aimé la <a href="http://www.cplusplus.com/doc/tutorial/polymorphism/">page sur le polymorphisme</a> de cplusplus.com.
+à lire si vous êtes perdu. Mais attention, l'exo 1 ci-dessous est encore plus tordu! Bonne chance.
+<ol>
+  <li>
+    <b>Entrez</b> dans un fichier <tt>0.1.txt</tt> ce que le code ci-dessous (sur 2 colonnes)
+    affiche quand il est exécuté.
+    <br/>
+    <br/>
+    <table summary="screenshot d'un code à examiner">
+      <tr>
+        <td style="vertical-align:top"><img height="520" src="0.1.1.png" alt="screenshot d'un code à examiner: colonne de gauche"/></td>
+        <td width="60"/>
+        <td style="vertical-align:top"><img height="608" src="0.1.2.png" alt="screenshot d'un code à examiner: colonne de droite"/></td>
+      </tr>
+    </table>
+    Exemple de contenu de 0.1.txt:
+    <pre>ABCDEF
+G
+HI
+JKL
+MNOP
+QRSTU</pre>
+    <b>Vérifiez</b> avec le script <a href="0.1.sh" download>0.1.sh</a>:
+    <pre>bash 0.1.sh</pre>
+    <b class="orange">RENDU:</b> <tt>0.1.txt</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Que se passe-t'il si on ajoute la ligne suivante a la fin de <tt>main()</tt>?
+    <pre><code class="c++">((B*)(&amp;a))-&gt;X();</code></pre>
+    <b class="orange">RENDU:</b> <tt>0.2.txt</tt> avec une description très très succinte de ce qui se passe, et une mini explication.
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 1: Fonctions abstraites</h3>
+<h3 class="red">Faites le 2 avant le 1!</h3>
+<ol>
+  <li>
+    Téléchargez <a href="1.1.h" download>1.1.h</a> (copié ci-dessous) et <b>complétez</b>-le,
+    et <b>implémentez</b> les classes dans un fichier <tt>1.1.cc</tt>.
+    <pre><code class="c++">class Sequence {
+ public:
+  // The value of the sequence at the current step.
+  double Value();
+
+  // Advances to the next step.
+  void Next();
+};
+
+// 1, 1, 2, 3, 5, 8, ...
+class FibonacciSequence : public Sequence {
+};
+
+// 1, 1, 2, 6, 24, 120, 720, ... modulo x: if x = 10, that's
+// 1, 1, 2, 6, 4, 0, 0, ...
+class FactorialModXSequence : public Sequence {
+ public:
+  explicit FactorialModXSequence(int x);
+};</code></pre>
+    Veillez à rendre les fonctions de la classe de base <tt>Sequence</tt>
+    <b>abstraites</b>.
+    <br/><br/><b>Testez</b> votre code avec
+    <a href="1.tar.gz" download>1.tar.gz</a>:
+    <pre>rm 1.tar.gz; wget --no-cache http://fabien.viger.free.fr/cpp/td10/1.tar.gz
+tar xf 1.tar.gz
+make 1.1</pre>
+    <b class="orange">RENDU</b>: <tt>1.1.h</tt> et <tt>1.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.1.h</tt> et <tt>1.1.cc</tt> dans <tt>1.2.h</tt> et <tt>1.2.cc</tt>.
+    <br/>Ensuite, <b>Créez</b> une classe <tt>ShiftSequence</tt>, sous-classe de <tt>Sequence</tt>,
+    dont le constructeur prendra
+    en argument une <tt>Sequence*</tt> arbitraire <tt>seq</tt> et un décalage (entier positif)
+    <tt>shift</tt>, telle que:
+    <br/><i>ShiftSequence(seq, shift)<sub>n</sub></i> =
+    <i>seq<sub>seq<sub>0</sub> + n + shift</sub></i>, où <i>seq<sub>0</sub></i>
+    est l'étape initiale de <i>seq</i> quand on a construit l'objet
+    <tt>ShiftSequence</tt>.
+    <br/><br/>Le passage de <tt>seq</tt> se fera par pointeur, et la classe
+    <tt>ShiftSequence</tt> <b>prendra possession</b> de l'objet <tt>seq</tt>
+    donné: c'est lui qui devra se charger de sa suppression.
+    <br/><br/><b>Subtilité supplémentaire</b>: contrairement au reste des <tt>Sequence</tt>
+    donnés jusqu'à présent, vos objets <tt>ShiftSequence</tt> ne peuvent pas
+    être copiés "naturellement" sans créer des problèmes.
+    Empêchez la copie d'un <tt>ShiftSequence</tt> vers un autre! Ma solution
+    préférée est la <a
+       href="http://ariya.ofilabs.com/2015/01/c-class-and-preventing-object-copy.html">3<sup>ème</sup>
+       méthode citée ici</a>.
+    <br/><br/><b>Testez</b> votre code avec <pre>make 1.2</pre>
+    <b class="orange">RENDU</b>: <tt>1.2.h</tt> et <tt>1.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    Copiez <tt>1.2.h</tt> et <tt>1.2.cc</tt> dans <tt>1.3.h</tt> et <tt>1.3.cc</tt>.
+    <br/>Ensuite, ajoutez une fonction <tt>int Step()</tt> qui renvoie l'étape courante d'une
+    <tt>Sequence</tt> (elle renverra <tt>0</tt> au début).
+    Pour ne pas avoir à la redéfinir pour chaque sous-classe de
+    <tt>Sequence</tt>, on va utiliser une astuce:
+    <ul>
+      <li>Renommez tous vos <tt>Next()</tt> en <tt>InternalNext()</tt>.
+      <li>Implémentez <tt>Next()</tt> dans la classe de base <tt>Séquence</tt>, en
+        utilisant <tt>InternalNext</tt> et un compteur local.</li>
+      <li>Selon votre implémentation de <tt>ShiftSequence</tt>, vous aurez
+        peut-etre besoin de modifier le compteur local lors de la construction,
+        afin qu'il vale bien 0. Ça ne devrait pas vous poser de problème.</li>
+    </ul>
+    <br/><b>Testez</b> votre code avec <pre>make 1.3</pre>
+    <b class="orange">RENDU</b>: <tt>1.3.h</tt> et <tt>1.3.cc</tt>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: Un exemple <em>acceptable</em> de polymorphisme</h3>
+<ol>
+  <li>
+    Teléchargez l'archive <a href="2.tar.gz" download>2.tar.gz</a> et extrayez son contenu:
+    <pre>tar xf 2.tar.gz</pre>
+    Télechargez et <b>complétez</b> les fichier <a href="2.1.h" download><tt>2.1.h</tt></a> et <a href="2.1.cc" download><tt>2.1.cc</tt></a>.
+    <br/><b>Testez</b> votre code avec: <pre>make 2.1</pre>
+    <b class="red">Indice important</b>: vous aurez sans doute une erreur parlant de <em><tt>non-virtual destructor</tt></em>.
+    Pour la réparer, vous devrez retoucher <tt>2.1.h</tt> mais attention vous n'avez que le droit d'y <b>ajouter une seule ligne</b>!
+    <br/><br/><b class="orange">RENDU:</b> <tt>2.1.h</tt> et <tt>2.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>Copiez</b> <tt>2.1.h</tt> et <tt>2.1.cc</tt> dans des fichiers
+    <tt>2.2.h</tt> et <tt>2.2.cc</tt>.
+    <br/><b>Ajoutez</b> une classe <tt>Circle</tt>, dont le <em>nom</em> (donné par <tt>Name()</tt>) sera <tt>Circle</tt>,
+    en suivant le même principe que <tt>StraightSquare</tt>.
+    <br/>Pour construire un cercle, on donne typiquement les coordonées (x, y) de son centre, et son rayon.
+    <br/><br/><b>Testez</b> votre code avec: <pre>make 2.2</pre>
+    <b class="orange">RENDU:</b> <tt>2.2.h</tt> et <tt>2.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>Copiez</b> <tt>2.2.h</tt> et <tt>2.2.cc</tt> dans des fichiers
+    <tt>2.3.h</tt> et <tt>2.3.cc</tt>.
+    <br/><b>Ajoutez</b> la fonction polymorphique <tt>Perimeter()</tt> à la classe <tt>Shape</tt>. Elle devra renvoyer 0 pour la classe de base.
+    Bien sûr, vous devrez l'implementer dans les classes dérivées.
+    <br/><b>Ajoutez</b> la chaine: <tt>, perimeter=&lt;perimeter&gt;"</tt> à la fonction <tt>Description()</tt> (attention à la virgule avant <tt>perimeter=</tt>!).
+    <br/><br/><b>Testez</b> votre code avec: <pre>make 2.3</pre>
+    <b class="orange">RENDU:</b> <tt>2.3.h</tt> et <tt>2.3.cc</tt>
+  </li>
+</ol>
+
+<footer>
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

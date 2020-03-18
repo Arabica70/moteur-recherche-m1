@@ -1,0 +1,1353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD><TITLE>An Introduction to Analytic Number Theory</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META name="GENERATOR" content="hevea 1.05">
+</HEAD>
+<BODY >
+<!--CUT DEF section 1 -->
+
+<DIV ALIGN=center>
+ <FONT SIZE=4><B>An Introduction to Analytic Number Theory</B></FONT><BR>
+<BR>
+[summary by <A HREF="http://www-lipn.univ-paris13.fr/~banderier/">Cyril Banderier</a> and <A HREF="http://cf.geocities.com/ilanpi/">Ilan Vardi</a> (IHES, Bures-sur-Yvette) of Ilan's talk given at the <A HREF="http://algo.inria.fr/seminars/alphabetical.html">Algorithms Seminar</a>, December 14, 1998]<BR>
+<BR>
+A properly typeset version of this document is available in <A HREF="vardi3.ps">postscript</A> and in <A HREF="vardi3.pdf">pdf</A>.
+ </DIV>
+<BR>
+<EM>If some fonts do not look right on your screen, this might be
+fixed by configuring your browser (see the </EM><A HREF="http://pauillac.inria.fr/~maranget/hevea"><EM>documentation here</EM></A><EM>).</EM><BR>
+<BR>
+<!--TOC section Introduction-->
+
+<H2>1&nbsp;&nbsp; Introduction</H2><!--SEC END -->
+<BLOCKQUOTE>
+``Le plus court chemin entre deux v&eacute;rit&eacute;s dans le domaine r&eacute;el passe 
+par le domaine complexe.'' (Jacques Hadamard)<BR>
+``The shortest path between two truths in the real domain passes
+through the complex domain.'' (Jack Hadamard)
+</BLOCKQUOTE>The above quote captures the depth analysis can bring when one is
+confronted by number theoretic questions. The oldest and most fundamental
+of such questions is the study of prime numbers. The first question
+to be answered is: Are there an infinite number of primes?
+This can be answered by a number of simple proofs 
+(several other proofs are given in&nbsp;[<A HREF="#Ri"><CITE>7</CITE></A>]):<BR>
+<BR>
+<UL>
+<LI>
+ Euclid: Assume there are a finite number of primes
+<I>p</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>, then 
+<I>p</I><SUB><FONT SIZE=2>1</FONT></SUB> <I>p</I><SUB><FONT SIZE=2>2</FONT></SUB> ··· <I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>+1 is not divisible by any of the <I>p</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB>'s,
+so any of its prime divisors yields a new prime number (Euclid 
+only considered the case <I>n</I>=3).<BR>
+<BR>
+
+<LI> Pólya: The Fermat numbers <I>F</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>=2<SUP><FONT SIZE=2>2</FONT></SUP><SUP><SUP><FONT SIZE=2><I>n</I></FONT></SUP></SUP>+1 are pairwise
+relatively prime, so the set of their prime divisors must be infinite.<BR>
+<BR>
+
+<LI> Erd&ouml;s: Fix <I>x</I> and consider the primes <I>p</I><SUB><FONT SIZE=2>1</FONT></SUB>,...,<I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB><FONT FACE=symbol>£</FONT> <I>x</I>.
+Since every integer is the product of a perfect square and a 
+squarefree number, one can write every integer <I>m</I><FONT FACE=symbol>£</FONT> <I>x</I> as
+<I>m</I>=<I>p</I><SUB><FONT SIZE=2>1</FONT></SUB><SUP><FONT SIZE=2><I>e</I></FONT></SUP><SUB><SUP><FONT SIZE=2>1</FONT></SUP></SUB> ··· <I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB><SUP><FONT SIZE=2><I>e</I></FONT></SUP><SUB><SUP><FONT SIZE=2><I>n</I></FONT></SUP></SUB> <I>Q</I><SUP><FONT SIZE=2>2</FONT></SUP>,
+where <I>e</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB> <FONT FACE=symbol>Î</FONT> {0,1} and <I>Q</I><SUP><FONT SIZE=2>2</FONT></SUP><FONT FACE=symbol>£</FONT> <I>x</I>. 
+There are 2<SUP><FONT SIZE=2><I>n</I></FONT></SUP> choices for the <I>e</I><SUB><FONT SIZE=2><I>i</I></FONT></SUB> and (<I>x</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP> choices for <I>Q</I>,
+so it follows that <I>n</I> <FONT FACE=symbol>³</FONT>ln(<I>x</I>)/2ln(2).<BR>
+<BR>
+
+<LI> Euler: One has the formal identity
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> =</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I> </FONT><FONT SIZE=2> prime</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<A NAME="eq-vardi-cyr-1"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(1)</TD>
+</TR></TABLE></DIV>
+ which in fact
+holds for <FONT FACE=symbol>Â</FONT>(<I>s</I>) &gt; 1. As <I>s</I><FONT FACE=symbol>®</FONT> 1, the left hand side 
+of&nbsp;(<A HREF="#eq-vardi-cyr-1">1</A>) tends
+to <FONT FACE=symbol>¥</FONT> since the harmonic series diverges, so there must
+be an infinite number of factors on the right.<BR>
+<BR>
+This proof can be modified by noting that 
+<FONT FACE=symbol>z</FONT>(2) = <FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP>/6, where <FONT FACE=symbol>z</FONT>(<I>s</I>) = <FONT FACE=symbol>å</FONT> 1/<I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP>. 
+If there were only a finite number of primes,
+then&nbsp;(<A HREF="#eq-vardi-cyr-1">1</A>)
+would imply
+that <FONT FACE=symbol>p</FONT><SUP><FONT SIZE=2>2</FONT></SUP> is rational, proved false by Legendre in 1797,
+see also&nbsp;[<A HREF="#Ni"><CITE>6</CITE></A>]. <BR>
+<BR>
+A stronger version of this is due to Mertens: The finite version
+of&nbsp;(<A HREF="#eq-vardi-cyr-1">1</A>) gives
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<I>p</I><SUP><FONT SIZE=2>-1</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>&gt;</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I>&lt;<I>x</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ~ ln(<I>x</I>),
+</TD>
+</TR></TABLE></DIV>
+and taking logs will give
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I>&lt;<I>x</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>p</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>~ lnln(<I>x</I>),
+<A NAME="eq-vardi-cyr-2"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(2)</TD>
+</TR></TABLE></DIV>
+and so there are an infinite number of primes.</UL>Which of these is the ``best'' proof? One argument would say that it
+is the one which allows the best generalisation. For example,
+Euclid's proof easily shows that there are an infinite number of
+primes of the form 4<I>k</I>+3 (consider 4 <I>p</I><SUB><FONT SIZE=2>1</FONT></SUB>··· <I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB> -3), 
+but seems to fall flat when trying to prove
+that the same holds for primes of the form 4<I>k</I>+1 (one has to consider 
+4 (<I>p</I><SUB><FONT SIZE=2>1</FONT></SUB>··· <I>p</I><SUB><FONT SIZE=2><I>n</I></FONT></SUB>)<SUP><FONT SIZE=2>2</FONT></SUP>+1). In general, one wants to
+demonstrate Dirichlet's assertion (that he proved in 1837,
+in&nbsp;[<A HREF="#Di"><CITE>3</CITE></A>]) ``there are an infinite number of primes of the form
+<I>ak</I>+<I>b</I>, where <I>a</I> and <I>b</I> are relatively prime.'' It turns out that
+the proof of this deep fact uses a generalisation of Euler's 
+method, i.e., equation&nbsp;(<A HREF="#eq-vardi-cyr-2">2</A>):
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I><FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>p</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+=<FONT FACE=symbol>¥</FONT> <FONT FACE=symbol>Û</FONT> there are an
+infinite number of primes in <I>ak</I>+<I>q</I>.
+</TD>
+</TR></TABLE></DIV><BR>
+<!--TOC section Dirichlet's Theorem-->
+
+<H2>2&nbsp;&nbsp; Le théorème de Dirichlet</H2><!--SEC END -->
+Soit <FONT FACE=symbol>c</FONT> un caractère multiplicatif
+modulo <I>q</I>, c'est-à-dire une fonction à valeurs complexes
+ <FONT FACE=symbol>c</FONT>(<I>n</I>) vérifiant  
+<FONT FACE=symbol>c</FONT>(<I>mn</I>)=<FONT FACE=symbol>c</FONT>(<I>m</I>)<FONT FACE=symbol>c</FONT>(<I>n</I>), <FONT FACE=symbol>c</FONT>(1)=1
+et <FONT FACE=symbol>c</FONT>(0)=0 (ce qui implique que
+si <FONT FACE=symbol>c</FONT>(<I>n</I>)<FONT FACE=symbol>¹</FONT> 0,
+alors c'est une racine de l'unité et a donc norme 1). Un exemple est
+le symbole de Legendre (ou de Jacobi si <I>q</I> n'est pas premier) 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>c</FONT>(<I>n</I>):=</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>n</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>q</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>0</TD>
+<TD ALIGN=left NOWRAP> if  <I>q</I> | <I>n</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>1</TD>
+<TD ALIGN=left NOWRAP> if  <I>x</I><SUP><FONT SIZE=2>2</FONT></SUP> <FONT FACE=symbol>º</FONT> <I>n</I>mod <I>q</I>  for some
+<I>x</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>-1</TD>
+<TD ALIGN=left NOWRAP> otherwise. </TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+En fait, pour tout <I>q</I> puissance d'un nombre premier impair, il y
+a exactement <FONT FACE=symbol>f</FONT>(<I>q</I>) 
+caractères multiplicatifs modulo <I>q</I>, tous donnés par <FONT FACE=symbol>c</FONT>(<I>n</I>):=<I>e</I><SUP><FONT SIZE=2>2 <I>ik</I> <FONT FACE=symbol>p</FONT> <FONT FACE=symbol>n</FONT>(<I>n</I>) /<FONT FACE=symbol>f</FONT>(<I>q</I>)</FONT></SUP> for 0<FONT FACE=symbol>£</FONT> <I>k</I> <FONT FACE=symbol>£</FONT> <FONT FACE=symbol>f</FONT>(<I>q</I>)-1
+and where <FONT FACE=symbol>n</FONT>(<I>n</I>) is such that <I>n</I><FONT FACE=symbol>º</FONT> <I>g</I><SUP><FONT SIZE=2><FONT FACE=symbol>n</FONT>(<I>n</I>)</FONT></SUP>mod <I>q</I> for any generator
+of the group of invertible elements of <B><I>Z</I></B>/<I>q</I><B><I>Z</I></B>. When <I>q</I> is a power of 2, the definition is little more cumbersome (linked to 
+the ``factorisation'' <I>n</I> <FONT FACE=symbol>º</FONT> (-1)<SUP><FONT SIZE=2><FONT FACE=symbol>n</FONT></FONT></SUP><SUB><SUP><FONT SIZE=2>1</FONT></SUP></SUB><SUP><FONT SIZE=2>(<I>n</I>)</FONT></SUP> 5<SUP><FONT SIZE=2><FONT FACE=symbol>n</FONT></FONT></SUP><SUB><SUP><FONT SIZE=2>2</FONT></SUP></SUB><SUP><FONT SIZE=2>(<I>n</I>)</FONT></SUP> mod <I>q</I>),
+and for general <I>q</I>, it is the product of characters of the factors of <I>q</I>.
+The importance of characters is seen by the following 
+<EM>orthogonality relation</EM>:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>c</FONT>(<I>n</I>) =</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>í<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP>1</TD>
+<TD ALIGN=left NOWRAP>whenever <I>n</I><FONT FACE=symbol>º</FONT> <I>a</I> mod <I>q</I>,</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP>0</TD>
+<TD ALIGN=left NOWRAP>otherwise,</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<A NAME="eq-vardi-cyr-3"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(3)</TD>
+</TR></TABLE></DIV>
+where the sum is over all the characters (the two real ones and the
+other complex characters).
+The <EM>orthogonality relation</EM> allows one to pick out an arithmetic progression. 
+For his proof, Dirichlet introduced what are nowadays called Dirichlet
+<I>L</I>-functions, defined by 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>L</I>(<I>s</I>,<FONT FACE=symbol>c</FONT>):=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>n</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>c</FONT>(<I>n</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>n</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>Õ</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1-<FONT FACE=symbol>c</FONT>(<I>p</I>)<I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>.
+</TD>
+</TR></TABLE></DIV>
+Taking logarithm leads to ln <I>L</I>(<I>s</I>,<FONT FACE=symbol>c</FONT>)=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>p</I></FONT></SUB>
+-ln(1-<FONT FACE=symbol>c</FONT>(<I>p</I>)<I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP>), thus one has
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln <I>L</I>(<I>s</I>,<FONT FACE=symbol>c</FONT>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+-ln(1-<FONT FACE=symbol>c</FONT>(<I>p</I>)<I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP>) </TD>
+</TR></TABLE></DIV>
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>k</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>c</FONT>(<I>p</I><SUP><FONT SIZE=2><I>k</I></FONT></SUP> )<I>p</I><SUP><FONT SIZE=2>-<I>sk</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>k</I></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+and a simple application of
+relation&nbsp;(<A HREF="#eq-vardi-cyr-3">3</A>) gives
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln</TD>
+<TD NOWRAP>
+<I>L</I>(<I>s</I>,<FONT FACE=symbol>c</FONT>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2><I>k</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>k</I></FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>p</I><SUP><FONT SIZE=2>-<I>sk</I></FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>k</I></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I> <FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP> +<I>O</I>(1), &nbsp;&nbsp; <I>s</I><FONT FACE=symbol>®</FONT> 1<SUP><FONT SIZE=2>+</FONT></SUP>.
+<A NAME="eq-vardi-cyr-3bis"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(4)</TD>
+</TR></TABLE></DIV>
+Then, by splitting the sum in real and complex characters, one gets
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I> <FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+<I>p</I><SUP><FONT SIZE=2>-1</FONT></SUP>=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT>=<FONT FACE=symbol>c</FONT></FONT><SUB><FONT SIZE=2>0</FONT></SUB></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT>=</FONT></TD>
+<TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT SIZE=2><I>n</I></FONT></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT SIZE=2><I>q</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>ø</FONT></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT> </FONT><FONT SIZE=2> complex</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln <I>L</I>(1,<FONT FACE=symbol>c</FONT>) + <I>O</I>(1).
+<A NAME="eq-vardi-cyr-4"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(5)</TD>
+</TR></TABLE></DIV> 
+<FONT FACE=symbol>c</FONT><SUB><FONT SIZE=2>0</FONT></SUB> is called the
+principal character and equals 1 whenever 
+<I>n</I>¬ <FONT FACE=symbol>º</FONT>0 mod <I>q</I>  and 0 otherwise.
+The first sum (over <FONT FACE=symbol>c</FONT><SUB><FONT SIZE=2>0</FONT></SUB>) is +<FONT FACE=symbol>¥</FONT>, as
+<I>L</I>(<I>s</I>,<FONT FACE=symbol>c</FONT><SUB><FONT SIZE=2>0</FONT></SUB>)=<FONT FACE=symbol>z</FONT>(<I>s</I>)<FONT FACE=symbol>Õ</FONT><SUB><FONT SIZE=2><I>p</I>|<I>q</I></FONT></SUB> (1-<I>p</I><SUP><FONT SIZE=2>-<I>s</I></FONT></SUP>).
+This infinite term should imply that there are an
+infinite number of primes in the arithmetic progression. The only problem
+is that one of the other terms could cancel this one by being
+-<FONT FACE=symbol>¥</FONT> at <I>s</I> = 1. The Abel summation criterion shows that <I>L</I>(1, <FONT FACE=symbol>c</FONT>) is 
+finite. One therefore has to show that <I>L</I>(1, <FONT FACE=symbol>c</FONT>)<FONT FACE=symbol>¹</FONT> 0. <BR>
+<BR>
+This is definitely true for complex characters since otherwise,
+by setting <I>a</I>=1 and taking the
+exponential in&nbsp;(<A HREF="#eq-vardi-cyr-3bis">4</A>), one has
+<FONT FACE=symbol>Õ</FONT><SUB><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></SUB>|<I>L</I>(1, <FONT FACE=symbol>c</FONT>)|&gt;1 which is incompatible with a zero of
+order at least 2 (coming from <I>L</I>(1, <FONT FACE=symbol>c</FONT>)=0 and <I>L</I>(1,<FONT FACE=symbol>c</FONT>)=0) versus
+a single pole in <I>s</I>=1. Hence the last sum in relation&nbsp;(<A HREF="#eq-vardi-cyr-4">5</A>) is bounded. <BR>
+<BR>
+The real problem is then to bound the middle sum
+in relation&nbsp;(<A HREF="#eq-vardi-cyr-4">5</A>), 
+that is to say to show that <I>L</I>(1,(<FONT SIZE=5>·</FONT> / <I>q</I>))<FONT FACE=symbol>¹</FONT> 0. 
+Dirichlet proved this result by a very ingenious method: He evaluated
+this number in closed form! This is now known as 
+Dirichlet's class number formula:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>0<FONT FACE=symbol>¹</FONT> <I>L</I></TD>
+<TD NOWRAP>(</TD>
+<TD NOWRAP>1,(<FONT SIZE=5>·</FONT> / <I>q</I>)</TD>
+<TD NOWRAP>)</TD>
+<TD NOWRAP>= </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>
+ì<BR>ï<BR>ï<BR>í<BR>ï<BR>ï<BR>î</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>p</FONT> <I>h</I> </TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>w</I> (<I>q</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD ALIGN=left NOWRAP>when <I>q</I><FONT FACE=symbol>º</FONT> 1mod 4</TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>2<I>h</I>ln <FONT FACE=symbol>e</FONT></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>(<I>q</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR></TABLE></TD>
+<TD ALIGN=left NOWRAP>when <I>q</I> <FONT FACE=symbol>º</FONT> 3mod 4</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+where <I>h</I> is
+the class number of <B><I>Q</I></B>(((-1)<SUP><FONT SIZE=2>(<I>q</I>+1)/2</FONT></SUP><I>q</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP>) and 
+<FONT FACE=symbol>e</FONT> its fundamental unit and <I>w</I> the number
+of roots of unity in this field (see the canonical reference&nbsp;[<A HREF="#Davenport"><CITE>2</CITE></A>]).
+Since each of these quantities counts
+something, they are positive, the result now follows:
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I><FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>p</I><SUP><FONT SIZE=2>-1</FONT></SUP>=+<FONT FACE=symbol>¥</FONT>.</TD>
+</TR></TABLE></DIV> <BR>
+Simpler proofs using only complex analysis are also possible.
+The idea is to use Landau's theorem that a Dirichlet series with positive
+terms has a pole at its abscissa of convergence and apply
+it to <FONT FACE=symbol>Õ</FONT><SUB><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></SUB> <I>L</I>(<I>s</I>, <FONT FACE=symbol>c</FONT>) which has just
+been shown to have positive coefficients.<BR>
+<BR>
+<!--TOC section Prime Number Theorem-->
+
+<H2>3&nbsp;&nbsp; Prime Number Theorem</H2><!--SEC END -->
+The distribution of primes is quite irregular, so it is easier to
+study their statistical behaviour. In this direction, let <FONT FACE=symbol>p</FONT>(<I>x</I>) be
+the number of primes <FONT FACE=symbol>£</FONT> <I>x</I>. Gauss conjectured that <FONT FACE=symbol>p</FONT>(<I>x</I>)~
+<FONT SIZE=4><FONT FACE=symbol>ò</FONT></FONT><SUB><FONT SIZE=2>2</FONT></SUB><SUP><FONT SIZE=2><I>x</I></FONT></SUP> <I>dt</I>/ln <I>t</I> =:Li(<I>x</I>). This assertion simply says: ``the
+probability that <I>n</I> is prime is about 1/ln <I>n</I>.'' This result was
+finally proved by Hadamard and La Vall&eacute;e Poussin in 1896. Both of
+them
+used fundamental ideas of Riemann who was the first to introduce
+complex analysis in the study of the distribution of prime numbers. <BR>
+<BR>
+Using Perron's formula, namely
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>n</I></FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln(<I>p</I>) 
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2<I>i</I><FONT FACE=symbol>p</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>ó<BR>õ</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>c</I>+<I>i</I><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=left><BR><BR></TD>
+</TR>
+<TR><TD ALIGN=left NOWRAP><FONT SIZE=2><I>c</I>-<I>i</I><FONT FACE=symbol>¥</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>-<FONT FACE=symbol>z</FONT>'(<I>s</I>)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>z</FONT>(<I>s</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2><I>s</I></FONT></SUP><I>ds</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><I>s</I></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+and using residues, 
+Riemann essentially found what is perhaps the most important
+formula in analytic number theory (the von Mangoldt explicit
+formula):
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>n</I></FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln(<I>p</I>) 
+= 
+<I>x</I>-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>z</FONT>'(0)</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>z</FONT>(0)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>r</FONT>)=0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>r</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>r</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+=
+<I>x</I>-ln</TD>
+<TD NOWRAP>(2<FONT FACE=symbol>p</FONT>)-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>Â</FONT>(<FONT FACE=symbol>r</FONT>)&gt;0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>r</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>r</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> -</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>2</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>ln(1-<I>x</I><SUP><FONT SIZE=2>-2</FONT></SUP>),
+<A NAME="eq-vardi-cyr-5"></A>
+&nbsp;&nbsp;&nbsp;&nbsp;(6)</TD>
+</TR></TABLE></DIV>
+where sum on the right is over the zeroes of the Riemann <FONT FACE=symbol>z</FONT> 
+function. These zeroes can be split up into two types: The <EM>trivial</EM> zeroes at -2, -4, -6, ..., and
+the zeroes with 0 <FONT FACE=symbol>£</FONT> <FONT FACE=symbol>Â</FONT> <FONT FACE=symbol>£</FONT> 1 (the right hand side of&nbsp;(<A HREF="#eq-vardi-cyr-5">6</A>) reflects this dichotomy). This formula has many interesting
+properties and reflects the following principles of analytic
+number theory:<BR>
+<BR>
+<OL type=1>
+<LI> Primes should always be counted with weight ln(<I>p</I>);<BR>
+<BR>
+
+<LI> Primes and prime powers should be counted together;<BR>
+<BR>
+
+<LI> There are much less prime powers than primes;<BR>
+<BR>
+
+<LI> The zeroes of the <FONT FACE=symbol>z</FONT> function are the 
+``fundamental frequencies'' of the primes, and in this sense are
+dual to the primes.</OL> Following Chebyshev, one defines <FONT FACE=symbol>q</FONT>(<I>x</I>) = <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>p</I> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></SUB> ln(<I>p</I>)
+and <FONT FACE=symbol>y</FONT>(<I>x</I>) = <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>p</I></FONT></SUB><SUP><SUB><FONT SIZE=2><I>n</I></FONT></SUB></SUP><SUB><FONT SIZE=2> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></SUB> ln(<I>p</I>) = <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>n</I> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></SUB> <FONT FACE=symbol>L</FONT>(<I>n</I>) ,
+where <FONT FACE=symbol>L</FONT>(<I>n</I>) = ln(<I>p</I>) when <I>n</I>=<I>p</I><SUP><FONT SIZE=2><I>m</I></FONT></SUP>, and zero otherwise. 
+A fairly straightforward partial summation shows that the prime
+number theorem is equivalent to <FONT FACE=symbol>y</FONT>(<I>x</I>) ~ <I>x</I> (note that trivially,
+<FONT FACE=symbol>y</FONT>(<I>x</I>) = <FONT FACE=symbol>q</FONT>(<I>x</I>) + <I>O</I>((<I>x</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP>)), and that more generally,
+<DIV ALIGN=center><FONT FACE=symbol>y</FONT>(<I>x</I>) = <I>x</I> + <I>R</I>(<I>x</I>) <FONT FACE=symbol>ÜÞ</FONT> <FONT FACE=symbol>p</FONT>(<I>x</I>) ~ Li(<I>x</I>) 
+ + <I>O</I>(<I>R</I>(<I>x</I>)/ln(<I>x</I>)).
+</DIV>
+One can then see from the explicit formula&nbsp;(<A HREF="#eq-vardi-cyr-5">6</A>) that the prime
+number theorem would follow if one can bound 
+<FONT FACE=symbol>Â</FONT> <FONT FACE=symbol>r</FONT> &lt; 1, since each error term would then be of order &lt; <I>x</I>.
+The prime number theorem would then be equivalent to showing that
+<FONT FACE=symbol>z</FONT>(1 + <I>it</I>) <FONT FACE=symbol>¹</FONT> 0 for <I>t</I><FONT FACE=symbol>¹</FONT> 0. In fact, this is an equivalence
+(as was later shown by Wiener) 
+and Hadamard and La Vall&eacute;e Poussin were able to prove that
+<FONT FACE=symbol>z</FONT>(1 + <I>it</I>) <FONT FACE=symbol>¹</FONT> 0 using some ingenious trigonometric identities.
+ We will give a proof due to Mertens, in 1898.
+Set <FONT FACE=symbol>r</FONT>=1+<I>it</I>, then <FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>r</FONT>)=0 <FONT FACE=symbol>Þ</FONT> <FONT FACE=symbol>Â</FONT> ln <FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+<I>it</I>)<FONT FACE=symbol>®</FONT>
+-<FONT FACE=symbol>¥</FONT> when <FONT FACE=symbol>s</FONT><FONT FACE=symbol>®</FONT> 1 (we restrict to <FONT FACE=symbol>Â</FONT>(<FONT FACE=symbol>s</FONT>)&gt;1).
+But, by the Euler identity, one has 
+ln <FONT FACE=symbol>z</FONT>(<I>s</I>)=<FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>p</I></FONT></SUB> <FONT FACE=symbol>å</FONT><SUB><FONT SIZE=2><I>m</I><FONT FACE=symbol>³</FONT> 1</FONT></SUB> <I>m</I><SUP><FONT SIZE=2>-1</FONT></SUP> <I>p</I><SUP><FONT SIZE=2>-<I>m</I><FONT FACE=symbol>s</FONT></FONT></SUP>
+exp(-<I>itm</I>ln(<I>p</I>)) and so
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>Â</FONT> ln</TD>
+<TD NOWRAP> <FONT FACE=symbol>z</FONT>(<I>s</I>)=</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>m</I><FONT FACE=symbol>³</FONT> 1</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <I>m</I><SUP><FONT SIZE=2>-1</FONT></SUP> <I>p</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2>-<I>m</I><FONT FACE=symbol>s</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+cos(-<I>tm</I>ln(<I>p</I>)).</TD>
+</TR></TABLE></DIV>
+Mertens' trick consists in noticing that 2(1+cos <FONT FACE=symbol>b</FONT>)<SUP><FONT SIZE=2>2</FONT></SUP>=3 +4 cos
+<FONT FACE=symbol>b</FONT> + cos 2<FONT FACE=symbol>b</FONT> <FONT FACE=symbol>³</FONT> 0, thus
+3 ln<FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>)+4<FONT FACE=symbol>Â</FONT>ln<FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+<I>it</I>)+<FONT FACE=symbol>Â</FONT>ln<FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+2<I>it</I>)<FONT FACE=symbol>³</FONT> 0, 
+hence <FONT FACE=symbol>z</FONT><SUP><FONT SIZE=2>3</FONT></SUP>(<FONT FACE=symbol>s</FONT>) |<FONT FACE=symbol>z</FONT><SUP><FONT SIZE=2>4</FONT></SUP>(<FONT FACE=symbol>s</FONT>+<I>it</I>) <FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+2<I>it</I>)| <FONT FACE=symbol>³</FONT> 1.<BR>But, as <FONT FACE=symbol>s</FONT><FONT FACE=symbol>®</FONT> 1, one has <FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>)~ (<FONT FACE=symbol>s</FONT>-1)<SUP><FONT SIZE=2>-1</FONT></SUP>
+and |<FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+<I>it</I>)|~ <I>A</I> (<FONT FACE=symbol>s</FONT>-1) for a some constant <I>A</I> (by analyticity). So one
+should have <FONT FACE=symbol>z</FONT>(<FONT FACE=symbol>s</FONT>+2<I>it</I>)<FONT FACE=symbol>®</FONT> <FONT FACE=symbol>¥</FONT>,
+ this contradicts the fact that <FONT FACE=symbol>z</FONT>(1+2<I>it</I>) is bounded (by the Abel summation criterion).
+In conclusion, the <FONT FACE=symbol>z</FONT> function has no zero with <FONT FACE=symbol>Â</FONT>(<FONT FACE=symbol>r</FONT>)=1, the
+PNT is proved.
+Note that by mixing his proof of the PNT 
+ and the proof of Dirichlet's theorem, La Vall&eacute;e Poussin proved also
+that there is asymptotically
+<FONT FACE=symbol>p</FONT>(<I>x</I>)/<FONT FACE=symbol>f</FONT>(<I>q</I>) primes of the shape <I>a</I>+<I>q</I> <I>n</I> less than <I>x</I>.
+An elementary (i.e. without complex analysis) proof of the PNT was
+subsequently found by Erd&ouml;s and Selberg in 1949 (see&nbsp;[<A HREF="#Er"><CITE>4</CITE></A>]
+and&nbsp;[<A HREF="#Se"><CITE>9</CITE></A>]). <BR>
+<BR>
+<!--TOC section Chebyshev's Bias-->
+
+<H2>4&nbsp;&nbsp; Chebyshev's Bias</H2><!--SEC END -->
+All numerical evidence shows that <FONT FACE=symbol>p</FONT>(<I>x</I>)&lt;Li(<I>x</I>) and it was long
+believed that this would be true for all <I>x</I>. Similarly, Chebyshev
+noted that the number of primes of the form 4<I>k</I>+3 seemed to be more
+abundant than the primes of the form 4<I>k</I>+1, more precisely, let
+<FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2><I>q</I>,<I>a</I></FONT></SUB>(<I>x</I>) = |{<I>p</I> <FONT FACE=symbol>£</FONT> <I>x</I>: <I>p</I><FONT FACE=symbol>º</FONT> <I>a</I>mod <I>q</I>}| then
+<FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4, 3</FONT></SUB>(<I>x</I>) <FONT FACE=symbol>³</FONT> <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4, 1</FONT></SUB>(<I>x</I>). <BR>
+<BR>
+In fact, Littlewood proved in 1914 that <FONT FACE=symbol>p</FONT>(<I>x</I>) - Li(<I>x</I>) changes sign
+infinitely often and the same is true for <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4, 3</FONT></SUB>(<I>x</I>) - <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4,
+1</FONT></SUB>(<I>x</I>). In 1957 Leech showed that <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4, 1</FONT></SUB> (<I>x</I>) &gt; <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>4,3</FONT></SUB>(<I>x</I>)
+is first true for <I>x</I>= 26861. That the similar inequality
+<FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>3, 1</FONT></SUB> (<I>x</I>) &gt; <FONT FACE=symbol>p</FONT><SUB><FONT SIZE=2>3,2</FONT></SUB>(<I>x</I>) is first true for <I>x</I>=608981813029
+was shown by Bays and Hudson in 1978. No example of <FONT FACE=symbol>p</FONT>(<I>x</I>) &gt; Li(<I>x</I>)
+is known. Skewes first gave an upper bound&nbsp;<I>e</I><SUP><FONT SIZE=2><I>e</I></FONT></SUP><SUP><SUP><FONT SIZE=2><I>e</I></FONT></SUP></SUP><SUP><SUP><SUP><FONT SIZE=2>5</FONT></SUP></SUP></SUP> which
+was later reduced by Sherman-Lehman and then te&nbsp;Riele&nbsp;[<A HREF="#teR"><CITE>10</CITE></A>] who 
+gave an upper bound of 10<SUP><FONT SIZE=2>370</FONT></SUP>. <BR>
+<BR>
+This behaviour can easily be explained using explicit formulas. 
+In the case of <FONT FACE=symbol>p</FONT>(<I>x</I>), the point is the following: The explicit
+formula&nbsp;(<A HREF="#eq-vardi-cyr-5">6</A>) expresses <FONT FACE=symbol>y</FONT>(<I>x</I>) as a sum of powers <I>x</I><SUP><FONT SIZE=2><FONT FACE=symbol>r</FONT></FONT></SUP>. 
+Assuming the Riemann Hypothesis, one can write this as 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>y</FONT>(<I>x</I>) = 
+<I>x</I> - <I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>z</FONT>(1/2+<I>i</I><FONT FACE=symbol>g</FONT>) = 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1/2+<I>i</I><FONT FACE=symbol>g</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>+<I>o</I>(<I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP>).
+</TD>
+</TR></TABLE></DIV>
+One can now see the reason for the bias: The function <FONT FACE=symbol>y</FONT>(<I>x</I>)
+does not count primes but prime powers so what one really wants
+is the behaviour of <FONT FACE=symbol>q</FONT>(<I>x</I>) which is given by 
+<DIV ALIGN=center><FONT FACE=symbol>q</FONT>(<I>x</I>) = <FONT FACE=symbol>y</FONT>(<I>x</I>) - <FONT FACE=symbol>q</FONT>((<I>x</I>)<SUP><FONT SIZE=2>1/2</FONT></SUP>) +<I>O</I>(<I>x</I><SUP><FONT SIZE=2>1/3</FONT></SUP>),
+</DIV>
+so that
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>q</FONT>(<I>x</I>) = <I>x</I> - <I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP>1+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>z</FONT>(1/2+<I>i</I><FONT FACE=symbol>g</FONT>) = 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1/2+<I>i</I><FONT FACE=symbol>g</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>+<I>o</I>(<I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP>).
+</TD>
+</TR></TABLE></DIV>
+The function
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>z</FONT>(1/2+<I>i</I><FONT FACE=symbol>g</FONT>) = 0</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>e</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><FONT SIZE=2><I>i</I><FONT FACE=symbol>g</FONT></FONT><FONT SIZE=2>ln</FONT><FONT SIZE=2>(<I>x</I>)</FONT></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>1/2+<I>i</I><FONT FACE=symbol>g</FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>,
+</TD>
+</TR></TABLE></DIV>
+ is a very slowly oscillating trigonometric series which should
+be zero on average, so the extra term biases <FONT FACE=symbol>q</FONT>(<I>x</I>) to be
+smaller than <I>x</I> on average. A simple description is that
+ Li(<I>x</I>) counts the number of prime powers <FONT FACE=symbol>£</FONT> <I>x</I>, so the
+number of primes should be slightly less since the number
+of prime squares is of the same order as the error term. <BR>
+<BR>
+There is a similar explanation for the bias in arithmetic progressions.
+There is an explicit formula 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>n</I></FONT></SUP><FONT SIZE=2><FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> <FONT FACE=symbol>c</FONT>(<I>n</I>) ln(<I>p</I>) 
+=
+- <I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP> </TD>
+<TD NOWRAP><FONT FACE=symbol>
+æ<BR>ç<BR>ç<BR>ç<BR>è</FONT></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2><I>L</I>(1/2+<I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT SIZE=2>, <FONT FACE=symbol>c</FONT>) = 0</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2><I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1/2+<I>i</I><FONT FACE=symbol>g</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT FACE=symbol>
+&ouml;<BR>÷<BR>÷<BR>÷<BR>ø</FONT></TD>
+<TD NOWRAP>+ <I>o</I>(<I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP>),
+</TD>
+</TR></TABLE></DIV>
+where the <EM>Generalised Riemann Hypothesis</EM> has been assumed
+(there is no <I>x</I> term since <I>L</I>(1, <FONT FACE=symbol>c</FONT>) is no longer a pole if
+<FONT FACE=symbol>c</FONT> <FONT FACE=symbol>¹</FONT> <FONT FACE=symbol>c</FONT><SUB><FONT SIZE=2>0</FONT></SUB>). As before one has
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>y</FONT><SUB><FONT SIZE=2><I>q</I>, <I>a</I></FONT></SUB>(<I>x</I>) 
+= 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>n</I></FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>º</FONT> <I>a</I></FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2><I>p</I></FONT><SUP><FONT SIZE=2><I>n</I></FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln(<I>p</I>)
+=
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>-</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><FONT FACE=symbol>f</FONT>(<I>q</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE border=0 cellspacing=0 cellpadding=0>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT FACE=symbol>c</FONT>(<I>a</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2><I>L</I>(1/2+<I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+<TD NOWRAP><FONT SIZE=2>) = 0</FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><I>x</I></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT SIZE=2><I>i</I><FONT FACE=symbol>g</FONT></FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD>&nbsp;</TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP>1/2+<I>i</I><FONT FACE=symbol>g</FONT></TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD>&nbsp;</TD>
+</TR>
+<TR><TD NOWRAP><FONT SIZE=2><FONT FACE=symbol>c</FONT></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+</TR></TABLE></DIV>
+but one really wants to look at
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><FONT FACE=symbol>q</FONT><SUB><FONT SIZE=2><I>q</I>,<I>a</I></FONT></SUB> (<I>x</I>) = 
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>p</I> <FONT FACE=symbol>º</FONT> <I>a</I> </FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>p</I> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln</TD>
+<TD NOWRAP>(<I>p</I>)
+=
+<FONT FACE=symbol>y</FONT><SUB><FONT SIZE=2><I>q</I>, <I>a</I></FONT></SUB> (<I>x</I>) - 
+ </TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>p</I></FONT><SUP><FONT SIZE=2>2</FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>º</FONT> <I>a</I></FONT><FONT SIZE=2>mod</FONT><FONT SIZE=2> <I>q</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>p</I></FONT><SUP><FONT SIZE=2>2</FONT></SUP><FONT SIZE=2> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> ln(<I>p</I>) + <I>O</I>(<I>x</I><SUP><FONT SIZE=2>1/3</FONT></SUP>)
+=
+<FONT FACE=symbol>y</FONT><SUB><FONT SIZE=2><I>q</I>, <I>a</I></FONT></SUB>(<I>x</I>) - <I>c</I><SUB><FONT SIZE=2><I>q</I>, <I>a</I></FONT></SUB> <I>x</I><SUP><FONT SIZE=2>1/2</FONT></SUP> + <I>O</I>(<I>x</I><SUP><FONT SIZE=2>1/3</FONT></SUP>),
+</TD>
+</TR></TABLE></DIV>
+where <I>c</I><SUB><FONT SIZE=2><I>q</I>, <I>a</I></FONT></SUB> is the number of solutions of 
+<I>y</I><SUP><FONT SIZE=2>2</FONT></SUP> <FONT FACE=symbol>º</FONT> <I>a</I>mod <I>q</I>. In particular, the same
+argument shows that there will always be fewer primes in the
+progression <I>qn</I> + <I>a</I> when <I>a</I> is a residue than when <I>a</I> is a
+nonresidue. Simply put, the ``balanced'' count is the set of 
+prime powers <FONT FACE=symbol>º</FONT> <I>a</I>mod <I>q</I> so there are fewer
+primes <FONT FACE=symbol>º</FONT> <I>a</I>mod <I>q</I> when <I>a</I> is quadratic residue
+since the number of prime squares congruent to <I>a</I> is of the same
+order as the error term in the analytic formulas.<BR>
+<BR>
+In 1994, Rubinstein and Sarnak&nbsp;[<A HREF="#RuSa"><CITE>8</CITE></A>] were able to make
+Chebyshev's bias precise. Assuming GRH (if this is false, then there
+is no bias) and also the Grand Simplicity Hypothesis (GSH: 
+All the ordinates of zeroes of <I>L</I>-function are linearly
+independent over <B><I>Q</I></B>), then 
+<DIV ALIGN=center><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=middle><TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>ln(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <FONT FACE=symbol>p</FONT>(<I>n</I>) &gt; </FONT><FONT SIZE=2>Li</FONT><FONT SIZE=2> <I>n</I></FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>n</I> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+<FONT FACE=symbol>®</FONT> .00000026, 
+&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD NOWRAP ALIGN=center>1</TD>
+</TR>
+<TR><TD BGCOLOR=black><TABLE BORDER=0 WIDTH="100%" CELLSPACING=0 CELLPADING=1><TR><TD></TD></TR></TABLE></TD>
+</TR>
+<TR><TD NOWRAP ALIGN=center>ln(<I>x</I>)</TD>
+</TR></TABLE></TD>
+<TD NOWRAP>
+</TD>
+<TD NOWRAP><TABLE CELLSPACING=0 CELLPADDING=0>
+<TR><TD ALIGN=center><FONT SIZE=2>&nbsp;</FONT></TD>
+</TR>
+<TR><TD ALIGN=center><FONT SIZE=7><FONT FACE=symbol>å</FONT></FONT></TD>
+</TR>
+<TR><TD ALIGN=center><TABLE CELLSPACING=2 CELLPADDING=0>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <FONT FACE=symbol>p</FONT></FONT><SUB><FONT SIZE=2>4,3</FONT></SUB><FONT SIZE=2>(<I>n</I>) &gt; <FONT FACE=symbol>p</FONT></FONT><SUB><FONT SIZE=2>4,1</FONT></SUB><FONT SIZE=2>(<I>n</I>)</FONT></TD>
+</TR>
+<TR><TD ALIGN=center NOWRAP><FONT SIZE=2> <I>n</I> <FONT FACE=symbol>£</FONT> <I>x</I></FONT></TD>
+</TR></TABLE></TD>
+</TR></TABLE></TD>
+<TD NOWRAP> 
+<FONT FACE=symbol>®</FONT> .9959.
+</TD>
+</TR></TABLE></DIV><BR>
+
+
+
+
+<!--TOC section References-->
+
+<H2>References</H2><!--SEC END -->
+<DL COMPACT=compact>
+<DT><A NAME="Da"><FONT COLOR=purple>[1]</FONT></A><DD>
+Daboussi (H&eacute;di).&nbsp;--
+Sur le th&eacute;or&egrave;me des nombres premiers. <EM>Comptes Rendus des
+ S&eacute;ances de l'Acad&eacute;mie des Sciences. S&eacute;rie I. Math&eacute;matique</EM>, vol.&nbsp;298,
+ n&deg;8, 1984, pp.&nbsp;161--164.<BR>
+<BR>
+
+<DT><A NAME="Davenport"><FONT COLOR=purple>[2]</FONT></A><DD>
+Davenport (Harold).&nbsp;--
+<EM>Multiplicative </EM><EM>N</EM><EM>umber </EM><EM>T</EM><EM>heory</EM>.&nbsp;--
+Springer-Verlag, New York, 1980, second edition,
+ xiii+177p. Revised by Hugh L. Montgomery.<BR>
+<BR>
+
+<DT><A NAME="Di"><FONT COLOR=purple>[3]</FONT></A><DD>
+Dirichlet (L.).&nbsp;--
+Beweis des Satzes, das jede unbegrenzte arithmetische
+ Progression... <EM>Abh. K&ouml;nig. Preuss. Akad.</EM>, vol.&nbsp;34,
+ 1837, pp.&nbsp;45--81.<BR>
+<BR>
+
+<DT><A NAME="Er"><FONT COLOR=purple>[4]</FONT></A><DD>
+Erd&ouml;s (P.).&nbsp;--
+On a New Method in Elementary Number Theory which leads to
+ an Elementary Proof of the Prime Number Theorem. <EM>Proceedings
+ of the National Academy of Sciences. U.S.A.</EM>, vol.&nbsp;35, 1949,
+ pp.&nbsp;374--384.<BR>
+<BR>
+
+<DT><A NAME="FrIw"><FONT COLOR=purple>[5]</FONT></A><DD>
+Friedlander (John) and Iwaniec (Henryk).&nbsp;--
+Using a Parity-Sensitive Sieve to Count Prime Values of a
+ Polynomial. <EM>Proceedings of the National Academy of Sciences. U.S.A.</EM>,
+ vol.&nbsp;94, n&deg;4, 1997, pp.&nbsp;1054--1058.<BR>
+<BR>
+
+<DT><A NAME="Ni"><FONT COLOR=purple>[6]</FONT></A><DD>
+Niven (Ivan).&nbsp;--
+A Simple Proof that <FONT FACE=symbol>p</FONT> is Irrational. <EM>Bulletin of the
+ American Mathematical Society</EM>, vol.&nbsp;53, 1947, p.&nbsp;509.<BR>
+<BR>
+
+<DT><A NAME="Ri"><FONT COLOR=purple>[7]</FONT></A><DD>
+Ribenboim (Paulo).&nbsp;--
+<EM>The </EM><EM>N</EM><EM>ew </EM><EM>B</EM><EM>ook of </EM><EM>P</EM><EM>rime </EM><EM>N</EM><EM>umber </EM><EM>R</EM><EM>ecords</EM>.&nbsp;--
+Springer-Verlag, New York, 1996, xxiv+541p.<BR>
+<BR>
+
+<DT><A NAME="RuSa"><FONT COLOR=purple>[8]</FONT></A><DD>
+Rubinstein (Michael) and Sarnak (Peter).&nbsp;--
+Chebyshev's Bias. <EM>Experimental Mathematics</EM>, vol.&nbsp;3, n&deg;3,
+ 1994, pp.&nbsp;173--197.<BR>
+<BR>
+
+<DT><A NAME="Se"><FONT COLOR=purple>[9]</FONT></A><DD>
+Selberg (Atle).&nbsp;--
+An Elementary Proof of the Prime-Number Theorem. <EM>Annals of Mathematics (2)</EM>, vol.&nbsp;50, 1949, pp.&nbsp;305--313.<BR>
+<BR>
+
+<DT><A NAME="teR"><FONT COLOR=purple>[10]</FONT></A><DD>
+te&nbsp;Riele (Herman J.&nbsp;J.).&nbsp;--
+On the Sign of the Difference <FONT FACE=symbol>p</FONT>(<I>x</I>)-<I>L</I><I>i</I>(<I>x</I>). <EM>Mathematics of Computation</EM>, vol.&nbsp;48, n&deg;177, 1987,
+ pp.&nbsp;323--328.<BR>
+<BR>
+
+<DT><A NAME="Tenenbaum"><FONT COLOR=purple>[11]</FONT></A><DD>
+Tenenbaum (G&eacute;rald) and Mend&egrave;s&nbsp;France (Michel).&nbsp;--
+<EM>Les nombres premiers</EM>.&nbsp;--
+Presses Universitaires de France, Paris, 1997, 128p.</DL>
+
+
+</BODY>
+</HTML>
+

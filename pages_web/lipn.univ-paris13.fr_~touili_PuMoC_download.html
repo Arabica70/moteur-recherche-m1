@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LIAFA -- PuMoC</title>
+</head>
+
+<body>
+<blockquote>
+  <h1><strong><font color="#0000A0" size="7">PuMoC</font></strong></h1>
+  <h1><strong><font size="5">A CTL Model Checker for Sequential Program</font></strong><font size="5">s</font></h1>
+</blockquote>
+<table width="866" height="40" border="0" align="left" bordercolor="#FFFFFF" summary="main-menu">
+  <tr>
+    <td width="140" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="index.html"><font size="5">Home</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="download.html"><font color="#FF0000" size="5"><strong>Download</strong></font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="quick start.html"><font size="5">Quick Start</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><div align="center">
+      <p><a href="references.html"><font size="5">References</font></a></p>
+    </div></td>
+    <td width="140" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#D7EFFF"><p><a href="experiments.html"><font size="5">Experiments</font></a></p>    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr size="3" noshade>
+<p>PuMoC<strong> </strong>has been tested mainly on Linux distributions and Windows Cygwin. </p>
+<h2><font size="5"><strong>Downloads:</strong></font></h2>
+<h3><font size="5"><a href="PuMoC.tar.gz">Source code for PuMoC</a></font> </h3>
+<blockquote>
+  <p>PuMoC is implemented in C programming language.</p>
+</blockquote>
+<h3><font size="5"><a href="PDSs.tar.gz">Examples for PuMoC </a></font></h3>
+  <blockquote>
+    <p>It includes 500 random pushdown systems each of them is associated with a random CTL formula. The number <strong>n</strong> of control locations and stack alphabet of pushdown systems ranges from 10 to 510, the number of transition rules ranges from n <sup> 2 </sup> to 2n <sup> 2</sup>. Each CTL formula is built over the operators {!, &amp;&amp;, EF, EG, EU} with size ranging from 2 to 15. </p>
+</blockquote>
+  <p>&nbsp;</p>
+  <p><font color="#0000FF"><strong>Tips for installing PuMoC on Linux or Cygwin</strong></font><strong>.</strong></p>
+  <p>Download the source code for PuMoC, first install the cudd library  using the following commands. PuMoC is equiped with cudd-2.4.2. Up-to-date versions can be obtained from the <a href="http://vlsi.colorado.edu/~fabio/CUDD/">CU Decision Diagram Package</a> . </p>
+  <blockquote>
+    <p><code><strong>tar -zxvf PuMoC.tar.gz</strong></code></p>
+    <p><strong><code> cd PuMoC/cudd-2.4.2 </code></strong></p>
+    <p><strong><code>make </code></strong></p>
+</blockquote>
+  <p>Copy object files <strong>libcudd.a, libepd.a, libmtr.a, libst.a, libutil.a </strong>from the directory <strong>cudd, epd, mtr, st, util </strong>to the directory <strong>lib in cudd-2.4.2 </strong> by the following commands: </p>
+  <blockquote>
+    <p><strong><code>cp -i cudd/libcudd.a lib/ </code></strong></p>
+    <p><strong><code>cp -i epd/libepd.a lib/ </code></strong></p>
+    <p><strong><code>cp -i mtr/libmtr.a lib/ </code></strong></p>
+    <p><strong><code>cp -i st/libst.a lib/ </code></strong></p>
+    <p><strong><code>cp -i util/libutil.a lib/ </code></strong></p>
+  </blockquote>
+  <p>Now, you can install PuMoC by the commands:</p>
+  <blockquote>
+    <p><strong><code>cd..</code></strong></p>
+    <p><strong><code>make</code></strong></p>
+  </blockquote>
+  <p>Now, you can evaluate an example: <code> ./PuMoC -l2 test/quick start.abpds.</code> </p>
+  <p>Here <code><font color="#FF0000">-l2</font> </code>specifies checking the emptiness of the alternating Buechi pushdown system <code><font color="#FF0000">quick start.abpds</font></code>.</p>
+  <p>&nbsp;  </p>
+  <hr noshade>
+<p align="center">Copyright © 2011-2012 LIAFA, University of Paris Diderot and CNRS.</p>
+</body>
+</html>

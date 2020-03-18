@@ -1,0 +1,41 @@
+\section{PROPAGATION AND CONSISTENCY \\MAINTENANCE BASED ON INTERACTION \\NETWORK}  
+Propagate the effect of an operation of update in the geographical data base means to execute the starting operation and all the influences operations which result from it without altering its consistency.   This is translated, in our system, by the installation of the interaction network built from the connection graph and the table of influences.
+Once the interaction network is generated, it should be checked that it does not have inconsistency.\\ 
+
+The inconsistency checking mecanism is based on a general incremental processus.  The incremental processus consists in decomposing each elementary updating operation in 2 parts: the first is the implementation of a canonical operation, the second is the checking of the consistency maintenance. If this checking is free from conflicts, the next canonical operation on the network path is visited and the incremental processus continues.\\ 
+
+If we consider an object $O_c$ and an associated updating operation, $op$, the mecanism of propagation is applied in a local zone centered on the object $O_c$, called working zone from where we extract the set of other objects which may be under the influence of the first one. The propagating mechanism is recursif but we limit the exploration inside the working zone. A full algorithm description of this method is given in \cite{hkdphd}.   
+
+\section{EMERGENT PROPERTY}
+%: FROM \\{\bf LOCAL TO GLOBAL CONSISTENCY} \\ {\bf MAINTENANCE}}
+
+The local propagation allows to avoid to explore the whole geographic data base. Now, we need to build a processus that will compute the adapted working zone which permits to tell whether the local consistency maintenance is enough to insure the global consistency maintenance. For that purpose we propose an algorithm that we called {\it dilatation method} and that consist to progressively increase the working area like a new disk centered on the initial object $O_c$ and which radius is augmented step by step with the value $p$ until that a further increase will not compute new objects involved in the propagation processus. That leads us to define this computed area as the {\it stability area} associated to the object $O_c$.\\
+% 
+% \begin{definition}
+% The stability area, $\mathcal{Z}^s$, concerning the updating of the object $O_c$ with a operation $op_c$, is
+% $$\mathcal{Z}^s = {\mathcal{Z}^t}_{e^*},\ where$$ 
+% \begin{eqnarray} 
+% e^* = Min \{ e \in R^{+*} / \forall f \in R^{*+},~f \geq e,\nonumber \\ 
+% ~Result(O_c, op_c, e)~ = ~Result(O_c, op_c, f)\} \nonumber
+% \end{eqnarray}
+% \end{definition}
+
+To prove that the local consistency maintenance can be sufficient for the global consistency maintenance, we had to define some hypothesis about the regularity of the objects repartition. The properties given in the following are prove in \cite{hkdphd}.
+
+\begin{definition}
+A finite set of planar points is called p-dense if the Delaunay triangulation over all the set of points has no edges longer than p. 
+\end{definition}
+
+%So we can proove the property:
+
+\begin{property}
+If the influence area of the point $O_c$ is {\it p-dense} then the dilatation method with a step equal to $p$ computed from $O_c$ give the stability area of this point
+\end{property}
+
+\begin{property}
+The local consistency over the stability area for an object $O_c$ will insure the consistency of the whole Data Base.
+\end{property}
+
+This last emergent property allows us to define a subset of objects from the GDB and be able to predict that the behavior of these objects is himself the behavior of all objects of the GDB vis-a-vis to a flow of update. \\
+
+This first theoretical result allows us to implement in an efficient way, the whole updating system,  with the postulate that the natural geographical data follows this hypothesis of regular distribution, using an adapted step of resolution for the dilatation method. 

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.7/mini-default.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JEE and Middleware Development</title>
+</head>
+<body>
+
+  <hr>
+<h4><a href="https://lipn.univ-paris13.fr/~cerin/HDU/client_side_web_programming.html">Lecture
+on Client Side Web Programming</a>
+-- <a href="https://lipn.univ-paris13.fr/~cerin/HDU/python_go_scala_oop.html">Python
+    vs. Go vs. Scala Object Oriented Programming</a></h4>
+
+<h4><a href="https://github.com/djtrack16/thyme/tree/master/computer%20science">Great papers/books in Computer
+Sciences</a> -- <a href="https://github.com/sindresorhus/awesome">Awesome project</a></h4>
+<hr>
+
+<h1>JEE and Middleware Development</h1>
+
+<h2>Introduction</h2>
+
+<p>The objective of the information on this page is to explain how to
+build a (Web) application with the JEE platform, able to visualize the
+weather forecast of a worldwide known city. The main challenge is to
+post a query on a weather server, to get the answer, to analyse it
+and to publish it on our local Web server (glasfish5). We mix Java,
+Python and the Servlets technology inside the JEE 8 platform.
+</p>
+
+<p>The lecture is accompanied by demos / practical work /
+implementations of concrete examples... otherwise the lecture will be
+to much! We start in Section 1 with revision material related to
+Java.</p>
+
+<h2>0- PDF Document used for the Lecture</h2>
+
+<p>The main document, in PDF format is
+available <a href="http://lipn.univ-paris13.fr/~cerin/HDU/Lecture-JEE-EJB-V2.pdf">here</a>. I
+will adapt it according to your skills and our progress.
+
+<h2>1- Weather station in pure Java</h2>
+
+<p>
+The codes for the weather station example are available by clicking
+on the following links:
+<a href="http://lipn.univ-paris13.fr/~cerin/HDU/ValMeteoJour.java">ValMeteoJour.java</a>,
+<a href="http://lipn.univ-paris13.fr/~cerin/HDU/EnsValMeteoYanis.java">EnsValMeteoYanis.java</a>,
+<a href="http://lipn.univ-paris13.fr/~cerin/HDU/EnsValMeteo.java">EnsValMeteo.java</a>,
+<a href="http://lipn.univ-paris13.fr/~cerin/HDU/VueStationMeteo.java">VueStationMeteo.java</a>,
+<a href="http://lipn.univ-paris13.fr/~cerin/HDU/StationMeteoConstantes.java">StationMeteoConstantes.java</a>. They
+illustrate, as explained during the lecture, the options with the concepts
+of inheritance and interface. Compile them as follows:
+<pre>
+  $ javac EnsValMeteoYanis.java
+  $ javac EnsValMeteo.java
+  </pre>
+</p>
+
+<p>As an extension of the previous example, you may have a look to the
+  World Weather Forecast web site, namely the
+  <a href="http://worldweather.wmo.int/fr/dataguide.html">WWIS</a>
+  data interface.
+</p>
+
+<p>You will get the possibility to build your own graphical interface
+  which will propose to be informed about the weather situation in
+  main cities in the world. You will need to do a curl/wget networking
+  query to parse the XML for the code of cities, then to parse the
+  result. Here is an example of a curl call and its result for the
+  New-York city:
+</p>
+
+<pre>
+  $ curl http://worldweather.wmo.int/fr/json/278_fr.xml
+  {"city":{"lang":"fr","cityName":"New York City, New York","cityLatitude":"40.650000000","cityLongitude":"-73.780000000","cityId":278,"isCapital":false,"stationName":"New York City, New York","tourismURL":"","tourismBoardName":"","isDep":false,"timeZone":"-0400","isDST":"Y","member":{"memId":93,"memName":"Etats-Unis","shortMemName":"","url":"www.nws.noaa.gov\/","orgName":"National Weather Service","logo":"usa_logo.png","ra":4},"forecast":{"issueDate":"2019-04-17 22:40:00","timeZone":"Local","forecastDay":[{"forecastDate":"2019-04-18","wxdesc":"","weather":"pluie fine","minTemp":"9","maxTemp":"17","minTempF":"48","maxTempF":"63","weatherIcon":1502},{"forecastDate":"2019-04-19","wxdesc":"","weather":"Petite averse","minTemp":"14","maxTemp":"21","minTempF":"57","maxTempF":"69","weatherIcon":1201},{"forecastDate":"2019-04-20","wxdesc":"","weather":"Averse de pluie","minTemp":"16","maxTemp":"19","minTempF":"60","maxTempF":"66","weatherIcon":901},{"forecastDate":"2019-04-21","wxdesc":"","weather":"Petite averse","minTemp":"11","maxTemp":"17","minTempF":"52","maxTempF":"63","weatherIcon":1201},{"forecastDate":"2019-04-22","wxdesc":"","weather":"Ensoleill\u00e9","minTemp":"11","maxTemp":"21","minTempF":"52","maxTempF":"70","weatherIcon":2402},{"forecastDate":"2019-04-23","wxdesc":"","weather":"P\u00e9riode ensoleill\u00e9e","minTemp":"12","maxTemp":"18","minTempF":"54","maxTempF":"65","weatherIcon":2201},{"forecastDate":"2019-04-24","wxdesc":"","weather":"Petite averse","minTemp":"10","maxTemp":"16","minTempF":"50","maxTempF":"61","weatherIcon":1201}]},"climate":{"raintype":"Rainfall","raindef":"","rainunit":"inch","datab":1981,"datae":2010,"tempb":"","tempe":"","rdayb":"","rdaye":"","rainfallb":"","rainfalle":"","climatefromclino":"","climateMonth":[{"month":1,"maxTemp":"3.5","minTemp":"-2.8","meanTemp":null,"maxTempF":"38.3","minTempF":"26.9","meanTempF":null,"raindays":"10.4","rainfall":"92.7","climateFromMemDate":"2014-01-06"},{"month":2,"maxTemp":"5.3","minTemp":"-1.7","meanTemp":null,"maxTempF":"41.6","minTempF":"28.9","meanTempF":null,"raindays":"9.2","rainfall":"78.5","climateFromMemDate":"2014-01-06"},{"month":3,"maxTemp":"9.8","minTemp":"1.8","meanTemp":null,"maxTempF":"49.7","minTempF":"35.2","meanTempF":null,"raindays":"10.9","rainfall":"110.7","climateFromMemDate":"2014-01-06"},{"month":4,"maxTemp":"16.2","minTemp":"7.1","meanTemp":null,"maxTempF":"61.2","minTempF":"44.8","meanTempF":null,"raindays":"11.5","rainfall":"114.3","climateFromMemDate":"2014-01-06"},{"month":5,"maxTemp":"21.6","minTemp":"12.2","meanTemp":null,"maxTempF":"70.8","minTempF":"54.0","meanTempF":null,"raindays":"11.1","rainfall":"106.4","climateFromMemDate":"2014-01-06"},{"month":6,"maxTemp":"26.3","minTemp":"17.6","meanTemp":null,"maxTempF":"79.3","minTempF":"63.6","meanTempF":null,"raindays":"11.2","rainfall":"112.0","climateFromMemDate":"2014-01-06"},{"month":7,"maxTemp":"28.9","minTemp":"20.4","meanTemp":null,"maxTempF":"84.1","minTempF":"68.8","meanTempF":null,"raindays":"10.4","rainfall":"116.8","climateFromMemDate":"2014-01-06"},{"month":8,"maxTemp":"28.1","minTemp":"19.9","meanTemp":null,"maxTempF":"82.6","minTempF":"67.8","meanTempF":null,"raindays":"9.5","rainfall":"112.8","climateFromMemDate":"2014-01-06"},{"month":9,"maxTemp":"24.0","minTemp":"16.0","meanTemp":null,"maxTempF":"75.2","minTempF":"60.8","meanTempF":null,"raindays":"8.7","rainfall":"108.7","climateFromMemDate":"2014-01-06"},{"month":10,"maxTemp":"17.7","minTemp":"10.0","meanTemp":null,"maxTempF":"63.8","minTempF":"50.0","meanTempF":null,"raindays":"8.9","rainfall":"111.8","climateFromMemDate":"2014-01-06"},{"month":11,"maxTemp":"12.1","minTemp":"5.3","meanTemp":null,"maxTempF":"53.8","minTempF":"41.6","meanTempF":null,"raindays":"9.6","rainfall":"102.1","climateFromMemDate":"2014-01-06"},{"month":12,"maxTemp":"6.1","minTemp":"0.0","meanTemp":null,"maxTempF":"43.0","minTempF":"32.0","meanTempF":null,"raindays":"10.6","rainfall":"101.6","climateFromMemDate":"2014-01-06"}]}}}macbook-de-christophe:~ christophecerin$ 
+</pre>
+
+<p>Let's solve the problem! The Java code to start a <tt>curl</tt>
+  query is available in this file
+  <a href="http://lipn.univ-paris13.fr/~cerin/HDU/ProcessBuilderTest.java">ProcessBuilderTest.java</a>.</p>
+
+<p>This code downloads the file <tt>278_fr.json</tt>, which is a JSON
+file and it encodes also a Python
+dictionary. The data <a href="http://lipn.univ-paris13.fr/~cerin/HDU/278_fr.json">file</a>
+is available.</p>
+
+<p>The Python code that parses the previous dictionary is available
+  with the file <a href="http://lipn.univ-paris13.fr/~cerin/HDU/278.py">278.py</a>.</p>
+
+<p>The result for the execution of the Python code is:
+  <pre>
+    MacBook-de-Christophe:Cities christophecerin$ python 278.py
+    New York City, New York
+    2019-04-27
+       Min Temp: 9
+       Max Temp: 14
+       Forecast: Période ensoleillée
+    2019-04-28
+       Min Temp: 9
+       Max Temp: 14
+       Forecast: Pluie
+    2019-04-29
+       Min Temp: 5
+       Max Temp: 14
+       Forecast: Ensoleillé
+    2019-04-30
+       Min Temp: 10
+       Max Temp: 18
+       Forecast: Petite averse
+    2019-05-01
+       Min Temp: 11
+       Max Temp: 17
+       Forecast: Petite averse
+    2019-05-02
+       Min Temp: 12
+       Max Temp: 16
+       Forecast: Petite averse
+    2019-05-03
+       Min Temp: 11
+       Max Temp: 16
+       Forecast: Petite averse
+    MacBook-de-Christophe:Cities christophecerin$
+  </pre>
+</p>
+  
+<h2>2- Java Enterprise Edition (JEE) Installation</h2>
+
+<p>For the installation, and if you have multiple distribution of the
+  JDK, as with my installation:</p>
+  <pre>
+    $ ls /Library/Java/JavaVirtualMachines
+    jdk-10.0.1.jdkjdk-12.0.1.jdkjdk1.8.0_181.jdk
+    jdk-11.0.1.jdkjdk1.8.0_131.jdkjdk1.8.0_191.jdk
+  </pre>
+  <p>you probably need to customize the
+  file <tt>glassfish5/glassfish/bin/asadmin</tt> of Glassfish5 as
+  follows, here to use JDK <tt>1.8.0_191</tt> which is compatible with
+  JEE 8:</p>
+  <pre>
+    $ tail -14 asadmin
+
+    # Always use JDK 1.6 or higher
+    AS_INSTALL=`dirname "$0"`/../glassfish
+    AS_INSTALL_LIB="$AS_INSTALL/lib"
+    . "${AS_INSTALL}/config/asenv.conf"
+    JAVA=java
+    #Depends upon Java from ../config/asenv.conf
+    if [ ${AS_JAVA} ]; then
+    JAVA=${AS_JAVA}/bin/java
+    fi
+
+    # OLD version
+    #exec "$JAVA" -jar "$AS_INSTALL_LIB/client/appserver-cli.jar" "$@"
+
+    exec /usr/libexec/java_home -v 1.8.0_191 --exec java -jar "$AS_INSTALL_LIB/client/appserver-cli.jar" "$@"
+  </pre>
+  <p>Then you will be able to stop/start the application server:</p>
+  <pre>
+    MacBook-de-Christophe:~ christophecerin$ glassfish5/glassfish/bin/asadmin start-domain
+    Waiting for domain1 to start ....
+    Successfully started the domain : domain1
+    domain  Location: /Users/christophecerin/glassfish5/glassfish/domains/domain1
+    Log File: /Users/christophecerin/glassfish5/glassfish/domains/domain1/logs/server.log
+    Admin Port: 4848
+    Command start-domain executed successfully.
+    MacBook-de-Christophe:~ christophecerin$
+  </pre>
+  <p>
+  You are now ready to open a browser with URL as <tt>http://localhost:8080/</tt>
+  </p>
+
+<p>Other files that can be usefull to read for installing all you need:
+  <ul>
+    <li><tt>file:///Users/christophecerin/glassfish5/samples/docs/UserREADME.html</tt></li>
+    <li><tt>file:///Users/christophecerin/glassfish5/samples/index.html</tt></li>
+  </ul>
+  </p>
+
+<h4>Troubleshooting</h4>
+
+<p>If you use a special JDK, don't forgot to set environment variable (here for a MacOS system):
+  <pre>
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/
+    </pre>
+  </p>
+
+<p>If you use the latest version of maven and that
+  the <tt>pom.xml</tt> file specifies and oldest one,
+  don't forget to
+  modify the dependencies.</p>
+
+<p>For instance, if you try to install some projects coming with
+  glassfish distribution as samples, modify the <tt>pom.xml</tt> with
+  the correct version of maven (here 3.6.1 and not 2.1.1 in the
+  original distribution. We need a <tt>pom.mxl</tt> file as follows:
+  <pre>
+    &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+      &lt;modelVersion>4.0.0&lt;/modelVersion>
+      &lt;parent>
+	&lt;artifactId>servlet-samples&lt;/artifactId>
+	&lt;groupId>org.glassfish-samples&lt;/groupId>
+	&lt;version>5.0-SNAPSHOT&lt;/version>
+      &lt;/parent>
+
+      &lt;groupId>org.glassfish-samples&lt;/groupId>
+      &lt;artifactId>non-blocking-io-read-war&lt;/artifactId>
+      &lt;version>5.0-SNAPSHOT&lt;/version>
+      &lt;packaging>war&lt;/packaging>
+
+      &lt;name>non-blocking-io-read-war&lt;/name>
+
+      &lt;dependencies>
+	&lt;dependency>
+	  &lt;groupId>javax&lt;/groupId>
+	  &lt;artifactId>javaee-api&lt;/artifactId>
+	&lt;/dependency>
+      &lt;/dependencies>
+
+      &lt;build>
+	&lt;finalName>non-blocking-io-read-war&lt;/finalName>
+	&lt;plugins>
+	  &lt;plugin>
+	    &lt;artifactId>maven-compiler-plugin&lt;/artifactId>
+	    &lt;version>3.6.1&lt;/version>
+	  &lt;/plugin>
+	  &lt;plugin>
+	    &lt;artifactId>maven-war-plugin&lt;/artifactId>
+	    &lt;configuration>
+	      &lt;failOnMissingWebXml>false&lt;/failOnMissingWebXml>
+	    &lt;/configuration>
+	  &lt;/plugin>
+	  &lt;plugin>
+	    &lt;artifactId>maven-dependency-plugin&lt;/artifactId>
+	    &lt;version>3.6&lt;/version>
+	  &lt;/plugin>
+	&lt;/plugins>
+      &lt;/build>
+
+   &lt;/project>
+  </pre>
+  </p>
+
+<p>If your observe the following message, either follow the indication
+(change the port number) or shutdown the server (a new one will be
+  lanch):
+  <pre>
+    $ mvn cargo:run
+    [INFO] Scanning for projects...
+    [INFO]
+    [INFO] -----------< org.glassfish-samples:non-blocking-io-read-war >-----------
+      [INFO] Building non-blocking-io-read-war 5.0-SNAPSHOT
+      [INFO] --------------------------------[ war ]---------------------------------
+      [INFO]
+      [INFO] --- cargo-maven2-plugin:1.4.0:run (default-cli) @ non-blocking-io-read-war ---
+      [INFO] [en2.ContainerRunMojo] Resolved container artifact org.codehaus.cargo:cargo-core-container-glassfish:jar:1.4.0 for container glassfish4x
+      [INFO] [talledLocalContainer] Port for cargo-domain (4848) is in use. Try a different port number.
+      [INFO] [talledLocalContainer] CLI130: Could not create domain, cargo-domain
+      [INFO] [talledLocalContainer] Command create-domain failed.
+      [INFO] ------------------------------------------------------------------------
+      [INFO] BUILD FAILURE
+      [INFO] ------------------------------------------------------------------------
+      [INFO] Total time:  2.215 s
+      [INFO] Finished at: 2019-04-28T15:39:09+08:00
+      [INFO] ------------------------------------------------------------------------
+      [ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.4.0:run (default-cli) on project non-blocking-io-read-war: Execution default-cli of goal org.codehaus.cargo:cargo-maven2-plugin:1.4.0:run failed: Failed to create a GlassFish 4.x standalone configuration: GlassFish admin command failed: asadmin exited 1 -> [Help 1]
+      [ERROR]
+      [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+      [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+      [ERROR]
+      [ERROR] For more information about the errors and possible solutions, please read the following articles:
+      [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+  </pre>
+</p>
+
+<p>In my case, I decided to shutdown the server, then to install, then to run the application:
+  <pre>
+    $ ~/glassfish5/bin/asadmin stop-domain
+    $ mvn install
+    $ mvn cargo:run
+    [INFO] Scanning for projects...
+    [INFO]
+    [INFO] -----------< org.glassfish-samples:non-blocking-io-read-war >-----------
+      [INFO] Building non-blocking-io-read-war 5.0-SNAPSHOT
+      [INFO] --------------------------------[ war ]---------------------------------
+      [INFO]
+      [INFO] --- cargo-maven2-plugin:1.4.0:run (default-cli) @ non-blocking-io-read-war ---
+      [INFO] [en2.ContainerRunMojo] Resolved container artifact org.codehaus.cargo:cargo-core-container-glassfish:jar:1.4.0 for container glassfish4x
+      [INFO] [talledLocalContainer] Using port 4848 for Admin.
+      [INFO] [talledLocalContainer] Using port 8080 for HTTP Instance.
+      [INFO] [talledLocalContainer] Using port 7676 for JMS.
+      [INFO] [talledLocalContainer] Using port 3700 for IIOP.
+      [INFO] [talledLocalContainer] Using port 8181 for HTTP_SSL.
+      [INFO] [talledLocalContainer] Using port 3820 for IIOP_SSL.
+      [INFO] [talledLocalContainer] Using port 3920 for IIOP_MUTUALAUTH.
+      [INFO] [talledLocalContainer] Using port 8686 for JMX_ADMIN.
+      [INFO] [talledLocalContainer] Using port 6666 for OSGI_SHELL.
+      [INFO] [talledLocalContainer] Using port 9009 for JAVA_DEBUGGER.
+      [INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+      [INFO] [talledLocalContainer] [CN=MacBook-de-Christophe.local,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+      [INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+      [INFO] [talledLocalContainer] [CN=MacBook-de-Christophe.local-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+      [INFO] [talledLocalContainer] Domain cargo-domain created.
+      [INFO] [talledLocalContainer] Domain cargo-domain admin port is 4848.
+      [INFO] [talledLocalContainer] Domain cargo-domain admin user is "admin".
+      [INFO] [talledLocalContainer] Command create-domain executed successfully.
+      [INFO] [talledLocalContainer] GlassFish 4.x starting...
+      [INFO] [talledLocalContainer] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=48m; support was removed in 8.0
+      [INFO] [talledLocalContainer] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+      [INFO] [talledLocalContainer] Waiting for cargo-domain to start ......
+      [INFO] [talledLocalContainer] Successfully started the domain : cargo-domain
+      [INFO] [talledLocalContainer] domain  Location: /Users/christophecerin/glassfish5/samples/servlet/non-blocking-io-read-war/target/cargo/installs/glassfish/glassfish/domains/cargo-domain
+      [INFO] [talledLocalContainer] Log File: /Users/christophecerin/glassfish5/samples/servlet/non-blocking-io-read-war/target/cargo/installs/glassfish/glassfish/domains/cargo-domain/logs/server.log
+      [INFO] [talledLocalContainer] Admin Port: 4848
+      [INFO] [talledLocalContainer] Command start-domain executed successfully.
+      [INFO] [talledLocalContainer] Application deployed with name non-blocking-io-read-war.
+      [INFO] [talledLocalContainer] Command deploy executed successfully.
+      [INFO] [talledLocalContainer] Application deployed with name cargocpc.
+      [INFO] [talledLocalContainer] Command deploy executed successfully.
+      [INFO] [talledLocalContainer] GlassFish 4.x started on port [8080]
+      [INFO] Press Ctrl-C to stop the container...
+  </pre>
+  </pre>
+
+<p>Last but not least, the previous Web application is now available
+at
+URL <tt>http://localhost:8080/non-blocking-io-read-war</tt>. Enjoy!</p>
+
+<h2>3- Servlet and filtering for the Weather Station (JEE)</h2>
+
+<p> Servlets are the Java programs that runs on the Java-enabled web
+  server or application server. They are used to handle the request
+  obtained from the web server, process the request, produce the
+  response, then send response back to the web server.<br />
+  <b>Properties of Servlets :</b></p>
+<ul>
+  <li>Servlets work on the server-side.</li>
+  <li>Servlets capable of handling complex request obtained from web
+  server.</li>
+</ul>
+<p><b>Execution of Servlets : </b><br />
+  Execution of Servlets involves the six basic steps:</p>
+<ol>
+  <li>The clients send the request to the web server.</li>
+  <li>The web server receives the request.</li>
+  <li>The web server passes the request to the corresponding servlet.</li>
+  <li>The servlet processes the request and generate the response in
+  the form of output.</li>
+  <li>The servlet send the response back to the web server.</li>
+  <li>The web server sends the response back to the client and the
+  client browser displays it on the screen.</li>
+</ol>
+<p align="left"><b>Servlet Architecture</b></p>
+<p>The following diagram shows the servlet architecture:<br />
+  <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Untitled-Diagram-14-300x225.png" alt="" width="300" height="225" class="alignnone size-medium wp-image-429601" /></p>
+
+<p align="left"><strong>Advantages of a Java Servlet</strong></p>
+<ul>
+  <li>Servlet is <strong>faster</strong> than CGI as it not involves
+  the creation of a new process for every new request received.</li>
+  <li>Servlets as written in Java are <strong>platform
+  independent</strong>.</li>
+  <li>Removes the overhead of creating a <strong>new process</strong>
+  for each request as Servlet doesn&#8217;t run in a separate
+  process. There is only a single instance which handles all requests
+  concurrently. This also saves the memory and allows a Servlet to
+  easily manage client state.</li>
+  <li>It is a server-side component, so Servlet inherits
+  the <strong>security</strong> provided by the Web server. </li>
+  <li>The <strong>API</strong> designed for Java Servlet automatically
+  acquires the advantages of Java platform such as platform
+  independent and portability. In addition, it obviously can use the
+  wide range of APIs created on Java platform such
+  as <strong>JDBC</strong> to access the database.</li>
+</ul>
+<p align="left"><b>The Servlet Container</b></p>
+<p><strong>Servlet container</strong>, also known as <strong>Servlet
+engine</strong> is an integrated set of objects that provide run time
+environment for Java Servlet components.</p>
+<p>In simple words, it is a system that manages Java Servlet
+components on top of the Web server to handle the Web client
+requests.</p>
+
+<h2>Description of the sample application</h2>
+
+<p>This sample application that simulates a Weather Station
+  demonstrates (a) how to use the non-blocking I/O functionality in
+  servlets (b) how to parse the arguments of the URL (c) how to do a
+  curl query and how to parse and analyze the respond.</p>
+
+<p>The code is available
+online <a href="http://lipn.univ-paris13.fr/~cerin/HDU/WeatherStation.tar">HERE</a>.
+
+<p>In this sample application, the client (<code>ClientTest</code>)
+  sends two parts of data to the server (<code>ServerTest</code>). The
+  server registers a <code>ReadListener</code>, whose methods are called
+  when events related to the input stream occur. The implementation of
+  <code>ReadListener</code> in this application collects data and echoes
+  it back in reverse order.</p>
+
+<p>The server executes the reverse operation, in a non blocking
+  manner. This means that the server is not blocked until the end of the
+  conversation with the client.</p>
+
+<p>Then, we proceed with the execution of a code that examine the
+  parameters on the URL line. The client prints the name and values of
+  the parameters. This is a concrete example demonstrating the analysis
+  of parameters i.e. how to communicate from the external world with the
+  client's program.</p>
+
+<p>At last, the client executes the <code>curl</code> query in order
+  to download the information about the city, given in a parameter (city
+  code), on the URL line.</p>
+
+<p>Notice that all the useful work is accomplished in the client. We
+  could also balance the work by making the server executing the
+  Internet query. This is just a choice!</p>
+
+<p><b>Client</b></p>
+
+<p>In <code>ClientTest</code>, the client initiates an HTTP connection
+  to the server and writes two parts of data with a two second pause
+  between them, which simulates blocking from the client side.
+</p>
+
+<pre>
+  @WebServlet(name = "ClientTest", urlPatterns = {"/"})
+  public class ClientTest extends HttpServlet {
+  OutputStream output = null;
+  InputStream input = null;
+
+  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+  throws ServletException, IOException {
+  ...
+  String urlPath = "http://"
+  + request.getServerName()
+  + ":" + request.getLocalPort() //default http port is 8080
+  + request.getContextPath()
+  + "/ServerTest";
+
+  URL url = new URL(urlPath);
+
+  HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+  ...
+  conn.connect();
+  ...
+  output = conn.getOutputStream();
+  String firstPart = "Hello";
+  writeData(output, firstPart);
+  Thread.sleep(2000);
+  ...
+  // Sending the second part
+  input = conn.getInputStream();
+  printEchoData(out, input);
+  }
+
+  protected void writeData(OutputStream output, String data) throws IOException {
+  if (data != null && !data.equals("") && output != null) {
+  output.write(data.getBytes());
+  output.flush();
+  }
+  }
+
+  protected void printEchoData(PrintWriter out, InputStream input) throws IOException {
+  while (input.available() > 0 && input != null && out != null) {
+  out.print((char) input.read());
+  }
+  out.println("&lt;/br&gt;");
+  }
+  }
+</pre>
+
+<p>The servlet uses <code>OutputStream</code>
+  and <code>InputStream </code> to write and read data,
+  and <code>Thread.sleep()</code> to pause the thread for two seconds to
+  simulate I/O blocking. You can send larger blocks of data instead of
+  &quot;Hello World&quot;.</p>
+
+<p>Then the servlet executes the code to analyse the URL parameters:</p>
+
+<pre>
+  @WebServlet(name = "ClientTest", urlPatterns = {"/*"})
+  public class ClientTest extends HttpServlet {
+
+  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+  throws ServletException, IOException {
+  response.setContentType("text/html;charset=UTF-8");
+
+  ...
+
+  // Start parsing of parameters
+  Enumeration paramNames = request.getParameterNames();
+  out.print("&lt;h1> Parameter Analysis...&lt;/h1>");
+  out.println("&lt;table border=1 cellpadding=5 cellspacing=5>");
+    //out.println("&lt;table>");
+      out.println("&lt;tr> &lt;th>Parameter Name&lt;/th>" +
+	"&lt;th>Parameter Value&lt;/th>&lt;/tr>");
+      while(paramNames.hasMoreElements())
+      {
+      String paramName = (String)paramNames.nextElement();
+      out.print("&lt;tr>&lt;td>" + paramName + "\n&lt;td>");
+	  String[] paramValues = request.getParameterValues(paramName);
+	  if (paramValues.length == 1)
+	  {
+	  String paramValue = paramValues[0];
+	  if (paramValue.length() == 0)
+	  out.println("No Value");
+	  else
+	  out.println(paramValue);
+	  }
+	  else
+	  {
+	    out.println("&lt;ul>");
+	    for(int i=0; i&lt;paramValues.length; i++)
+	       {
+                 out.println("&lt;li>" + paramValues[i] + "&lt;/li>");
+	       }
+	    out.println("&lt;/ul>");
+	  }
+	 }
+	 out.println("&lt;/table>");
+	 out.flush();
+	 ...
+	 ...
+</pre>
+
+<p>Then the client execute the querry to the Internet in order to get
+  the wheather of the city specified as an argument of the URL. In the
+  first implementation, We store the answer into a file in
+  the <code>/tmp/your_user_name/Cities/</code> directory. The code is
+  as follows:</p>
+
+<pre>
+  ProcessBuilder pb = new ProcessBuilder(
+         "/usr/bin/curl",
+         "-s",
+         "http://worldweather.wmo.int/fr/json/" + city + "_fr.xml");
+
+  pb.directory(new File("/tmp/your_user_name/Cities"));
+  pb.redirectErrorStream(true);
+  Process p = pb.start();
+  InputStream is = p.getInputStream();
+
+  FileOutputStream outputStream = new FileOutputStream(
+          "/tmp/your_user_name/Cities/" + city + "_fr.json");
+
+  BufferedInputStream bis = new BufferedInputStream(is);
+  byte[] bytes = new byte[100];
+  int numberByteReaded;
+  while ((numberByteReaded = bis.read(bytes, 0, 100)) != -1) {
+         outputStream.write(bytes, 0, numberByteReaded);
+         Arrays.fill(bytes, (byte) 0);
+  }
+  outputStream.flush();
+  outputStream.close();
+</pre>
+
+<p>In the second implementation, we transfer the answer of the Python
+code which analyze the answer, to the code that transforms an
+InputStream parameter to a String one. The code for transforming the
+types is <code>String theString = IOUtils.toString(iss,
+    "UTF-8");</code>. The final portion of code is:</p>
+
+<pre>
+  ProcessBuilder pbb = new ProcessBuilder(
+      "python",
+      "/Users/christophecerin/glassfish5/samples/servlet/weather-station-war/src/main/java/org/glassfish/servlet/weather_station_war/parse.py",
+      "/tmp/your_user_name/Cities/"+city+"_fr.json");
+  pbb.redirectErrorStream(true);
+  Process pp = pbb.start();
+  InputStream iss = pp.getInputStream();
+  String theString = IOUtils.toString(iss, "UTF-8");
+</pre>
+
+<p><b>Server</b></p>
+
+<p>In <code>ServerTest</code>, the server receives the request, starts
+  the asynchronous processing of the request, and registers
+  a <code>ReadListener</code></p>
+
+
+<pre>
+  @WebServlet(name=&quot;ServerTest&quot;, urlPatterns={&quot;/ServerTest&quot;}, asyncSupported = true)
+  public class ServerTest extends HttpServlet {
+
+  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+  throws ServletException, IOException {
+  ...
+  final AsyncContext context = request.startAsync();
+  final ServletInputStream input = request.getInputStream();
+  final ServletOutputStream output = response.getOutputStream();
+  input.setReadListener(new ServerReadListenerImpl(input, output, context));
+  }
+  ...
+  }
+</pre>
+
+<p><code>@WebServlet(..., asyncSupported = true)</code> is an
+  annotation that specifies the servlet name, its URL, and enables
+  asynchronous processing.  The <code>setReadListener()</code> method
+  registers a read listener for the input stream.</p>
+<p><b>Note</b>: Non-blocking I/O only works with asynchronous request processing in servlets and
+  filters.</p>
+
+<p><b>Implementation of the Read Listener</b></p>
+
+<p><code>ReadListenerImpl.java</code> is the implementation of the <code>ReadListener</code>
+  interface:</p>
+
+<pre>
+  public class ReadListenerImpl implements ReadListener {
+
+  public ServerReadListenerImpl() {
+  ...
+  }
+
+  @Override
+  public void onDataAvailable() {
+  ...
+  while (input.isReady() && !input.isFinished()) {
+  sb.append((char) input.read()); // Use StringBuilder to append chars together
+  }
+  }
+
+  @Override
+  public void onAllDataRead() {
+  ...
+  output.print("Echo the reverse String from server: " + sb.reverse().toString() + "&lt;br&gt;");
+  output.flush();
+  ...
+  }
+
+  @Override
+  public void onError(Throwable t) {
+  ...
+  System.out.println("--> onError");
+			}
+			</pre>
+
+			<p>The <code>onDataAvailable()</code> method is invoked when data is
+			  available to be read from the input request stream. The container
+			  subsequently invokes the <code>read()</code> method if and only
+			  if <code>isReady()</code> returns
+			  true. The <code>onAllDataRead()</code> method is invoked when all the
+			  data from the request has been read. The <code>onError(Throwable
+			    t)</code> method is invoked if there is any error or exceptions occurs
+			  while processing the request.  The <code>isReady()</code> method
+			  returns true if the underlying data stream is not blocked. At this
+			  point, the container invokes the <code>onDataAvailable()</code>
+			  method.</p>
+
+			<p>You can customize the constructor to handle different
+			  parameters. Usually, the parameters
+			  are <code>ServletInputStream</code>, <code>ServletOutputStream</code>,
+			  or <code>AsyncContext</code>.  This sample uses all of them to
+			  implement the <code>ReadListener</code> interface.</p>
+
+
+			<h2>Key Features</h2>
+			<p>This sample application demonstrates the following key features:</p>
+			<ul>
+			  <li>Implementation of the <code>ReadListener</code> interface to avoid waiting for data inside a loop.</li>
+			  <li>Asynchronous processing in servlets.</li>
+			  <li>Execute a query over the Internet from the client side. You may
+			    also imagine to execute this query on the server side.</li>
+			  <li>How to parse the URL line.</li>
+			</ul>
+
+			
+
+<p>To compile and to start the execution, do the following sequence of
+  actions:</p>
+<pre>
+  MacBook-de-Christophe:weather-station-war christophecerin$ mvn clean
+  [INFO] Scanning for projects...
+  [INFO]
+  [INFO] -------------< org.glassfish-samples:weather-station-war >--------------
+    [INFO] Building weather-station-war 5.0-SNAPSHOT
+    [INFO] --------------------------------[ war ]---------------------------------
+    [INFO]
+    [INFO] --- maven-clean-plugin:2.3:clean (default-clean) @ weather-station-war ---
+    [INFO] Deleting file set: /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target (included: [**], excluded: [])
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time:  0.471 s
+    [INFO] Finished at: 2019-05-02T09:18:27+08:00
+    [INFO] ------------------------------------------------------------------------
+    MacBook-de-Christophe:weather-station-war christophecerin$ mvn install
+    [INFO] Scanning for projects...
+    [INFO]
+    [INFO] -------------< org.glassfish-samples:weather-station-war >--------------
+      [INFO] Building weather-station-war 5.0-SNAPSHOT
+      [INFO] --------------------------------[ war ]---------------------------------
+      [INFO]
+      [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ weather-station-war ---
+      [INFO] Using 'UTF-8' encoding to copy filtered resources.
+      [INFO] Copying 3 resources
+      [INFO]
+      [INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ weather-station-war ---
+      [INFO] Changes detected - recompiling the module!
+      [INFO] Compiling 3 source files to /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/classes
+      [INFO]
+      [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ weather-station-war ---
+      [INFO] Using 'UTF-8' encoding to copy filtered resources.
+      [INFO] skip non existing resourceDirectory /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/src/test/resources
+      [INFO]
+      [INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ weather-station-war ---
+      [INFO] No sources to compile
+      [INFO]
+      [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ weather-station-war ---
+      [INFO] No tests to run.
+      [INFO]
+      [INFO] --- maven-war-plugin:2.2:war (default-war) @ weather-station-war ---
+      [INFO] Packaging webapp
+      [INFO] Assembling webapp [weather-station-war] in [/Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/weather-station-war]
+      [INFO] Processing war project
+      [INFO] Copying webapp resources [/Users/christophecerin/glassfish5/samples/servlet/weather-station-war/src/main/webapp]
+      [INFO] Webapp assembled in [58 msecs]
+      [INFO] Building war: /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/weather-station-war.war
+      [INFO]
+      [INFO] --- maven-install-plugin:2.4:install (default-install) @ weather-station-war ---
+      [INFO] Installing /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/weather-station-war.war to /Users/christophecerin/.m2/repository/org/glassfish-samples/weather-station-war/5.0-SNAPSHOT/weather-station-war-5.0-SNAPSHOT.war
+      [INFO] Installing /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/pom.xml to /Users/christophecerin/.m2/repository/org/glassfish-samples/weather-station-war/5.0-SNAPSHOT/weather-station-war-5.0-SNAPSHOT.pom
+      [INFO] ------------------------------------------------------------------------
+      [INFO] BUILD SUCCESS
+      [INFO] ------------------------------------------------------------------------
+      [INFO] Total time:  2.420 s
+      [INFO] Finished at: 2019-05-02T09:18:34+08:00
+      [INFO] ------------------------------------------------------------------------
+      MacBook-de-Christophe:weather-station-war christophecerin$ mvn cargo:run
+      [INFO] Scanning for projects...
+      [INFO]
+      [INFO] -------------< org.glassfish-samples:weather-station-war >--------------
+	[INFO] Building weather-station-war 5.0-SNAPSHOT
+	[INFO] --------------------------------[ war ]---------------------------------
+	[INFO]
+	[INFO] --- cargo-maven2-plugin:1.4.0:run (default-cli) @ weather-station-war ---
+	[INFO] [en2.ContainerRunMojo] Resolved container artifact org.codehaus.cargo:cargo-core-container-glassfish:jar:1.4.0 for container glassfish4x
+	[INFO] [talledLocalContainer] Using port 4848 for Admin.
+	[INFO] [talledLocalContainer] Using port 8080 for HTTP Instance.
+	[INFO] [talledLocalContainer] Using port 7676 for JMS.
+	[INFO] [talledLocalContainer] Using port 3700 for IIOP.
+	[INFO] [talledLocalContainer] Using port 8181 for HTTP_SSL.
+	[INFO] [talledLocalContainer] Using port 3820 for IIOP_SSL.
+	[INFO] [talledLocalContainer] Using port 3920 for IIOP_MUTUALAUTH.
+	[INFO] [talledLocalContainer] Using port 8686 for JMX_ADMIN.
+	[INFO] [talledLocalContainer] Using port 6666 for OSGI_SHELL.
+	[INFO] [talledLocalContainer] Using port 9009 for JAVA_DEBUGGER.
+	[INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+	[INFO] [talledLocalContainer] [CN=Campusnetwork.net.hziee.edu.cn,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+	[INFO] [talledLocalContainer] Distinguished Name of the self-signed X.509 Server Certificate is:
+	[INFO] [talledLocalContainer] [CN=Campusnetwork.net.hziee.edu.cn-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US]
+	[INFO] [talledLocalContainer] Domain cargo-domain created.
+	[INFO] [talledLocalContainer] Domain cargo-domain admin port is 4848.
+	[INFO] [talledLocalContainer] Domain cargo-domain admin user is "admin".
+	[INFO] [talledLocalContainer] Command create-domain executed successfully.
+	[INFO] [talledLocalContainer] GlassFish 4.x starting...
+	[INFO] [talledLocalContainer] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=48m; support was removed in 8.0
+	[INFO] [talledLocalContainer] Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+	[INFO] [talledLocalContainer] Waiting for cargo-domain to start ......
+	[INFO] [talledLocalContainer] Successfully started the domain : cargo-domain
+	[INFO] [talledLocalContainer] domain  Location: /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/cargo/installs/glassfish/glassfish/domains/cargo-domain
+	[INFO] [talledLocalContainer] Log File: /Users/christophecerin/glassfish5/samples/servlet/weather-station-war/target/cargo/installs/glassfish/glassfish/domains/cargo-domain/logs/server.log
+	[INFO] [talledLocalContainer] Admin Port: 4848
+	[INFO] [talledLocalContainer] Command start-domain executed successfully.
+	[INFO] [talledLocalContainer] Application deployed with name weather-station-war.
+	[INFO] [talledLocalContainer] Command deploy executed successfully.
+	[INFO] [talledLocalContainer] Application deployed with name cargocpc.
+	[INFO] [talledLocalContainer] Command deploy executed successfully.
+	[INFO] [talledLocalContainer] GlassFish 4.x started on port [8080]
+	[INFO] Press Ctrl-C to stop the container...
+</pre>
+
+<p>It remains to explore the weather, here for Clermont-Ferrand in
+France, with a query
+like <tt>http://localhost:8080/weather-station-war/?City=1052</tt>.
+
+<h2>4- JavaMail (JEE)</h2>
+
+<p>A good introduction to Java mail is available online at
+  <a href="https://www.javatpoint.com/example-of-sending-email-using-java-mail-api">this
+  address</a> or from the
+  main <a href="https://javaee.github.io/javamail/">repository</a>.
+</p>
+
+<p>You probably need to get the following two jar
+files <code>javax.mail.jar, activation.jar</code> in order to be able
+to complie and to execute the samples. You can download the java mail
+jar file as well as sample examples
+from <a href="https://github.com/javaee/javamail/releases">https://github.com/javaee/javamail/releases</a>
+and the activation jar file
+from <a href="https://www.oracle.com/technetwork/java/jaf11-139815.html">https://www.oracle.com/technetwork/java/jaf11-139815.html</a>.</p>
+
+<p>This is an example on how to compile and send a message with a sample coming with the java mail examples:
+</p>
+
+			<pre>
+cerin@ankara:~/public_html/HDU$ javac -cp ./javax.mail.jar:./activation.jar:.  msgsendsample.java
+cerin@ankara:~/public_html/HDU$ java -cp ./javax.mail.jar:./activation.jar:.  msgsendsample christophe.cerin@orange.fr christophe.cerin@lipn.univ-paris13.fr mail.lipn.univ-paris13.fr true
+
+DEBUG: JavaMail version 1.6.2
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: setDebug: JavaMail version 1.6.2
+DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth false
+DEBUG SMTP: trying to connect to host "mail.lipn.univ-paris13.fr", port 25, isSSL false
+220 mail.lipn.univ-paris13.fr ESMTP Postfix;
+DEBUG SMTP: connected to host "mail.lipn.univ-paris13.fr", port: 25
+EHLO luxembourg.lipn.univ-paris13.fr
+250-mail.lipn.univ-paris13.fr
+250-PIPELINING
+250-SIZE 50000000
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "SIZE", arg "50000000"
+DEBUG SMTP: Found extension "ETRN", arg ""
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: use8bit false
+MAIL FROM:<christophe.cerin@lipn.univ-paris13.fr>
+250 2.1.0 Ok
+RCPT TO:<christophe.cerin@orange.fr>
+250 2.1.5 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   christophe.cerin@orange.fr
+DATA
+354 End data with <CR><LF>.<CR><LF>
+Date: Fri, 3 May 2019 02:10:29 +0200 (CEST)
+From: christophe.cerin@lipn.univ-paris13.fr
+To: christophe.cerin@orange.fr
+Message-ID: <943968903.0.1556842229376@luxembourg.lipn.univ-paris13.fr>
+Subject: JavaMail APIs Test
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+This is a message body.
+Here's the second line.
+.
+250 2.0.0 Ok: queued as 7813E261407
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+cerin@ankara:~/public_html/HDU$ ps -aux | grep -i postfix
+root      2608  0.0  0.0  30536  3816 ?        Ss   avril08   0:06 /usr/lib/postfix/master
+postfix   2612  0.0  0.0  32540  3896 ?        S    avril08   0:02 qmgr -l -t unix -u
+postfix  19036  0.0  0.0  32388  3440 ?        S    01:57   0:00 pickup -l -t unix -u -c
+cerin    19820  0.0  0.0  15484  2260 pts/7    S+   02:11   0:00 grep -i postfix
+cerin@ankara:~/public_html/HDU$ 
+</pre>
+
+<p><b>Special note:</b> the machine that executes the previous java
+command should be configured as a relay. You will probably need to run
+Postfix on your machine. To start a Postfix service on an Unix machine
+do as follows:</p>
+
+<pre>
+MacBook-de-Christophe:javamail-samples christophecerin$ sudo postfix start
+Password:
+postfix/postfix-script: starting the Postfix mail system
+MacBook-de-Christophe:javamail-samples christophecerin$ java -cp ../javax.mail.jar:../activation.jar:. msgsendsample christophe.cerin@orange.fr christophe.cerin@lipn.univ-paris13.fr mail.lipn.univ-paris13.fr true
+
+DEBUG: JavaMail version 1.6.2
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: setDebug: JavaMail version 1.6.2
+DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth false
+DEBUG SMTP: trying to connect to host "mail.lipn.univ-paris13.fr", port 25, isSSL false
+220 mail.lipn.univ-paris13.fr ESMTP Postfix;
+DEBUG SMTP: connected to host "mail.lipn.univ-paris13.fr", port: 25
+EHLO 192.168.125.115
+250-mail.lipn.univ-paris13.fr
+250-PIPELINING
+250-SIZE 50000000
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "SIZE", arg "50000000"
+DEBUG SMTP: Found extension "ETRN", arg ""
+DEBUG SMTP: Found extension "STARTTLS", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: use8bit false
+MAIL FROM:<christophe.cerin@lipn.univ-paris13.fr>
+250 2.1.0 Ok
+RCPT TO:<christophe.cerin@orange.fr>
+404 4.5.2 <192.168.125.115>: Helo command rejected: need fully-qualified hostname
+DEBUG SMTP: Valid Unsent Addresses
+DEBUG SMTP:   christophe.cerin@orange.fr
+DEBUG SMTP: Sending failed because of invalid destination addresses
+RSET
+250 2.0.0 Ok
+DEBUG SMTP: MessagingException while sending, THROW:
+javax.mail.SendFailedException: Invalid Addresses;
+nested exception is:
+com.sun.mail.smtp.SMTPAddressFailedException: 404 4.5.2 <192.168.125.115>: Helo command rejected: need fully-qualified hostname
+
+at com.sun.mail.smtp.SMTPTransport.rcptTo(SMTPTransport.java:2079)
+at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1301)
+at javax.mail.Transport.send0(Transport.java:255)
+at javax.mail.Transport.send(Transport.java:124)
+at msgsendsample.main(msgsendsample.java:86)
+Caused by: com.sun.mail.smtp.SMTPAddressFailedException: 404 4.5.2 <192.168.125.115>: Helo command rejected: need fully-qualified hostname
+
+at com.sun.mail.smtp.SMTPTransport.rcptTo(SMTPTransport.java:1979)
+... 4 more
+QUIT
+221 2.0.0 Bye
+
+--Exception handling in msgsendsample.java
+javax.mail.SendFailedException: Invalid Addresses;
+nested exception is:
+com.sun.mail.smtp.SMTPAddressFailedException: 404 4.5.2 <192.168.125.115>: Helo command rejected: need fully-qualified hostname
+
+at com.sun.mail.smtp.SMTPTransport.rcptTo(SMTPTransport.java:2079)
+at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1301)
+at javax.mail.Transport.send0(Transport.java:255)
+at javax.mail.Transport.send(Transport.java:124)
+at msgsendsample.main(msgsendsample.java:86)
+Caused by: com.sun.mail.smtp.SMTPAddressFailedException: 404 4.5.2 <192.168.125.115>: Helo command rejected: need fully-qualified hostname
+
+at com.sun.mail.smtp.SMTPTransport.rcptTo(SMTPTransport.java:1979)
+... 4 more
+
+** Invalid Addresses
+** ValidUnsent Addresses
+christophe.cerin@orange.fr
+
+
+MacBook-de-Christophe:javamail-samples christophecerin$ java -cp ../javax.mail.jar:../activation.jar:. msgsendsample christophe.cerin@orange.fr christophe.cerin@lipn.univ-paris13.fr localhost true
+
+DEBUG: JavaMail version 1.6.2
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: setDebug: JavaMail version 1.6.2
+DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth false
+DEBUG SMTP: trying to connect to host "localhost", port 25, isSSL false
+220 MacBook-de-Christophe.local ESMTP Postfix
+DEBUG SMTP: connected to host "localhost", port: 25
+EHLO 192.168.125.115
+250-MacBook-de-Christophe.local
+250-PIPELINING
+250-SIZE 10485760
+250-VRFY
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 SMTPUTF8
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "SIZE", arg "10485760"
+DEBUG SMTP: Found extension "VRFY", arg ""
+DEBUG SMTP: Found extension "ETRN", arg ""
+DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+DEBUG SMTP: use8bit false
+MAIL FROM:<christophe.cerin@lipn.univ-paris13.fr>
+250 2.1.0 Ok
+RCPT TO:<christophe.cerin@orange.fr>
+250 2.1.5 Ok
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   christophe.cerin@orange.fr
+DATA
+354 End data with <CR><LF>.<CR><LF>
+Date: Fri, 3 May 2019 08:39:58 +0800 (CST)
+From: christophe.cerin@lipn.univ-paris13.fr
+To: christophe.cerin@orange.fr
+Message-ID: <2075203460.0.1556843998941@[192.168.125.115]>
+Subject: JavaMail APIs Test
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+This is a message body.
+Here's the second line.
+.
+250 2.0.0 Ok: queued as 19E2B2017F5F8F
+DEBUG SMTP: message successfully delivered to mail server
+QUIT
+221 2.0.0 Bye
+MacBook-de-Christophe:javamail-samples christophecerin$
+</pre>		      
+
+<p><b>Special special note:</b> to configure your Postfix sender (on a
+Mac) please have a look
+to <a href="https://benjaminrojas.net/configuring-postfix-to-send-mail-from-mac-os-x-mountain-lion/">https://benjaminrojas.net/configuring-postfix-to-send-mail-from-mac-os-x-mountain-lion/</a>. In
+this tutorial the local postfix program will contact Google mail and,
+after an authentication with Gmail, with your Google login and
+password, will send your emails. In that way, people will received your
+emails according to your Google email address. This method does not
+act as a plain mail server. Google mail is used as a relay. Your local
+machine has not been configured as a mail server by itself!</p>
+
+<hr>
+
+<p>
+Christophe C&eacute;rin<br>
+<tt>christophe.cerin@univ-paris13.fr</tt><br>
+April-May, 2019
+</p>
+
+<p>
+</p>
+<hr>
+</body>
+</html>

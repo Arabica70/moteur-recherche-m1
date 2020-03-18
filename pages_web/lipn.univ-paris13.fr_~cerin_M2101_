@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Module M2101&nbsp;: Architecture et programmation des mécanismes de base d'un système informatique</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="CREATED" CONTENT="20051010;11493000">
+	<META NAME="CHANGED" CONTENT="20150130;14360300">
+	<META NAME="DC.creator" CONTENT="root">
+	<META NAME="DC.date.created" CONTENT="2004-06-21 13:58:12">
+	<META NAME="DC.date.modified" CONTENT="2005-09-08 16:15:48">
+	<META NAME="DC.description" CONTENT="">
+	<META NAME="DC.format" CONTENT="text/html">
+	<META NAME="DC.type" CONTENT="Document">
+	<META NAME="CHANGEDBY" CONTENT="Christophe Cérin">
+	<!-- base href="" -->
+	<!-- Basic crude style for Netscape4.x - This can be removed
+         if you don't want the special NS4 look - it will still work,         just be plain text instead. Column layout for Netscape4.x included -->
+	<!-- Column style sheet. -->
+	<!-- Main style sheets for CSS2 capable browsers -->
+	<!-- Old style sheet from Plone 1.0, remove tal:condition="nothing" if you need to use the old styles.
+         Will be removed in Plone 2.1. -->
+	<!-- Alternate style sheets for the bigger/smaller text switcher -->
+	<!-- Custom style sheet if available -->
+	<!-- Style sheet used for printing -->
+	<!-- Style sheet used for presentations (Opera is the only browser supporting this at the moment) -->
+	<!-- Internet Explorer CSS Fixes -->
+	<!--[if IE]>
+    <style type="text/css" media="all">@import url(http://www.fsf.org/ploneIEFixes.css);</style>    <![endif]-->
+	<!-- Disable IE6 image toolbar -->
+	<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+	<!-- A slot where you can insert CSS in the header from a template -->
+	<!-- A slot where you can insert elements in the header from a template -->
+	<!-- A slot where you can insert javascript in the header from a template -->
+	<!-- Common Plone ECMAScripts -->
+	<!-- Pull-down ECMAScript menu, only active if logged in -->
+	<!-- Define dynamic server-side variables for javascripts in this one -->
+	<SCRIPT SRC="../../Documents/SE/modele_files/plone_javascript_variables.js"></SCRIPT>
+	<SCRIPT SRC="../../Documents/SE/modele_files/plone_javascripts.js"></SCRIPT>
+	<!-- Old JS from Plone 1.0, remove tal:condition="nothing" if you need to use the old pop-ups.
+           Will be removed in Plone 2.1 -->
+	<STYLE TYPE="text/css">
+	<!--
+		H1 { margin-top: 0cm; margin-bottom: 0.13cm; background: transparent; border: 1.00pt solid #666666; padding-top: 0.05cm; padding-bottom: 0.05cm; padding-left: 0.26cm; padding-right: 0.05cm; color: #d96b11; font-family: "Georgia", "Garamond", "Times", serif; font-size: 37pt; page-break-before: always }
+		P { border: none; padding: 0cm; color: #000000; font-family: "Verdana", "Georgia", "Helvetica", Sans-serif; font-size: 11pt; text-align: left }
+		H5 { border: none; padding: 0cm; color: #000000; font-family: "Georgia", "Garamond", "Times", serif }
+		H5.hiddenstructure { font-family: "Georgia", "Garamond", "Times", serif }
+		A:link { color: #0a51a2; background: transparent; text-decoration: none }
+		A:visited { color: #552200 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0a51a2" VLINK="#552200" BGCOLOR="#ffffff" DIR="LTR" STYLE="border: none; padding: 0cm">
+<DIV ID="visual-portal-wrapper" DIR="LTR">
+	<P><BR><BR>
+	</P>
+	<DIV ID="portal-top" DIR="LTR">
+		<P><FONT FACE="Verdana">Christophe Cérin – <I>Christophe.Cerin
+		at iutv.univ-paris13.fr</I></FONT></P>
+		<H2><A HREF="http://www-info.iutv.univ-paris13.fr/"><SPAN STYLE="text-decoration: none"><FONT FACE="Verdana"><SPAN LANG="fr-FR"><SPAN STYLE="background: transparent">Module
+		M2101&nbsp;: Architecture et programmation des mécanismes de base
+		d'un système informatique, DUT informatique Villetaneuse</SPAN></SPAN></FONT></SPAN></A><SPAN STYLE="text-decoration: none">
+		</SPAN>
+		</H2>
+		<H5 CLASS="hiddenstructure" STYLE="background: #000000"><FONT COLOR="#ffffff"><FONT FACE="Verdana"><FONT SIZE=3><B>Polycopiés
+		(cours et exercices)</B></FONT></FONT></FONT></H5>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana"><B>Devoir à
+			la maison.</B></FONT><FONT FACE="Verdana"> <a href="README_devoir_maison">README</a>, <a href="papi.c">papi.c</a>, <a href="td09.c">td09.c</a></FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana"><B>Compilation & interprétation.</B></FONT><FONT FACE="Verdana"> <a href="sys01.pdf">Cours</a>, <a href="TP1.pdf">TP1</a></FONT></P>
+
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana"><B>Vertigo : les appels système.</B></FONT><FONT FACE="Verdana"> <a href="sys02.pdf">Cours et TP</a></FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana"><B>Introduction à l'ordonnancement.
+			</B></FONT><FONT FACE="Verdana"> <a href="IUTprocess.pdf">Cours</a>, <a href ="http://lipn.univ-paris13.fr/~cerin/SE/Ordonnancement_Exos.xhtml">Exercices</a> (on ne fait pas le préambule)</FONT></P>
+		</UL>
+		<H5 CLASS="hiddenstructure" STYLE="background: #000000"><FONT COLOR="#ffffff"><FONT FACE="Verdana"><FONT SIZE=3><B>Prendre
+		des notes en cours...</B></FONT></FONT></FONT></H5>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Je
+		procède parfois à la relecture de vos notes de cours de «Système»
+		depuis le début d'année afin de les noter. Voici des remarques
+		sur certaines phrases trouvées dans vos copies et qui méritent
+		une ré-écriture car ces phrases sont ambigues (dans le meilleur
+		des cas) ou ne veulent rien dire (dans le pire des cas). Je vous
+		demande de faire l'effort de ré-écriture... c'est à dire de
+		faire un travail de fond.</FONT></P>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Chapitre
+		sur les processus, communication locale sous Unix :</FONT></P>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«on risque
+			d'avoir le coût de communication supérieur au coût d'accès à
+			la mémoire» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«L'implémentation
+			2 nécessite moins de ressource mémoire parce que les instruction
+			sont utilisées moins souvent et en même temps.» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«il faut
+			programmer le nombre de messages émis et le nombre de messages
+			reçus» (quelle est la propriété que vous voulez vérifier ?) </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«plus le
+			processeur est performant, mieux les processus seront ordonnancés»
+			</FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«si le
+			processus père meurt, tout le tube disparaît» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«Il faut
+			que le coût pour permettre d'utiliser ces techniques soit
+			inférieur au coût que l'on gagnerait.» </FONT>
+			</P>
+			<LI><P><FONT FACE="Verdana">«que se passe t-il si deux ressources
+			entrent en conflit pour un espace mémoire identique ?» </FONT>
+			</P>
+		</UL>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Chapitre
+		sur Bash :</FONT></P>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«la
+			séquence des schémas de choix» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«En effet
+			certains terminaux ont été ouverts mais n'ont pas encore été
+			fermés alors que d'autres terminaux ont été ouverts après les
+			premiers mais ont été refermés avant» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«Un test
+			devra s'effectuer en amont pour ne sélectionner que l'utilisateur
+			en paramètre ce qui inclue la demande de paramètres» </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">«le Bash
+			est un langage shell» </FONT>
+			</P>
+			<LI><P><FONT FACE="Verdana">«La commande until est identique à
+			la commande while excepté que le test est négatif» </FONT>
+			</P>
+		</UL>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Chapitre
+		«Appels systeme / Compilation»</FONT></P>
+		<UL>
+			<LI><P><FONT FACE="Verdana">«popen() : permet de récupérer des
+			fichiers particuliers» </FONT>
+			</P>
+		</UL>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Par
+		ailleurs, il aurait été bon de trouver, pour chaque chapitre de
+		vos notes de cours, les informations suivantes (et en première
+		page) : titre de la leçon, thématique centrale (quel est le
+		problème qui est traité dans la leçon ?), les motivations, les
+		mots clés importants (et définitions), l'organisation de la
+		leçon... puis après tout cela, vous pouvez lister les détails
+		techniques. En bref, comme je l'avais dit dans un précédent
+		courrier, il faut commencer par un «mini sommaire» ! Il faut
+		organiser vos notes de cours et ne pas tout mettre sur le même
+		plan !</FONT></P>
+		<P STYLE="margin-left: 0.79cm; margin-bottom: 0cm"><FONT FACE="Verdana">Un
+		cours plante le décor, le contexte, donne du vocabulaire, expose
+		une problématique (et certaines techniques de résolution qui
+		seront mises en oeuvre en TD/TP). Un cours fait jouer les savoirs
+		les uns par rapport aux autres autour d'un objet donné qui peut
+		être très concret (exemple : les différents itérateurs de Bash)
+		ou très abstrait (exemple : la prise en compte de l'accès
+		exclusif aux ressources par des solutions logicielles). Encore une
+		fois, c'est donc tout cela qu'il faut faire ressortir dans vos
+		notes de cours afin de vous approprier les notions. De plus vous
+		êtes impardonnables car à chaque début de cours je fais un
+		résumé des épisodes précédents, donc vous avez de la matière
+		pour <I>rédiger</I> vos notes !</FONT></P>
+
+
+
+                <H5 CLASS="hiddenstructure" STYLE="background:
+#000000"><FONT COLOR="#ffffff"><FONT FACE="Verdana"><FONT SIZE=3><B>Quelques sujets et propositions de corrections d'examen...</B></FONT></FONT></FONT></H5>
+                <UL>
+                        <LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">
+Le <A HREF="Controle18032015.pdf">Controle</A> du 18 mars 2015
+                         </FONT>
+                        </P></LI>
+		</UL>
+
+		<H5 CLASS="hiddenstructure" STYLE="background: #000000"><FONT COLOR="#ffffff"><FONT FACE="Verdana"><FONT SIZE=3><B>Ressources
+		pour aller plus loin...</B></FONT></FONT></FONT></H5>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">Un <A HREF="http://www-igm.univ-mlv.fr/%7Edr/NCS/CHTML.html">cours</A>
+			complet. </FONT>
+			</P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">Une
+			introduction a <A HREF="nachos.pdf">NACHOS</A> dont la racine du
+			projet est <A HREF="http://www.cs.washington.edu/homes/tom/nachos/">ici</A></FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">La page de
+			<A HREF="http://www.cs.vu.nl/%7East/">Andrew S. Tanenbaum</A></FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">La page du
+			livre <A HREF="http://codex.cs.yale.edu/avi/os-book/os7/">Operating
+			System Concepts </A>Seventh Edition, par Avi Silberschatz, Peter
+			Baer Galvin and Greg Gagne -- John Wiley &amp; Sons, Inc. Voir
+			aussi la page de <A HREF="http://williamstallings.com/OS4e.html">W.
+			Stallings</A> pour un autre livre traitant des systèmes
+			d'exploitation.</FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">La page <A HREF="http://www.nondot.org/sabre/os/articles">The
+			operating system resource center</A></FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Verdana">Les news en
+			Anglais sur <A HREF="OSnews">http://www.osnews.com/</A></FONT></P>
+			<LI><P STYLE="margin-bottom: 0cm"><A HREF="http://www.linux.org/"><FONT FACE="Verdana">http://www.linux.org/</FONT></A></P>
+		</UL>
+		<P><BR><BR>
+		</P>
+		<DIV ID="portal-breadcrumbs" DIR="LTR">
+			<P><BR><BR>
+			</P>
+		</DIV>
+	</DIV>
+</DIV>
+</BODY>
+</HTML>

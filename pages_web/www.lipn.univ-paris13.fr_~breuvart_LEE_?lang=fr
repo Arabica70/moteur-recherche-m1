@@ -1,0 +1,134 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>page du cours "langages et environements évolués"</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=../index.php?lang=fr>Index</a></li>
+	  <li><a href=../publications.php?lang=fr>Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Projets <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href=../Projets.php?lang=fr>Propositions</a></li>
+            <li><a href=../CoGITARe/?lang=fr>ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=../stages.php?lang=fr>Stage/thèses</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Enseignement <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=../compilation/?lang=fr>Compilation</a></li>
+	         <li><a href=../principes_de_programmation/?lang=fr>Principes de Prog (old)</a></li>
+             <li><a href=../prog_fonctionnelle/?lang=fr>Prog. fonctionnelle (old)</a></li>
+             <li class="active"><a href="#">LEE</a></li>
+             <li><a href=../Architecture_systeme/?lang=fr>Architecture et Systeme (old)</a></li>
+             <li><a href=../DIU-EIL/?lang=fr>DIU-EIL</a></li>
+             <li><a href=../misa/?lang=fr>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=../data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+    <header>
+	  Cours "Langages et Environnements Évolues" </br>
+	  en M2 PLS/EID
+    </header>
+
+      <div class="publications">
+	<h2> Cours </h2>
+	<UL TYPE=square>
+	  <LI> <a href="sommaire.pdf"> Sommaire</a>: Sommaires des parties et sous-parties du cours. 
+	  <LI> <a href="lexique.pdf"> Lexique</a>: Un petit lexique des mots/acronymes techniques vus en cours ou que l'on peut croiser dans l'univers java. 
+	</UL>
+      </div>
+
+      <div class="publications">
+	<h2> Énoncés de TP </h2>
+Attentes : Il n'est pas nécéssaire, encore mois demandé (et en fait souvant très difficile) de faire tous les TPs. Il y a 3 TPs car il s'agit de technologies diférentes et que les problèmes liés à l'instalation et l'environement y seront diférents. En effet, les configurations des technologies proposés étant soit générés soit choisi par défaut, de nombreux bloquage peuvent être rencontrés. Lorsque ceux-ci sont infranchissable, veuillez passer à un autre TP. Il sera par contre attendu que vous ayez fait une moitié de l'un des TPs.
+	<UL TYPE=square>
+	  <LI> <a href="TP0.pdf"> TP0</a>: Install Party
+	  <LI> <a href="TP1.pdf"> TP JEE</a>: Une application JEE
+      <LI> <a href="TP1_docker.pdf"> TP Docker</a>: Version dockerisée du TP JEE. Intéret : utiliser Docker et permet d'avoir une installation JEE fonctionelle.
+	  <LI> <a href="TP2.pdf"> TP Spring</a>: Spring et Hibernate sans JEE
+	</UL>
+      </div>
+
+<!--
+      <div class="publications">
+	<h2> Intervenants professionnels </h2>
+	<UL TYPE=square>
+	  <LI> Nicolas Rolin : <a href="https://github.com/NicolasRolin13/EID2PLS-expenses"> Dépot git du cours</a>
+	  <LI> <a href="https://joxit.github.io/"> Jones Magloire</a>   
+	       <a href="https://fr.linkedin.com/in/joxit"> <img src="../images/linkedinicon.jpg" alt="Lien Linkedin" style="width:15px;height:15px;"></a> : 
+               Travail chez <a href="https://www.ebusinessinformation.fr/"> eBuisiness Information </a> </br>
+	    Technos utilisées: Intellij, maven, docker, Spring framework, hibernate orm, un SGBD (docker postgres ou mysql) 
+	  <LI> Amel Ghadab
+	</UL>
+      </div>
+
+-->
+      <div class="publications">
+	<h2> Examens </h2>
+	<UL TYPE=square>
+	  <LI> <a href="DOC-corrige.pdf"> Examen 2017 corrigé</a> 
+	</UL>
+      </div>
+
+      <div class="publications">
+	<h2> Références </h2>
+	<UL TYPE=square>
+	  <LI> <a href="https://webdsi.univ-paris8.fr/fortier/index.php?n=Enseignement.EnvironnementEtLangagesEvolu%C3%A9s"> cours 2016 </a>: Cours donné par Michael Fortier de 2016 (contenu sensiblement différent).
+	  <LI> <a href="https://www.jetbrains.com/help/idea/"> Manuel JetBrain </a>: meilleur (seul ?) description des mécanismes propres à intelliJ
+                   <LI> <a href="https://www.jetbrains.com/help/idea/tutorial-java-debugging-deep-dive.html"> tutoriel du debugmod d'IntelliJ</a> : Les condition du cours (temps et taille des TPs) font qu'il n'y a pour l'instant aucune mention du mode de débug de IntelliJ, pourtant essenciel à tout projet. Je vous invite donc à lire ce tutoriel, surtout si votre stage se passe sous intelliJ (ou un autre IDE Jetbrain).
+	  <LI> <a href="https://docs.docker.com/get-started/"> Tutoriel officiel Docker </a>: Très bon tutoriel
+	  <LI> <a href="https://docs.oracle.com/javase/tutorial/"> Tutoriel officiel Java </a>: Très bons tutoriels
+	  <LI> <a href="https://docs.oracle.com/javaee/7/tutorial/"> Tutoriel officiel JEE </a>: Seul tutoriel en ligne trouvé pour JEE
+	  <LI> <a href="http://www.corej2eepatterns.com/index.htm"> Core J2EE patterns </a>: Livre sur JEE et ses patterns, plein de bon conseils
+	  <LI> <a href="https://docs.spring.io/spring/docs/5.0.2.BUILD-SNAPSHOT/spring-framework-reference/index.html"> Tutoriel officiel Spring </a>: avec en particulier <a href="https://docs.spring.io/spring/docs/5.0.2.BUILD-SNAPSHOT/spring-framework-reference/core.html#beans"> Spring Core IoC </a> et <a href="https://docs.spring.io/spring/docs/5.0.2.BUILD-SNAPSHOT/spring-framework-reference/web.html#mvc"> Sprig Web MVC</a>
+	  <LI> <a href="http://jpwh.org/"> Java Persistence with Hibernate </a>
+	  <LI> <a href="https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04"> Un tuto Docker</a> et <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04"> un tuto Docker-compose</a> proposés par Oussama (merci à lui).
+	  <LI> <a href="https://dzone.com/articles/docker-security-best-practices-2017"> Bonnes pratiques de déploiement via Docker</a> La présentation de Docker pour le déploiement étant très rapide, je n'aborde pas les subtilités techniques pour rendre Docker sécurisé. Comme pour toutes les nouvelles technologies, les problèmes de sécurité sont aussi nouveaux et pas forcément intégrés. A lire si vous voulez déployer une vrais application via Docker.
+	  <LI> <a href="https://logging.apache.org/log4j/2.x/manual/api.html"> Manuel d'utilisation Log4J </a> et <a href="https://logging.apache.org/log4j/2.x/manual/configuration.html"> le manuel de configuration </a> 
+	  <LI> <a href="https://www.tutorialspoint.com/spring/index.htm"> Tutos rapide </a> sur plusieurs frameworks, Spring en particulier. 
+	</UL>
+      </div>
+
+
+    <center>    
+       <a href="https://xkcd.com/license.html"><img src="https://imgs.xkcd.com/comics/containers.png" alt="XKCD docker" title="All services are microservices if you ignore most of their features. XKCD."></a>
+    </center>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

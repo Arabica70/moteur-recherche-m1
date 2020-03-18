@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" /><title>Machine Learning and Data Science - Y. Bennani Website - Université Paris 13 - Sorbonne Paris Cité</title>
+  
+
+
+  <meta name="Unsupervised Collaborative Learning from distributed data, Probabilistic approaches, geometric approaches,Unsupervised transfer learning and domain Adaptation, Matrix factorization methods, deep learning, Unsupervised representations learning, Deep Neural Networks, Multi-resolution methods, Dimensionality reduction, Features selection and extraction" content="" />
+
+  <meta name="description" content="" />
+
+  <link href="styles.css" rel="stylesheet" type="text/css" /><!--
+<script language="JavaScript">function AccesProtege(){self.location.href=prompt("Mot de passe :","")+".html";}
+</script>-->
+
+
+  <script type="text/javascript">
+//<!--
+function ffalse()
+{
+return false;
+}
+function ftrue()
+{
+return true;
+}
+document.onselectstart = new Function ("return false");
+if(window.sidebar)
+{
+document.onmousedown = ffalse;
+document.onclick = ftrue;
+}
+//-->
+  </script></head><body style="background-image: url(images/Mojave%20Night.jpg);" oncontextmenu="return false">
+<div style="height: 244px;" id="header"><br />
+<div style="text-align: left;"><br />
+</div>
+<br />
+<table style="text-align: left; width: 731px; height: 160px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;"><br />
+      <a href="https://www.univ-paris13.fr/"><img style="border: 0px solid ; width: 230px; height: 99px;" alt="" src="images/logoUSPN-BL.png" /></a><br />
+<br />
+<br />
+<a href="https://lipn.univ-paris13.fr/%7Ebennani/"><img style="border: 0px solid ; width: 230px; height: 45px;" alt="" src="images/YounesBennani-Blc.png" hspace="0" vspace="0" /></a><br />
+Full Professor<br />
+Machine Learning &amp; Data Science<br />
+Vice-President Digital Transformation<br />
+      <font style="color: white;" size="-1"><img style="width: 56px; height: 49px;" alt="" src="images/Etoile-filante.gif" /></font>
+</td>
+<td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img style="width: 419px; height: 208px;" alt="" src="images/head.png" /><br />
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;
+<br />
+<br />
+</div>
+
+<br />
+
+<br />
+
+<div id="page">
+<div id="content">
+<div class="post">
+<h1 class="title"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><span style="color: rgb(49, 116, 241);">Welcome</span><span style="color: rgb(0, 204, 204);"><span style="color: rgb(230, 49, 37);">to</span><span style="color: rgb(246, 173, 1);">my</span><span style="color: rgb(36, 154, 65);">Website</span></span></span></span><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);" /></span></small><font style="color: white;" size="-1"><big><span style="font-style: italic;" /></big></font>
+
+</h1>
+<div> </div>
+</div>
+<div style="text-align: right;"> </div>
+<div class="post">
+<div> </div>
+<div style="text-align: right;"><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);" /></span></small>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><img style="width: 167px; height: 167px;" alt="" src="images/Younes.png" /><br />
+      </td>
+      <td style="vertical-align: top; text-align: right;"><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);" /></span></small><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);"><br />
+<br />
+«Ignorance leads to fear, fear leads to hatred<br />
+
+and hatred leads to violence. That's the equation</span></span></small><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);">»</span></span></small><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);"><a href="https://fr.wikipedia.org/wiki/Averro%C3%A8s"><br />
+(Ibn Roshd, ابن رشد,</a> <a href="https://en.wikipedia.org/wiki/Averroes">Averroès, 1126-1198)</a><br />
+      <br />
+      </span></span></small><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);">
+« Raise your words, not voice. It is rain that grows flowers, not
+thunder </span></span></small><small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);">»</span></span></small><br />
+
+      <small style="font-style: italic;"><span style="color: rgb(255, 255, 255);"><span style="color: rgb(204, 204, 204);">&nbsp;<a href="https://fr.wikipedia.org/wiki/Djal%C3%A2l_ad-D%C3%AEn_R%C3%BBm%C3%AE">(Jalal
+Ad-Din Rumi, 1207-1273)</a>
+      </span></span></small></td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: justify;"><small><big>Younès Bennani received
+his PhD in Machine Learning from <a href="https://www.universite-paris-saclay.fr/en">Paris-Saclay University</a>. He is
+currently Full Professor in Computer Science at <a href="https://www.univ-paris13.fr/en/">Sorbonne Paris Nord University</a><a href="https://www.univ-paris13.fr/en/">. Younès Bennani
+research interests are in Machine Learning and Data Science. His
+research focuses on unsupervised learning,
+deep learning, collaborative clustering. His recent work deals with the
+representations learning, </a></big><a href="https://www.univ-paris13.fr/en/" /></small><a href="https://www.univ-paris13.fr/en/"><small><big>transfer learning and domain adaptation. </big></small><small><big>He
+is the founder and scientific director (from 2005 to 2011) of a team
+whose main theme is </big></small></a><small><big><a href="https://lipn.univ-paris13.fr/en/a3-machine-learning-and-applications/">Machine Learning and Applications (A3)</a> at the
+<a href="https://lipn.univ-paris13.fr/en/home/">computer lab. of Paris-Nord</a> (<a href="http://www.cnrs.fr/en">UMR 7030 CNRS</a>). He has published 3
+books and approximately 300 papers in refereed conferences proceedings
+or journals or as contributions in books. Younès Bennani is
+the Vice-President for Digital Transformation at the <a href="https://www.univ-paris13.fr/">Sorbonne Paris Nord
+University</a><a href="http://www.sorbonne-paris-cite.fr/en"> - </a><a href="http://www.enseignementsup-recherche.gouv.fr/" target="_blank">Ministère
+de l'Enseignement Supérieur, de la Recherche et de l'Innovation</a></big></small><big><a href="http://www.enseignementsup-recherche.gouv.fr/" target="_blank">.</a></big><br />
+</div>
+</div>
+<div style="text-align: justify;"><br />
+<br />
+<h1 class="title"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small>Latest <span style="color: rgb(0, 204, 204);">research:</span></small></span></span></h1>
+<p style="text-align: justify; line-height: 10px;"><a href="http://www.iste.co.uk/book.php?id=1526"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>«<span style="font-style: italic;" /></big></big></big></big></span></small></small></small></small></span></span><span style="color: rgb(255, 153, 255); font-style: italic;"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>Advances in Domain Adaptation Theory</big></big></big></big></span></small></small></small></small></span></span><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>»</big></big></big></big></span></small></small></small></small></span></span><span style="font-style: italic;" /></a><a href="https://www.elsevier.com/books/domain-adaptation-theory/levgen/978-1-78548-236-6"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>, ISBN: 9781785482366 - ISTE - Elsevier, 2019.</big></big></big></big></span></small></small></small></small></span></span></a></p>
+<p style="text-align: justify; line-height: 10px;"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>«<span style="font-style: italic;">A new sparse representation learning of complex data: application to dynamic clustering of web navigation</span>»,<a href="https://www.sciencedirect.com/journal/pattern-recognition"> Pattern Recognition</a> (The journal of Pattern Recognition Society), Elsevier,
+2019. </big></big></big></big></span></small></small></small></small></span></span></p>
+
+
+
+<small><small><small><small><small><font color="#003333" size="+2"><small><small><small><small><small><span style="color: rgb(204, 204, 204);" /></small></small></small></small></small></font></small></small></small></small></small><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);">
+<p style="text-align: justify; line-height: 10px;"><big><big><big><big>«<span style="font-style: italic;">Collaborative
+Clustering: Why, When, What and How</span>»,<a href="http://www.sciencedirect.com/science/article/pii/S1566253517300027">
+International Journal on
+Information Fusion</a> (Information Fusion), Elsevier, January
+2018. <br />
+
+</big></big></big></big></p>
+
+
+<p style="text-align: justify; line-height: 10px;"><big><big><big><big>«<span style="font-style: italic;">Co-clustering through Optimal Transport</span>»,
+International Conference on
+Machine Learning (<a target="_blank" href="https://2017.icml.cc/">ICML'2017</a>),
+Australia.</big></big></big></big></p></span></small></small></small></small></span></span>
+<div style="text-align: left;"><small><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);">
+<p style="text-align: justify; line-height: 10px;"><big><big><big><big><a href="http://www.cnrs.fr/ins2i/spip.php?article2627">CNRS - Actualités scientifiques</a><br />
+</big></big></big></big></p>
+</span></small></small></small></small></span></span><a href="https://vimeo.com/238229712">TechTalksTV</a></small><br />
+<span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);">
+<p style="text-align: justify; line-height: 10px;"><big><big><big><big>
+</big></big></big></big></p>
+</span></small></small></small></small></span></span></div>
+<span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);">
+<big><big><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><big>
+</big></small></small></span></span></big></big><br />
+</span></small></small></small></small></span></span>
+<h1 class="title"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small>Scientific <span style="color: rgb(0, 204, 204);">events:</span></small></span></span></h1>
+<ul><big>
+  </big><li><span style="font-weight: bold; color: rgb(0, 204, 204);">ETP</span>:
+    <a href="http://www.ensat.ac.ma/ecole-thematique/DeepLearning.html">«Deep
+Learning &amp; Data Science»</a> Ecole Thématique de Printemps.<br />
+
+    </li><big>
+  </big><li><span style="font-weight: bold; color: rgb(0, 204, 204);">CIF-SD</span>:
+    <a href="https://cifsd-2018.sciencesconf.org/">Conférence
+Internationale Francophone sur la Science des Données</a></li><big>
+  </big><li><span style="font-weight: bold;"><span style="color: rgb(0, 204, 204); font-weight: bold;">H2DM</span>: </span><a href="https://h2dm2016.sciencesconf.org/">International Workshop on
+High Dimensional Data Mining</a></li><big>
+  </big></ul>
+<br />
+<div style="text-align: center;"><a href="https://numerique.univ-paris13.fr/"><img src="images/LaMSN.png" alt="" style="border: 0px solid ; width: 205px; height: 46px;" /></a><br />
+</div>
+<br />
+<br />
+<div style="text-align: center;"><a href="http://lipn.univ-paris13.fr/en/"><img style="border: 0px solid ; width: 43px; height: 35px;" alt="" src="images/logo_LIPN.png" /></a>&nbsp;&nbsp; <a href="http://www.cnrs.fr/"><img style="border: 0px solid ; width: 34px; height: 34px;" alt="" src="images/CNRS.png" /></a>&nbsp;&nbsp; <a href="https://galilee.univ-paris13.fr/"><img style="border: 0px solid ; width: 66px; height: 27px;" alt="" src="images/Galile%CC%81e.png" /></a>&nbsp;&nbsp; <a href="https://www.univ-paris13.fr/"><img style="border: 0px solid ; width: 70px; height: 30px;" alt="" src="images/logoUSPN-BL.png" /></a>
+</div>
+</div>
+<br />
+<br />
+<br />
+</div>
+</div>
+<a href="javascript:AccesProtege()"><br />
+</a>
+<div id="sidebar">
+<div id="menu" class="box">
+<h2 class="title" style="color: rgb(255, 0, 134);">Menu</h2>
+<ul>
+  <li class="first"><a href="index.html">Home</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="supervision.html">PhD. Supervision</a></li>
+  <li><a href="publications.html">Publications</a></li>
+  <li><a href="teaching.html">Teaching</a></li>
+  <li><a href="management.html">Management</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://dblp.org/pers/hd/b/Bennani:Youn=egrave=s" target="_top"><img src="images/dblp.jpeg" alt="" style="border: 0px solid ; width: 32px; height: 32px;" /></a>&nbsp; <a href="https://www.researchgate.net/profile/Younes_Bennani"><img src="images/RG.jpg" alt="" style="border: 0px solid ; width: 32px; height: 32px;" /></a>&nbsp; <a href="https://twitter.com/Aveyounes"><img src="images/twitter_32_32.png" alt="" style="border: 0px solid ; width: 32px; height: 32px;" /></a>&nbsp; <a href="https://www.linkedin.com/in/youn%C3%A8s-bennani-b3694122/"><img src="images/linkedin_32_32.png" alt="" style="border: 0px solid ; width: 32px; height: 32px;" /></a><br />
+</div>
+<div style="text-align: left;">
+<div style="text-align: center;"><a href="https://numerique.univ-paris13.fr/"><img src="images/LaMSN.png" alt="" style="border: 0px solid ; width: 205px; height: 46px;" /></a><br />
+<a href="https://learndigital.withgoogle.com/digitalactive"><img style="border: 0px solid ; width: 239px; height: 67px;" alt="" src="images/Google-AN.png" /></a><br />
+<small>Google et
+LaMSN de l'USPN&nbsp; proposent une formation gratuite et certifiante au
+digital<br />
+du 17 au 20 février&nbsp; 2020</small><a href="https://bit.ly/2FsmPaE"><br />
+</a>
+
+
+<span style="color: red;">Inscriptions clôturées !</span><br />
+
+Merci pour votre intérêt mais cette date est à présent complète !<br />
+<a href="https://bit.ly/2FsmPaE"><img style="border: 0px solid ; width: 218px; height: 122px;" alt="" src="images/Google@P13.jpg" /></a><br />
+<br />
+
+</div>
+<div style="text-align: center;"><a href="https://www.elsevier.com/books/domain-adaptation-theory/levgen/978-1-78548-236-6"><font style="color: white;" size="-1"><img style="width: 40px; height: 18px;" alt="" src="images/new%20bleue%20clignotante.gif" /></font></a><br />
+<a href="https://www.elsevier.com/books/domain-adaptation-theory/levgen/978-1-78548-236-6"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big><img style="border: 0px solid ; width: 102px; height: 159px;" alt="" src="images/doc_cover_12-6-19-15-23-57_medium.jpg" /></big></big></big></big></span></small></small></small></small></span></span></a>
+</div>
+
+<a href="http://www.iste.co.uk/book.php?id=1526"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>«<span style="font-style: italic;" /></big></big></big></big></span></small></small></small></small></span></span><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>Advances in Domain Adaptation Theor<span style="font-style: italic;">y</span></big></big></big></big></span></small></small></small></small></span></span><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>»</big></big></big></big></span></small></small></small></small></span></span><span style="font-style: italic;" /></a><br />
+<p style="text-align: center; line-height: 10px;"><small><a href="https://www.elsevier.com/books/domain-adaptation-theory/levgen/978-1-78548-236-6"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);"><small><small><small><small><span style="color: rgb(204, 204, 204);"><big><big><big><big>Hardcover ISBN: 9781785482366<br />
+eBook ISBN: 9780081023471<br />
+ISTE - Elsevier, 2019</big></big></big></big></span></small></small></small></small></span></span></a></small></p>
+
+
+
+<div style="text-align: center;"><span style="font-weight: bold;"><font size="-1"><span style="color: rgb(59, 94, 107);" /></font></span><br />
+
+</div>
+</div>
+<div style="text-align: center;"><font style="color: white;" size="-1"><a href="http://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html" class="GoogleAnalyticsET-processed"><span style="font-weight: bold;" /></a><span style="color: white;"><sup><a href="https://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html"><img style="border: 0px solid ; width: 85px; height: 85px;" alt="" src="images/Since-2001-EID2.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </sup></span></font><small><a href="https://www.meilleurs-masters.com/master-informatique-decisionnelle.html"><img style="border: 0px solid ; width: 109px; height: 106px;" alt="" src="Web_Master_Info/Eduniversal-2020.png" /></a></small><font style="color: white;" size="-1"><span style="color: white;"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+</sup></span></font>
+<div style="text-align: center;"><font style="color: white;" size="-1"><a href="http://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html" class="GoogleAnalyticsET-processed"><span style="font-weight: bold;">Master
+of Data Science &amp; Machine Learning</span></a><br />
+<span style="color: white;">Master EID<sup>2</sup></span></font>
+</div>
+<font style="color: white;" size="-1">
+<br />
+</font> <a href="http://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html"><img src="images/EID2.png" alt="" style="border: 0px solid ; width: 243px; height: 170px;" /></a><br />
+<a href="http://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html"><br />
+</a>
+</div>
+<div style="text-align: center;">
+<div style="text-align: right;"><small>&nbsp;</small><br />
+</div>
+<small>
+</small><br />
+</div>
+<a href="https://learndigital.withgoogle.com/digitalactive"><br />
+</a>
+<div style="text-align: center;"><font style="color: white;" size="-1"><a href="http://lipn.univ-paris13.fr/%7Ebennani/Web_Master_Info/Master_Info_2.html" class="GoogleAnalyticsET-processed"><span style="font-weight: bold;" /></a></font><br />
+<br />
+</div>
+<div style="clear: both;">
+<h1 class="title"><span style="color: rgb(255, 153, 255);"><span style="color: rgb(255, 0, 134);">&nbsp;&nbsp;&nbsp; <br />
+</span></span></h1>
+</div>
+<div id="footer"><span style="color: rgb(255, 255, 255);">&nbsp;&nbsp; </span><a href="https://www.univ-paris13.fr/"><span style="color: rgb(255, 255, 255);" /></a><big><a href="https://www.univ-paris13.fr/">Université Sorbonne Paris Nord</a></big><br />
+
+
+<p><span style="color: rgb(204, 204, 204);"><a href="https://lipn.univ-paris13.fr/en/">Laboratoire d'Informatique de
+Paris-Nord </a>- <a href="http://www.cnrs.fr/">CNRS (UMR 7030)</a></span></p>
+<p><span style="color: rgb(204, 204, 204);"><a href="https://numerique.univ-paris13.fr/">La Maison des Sciences Numériques - LaMSN<br />
+</a> </span></p>
+
+<p><br />
+<br />
+</p>
+</div>
+<br />
+</div>
+
+<br />
+
+<br />
+
+</body></html>

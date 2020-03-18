@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Unix System Programming</title>
+<style type="text/css">
+
+
+body {
+	/* font-family: "Adobe Caslon Pro", "Minion Pro", serif; */
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 13pt;
+	background-color: #eee;
+}
+
+table {
+	background-color: #f8f8ff;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #ccc solid;
+}
+
+th, td {
+	padding: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px #aaa solid;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+th {
+	background-color: #eef;
+	text-align: left;
+}
+
+.document {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+	width: 800px;
+	background-color: white;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+}
+
+.large {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.med {
+	font-size: 120%;
+}
+
+.cmd {
+	border: 1pt #ccc solid;
+	padding: 2pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	background-color: #fee;
+   font-family: monospace;
+	font-weight: bold;
+	/* font-size: 110%; */
+}
+
+
+.literal-block {
+	border: 1px #999 dashed;
+	padding: 5px;
+	background-color: #e8e8e8;
+}
+
+.literal {
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #e8e8e8;
+}
+
+</style>
+</head>
+<body>
+<div class="document" id="unix-system-programming">
+<h1 class="title">Unix System Programming</h1>
+
+<p>(Last update: Mon Sep 21 13:41:51 CEST 2015)</p>
+<!-- this course {{{ -->
+<div class="section" id="this-course">
+<h1>1&nbsp;&nbsp;&nbsp;This Course</h1>
+<ul>
+<li><div class="first line-block">
+<div class="line"><strong>Contact info</strong>:</div>
+<div class="line">César Rodríguez &lt;<a class="reference external" href="mailto:cesar.rodriguez&#64;lipn.fr">cesar.rodriguez&#64;lipn.fr</a>&gt;</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Course web page</strong>:</div>
+<div class="line"><a class="reference external" href="http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2015-16/">http://lipn.univ-paris13.fr/~rodriguez/teach/unix/2015-16/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Source code examples (and Makefile)</strong>:</div>
+<div class="line">Available <a class="reference external" href="code/">here</a>.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Some exercises</strong>:</div>
+<div class="line">Available <a class="reference external" href="e.pdf">here</a>.</div>
+</div>
+</li>
+</ul>
+<div class="section" id="syllabus">
+<h2>1.1&nbsp;&nbsp;&nbsp;Syllabus</h2>
+<ul class="simple">
+<li>gcc, make, vi</li>
+<li>File I/O</li>
+<li>Process management</li>
+<li>Pipes</li>
+<li>Signals</li>
+<li>Sockets</li>
+</ul>
+<!-- }}} -->
+<!-- intro {{{ -->
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>2&nbsp;&nbsp;&nbsp;Introduction</h1>
+<div class="section" id="getting-help">
+<h2>2.1&nbsp;&nbsp;&nbsp;Getting help</h2>
+<ul>
+<li><div class="first line-block">
+<div class="line">An online reference for the C language:</div>
+<div class="line"><a class="reference external" href="http://en.cppreference.com/w/c">http://en.cppreference.com/w/c</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">The manual pages, both from the terminal and online:</div>
+<div class="line"><a class="reference external" href="http://linux.die.net/man/">http://linux.die.net/man/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">The GNU C library manual:</div>
+<div class="line"><a class="reference external" href="https://www.gnu.org/software/libc/manual/html_node/index.html">https://www.gnu.org/software/libc/manual/html_node/index.html</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">A quick tutorial on the C language:</div>
+<div class="line"><a class="reference external" href="http://www.tutorialspoint.com/cprogramming/c_quick_guide.htm">http://www.tutorialspoint.com/cprogramming/c_quick_guide.htm</a></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="system-calls">
+<h2>2.2&nbsp;&nbsp;&nbsp;System calls</h2>
+<ul class="simple">
+<li>Specific procedure, as processor needs to switch to supervisor mode</li>
+<li>The standard C library provides C-wrappers</li>
+<li>Documented in <a class="reference external" href="http://linux.die.net/man/2/">section 2</a>; see also <a class="reference external" href="http://linux.die.net/man/3/">section 3</a> and <a class="reference external" href="http://linux.die.net/man/7/">section 7</a></li>
+<li>380 system calls for Linux 3.2.0, see <a class="reference external" href="http://linux.die.net/man/2/syscalls">syscalls(2)</a></li>
+</ul>
+</div>
+<div class="section" id="error-handling">
+<h2>2.3&nbsp;&nbsp;&nbsp;Error handling</h2>
+<ul>
+<li><p class="first">System calls almost always return -1 (or NULL) when an error occurs</p>
+</li>
+<li><p class="first">C library makes available an <cite>explanation</cite> through variable</p>
+<pre class="literal-block">
+extern int errno;
+</pre>
+<p>defined in <tt class="docutils literal">&lt;errno.h&gt;</tt>, see <a class="reference external" href="http://linux.die.net/man/3/errno">errno(3)</a></p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><strong>Variables</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/errno">errno(3)</a></td>
+</tr>
+<tr><td><strong>Functions</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/strerror">strerror(3)</a>, <a class="reference external" href="http://linux.die.net/man/3/perror">perror(3)</a></td>
+</tr>
+<tr><td><strong>See also</strong></td>
+<td><a class="reference external" href="http://linux.die.net/man/3/err">err(3)</a> (non-standard BSD functions, but very handy)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="first-example">
+<h2>2.4&nbsp;&nbsp;&nbsp;First example</h2>
+<pre class="literal-block">
+#include &lt;errno.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char *argv[])
+{
+   int fd, errnum;
+
+   fd = open (&quot;fjaksdjfsdklfjdsklf&quot;, O_RDONLY);
+   if (fd &lt; 0)
+   {
+      /* at this point, quite probably, errno == ENOENT */
+      errnum = errno;
+      printf (&quot;Errror, I cannot open the file\n&quot;);
+      printf (&quot;errno    is '%d'\n&quot;, errnum);
+      printf (&quot;strerror is '%s'\n&quot;, strerror (errnum));
+      exit (1);
+   }
+
+   printf (&quot;The file exists!!\n&quot;);
+   exit (0);
+}
+</pre>
+<ul class="simple">
+<li>Use <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/exit.3.html">exit(3)</a> (or simply <tt class="docutils literal">return</tt> from the <tt class="docutils literal">main</tt> function) to terminate
+the program.  The <em>return code</em> of the program is the value passed to
+<tt class="docutils literal">exit</tt> or returned from <tt class="docutils literal">main</tt> (and later available in the <tt class="docutils literal">$?</tt> shell
+variable ;)</li>
+</ul>
+</div>
+<div class="section" id="compiling-with-gcc">
+<h2>2.5&nbsp;&nbsp;&nbsp;Compiling with <tt class="docutils literal">gcc</tt></h2>
+<p>Assume you have a small project consisting on two C files, <tt class="docutils literal">main.c</tt>,
+containing the <tt class="docutils literal">main()</tt> function of the program, and <tt class="docutils literal">aux.c</tt>,
+containing auxiliary code.</p>
+<p>Compiling and linking with one command:</p>
+<pre class="literal-block">
+gcc aux.c main.c -o myprog
+</pre>
+<p>Compiling into object code + linking:</p>
+<pre class="literal-block">
+gcc aux.c        # outputs aux.o
+gcc main.c       # outputs main.o
+gcc aux.o main.o -o myprog
+</pre>
+<p>The <strong>advantage</strong> of the second method is that it requires compiling only
+the files that were modified since last compilation (+ linking)</p>
+<p>Here are some <strong>frequent options</strong>:</p>
+<pre class="literal-block">
+-g
+-Wall
+-Wextra
+-O1, -O2, -O3
+-lm
+-lMY_LIB
+-I INCLUDE_DIR
+-D MACRO=VALUE
+</pre>
+</div>
+<div class="section" id="using-make">
+<h2>2.6&nbsp;&nbsp;&nbsp;Using <tt class="docutils literal">make</tt></h2>
+<ul>
+<li><p class="first">The tool <tt class="docutils literal">make</tt> computes which parts of a program need to be recompiled
+and calls the compiler accordingly</p>
+</li>
+<li><p class="first">Information about the source code is in the file <tt class="docutils literal">Makefile</tt> (or
+<tt class="docutils literal">makefile</tt>)</p>
+</li>
+<li><p class="first">Target-oriented rules of the form:</p>
+<pre class="literal-block">
+target : prerequisite1 prerequisite2
+&lt;TAB&gt; shell commands using the prerequisites and generating the target
+&lt;TAB&gt; more shell commands
+</pre>
+</li>
+<li><p class="first">Observe that the commands need to be prefixed with a tab (!)</p>
+</li>
+<li><p class="first">The target of the first rule in the <tt class="docutils literal">Makefile</tt> becomes the <cite>default
+target</cite></p>
+</li>
+</ul>
+<p>First example of a <tt class="docutils literal">Makefile</tt>:</p>
+<pre class="literal-block">
+myprog: main.c aux.c
+    gcc -Wall -Wextra -g aux.c main.c -o myprog
+</pre>
+<p>A more advanced version:</p>
+<pre class="literal-block">
+myprog: main.o aux.o
+    gcc main.o aux.o -o myprog
+
+main.o: main.c
+    gcc -Wall -Wextra -g -c main.c
+
+aux.o: aux.c
+    gcc -Wall -Wextra -g -c aux.c
+</pre>
+<p>Now the same but using <cite>pattern rules</cite> and <cite>automatic variables</cite>:</p>
+<pre class="literal-block">
+myprog: main.o aux.o
+    gcc $^ -o $&#64;
+
+%.o: %.c
+    gcc -Wall -Wextra -g -c $^ -o $&#64;
+</pre>
+<p>In fact, <tt class="docutils literal">make</tt> already knows the pattern rule above, not only for C but
+also for many other languages! Such <cite>built-in</cite> rules (which you can display
+running <tt class="docutils literal">make <span class="pre">-p</span></tt>) are parametrized with variables.
+An even shorter version of our <tt class="docutils literal">Makefile</tt> would be:</p>
+<pre class="literal-block">
+CC=gcc
+CFLAGS=-Wall -Wextra -g
+
+myprog: main.o aux.o
+    gcc $^ -o $&#64;
+</pre>
+<p>Some frequently used options of <tt class="docutils literal">make</tt> are</p>
+<pre class="literal-block">
+-n
+-j N
+-p
+</pre>
+<!-- }}} -->
+<!-- file i/o {{{ -->
+</div>
+</div>
+<div class="section" id="file-i-o">
+<h1>3&nbsp;&nbsp;&nbsp;File I/O</h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/open.2.html">open(2)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/creat.2.html">creat(2)</a></td>
+<td>open and possibly create a file or device</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/close.2.html">close(2)</a></td>
+<td>close a file descriptor</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/read.2.html">read(2)</a></td>
+<td>read from a file descriptor</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/write.2.html">write(2)</a></td>
+<td>write to a file descriptor</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/truncate.2.html">truncate(2)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/ftruncate.2.html">ftruncate(2)</a></td>
+<td>truncate a file to a specified length</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/lseek.2.html">lseek(2)</a></td>
+<td>reposition read/write file offset</td>
+</tr>
+<tr><td>stat, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/fstat.2.html">fstat(2)</a>, lstat</td>
+<td>get file status</td>
+</tr>
+<tr><td>remove</td>
+<td>remove a file or directory</td>
+</tr>
+<tr><td>mkdir</td>
+<td>create a directory</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/select.2.html">select(2)</a></td>
+<td>synchronous I/O multiplexing</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/poll.2.html">poll(2)</a>, ppoll</td>
+<td>wait for some event on a file descriptor</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>dup, dup2, dup3</td>
+<td>duplicate a file descriptor</td>
+</tr>
+<tr><td>sync, syncfs</td>
+<td>commit buffer cache to disk</td>
+</tr>
+<tr><td>fsync, fdatasync</td>
+<td>synchronize a file's in-core state with storage device</td>
+</tr>
+<tr><td>ioctl</td>
+<td>control device</td>
+</tr>
+<tr><td>mmap, munmap</td>
+<td>map or unmap files or devices into memory</td>
+</tr>
+<tr><td>msync</td>
+<td>synchronize a file with a memory map</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p class="first"><strong>Example 1</strong>: <a class="reference external" href="code/mmap.c">mmap.c</a>,
+showing how to use <tt class="docutils literal">mmap(2)</tt> to load a newly created file
+in read/write access mode</p>
+</li>
+<li><p class="first"><strong>Example 2</strong>: <a class="reference external" href="code/read-copy.c">read-copy.c</a>
+(correction given on 17/09/2015),
+showing how to open one file (path given as argument)
+and how to write (to the standard output) the contents of the file</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Exercises: ARGENV, GETPUT, COPIE, NEWCAT from <a class="reference external" href="e.pdf">here</a>.</div>
+</div>
+</li>
+</ul>
+<!-- }}} -->
+<!-- processes {{{ -->
+</div>
+<div class="section" id="processes">
+<h1>4&nbsp;&nbsp;&nbsp;Processes</h1>
+<p>Process management:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/getpid.2.html">getpid(2)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/getppid.2.html">getppid(2)</a></td>
+<td>get process identification</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/getuid.2.html">getuid(2)</a>, geteuid</td>
+<td>get user identity</td>
+</tr>
+<tr><td>setuid</td>
+<td>set user identity</td>
+</tr>
+<tr><td>setgid</td>
+<td>set group identity</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/fork.2.html">fork(2)</a></td>
+<td>create a child process</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/exit.3.html">exit(3)</a></td>
+<td>cause normal process termination</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/wait.2.html">wait(2)</a>, waitpid, waitid</td>
+<td>wait for process to change state</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/execl.3.html">execl(3)</a>, execv(3)</td>
+<td>execute a file</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/system.3.html">system(3)</a></td>
+<td>execute a shell command</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example 1</strong>: <a class="reference external" href="code/fork-simple.c">fork-simple.c</a>,
+(given on 18/09/2015),
+showcasing how to use <tt class="docutils literal">fork</tt> and <tt class="docutils literal">wait</tt>.</li>
+</ul>
+<p>Basic thread management, see <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man7/pthreads.7.html">pthreads(7)</a>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>pthread_create</td>
+<td>create a new thread</td>
+</tr>
+<tr><td>pthread_attr_init, pthread_attr_destroy</td>
+<td>initialize and destroy thread attributes object</td>
+</tr>
+<tr><td>pthread_detach</td>
+<td>detach a thread</td>
+</tr>
+<tr><td>pthread_exit</td>
+<td>terminate calling thread</td>
+</tr>
+<tr><td>pthread_join</td>
+<td>join with a terminated thread</td>
+</tr>
+<tr><td>pthread_mutex_destroy, pthread_mutex_init</td>
+<td>destroy and initialize a mutex</td>
+</tr>
+<tr><td>pthread_mutex_lock, pthread_mutex_trylock, pthread_mutex_unlock</td>
+<td>lock and unlock a mutex</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example</strong>: <a class="reference external" href="code/pthreads.c">pthreads.c</a>, illustrating the creation of two threads;
+observe how we use the <tt class="docutils literal">errno</tt> variable to profit from the <tt class="docutils literal">err</tt>
+routine to print possible erros</li>
+</ul>
+<!-- - fork, in Linux implemented via clone (threads + processes)
+- setuid/setgid -->
+<!-- }}} -->
+<!-- pipes {{{ -->
+</div>
+<div class="section" id="pipes">
+<h1>5&nbsp;&nbsp;&nbsp;Pipes</h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/pipe.2.html">pipe(2)</a></td>
+<td>create a half-duplex pipe</td>
+</tr>
+<tr><td>popen, pclose</td>
+<td>pipe stream to or from a process</td>
+</tr>
+<tr><td>mkfifo</td>
+<td>make a FIFO special file (a named pipe)</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>pipe(2) is half-duplex; the most common ipc</li>
+<li><strong>Example</strong>: <a class="reference external" href="code/fork-exec-pipe.c">fork-exec-pipe.c</a>, showing how to use a pipe to read, from a
+parent process, the standard output of a child process</li>
+</ul>
+<!-- }}} -->
+<!-- signals {{{ -->
+</div>
+<div class="section" id="signals">
+<h1>6&nbsp;&nbsp;&nbsp;Signals</h1>
+<ul class="simple">
+<li>Unreliable in early implementations</li>
+<li>Problem of malloc</li>
+<li>Problem of handling EINTR</li>
+</ul>
+<!-- - Fig. 10.1 in [SR13]_ -->
+<p>Signal management:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/sigaction.2.html">sigaction(2)</a></td>
+<td>examine and change a signal action</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/kill.2.html">kill(2)</a></td>
+<td>send signal to a process</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p class="first"><strong>Example 1</strong>: <a class="reference external" href="code/sigaction.c">sigaction.c</a>
+(given on 18/09/2015),
+showcasing the use of <tt class="docutils literal">sigaction</tt> and the consequences of signals on ongoing
+system calls.</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Exercises: KILLPROC, CTRL+C, EXECUTE, FOURCHE, (PIPE) from <a class="reference external" href="e.pdf">here</a>.</div>
+</div>
+</li>
+</ul>
+<!-- }}} -->
+<!-- ipcs {{{ -->
+</div>
+<div class="section" id="other-inter-process-communication-ipc-primitives">
+<h1>7&nbsp;&nbsp;&nbsp;Other Inter-Process Communication (IPC) Primitives</h1>
+<ul class="simple">
+<li>Message queues: mq_overview(7)</li>
+<li>Shared memory: shm_overview(7)</li>
+<li>Semaphores: sem_overview(7)</li>
+<li>Unix domain sockets</li>
+</ul>
+<!-- }}} -->
+<!-- sockets {{{ -->
+</div>
+<div class="section" id="network">
+<h1>8&nbsp;&nbsp;&nbsp;Network</h1>
+<p>Network programming with POSIX sockets enables the initiation, handling and
+termination of TCP and UDP streams, among others.
+The interface primitives are thus coupled with the operations associated to
+these protocols.</p>
+<p>The following figure illustrates the flow of operations that client and
+server shall carry out to operate a TCP connection.</p>
+<img alt="fig/sockets.png" src="fig/sockets.png" style="width: 800px;" />
+<p>Both server and client will initially
+create a socket, specifying that they want to use the <cite>internet</cite> protocols
+(<tt class="docutils literal">AF_INET</tt>), in particular a <em>TCP stream</em> (<tt class="docutils literal">SOCK_STREAM</tt>).
+The server will then <tt class="docutils literal">bind</tt> the socket to a <cite>service point</cite>,
+i.e., a
+couple (IP address, port) to which the client will later connect.</p>
+<p>When the server invokes <tt class="docutils literal">listen</tt>, the socket is set as a
+<cite>listening socket</cite>, that is, a socket that can only be used to
+derive new <cite>data sockets</cite>.
+No data will be transmitted through a listening socket. After
+calling <tt class="docutils literal">accept</tt>, the server will block until a client executes
+<tt class="docutils literal">connect</tt>.  The return value of <tt class="docutils literal">accept</tt> will be a new
+<cite>data socket</cite> (<tt class="docutils literal">fd2</tt> in the figure), that can now be used to transmit data.</p>
+<p>Subsequent calls to <tt class="docutils literal">write</tt> and <tt class="docutils literal">read</tt> on the client or server
+will
+transfer data to the client or server.  It is not true that the
+<cite>data chunk</cite> passed to <tt class="docutils literal">write</tt> at one side of the connection will
+necessarily be the one that <tt class="docutils literal">read</tt> returns at the other side.  Each
+TCP
+stream is best thought as a <cite>data pipe</cite>, where <tt class="docutils literal">write</tt> pushes
+data
+at one side and <tt class="docutils literal">read</tt> extracts data from the other side.  Often,
+<tt class="docutils literal">read</tt> will return as soon as any data is available.  This may be
+triggered, for instance, by the arrival of an IP network packet
+encapsulating a
+TCP segment.  Realize that <cite>boundaries</cite> created the TCP segmentation
+algorithm will often not be boundaries associated to the <tt class="docutils literal">write</tt>
+calls,
+although it may be the case. <a class="footnote-reference" href="#id4" id="id1">[1]</a></p>
+<p>Invoking <tt class="docutils literal">close</tt> at the client or server will close the connection in
+both
+ways.  It is also possible to partially close the connection in any
+direction,
+using <tt class="docutils literal">shutdown</tt>.  Closing the connection at one side will trigger
+different events on the other side.  If the other side writes, the process
+will
+receive the signal <tt class="docutils literal">SIGPIPE</tt> <a class="footnote-reference" href="#id5" id="id2">[2]</a>,
+and write will fail with
+<tt class="docutils literal">EPIPE</tt>. <a class="footnote-reference" href="#id6" id="id3">[3]</a>
+If the other side reads, <tt class="docutils literal">read</tt> will return 0 bytes,
+indicating an <cite>end of file</cite>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">System call</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/socket.2.html">socket(2)</a></td>
+<td>create an endpoint for communication</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/bind.2.html">bind(2)</a></td>
+<td>bind a nam to a socket</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/listen.2.html">listen(2)</a></td>
+<td>listen for connections on a socket</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/accept.2.html">accept(2)</a></td>
+<td>accept a connection on a socket</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/connect.2.html">connect(2)</a></td>
+<td>initiate a connection on a socket</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/shutdown.2.html">shutdown(2)</a></td>
+<td>shut down part of a full-duplex connection</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/htonl.3.html">htonl(3)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/htons.3.html">htons(3)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/ntohl.3.html">ntohl(3)</a>, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/ntohs.3.html">ntohs(3)</a></td>
+<td>convert values between host and network byte order</td>
+</tr>
+<tr><td>send, sendto, sendmsg</td>
+<td>send a message on a socket</td>
+</tr>
+<tr><td>recv, recvfrom, recvmsg</td>
+<td>receive a message from a socket</td>
+</tr>
+<tr><td><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/getaddrinfo.3.html">getaddrinfo(3)</a>, freeaddrinfo, gai_strerror</td>
+<td>network address and service translation</td>
+</tr>
+<tr><td>getsockopt, setsockopt</td>
+<td>get and set options on sockets</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Example</strong>: <a class="reference external" href="code/tcp.c">tcp.c</a>, showing how to create a TCP client connecting to
+<tt class="docutils literal">localhost:1234</tt> and echoing to the connection whatever it reads from
+it.</li>
+<li><strong>Example</strong>: <a class="reference external" href="code/sock-thread.c">sock-thread.c</a>, showing how to use two threads to read and
+write on a TCP socket</li>
+</ul>
+<div class="section" id="exercise-the-command-tcpcat">
+<h2>8.1&nbsp;&nbsp;&nbsp;Exercise: The Command <tt class="docutils literal">tcpcat</tt></h2>
+<p>The goal of this exercise is writing a simplified version of the
+<a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/man1/nc_openbsd.1.html">netcat(1)</a>
+command. The output should be called <strong>tcpcat</strong>, and it will be able to
+both open TCP connexions as a client and act as a TCP server, with the
+following syntax and functionality:</p>
+<ul>
+<li><div class="first line-block">
+<div class="line"><tt class="docutils literal">$ tcpcat HOST PORT</tt></div>
+<div class="line">where <tt class="docutils literal">HOST</tt> is either an IP address or an URL, and <tt class="docutils literal">PORT</tt> is a
+port number.</div>
+</div>
+<p>This command will open a connection to the port <tt class="docutils literal">PORT</tt> of the host
+<tt class="docutils literal">HOST</tt>. It will send anything written to its standard input and write
+on standard output anything received from the connection.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><tt class="docutils literal">$ tcpcat <span class="pre">-l</span> PORT</tt></div>
+<div class="line">where <tt class="docutils literal">PORT</tt> is a port number.</div>
+</div>
+<p>This command will open a listening TCP socket accepting incoming
+connections from any network card.  It will accept one client, will send
+to it anything read from its standard input, and will write to the
+standard output anything received from the connection.</p>
+</li>
+</ul>
+<p><strong>Note</strong>: you do <cite>not</cite> have the right to use threads or processes to implement
+this program, use either <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/poll.2.html">poll(2)</a> or <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/select.2.html">select(2)</a>.</p>
+</div>
+<div class="section" id="exercise-mini-httpd-a-simple-concurrent-web-server">
+<h2>8.2&nbsp;&nbsp;&nbsp;Exercise: <tt class="docutils literal"><span class="pre">mini-httpd</span></tt>, a Simple Concurrent Web Server</h2>
+<p>The
+<a class="reference external" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a>
+(HTTP) is the protocol that lies at the
+foundations of data communication in the Internet.  It is a request-response
+protocol. It enables a client to manipulate a resource (usually a
+file) in the server. Request and reply messages are formatted using plain text.</p>
+<p>In this exercise we will implement a very simple HTTP server capable of serving
+the files present in the file system. It will have the following features:</p>
+<ul class="simple">
+<li>It will <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/fork.2.html">fork(2)</a> a process to deal with every client connecting to the
+server. The new process will receive the client request and reply
+appropriately, exiting immediately after.</li>
+<li>It will read a configuration file located at the <tt class="docutils literal">$HOME</tt> directory,
+and called <tt class="docutils literal"><span class="pre">mini-httpd.conf</span></tt>.
+The server will exit if such file is not present.</li>
+<li>Upon reception of the signal <tt class="docutils literal">SIGUSR1</tt>, the server will re-read the
+configuration file and apply the new settings.</li>
+</ul>
+<div class="section" id="http-protocol-simplified-technical-presentation">
+<h3>8.2.1&nbsp;&nbsp;&nbsp;HTTP Protocol: Simplified Technical Presentation</h3>
+<p>Every HTTP request message contains a <strong>method</strong> and a <strong>resource</strong>.
+A method is an action to perform on the resource. The most common method is the
+<tt class="docutils literal">GET</tt> method, which tells the server to send the resource to the client.
+Other methods (such as <tt class="docutils literal">HEAD</tt>, <tt class="docutils literal">POST</tt>) are out of the scope of this
+exercise. Our server will only implement the <tt class="docutils literal">GET</tt> method.</p>
+<p>Here is an example of a request message using the <tt class="docutils literal">GET</tt> method and the
+resource <tt class="docutils literal">path/to/file.html</tt>:</p>
+<pre class="literal-block">
+GET path/to/file.html HTTP/1.1
+Host: localhost:1234
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:40.0)
+Connection: keep-alive
+</pre>
+<p>The <tt class="docutils literal">GET</tt> word identifies the method being used.
+It is followed by a space and then the path to the resource, then another space,
+the keyword <tt class="docutils literal">HTTP/</tt> and the version of the protocol being used.
+Our server will always reply with the version number <tt class="docutils literal">1.0</tt>
+(even if the client uses <tt class="docutils literal">1.1</tt>, as in this case).</p>
+<p>Request, and reply, messages can optionally include <strong>headers</strong>.
+In the above example the <tt class="docutils literal">Host</tt>, <tt class="docutils literal"><span class="pre">User-Agent</span></tt>, and <tt class="docutils literal">Connection</tt> headers
+have been included. Our server will ignore all headers present in the request
+message.</p>
+<p>Every line in the request message is terminated by the characters <tt class="docutils literal">\r\n</tt>,
+ASCII codes <tt class="docutils literal">0x0D</tt> and <tt class="docutils literal">Ox0A</tt>.
+This is commonly known as the MSDOS end-of-line characters.
+The request message terminates by a double MSDOS end-of-line, that is the
+four characters:</p>
+<pre class="literal-block">
+\r\n\r\n
+</pre>
+<p>Once the server has processed the request it will send a reply message.
+Here is an example:</p>
+<pre class="literal-block">
+HTTP/1.0 200 OK
+Server: mini-httpd/0.1
+Content-Type: text/plain
+
+Here is the content of the file
+requested by the client.
+</pre>
+<p>The <tt class="docutils literal">HTTP/</tt> string comes first, followed by the protocol version.
+Then a space followed by a numeric code called
+the <strong>status code</strong> (in this case <tt class="docutils literal">200</tt>),
+a space and a 1-line text message called the <strong>reason phrase</strong>
+(in this case <tt class="docutils literal">OK</tt>).
+The <tt class="docutils literal">Server</tt> and <tt class="docutils literal"><span class="pre">Content-Type</span></tt> headers follow, with their respective
+values.
+All lines are terminated by a MSDOS end-of-line, and the last header (if
+present) is followed by a double end-of-line.</p>
+<p>An optional <strong>message body</strong> follows the double end-of-line.
+In the above example, the message body contains the file requested by the client.
+The server shall close the connection after sending the last byte of the message
+body.</p>
+</div>
+<div class="section" id="features-of-mini-httpd">
+<h3>8.2.2&nbsp;&nbsp;&nbsp;Features of <tt class="docutils literal"><span class="pre">mini-httpd</span></tt></h3>
+<ul>
+<li><p class="first">Our server will only accept requests using the <tt class="docutils literal">GET</tt> method.
+On reception of any other method, it will reply a status code
+<tt class="docutils literal">501</tt>.</p>
+</li>
+<li><p class="first">It will ignore all headers included in a request message</p>
+</li>
+<li><p class="first">It will use <tt class="docutils literal">HTTP/1.0</tt> replies</p>
+</li>
+<li><p class="first">It will be able to reply the following status codes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Status code</th>
+<th class="head">Reason phrase</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>200</td>
+<td>OK</td>
+</tr>
+<tr><td>404</td>
+<td>Not Found</td>
+</tr>
+<tr><td>501</td>
+<td>Not Implemented</td>
+</tr>
+<tr><td>500</td>
+<td>Internal Server Error</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">It will include the following header in all HTTP replies:</p>
+<pre class="literal-block">
+Server: mini-httpd v0.1
+</pre>
+</li>
+<li><p class="first">It will optionally include the header</p>
+<pre class="literal-block">
+Content-Type: &lt;MIME type&gt;
+</pre>
+<p>on those requests where the requested resource is a file whose extension is
+present in the following table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Extension</th>
+<th class="head">&lt;MIME type&gt;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>.pdf</td>
+<td>application/pdf</td>
+</tr>
+<tr><td>.png</td>
+<td>image/png</td>
+</tr>
+<tr><td>.jpeg</td>
+<td>image/jpeg</td>
+</tr>
+<tr><td>.jpg</td>
+<td>image/jpeg</td>
+</tr>
+<tr><td>.txt</td>
+<td>text/plain</td>
+</tr>
+<tr><td>.html</td>
+<td>text/html</td>
+</tr>
+<tr><td>Any other</td>
+<td>Do not include the <tt class="docutils literal"><span class="pre">Content-Type</span></tt> header</td>
+</tr>
+</tbody>
+</table>
+<p>You are free to extend your web server with other mime types, see
+here
+<a class="reference external" href="http://www.sitepoint.com/web-foundations/mime-types-complete-list/">http://www.sitepoint.com/web-foundations/mime-types-complete-list/</a>.
+(NB: the command <tt class="docutils literal">file <span class="pre">-i</span></tt> guesses the MIME file type of a given file.)</p>
+</li>
+<li><p class="first">After starting, the server will load the configuration file
+<tt class="docutils literal"><span class="pre">$HOME/mini-httpd.conf</span></tt> (the <tt class="docutils literal">$HOME</tt> variable is an environment variable).
+It will exit if the file cannot be read.
+The file will look like this:</p>
+<pre class="literal-block">
+port=8080
+cwd=/home/cesar/httpd-root/
+</pre>
+<p>The variable <tt class="docutils literal">port</tt> tells the server the port number on which it accepts new
+connections.
+The variable <tt class="docutils literal">cwd</tt> provides an absolute path from which the relative paths
+provided in client request messages will be interpreted.</p>
+</li>
+<li><p class="first">Upon reception of the signal <tt class="docutils literal">SIGUSR1</tt>, our server will re-read the
+configuration file and apply the new settings.</p>
+</li>
+<li><p class="first">Whenever the resource requested is a directory, <tt class="docutils literal"><span class="pre">mini-httpd</span></tt> will generate
+an HTML file and will send the header <tt class="docutils literal"><span class="pre">Content-Type:</span> text/html</tt>.</p>
+<p>For instance, assume that the directory <tt class="docutils literal">path/to/dir</tt> is requested and it
+contains the following files:</p>
+<pre class="literal-block">
+$ ls -lha
+total 800
+drwxr-xr-x  20 cesar  staff   680B Sep 21 12:59 .
+drwxr-xr-x  14 cesar  staff   476B Sep 21 02:30 ..
+-rw-r--r--   1 cesar  staff   319B Sep  9 15:30 Makefile
+drwxr-xr-x  15 cesar  staff   510B Sep 21 02:30 code
+-rw-r--r--   1 cesar  staff    41K Sep 21 12:40 devel.html
+-rw-r--r--&#64;  1 cesar  staff    87K Sep 18 11:59 e.pdf
+drwxr-xr-x   4 cesar  staff   136B Sep 10 00:44 fig
+-rw-r--r--   1 cesar  staff   1.8K Sep 17 00:45 index.html
+</pre>
+<p>Then the following HTML will be generated:</p>
+<pre class="literal-block">
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Directory listing for &quot;path/to/dir/&quot;&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Directory listing for &quot;path/to/dir/&quot;&lt;/h1&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/..'&gt;..&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/Makefile'&gt;Makefile&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/code'&gt;code&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/devel.html'&gt;devel.html&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/devel.rst'&gt;devel.rst&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/e.pdf'&gt;e.pdf&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/fig'&gt;fig&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href='path/to/dir/index.html'&gt;index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>The client browser will render the above HTML code
+<a class="reference external" href="dir.html">like this</a>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="implementation">
+<h3>8.2.3&nbsp;&nbsp;&nbsp;Implementation</h3>
+<p>Severs, after doing some initialization, usually enter an infinite loop where
+they</p>
+<ol class="arabic simple">
+<li>wait for a request,</li>
+<li>compute something,</li>
+<li>reply to the client.</li>
+</ol>
+<p>This loop is usually called the <strong>service loop</strong>.
+The service loop for <em>mini-httpd</em> will be as follows:</p>
+<ol class="arabic simple">
+<li>Wait for a new client (system call <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/accept.2.html">accept(2)</a>).</li>
+<li><a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/fork.2.html">fork(2)</a> a new process, which will deal with the client
+(that is, it will execute the function <tt class="docutils literal">serve</tt>, see attached code below).
+The main process shall close the client socket and the new process shall
+close the accepting socket.</li>
+<li>Read the HTTP request (function <tt class="docutils literal">read_request</tt>).</li>
+<li>Parse it (function <tt class="docutils literal">parse_request</tt>) and build a reply (<tt class="docutils literal">build_response</tt>).</li>
+<li>Send the HTTP status code and headers (<tt class="docutils literal">write_response_headers</tt>).</li>
+<li>Send the message body
+(functions <tt class="docutils literal">write_response_body_dir</tt> and
+<tt class="docutils literal">write_response_body_file</tt>).</li>
+<li>Call <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man3/exit.3.html">exit(3)</a> from the client process.</li>
+<li>From the main process, periodically call the <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/wait.2.html">wait(2)</a> system call to clear
+the queue of terminated children processes (use flag <tt class="docutils literal">WNOHANG</tt> to avoid
+getting block waiting for children to finish).</li>
+</ol>
+<p>If the main process receives the signal <tt class="docutils literal">SIGUSR1</tt>, it will have to reload the
+configuration file, <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/chdir.2.html">chdir(2)</a> into a new directory and reopen the accepting
+socket. Use the following design:</p>
+<ul class="simple">
+<li>Make the signal handler to set a bit indicating that the signal has been
+received but the new configuration has not yet been applied.</li>
+<li>Some system calls (such as <a class="reference external" href="http://manpages.ubuntu.com/manpages/vivid/en/man2/accept.2.html">accept(2)</a> ;) will return the error <tt class="docutils literal">EINTR</tt>
+when a signal is received. Detect this condition and, if the bit is set, apply
+the new configuration and clear the bit.</li>
+</ul>
+<p>Your server will write informational and debug messages to the standard output,
+using the following format:</p>
+<pre class="literal-block">
+mini-httpd: starting!
+mini-httpd: pid 2110
+mini-httpd: argc 1
+mini-httpd: (re-)loading configuration file...
+mini-httpd: done
+mini-httpd: port '8080' cwd '/home/cesar/httpd-root/'
+...
+</pre>
+</div>
+<div class="section" id="template-code">
+<h3>8.2.4&nbsp;&nbsp;&nbsp;Template code</h3>
+<p>Ver. 1: <a class="reference external" href="code/mini-httpd-20150921.tar.gz">mini-httpd-20150921.tar.gz</a></p>
+<!-- }}} -->
+<!-- references {{{ -->
+</div>
+</div>
+</div>
+<div class="section" id="notes">
+<h1>9&nbsp;&nbsp;&nbsp;Notes</h1>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>If, for instance, your application introduces large enough amounts of
+time between each write.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>And will be killed, unless the default handler for this signal is
+modified.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>The <tt class="docutils literal">write</tt> primitive, as usual, will return <tt class="docutils literal"><span class="pre">-1</span></tt> and the variable
+<tt class="docutils literal">errno</tt> will be equal to the value <tt class="docutils literal">EPIPE</tt>.</td></tr>
+</tbody>
+</table>
+<!-- [SR13]
+W. Richard Stevens, Stephen A. Rago.
+Advanced programming in the UNIX environment.
+Pearson Education. 2013 -->
+<!-- }}} -->
+</div>
+</div>
+</body>
+</html>

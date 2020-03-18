@@ -1,0 +1,129 @@
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>publications de Flavien Breuvart</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="Content-Language" content=fr />
+  </head>
+
+  <body>       
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+	  <li><a href=index.php?lang=fr>Index</a></li>
+	  <li class="active"><a href="#">Publications</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Projets <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href=Projets.php?lang=fr>Propositions</a></li>
+            <li><a href=CoGITARe/?lang=fr>ANRJCJC CoGITARe</a></li>
+            </ul>
+	  </li>
+	  <li><a href=stages.php?lang=fr>Stage/thèses</a></li>
+	  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"> Enseignement <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+	         <li><a href=compilation/?lang=fr>Compilation</a></li>
+	         <li><a href=principes_de_programmation/?lang=fr>Principes de Prog (old)</a></li>
+             <li><a href=prog_fonctionnelle/?lang=fr>Prog. fonctionnelle (old)</a></li>
+             <li><a href=LEE/?lang=fr>LEE</a></li>
+             <li><a href=Architecture_systeme/?lang=fr>Architecture et Systeme (old)</a></li>
+             <li><a href=DIU-EIL/?lang=fr>DIU-EIL</a></li>
+             <li><a href=misa/?lang=fr>MISA</a></li>
+            </ul>
+	  </li>
+	  <li>
+	    <a href=?lang=uk><img src=data/uk.png alt=lang:uk style="width:25px;height:20px;"></a>
+	  </li>
+    </ul>
+    </nav>
+
+
+
+
+      <div class="publications">
+	<h2> Conference papers </h2>
+	<UL TYPE=square>
+	  <LI> <B>B., Dal Lago</B> <a href="https://lipn.univ-paris13.fr/~breuvart/articles/ProbIntTyp.pdf"> On Intersection Types and Probabilistic Lambda Calculi</a>: PPDP 2018
+	  <LI> <B>B.</B> <a href="articles/ApproxTh.pdf"> Refining Properties of Filter Models: Approximability, Sensibility and Reducibility </a>: submited
+	  <LI> <B>B., Dal Lago, Herrou</B> <a href="articles/ProbSubrec.pdf"> On Higher-Order Probabilistic Subrecursion</a>: FOSSACS 2017
+	  <LI> <B>Gaboardi, Katsumata, Orchard, B., UUstalu</B> <a href="articles/effcoeff.pdf"> Combining effects and coeffects</a>: ICFP 2016
+	  <LI> <B>B., Manzonetto, Polonsky, Ruoppolo</B> <a href="articles/Morris.pdf"> New Results on Morris's Observational Theory: the benefits of separating the inseparable</a>: FSCD 2016
+	  <LI> <B>B.,Pagani</B> <a href="articles/boundedRel.pdf"> Modelling Coeffects in the Relational Semantics of Linear Logic</a>: CSL 2015.
+	  <LI> <B>B.</B> <a href="articles/CaracHst.pdf"> On the characterization of models of H*</a>: CSL-LICS 2014, Kleene Award 2014
+	  <LI> <B>B.</B> <a href="articles/CeRel.pdf"> The resource lambda calculus is short-sighted in its relational model</a>: TLCA 2013
+	  <LI> <B>B.</B> <a href="https://arxiv.org/pdf/1205.4691v2"> On the discriminating power of tests in resource lambda-calculus</a>: A preliminarry (but cited) Arxiv version of the previous paper.
+	</UL>
+      </div>
+
+      <div class="publications">
+	<h2> Journal papers </h2>
+	<UL TYPE=square>
+	  <LI> <B>B., Dal Lago, Herrou</B> <a href="articles/ProbSubrecLong.pdf"> On Higher-Order Probabilistic Subrecursion (long version)</a>: invited, submited
+	  <LI> <B>B., Manzonetto, Ruoppolo</B> <a href="articles/BMR.pdf"> Relational Graph Models at Work</a>: LMCS
+	  <LI> <B>B.</B> <a href="articles/OpeAspect.pdf"> On the characterization of models of H*: the operational aspect</a>: to submit...
+	  <LI> <B>B.</B> <a href="articles/HstLogical.pdf"> On the characterization of models of H*: the semantical aspect</a>: Invited in LMCS in 2016
+	</UL>
+      </div>
+
+    
+      <div class="publications">
+	<h2> <a href="These_breuvart.pdf"> Thesis </a> </h2>
+      </div>
+
+
+<!-- 
+      <div class="publications">
+	<h2> Drafts </h2>
+      </div>
+-->
+
+
+      <div class="slides">
+	<h2> Slides </h2>
+	<UL TYPE=square>
+	  <LI> <a href="presentations/Choco2018.pdf"> Graded Types Parametricity </a>: Chocola Novembre 2018.
+	  <LI> <a href="presentations/PPDP.pdf"> On Intersection Types and Probabilistic Lambda Calculi </a>: PPDP'2018.
+	  <LI> <a href="presentations/HOR.pdf"> Refining Properties of Filter Models </a>: HOR'2018.
+	  <LI> <a href="presentations/Fossacs.pdf"> On Higher-Order Probabilistic Subrecursion </a>: Fossacs'2017.
+	  <LI> <a href="presentations/LCaA2016.pdf"> On Higher-Order Probabilistic Subrecursion </a>: Workshop Logic, Complexity and Automation in innsbruck.
+	  <LI> <a href="presentations/Crecogi16.pdf"> From Hard Work to Trickery: A Systematic Approach to Probabilistic Rewriting </a>: Workshop Crecogi in Marseille.
+	  <LI> <a href="presentations/GdR-LL2.pdf"> Old and New Results on Probabilistic Intersection Type System </a>: Workshop ITRS and 3rd meetong of the GdRI-LL.
+	  <LI> <a href="presentations/GdR-LL.pdf"> Toward dependant coeffects </a>: 2nd meeting of the GdRI linear logic in Bologna.
+	  <LI> <a href="presentations/these.pdf"> Dissecting Denotational Semantics </a>: PhD Defence.
+	  <LI> <a href="presentations/CSL2015.pdf"> Modelling Coeffects in the relational semantic </a>: CSL'2015.
+	  <LI> <a href="presentations/LICS14_1h.pdf"> On the characterization of models of H*</a>: Long version of the following presentation.
+	  <LI> <a href="presentations/LICS14.pdf"> On the characterization of models of H*</a>: CSL-LICS'2013 (Kleene Award).
+	  <LI> <a href="presentations/LIPN14.pdf"> De la charactérisation des modèles de H*</a>: French version of the presentation on CSL-LICS's article.
+	  <LI> <a href="presentations/Birmingham-Dundee.pdf"> A bridge between semirings (update)</a>: update of the BLLworkshop's one presented in PPS's GDT semantique and Birmingham's theoritical computer science seminar (April 2014).
+	  <LI> <a href="presentations/fontainebleau.pdf"> A bridge between semirings</a>: BLLworkshop 2013 at Fontainebleau
+	  <LI> <a href="presentations/TLCA.pdf">The resource lambda calculus is short-sighted in its relational model</a>: TLCA 2013 at Eindoven
+	  <LI> <a href="presentations/geocal.pdf">  Une bien étrange caractérisation de l’adéquation complète dans les domaines de Scott</a>: meeting GEOCAL 2013 in Lyon
+	</UL>
+      </div>
+    </div>
+
+
+     
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+    

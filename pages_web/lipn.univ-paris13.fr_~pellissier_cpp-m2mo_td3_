@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>C++: TD 3</title>
+  <style type="text/css">
+    .blue { color: #0000ff }
+    .xslt { color: #116611 }
+    .cc { color: #116611 }
+    .html { color: #882222 }
+    .xml { color: #116611 }
+    .red { color: #ff0000 }
+    .orange { color: #ff8800 }
+    .pink { color: #ff00ff }
+    .grey { color: #555555 }
+    .hidden { color: #ffffff }
+    pre { color: #116611 }
+    tt { color: #116611 }
+  </style>
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20097933-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="../../highlight/styles/googlecode.css">
+  <script type="text/javascript" src="../../highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<h2>TD 3: Pointeurs, Tableaux</h2>
+
+<h3>Rappels</h3>
+<ul>
+  <li>La section <a href="../td1/index.html#Outils">Outils</a> du TD 1 est utile! Notamment pour l'alias de g++.
+  </li>
+  <li><a href="../cours">Page du Cours</a></li>
+  <li><a href="../rendu.html">Procédure de rendu</a></li>
+  <li><b class="red">Pour vérifier le rendu de ce TD</b>: <a href="test.sh" download><tt>test.sh</tt></a> 
+</ul>
+
+
+<h3>Exercice 1: Pointeurs, tableaux, algorithmes</h3>
+<ol>
+  <li>[Removed]</li>
+  <li>[Removed]</li>
+  <li>[Removed]</li>
+  <li>
+    <b>Écrivez</b> un fichier <tt>1.4.cc</tt> contenant une fonction <tt>SortRev</tt> qui prend en argument un tableau d'entiers de taille arbitraire, et qui renvoie une copie du tableau triée par ordre <b>décroissant</b>. Le tableau pris en entrée ne doit <b>pas</b> être modifié.
+    <br/>Indications:
+    <ul>
+      <li>Pour passer un tableau constant (non-modifiable) à <tt>SortRev</tt>, on utilisera les 2 arguments <tt>int num</tt> (contenant la taille du tableau) et <tt>const int* values</tt> (le tableau proprement dit).
+      </li>
+      <li>Pour renvoyer un tableau, ici on se contentera de renvoyer le pointeur vers les données, de type <tt>int*</tt>, car la taille est connue par l'utilisateur (puisque c'est la même que l'argument <tt>num</tt>)
+      </li>
+      <li>On peut allouer des tableaux avec l'opérateur <a href="http://www.cplusplus.com/reference/new/operator%20new[]/#example"><tt>new[]</tt></a>
+      </li>
+      <li>On peut utiliser la fonction <a href="http://www.cplusplus.com/reference/algorithm/sort/"><tt>sort()</tt></a> disponible dans le <i>header</i> <tt>&lt;algorithm&gt;</tt>. Elle prend en arguments deux pointeurs: un vers le début du tableau, un vers la fin.
+      </li>
+    </ul>
+    <br/><b>Vérifiez</b> que votre code marche avec le fichier <a href="1.4.main.cc" download><tt>1.4.main.cc</tt></a>:
+    <pre>g++ 1.4.main.cc &amp;&amp; ./a.out</pre>
+    Essayez par exemple avec <tt>1 4 3 9 -4 5 2 5</tt>
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.4.cc</tt>
+    <br/><br/>
+  </li>
+  <li>
+    <b>(*) Écrivez</b> un fichier <tt>1.5.cc</tt> contenant une fonction <tt>HIndex</tt> qui calcule le <a href="https://fr.wikipedia.org/wiki/Indice_h">h-Index</a> d'un scientifique, étant donné une liste du nombres de citations qu'il a eu pour chacun de ses articles:<pre><code class="c++">int HIndex(int num_articles, const int* num_citations) {
+  ...
+}</code></pre>
+    Indication: on pourra utiliser la question précédente.
+    <br/><br/><b>Vérifiez</b> votre code en copiant <tt>1.4.main.cc</tt> dans <tt>1.5.main.cc</tt>, et en le modifiant pour faire tourner <tt>HIndex()</tt> et afficher le résultat. Le h-Index de l'exemple donné dans le 1.4 doit être 4, par exemple.
+    <br/>
+    Autres cas à tester:
+    <ul>
+      <li>h-Index(<tt>[1 2 1]</tt>) = <tt>1</tt></li>
+      <li>h-Index(<tt>[]</tt>) = <tt>0</tt></li>
+      <li>h-Index(<tt>[0]</tt>) = <tt>0</tt></li>
+      <li>h-Index(<tt>[1 2 3 4 5 6 7 8 9]</tt>) = <tt>5</tt></li>
+      <li>h-Index(<tt>[1 2 3 4 5 6 7 8 9 9]</tt>) = <tt>5</tt></li>
+      <li>h-Index(<tt>[1 2 3 4 5 6 7 8 9 9 9]</tt>) = <tt>6</tt></li>
+    </ul>
+    <br/><b class="orange">RENDU:</b> <tt>1.5.cc</tt>
+    <br/><br/>
+  </li>
+  <li><b>(***) Écrivez</b> une version <tt>1.6.cc</tt> du fichier précédent qui n'utilise pas <tt>sort()</tt> (même indirectement) et qui fonctionne en temps <b>linéaire</b>, c'est-à-dire une
+    complexité <i>O(N)</i>, où <i>N</i> est le nombre d'articles. NOTE: <tt>sort()</tt> fonctionne en <i>O(N log(N))</i>.
+    <br/><br/><b class="orange">RENDU:</b> <tt>1.6.cc</tt>
+    <br/><br/>
+  </li>
+</ol>
+
+<hr/>
+<h3>Exercice 2: matrices</h3>
+<ol>
+  <li>Écrire un fichier 2.1.cc correspondant au fichier <a href="2.1.h" download>2.1.h</a> suivant:
+  <pre><code class="c++">// Computes the trace (sum of elements of the diagonal) of a square NxN matrix,
+// flattened in memory.
+double trace(double* matrix, int N);</code></pre>
+    <b class="orange">RENDU:</b> <tt>2.1.cc</tt>
+    <br/><br/>
+  </li>
+  <li>De même avec <a href="2.2.h" download>2.2.h</a>:
+  <pre><code class="c++">// Computes the matrix product of two matrices A and B of respective sizes NxM and MxP,
+// and returns a newly allocated NxP matrix. All matrices are flattened.
+double* matrix_prod(int n, int m, int p, double* a, double *b);</code></pre>
+    <b class="orange">RENDU:</b> <tt>2.2.cc</tt>
+    <br/><br/>
+  </li>
+  <li>De même avec <a href="2.3.h" download>2.3.h</a>:
+  <pre><code class="c++">// Computes the transpose of a NxM matrix (see wikipedia), in-place. Stores
+// the result in the source matrix.
+void transpose(int n, int m, double* matrix);</code></pre>
+    <b class="orange">RENDU:</b> <tt>2.3.cc</tt>
+    <br/><br/>
+  </li>
+  <li><b>(****) Améliorer</b> votre 2.3.cc pour qu'il n'utilise <b>aucune mémoire supplémentaire</b> (et qu'il marche meme sur des matrices non carrées).
+    <br/><br/><b class="orange">RENDU:</b> <tt>2.3.cc</tt>, amelioré.
+    <br/><br/>
+  </li>
+<hr/>
+<footer>
+Auto-évaluation: D'abord, créez l'archive <tt>td3.tar</tt> (voir instructions ci-dessous).
+<br/>Ensuite: clic droit sur <a href="g.tar.xz" download>g.tar.xz</a>, "Sauvegardez sous". Puis, dans un terminal:<pre><code>
+tar xf g.tar.xz
+cd grade
+bash grade.sh ../td1.tar
+</code></pre>
+
+N'oubliez pas de soumettre votre travail sur <a href="http://moodlesupd.script.univ-paris-diderot.fr/course/view.php?id=3707" title="Moodle">Moodle</a>
+après l'avoir testé grâce au script : <a href="test.sh" title="Script de test de l'archive de rendu"><tt>test.sh</tt></a>
+(voyez <a href="../rendu.html" title="Procédure de rendu">la procédure de rendu</a>).
+</footer>
+</body>
+</html>

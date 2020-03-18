@@ -1,0 +1,341 @@
+<!DOCTYPE html> <html lang="fr-FR"><head>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://lipn.univ-paris13.fr/xmlrpc.php">
+    
+<title>Projets de recherche &#8211; LIPN</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="LIPN &raquo; Flux" href="https://lipn.univ-paris13.fr/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/lipn.univ-paris13.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://lipn.univ-paris13.fr/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://lipn.univ-paris13.fr/wp-includes/css/dist/block-library/theme.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpm-university-hub-style-css'  href='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='university-hub-font-awesome-css'  href='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/third-party/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='university-hub-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%2C900%2C300italic%2C400italic%2C500italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-sidr-css'  href='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/third-party/sidr/css/jquery.sidr.dark.min.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='university-hub-style-css'  href='https://lipn.univ-paris13.fr/wp-content/themes/university-hub-1499431714-via-wpmarmite/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://lipn.univ-paris13.fr/wp-content/plugins/tablepress/css/default.min.css?ver=1.10' type='text/css' media='all' />
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://lipn.univ-paris13.fr/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lipn.univ-paris13.fr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lipn.univ-paris13.fr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/projets-de-recherche_lcr/" />
+<link rel='shortlink' href='https://lipn.univ-paris13.fr/?p=228' />
+<link rel="alternate" type="application/json+oembed" href="https://lipn.univ-paris13.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flipn.univ-paris13.fr%2Faccueil%2Fequipe%2Flcr%2Fprojets-de-recherche_lcr%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://lipn.univ-paris13.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flipn.univ-paris13.fr%2Faccueil%2Fequipe%2Flcr%2Fprojets-de-recherche_lcr%2F&#038;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//lipn.univ-paris13.fr/?wordfence_lh=1&hid=ACB491DAA1A5EF35D53181809BACDE63');
+</script></head>
+
+<body class="page-template-default page page-id-228 page-child parent-pageid-36 wp-custom-logo wp-embed-responsive group-blog home-content-not-enabled global-layout-left-sidebar slider-disabled">
+
+	    <div id="page" class="hfeed site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>		<div class="mobile-nav-wrap">
+		<a id="mobile-trigger" href="#mob-menu"><i class="fa fa-bars"></i></a>
+		<div id="mob-menu">
+			<ul id="menu-menu-principal" class="menu"><li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor menu-item-16"><a href="https://lipn.univ-paris13.fr/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li id="menu-item-202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-202"><a href="#">Présentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="https://lipn.univ-paris13.fr/accueil/presentation/le-laboratoire/">Le laboratoire</a></li>
+	<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="https://lipn.univ-paris13.fr/accueil/presentation/membres/">Membres</a></li>
+	<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://lipn.univ-paris13.fr/accueil/presentation/les-anciens/">Les anciens</a></li>
+	<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="https://lipn.univ-paris13.fr/accueil/presentation/distinctions/">Distinctions</a></li>
+</ul>
+</li>
+<li id="menu-item-201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-201"><a href="#">Équipes</a>
+<ul class="sub-menu">
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="https://lipn.univ-paris13.fr/accueil/equipe/a3/">A3</a></li>
+	<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://lipn.univ-paris13.fr/accueil/equipe/aoc/">AOC</a></li>
+	<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="https://lipn.univ-paris13.fr/accueil/equipe/calin/">CALIN</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-90"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/">LoVe</a></li>
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://lipn.univ-paris13.fr/accueil/equipe/rcln/">RCLN</a></li>
+	<li id="menu-item-2449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2449"><a href="https://lipn.univ-paris13.fr/soutien-a-la-recherche/">Soutien à la recherche</a></li>
+</ul>
+</li>
+<li id="menu-item-203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-203"><a href="#">Projets</a>
+<ul class="sub-menu">
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://lipn.univ-paris13.fr/accueil/international/contrat-en-cours/">Contrats de recherche</a></li>
+	<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://lipn.univ-paris13.fr/accueil/international/cooperation-en-cours/">Coopérations internationales</a></li>
+	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="https://lipn.univ-paris13.fr/accueil/international/brevets/">Brevets</a></li>
+	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="https://lipn.univ-paris13.fr/accueil/international/appels/">Appels</a></li>
+</ul>
+</li>
+<li id="menu-item-204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-204"><a href="#">Événements</a>
+<ul class="sub-menu">
+	<li id="menu-item-1732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732"><a href="https://lipn.univ-paris13.fr/accueil/evenements/les-prochains-seminaires-du-lipn/">Séminaires du LIPN</a></li>
+	<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="https://lipn.univ-paris13.fr/accueil/evenements/conferences/">Conférences et écoles</a></li>
+	<li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="https://lipn.univ-paris13.fr/accueil/evenements/mercredis/">Mercredis du LIPN</a></li>
+	<li id="menu-item-2114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2114"><a href="https://lipn.univ-paris13.fr/accueil/evenements/seminaire-junior/">Séminaire Junior</a></li>
+</ul>
+</li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="https://lipn.univ-paris13.fr/accueil/theses/">Thèses</a></li>
+<li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-208"><a href="#">Recrutement</a>
+<ul class="sub-menu">
+	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-de-stage/">Stages et thèses</a></li>
+	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-de-these/">Postdocs et ATER</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-pr-mcf/">Enseignant·e·s-chercheur·se·s</a></li>
+	<li id="menu-item-2153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2153"><a href="https://lipn.univ-paris13.fr/accueil/emplois/administratifs-et-ingenieurs/">Administrati·f·ve·s et ingénieur·e·s</a></li>
+</ul>
+</li>
+<li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a href="https://lipn.univ-paris13.fr/accueil/publications/">Publications</a></li>
+<li id="menu-item-207" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-207"><a href="#">Ressources</a>
+<ul class="sub-menu">
+	<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="https://lipn.univ-paris13.fr/accueil/ressources/bibliotheques/">Bibliothèques</a></li>
+	<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="https://lipn.univ-paris13.fr/accueil/ressources/logiciels/">Logiciels</a></li>
+	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="https://lipn.univ-paris13.fr/accueil/ressources/videos/">Vidéos</a></li>
+</ul>
+</li>
+<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://lipn.univ-paris13.fr/accueil/contact/">Contact</a></li>
+<li id="menu-item-3080-fr" class="lang-item lang-item-15 lang-item-fr lang-item-first current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-3080-fr"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/projets-de-recherche_lcr/" hreflang="fr-FR" lang="fr-FR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=" title="Français" alt="Français" width="16" height="11" /></a></li>
+<li id="menu-item-3080-en" class="lang-item lang-item-25 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-3080-en"><a href="https://lipn.univ-paris13.fr/en/home/" hreflang="en-GB" lang="en-GB"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAflJREFUeNpinDRzn5qN3uFDt16+YWBg+Pv339+KGN0rbVP+//2rW5tf0Hfy/2+mr99+yKpyOl3Ydt8njEWIn8f9zj639NC7j78eP//8739GVUUhNUNuhl8//ysKeZrJ/v7z10Zb2PTQTIY1XZO2Xmfad+f7XgkXxuUrVB6cjPVXef78JyMjA8PFuwyX7gAZj97+T2e9o3d4BWNp84K1NzubTjAB3fH0+fv6N3qP/ir9bW6ozNQCijB8/8zw/TuQ7r4/ndvN5mZgkpPXiis3Pv34+ZPh5t23//79Rwehof/9/NDEgMrOXHvJcrllgpoRN8PFOwy/fzP8+gUlgZI/f/5xcPj/69e/37//AUX+/mXRkN555gsOG2xt/5hZQMwF4r9///75++f3nz8nr75gSms82jfvQnT6zqvXPjC8e/srJQHo9P9fvwNtAHmG4f8zZ6dDc3bIyM2LTNlsbtfM9OPHH3FhtqUz3eXX9H+cOy9ZMB2o6t/Pn0DHMPz/b+2wXGTvPlPGFxdcD+mZyjP8+8MUE6sa7a/xo6Pykn1s4zdzIZ6///8zMGpKM2pKAB0jqy4UE7/msKat6Jw5mafrsxNtWZ6/fjvNLW29qv25pQd///n+5+/fxDDVbcc//P/zx/36m5Ub9zL8+7t66yEROcHK7q5bldMBAgwADcRBCuVLfoEAAAAASUVORK5CYII=" title="English" alt="English" width="16" height="11" /></a></li>
+</ul>		</div><!-- #mob-menu -->
+					<a id="mobile-trigger2" href="#mob-menu2"><i class="fa fa-bars"></i></a>
+			<div id="mob-menu2">
+				<ul id="menu-header-top-nav-francais" class="menu"><li id="menu-item-3002" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3002"><a href="https://lipn.univ-paris13.fr/rc/"><i class="fa fa-envelope-o" aria-hidden="true"  target="_blank"> Mail</i></a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a target="_blank" rel="noopener noreferrer" href="https://portail.lipn.univ-paris13.fr/portail/"><i class="fa fa-user-circle-o" aria-hidden="true"  target="_blank"> Connexion</i></a></li>
+<li id="menu-item-494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-494"><a target="_blank" rel="noopener noreferrer" href="http://lipn.univ-paris13.fr/wp-admin/"><i class="fa fa-cog" aria-hidden="true"> Admin </i></a></li>
+</ul>			</div><!-- #mob-menu2 -->
+
+				</div> <!-- .mobile-nav-wrap -->
+		
+    		<div id="tophead">
+			<div class="container">
+									<div class="top-news">
+						<span class="top-news-title">
+												Informations						</span>
+								<div id="news-ticker">
+			<div class="news-ticker-inner-wrap">
+									<div class="list">
+						<a href="https://lipn.univ-paris13.fr/ingenieur-developpement-web-pour-le-tal-cdd-12-mois/">Ingénieur·e développement Web pour le TAL &#8211; CDD 12 mois</a>
+					</div>
+									<div class="list">
+						<a href="https://lipn.univ-paris13.fr/le-lipn-signe-la-demande-de-moratoire-lppr/">Le LIPN signe la demande pour un moratoire LPPR</a>
+					</div>
+									<div class="list">
+						<a href="https://lipn.univ-paris13.fr/le-lipn-recrute-un-e-professeur-e/">Le LIPN recrute un.e Professeur.e</a>
+					</div>
+							</div> <!-- .news-ticker-inner-wrap -->
+		</div><!-- #news-ticker -->
+							</div> <!-- #top-news -->
+				
+				
+									<div id="top-nav">
+						<nav class="top-navigation"><ul id="menu-header-top-nav-francais-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3002"><a href="https://lipn.univ-paris13.fr/rc/"><i class="fa fa-envelope-o" aria-hidden="true"  target="_blank"> Mail</i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a target="_blank" rel="noopener noreferrer" href="https://portail.lipn.univ-paris13.fr/portail/"><i class="fa fa-user-circle-o" aria-hidden="true"  target="_blank"> Connexion</i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-494"><a target="_blank" rel="noopener noreferrer" href="http://lipn.univ-paris13.fr/wp-admin/"><i class="fa fa-cog" aria-hidden="true"> Admin </i></a></li>
+</ul></nav>					</div> <!-- #top-nav -->
+							</div> <!-- .container -->
+		</div><!--  #tophead -->
+		<header id="masthead" class="site-header" role="banner"><div class="container">			    <div class="site-branding">
+
+			<a href="https://lipn.univ-paris13.fr/" class="custom-logo-link" rel="home"><img width="100" height="71" src="https://lipn.univ-paris13.fr/wp-content/uploads/2017/07/cropped-Logo-LIPN-plein.svg-copie-e1499433990966.png" class="custom-logo" alt="LIPN" /></a>
+													<div id="site-identity">
+																		<p class="site-title"><a href="https://lipn.univ-paris13.fr/" rel="home">LIPN</a></p>
+																						<p class="site-description">Laboratoire d&#039;Informatique de Paris Nord</p>
+									</div><!-- #site-identity -->
+				    </div><!-- .site-branding -->
+	    		<div id="quick-contact">
+					</div><!-- #quick-contact -->
+
+	    <div id="main-nav">
+	        <nav id="site-navigation" class="main-navigation" role="navigation">
+	            <div class="wrap-menu-content">
+					<div class="menu-menu-principal-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor menu-item-16"><a href="https://lipn.univ-paris13.fr/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-202"><a href="#">Présentation</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="https://lipn.univ-paris13.fr/accueil/presentation/le-laboratoire/">Le laboratoire</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="https://lipn.univ-paris13.fr/accueil/presentation/membres/">Membres</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://lipn.univ-paris13.fr/accueil/presentation/les-anciens/">Les anciens</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="https://lipn.univ-paris13.fr/accueil/presentation/distinctions/">Distinctions</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-201"><a href="#">Équipes</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="https://lipn.univ-paris13.fr/accueil/equipe/a3/">A3</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://lipn.univ-paris13.fr/accueil/equipe/aoc/">AOC</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="https://lipn.univ-paris13.fr/accueil/equipe/calin/">CALIN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-90"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/">LoVe</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://lipn.univ-paris13.fr/accueil/equipe/rcln/">RCLN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2449"><a href="https://lipn.univ-paris13.fr/soutien-a-la-recherche/">Soutien à la recherche</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-203"><a href="#">Projets</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://lipn.univ-paris13.fr/accueil/international/contrat-en-cours/">Contrats de recherche</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://lipn.univ-paris13.fr/accueil/international/cooperation-en-cours/">Coopérations internationales</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="https://lipn.univ-paris13.fr/accueil/international/brevets/">Brevets</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="https://lipn.univ-paris13.fr/accueil/international/appels/">Appels</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-204"><a href="#">Événements</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732"><a href="https://lipn.univ-paris13.fr/accueil/evenements/les-prochains-seminaires-du-lipn/">Séminaires du LIPN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="https://lipn.univ-paris13.fr/accueil/evenements/conferences/">Conférences et écoles</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="https://lipn.univ-paris13.fr/accueil/evenements/mercredis/">Mercredis du LIPN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2114"><a href="https://lipn.univ-paris13.fr/accueil/evenements/seminaire-junior/">Séminaire Junior</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="https://lipn.univ-paris13.fr/accueil/theses/">Thèses</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-208"><a href="#">Recrutement</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-de-stage/">Stages et thèses</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-de-these/">Postdocs et ATER</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="https://lipn.univ-paris13.fr/accueil/emplois/offres-pr-mcf/">Enseignant·e·s-chercheur·se·s</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2153"><a href="https://lipn.univ-paris13.fr/accueil/emplois/administratifs-et-ingenieurs/">Administrati·f·ve·s et ingénieur·e·s</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a href="https://lipn.univ-paris13.fr/accueil/publications/">Publications</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-207"><a href="#">Ressources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="https://lipn.univ-paris13.fr/accueil/ressources/bibliotheques/">Bibliothèques</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="https://lipn.univ-paris13.fr/accueil/ressources/logiciels/">Logiciels</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="https://lipn.univ-paris13.fr/accueil/ressources/videos/">Vidéos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://lipn.univ-paris13.fr/accueil/contact/">Contact</a></li>
+<li class="lang-item lang-item-15 lang-item-fr lang-item-first current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-3080-fr"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/projets-de-recherche_lcr/" hreflang="fr-FR" lang="fr-FR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=" title="Français" alt="Français" width="16" height="11" /></a></li>
+<li class="lang-item lang-item-25 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-3080-en"><a href="https://lipn.univ-paris13.fr/en/home/" hreflang="en-GB" lang="en-GB"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAflJREFUeNpinDRzn5qN3uFDt16+YWBg+Pv339+KGN0rbVP+//2rW5tf0Hfy/2+mr99+yKpyOl3Ydt8njEWIn8f9zj639NC7j78eP//8739GVUUhNUNuhl8//ysKeZrJ/v7z10Zb2PTQTIY1XZO2Xmfad+f7XgkXxuUrVB6cjPVXef78JyMjA8PFuwyX7gAZj97+T2e9o3d4BWNp84K1NzubTjAB3fH0+fv6N3qP/ir9bW6ozNQCijB8/8zw/TuQ7r4/ndvN5mZgkpPXiis3Pv34+ZPh5t23//79Rwehof/9/NDEgMrOXHvJcrllgpoRN8PFOwy/fzP8+gUlgZI/f/5xcPj/69e/37//AUX+/mXRkN555gsOG2xt/5hZQMwF4r9///75++f3nz8nr75gSms82jfvQnT6zqvXPjC8e/srJQHo9P9fvwNtAHmG4f8zZ6dDc3bIyM2LTNlsbtfM9OPHH3FhtqUz3eXX9H+cOy9ZMB2o6t/Pn0DHMPz/b+2wXGTvPlPGFxdcD+mZyjP8+8MUE6sa7a/xo6Pykn1s4zdzIZ6///8zMGpKM2pKAB0jqy4UE7/msKat6Jw5mafrsxNtWZ6/fjvNLW29qv25pQd///n+5+/fxDDVbcc//P/zx/36m5Ub9zL8+7t66yEROcHK7q5bldMBAgwADcRBCuVLfoEAAAAASUVORK5CYII=" title="English" alt="English" width="16" height="11" /></a></li>
+</ul></div>	            </div><!-- .menu-content -->
+	        </nav><!-- #site-navigation -->
+	        	        		        <div class="header-search-box">
+		        	<div class="search-box-wrap">
+	<form role="search" method="get" class="search-form" action="https://lipn.univ-paris13.fr/">
+		<label>
+		<span class="screen-reader-text">Search for:</span>
+			<input class="search-field" placeholder="Recherche &hellip;" value="" name="s" type="search">
+		</label>
+		<input class="search-submit" value="&#xf002;" type="submit">
+	</form><!-- .search-form -->
+</div><!-- .search-box-wrap -->
+		        </div>
+        		    </div> <!-- #main-nav -->
+	        </div><!-- .container --></header><!-- #masthead -->
+	<div id="breadcrumb"><div class="container"><!-- Breadcrumb NavXT 6.4.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to LIPN." href="https://lipn.univ-paris13.fr" class="home"><span property="name">LIPN</span></a><meta property="position" content="1"></span>&nbsp;&nbsp;&frasl;&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Équipes." href="https://lipn.univ-paris13.fr/accueil/equipe/" class="post post-page"><span property="name">Équipes</span></a><meta property="position" content="2"></span>&nbsp;&nbsp;&frasl;&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to LoVe: Logique et Vérification." href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/" class="post post-page"><span property="name">LoVe: Logique et Vérification</span></a><meta property="position" content="3"></span>&nbsp;&nbsp;&frasl;&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><span property="name">Projets de recherche</span><meta property="position" content="4"></span></div><!-- .container --></div><!-- #breadcrumb --><div id="content" class="site-content"><div class="container"><div class="inner-wrapper">    
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+				
+<article id="post-228" class="post-228 page type-page status-publish hentry">
+
+	<header class="entry-header">
+		<h1 class="entry-title">Projets de recherche</h1>	</header><!-- .entry-header -->
+
+    	<div class="entry-content-wrapper">
+		<div class="entry-content">
+			<tr><th>Début</th><th> Fin</th><th> Acronyme</th><th> Type</th><th> Titre</th><th> Équipe(s)</th><th> Responsable</th><th> Partenaires</th></tr></table>
+					</div><!-- .entry-content -->
+	</div><!-- .entry-content-wrapper -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+				
+			
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<div id="sidebar-primary" class="widget-area sidebar" role="complementary">
+			<aside id="nav_menu-6" class="widget widget_nav_menu"><h2 class="widget-title">LoVe</h2><div class="menu-lcr-side-navbar-container"><ul id="menu-lcr-side-navbar" class="menu"><li id="menu-item-2365" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-2365"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/">Présentation</a></li>
+<li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/membres_lcr/">Membres</a></li>
+<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-228 current_page_item menu-item-242"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/projets-de-recherche_lcr/" aria-current="page">Projets de recherche</a></li>
+<li id="menu-item-245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-245"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/seminaires_lcr/">Séminaires</a></li>
+<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/publications_love/">Publications</a></li>
+<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/theses_lcr/">Thèses</a></li>
+<li id="menu-item-241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a href="https://lipn.univ-paris13.fr/accueil/equipe/lcr/offres-de-stages_lcr/">Offres de stages</a></li>
+</ul></div></aside>	</div><!-- #sidebar-primary -->
+
+
+</div><!-- .inner-wrapper --></div><!-- .container --></div><!-- #content -->
+	<div  id="footer-widgets" ><div class="container"><div class="inner-wrapper"><div class="footer-active-3 footer-widget-area"><aside id="media_image-14" class="widget widget_media_image"><img width="250" height="91" src="https://lipn.univ-paris13.fr/wp-content/uploads/2017/11/cnrs_large-300x109.png" class="image wp-image-2228  attachment-250x91 size-250x91" alt="" style="max-width: 100%; height: auto;" /></aside></div><!-- .footer-widget-area --><div class="footer-active-3 footer-widget-area"><aside id="text-2" class="widget widget_text"><h3 class="widget-title">Coordonnées</h3>			<div class="textwidget"><p><strong>LIPN, UMR CNRS 7030<br />
+Institut Galilée &#8211; Université Paris 13</strong></p>
+<p>99, Avenue Jean-Baptiste Clément<br />
+93430, Villetaneuse</p>
+<p>Tél : 01 49 40 35 90<br />
+Fax : 01 48 26 07 12<br />
+Courriel : contact@lipn.univ-paris13.fr</p>
+</div>
+		</aside></div><!-- .footer-widget-area --><div class="footer-active-3 footer-widget-area"><aside id="media_image-15" class="widget widget_media_image"><img width="249" height="91" src="https://lipn.univ-paris13.fr/wp-content/uploads/2017/11/logo-UP13-blanc-smartphone-menu-1-smaller-1-300x109.png" class="image wp-image-2082  attachment-249x91 size-249x91" alt="" style="max-width: 100%; height: auto;" srcset="https://lipn.univ-paris13.fr/wp-content/uploads/2017/11/logo-UP13-blanc-smartphone-menu-1-smaller-1-300x109.png 300w, https://lipn.univ-paris13.fr/wp-content/uploads/2017/11/logo-UP13-blanc-smartphone-menu-1-smaller-1.png 348w" sizes="(max-width: 249px) 100vw, 249px" /></aside></div><!-- .footer-widget-area --></div><!-- .inner-wrapper --></div><!-- .container --></div><footer id="colophon" class="site-footer" role="contentinfo"><div class="container">    
+		<div class="colophon-inner">
+
+		    
+		    			    <div class="colophon-column">
+			    	<div class="copyright">
+			    		Copyright 2017© Tous droits réservés.			    	</div><!-- .copyright -->
+			    </div><!-- .colophon-column -->
+		    
+		    
+		    			    <div class="colophon-column">
+			    	<div class="site-info">
+			    		University Hub by <a target="_blank" rel="designer" href="https://wenthemes.com/">WEN Themes</a>			    	</div><!-- .site-info -->
+			    </div><!-- .colophon-column -->
+		    
+		</div><!-- .colophon-inner -->
+
+	    	</div><!-- .container --></footer><!-- #colophon -->
+</div><!-- #page --><a href="#page" class="scrollup" id="btn-scrollup"><i class="fa fa-angle-up"></i></a>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/js/skip-link-focus-fix.min.js?ver=20130115'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/third-party/cycle2/js/jquery.cycle2.min.js?ver=2.1.6'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/third-party/sidr/js/jquery.sidr.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/third-party/ticker/jquery.easy-ticker.min.js?ver=2.0'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-content/themes/university-hub/js/custom.min.js?ver=1.0.2'></script>
+<script type='text/javascript' src='https://lipn.univ-paris13.fr/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+</body>
+</html>
