@@ -4,10 +4,16 @@ import os
 import sys
 import json as js
 import math
+import re
 
 from config import *
 
 def tf_idf():
+    regex_head = "<(\s|\t)*(head|HEAD)(.*)>(.*)<(\s|\t)*/(\s|\t)*(head|HEAD)>"
+    regex_script = "<(\s|\t)*(script|SCRIPT)(.*)>(.*)<(\s|\t)*/(\s|\t)*(script|SCRIPT)(\s|\t)*>"
+    regex_balise_close = "</(.*)>"
+    regex_balise_orphan = "<(.*)/>"
+    regex_balise = "<(.*)>"
 
     corpus_size = 0
     keyword_corpus = {}
@@ -17,23 +23,42 @@ def tf_idf():
     file_list = os.listdir(".")
 
     for file_name in file_list :
-        working_file = open(file_name, "rb")
+        working_file = open(file_name, "r", errors = "replace")
         working_tf = {}
         is_present = {}
         corpus_size_buffer = corpus_size
         ignore_file = False
+
+        if debug :
+            print(file_name)
+            print("traitement")
+
         try:
-            working_string = str(working_file.read(), errors = "ignore")
+            working_string = working_file.read()
             corpus_size = corpus_size + 1
+
+            #on retire les balises
+            working_string = re.sub(regex_head,"", working_string)
+            working_string = re.sub(regex_script,"", working_string)
+
+            #on retire la mise en forme
             working_string = working_string.replace("\n", " ")
+            working_string = working_string.replace("\t","")
+
+            working_string = re.sub(regex_balise_close, "", working_string)
+            working_string = re.sub(regex_balise_orphan, "", working_string)
+            working_string = re.sub(regex_balise, "", working_string)
+            #on sépare les mots clés du texte
             working_split = working_string.split(" ")
+
             keyword_number = len(working_split)
+
         except OSError as e:
             corpus_size = corpus_size_buffer
             working_split = []
             ignore_file = True
-            tf_corpus.pop(working_file, None)
-            print("Erreur avec le fichier "+working_file+" \n")
+            tf_corpus.pop(file_name, None)
+            print("Erreur avec le fichier "+file_name+" \n")
             print("Ce fichier ne sera pris en compte dans le calcul de tf-idf")
 
         if not ignore_file :
@@ -67,10 +92,23 @@ def tf_idf():
 
 
     try:
+
         os.chdir("..")
+
+        if debug :
+            print("dump tf-idf")
+
         js_dump = open("tf_idf.json", "w")
         js.dump(tf_idf_corpus, js_dump)
         js_dump.close()
+
+        if debug :
+            print("dump mot-clefs")
+
+        keyword_dump = open("keyword.json", "w")
+        js.dump(keyword_corpus, keyword_dump)
+        keyword_dump.close()
+
     except OSError as e:
         print("erreur json")
 
