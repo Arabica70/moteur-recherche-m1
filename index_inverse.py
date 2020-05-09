@@ -9,12 +9,6 @@ class index_inverse ():
     webpages_dir = "pages_web"
     debug = True
 
-    regex_head = "<(\s|\t)*(head|HEAD)(.*)>(.*)<(\s|\t)*/(\s|\t)*(head|HEAD)>"
-    regex_script = "<(\s|\t)*(script|SCRIPT)(.*)>(.*)<(\s|\t)*/(\s|\t)*(script|SCRIPT)(\s|\t)*>"
-    regex_balise_close = "</(.*)>"
-    regex_balise_orphan = "<(.*)/>"
-    regex_balise = "<(.*)>"
-
     corpus_size = 0
     keyword_corpus = {}
     tf_corpus = {}
@@ -29,11 +23,6 @@ class index_inverse ():
 
 
     def compute_tf(self):
-        regex_head = "<(\s|\t)*(head|HEAD)(.*)>(.*)<(\s|\t)*/(\s|\t)*(head|HEAD)>"
-        regex_script = "<(\s|\t)*(script|SCRIPT)(.*)>(.*)<(\s|\t)*/(\s|\t)*(script|SCRIPT)(\s|\t)*>"
-        regex_balise_close = "</(.*)>"
-        regex_balise_orphan = "<(.*)/>"
-        regex_balise = "<(.*)>"
 
         os.chdir(self.webpages_dir)
 
