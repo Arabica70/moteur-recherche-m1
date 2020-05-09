@@ -9,6 +9,7 @@ import chardet
 class index_inverse ():
     webpages_dir = "pages_web"
     debug = True
+    use_chardet = True
 
     corpus_size = 0
     keyword_corpus = {}
@@ -28,7 +29,19 @@ class index_inverse ():
         os.chdir(self.webpages_dir)
 
         for file_name in self.file_list :
-            working_file = open(file_name, "r", errors = "replace")
+            if self.use_chardet:
+                working_file = open(file_name, "rb")
+                detect = chardet.detect(working_file.read())
+                encoding = detect["encoding"]
+                confidence = detect["confidence"]
+                if confidence > 0.90:
+                    working_file = open(file_name, "r", errors= "replace", encoding = encoding)
+                else:
+                    working_file = open(file_name, "r", errors= "replace", encoding = None)
+            else :
+                working_file = open(file_name, "r", errors= "replace")
+
+
             working_tf = {}
             is_present = {}
             corpus_size_buffer = self.corpus_size
@@ -42,7 +55,7 @@ class index_inverse ():
                 working_string = bs4.BeautifulSoup(working_file).prettify()
                 working_string = bs4.BeautifulSoup(working_string).text
                 self.corpus_size = self.corpus_size + 1
-                working_string = re.sub("\(|\)|\[|\]|,|\."," ",working_string)
+                working_string = re.sub("\(|\)|\[|\]|,|\.|;"," ",working_string)
                 working_string = working_string.replace("\n"," ")
 
 
@@ -81,13 +94,14 @@ class index_inverse ():
                     else :
                         working_tf[keyword] = 1
 
-                if self.score == "tf_idf" or self.score =="log":
+                if self.score == "tf-idf" or self.score =="log":
                     for k in working_tf :
-                        if self.score == "tf_idf" :
+                        if self.score == "tf-idf" :
                             working_tf[k] =working_tf[k]/keyword_number
                         elif self.score =="log" :
                             working_tf[k] = working_tf[k]/keyword_number
                             working_tf[k] = 1+math.log(working_tf[k])
+
                         if not (k in self.tf_corpus):
                             self.tf_corpus[k]={}
                         self.tf_corpus[k][file_name] = working_tf[k]
