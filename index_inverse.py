@@ -4,6 +4,7 @@ import json as js
 import math
 import re
 import bs4
+import chardet
 
 class index_inverse ():
     webpages_dir = "pages_web"
@@ -152,7 +153,18 @@ class index_inverse ():
         except KeyError as e :
             return None
 
-        
+    def ten_first(self, keyword):
+        sorted_tf_idf = self.sort_tf_idf(keyword)
+        ten_first_pages = []
+        i = 0
+        for item in sorted_tf_idf:
+            if self.debug:
+                print(item)
+            ten_first_pages.append(item)
+
+            if i > 10 :
+                break
+            i = i+1
 
     def compute(self):
         if self.score == "bm-25":
