@@ -142,5 +142,8 @@ class index_inverse ():
 
 
     def compute(self):
-        self.compute_tf()
-        self.compute_tf_idf()
+        if self.score == "bm-25":
+            pass
+        else :
+            self.compute_tf()
+            self.compute_tf_idf()
