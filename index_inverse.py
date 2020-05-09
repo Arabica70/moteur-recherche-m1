@@ -105,7 +105,7 @@ class index_inverse ():
                         self.tf_corpus[k][file_name] = working_tf[k]
 
                 if self.score == "binary":
-                    for k in working_tf[k]:
+                    for k in working_tf:
                         working_tf[k] = 1
 
                         if not (k in self.tf_corpus):
@@ -123,17 +123,21 @@ class index_inverse ():
             for keyword in self.tf_corpus:
 
                 if self.debug :
-                    print(keyword)
+                    pass
 
                 self.tf_idf_corpus[keyword] ={}
 
                 for file in self.tf_corpus[keyword]:
 
                     if self.debug:
+                        print(keyword)
                         print(file)
 
                     idf_keyword = math.log(self.corpus_size/self.keyword_corpus[keyword])
                     self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
+
+                    if self.debug :
+                        print(self.tf_idf_corpus[keyword][file])
 
 
 
