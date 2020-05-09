@@ -99,20 +99,10 @@ class index_inverse ():
 
                 self.tf_idf_corpus[keyword] ={}
 
-                for file in self.tf_idf_corpus[keyword]:
+                for file in self.tf_corpus[keyword]:
 
                     if self.debug:
                         print(file)
 
                     idf_keyword = math.log(self.corpus_size/self.keyword_corpus[keyword])
-                    #self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
-            #try:
-            #    for keyword in self.tf_corpus:
-            #        self.tf_idf_corpus[keyword] ={}
-            #        for file in keyword:
-            #            idf_keyword = math.log(corpus_size/keyword_corpus[keyword])
-            #            self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
-            #except NameError :
-                #print("executez la méthode compute_tf avant")
-            #except ValueError :
-                #print("executez la méthode compute_tf avant")
+                    self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
