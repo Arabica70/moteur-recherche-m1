@@ -38,7 +38,8 @@ class index_inverse ():
                 print("traitement")
 
             try:
-                working_string = bs4.BeautifulSoup(working_file).text
+                working_string = bs4.BeautifulSoup(working_file).prettify()
+                working_string = bs4.BeautifulSoup(working_string).text
                 self.corpus_size = self.corpus_size + 1
                 working_string = re.sub("\(|\)|\[|\]|,|\."," ",working_string)
                 working_string = working_string.replace("\n"," ")
@@ -140,6 +141,18 @@ class index_inverse ():
                         print(self.tf_idf_corpus[keyword][file])
 
 
+
+    def sort_tf_idf(self, keyword):
+        sorted_tf_idf = {}
+        try:
+            sorted_tf_idf = sorted(self.tf_idf_corpus[keyword].items(), key = lambda item: item[1])
+            return sorted_tf_idf
+        except NameError as e:
+            return None
+        except KeyError as e :
+            return None
+
+        
 
     def compute(self):
         if self.score == "bm-25":
