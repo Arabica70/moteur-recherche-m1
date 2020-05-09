@@ -106,3 +106,7 @@ class index_inverse ():
 
                     idf_keyword = math.log(self.corpus_size/self.keyword_corpus[keyword])
                     self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
+
+    def compute(self):
+        self.compute_tf()
+        self.compute_tf_idf()
