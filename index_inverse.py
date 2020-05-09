@@ -171,14 +171,16 @@ class index_inverse ():
         sorted_tf_idf = self.sort_tf_idf(keyword)
         ten_first_pages = []
         i = 0
+
         for item in sorted_tf_idf:
             if self.debug:
                 print(item)
-            ten_first_pages.append(item)
+                ten_first_pages.append(item)
 
             if i > 10 :
                 break
             i = i+1
+        return ten_first_pages
 
     def compute(self):
         if self.score == "bm-25":
