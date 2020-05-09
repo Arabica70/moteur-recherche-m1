@@ -79,11 +79,39 @@ class index_inverse ():
                     else :
                         working_tf[keyword] = 1
 
-                for k in working_tf :
-                    working_tf[k] =working_tf[k]/keyword_number
-                    if not (k in self.tf_corpus):
-                        self.tf_corpus[k]={}
-                    self.tf_corpus[k][file_name] = working_tf[k]
+                if self.score == "tf_idf" or self.score =="log":
+                    for k in working_tf :
+                        if self.score == "tf_idf" :
+                            working_tf[k] =working_tf[k]/keyword_number
+                        elif self.score =="log" :
+                            working_tf[k] = working_tf[k]/keyword_number
+                            working_tf[k] = 1+math.log(working_tf[k])
+                        if not (k in self.tf_corpus):
+                            self.tf_corpus[k]={}
+                        self.tf_corpus[k][file_name] = working_tf[k]
+
+                if self.score =="max" :
+                    for k in working_tf:
+                        working_tf[k] =working_tf[k]/keyword_number
+
+                    max_tf = max(working_tf.values())
+
+                    for k in working_tf:
+                        working_tf[k] = 0.5+ 0.5*(working_tf[k]/max_tf)
+
+                        if not (k in self.tf_corpus):
+                            self.tf_corpus[k]={}
+
+                        self.tf_corpus[k][file_name] = working_tf[k]
+
+                if self.score == "binary":
+                    for k in working_tf[k]:
+                        working_tf[k] = 1
+
+                        if not (k in self.tf_corpus):
+                            self.tf_corpus[k]={}
+
+                        self.tf_corpus[k][file_name] = working_tf[k]
 
 
                 working_file.close()
@@ -91,7 +119,7 @@ class index_inverse ():
         os.chdir(self.current_dir)
 
     def compute_tf_idf(self):
-        if self.score == "tf-idf":
+        if self.score == "tf-idf" or self.score == "max" or self.score == "log" or self.score == "binary":
             for keyword in self.tf_corpus:
 
                 if self.debug :
@@ -106,6 +134,8 @@ class index_inverse ():
 
                     idf_keyword = math.log(self.corpus_size/self.keyword_corpus[keyword])
                     self.tf_idf_corpus[keyword][file] = self.tf_corpus[keyword][file]*idf_keyword
+
+
 
     def compute(self):
         self.compute_tf()
