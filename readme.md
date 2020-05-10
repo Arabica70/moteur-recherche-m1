@@ -30,3 +30,5 @@ Fonction 5: Modifier la fonction de recherche du moteur pour qu'elle puisse renv
 
 # Lancement du serveur
         python server.py
+# Accéder au moteur de recherche
+        http://127.0.0.1:5000
