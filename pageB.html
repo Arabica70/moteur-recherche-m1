@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Resultat</title>
+	<style type="text/css">
+	
+		span{
+			font-family: Georgia;
+			font-weight: bold;
+			font-size: 20px;
+			text-shadow:#f3f3f3 1px 1px 0px, #b2b2b2 1px 2px 0;
+			color: deepskyblue;	
+		}
+
+		i{
+			color:orange;
+		}
+
+		#text{
+			height:30px;
+			border:1px solid grey;
+			border-radius: 5px;
+			width:50%; 
+			text-align:center;
+		}
+
+		#submit{
+			  background-color: #4CAF50;
+  			  border: none;
+  			  color: white;
+  	          padding: 7px 7px;
+              text-decoration: none;
+              margin: 1px 1px;
+              cursor: pointer;
+              border-radius: 5px;
+		}
+
+		.recherche{
+			width:100%; 
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+		}
+
+		#resultat{
+			margin-left:20px;
+		}
+
+		p{
+			font-size:small;
+		}
+
+		body{
+			background-color: lightyellow;
+		}
+
+		</style>
+
+
+</head>
+<body>
+	<div class="all">
+	<form method="post" action="" class="recherche"><span>Recherche <i>Gr6  </i></span><input id="text" type="text" name="cherche" placeholder="entrez ce que vous voulez chercher"><input id="submit" type="submit" value="Valider">
+	</form>
+	</div>
+	</br>
+	</br>
+	</br>
+	<hr>
+	<div id="resultat">
+		<h5>vous êtes en train de chercher : <span style="color:red;text-decoration:underline">{{ result["cherche"]}}</span></h5>
+		<p>{{length}} résultats ont été trouvés</p>
+		{% for post in posts %}
+		<a href="https://www.google.com/search?q={{post}}">{{post}}</a></br>
+		{% endfor %}
+	</div>
+</body>
+</html>
